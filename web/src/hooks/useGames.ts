@@ -69,6 +69,7 @@ export const useGamesQuery = (
   useQueryWithError({
     queryKey: gameKeys.all(),
     queryFn: () => gamesApi.list(),
+    refetchInterval: 30000,
     ...options,
   })
 

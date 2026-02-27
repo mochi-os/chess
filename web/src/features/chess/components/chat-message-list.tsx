@@ -177,6 +177,9 @@ export function ChatMessageList({
             // Move messages
             if (message.type === 'move') {
               const isSent = isCurrentUserMessage(message)
+              const san = message.body
+              const isCapture = san.includes('x')
+              const verb = isCapture ? 'took' : 'played'
               return (
                 <div
                   key={`${message.id}-${index}`}
@@ -186,10 +189,10 @@ export function ChatMessageList({
                   )}
                 >
                   <span className="text-xs text-muted-foreground">
-                    {isSent ? 'You' : message.name}
+                    {isSent ? 'You' : message.name} {verb}
                   </span>
                   <span className="text-xs font-mono font-medium">
-                    {message.body}
+                    {san}
                   </span>
                 </div>
               )
@@ -217,7 +220,7 @@ export function ChatMessageList({
                       'relative max-w-[85%] px-2.5 py-1.5 text-xs wrap-break-word',
                       isSent
                         ? 'rounded-[12px] rounded-br-[4px] bg-blue-500 text-white dark:bg-blue-600'
-                        : 'rounded-[12px] rounded-bl-[4px] bg-gray-100 text-gray-900 dark:bg-gray-700 dark:text-gray-100'
+                        : 'rounded-[12px] rounded-bl-[4px] bg-blue-50 text-gray-900 dark:bg-blue-900/30 dark:text-gray-100'
                     )}
                   >
                     <p className="leading-relaxed whitespace-pre-wrap">

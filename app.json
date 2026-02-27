@@ -35,7 +35,10 @@
 		":game/-/resign": {"function": "action_resign"},
 		":game/-/delete": {"function": "action_delete"},
 		":game/assets": {"files": "web/dist/assets"},
-		":game/images": {"files": "web/dist/images"}
+		":game/images": {"files": "web/dist/images"},
+		"-/notifications/subscribe": {"function": "action_notifications_subscribe"},
+		"-/notifications/check": {"function": "action_notifications_check"},
+		"-/notifications/destinations": {"function": "action_notifications_destinations"}
 	},
 
 	"events": {

@@ -113,6 +113,8 @@ def action_view(a):
 		a.error(403, "Not a player in this game")
 		return
 
+	mochi.service.call("notifications", "clear/object", "chess", game["id"])
+
 	return {
 		"data": {"game": game, "identity": a.user.identity.id}
 	}
@@ -448,6 +450,7 @@ def event_move(e):
 		"body": san, "from": e.content("from") or "", "to": e.content("to") or "",
 		"fen": fen, "pgn": pgn, "status": status, "winner": winner or ""
 	})
+	mochi.service.call("notifications", "send", "move", "Chess move", name + " played " + san, game["id"], "/chess/" + game["id"])
 
 # Received a chat message event
 def event_message(e):
@@ -478,6 +481,7 @@ def event_message(e):
 	mochi.db.execute("insert or ignore into messages ( id, game, member, name, body, type, created ) values ( ?, ?, ?, ?, ?, 'message', ? )", id, game["id"], sender, name, body, created)
 
 	mochi.websocket.write(game["key"], {"type": "message", "created": created, "member": sender, "name": name, "body": body})
+	mochi.service.call("notifications", "send", "message", "Chess message", name + ": " + body, game["id"], "/chess/" + game["id"])
 
 # Received a resign event
 def event_resign(e):
@@ -499,3 +503,32 @@ def event_resign(e):
 	mochi.db.execute("insert into messages ( id, game, member, name, body, type, created ) values ( ?, ?, ?, ?, ?, 'system', ? )", id, game["id"], sender, "", body, now)
 
 	mochi.websocket.write(game["key"], {"type": "system", "event": "resign", "created": now, "body": body, "winner": winner or ""})
+	mochi.service.call("notifications", "send", "resign", "Chess game", body, game["id"], "/chess/" + game["id"])
+
+# Notification proxy actions
+
+def action_notifications_subscribe(a):
+	label = a.input("label", "").strip()
+	type = a.input("type", "").strip()
+	object = a.input("object", "").strip()
+	destinations = a.input("destinations", "")
+
+	if not label:
+		a.error(400, "label is required")
+		return
+	if not mochi.valid(label, "text"):
+		a.error(400, "Invalid label")
+		return
+
+	destinations_list = json.decode(destinations) if destinations else []
+
+	result = mochi.service.call("notifications", "subscribe", label, type, object, destinations_list)
+	return {"data": {"id": result}}
+
+def action_notifications_check(a):
+	result = mochi.service.call("notifications", "subscriptions")
+	return {"data": {"exists": len(result) > 0}}
+
+def action_notifications_destinations(a):
+	result = mochi.service.call("notifications", "destinations")
+	return {"data": result}

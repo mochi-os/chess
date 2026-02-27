@@ -4,11 +4,13 @@ import { Chess } from 'chess.js'
 import {
   useAuthStore,
   usePageTitle,
+  useQueryWithError,
   PageHeader,
   Main,
   GeneralError,
   Button,
   getErrorMessage,
+  getAppPath,
   toast,
   AlertDialog,
   AlertDialogAction,
@@ -19,6 +21,7 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
   Skeleton,
+  SubscribeDialog,
 } from '@mochi/common'
 import { MoreHorizontal, Trash2, Loader2 } from 'lucide-react'
 import {
@@ -30,6 +33,7 @@ import {
 import { useSidebarContext } from '@/context/sidebar-context'
 import { setLastGame } from '@/hooks/useGameStorage'
 import { useGameWebsocket } from '@/hooks/useGameWebsocket'
+import { gamesApi } from '@/api/games'
 import {
   useInfiniteMessagesQuery,
   useGamesQuery,
@@ -53,6 +57,7 @@ export function ChessGame() {
   const [newMessage, setNewMessage] = useState('')
   const [showResignDialog, setShowResignDialog] = useState(false)
   const [lastMove, setLastMove] = useState<{ from: string; to: string } | null>(null)
+  const [subscribeOpen, setSubscribeOpen] = useState(false)
 
   const {
     identity: currentUserIdentity,
@@ -151,6 +156,19 @@ export function ChessGame() {
   useEffect(() => {
     setWebsocketStatus(status, retries)
   }, [status, retries, setWebsocketStatus])
+
+  // Subscription check
+  const { data: subscriptionData, refetch: refetchSubscription } = useQueryWithError({
+    queryKey: ['subscription-check', 'chess'],
+    queryFn: () => gamesApi.checkSubscription(),
+    staleTime: Infinity,
+  })
+
+  useEffect(() => {
+    if (subscriptionData?.exists === false) {
+      setSubscribeOpen(true)
+    }
+  }, [subscriptionData?.exists])
 
   const handleMove = useCallback(
     (from: string, to: string, promotion?: string) => {
@@ -254,7 +272,7 @@ export function ChessGame() {
     <>
       <div className="flex h-full flex-col overflow-hidden">
         <PageHeader
-          title={opponentName ? `vs ${opponentName}` : 'Chess'}
+          title={opponentName || 'Chess'}
           actions={
             game && game.status !== 'active' ? (
               <DropdownMenu>
@@ -361,6 +379,15 @@ export function ChessGame() {
           </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog>
+
+      <SubscribeDialog
+        open={subscribeOpen}
+        onOpenChange={setSubscribeOpen}
+        app='chess'
+        label='Chess moves & messages'
+        appBase={getAppPath()}
+        onResult={() => refetchSubscription()}
+      />
     </>
   )
 }

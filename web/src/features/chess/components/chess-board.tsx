@@ -3,9 +3,13 @@ import { Chess, type Square } from 'chess.js'
 import { cn } from '@mochi/common'
 import { PromotionDialog } from './promotion-dialog'
 
-const PIECES: Record<string, string> = {
-  wK: '\u2654', wQ: '\u2655', wR: '\u2656', wB: '\u2657', wN: '\u2658', wP: '\u2659',
-  bK: '\u265A', bQ: '\u265B', bR: '\u265C', bB: '\u265D', bN: '\u265E', bP: '\u265F',
+const PIECE_NAMES: Record<string, string> = {
+  k: 'king', q: 'queen', r: 'rook', b: 'bishop', n: 'knight', p: 'pawn',
+}
+
+function pieceImage(color: string, type: string): string {
+  const side = color === 'w' ? 'white' : 'black'
+  return `images/pieces/${side}/${PIECE_NAMES[type]}.svg`
 }
 
 const FILES = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']
@@ -184,8 +188,8 @@ export function ChessBoard({
                 className={cn(
                   'chess-square relative flex items-center justify-center aspect-square',
                   isLight
-                    ? 'bg-amber-100 dark:bg-emerald-800'
-                    : 'bg-amber-700 dark:bg-emerald-950',
+                    ? 'bg-[#f0dab5] dark:bg-[#b89a78]'
+                    : 'bg-[#a3664e] dark:bg-[#7a4a38]',
                   isDragSource && 'opacity-40',
                   isLastMoveSquare && 'ring-2 ring-inset ring-yellow-400/60',
                   isCheckSquare && 'bg-red-400 dark:bg-red-600'
@@ -195,17 +199,17 @@ export function ChessBoard({
                 onClick={() => handleSquareClick(square)}
               >
                 {hasPiece && (
-                  <span
+                  <img
+                    src={pieceImage(piece.color, piece.type)}
+                    alt={`${piece.color === 'w' ? 'White' : 'Black'} ${PIECE_NAMES[piece.type]}`}
                     className={cn(
-                      'chess-piece select-none',
+                      'chess-piece select-none w-[80%] h-[80%]',
                       canDrag && 'cursor-grab active:cursor-grabbing'
                     )}
                     draggable={canDrag}
                     onDragStart={(e) => handleDragStart(e, square)}
                     onDragEnd={handleDragEnd}
-                  >
-                    {PIECES[`${piece.color}${piece.type.toUpperCase()}`]}
-                  </span>
+                  />
                 )}
 
                 {/* Legal move indicator */}
@@ -222,7 +226,7 @@ export function ChessBoard({
                 {fi === 0 && (
                   <span className={cn(
                     'absolute top-0.5 left-0.5 text-[9px] leading-none font-medium',
-                    isLight ? 'text-amber-700/60 dark:text-emerald-400/60' : 'text-amber-100/60 dark:text-emerald-200/60'
+                    isLight ? 'text-[#a3664e]/60 dark:text-[#7a4a38]/60' : 'text-[#f0dab5]/60 dark:text-[#b89a78]/60'
                   )}>
                     {rank}
                   </span>
@@ -230,7 +234,7 @@ export function ChessBoard({
                 {ri === 7 && (
                   <span className={cn(
                     'absolute bottom-0.5 right-0.5 text-[9px] leading-none font-medium',
-                    isLight ? 'text-amber-700/60 dark:text-emerald-400/60' : 'text-amber-100/60 dark:text-emerald-200/60'
+                    isLight ? 'text-[#a3664e]/60 dark:text-[#7a4a38]/60' : 'text-[#f0dab5]/60 dark:text-[#b89a78]/60'
                   )}>
                     {file}
                   </span>
