@@ -15,7 +15,7 @@ import {
   GeneralError,
   type Person,
 } from '@mochi/common'
-import { Loader2, UserPlus } from 'lucide-react'
+import { Loader2, Plus, UserPlus } from 'lucide-react'
 import { useSidebarContext } from '@/context/sidebar-context'
 import { useNewGameFriendsQuery, useCreateGameMutation } from '@/hooks/useGames'
 
@@ -131,8 +131,10 @@ export function NewGame() {
           <Button onClick={handleCreateGame} disabled={!canSubmit}>
             {createGameMutation.isPending ? (
               <Loader2 className="size-4 animate-spin" />
-            ) : null}
-            {createGameMutation.isPending ? 'Creating...' : 'Start Game'}
+            ) : (
+              <Plus className="size-4" />
+            )}
+            {createGameMutation.isPending ? 'Creating...' : 'Start game'}
           </Button>
         </ResponsiveDialogFooter>
       </ResponsiveDialogContent>

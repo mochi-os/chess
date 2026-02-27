@@ -410,6 +410,8 @@ def event_new(e):
 	if result == 0:
 		return
 
+	mochi.service.call("notifications", "send", "new", "Chess game", identity_name + " started a game", game_id, "/chess/" + game_id)
+
 # Received a move event
 def event_move(e):
 	game = mochi.db.row("select * from games where id=?", e.content("game"))

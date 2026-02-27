@@ -29,11 +29,11 @@ export function GameEmptyState({ onNewGame, hasExistingGames }: GameEmptyStatePr
       <EmptyState
         icon={Swords}
         title="No games yet"
-        description="Start a new game of chess with a friend."
+        description=""
       >
         <Button size="lg" onClick={onNewGame}>
           <Plus className="size-5" />
-          New Game
+          New game
         </Button>
       </EmptyState>
     </div>
