@@ -1,0 +1,47 @@
+{
+	"version": "0.1",
+	"label": "app_name",
+	"classes": ["game"],
+	"paths": ["chess"],
+	"services": ["chess"],
+
+	"architecture": {"engine": "starlark", "version": 4},
+	"execute": ["chess.star"],
+
+	"database": {
+		"schema": 1,
+		"file": "chess.db",
+		"create": {"function": "database_create"},
+		"upgrade": {"function": "database_upgrade"}
+	},
+
+	"icons": [
+		{"action": "", "label": "app_name", "file": "images/icon.svg"}
+	],
+
+	"actions": {
+		"": {"file": "web/dist/index.html"},
+		"assets": {"files": "web/dist/assets"},
+		"images": {"files": "web/dist/images"},
+		"-/create": {"function": "action_create"},
+		"-/list": {"function": "action_list"},
+		"-/new": {"function": "action_new"},
+
+		":game": {"file": "web/dist/index.html"},
+		":game/-/view": {"function": "action_view"},
+		":game/-/messages": {"function": "action_messages"},
+		":game/-/send": {"function": "action_send"},
+		":game/-/move": {"function": "action_move"},
+		":game/-/resign": {"function": "action_resign"},
+		":game/-/delete": {"function": "action_delete"},
+		":game/assets": {"files": "web/dist/assets"},
+		":game/images": {"files": "web/dist/images"}
+	},
+
+	"events": {
+		"new": {"function": "event_new"},
+		"move": {"function": "event_move"},
+		"message": {"function": "event_message"},
+		"resign": {"function": "event_resign"}
+	}
+}

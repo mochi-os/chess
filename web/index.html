@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      (function() {
+        var app = document.querySelector('meta[name="mochi:app"]')
+        var fp = document.querySelector('meta[name="mochi:fingerprint"]')
+        var domain = document.querySelector('meta[name="mochi:domain"]')
+        var base = '/'
+        if (domain) base = '/'
+        else if (fp && app) base = '/' + app.content + '/' + fp.content + '/'
+        else if (fp) base = '/' + fp.content + '/'
+        else if (app) base = '/' + app.content + '/'
+        else { var m = location.pathname.match(/^\/([^/]+)/); if (m) base = '/' + m[1] + '/' }
+        var el = document.createElement('base')
+        el.href = base
+        document.head.appendChild(el)
+      })()
+    </script>
+    <link rel="icon" type="image/svg+xml" href="./images/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary Meta Tags -->
+    <title>Chess - Mochi</title>
+    <meta name="title" content="Mochi" />
+    <meta
+      name="description"
+      content="Mochi is the modern web operating system."
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Mochi" />
+    <meta
+      property="og:description"
+      content="Mochi is the modern web operating system."
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content="Mochi" />
+    <meta
+      property="twitter:description"
+      content="Mochi is the modern web operating system."
+    />
+
+    <meta name="theme-color" content="#fff" />
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
