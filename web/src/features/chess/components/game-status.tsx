@@ -1,4 +1,4 @@
-import type { Game } from '@/api/games'
+import { getOpponentName, type Game } from '@/api/games'
 
 interface GameStatusProps {
   game: Game
@@ -6,10 +6,6 @@ interface GameStatusProps {
   isMyTurn: boolean
   isCheck: boolean
   myIdentity: string
-}
-
-function getOpponentName(game: Game, myIdentity: string): string {
-  return game.identity === myIdentity ? game.opponent_name : game.identity_name
 }
 
 export function GameStatus({

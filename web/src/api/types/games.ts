@@ -16,6 +16,10 @@ export interface Game {
   created: number
 }
 
+export function getOpponentName(game: Game, myIdentity: string): string {
+  return game.identity === myIdentity ? game.opponent_name : game.identity_name
+}
+
 export type MessageType = 'message' | 'move' | 'system'
 
 export interface GameMessage {

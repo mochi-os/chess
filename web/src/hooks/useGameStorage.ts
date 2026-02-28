@@ -1,5 +1,4 @@
 const LAST_GAME_KEY = 'mochi-chess-last'
-const SESSION_STARTED_KEY = 'mochi-chess-session-started'
 
 export const setLastGame = (gameId: string) => {
   try {
@@ -22,18 +21,5 @@ export const clearLastGame = () => {
     localStorage.removeItem(LAST_GAME_KEY)
   } catch {
     // ignore
-  }
-}
-
-export const shouldRedirectToLastGame = (): boolean => {
-  try {
-    const started = sessionStorage.getItem(SESSION_STARTED_KEY)
-    if (!started) {
-      sessionStorage.setItem(SESSION_STARTED_KEY, '1')
-      return true
-    }
-    return false
-  } catch {
-    return false
   }
 }

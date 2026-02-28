@@ -11,11 +11,7 @@ import { Plus } from 'lucide-react'
 import { SidebarProvider, useSidebarContext } from '@/context/sidebar-context'
 import { useGamesQuery } from '@/hooks/useGames'
 import { NewGame } from '@/features/chess/components/new-game'
-import type { Game } from '@/api/games'
-
-function getOpponentName(game: Game, myIdentity: string): string {
-  return game.identity === myIdentity ? game.opponent_name : game.identity_name
-}
+import { getOpponentName, type Game } from '@/api/games'
 
 function AutoOpenMobileSidebar({
   hasGames,

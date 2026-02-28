@@ -60,7 +60,9 @@ export const gamesApi = {
       .then((res) => res.data),
 
   create: (opponent: string) =>
-    client.post<CreateGameResponse>(endpoints.game.create, { opponent }),
+    client
+      .post<CreateGameResponse | { data: CreateGameResponse }>(endpoints.game.create, { opponent })
+      .then((res) => unwrapData<CreateGameResponse>(res)),
 
   resign: (gameId: string) =>
     client.post<ResignResponse>(endpoints.game.resign(gameId)),
