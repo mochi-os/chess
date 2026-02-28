@@ -6,7 +6,6 @@ import {
   useMemo,
   useRef,
 } from 'react'
-import { format } from 'date-fns'
 import type {
   UseInfiniteQueryResult,
   InfiniteData,
@@ -47,7 +46,7 @@ export function ChatMessageList({
   const groupedMessages = useMemo(() => {
     const groups: Record<string, GameMessage[]> = {}
     chatMessages.forEach((message) => {
-      const date = format(new Date(message.created * 1000), 'yyyy-MM-dd')
+      const date = new Date(message.created * 1000).toLocaleDateString()
       if (!groups[date]) {
         groups[date] = []
       }
@@ -206,7 +205,7 @@ export function ChatMessageList({
                 <div className="flex items-end gap-1.5">
                   {isSent && (
                     <span className="text-muted-foreground/70 opacity-0 transition-opacity group-hover:opacity-100 text-[9px]">
-                      {format(new Date(message.created * 1000), 'HH:mm')}
+                      {new Date(message.created * 1000).toLocaleTimeString(undefined, { hour: '2-digit', minute: '2-digit', hour12: false })}
                     </span>
                   )}
 
@@ -225,7 +224,7 @@ export function ChatMessageList({
 
                   {!isSent && (
                     <span className="text-muted-foreground/70 opacity-0 transition-opacity group-hover:opacity-100 text-[9px]">
-                      {format(new Date(message.created * 1000), 'HH:mm')}
+                      {new Date(message.created * 1000).toLocaleTimeString(undefined, { hour: '2-digit', minute: '2-digit', hour12: false })}
                     </span>
                   )}
                 </div>

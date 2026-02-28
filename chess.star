@@ -48,6 +48,44 @@ def get_opponent(game, user_id):
 		return game["opponent"]
 	return game["identity"]
 
+# Load game by ID from action input, validate ID and player access
+def load_game(a):
+	if not mochi.valid(a.input("game"), "id"):
+		a.error(400, "Invalid game ID")
+		return None
+	game = mochi.db.row("select * from games where id=?", a.input("game"))
+	if not game:
+		a.error(404, "Game not found")
+		return None
+	if game["identity"] != a.user.identity.id and game["opponent"] != a.user.identity.id:
+		a.error(403, "Not a player in this game")
+		return None
+	return game
+
+# Validate a chess FEN string
+def valid_fen(fen):
+	if not fen or len(fen) > 200:
+		return False
+	parts = fen.split(" ")
+	if len(parts) < 1:
+		return False
+	rows = parts[0].split("/")
+	if len(rows) != 8:
+		return False
+	valid_chars = "rnbqkpRNBQKP12345678"
+	for row in rows:
+		count = 0
+		for ch in row.elems():
+			if ch not in valid_chars:
+				return False
+			if ch >= "1" and ch <= "8":
+				count = count + int(ch)
+			else:
+				count = count + 1
+		if count != 8:
+			return False
+	return True
+
 # Create new game
 def action_create(a):
 	opponent = a.input("opponent")
@@ -107,17 +145,8 @@ def action_list(a):
 
 # View a game
 def action_view(a):
-	if not mochi.valid(a.input("game"), "id"):
-		a.error(400, "Invalid game ID")
-		return
-	game = mochi.db.row("select * from games where id=?", a.input("game"))
+	game = load_game(a)
 	if not game:
-		a.error(404, "Game not found")
-		return
-
-	# Verify user is a player
-	if game["identity"] != a.user.identity.id and game["opponent"] != a.user.identity.id:
-		a.error(403, "Not a player in this game")
 		return
 
 	mochi.service.call("notifications", "clear/object", "chess", game["id"])
@@ -128,17 +157,8 @@ def action_view(a):
 
 # Get messages for a game with cursor-based pagination
 def action_messages(a):
-	if not mochi.valid(a.input("game"), "id"):
-		a.error(400, "Invalid game ID")
-		return
-	game = mochi.db.row("select * from games where id=?", a.input("game"))
+	game = load_game(a)
 	if not game:
-		a.error(404, "Game not found")
-		return
-
-	# Verify user is a player
-	if game["identity"] != a.user.identity.id and game["opponent"] != a.user.identity.id:
-		a.error(403, "Not a player in this game")
 		return
 
 	# Pagination parameters
@@ -180,17 +200,8 @@ def action_messages(a):
 
 # Send a chat message
 def action_send(a):
-	if not mochi.valid(a.input("game"), "id"):
-		a.error(400, "Invalid game ID")
-		return
-	game = mochi.db.row("select * from games where id=?", a.input("game"))
+	game = load_game(a)
 	if not game:
-		a.error(404, "Game not found")
-		return
-
-	# Verify user is a player
-	if game["identity"] != a.user.identity.id and game["opponent"] != a.user.identity.id:
-		a.error(403, "Not a player in this game")
 		return
 
 	body = a.input("body", "")
@@ -223,17 +234,8 @@ def action_send(a):
 
 # Make a move
 def action_move(a):
-	if not mochi.valid(a.input("game"), "id"):
-		a.error(400, "Invalid game ID")
-		return
-	game = mochi.db.row("select * from games where id=?", a.input("game"))
+	game = load_game(a)
 	if not game:
-		a.error(404, "Game not found")
-		return
-
-	# Verify user is a player
-	if game["identity"] != a.user.identity.id and game["opponent"] != a.user.identity.id:
-		a.error(403, "Not a player in this game")
 		return
 
 	if game["status"] != "active":
@@ -259,6 +261,13 @@ def action_move(a):
 
 	if not move_from or not move_to or not fen or not san:
 		a.error(400, "Missing move data")
+		return
+
+	if not valid_fen(fen):
+		a.error(400, "Invalid board state")
+		return
+	if pgn and len(pgn) > 10000:
+		a.error(400, "PGN too long")
 		return
 
 	# Validate status and winner
@@ -558,6 +567,10 @@ def event_move(e):
 
 	if not fen or not san:
 		return
+	if not valid_fen(fen):
+		return
+	if len(pgn) > 10000:
+		return
 
 	valid_statuses = ["active", "checkmate", "stalemate", "draw"]
 	if status not in valid_statuses:
@@ -725,7 +738,12 @@ def action_notifications_subscribe(a):
 		a.error(400, "Invalid label")
 		return
 
-	destinations_list = json.decode(destinations) if destinations else []
+	destinations_list = []
+	if destinations:
+		destinations_list = json.decode(destinations)
+		if type(destinations_list) != "list":
+			a.error(400, "Invalid destinations")
+			return
 
 	result = mochi.service.call("notifications", "subscribe", label, type, object, destinations_list)
 	return {"data": {"id": result}}
