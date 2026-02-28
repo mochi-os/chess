@@ -8,6 +8,9 @@ const endpoints = {
     send: (gameId: string) => `/${gameId}/-/send`,
     move: (gameId: string) => `/${gameId}/-/move`,
     resign: (gameId: string) => `/${gameId}/-/resign`,
+    drawOffer: (gameId: string) => `/${gameId}/-/draw-offer`,
+    drawAccept: (gameId: string) => `/${gameId}/-/draw-accept`,
+    drawDecline: (gameId: string) => `/${gameId}/-/draw-decline`,
     delete: (gameId: string) => `/${gameId}/-/delete`,
   },
   auth: {

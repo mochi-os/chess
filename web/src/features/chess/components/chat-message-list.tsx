@@ -183,16 +183,11 @@ export function ChatMessageList({
               return (
                 <div
                   key={`${message.id}-${index}`}
-                  className={cn(
-                    'flex items-center gap-1.5 py-0.5',
-                    isSent ? 'justify-end' : 'justify-start'
-                  )}
+                  className="flex justify-center py-0.5"
                 >
-                  <span className="text-xs text-muted-foreground">
-                    {isSent ? 'You' : message.name} {verb}
-                  </span>
-                  <span className="text-xs font-mono font-medium">
-                    {san}
+                  <span className="text-[11px] text-muted-foreground/60">
+                    {isSent ? 'You' : message.name} {verb}{' '}
+                    <span className="font-mono">{san}</span>
                   </span>
                 </div>
               )
@@ -217,10 +212,10 @@ export function ChatMessageList({
 
                   <div
                     className={cn(
-                      'relative max-w-[85%] px-2.5 py-1.5 text-xs wrap-break-word',
+                      'relative max-w-[85%] px-2.5 py-1.5 text-sm wrap-break-word',
                       isSent
-                        ? 'rounded-[12px] rounded-br-[4px] bg-blue-500 text-white dark:bg-blue-600'
-                        : 'rounded-[12px] rounded-bl-[4px] bg-blue-50 text-gray-900 dark:bg-blue-900/30 dark:text-gray-100'
+                        ? 'rounded-[12px] rounded-br-[4px] bg-blue-100 text-gray-900 dark:bg-blue-800/40 dark:text-gray-100'
+                        : 'rounded-[12px] rounded-bl-[4px] bg-green-100 text-gray-900 dark:bg-green-800/40 dark:text-gray-100'
                     )}
                   >
                     <p className="leading-relaxed whitespace-pre-wrap">

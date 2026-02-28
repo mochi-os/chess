@@ -67,6 +67,29 @@ const handleWebsocketPayload = (
     void queryClient.invalidateQueries({ queryKey: gameKeys.detail(gameId) })
   }
 
+  // Handle draw accept — game ended
+  if (event === 'draw_accept') {
+    void queryClient.invalidateQueries({ queryKey: gameKeys.all() })
+    void queryClient.invalidateQueries({ queryKey: gameKeys.detail(gameId) })
+  }
+
+  // Handle draw offer / decline — update draw_offer in cache
+  if (event === 'draw_offer' || event === 'draw_decline') {
+    queryClient.setQueryData<GameViewResponse>(
+      gameKeys.detail(gameId),
+      (current) => {
+        if (!current) return current
+        return {
+          ...current,
+          game: {
+            ...current.game,
+            draw_offer: (payload.draw_offer as string) || null,
+          },
+        }
+      }
+    )
+  }
+
   // Handle move — update game detail cache with new FEN/status
   if (msgType === 'move') {
     queryClient.setQueryData<GameViewResponse>(
@@ -81,6 +104,7 @@ const handleWebsocketPayload = (
             pgn: (payload.pgn as string) ?? current.game.pgn,
             status: (payload.status as GameViewResponse['game']['status']) || current.game.status,
             winner: (payload.winner as string) || current.game.winner,
+            draw_offer: null,
           },
         }
       }

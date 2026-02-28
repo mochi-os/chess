@@ -1,5 +1,5 @@
 {
-	"version": "0.1",
+	"version": "1.1",
 	"label": "app_name",
 	"classes": ["game"],
 	"paths": ["chess"],
@@ -9,7 +9,7 @@
 	"execute": ["chess.star"],
 
 	"database": {
-		"schema": 1,
+		"schema": 2,
 		"file": "chess.db",
 		"create": {"function": "database_create"},
 		"upgrade": {"function": "database_upgrade"}
@@ -33,6 +33,9 @@
 		":game/-/send": {"function": "action_send"},
 		":game/-/move": {"function": "action_move"},
 		":game/-/resign": {"function": "action_resign"},
+		":game/-/draw-offer": {"function": "action_draw_offer"},
+		":game/-/draw-accept": {"function": "action_draw_accept"},
+		":game/-/draw-decline": {"function": "action_draw_decline"},
 		":game/-/delete": {"function": "action_delete"},
 		":game/assets": {"files": "web/dist/assets"},
 		":game/images": {"files": "web/dist/images"},
@@ -45,6 +48,9 @@
 		"new": {"function": "event_new"},
 		"move": {"function": "event_move"},
 		"message": {"function": "event_message"},
-		"resign": {"function": "event_resign"}
+		"resign": {"function": "event_resign"},
+		"draw_offer": {"function": "event_draw_offer"},
+		"draw_accept": {"function": "event_draw_accept"},
+		"draw_decline": {"function": "event_draw_decline"}
 	}
 }

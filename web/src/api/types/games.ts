@@ -8,6 +8,7 @@ export interface Game {
   white: string
   status: 'active' | 'checkmate' | 'stalemate' | 'draw' | 'resigned'
   winner: string | null
+  draw_offer: string | null
   fen: string
   pgn: string
   key: string
@@ -87,5 +88,9 @@ export interface ResignResponse {
 }
 
 export interface DeleteResponse {
+  success: boolean
+}
+
+export interface DrawOfferResponse {
   success: boolean
 }

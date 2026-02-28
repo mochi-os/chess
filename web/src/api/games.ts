@@ -12,6 +12,7 @@ import type {
   MoveResponse,
   ResignResponse,
   DeleteResponse,
+  DrawOfferResponse,
 } from './types/games'
 import endpoints from './endpoints'
 
@@ -63,6 +64,15 @@ export const gamesApi = {
 
   resign: (gameId: string) =>
     client.post<ResignResponse>(endpoints.game.resign(gameId)),
+
+  drawOffer: (gameId: string) =>
+    client.post<DrawOfferResponse>(endpoints.game.drawOffer(gameId)),
+
+  drawAccept: (gameId: string) =>
+    client.post<DrawOfferResponse>(endpoints.game.drawAccept(gameId)),
+
+  drawDecline: (gameId: string) =>
+    client.post<DrawOfferResponse>(endpoints.game.drawDecline(gameId)),
 
   delete: (gameId: string) =>
     client.post<DeleteResponse>(endpoints.game.delete(gameId)),

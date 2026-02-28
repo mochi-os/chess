@@ -22,6 +22,7 @@ import {
   type MoveResponse,
   type ResignResponse,
   type DeleteResponse,
+  type DrawOfferResponse,
 } from '@/api/games'
 
 export const gameKeys = {
@@ -204,6 +205,62 @@ export const useResignMutation = (
     mutationFn: ({ gameId }: ResignVariables) => gamesApi.resign(gameId),
     onSuccess: (data, variables, context, mutation) => {
       queryClient.invalidateQueries({ queryKey: gameKeys.all() })
+      queryClient.invalidateQueries({
+        queryKey: gameKeys.detail(variables.gameId),
+      })
+      onSuccess?.(data, variables, context, mutation)
+    },
+    ...restOptions,
+  })
+}
+
+interface DrawVariables {
+  gameId: string
+}
+
+export const useDrawOfferMutation = (
+  options?: UseMutationOptions<DrawOfferResponse, Error, DrawVariables, unknown>
+) => {
+  const queryClient = useQueryClient()
+  const { onSuccess, ...restOptions } = options ?? {}
+  return useMutation({
+    mutationFn: ({ gameId }: DrawVariables) => gamesApi.drawOffer(gameId),
+    onSuccess: (data, variables, context, mutation) => {
+      queryClient.invalidateQueries({
+        queryKey: gameKeys.detail(variables.gameId),
+      })
+      onSuccess?.(data, variables, context, mutation)
+    },
+    ...restOptions,
+  })
+}
+
+export const useDrawAcceptMutation = (
+  options?: UseMutationOptions<DrawOfferResponse, Error, DrawVariables, unknown>
+) => {
+  const queryClient = useQueryClient()
+  const { onSuccess, ...restOptions } = options ?? {}
+  return useMutation({
+    mutationFn: ({ gameId }: DrawVariables) => gamesApi.drawAccept(gameId),
+    onSuccess: (data, variables, context, mutation) => {
+      queryClient.invalidateQueries({ queryKey: gameKeys.all() })
+      queryClient.invalidateQueries({
+        queryKey: gameKeys.detail(variables.gameId),
+      })
+      onSuccess?.(data, variables, context, mutation)
+    },
+    ...restOptions,
+  })
+}
+
+export const useDrawDeclineMutation = (
+  options?: UseMutationOptions<DrawOfferResponse, Error, DrawVariables, unknown>
+) => {
+  const queryClient = useQueryClient()
+  const { onSuccess, ...restOptions } = options ?? {}
+  return useMutation({
+    mutationFn: ({ gameId }: DrawVariables) => gamesApi.drawDecline(gameId),
+    onSuccess: (data, variables, context, mutation) => {
       queryClient.invalidateQueries({
         queryKey: gameKeys.detail(variables.gameId),
       })

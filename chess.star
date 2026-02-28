@@ -13,6 +13,7 @@ def database_create():
 		winner text,
 		fen text not null default 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1',
 		pgn text not null default '',
+		draw_offer text,
 		key text not null,
 		updated integer not null,
 		created integer not null
@@ -32,7 +33,8 @@ def database_create():
 
 # Upgrade database
 def database_upgrade(to_version):
-	pass
+	if to_version == 2:
+		mochi.db.execute("alter table games add column draw_offer text")
 
 # Get friends list for new game
 def action_new(a):
@@ -264,7 +266,7 @@ def action_move(a):
 
 	now = mochi.time.now()
 	mochi.db.execute(
-		"update games set fen=?, pgn=?, status=?, winner=?, updated=? where id=?",
+		"update games set fen=?, pgn=?, status=?, winner=?, draw_offer=null, updated=? where id=?",
 		fen, pgn or "", new_status, new_winner, now, game["id"]
 	)
 
@@ -275,7 +277,8 @@ def action_move(a):
 	mochi.websocket.write(game["key"], {
 		"type": "move", "created": now, "member": a.user.identity.id, "name": a.user.identity.name,
 		"body": san, "from": move_from, "to": move_to, "promotion": promotion,
-		"fen": fen, "pgn": pgn or "", "status": new_status, "winner": new_winner or ""
+		"fen": fen, "pgn": pgn or "", "status": new_status, "winner": new_winner or "",
+		"draw_offer": ""
 	})
 
 	# Send to opponent
@@ -336,6 +339,147 @@ def action_resign(a):
 	mochi.message.send(
 		{"from": a.user.identity.id, "to": other, "service": "chess", "event": "resign"},
 		{"game": game["id"], "created": now, "body": msg, "winner": winner}
+	)
+
+	return {
+		"data": {"success": True}
+	}
+
+# Offer a draw
+def action_draw_offer(a):
+	if not mochi.valid(a.input("game"), "id"):
+		a.error(400, "Invalid game ID")
+		return
+	game = mochi.db.row("select * from games where id=?", a.input("game"))
+	if not game:
+		a.error(404, "Game not found")
+		return
+
+	if game["identity"] != a.user.identity.id and game["opponent"] != a.user.identity.id:
+		a.error(403, "Not a player in this game")
+		return
+
+	if game["status"] != "active":
+		a.error(400, "Game is not active")
+		return
+
+	if game["draw_offer"] == a.user.identity.id:
+		a.error(400, "You already offered a draw")
+		return
+
+	# Get opponent ID
+	if game["identity"] == a.user.identity.id:
+		other = game["opponent"]
+	else:
+		other = game["identity"]
+
+	now = mochi.time.now()
+	mochi.db.execute("update games set draw_offer=?, updated=? where id=?", a.user.identity.id, now, game["id"])
+
+	# Insert system message
+	id = mochi.uid()
+	msg = a.user.identity.name + " offered a draw"
+	mochi.db.execute("insert into messages ( id, game, member, name, body, type, created ) values ( ?, ?, ?, ?, ?, 'system', ? )", id, game["id"], a.user.identity.id, a.user.identity.name, msg, now)
+
+	mochi.websocket.write(game["key"], {"type": "system", "event": "draw_offer", "created": now, "body": msg, "draw_offer": a.user.identity.id})
+
+	mochi.message.send(
+		{"from": a.user.identity.id, "to": other, "service": "chess", "event": "draw_offer"},
+		{"game": game["id"], "created": now, "body": msg, "draw_offer": a.user.identity.id}
+	)
+
+	return {
+		"data": {"success": True}
+	}
+
+# Accept a draw offer
+def action_draw_accept(a):
+	if not mochi.valid(a.input("game"), "id"):
+		a.error(400, "Invalid game ID")
+		return
+	game = mochi.db.row("select * from games where id=?", a.input("game"))
+	if not game:
+		a.error(404, "Game not found")
+		return
+
+	if game["identity"] != a.user.identity.id and game["opponent"] != a.user.identity.id:
+		a.error(403, "Not a player in this game")
+		return
+
+	if game["status"] != "active":
+		a.error(400, "Game is not active")
+		return
+
+	if not game["draw_offer"] or game["draw_offer"] == a.user.identity.id:
+		a.error(400, "No draw offer to accept")
+		return
+
+	# Get opponent ID
+	if game["identity"] == a.user.identity.id:
+		other = game["opponent"]
+	else:
+		other = game["identity"]
+
+	now = mochi.time.now()
+	mochi.db.execute("update games set status='draw', draw_offer=null, updated=? where id=?", now, game["id"])
+
+	# Insert system message
+	id = mochi.uid()
+	msg = "Draw agreed"
+	mochi.db.execute("insert into messages ( id, game, member, name, body, type, created ) values ( ?, ?, ?, ?, ?, 'system', ? )", id, game["id"], a.user.identity.id, a.user.identity.name, msg, now)
+
+	mochi.websocket.write(game["key"], {"type": "system", "event": "draw_accept", "created": now, "body": msg})
+
+	mochi.message.send(
+		{"from": a.user.identity.id, "to": other, "service": "chess", "event": "draw_accept"},
+		{"game": game["id"], "created": now, "body": msg}
+	)
+
+	return {
+		"data": {"success": True}
+	}
+
+# Decline a draw offer
+def action_draw_decline(a):
+	if not mochi.valid(a.input("game"), "id"):
+		a.error(400, "Invalid game ID")
+		return
+	game = mochi.db.row("select * from games where id=?", a.input("game"))
+	if not game:
+		a.error(404, "Game not found")
+		return
+
+	if game["identity"] != a.user.identity.id and game["opponent"] != a.user.identity.id:
+		a.error(403, "Not a player in this game")
+		return
+
+	if game["status"] != "active":
+		a.error(400, "Game is not active")
+		return
+
+	if not game["draw_offer"] or game["draw_offer"] == a.user.identity.id:
+		a.error(400, "No draw offer to decline")
+		return
+
+	# Get opponent ID
+	if game["identity"] == a.user.identity.id:
+		other = game["opponent"]
+	else:
+		other = game["identity"]
+
+	now = mochi.time.now()
+	mochi.db.execute("update games set draw_offer=null, updated=? where id=?", now, game["id"])
+
+	# Insert system message
+	id = mochi.uid()
+	msg = a.user.identity.name + " declined the draw"
+	mochi.db.execute("insert into messages ( id, game, member, name, body, type, created ) values ( ?, ?, ?, ?, ?, 'system', ? )", id, game["id"], a.user.identity.id, a.user.identity.name, msg, now)
+
+	mochi.websocket.write(game["key"], {"type": "system", "event": "draw_decline", "created": now, "body": msg, "draw_offer": ""})
+
+	mochi.message.send(
+		{"from": a.user.identity.id, "to": other, "service": "chess", "event": "draw_decline"},
+		{"game": game["id"], "created": now, "body": msg}
 	)
 
 	return {
@@ -433,7 +577,7 @@ def event_move(e):
 		return
 
 	now = mochi.time.now()
-	mochi.db.execute("update games set fen=?, pgn=?, status=?, winner=?, updated=? where id=?", fen, pgn, status, winner, now, game["id"])
+	mochi.db.execute("update games set fen=?, pgn=?, status=?, winner=?, draw_offer=null, updated=? where id=?", fen, pgn, status, winner, now, game["id"])
 
 	id = e.content("message")
 	if not mochi.valid(str(id), "id"):
@@ -450,7 +594,8 @@ def event_move(e):
 	mochi.websocket.write(game["key"], {
 		"type": "move", "created": created, "member": sender, "name": name,
 		"body": san, "from": e.content("from") or "", "to": e.content("to") or "",
-		"fen": fen, "pgn": pgn, "status": status, "winner": winner or ""
+		"fen": fen, "pgn": pgn, "status": status, "winner": winner or "",
+		"draw_offer": ""
 	})
 	mochi.service.call("notifications", "send", "move", "Chess move", name + " played " + san, game["id"], "/chess/" + game["id"])
 
@@ -506,6 +651,70 @@ def event_resign(e):
 
 	mochi.websocket.write(game["key"], {"type": "system", "event": "resign", "created": now, "body": body, "winner": winner or ""})
 	mochi.service.call("notifications", "send", "resign", "Chess game", body, game["id"], "/chess/" + game["id"])
+
+# Received a draw offer event
+def event_draw_offer(e):
+	game = mochi.db.row("select * from games where id=?", e.content("game"))
+	if not game:
+		return
+
+	sender = e.header("from")
+	if sender != game["identity"] and sender != game["opponent"]:
+		return
+
+	draw_offer = e.content("draw_offer")
+	body = e.content("body") or "Draw offered"
+
+	now = mochi.time.now()
+	mochi.db.execute("update games set draw_offer=?, updated=? where id=?", draw_offer, now, game["id"])
+
+	id = mochi.uid()
+	mochi.db.execute("insert into messages ( id, game, member, name, body, type, created ) values ( ?, ?, ?, ?, ?, 'system', ? )", id, game["id"], sender, "", body, now)
+
+	mochi.websocket.write(game["key"], {"type": "system", "event": "draw_offer", "created": now, "body": body, "draw_offer": draw_offer})
+	mochi.service.call("notifications", "send", "draw_offer", "Chess", body, game["id"], "/chess/" + game["id"])
+
+# Received a draw accept event
+def event_draw_accept(e):
+	game = mochi.db.row("select * from games where id=?", e.content("game"))
+	if not game:
+		return
+
+	sender = e.header("from")
+	if sender != game["identity"] and sender != game["opponent"]:
+		return
+
+	body = e.content("body") or "Draw agreed"
+
+	now = mochi.time.now()
+	mochi.db.execute("update games set status='draw', draw_offer=null, updated=? where id=?", now, game["id"])
+
+	id = mochi.uid()
+	mochi.db.execute("insert into messages ( id, game, member, name, body, type, created ) values ( ?, ?, ?, ?, ?, 'system', ? )", id, game["id"], sender, "", body, now)
+
+	mochi.websocket.write(game["key"], {"type": "system", "event": "draw_accept", "created": now, "body": body})
+	mochi.service.call("notifications", "send", "draw_accept", "Chess", body, game["id"], "/chess/" + game["id"])
+
+# Received a draw decline event
+def event_draw_decline(e):
+	game = mochi.db.row("select * from games where id=?", e.content("game"))
+	if not game:
+		return
+
+	sender = e.header("from")
+	if sender != game["identity"] and sender != game["opponent"]:
+		return
+
+	body = e.content("body") or "Draw declined"
+
+	now = mochi.time.now()
+	mochi.db.execute("update games set draw_offer=null, updated=? where id=?", now, game["id"])
+
+	id = mochi.uid()
+	mochi.db.execute("insert into messages ( id, game, member, name, body, type, created ) values ( ?, ?, ?, ?, ?, 'system', ? )", id, game["id"], sender, "", body, now)
+
+	mochi.websocket.write(game["key"], {"type": "system", "event": "draw_decline", "created": now, "body": body, "draw_offer": ""})
+	mochi.service.call("notifications", "send", "draw_decline", "Chess", body, game["id"], "/chess/" + game["id"])
 
 # Notification proxy actions
 

@@ -23,7 +23,7 @@ import {
   Skeleton,
   SubscribeDialog,
 } from '@mochi/common'
-import { MoreHorizontal, Trash2, Loader2 } from 'lucide-react'
+import { MoreHorizontal, Trash2, Loader2, Flag, Handshake, RotateCcw } from 'lucide-react'
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -42,10 +42,15 @@ import {
   useMoveMutation,
   useResignMutation,
   useDeleteGameMutation,
+  useCreateGameMutation,
+  useDrawOfferMutation,
+  useDrawAcceptMutation,
+  useDrawDeclineMutation,
 } from '@/hooks/useGames'
 import { GameEmptyState } from './components/game-empty-state'
 import { ChessBoard } from './components/chess-board'
 import { GameStatus } from './components/game-status'
+import { DrawOfferBanner } from './components/draw-offer-banner'
 import { ChatMessageList } from './components/chat-message-list'
 import { ChatInput } from './components/chat-input'
 
@@ -134,6 +139,33 @@ export function ChessGame() {
     },
     onError: (error) => {
       toast.error(getErrorMessage(error, 'Failed to resign'))
+    },
+  })
+
+  // Draw
+  const drawOfferMutation = useDrawOfferMutation({
+    onError: (error) => {
+      toast.error(getErrorMessage(error, 'Failed to offer draw'))
+    },
+  })
+  const drawAcceptMutation = useDrawAcceptMutation({
+    onError: (error) => {
+      toast.error(getErrorMessage(error, 'Failed to accept draw'))
+    },
+  })
+  const drawDeclineMutation = useDrawDeclineMutation({
+    onError: (error) => {
+      toast.error(getErrorMessage(error, 'Failed to decline draw'))
+    },
+  })
+
+  // Rematch
+  const rematchMutation = useCreateGameMutation({
+    onSuccess: (data) => {
+      void navigate({ to: '/$gameId', params: { gameId: data.id } })
+    },
+    onError: (error) => {
+      toast.error(getErrorMessage(error, 'Failed to create rematch'))
     },
   })
 
@@ -226,6 +258,27 @@ export function ChessGame() {
     deleteGameMutation.mutate({ gameId: selectedGame.id })
   }
 
+  const handleDrawOffer = () => {
+    if (!selectedGame) return
+    drawOfferMutation.mutate({ gameId: selectedGame.id })
+  }
+
+  const handleDrawAccept = () => {
+    if (!selectedGame) return
+    drawAcceptMutation.mutate({ gameId: selectedGame.id })
+  }
+
+  const handleDrawDecline = () => {
+    if (!selectedGame) return
+    drawDeclineMutation.mutate({ gameId: selectedGame.id })
+  }
+
+  const handleRematch = () => {
+    if (!game || !myIdentity) return
+    const opponentId = game.identity === myIdentity ? game.opponent : game.identity
+    rematchMutation.mutate(opponentId)
+  }
+
   // Loading / empty
   if (selectedGameId && gamesQuery.isLoading) {
     return (
@@ -274,7 +327,7 @@ export function ChessGame() {
         <PageHeader
           title={opponentName || 'Chess'}
           actions={
-            game && game.status !== 'active' ? (
+            game ? (
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <Button variant="ghost" size="icon">
@@ -282,9 +335,27 @@ export function ChessGame() {
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent align="end" className="w-48">
-                  <DropdownMenuItem onClick={handleDelete}>
-                    <Trash2 className="mr-2 size-4" /> Delete game
-                  </DropdownMenuItem>
+                  {game.status === 'active' ? (
+                    <>
+                      {game.draw_offer !== myIdentity && (
+                        <DropdownMenuItem onClick={handleDrawOffer} disabled={drawOfferMutation.isPending}>
+                          <Handshake className="mr-2 size-4" /> Offer draw
+                        </DropdownMenuItem>
+                      )}
+                      <DropdownMenuItem onClick={() => setShowResignDialog(true)}>
+                        <Flag className="mr-2 size-4" /> Resign
+                      </DropdownMenuItem>
+                    </>
+                  ) : (
+                    <>
+                      <DropdownMenuItem onClick={handleRematch} disabled={rematchMutation.isPending}>
+                        <RotateCcw className="mr-2 size-4" /> Rematch
+                      </DropdownMenuItem>
+                      <DropdownMenuItem onClick={handleDelete}>
+                        <Trash2 className="mr-2 size-4" /> Delete game
+                      </DropdownMenuItem>
+                    </>
+                  )}
                 </DropdownMenuContent>
               </DropdownMenu>
             ) : undefined
@@ -303,10 +374,22 @@ export function ChessGame() {
                   myColor={myColor}
                   isMyTurn={isMyTurn}
                   isCheck={isCheck}
-                  onResign={() => setShowResignDialog(true)}
-                  isResigning={resignMutation.isPending}
                   myIdentity={myIdentity}
                 />
+                {game.draw_offer && game.draw_offer === myIdentity && (
+                  <div className="px-1 py-1 text-sm text-muted-foreground">
+                    Draw offered — waiting for {opponentName}
+                  </div>
+                )}
+                {game.draw_offer && game.draw_offer !== myIdentity && (
+                  <DrawOfferBanner
+                    opponentName={opponentName}
+                    onAccept={handleDrawAccept}
+                    onDecline={handleDrawDecline}
+                    isAccepting={drawAcceptMutation.isPending}
+                    isDeclining={drawDeclineMutation.isPending}
+                  />
+                )}
                 <ChessBoard
                   fen={game.fen}
                   myColor={myColor}
