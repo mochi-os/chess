@@ -364,32 +364,34 @@ export function ChessGame() {
 
         <Main className="flex min-h-0 flex-1 overflow-hidden">
           {/* Left: Board */}
-          <div className="flex flex-1 flex-col overflow-y-auto p-4">
+          <div className="flex flex-1 flex-col overflow-y-auto p-2 sm:p-4">
             {isLoadingDetail ? (
               <Skeleton className="aspect-square max-w-[560px] w-full mx-auto" />
             ) : game && chess ? (
               <>
-                <GameStatus
-                  game={game}
-                  myColor={myColor}
-                  isMyTurn={isMyTurn}
-                  isCheck={isCheck}
-                  myIdentity={myIdentity}
-                />
-                {game.draw_offer && game.draw_offer === myIdentity && (
-                  <div className="px-1 py-1 text-sm text-muted-foreground">
-                    Draw offered — waiting for {opponentName}
-                  </div>
-                )}
-                {game.draw_offer && game.draw_offer !== myIdentity && (
-                  <DrawOfferBanner
-                    opponentName={opponentName}
-                    onAccept={handleDrawAccept}
-                    onDecline={handleDrawDecline}
-                    isAccepting={drawAcceptMutation.isPending}
-                    isDeclining={drawDeclineMutation.isPending}
+                <div className="shrink-0">
+                  <GameStatus
+                    game={game}
+                    myColor={myColor}
+                    isMyTurn={isMyTurn}
+                    isCheck={isCheck}
+                    myIdentity={myIdentity}
                   />
-                )}
+                  {game.draw_offer && game.draw_offer === myIdentity && (
+                    <div className="px-1 py-1 text-sm text-muted-foreground">
+                      Draw offered — waiting for {opponentName}
+                    </div>
+                  )}
+                  {game.draw_offer && game.draw_offer !== myIdentity && (
+                    <DrawOfferBanner
+                      opponentName={opponentName}
+                      onAccept={handleDrawAccept}
+                      onDecline={handleDrawDecline}
+                      isAccepting={drawAcceptMutation.isPending}
+                      isDeclining={drawDeclineMutation.isPending}
+                    />
+                  )}
+                </div>
                 <ChessBoard
                   fen={game.fen}
                   myColor={myColor}

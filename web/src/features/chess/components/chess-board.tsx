@@ -166,8 +166,17 @@ export function ChessBoard({
   )
 
   return (
-    <div className="relative">
-      <div className="chess-board mx-auto grid grid-cols-8 border border-border rounded overflow-hidden">
+    <div
+      className="relative mx-auto w-full"
+      style={{ maxWidth: 'min(100%, calc(100dvh - 200px))' }}
+    >
+      <div
+        className="chess-board grid aspect-square w-full border border-border rounded overflow-hidden"
+        style={{
+          gridTemplateColumns: 'repeat(8, 1fr)',
+          gridTemplateRows: 'repeat(8, 1fr)',
+        }}
+      >
         {ranks.map((rank, ri) =>
           files.map((file, fi) => {
             const square = `${file}${rank}`
