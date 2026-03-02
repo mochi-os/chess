@@ -324,59 +324,52 @@ export function ChessGame() {
   return (
     <>
       <div className="flex h-full flex-col overflow-hidden">
-        <PageHeader
-          title={opponentName || 'Chess'}
-          actions={
-            game ? (
-              <DropdownMenu>
-                <DropdownMenuTrigger asChild>
-                  <Button variant="ghost" size="icon">
-                    <MoreHorizontal className="size-5" />
-                  </Button>
-                </DropdownMenuTrigger>
-                <DropdownMenuContent align="end" className="w-48">
-                  {game.status === 'active' ? (
-                    <>
-                      {game.draw_offer !== myIdentity && (
-                        <DropdownMenuItem onClick={handleDrawOffer} disabled={drawOfferMutation.isPending}>
-                          <Handshake className="mr-2 size-4" /> Offer draw
-                        </DropdownMenuItem>
-                      )}
-                      <DropdownMenuItem onClick={() => setShowResignDialog(true)}>
-                        <Flag className="mr-2 size-4" /> Resign
-                      </DropdownMenuItem>
-                    </>
-                  ) : (
-                    <>
-                      <DropdownMenuItem onClick={handleRematch} disabled={rematchMutation.isPending}>
-                        <RotateCcw className="mr-2 size-4" /> Rematch
-                      </DropdownMenuItem>
-                      <DropdownMenuItem onClick={handleDelete}>
-                        <Trash2 className="mr-2 size-4" /> Delete game
-                      </DropdownMenuItem>
-                    </>
-                  )}
-                </DropdownMenuContent>
-              </DropdownMenu>
-            ) : undefined
-          }
-        />
-
         <Main className="flex min-h-0 flex-1 overflow-hidden">
           {/* Left: Board */}
-          <div className="flex flex-1 flex-col overflow-y-auto p-2 sm:p-4">
+          <div className="flex flex-1 flex-col overflow-y-auto px-2 sm:px-4 pb-2">
             {isLoadingDetail ? (
               <Skeleton className="aspect-square max-w-[560px] w-full mx-auto" />
             ) : game && chess ? (
               <>
-                <div className="shrink-0">
+                <div className="shrink-0 mb-3">
                   <GameStatus
                     game={game}
                     myColor={myColor}
                     isMyTurn={isMyTurn}
                     isCheck={isCheck}
                     myIdentity={myIdentity}
-                  />
+                  >
+                    <DropdownMenu>
+                      <DropdownMenuTrigger asChild>
+                        <Button variant="ghost" size="icon" className="size-7">
+                          <MoreHorizontal className="size-4" />
+                        </Button>
+                      </DropdownMenuTrigger>
+                      <DropdownMenuContent align="end" className="w-48">
+                        {game.status === 'active' ? (
+                          <>
+                            {game.draw_offer !== myIdentity && (
+                              <DropdownMenuItem onClick={handleDrawOffer} disabled={drawOfferMutation.isPending}>
+                                <Handshake className="mr-2 size-4" /> Offer draw
+                              </DropdownMenuItem>
+                            )}
+                            <DropdownMenuItem onClick={() => setShowResignDialog(true)}>
+                              <Flag className="mr-2 size-4" /> Resign
+                            </DropdownMenuItem>
+                          </>
+                        ) : (
+                          <>
+                            <DropdownMenuItem onClick={handleRematch} disabled={rematchMutation.isPending}>
+                              <RotateCcw className="mr-2 size-4" /> Rematch
+                            </DropdownMenuItem>
+                            <DropdownMenuItem onClick={handleDelete}>
+                              <Trash2 className="mr-2 size-4" /> Delete game
+                            </DropdownMenuItem>
+                          </>
+                        )}
+                      </DropdownMenuContent>
+                    </DropdownMenu>
+                  </GameStatus>
                   {game.draw_offer && game.draw_offer === myIdentity && (
                     <div className="px-1 py-1 text-sm text-muted-foreground">
                       Draw offered — waiting for {opponentName}

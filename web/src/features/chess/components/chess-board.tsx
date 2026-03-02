@@ -167,8 +167,8 @@ export function ChessBoard({
 
   return (
     <div
-      className="relative mx-auto w-full"
-      style={{ maxWidth: 'min(100%, calc(100dvh - 200px))' }}
+      className="mx-auto w-full"
+      style={{ maxWidth: 'min(100%, calc(100dvh - 108px))' }}
     >
       <div
         className="chess-board grid aspect-square w-full border border-border rounded overflow-hidden"
@@ -195,7 +195,7 @@ export function ChessBoard({
               <div
                 key={square}
                 className={cn(
-                  'chess-square relative flex items-center justify-center aspect-square',
+                  'chess-square relative flex items-center justify-center',
                   isLight
                     ? 'bg-[#f0dab5] dark:bg-[#b89a78]'
                     : 'bg-[#a3664e] dark:bg-[#7a4a38]',
