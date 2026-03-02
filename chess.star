@@ -19,6 +19,8 @@ def database_create():
 		created integer not null
 	)""")
 	mochi.db.execute("create index if not exists games_updated on games( updated )")
+	mochi.db.execute("create index if not exists games_identity on games( identity )")
+	mochi.db.execute("create index if not exists games_opponent on games( opponent )")
 
 	mochi.db.execute("""create table if not exists messages (
 		id text not null primary key,
@@ -35,6 +37,9 @@ def database_create():
 def database_upgrade(to_version):
 	if to_version == 2:
 		mochi.db.execute("alter table games add column draw_offer text")
+	if to_version == 3:
+		mochi.db.execute("create index if not exists games_identity on games( identity )")
+		mochi.db.execute("create index if not exists games_opponent on games( opponent )")
 
 # Get friends list for new game
 def action_new(a):
@@ -323,16 +328,8 @@ def action_move(a):
 
 # Resign
 def action_resign(a):
-	if not mochi.valid(a.input("game"), "id"):
-		a.error(400, "Invalid game ID")
-		return
-	game = mochi.db.row("select * from games where id=?", a.input("game"))
+	game = load_game(a)
 	if not game:
-		a.error(404, "Game not found")
-		return
-
-	if game["identity"] != a.user.identity.id and game["opponent"] != a.user.identity.id:
-		a.error(403, "Not a player in this game")
 		return
 
 	if game["status"] != "active":
@@ -364,16 +361,8 @@ def action_resign(a):
 
 # Offer a draw
 def action_draw_offer(a):
-	if not mochi.valid(a.input("game"), "id"):
-		a.error(400, "Invalid game ID")
-		return
-	game = mochi.db.row("select * from games where id=?", a.input("game"))
+	game = load_game(a)
 	if not game:
-		a.error(404, "Game not found")
-		return
-
-	if game["identity"] != a.user.identity.id and game["opponent"] != a.user.identity.id:
-		a.error(403, "Not a player in this game")
 		return
 
 	if game["status"] != "active":
@@ -407,16 +396,8 @@ def action_draw_offer(a):
 
 # Accept a draw offer
 def action_draw_accept(a):
-	if not mochi.valid(a.input("game"), "id"):
-		a.error(400, "Invalid game ID")
-		return
-	game = mochi.db.row("select * from games where id=?", a.input("game"))
+	game = load_game(a)
 	if not game:
-		a.error(404, "Game not found")
-		return
-
-	if game["identity"] != a.user.identity.id and game["opponent"] != a.user.identity.id:
-		a.error(403, "Not a player in this game")
 		return
 
 	if game["status"] != "active":
@@ -450,16 +431,8 @@ def action_draw_accept(a):
 
 # Decline a draw offer
 def action_draw_decline(a):
-	if not mochi.valid(a.input("game"), "id"):
-		a.error(400, "Invalid game ID")
-		return
-	game = mochi.db.row("select * from games where id=?", a.input("game"))
+	game = load_game(a)
 	if not game:
-		a.error(404, "Game not found")
-		return
-
-	if game["identity"] != a.user.identity.id and game["opponent"] != a.user.identity.id:
-		a.error(403, "Not a player in this game")
 		return
 
 	if game["status"] != "active":
@@ -493,16 +466,8 @@ def action_draw_decline(a):
 
 # Delete a finished game
 def action_delete(a):
-	if not mochi.valid(a.input("game"), "id"):
-		a.error(400, "Invalid game ID")
-		return
-	game = mochi.db.row("select * from games where id=?", a.input("game"))
+	game = load_game(a)
 	if not game:
-		a.error(404, "Game not found")
-		return
-
-	if game["identity"] != a.user.identity.id and game["opponent"] != a.user.identity.id:
-		a.error(403, "Not a player in this game")
 		return
 
 	if game["status"] == "active":
