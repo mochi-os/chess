@@ -63,6 +63,9 @@ def load_game(a):
 	return game
 
 # Validate a chess FEN string
+def valid_square(s):
+	return len(s) == 2 and s[0] in "abcdefgh" and s[1] in "12345678"
+
 def valid_fen(fen):
 	if not fen or len(fen) > 200:
 		return False
@@ -262,7 +265,16 @@ def action_move(a):
 	if not move_from or not move_to or not fen or not san:
 		a.error(400, "Missing move data")
 		return
+	if not valid_square(move_from) or not valid_square(move_to):
+		a.error(400, "Invalid square")
+		return
+	if promotion and promotion not in ("q", "r", "b", "n"):
+		a.error(400, "Invalid promotion")
+		return
 
+	if len(san) > 10:
+		a.error(400, "Invalid move notation")
+		return
 	if not valid_fen(fen):
 		a.error(400, "Invalid board state")
 		return
@@ -273,7 +285,8 @@ def action_move(a):
 	# Validate status and winner
 	valid_statuses = ["active", "checkmate", "stalemate", "draw"]
 	new_status = status if status in valid_statuses else "active"
-	players = [game["white"], game["black"]]
+	black = game["opponent"] if game["white"] == game["identity"] else game["identity"]
+	players = [game["white"], black]
 	new_winner = winner if winner in players else None
 
 	now = mochi.time.now()
@@ -727,8 +740,8 @@ def event_draw_decline(e):
 
 def action_notifications_subscribe(a):
 	label = a.input("label", "").strip()
-	type = a.input("type", "").strip()
-	object = a.input("object", "").strip()
+	sub_type = a.input("type", "").strip()
+	sub_object = a.input("object", "").strip()
 	destinations = a.input("destinations", "")
 
 	if not label:
@@ -745,7 +758,7 @@ def action_notifications_subscribe(a):
 			a.error(400, "Invalid destinations")
 			return
 
-	result = mochi.service.call("notifications", "subscribe", label, type, object, destinations_list)
+	result = mochi.service.call("notifications", "subscribe", label, sub_type, sub_object, destinations_list)
 	return {"data": {"id": result}}
 
 def action_notifications_check(a):
