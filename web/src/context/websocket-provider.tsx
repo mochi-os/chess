@@ -1,4 +1,5 @@
 import { useEffect, useMemo, type ReactNode } from 'react'
+import { isInShell } from '@mochi/common'
 import { gamesApi } from '@/api/games'
 import {
   ChatWebsocketManager,
@@ -7,7 +8,7 @@ import {
 import { WebsocketContext } from '@/context/websocket-context'
 
 const buildManager = (): ChatWebsocketManager | null => {
-  if (typeof window === 'undefined') {
+  if (typeof window === 'undefined' || isInShell()) {
     return null
   }
 
@@ -41,10 +42,6 @@ export const WebsocketProvider = ({ children }: { children: ReactNode }) => {
       manager?.dispose()
     }
   }, [manager])
-
-  if (!manager) {
-    return children
-  }
 
   return (
     <WebsocketContext.Provider value={manager}>
