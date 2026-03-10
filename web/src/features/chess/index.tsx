@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import { useNavigate, useParams } from '@tanstack/react-router'
 import { Chess } from 'chess.js'
-import { useAuthStore, usePageTitle, useQueryWithError, PageHeader, Main, GeneralError, Button, getErrorMessage, getAppPath, toast, AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, Skeleton, SubscribeDialog, Sheet, SheetContent, SheetHeader, SheetTitle, DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@mochi/common'
+import { useAuthStore, usePageTitle, useQueryWithError, PageHeader, Main, GeneralError, IconButton, getErrorMessage, getAppPath, toast, AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, Skeleton, SubscribeDialog, Sheet, SheetContent, SheetHeader, SheetTitle, DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@mochi/common/realtime-shell'
 import { MoreHorizontal, Trash2, Loader2, Flag, Handshake, RotateCcw, MessageCircle } from 'lucide-react'
 import { useSidebarContext } from '@/context/sidebar-context'
 import { setLastGame } from '@/hooks/useGameStorage'
@@ -313,14 +313,23 @@ export function ChessGame() {
                     isCheck={isCheck}
                     myIdentity={myIdentity}
                   >
-                    <Button variant="ghost" size="icon" className="size-7 md:hidden" onClick={() => setShowMobileChat(true)}>
+                    <IconButton
+                      variant='ghost'
+                      className='size-7 md:hidden'
+                      onClick={() => setShowMobileChat(true)}
+                      label='Open chat panel'
+                    >
                       <MessageCircle className="size-4" />
-                    </Button>
+                    </IconButton>
                     <DropdownMenu>
                       <DropdownMenuTrigger asChild>
-                        <Button variant="ghost" size="icon" className="size-7">
+                        <IconButton
+                          variant='ghost'
+                          className='size-7'
+                          label='Open game actions'
+                        >
                           <MoreHorizontal className="size-4" />
-                        </Button>
+                        </IconButton>
                       </DropdownMenuTrigger>
                       <DropdownMenuContent align="end" className="w-48">
                         {game.status === 'active' ? (

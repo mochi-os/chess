@@ -5,12 +5,11 @@ import {
   useCallback,
   type ReactNode,
 } from 'react'
+import {
+  getWebsocketStatusMeta,
+  type WebsocketStatusMeta,
+} from '@mochi/common'
 import type { WebsocketConnectionStatus } from '@/lib/websocket-manager'
-
-type WebsocketStatusMeta = {
-  label: string
-  color: string
-}
 
 type SidebarContextValue = {
   gameId: string | null
@@ -28,27 +27,6 @@ type SidebarContextValue = {
 }
 
 const SidebarContext = createContext<SidebarContextValue | null>(null)
-
-function getWebsocketStatusMeta(
-  status: WebsocketConnectionStatus,
-  retries: number
-): WebsocketStatusMeta {
-  switch (status) {
-    case 'ready':
-      return { label: 'Connected', color: 'bg-green-500' }
-    case 'connecting':
-      return {
-        label: retries > 0 ? `Reconnecting (${retries})...` : 'Connecting...',
-        color: 'bg-yellow-500',
-      }
-    case 'error':
-      return { label: 'Disconnected', color: 'bg-red-500' }
-    case 'idle':
-    case 'closing':
-    default:
-      return { label: 'Disconnected', color: 'bg-slate-500' }
-  }
-}
 
 export function SidebarProvider({ children }: { children: ReactNode }) {
   const [gameId, setGameId] = useState<string | null>(null)

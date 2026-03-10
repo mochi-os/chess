@@ -10,7 +10,13 @@ import type {
   UseInfiniteQueryResult,
   InfiniteData,
 } from '@tanstack/react-query'
-import { GeneralError, LoadMoreTrigger, cn, Skeleton } from '@mochi/common'
+import {
+  GeneralError,
+  LoadMoreTrigger,
+  cn,
+  Skeleton,
+  getChatBubbleToneClass,
+} from '@mochi/common'
 import type { GameMessage, GetMessagesResponse } from '@/api/games'
 
 interface ChatMessageListProps {
@@ -212,9 +218,7 @@ export function ChatMessageList({
                   <div
                     className={cn(
                       'relative max-w-[85%] px-2.5 py-1.5 text-sm wrap-break-word',
-                      isSent
-                        ? 'rounded-[12px] rounded-br-[4px] bg-blue-100 text-gray-900 dark:bg-blue-800/40 dark:text-gray-100'
-                        : 'rounded-[12px] rounded-bl-[4px] bg-green-100 text-gray-900 dark:bg-green-800/40 dark:text-gray-100'
+                      getChatBubbleToneClass(isSent)
                     )}
                   >
                     <p className="leading-relaxed whitespace-pre-wrap">
