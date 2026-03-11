@@ -29,6 +29,7 @@ export const gameKeys = {
   all: () => ['games'] as const,
   detail: (gameId: string) => ['games', gameId] as const,
   messages: (gameId: string) => ['games', gameId, 'messages'] as const,
+  moveHistory: (gameId: string) => ['games', gameId, 'move-history'] as const,
   newGame: () => ['games', 'new'] as const,
 }
 
@@ -75,6 +76,7 @@ export const useGamesQuery = (
   })
 
 const DEFAULT_PAGE_SIZE = 30
+const MOVE_HISTORY_PAGE_SIZE = 100
 
 export const useInfiniteMessagesQuery = (
   gameId?: string,
@@ -101,6 +103,58 @@ export const useInfiniteMessagesQuery = (
       }
       return lastPage.nextCursor
     },
+  })
+
+const fetchMoveHistory = async (gameId: string): Promise<string[]> => {
+  const pages: GetMessagesResponse[] = []
+  let before: number | undefined
+
+  for (;;) {
+    const page = await gamesApi.messages(gameId, {
+      before,
+      limit: MOVE_HISTORY_PAGE_SIZE,
+    })
+
+    pages.push(page)
+
+    if (!page.hasMore || page.nextCursor === undefined || page.nextCursor === before) {
+      break
+    }
+
+    before = page.nextCursor
+  }
+
+  return [...pages]
+    .reverse()
+    .flatMap((page) => page.messages)
+    .filter((message) => message.type === 'move')
+    .map((message) => message.body.trim())
+    .filter((body) => body.length > 0)
+}
+
+export const useMoveHistoryQuery = (
+  gameId?: string,
+  options?: Omit<
+    UseQueryOptions<
+      string[],
+      Error,
+      string[],
+      ReturnType<typeof gameKeys.moveHistory>
+    >,
+    'queryKey' | 'queryFn'
+  >
+) =>
+  useQueryWithError({
+    queryKey: gameKeys.moveHistory(gameId ?? 'unknown'),
+    enabled: Boolean(gameId) && (options?.enabled ?? true),
+    staleTime: 60000,
+    queryFn: () => {
+      if (!gameId) {
+        throw new Error('Game ID is required')
+      }
+      return fetchMoveHistory(gameId)
+    },
+    ...options,
   })
 
 interface SendMessageVariables extends SendMessageRequest {
@@ -147,6 +201,9 @@ export const useMoveMutation = (
       })
       queryClient.invalidateQueries({
         queryKey: gameKeys.detail(variables.gameId),
+      })
+      queryClient.invalidateQueries({
+        queryKey: gameKeys.moveHistory(variables.gameId),
       })
       queryClient.invalidateQueries({ queryKey: gameKeys.all() })
       onSuccess?.(data, variables, context, mutation)
