@@ -9,6 +9,7 @@ import { useGameWebsocket } from '@/hooks/useGameWebsocket'
 import { gamesApi } from '@/api/games'
 import {
   useInfiniteMessagesQuery,
+  useMoveHistoryQuery,
   useGamesQuery,
   useSendMessageMutation,
   useGameDetailQuery,
@@ -95,6 +96,8 @@ export function ChessGame() {
     if (!messagesQuery.data?.pages) return []
     return [...messagesQuery.data.pages].reverse().flatMap((p) => p.messages)
   }, [messagesQuery.data?.pages])
+  const moveHistoryQuery = useMoveHistoryQuery(selectedGame?.id)
+  const moveHistory = moveHistoryQuery.data ?? []
 
   // Send message
   const sendMessageMutation = useSendMessageMutation({
@@ -373,6 +376,7 @@ export function ChessGame() {
                 </div>
                 <ChessBoard
                   fen={game.fen}
+                  moveHistory={moveHistory}
                   myColor={myColor}
                   isMyTurn={isMyTurn}
                   gameStatus={game.status}

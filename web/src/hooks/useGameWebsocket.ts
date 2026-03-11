@@ -109,6 +109,10 @@ const handleWebsocketPayload = (
         }
       }
     )
+
+    void queryClient.invalidateQueries({
+      queryKey: gameKeys.moveHistory(gameId),
+    })
   }
 
   // Append message to messages cache for all types (message, move, system)

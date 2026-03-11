@@ -1,22 +1,17 @@
 import { useCallback, useMemo, useState } from 'react'
 import { Chess, type Square } from 'chess.js'
 import { cn } from '@mochi/common'
+import { CapturedPiecesStrip } from './captured-pieces-strip'
+import { getCapturedPiecesSummary } from '../lib/captured-pieces'
+import { CHESS_PIECE_NAMES, getPieceImagePath } from '../lib/chess-pieces'
 import { PromotionDialog } from './promotion-dialog'
-
-const PIECE_NAMES: Record<string, string> = {
-  k: 'king', q: 'queen', r: 'rook', b: 'bishop', n: 'knight', p: 'pawn',
-}
-
-function pieceImage(color: string, type: string): string {
-  const side = color === 'w' ? 'white' : 'black'
-  return `images/pieces/${side}/${PIECE_NAMES[type]}.svg`
-}
 
 const FILES = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']
 const RANKS = ['8', '7', '6', '5', '4', '3', '2', '1']
 
 interface ChessBoardProps {
   fen: string
+  moveHistory: readonly string[]
   myColor: 'w' | 'b'
   isMyTurn: boolean
   gameStatus: string
@@ -26,6 +21,7 @@ interface ChessBoardProps {
 
 export function ChessBoard({
   fen,
+  moveHistory,
   myColor,
   isMyTurn,
   gameStatus,
@@ -48,6 +44,10 @@ export function ChessBoard({
   const board = chess.board()
   const isActive = gameStatus === 'active'
   const inCheck = chess.isCheck()
+  const capturedPiecesSummary = useMemo(
+    () => getCapturedPiecesSummary(moveHistory),
+    [moveHistory]
+  )
   const kingInCheckSquare = useMemo(() => {
     if (!inCheck) return null
     // Find the king that's in check
@@ -65,6 +65,15 @@ export function ChessBoard({
   // Orient board based on player color
   const ranks = myColor === 'w' ? RANKS : [...RANKS].reverse()
   const files = myColor === 'w' ? FILES : [...FILES].reverse()
+  const topColor = myColor === 'w' ? 'b' : 'w'
+  const topCapturedPieces =
+    topColor === 'w'
+      ? capturedPiecesSummary.capturedByWhite
+      : capturedPiecesSummary.capturedByBlack
+  const bottomCapturedPieces =
+    myColor === 'w'
+      ? capturedPiecesSummary.capturedByWhite
+      : capturedPiecesSummary.capturedByBlack
 
   const handleDragStart = useCallback(
     (e: React.DragEvent, square: string) => {
@@ -167,9 +176,19 @@ export function ChessBoard({
 
   return (
     <div
-      className="mx-auto w-full"
-      style={{ maxWidth: 'min(100%, calc(100dvh - 108px))' }}
+      className="mx-auto flex w-full items-stretch justify-center gap-3"
+      style={{ maxWidth: 'min(100%, calc(100dvh - 108px + 4rem))' }}
     >
+      <div className="flex shrink-0 flex-col justify-between py-0.5">
+        <CapturedPiecesStrip
+          capturedByColor={topColor}
+          pieces={topCapturedPieces}
+        />
+        <CapturedPiecesStrip
+          capturedByColor={myColor}
+          pieces={bottomCapturedPieces}
+        />
+      </div>
       <div
         className="chess-board grid aspect-square w-full border border-border rounded overflow-hidden"
         style={{
@@ -209,8 +228,8 @@ export function ChessBoard({
               >
                 {hasPiece && (
                   <img
-                    src={pieceImage(piece.color, piece.type)}
-                    alt={`${piece.color === 'w' ? 'White' : 'Black'} ${PIECE_NAMES[piece.type]}`}
+                    src={getPieceImagePath(piece.color, piece.type)}
+                    alt={`${piece.color === 'w' ? 'White' : 'Black'} ${CHESS_PIECE_NAMES[piece.type]}`}
                     className={cn(
                       'chess-piece select-none w-[80%] h-[80%]',
                       canDrag && 'cursor-grab active:cursor-grabbing'
