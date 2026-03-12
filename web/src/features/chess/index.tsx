@@ -94,7 +94,13 @@ export function ChessGame() {
   const messagesQuery = useInfiniteMessagesQuery(selectedGame?.id)
   const chatMessages = useMemo(() => {
     if (!messagesQuery.data?.pages) return []
-    return [...messagesQuery.data.pages].reverse().flatMap((p) => p.messages)
+    const all = [...messagesQuery.data.pages].reverse().flatMap((p) => p.messages)
+    const seen = new Set<string>()
+    return all.filter((m) => {
+      if (seen.has(m.id)) return false
+      seen.add(m.id)
+      return true
+    })
   }, [messagesQuery.data?.pages])
   const moveHistoryQuery = useMoveHistoryQuery(selectedGame?.id)
   const moveHistory = moveHistoryQuery.data ?? []
