@@ -1,5 +1,5 @@
 {
-	"version": "1.6",
+	"version": "1.7",
 	"label": "app_name",
 	"classes": ["game"],
 	"paths": ["chess"],
@@ -26,6 +26,7 @@
 		"-/create": {"function": "action_create"},
 		"-/list": {"function": "action_list"},
 		"-/new": {"function": "action_new"},
+		"-/notifications/check": {"function": "action_notifications_check"},
 
 		":game": {"file": "web/dist/index.html"},
 		":game/-/view": {"function": "action_view"},
@@ -38,10 +39,7 @@
 		":game/-/draw-decline": {"function": "action_draw_decline"},
 		":game/-/delete": {"function": "action_delete"},
 		":game/assets": {"files": "web/dist/assets"},
-		":game/images": {"files": "web/dist/images"},
-		"-/notifications/subscribe": {"function": "action_notifications_subscribe"},
-		"-/notifications/check": {"function": "action_notifications_check"},
-		"-/notifications/destinations": {"function": "action_notifications_destinations"}
+		":game/images": {"files": "web/dist/images"}
 	},
 
 	"events": {

@@ -701,35 +701,7 @@ def event_draw_decline(e):
 	mochi.websocket.write(game["key"], {"type": "system", "event": "draw_decline", "created": now, "body": body, "draw_offer": ""})
 	mochi.service.call("notifications", "send", "draw_decline", "Chess", body, game["id"], "/chess/" + game["id"])
 
-# Notification proxy actions
-
-def action_notifications_subscribe(a):
-	label = a.input("label", "").strip()
-	sub_type = a.input("type", "").strip()
-	sub_object = a.input("object", "").strip()
-	destinations = a.input("destinations", "")
-
-	if not label:
-		a.error(400, "label is required")
-		return
-	if not mochi.valid(label, "text"):
-		a.error(400, "Invalid label")
-		return
-
-	destinations_list = []
-	if destinations:
-		destinations_list = json.decode(destinations)
-		if type(destinations_list) != "list":
-			a.error(400, "Invalid destinations")
-			return
-
-	result = mochi.service.call("notifications", "subscribe", label, sub_type, sub_object, destinations_list)
-	return {"data": {"id": result}}
-
 def action_notifications_check(a):
+	"""Check if a notification subscription exists for this app."""
 	result = mochi.service.call("notifications", "subscriptions")
 	return {"data": {"exists": len(result) > 0}}
-
-def action_notifications_destinations(a):
-	result = mochi.service.call("notifications", "destinations")
-	return {"data": result}

@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import { useNavigate, useParams } from '@tanstack/react-router'
 import { Chess } from 'chess.js'
-import { useAuthStore, usePageTitle, useQueryWithError, PageHeader, Main, GeneralError, IconButton, getErrorMessage, getAppPath, toast, AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, Skeleton, SubscribeDialog, Sheet, SheetContent, SheetHeader, SheetTitle, DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@mochi/common/realtime-shell'
+import { useAuthStore, usePageTitle, useQueryWithError, PageHeader, Main, GeneralError, IconButton, getErrorMessage, toast, AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, Skeleton, shellSubscribeNotifications, Sheet, SheetContent, SheetHeader, SheetTitle, DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@mochi/common'
 import { MoreHorizontal, Trash2, Loader2, Flag, Handshake, RotateCcw, MessageCircle } from 'lucide-react'
 import { useSidebarContext } from '@/context/sidebar-context'
 import { setLastGame } from '@/hooks/useGameStorage'
@@ -37,8 +37,6 @@ export function ChessGame() {
   const [showResignDialog, setShowResignDialog] = useState(false)
   const [showMobileChat, setShowMobileChat] = useState(false)
   const [lastMove, setLastMove] = useState<{ from: string; to: string } | null>(null)
-  const [subscribeOpen, setSubscribeOpen] = useState(false)
-
   const {
     identity: currentUserIdentity,
     initialize: initializeAuth,
@@ -181,7 +179,9 @@ export function ChessGame() {
 
   useEffect(() => {
     if (subscriptionData?.exists === false) {
-      setSubscribeOpen(true)
+      shellSubscribeNotifications('chess', [
+        { label: 'Chess moves & messages', type: '', defaultEnabled: true },
+      ]).then(() => refetchSubscription())
     }
   }, [subscriptionData?.exists])
 
@@ -481,14 +481,6 @@ export function ChessGame() {
         </AlertDialogContent>
       </AlertDialog>
 
-      <SubscribeDialog
-        open={subscribeOpen}
-        onOpenChange={setSubscribeOpen}
-        app='chess'
-        label='Chess moves & messages'
-        appBase={getAppPath()}
-        onResult={() => refetchSubscription()}
-      />
     </>
   )
 }
