@@ -77,6 +77,7 @@ export const useGamesQuery = (
 
 const DEFAULT_PAGE_SIZE = 30
 const MOVE_HISTORY_PAGE_SIZE = 100
+const MAX_MOVE_HISTORY_PAGES = 20
 
 export const useInfiniteMessagesQuery = (
   gameId?: string,
@@ -115,7 +116,7 @@ const fetchMoveHistory = async (gameId: string): Promise<string[]> => {
   const pages: GetMessagesResponse[] = []
   let before: number | undefined
 
-  for (;;) {
+  for (let pageCount = 0; pageCount < MAX_MOVE_HISTORY_PAGES; pageCount++) {
     const page = await gamesApi.messages(gameId, {
       before,
       limit: MOVE_HISTORY_PAGE_SIZE,
@@ -153,7 +154,7 @@ export const useMoveHistoryQuery = (
   useQueryWithError({
     queryKey: gameKeys.moveHistory(gameId ?? 'unknown'),
     enabled: Boolean(gameId) && (options?.enabled ?? true),
-    staleTime: 60000,
+    staleTime: Infinity,
     queryFn: () => {
       if (!gameId) {
         throw new Error('Game ID is required')

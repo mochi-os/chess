@@ -28,6 +28,8 @@ import { DrawOfferBanner } from './components/draw-offer-banner'
 import { ChatMessageList } from './components/chat-message-list'
 import { ChatInput } from './components/chat-input'
 
+const EMPTY_MOVE_HISTORY: readonly string[] = []
+
 export function ChessGame() {
   usePageTitle('Chess')
 
@@ -101,7 +103,7 @@ export function ChessGame() {
     })
   }, [messagesQuery.data?.pages])
   const moveHistoryQuery = useMoveHistoryQuery(selectedGame?.id)
-  const moveHistory = moveHistoryQuery.data ?? []
+  const moveHistory = moveHistoryQuery.data ?? EMPTY_MOVE_HISTORY
 
   // Send message
   const sendMessageMutation = useSendMessageMutation({
