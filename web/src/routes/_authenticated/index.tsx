@@ -13,7 +13,7 @@ export const Route = createFileRoute('/_authenticated/')({
       // Soft-fail: game list ownership stays with useGamesQuery in the page.
     }
 
-    const lastGameId = getLastGame()
+    const lastGameId = await getLastGame()
     if (lastGameId) {
       const gameExists = games.some(g => g.id === lastGameId)
       if (gameExists) {

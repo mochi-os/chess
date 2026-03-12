@@ -1,25 +1,15 @@
+import { shellStorage } from '@mochi/common'
+
 const LAST_GAME_KEY = 'mochi-chess-last'
 
 export const setLastGame = (gameId: string) => {
-  try {
-    localStorage.setItem(LAST_GAME_KEY, gameId)
-  } catch {
-    // localStorage may not be available
-  }
+  shellStorage.setItem(LAST_GAME_KEY, gameId)
 }
 
-export const getLastGame = (): string | null => {
-  try {
-    return localStorage.getItem(LAST_GAME_KEY)
-  } catch {
-    return null
-  }
+export const getLastGame = async (): Promise<string | null> => {
+  return shellStorage.getItem(LAST_GAME_KEY)
 }
 
 export const clearLastGame = () => {
-  try {
-    localStorage.removeItem(LAST_GAME_KEY)
-  } catch {
-    // ignore
-  }
+  shellStorage.removeItem(LAST_GAME_KEY)
 }
