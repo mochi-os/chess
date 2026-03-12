@@ -176,26 +176,35 @@ export function ChessBoard({
 
   return (
     <div
-      className="mx-auto flex w-full items-stretch justify-center gap-3"
+      className="mx-auto w-full"
       style={{ maxWidth: 'min(100%, calc(100dvh - 108px + 4rem))' }}
     >
-      <div className="flex shrink-0 flex-col justify-between py-0.5">
+      {/* Mobile: opponent's captured pieces above the board */}
+      <div className="sm:hidden mb-1">
         <CapturedPiecesStrip
           capturedByColor={topColor}
           pieces={topCapturedPieces}
         />
-        <CapturedPiecesStrip
-          capturedByColor={myColor}
-          pieces={bottomCapturedPieces}
-        />
       </div>
-      <div
-        className="chess-board grid aspect-square w-full border border-border rounded overflow-hidden"
-        style={{
-          gridTemplateColumns: 'repeat(8, 1fr)',
-          gridTemplateRows: 'repeat(8, 1fr)',
-        }}
-      >
+      <div className="flex w-full items-stretch justify-center gap-3">
+        {/* Desktop: side column with both strips flanking the board */}
+        <div className="hidden sm:flex shrink-0 flex-col justify-between py-0.5">
+          <CapturedPiecesStrip
+            capturedByColor={topColor}
+            pieces={topCapturedPieces}
+          />
+          <CapturedPiecesStrip
+            capturedByColor={myColor}
+            pieces={bottomCapturedPieces}
+          />
+        </div>
+        <div
+          className="chess-board grid aspect-square w-full border border-border rounded overflow-hidden"
+          style={{
+            gridTemplateColumns: 'repeat(8, 1fr)',
+            gridTemplateRows: 'repeat(8, 1fr)',
+          }}
+        >
         {ranks.map((rank, ri) =>
           files.map((file, fi) => {
             const square = `${file}${rank}`
@@ -271,6 +280,15 @@ export function ChessBoard({
             )
           })
         )}
+        </div>
+      </div>
+
+      {/* Mobile: my captured pieces below the board */}
+      <div className="sm:hidden mt-1">
+        <CapturedPiecesStrip
+          capturedByColor={myColor}
+          pieces={bottomCapturedPieces}
+        />
       </div>
 
       {promotionPending && (
