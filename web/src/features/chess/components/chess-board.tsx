@@ -252,11 +252,11 @@ export function ChessBoard({
                 {/* Legal move indicator */}
                 {isLegalTarget && !hasPiece && (
                   <div className="legal-target absolute inset-0 flex items-center justify-center pointer-events-none">
-                    <div className="w-[30%] h-[30%] rounded-full bg-black/20 dark:bg-white/20" />
+                    <div className="w-[30%] h-[30%] rounded-full bg-emerald-500/30" />
                   </div>
                 )}
                 {isLegalTarget && hasPiece && (
-                  <div className="legal-capture absolute inset-0 rounded-full ring-[3px] ring-inset ring-black/20 dark:ring-white/20 pointer-events-none" />
+                  <div className="legal-capture absolute inset-0 rounded-full ring-[3px] ring-inset ring-emerald-500/40 pointer-events-none" />
                 )}
 
                 {/* Coordinate labels */}
