@@ -6,7 +6,7 @@ import {
   useAuthStore,
   AuthenticatedLayout,
   type SidebarData,
-} from '@mochi/common'
+} from '@mochi/web'
 import { Plus } from 'lucide-react'
 import { SidebarProvider, useSidebarContext } from '@/context/sidebar-context'
 import { useGamesQuery } from '@/hooks/useGames'

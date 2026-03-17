@@ -10,7 +10,7 @@ import {
   MaintenanceError,
   NotFoundError,
   UnauthorisedError,
-} from '@mochi/common'
+} from '@mochi/web'
 
 export const Route = createFileRoute('/_authenticated/errors/$error')({
   component: RouteComponent,

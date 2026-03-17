@@ -8,7 +8,7 @@ import {
 import {
   useQueryWithError,
   useInfiniteQueryWithError,
-} from '@mochi/common'
+} from '@mochi/web'
 import {
   gamesApi,
   type GetGamesResponse,

@@ -1,4 +1,4 @@
-import { cn } from '@mochi/common'
+import { cn } from '@mochi/web'
 
 const PIECE_NAMES: Record<string, string> = {
   q: 'queen', r: 'rook', b: 'bishop', n: 'knight',

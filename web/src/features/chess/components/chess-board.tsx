@@ -1,6 +1,6 @@
 import { useCallback, useMemo, useState } from 'react'
 import { Chess, type Square } from 'chess.js'
-import { cn } from '@mochi/common'
+import { cn } from '@mochi/web'
 import { CapturedPiecesStrip } from './captured-pieces-strip'
 import { getCapturedPiecesSummary } from '../lib/captured-pieces'
 import { CHESS_PIECE_NAMES, getPieceImagePath } from '../lib/chess-pieces'

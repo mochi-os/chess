@@ -1,9 +1,9 @@
 @import 'tailwindcss';
 @import 'tw-animate-css';
-@import '../../../../../lib/common/src/styles/theme.css';
+@import '../../../../../lib/web/src/styles/theme.css';
 
-/* Include lib/common components in Tailwind's content scan */
-@source "../../../../../lib/common/src/**/*.{ts,tsx}";
+/* Include lib/web components in Tailwind's content scan */
+@source "../../../../../lib/web/src/**/*.{ts,tsx}";
 
 @custom-variant dark (&:is(.dark *));
 

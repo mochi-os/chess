@@ -1,1 +1,1 @@
-export * from '@mochi/common/realtime-websocket-manager'
+export * from '@mochi/web/realtime-websocket-manager'

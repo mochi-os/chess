@@ -14,7 +14,7 @@ import {
   PersonPicker,
   GeneralError,
   type Person,
-} from '@mochi/common'
+} from '@mochi/web'
 import { Loader2, Plus, UserPlus } from 'lucide-react'
 import { useSidebarContext } from '@/context/sidebar-context'
 import { useNewGameFriendsQuery, useCreateGameMutation } from '@/hooks/useGames'

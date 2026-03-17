@@ -63,14 +63,14 @@ export default defineConfig(
       ],
       // Prevent duplicate imports from the same module
       'no-duplicate-imports': 'error',
-      // Use wrapped toast/Toaster from @mochi/common
+      // Use wrapped toast/Toaster from @mochi/web
       'no-restricted-imports': [
         'error',
         {
           paths: [
             {
               name: 'sonner',
-              message: "Import toast/Toaster from '@mochi/common' instead.",
+              message: "Import toast/Toaster from '@mochi/web' instead.",
             },
           ],
         },
