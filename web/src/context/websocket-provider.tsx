@@ -1,5 +1,5 @@
 import { useEffect, useMemo, type ReactNode } from 'react'
-import { isInShell } from '@mochi/common'
+import { isInShell } from '@mochi/web'
 import { gamesApi } from '@/api/games'
 import {
   ChatWebsocketManager,

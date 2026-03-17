@@ -16,7 +16,7 @@ import {
   cn,
   Skeleton,
   getChatBubbleToneClass,
-} from '@mochi/common'
+} from '@mochi/web'
 import type { GameMessage, GetMessagesResponse } from '@/api/games'
 
 interface ChatMessageListProps {

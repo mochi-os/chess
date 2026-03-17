@@ -1,4 +1,4 @@
-import { shellStorage } from '@mochi/common'
+import { shellStorage } from '@mochi/web'
 
 const LAST_GAME_KEY = 'mochi-chess-last'
 

@@ -1,4 +1,4 @@
-import { Button } from '@mochi/common'
+import { Button } from '@mochi/web'
 import { Loader2 } from 'lucide-react'
 
 interface DrawOfferBannerProps {

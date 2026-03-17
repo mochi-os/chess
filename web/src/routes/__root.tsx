@@ -6,7 +6,7 @@ import {
   NotificationTitle,
   GeneralError,
   NotFoundError,
-} from '@mochi/common'
+} from '@mochi/web'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import { TanStackRouterDevtools } from '@tanstack/react-router-devtools'
 

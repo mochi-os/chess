@@ -1,4 +1,4 @@
-import { Button, EmptyState } from '@mochi/common'
+import { Button, EmptyState } from '@mochi/web'
 import { Plus, Swords } from 'lucide-react'
 
 interface GameEmptyStateProps {

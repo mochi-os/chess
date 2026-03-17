@@ -1,5 +1,5 @@
 import { type FormEvent } from 'react'
-import { Button } from '@mochi/common'
+import { Button } from '@mochi/web'
 import { Loader2, Send } from 'lucide-react'
 
 interface ChatInputProps {

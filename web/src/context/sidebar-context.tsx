@@ -8,7 +8,7 @@ import {
 import {
   getWebsocketStatusMeta,
   type WebsocketStatusMeta,
-} from '@mochi/common'
+} from '@mochi/web'
 import type { WebsocketConnectionStatus } from '@/lib/websocket-manager'
 
 type SidebarContextValue = {
