@@ -35,11 +35,7 @@ def database_create():
 
 # Upgrade database
 def database_upgrade(to_version):
-	if to_version == 2:
-		mochi.db.execute("alter table games add column draw_offer text")
-	if to_version == 3:
-		mochi.db.execute("create index if not exists games_identity on games( identity )")
-		mochi.db.execute("create index if not exists games_opponent on games( opponent )")
+	pass
 
 # Get friends list for new game
 def action_new(a):
