@@ -177,7 +177,7 @@ export function ChessBoard({
   return (
     <div
       className="mx-auto w-full"
-      style={{ maxWidth: 'min(100%, calc(100dvh - 108px + 4rem))' }}
+      style={{ maxWidth: 'min(100cqw, 100cqh)' }}
     >
       {/* Mobile: opponent's captured pieces above the board */}
       <div className="sm:hidden mb-1">
