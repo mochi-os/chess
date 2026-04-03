@@ -40,16 +40,28 @@ export function GameStatus({
   }
 
   return (
-    <div className="flex items-center gap-2 px-1 py-1">
-      <div className="flex items-center gap-1.5">
-        <span className="text-lg">{myColor === 'w' ? '\u2654' : '\u265A'}</span>
-        <span className="text-sm text-muted-foreground">
-          Playing as {colorLabel}
-        </span>
+    <div className="px-1 py-1">
+      <div className="flex items-start justify-between gap-3 md:items-center">
+        <div className="flex min-w-0 flex-1 flex-col gap-2 md:flex-row md:items-center md:gap-2">
+          <div className="flex min-w-0 items-center gap-1.5">
+            <span className="text-lg leading-none">
+              {myColor === 'w' ? '\u2654' : '\u265A'}
+            </span>
+            <span className="whitespace-nowrap text-sm text-muted-foreground">
+              Playing as {colorLabel}
+            </span>
+          </div>
+          <div className="flex min-w-0 items-center gap-2">
+            <span className="hidden text-muted-foreground md:inline">·</span>
+            <span className="text-sm font-medium leading-tight md:truncate">
+              {statusText}
+            </span>
+          </div>
+        </div>
+        {children ? (
+          <div className="flex shrink-0 items-center gap-1">{children}</div>
+        ) : null}
       </div>
-      <span className="text-muted-foreground">·</span>
-      <span className="text-sm font-medium truncate">{statusText}</span>
-      {children && <div className="ml-auto shrink-0">{children}</div>}
     </div>
   )
 }
