@@ -13,9 +13,10 @@ import {
   Skeleton,
   PersonPicker,
   GeneralError,
+  shellNavigateExternal,
   type Person,
 } from '@mochi/web'
-import { Loader2, Plus, UserPlus } from 'lucide-react'
+import { Loader2, Plus, UserPlus, Users } from 'lucide-react'
 import { useSidebarContext } from '@/context/sidebar-context'
 import { useNewGameFriendsQuery, useCreateGameMutation } from '@/hooks/useGames'
 
@@ -103,7 +104,15 @@ export function NewGame() {
               <div className="flex flex-col items-center justify-center rounded-lg border py-8 text-center">
                 <UserPlus className="text-muted-foreground mb-3 h-10 w-10 opacity-50" />
                 <p className="text-muted-foreground text-sm font-medium">No friends yet</p>
-                <p className="text-muted-foreground mt-1 text-xs">Add friends to play chess</p>
+                <p className="text-muted-foreground mt-1 text-xs">Add friends in the People app to start playing</p>
+                <Button
+                  size="sm"
+                  className="mt-3"
+                  onClick={() => shellNavigateExternal('/people/?action=add')}
+                >
+                  <Users className="size-4" />
+                  Add friends
+                </Button>
               </div>
             ) : (
               <PersonPicker
