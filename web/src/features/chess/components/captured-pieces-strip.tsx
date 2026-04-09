@@ -78,7 +78,7 @@ export function CapturedPiecesStrip({
       className="flex min-h-11 w-full flex-col items-center justify-center rounded-2xl border border-border/60 bg-gradient-to-b from-background/95 to-muted/45 px-1.5 py-1.5 shadow-sm transition-colors duration-200 hover:border-border/90"
       role="group"
     >
-      <div className="flex w-full flex-col items-center gap-1">
+      <div className="flex w-full items-center justify-center gap-1 overflow-x-auto [scrollbar-width:none] sm:flex-col sm:overflow-visible [&::-webkit-scrollbar]:hidden">
         {pieces.length === 0 ? (
           <span className="text-[9px] font-medium leading-none text-muted-foreground/70">
             --
@@ -86,7 +86,7 @@ export function CapturedPiecesStrip({
         ) : pieces.map(({ type, count }) => (
           <div
             key={type}
-            className="flex w-full items-center justify-center"
+            className="flex w-auto items-center justify-center sm:w-full"
           >
             <CapturedPieceStack
               capturedPieceColor={capturedPieceColor}
