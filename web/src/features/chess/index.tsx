@@ -502,7 +502,11 @@ export function ChessGame() {
 
       {/* Mobile chat sheet */}
       <Sheet open={showMobileChat} onOpenChange={setShowMobileChat}>
-        <SheetContent side="right" className="flex flex-col p-0 w-80">
+        <SheetContent
+          side="right"
+          className="flex flex-col p-0 w-80"
+          onOpenAutoFocus={(event) => event.preventDefault()}
+        >
           <SheetHeader className="border-b px-3 py-2">
             <SheetTitle className="text-sm font-medium">Chat</SheetTitle>
           </SheetHeader>
