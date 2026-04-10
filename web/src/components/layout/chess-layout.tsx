@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef } from 'react'
+import { useEffect, useMemo } from 'react'
 import { Outlet, useParams } from '@tanstack/react-router'
 import {
   cn,
@@ -12,26 +12,6 @@ import { SidebarProvider, useSidebarContext } from '@/context/sidebar-context'
 import { useGamesQuery } from '@/hooks/useGames'
 import { NewGame } from '@/features/chess/components/new-game'
 import { getOpponentName, type Game } from '@/api/games'
-
-function AutoOpenMobileSidebar({
-  hasGames,
-  hasGameSelected,
-}: {
-  hasGames: boolean
-  hasGameSelected: boolean
-}) {
-  const { setOpenMobile, isMobile } = useSidebar()
-  const hasAutoOpened = useRef(false)
-
-  useEffect(() => {
-    if (isMobile && hasGames && !hasGameSelected && !hasAutoOpened.current) {
-      hasAutoOpened.current = true
-      setOpenMobile(true)
-    }
-  }, [isMobile, hasGames, hasGameSelected, setOpenMobile])
-
-  return null
-}
 
 function WebsocketStatusIndicator() {
   const { websocketStatusMeta, gameId } = useSidebarContext()
@@ -134,10 +114,6 @@ function ChessLayoutInner() {
       sidebarData={sidebarData}
       sidebarFooter={<WebsocketStatusIndicator />}
     >
-      <AutoOpenMobileSidebar
-        hasGames={games.length > 0}
-        hasGameSelected={!!urlGameId}
-      />
       <Outlet />
     </AuthenticatedLayout>
   )
