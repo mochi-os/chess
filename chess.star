@@ -191,9 +191,6 @@ def action_messages(a):
 	if has_more and len(messages) > 0:
 		next_cursor = messages[0]["created"]
 
-	for m in messages:
-		m["created_local"] = mochi.time.local(m["created"])
-
 	return {
 		"data": {
 			"messages": messages,

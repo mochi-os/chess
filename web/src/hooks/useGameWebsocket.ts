@@ -47,7 +47,6 @@ const createMessageFromPayload = (
     name: senderName,
     type: msgType,
     created,
-    created_local: '',
   }
 }
 

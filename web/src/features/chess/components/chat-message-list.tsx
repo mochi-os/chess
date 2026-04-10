@@ -16,6 +16,7 @@ import {
   cn,
   Skeleton,
   getChatBubbleToneClass,
+  useFormat,
 } from '@mochi/web'
 import type { GameMessage, GetMessagesResponse } from '@/api/games'
 
@@ -37,6 +38,7 @@ export function ChatMessageList({
   messagesError,
   currentUserIdentity,
 }: ChatMessageListProps) {
+  const { formatDate, formatTime } = useFormat()
   const scrollContainerRef = useRef<HTMLDivElement | null>(null)
   const messagesEndRef = useRef<HTMLDivElement | null>(null)
   const prevScrollHeightRef = useRef<number>(0)
@@ -53,7 +55,8 @@ export function ChatMessageList({
   const groupedMessages = useMemo(() => {
     const groups: Record<string, GameMessage[]> = {}
     chatMessages.forEach((message) => {
-      const date = new Date(message.created * 1000).toLocaleDateString()
+      const d = new Date(message.created * 1000)
+      const date = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`
       if (!groups[date]) {
         groups[date] = []
       }
@@ -165,7 +168,7 @@ export function ChatMessageList({
       {Object.keys(groupedMessages).map((key) => (
         <Fragment key={key}>
           <div className="my-2 flex items-center justify-center">
-            <div className="text-muted-foreground text-[10px]">{key}</div>
+            <div className="text-muted-foreground text-[10px]">{formatDate(new Date(key + 'T00:00:00'))}</div>
           </div>
 
           {groupedMessages[key].map((message, index) => {
@@ -215,7 +218,7 @@ export function ChatMessageList({
                 <div className="flex items-end gap-1.5">
                   {isSent && (
                     <span className="text-muted-foreground/70 opacity-0 transition-opacity group-hover:opacity-100 text-[9px]">
-                      {new Date(message.created * 1000).toLocaleTimeString(undefined, { hour: '2-digit', minute: '2-digit', hour12: false })}
+                      {formatTime(new Date(message.created * 1000))}
                     </span>
                   )}
 
@@ -232,7 +235,7 @@ export function ChatMessageList({
 
                   {!isSent && (
                     <span className="text-muted-foreground/70 opacity-0 transition-opacity group-hover:opacity-100 text-[9px]">
-                      {new Date(message.created * 1000).toLocaleTimeString(undefined, { hour: '2-digit', minute: '2-digit', hour12: false })}
+                      {formatTime(new Date(message.created * 1000))}
                     </span>
                   )}
                 </div>
