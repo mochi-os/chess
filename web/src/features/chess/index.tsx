@@ -255,8 +255,6 @@ export function ChessGame() {
       const move = c.move({ from, to, promotion })
       if (!move) return
 
-      setLastMove({ from, to })
-
       let moveStatus = ''
       let winner = ''
       if (c.isCheckmate()) {
@@ -268,17 +266,24 @@ export function ChessGame() {
         moveStatus = 'draw'
       }
 
-      moveMutation.mutate({
-        gameId: selectedGame.id,
-        from,
-        to,
-        promotion,
-        fen: c.fen(),
-        pgn: c.pgn(),
-        san: move.san,
-        status: moveStatus || undefined,
-        winner: winner || undefined,
-      })
+      moveMutation.mutate(
+        {
+          gameId: selectedGame.id,
+          from,
+          to,
+          promotion,
+          fen: c.fen(),
+          pgn: c.pgn(),
+          san: move.san,
+          status: moveStatus || undefined,
+          winner: winner || undefined,
+        },
+        {
+          onSuccess: () => {
+            setLastMove({ from, to })
+          },
+        }
+      )
     },
     [game, selectedGame, myIdentity, moveMutation]
   )

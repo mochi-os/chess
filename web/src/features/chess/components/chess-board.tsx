@@ -2,8 +2,9 @@ import { useCallback, useMemo, useState } from 'react'
 import { Chess, type Square } from 'chess.js'
 import { cn } from '@mochi/web'
 import { CapturedPiecesStrip } from './captured-pieces-strip'
+import { ChessPieceIcon } from './chess-piece-icon'
 import { getCapturedPiecesSummary } from '../lib/captured-pieces'
-import { CHESS_PIECE_NAMES, getPieceImagePath } from '../lib/chess-pieces'
+import { CHESS_PIECE_NAMES } from '../lib/chess-pieces'
 import { PromotionDialog } from './promotion-dialog'
 
 const FILES = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']
@@ -236,13 +237,14 @@ export function ChessBoard({
                 onClick={() => handleSquareClick(square)}
               >
                 {hasPiece && (
-                  <img
-                    src={getPieceImagePath(piece.color, piece.type)}
-                    alt={`${piece.color === 'w' ? 'White' : 'Black'} ${CHESS_PIECE_NAMES[piece.type]}`}
+                  <ChessPieceIcon
+                    aria-label={`${piece.color === 'w' ? 'White' : 'Black'} ${CHESS_PIECE_NAMES[piece.type]}`}
+                    color={piece.color}
                     className={cn(
-                      'chess-piece select-none w-[80%] h-[80%]',
+                      'chess-piece select-none size-[80%] sm:size-[74%] lg:size-[72%]',
                       canDrag && 'cursor-grab active:cursor-grabbing'
                     )}
+                    type={piece.type}
                     draggable={canDrag}
                     onDragStart={(e) => handleDragStart(e, square)}
                     onDragEnd={handleDragEnd}

@@ -1,5 +1,5 @@
+import { ChessPieceIcon } from './chess-piece-icon'
 import {
-  getPieceImagePath,
   type CapturedPieceType,
 } from '../lib/chess-pieces'
 import { type CapturedPieceCount } from '../lib/captured-pieces'
@@ -43,16 +43,17 @@ function CapturedPieceStack({
     <div className="h-4" style={{ width }}>
       <div className="relative h-full w-full">
         {Array.from({ length: count }).map((_, index) => (
-          <img
+          <ChessPieceIcon
             key={`${pieceType}-${index}`}
-            src={getPieceImagePath(capturedPieceColor, pieceType)}
-            alt=""
             aria-hidden="true"
             className="absolute top-0 size-3.5"
+            color={capturedPieceColor}
+            decorative
             style={{
               left: index * overlap,
               zIndex: index + 1,
             }}
+            type={pieceType}
           />
         ))}
       </div>
