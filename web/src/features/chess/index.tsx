@@ -240,7 +240,7 @@ export function ChessGame() {
   useEffect(() => {
     if (subscriptionData?.exists === false) {
       shellSubscribeNotifications('chess', [
-        { label: 'Chess moves & messages', type: '', defaultEnabled: true },
+        { label: 'Moves & messages', type: '', defaultEnabled: true },
       ]).then(() => refetchSubscription())
     }
   }, [subscriptionData?.exists])
