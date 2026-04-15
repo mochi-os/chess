@@ -226,8 +226,8 @@ export function ChessBoard({
                 className={cn(
                   'chess-square relative flex items-center justify-center',
                   isLight
-                    ? 'bg-[#f0dab5] dark:bg-[#b89a78]'
-                    : 'bg-[#a3664e] dark:bg-[#7a4a38]',
+                    ? 'bg-[var(--chess-sq-light)]'
+                    : 'bg-[var(--chess-sq-dark)]',
                   isDragSource && 'opacity-40',
                   isLastMoveSquare && 'ring-2 ring-inset ring-yellow-400/60',
                   isCheckSquare && 'bg-red-400 dark:bg-red-600'
@@ -265,7 +265,7 @@ export function ChessBoard({
                 {fi === 0 && (
                   <span className={cn(
                     'absolute top-0.5 left-0.5 text-[9px] leading-none font-medium',
-                    isLight ? 'text-[#a3664e]/60 dark:text-[#7a4a38]/60' : 'text-[#f0dab5]/60 dark:text-[#b89a78]/60'
+                    isLight ? 'text-[var(--chess-sq-dark)]/60' : 'text-[var(--chess-sq-light)]/60'
                   )}>
                     {rank}
                   </span>
@@ -273,7 +273,7 @@ export function ChessBoard({
                 {ri === 7 && (
                   <span className={cn(
                     'absolute bottom-0.5 right-0.5 text-[9px] leading-none font-medium',
-                    isLight ? 'text-[#a3664e]/60 dark:text-[#7a4a38]/60' : 'text-[#f0dab5]/60 dark:text-[#b89a78]/60'
+                    isLight ? 'text-[var(--chess-sq-dark)]/60' : 'text-[var(--chess-sq-light)]/60'
                   )}>
                     {file}
                   </span>

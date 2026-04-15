@@ -266,24 +266,18 @@ export function ChessGame() {
         moveStatus = 'draw'
       }
 
-      moveMutation.mutate(
-        {
-          gameId: selectedGame.id,
-          from,
-          to,
-          promotion,
-          fen: c.fen(),
-          pgn: c.pgn(),
-          san: move.san,
-          status: moveStatus || undefined,
-          winner: winner || undefined,
-        },
-        {
-          onSuccess: () => {
-            setLastMove({ from, to })
-          },
-        }
-      )
+      setLastMove({ from, to })
+      moveMutation.mutate({
+        gameId: selectedGame.id,
+        from,
+        to,
+        promotion,
+        fen: c.fen(),
+        pgn: c.pgn(),
+        san: move.san,
+        status: moveStatus || undefined,
+        winner: winner || undefined,
+      })
     },
     [game, selectedGame, myIdentity, moveMutation]
   )

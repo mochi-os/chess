@@ -8,3 +8,20 @@
 @source "../../../../../lib/web/src/**/*.{ts,tsx}";
 
 @custom-variant dark (&:is(.dark *));
+
+/* Chess board and piece color tokens — override these to re-theme the board */
+:root {
+  --chess-sq-light: #f0dab5;
+  --chess-sq-dark: #a3664e;
+  --chess-piece-w-body: #f6f1e8;
+  --chess-piece-w-ink: #111111;
+  --chess-piece-w-outline: rgba(17, 17, 17, 0.42);
+  --chess-piece-b-body: #131313;
+  --chess-piece-b-ink: #f4efe5;
+  --chess-piece-b-outline: rgba(244, 239, 229, 0.38);
+}
+
+.dark {
+  --chess-sq-light: #b89a78;
+  --chess-sq-dark: #7a4a38;
+}
