@@ -4,7 +4,6 @@ import { Chess } from 'chess.js'
 import {
   useAuthStore,
   usePageTitle,
-  useQueryWithError,
   PageHeader,
   Main,
   GeneralError,
@@ -30,7 +29,7 @@ import { MoreHorizontal, Trash2, Loader2, Flag, Handshake, RotateCcw, MessageCir
 import { useSidebarContext } from '@/context/sidebar-context'
 import { setLastGame } from '@/hooks/useGameStorage'
 import { useGameWebsocket } from '@/hooks/useGameWebsocket'
-import { gamesApi, getOpponentName, type Game } from '@/api/games'
+import { getOpponentName, type Game } from '@/api/games'
 import {
   useInfiniteMessagesQuery,
   useMoveHistoryQuery,
@@ -230,20 +229,15 @@ export function ChessGame() {
     setWebsocketStatus(status, retries)
   }, [status, retries, setWebsocketStatus])
 
-  // Subscription check
-  const { data: subscriptionData, refetch: refetchSubscription } = useQueryWithError({
-    queryKey: ['subscription-check', 'chess'],
-    queryFn: () => gamesApi.checkSubscription(),
-    staleTime: Infinity,
-  })
-
+  // Declare desired topic set on mount. The shell reconciles against existing
+  // subscriptions — silent if aligned, prompts for any newly-introduced topics,
+  // deletes orphans from removed topics.
   useEffect(() => {
-    if (subscriptionData?.exists === false) {
-      shellSubscribeNotifications('chess', [
-        { label: 'Chess moves & messages', type: '', defaultEnabled: true },
-      ]).then(() => refetchSubscription())
-    }
-  }, [subscriptionData?.exists])
+    void shellSubscribeNotifications('chess', [
+      { label: 'Game activity', topic: 'activity', defaultEnabled: true },
+      { label: 'Messages', topic: 'message', defaultEnabled: true },
+    ])
+  }, [])
 
   const handleMove = useCallback(
     (from: string, to: string, promotion?: string) => {
