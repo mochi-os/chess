@@ -9,19 +9,18 @@
 
 @custom-variant dark (&:is(.dark *));
 
-/* Chess board and piece color tokens — override these to re-theme the board */
 :root {
-  --chess-sq-light: #f0dab5;
-  --chess-sq-dark: #a3664e;
-  --chess-piece-w-body: #f6f1e8;
-  --chess-piece-w-ink: #111111;
-  --chess-piece-w-outline: rgba(17, 17, 17, 0.42);
-  --chess-piece-b-body: #131313;
-  --chess-piece-b-ink: #f4efe5;
-  --chess-piece-b-outline: rgba(244, 239, 229, 0.38);
+  --chess-sq-light: oklch(0.88 0.06 85);
+  --chess-sq-dark:  oklch(0.50 0.09 37);
+  --chess-piece-w-body:    oklch(0.97 0.012 85);
+  --chess-piece-w-ink:     oklch(0.10 0.02 var(--hue));
+  --chess-piece-w-outline: oklch(0.10 0.02 var(--hue) / 0.42);
+  --chess-piece-b-body:    oklch(0.12 0.02 var(--hue));
+  --chess-piece-b-ink:     oklch(0.96 0.010 85);
+  --chess-piece-b-outline: oklch(0.96 0.010 85 / 0.38);
 }
 
 .dark {
-  --chess-sq-light: #b89a78;
-  --chess-sq-dark: #7a4a38;
+  --chess-sq-light: oklch(0.67 0.07 70);
+  --chess-sq-dark:  oklch(0.38 0.09 35);
 }
