@@ -35,6 +35,8 @@ export function ChessBoard({
     from: string
     to: string
   } | null>(null)
+  const [keyboardPos, setKeyboardPos] = useState<[number, number] | null>(null)
+  const [isBoardFocused, setIsBoardFocused] = useState(false)
 
   const chess = useMemo(() => {
     const c = new Chess()
@@ -165,6 +167,46 @@ export function ChessBoard({
     [chess, dragFrom, isActive, isMyTurn, legalTargets, myColor, onMove]
   )
 
+  const handleKeyDown = useCallback(
+    (e: React.KeyboardEvent<HTMLDivElement>) => {
+      const [kr, kc] = keyboardPos ?? [3, 3]
+
+      switch (e.key) {
+        case 'ArrowUp':
+          e.preventDefault()
+          setKeyboardPos([Math.max(0, kr - 1), kc])
+          break
+        case 'ArrowDown':
+          e.preventDefault()
+          setKeyboardPos([Math.min(7, kr + 1), kc])
+          break
+        case 'ArrowLeft':
+          e.preventDefault()
+          setKeyboardPos([kr, Math.max(0, kc - 1)])
+          break
+        case 'ArrowRight':
+          e.preventDefault()
+          setKeyboardPos([kr, Math.min(7, kc + 1)])
+          break
+        case 'Enter':
+        case ' ':
+          e.preventDefault()
+          if (keyboardPos) {
+            handleSquareClick(`${files[keyboardPos[1]]}${ranks[keyboardPos[0]]}`)
+          }
+          break
+        case 'Escape':
+          e.preventDefault()
+          setDragFrom(null)
+          setLegalTargets(new Set())
+          break
+        default:
+          break
+      }
+    },
+    [keyboardPos, files, ranks, handleSquareClick]
+  )
+
   const handlePromotion = useCallback(
     (piece: string) => {
       if (promotionPending) {
@@ -200,11 +242,20 @@ export function ChessBoard({
           />
         </div>
         <div
-          className="chess-board grid aspect-square w-full border border-border rounded overflow-hidden"
+          className="chess-board grid aspect-square w-full border border-border rounded overflow-hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
           style={{
             gridTemplateColumns: 'repeat(8, 1fr)',
             gridTemplateRows: 'repeat(8, 1fr)',
           }}
+          tabIndex={0}
+          role="application"
+          aria-label={`Chess board${isActive && isMyTurn ? '. Your turn' : ''}. Use arrow keys to navigate, Enter or Space to select.`}
+          onFocus={() => {
+            setIsBoardFocused(true)
+            if (!keyboardPos) setKeyboardPos(myColor === 'w' ? [6, 4] : [1, 4])
+          }}
+          onBlur={() => setIsBoardFocused(false)}
+          onKeyDown={handleKeyDown}
         >
         {ranks.map((rank, ri) =>
           files.map((file, fi) => {
@@ -219,6 +270,11 @@ export function ChessBoard({
             const hasPiece = !!piece
             const canDrag =
               isActive && isMyTurn && hasPiece && piece.color === myColor
+            const isKeyboardFocus =
+              isBoardFocused &&
+              keyboardPos !== null &&
+              keyboardPos[0] === ri &&
+              keyboardPos[1] === fi
 
             return (
               <div
@@ -277,6 +333,14 @@ export function ChessBoard({
                   )}>
                     {file}
                   </span>
+                )}
+
+                {/* Keyboard navigation cursor */}
+                {isKeyboardFocus && (
+                  <div
+                    className="absolute inset-0 ring-2 ring-primary ring-inset pointer-events-none z-10"
+                    aria-hidden="true"
+                  />
                 )}
               </div>
             )
