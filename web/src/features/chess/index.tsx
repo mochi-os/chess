@@ -357,6 +357,12 @@ export function ChessGame() {
       : game.identity_name
     : ''
 
+  const opponentFingerprint = game
+    ? game.identity === myIdentity
+      ? game.opponent
+      : game.identity
+    : ''
+
   return (
     <>
       <div className="flex h-full flex-col overflow-hidden">
@@ -372,6 +378,8 @@ export function ChessGame() {
                     variant='strip'
                     myTurn={game.status === 'active' ? isMyTurn : undefined}
                     title={opponentName}
+                    opponentFingerprint={opponentFingerprint || undefined}
+                    opponentName={opponentName}
                     status={getChessStatusText(game, myIdentity, isMyTurn, isCheck)}
                     stats={
                       <GameHeaderStat
