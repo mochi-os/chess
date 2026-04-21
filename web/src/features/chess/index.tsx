@@ -130,7 +130,12 @@ export function ChessGame() {
   )
 
   // Game detail
-  const { data: gameDetail, isLoading: isLoadingDetail } = useGameDetailQuery(selectedGame?.id)
+  const {
+    data: gameDetail,
+    isLoading: isLoadingDetail,
+    error: gameDetailError,
+    refetch: refetchGameDetail,
+  } = useGameDetailQuery(selectedGame?.id)
 
   const game = gameDetail?.game
   const myIdentity = gameDetail?.identity ?? currentUserIdentity
@@ -365,6 +370,13 @@ export function ChessGame() {
           <div className="flex flex-1 flex-col px-2 sm:px-4 pb-2 min-h-0">
             {isLoadingDetail ? (
               <Skeleton className="aspect-square max-w-[560px] w-full mx-auto" />
+            ) : gameDetailError ? (
+              <GeneralError
+                error={gameDetailError}
+                minimal
+                mode="inline"
+                reset={refetchGameDetail}
+              />
             ) : game && chess ? (
               <>
                 <div className="shrink-0">
