@@ -10,10 +10,13 @@
     "preview": "vite preview",
     "format:check": "prettier --check .",
     "format": "prettier --write .",
-    "knip": "pnpm -C ../../.. exec knip --workspace apps/chess/web"
+    "knip": "pnpm -C ../../.. exec knip --workspace apps/chess/web",
+    "i18n:extract": "lingui extract"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
+    "@lingui/core": "^5.5.0",
+    "@lingui/react": "^5.5.0",
     "@mochi/web": "workspace:*",
     "@tailwindcss/vite": "^4.1.14",
     "@tanstack/react-query": "^5.90.2",
@@ -38,6 +41,9 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.37.0",
+    "@lingui/cli": "^5.5.0",
+    "@lingui/swc-plugin": "^5.5.0",
+    "@lingui/vite-plugin": "^5.5.0",
     "@tanstack/eslint-plugin-query": "^5.91.0",
     "@tanstack/react-query-devtools": "^5.90.2",
     "@tanstack/react-router-devtools": "^1.132.51",
