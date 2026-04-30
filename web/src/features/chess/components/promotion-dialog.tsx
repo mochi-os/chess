@@ -1,4 +1,5 @@
 import { useEffect, useId, useRef } from 'react'
+import { Trans } from '@lingui/react/macro'
 import { cn } from '@mochi/web'
 import { ChessPieceIcon } from './chess-piece-icon'
 import { CHESS_PIECE_NAMES } from '../lib/chess-pieces'
@@ -93,7 +94,7 @@ export function PromotionDialog({
           onClick={onCancel}
           className="mt-2 w-full text-xs text-muted-foreground hover:text-foreground text-center focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
         >
-          Cancel
+          <Trans>Cancel</Trans>
         </button>
       </div>
     </div>

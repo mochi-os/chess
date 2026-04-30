@@ -20,6 +20,7 @@ import {
 } from '@mochi/web'
 import type { GameMessage, GetMessagesResponse } from '@/api/games'
 
+import { Trans } from '@lingui/react/macro'
 interface ChatMessageListProps {
   messagesQuery: UseInfiniteQueryResult<
     InfiniteData<GetMessagesResponse>,
@@ -148,7 +149,7 @@ export function ChatMessageList({
   if (chatMessages.length === 0) {
     return (
       <div className="flex flex-1 flex-col items-center justify-center py-4 text-center">
-        <p className="text-muted-foreground text-xs">No messages yet</p>
+        <p className="text-muted-foreground text-xs"><Trans>No messages yet</Trans></p>
       </div>
     )
   }

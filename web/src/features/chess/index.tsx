@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useMemo, useState } from 'react'
+import { Trans, useLingui } from '@lingui/react/macro'
 import { useNavigate, useParams } from '@tanstack/react-router'
 import { Chess } from 'chess.js'
 import {
@@ -87,7 +88,8 @@ function getChessStatusText(
 }
 
 export function ChessGame() {
-  usePageTitle('Chess')
+  const { t } = useLingui()
+  usePageTitle(t`Chess`)
 
   const navigate = useNavigate()
   const { openNewGameDialog, setWebsocketStatus } = useSidebarContext()
@@ -182,24 +184,24 @@ export function ChessGame() {
       setShowResignDialog(false)
     },
     onError: (error) => {
-      toast.error(getErrorMessage(error, 'Failed to resign'))
+      toast.error(getErrorMessage(error, t`Failed to resign`))
     },
   })
 
   // Draw
   const drawOfferMutation = useDrawOfferMutation({
     onError: (error) => {
-      toast.error(getErrorMessage(error, 'Failed to offer draw'))
+      toast.error(getErrorMessage(error, t`Failed to offer draw`))
     },
   })
   const drawAcceptMutation = useDrawAcceptMutation({
     onError: (error) => {
-      toast.error(getErrorMessage(error, 'Failed to accept draw'))
+      toast.error(getErrorMessage(error, t`Failed to accept draw`))
     },
   })
   const drawDeclineMutation = useDrawDeclineMutation({
     onError: (error) => {
-      toast.error(getErrorMessage(error, 'Failed to decline draw'))
+      toast.error(getErrorMessage(error, t`Failed to decline draw`))
     },
   })
 
@@ -209,18 +211,18 @@ export function ChessGame() {
       void navigate({ to: '/$gameId', params: { gameId: data.id } })
     },
     onError: (error) => {
-      toast.error(getErrorMessage(error, 'Failed to create rematch'))
+      toast.error(getErrorMessage(error, t`Failed to create rematch`))
     },
   })
 
   // Delete
   const deleteGameMutation = useDeleteGameMutation({
     onSuccess: () => {
-      toast.success('Game deleted')
+      toast.success(t`Game deleted`)
       void navigate({ to: '/' })
     },
     onError: (error) => {
-      toast.error(getErrorMessage(error, 'Failed to delete game'))
+      toast.error(getErrorMessage(error, t`Failed to delete game`))
     },
   })
 
@@ -313,7 +315,7 @@ export function ChessGame() {
   if (selectedGameId && gamesQuery.isLoading) {
     return (
       <div className="flex h-full flex-col overflow-hidden">
-        <PageHeader title="Chess" />
+        <PageHeader title={t`Chess`} />
         <Main className="flex min-h-0 flex-1 flex-col gap-4 overflow-hidden p-4">
           <Skeleton className="h-8 w-48" />
           <Skeleton className="aspect-square max-w-[560px] w-full" />
@@ -325,7 +327,7 @@ export function ChessGame() {
   if (!selectedGame) {
     return (
       <div className="flex h-full flex-col overflow-hidden">
-        <PageHeader title="Chess" />
+        <PageHeader title={t`Chess`} />
         <Main className="flex min-h-0 flex-1 flex-col gap-4 overflow-hidden">
           {gamesQuery.error ? (
             <GeneralError
@@ -394,7 +396,7 @@ export function ChessGame() {
                           variant='ghost'
                           className='min-[900px]:hidden'
                           onClick={() => setShowMobileChat(true)}
-                          label='Open chat panel'
+                          label={t`Open chat panel`}
                         >
                           <MessageCircle className='size-4' />
                         </IconButton>
@@ -402,7 +404,7 @@ export function ChessGame() {
                           <DropdownMenuTrigger asChild>
                             <IconButton
                               variant='ghost'
-                              label='Open game actions'
+                              label={t`Open game actions`}
                             >
                               <MoreHorizontal className='size-4' />
                             </IconButton>
@@ -415,11 +417,11 @@ export function ChessGame() {
                                     onClick={handleDrawOffer}
                                     disabled={drawOfferMutation.isPending}
                                   >
-                                    <Handshake className='mr-2 size-4' /> Offer draw
+                                    <Handshake className='mr-2 size-4' /> <Trans>Offer draw</Trans>
                                   </DropdownMenuItem>
                                 )}
                                 <DropdownMenuItem onClick={() => setShowResignDialog(true)}>
-                                  <Flag className='mr-2 size-4' /> Resign
+                                  <Flag className='mr-2 size-4' /> <Trans>Resign</Trans>
                                 </DropdownMenuItem>
                               </>
                             ) : (
@@ -428,10 +430,10 @@ export function ChessGame() {
                                   onClick={handleRematch}
                                   disabled={rematchMutation.isPending}
                                 >
-                                  <RotateCcw className='mr-2 size-4' /> Rematch
+                                  <RotateCcw className='mr-2 size-4' /> <Trans>Rematch</Trans>
                                 </DropdownMenuItem>
                                 <DropdownMenuItem onClick={handleDelete}>
-                                  <Trash2 className='mr-2 size-4' /> Delete game
+                                  <Trash2 className='mr-2 size-4' /> <Trans>Delete game</Trans>
                                 </DropdownMenuItem>
                               </>
                             )}
@@ -478,7 +480,7 @@ export function ChessGame() {
           {/* Right: Chat sidebar */}
           <div className="hidden min-[900px]:flex w-72 lg:w-80 flex-col border-l">
             <div className="border-b px-3 py-2">
-              <h3 className="text-sm font-medium">Chat</h3>
+              <h3 className="text-sm font-medium"><Trans>Chat</Trans></h3>
             </div>
             <ChatMessageList
               messagesQuery={messagesQuery}
@@ -494,7 +496,7 @@ export function ChessGame() {
               isSending={sendMessageMutation.isPending}
               errorMessage={
                 sendMessageMutation.error
-                  ? getErrorMessage(sendMessageMutation.error, 'Failed to send')
+                  ? getErrorMessage(sendMessageMutation.error, t`Failed to send`)
                   : null
               }
             />
@@ -510,7 +512,7 @@ export function ChessGame() {
           onOpenAutoFocus={(event) => event.preventDefault()}
         >
           <SheetHeader className="border-b px-3 py-2">
-            <SheetTitle className="text-sm font-medium">Chat</SheetTitle>
+            <SheetTitle className="text-sm font-medium"><Trans>Chat</Trans></SheetTitle>
           </SheetHeader>
           <ChatMessageList
             messagesQuery={messagesQuery}
@@ -526,7 +528,7 @@ export function ChessGame() {
             isSending={sendMessageMutation.isPending}
             errorMessage={
               sendMessageMutation.error
-                ? getErrorMessage(sendMessageMutation.error, 'Failed to send')
+                ? getErrorMessage(sendMessageMutation.error, t`Failed to send`)
                 : null
             }
           />
@@ -537,13 +539,13 @@ export function ChessGame() {
       <ConfirmDialog
         open={showResignDialog}
         onOpenChange={setShowResignDialog}
-        title='Resign game?'
+        title={t`Resign game?`}
         desc={`Are you sure you want to resign? ${opponentName} will win the game.`}
         confirmText={
           resignMutation.isPending ? (
             <>
               <Loader2 className="mr-2 size-4 animate-spin" />
-              Resigning...
+              <Trans>Resigning...</Trans>
             </>
           ) : (
             'Resign'

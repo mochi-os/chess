@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
+import { Trans, useLingui } from '@lingui/react/macro'
 import { useNavigate } from '@tanstack/react-router'
 import {
   Button,
@@ -21,6 +22,7 @@ import { useSidebarContext } from '@/context/sidebar-context'
 import { useNewGameFriendsQuery, useCreateGameMutation } from '@/hooks/useGames'
 
 export function NewGame() {
+  const { t } = useLingui()
   const navigate = useNavigate()
   const { newGameDialogOpen: open, closeNewGameDialog } = useSidebarContext()
   const onOpenChange = (isOpen: boolean) => {
@@ -38,11 +40,11 @@ export function NewGame() {
       onOpenChange(false)
       if (data.id) {
         navigate({ to: '/$gameId', params: { gameId: data.id } })
-        toast.success('Game created')
+        toast.success(t`Game created`)
       }
     },
     onError: (error) => {
-      toast.error(getErrorMessage(error, 'Failed to create game'))
+      toast.error(getErrorMessage(error, t`Failed to create game`))
     },
   })
 
@@ -57,7 +59,7 @@ export function NewGame() {
 
   const handleCreateGame = () => {
     if (!selectedFriend) {
-      toast.error('Please select a friend')
+      toast.error(t`Please select a friend`)
       return
     }
     createGameMutation.mutate(selectedFriend)
@@ -86,16 +88,16 @@ export function NewGame() {
       <ResponsiveDialogContent className="sm:max-w-[420px]">
         <ResponsiveDialogHeader>
           <ResponsiveDialogTitle className="flex items-center gap-2">
-            New Game
+            <Trans>New Game</Trans>
           </ResponsiveDialogTitle>
           <ResponsiveDialogDescription className="sr-only">
-            Start a new chess game
+            <Trans>Start a new chess game</Trans>
           </ResponsiveDialogDescription>
         </ResponsiveDialogHeader>
 
         <div className="space-y-4">
           <div className="space-y-2">
-            <label className="text-sm font-medium">Choose opponent</label>
+            <label className="text-sm font-medium"><Trans>Choose opponent</Trans></label>
             {isLoading ? (
               <Skeleton className="h-9 w-full" />
             ) : error ? (
@@ -103,15 +105,15 @@ export function NewGame() {
             ) : friends.length === 0 ? (
               <div className="flex flex-col items-center justify-center rounded-lg border py-8 text-center">
                 <UserPlus className="text-muted-foreground mb-3 h-10 w-10 opacity-50" />
-                <p className="text-muted-foreground text-sm font-medium">No friends yet</p>
-                <p className="text-muted-foreground mt-1 text-xs">Add friends in the People app to start playing</p>
+                <p className="text-muted-foreground text-sm font-medium"><Trans>No friends yet</Trans></p>
+                <p className="text-muted-foreground mt-1 text-xs"><Trans>Add friends in the People app to start playing</Trans></p>
                 <Button
                   size="sm"
                   className="mt-3"
                   onClick={() => shellNavigateExternal('/people/?action=add')}
                 >
                   <Users className="size-4" />
-                  Add friends
+                  <Trans>Add friends</Trans>
                 </Button>
               </div>
             ) : (
@@ -120,7 +122,7 @@ export function NewGame() {
                 value={selectedFriend}
                 onChange={(value) => setSelectedFriend(value as string)}
                 local={friendsAsPeople}
-                placeholder="Select a friend..."
+                placeholder={t`Select a friend...`}
                 emptyMessage="No friends found"
                 open={friendsPickerOpen}
                 onOpenChange={setFriendsPickerOpen}
@@ -135,7 +137,7 @@ export function NewGame() {
             onClick={() => onOpenChange(false)}
             disabled={createGameMutation.isPending}
           >
-            Cancel
+            <Trans>Cancel</Trans>
           </Button>
           <Button onClick={handleCreateGame} disabled={!canSubmit}>
             {createGameMutation.isPending ? (
