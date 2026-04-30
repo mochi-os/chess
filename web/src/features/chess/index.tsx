@@ -15,7 +15,6 @@ import {
   getErrorMessage,
   toast,
   Skeleton,
-  shellSubscribeNotifications,
   Sheet,
   SheetContent,
   SheetHeader,
@@ -233,16 +232,6 @@ export function ChessGame() {
   useEffect(() => {
     setWebsocketStatus(status, retries)
   }, [status, retries, setWebsocketStatus])
-
-  // Declare desired topic set on mount. The shell reconciles against existing
-  // subscriptions — silent if aligned, prompts for any newly-introduced topics,
-  // deletes orphans from removed topics.
-  useEffect(() => {
-    void shellSubscribeNotifications('chess', [
-      { label: 'Game activity', topic: 'activity', defaultEnabled: true },
-      { label: 'Messages', topic: 'message', defaultEnabled: true },
-    ])
-  }, [])
 
   const handleMove = useCallback(
     (from: string, to: string, promotion?: string) => {
