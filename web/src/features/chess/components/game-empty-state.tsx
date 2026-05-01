@@ -1,6 +1,7 @@
 import { Button, EmptyState } from '@mochi/web'
 import { Trans } from '@lingui/react/macro'
 import { Plus, Swords } from 'lucide-react'
+import { t } from '@lingui/core/macro'
 
 interface GameEmptyStateProps {
   onNewGame: () => void
@@ -13,8 +14,8 @@ export function GameEmptyState({ onNewGame, hasExistingGames }: GameEmptyStatePr
       <div className="flex h-full w-full flex-1 flex-col items-center justify-center">
         <EmptyState
           icon={Swords}
-          title={"Select a game"}
-          description={"Choose a game from the sidebar or start a new one."}
+          title={t`Select a game`}
+          description={t`Choose a game from the sidebar or start a new one.`}
         >
           <Button onClick={onNewGame} variant="outline">
             <Plus className="size-4" />
@@ -29,7 +30,7 @@ export function GameEmptyState({ onNewGame, hasExistingGames }: GameEmptyStatePr
     <div className="flex h-full w-full flex-1 flex-col items-center justify-center">
       <EmptyState
         icon={Swords}
-        title={"No games yet"}
+        title={t`No games yet`}
         description=""
       >
         <Button size="lg" onClick={onNewGame}>

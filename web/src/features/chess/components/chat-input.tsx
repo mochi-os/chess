@@ -2,6 +2,7 @@ import { type FormEvent } from 'react'
 import { Trans } from '@lingui/react/macro'
 import { Button } from '@mochi/web'
 import { Loader2, Send } from 'lucide-react'
+import { t } from '@lingui/core/macro'
 
 interface ChatInputProps {
   newMessage: string
@@ -25,7 +26,7 @@ export function ChatInput({
           <span className="sr-only"><Trans>Message</Trans></span>
           <input
             type="text"
-            placeholder={"Type a message..."}
+            placeholder={t`Type a message...`}
             value={newMessage}
             onChange={(e) => setNewMessage(e.target.value)}
             className="w-full bg-inherit text-xs focus-visible:outline-hidden"
@@ -36,7 +37,7 @@ export function ChatInput({
           size="icon"
           className="bg-primary hover:bg-primary/80 rounded-full transition-colors size-7"
           disabled={isSending || !newMessage.trim()}
-          aria-label={"Send message"}
+          aria-label={t`Send message`}
         >
           {isSending ? (
             <Loader2 size={14} className="animate-spin" />
