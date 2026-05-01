@@ -52,39 +52,40 @@ import { ChatInput } from './components/chat-input'
 
 const EMPTY_MOVE_HISTORY: readonly string[] = []
 
-function getChessStatusText(
+function useChessStatusText(
   game: Game,
   myIdentity: string,
   isMyTurn: boolean,
   isCheck: boolean
 ): string {
+  const { t } = useLingui()
   const opponentName = getOpponentName(game, myIdentity)
 
   if (game.status === 'checkmate') {
     return game.winner === myIdentity
-      ? 'Checkmate — you win!'
-      : `Checkmate — ${opponentName} wins`
+      ? t`Checkmate — you win!`
+      : t`Checkmate — ${opponentName} wins`
   }
 
   if (game.status === 'stalemate') {
-    return 'Stalemate — draw'
+    return t`Stalemate — draw`
   }
 
   if (game.status === 'draw') {
-    return 'Draw'
+    return t`Draw`
   }
 
   if (game.status === 'resigned') {
     return game.winner === myIdentity
-      ? `${opponentName} resigned — you win!`
-      : `You resigned — ${opponentName} wins`
+      ? t`${opponentName} resigned — you win!`
+      : t`You resigned — ${opponentName} wins`
   }
 
   if (isCheck) {
-    return isMyTurn ? 'Check — your move' : `Check — ${opponentName}'s move`
+    return isMyTurn ? t`Check — your move` : t`Check — ${opponentName}'s move`
   }
 
-  return isMyTurn ? 'Your move' : `${opponentName}'s move`
+  return isMyTurn ? t`Your move` : t`${opponentName}'s move`
 }
 
 export function ChessGame() {
@@ -383,7 +384,7 @@ export function ChessGame() {
                     title={opponentName}
                     opponentFingerprint={opponentFingerprint || undefined}
                     opponentName={opponentName}
-                    status={getChessStatusText(game, myIdentity, isMyTurn, isCheck)}
+                    status={useChessStatusText(game, myIdentity, isMyTurn, isCheck)}
                     stats={
                       <GameHeaderStat
                         icon={<GameHeaderStoneDot color={myColor === 'w' ? 'white' : 'black'} />}
