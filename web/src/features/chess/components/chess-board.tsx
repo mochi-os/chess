@@ -294,7 +294,7 @@ export function ChessBoard({
               >
                 {hasPiece && (
                   <ChessPieceIcon
-                    aria-label={`${piece.color === 'w' ? 'White' : 'Black'} ${CHESS_PIECE_NAMES[piece.type]}`}
+                    aria-label={`${piece.color === 'w' ? "White" : "Black"} ${CHESS_PIECE_NAMES[piece.type]}`}
                     color={piece.color}
                     className={cn(
                       'chess-piece select-none size-[80%] sm:size-[74%] lg:size-[72%]',

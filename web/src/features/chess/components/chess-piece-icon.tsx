@@ -298,7 +298,7 @@ export function ChessPieceIcon({
   const resolvedAriaLabel =
     decorative
       ? undefined
-      : ariaLabel ?? `${color === 'w' ? 'White' : 'Black'} ${CHESS_PIECE_NAMES[type]}`
+      : ariaLabel ?? `${color === 'w' ? "White" : "Black"} ${CHESS_PIECE_NAMES[type]}`
 
   return (
     <svg

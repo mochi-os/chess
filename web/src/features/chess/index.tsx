@@ -387,7 +387,7 @@ export function ChessGame() {
                     stats={
                       <GameHeaderStat
                         icon={<GameHeaderStoneDot color={myColor === 'w' ? 'white' : 'black'} />}
-                        label={myColor === 'w' ? 'White' : 'Black'}
+                        label={myColor === 'w' ? t`White` : t`Black`}
                       />
                     }
                     actions={
