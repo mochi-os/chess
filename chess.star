@@ -54,7 +54,7 @@ def get_opponent(game, user_id):
 
 # Load game by ID from action input, validate ID and player access
 def load_game(a):
-	if not mochi.valid(a.input("game"), "id"):
+	if not mochi.text.valid(a.input("game"), "id"):
 		a.error_label(400, "errors.invalid_game_id")
 		return None
 	game = mochi.db.row("select * from games where id=?", a.input("game"))
@@ -96,7 +96,7 @@ def valid_fen(fen):
 # Create new game
 def action_create(a):
 	opponent = a.input("opponent")
-	if not mochi.valid(opponent, "entity"):
+	if not mochi.text.valid(opponent, "entity"):
 		a.error_label(400, "errors.invalid_opponent")
 		return
 
@@ -171,12 +171,12 @@ def action_messages(a):
 	# Pagination parameters
 	limit = 30
 	limit_str = a.input("limit")
-	if limit_str and mochi.valid(limit_str, "natural"):
+	if limit_str and mochi.text.valid(limit_str, "natural"):
 		limit = min(int(limit_str), 100)
 
 	before = None
 	before_str = a.input("before")
-	if before_str and mochi.valid(before_str, "natural"):
+	if before_str and mochi.text.valid(before_str, "natural"):
 		before = int(before_str)
 
 	if before:
@@ -209,7 +209,7 @@ def action_send(a):
 		return
 
 	body = a.input("body", "")
-	if not mochi.valid(body, "text"):
+	if not mochi.text.valid(body, "text"):
 		a.error_label(400, "errors.invalid_message")
 		return
 	if len(body) > 10000:
@@ -486,31 +486,31 @@ def event_new(e):
 		return
 
 	game_id = e.content("id")
-	if not mochi.valid(game_id, "id"):
+	if not mochi.text.valid(game_id, "id"):
 		return
 
 	identity = e.content("identity")
-	if not mochi.valid(identity, "entity"):
+	if not mochi.text.valid(identity, "entity"):
 		return
 
 	identity_name = e.content("identity_name")
-	if not mochi.valid(identity_name, "name"):
+	if not mochi.text.valid(identity_name, "name"):
 		return
 
 	opponent = e.content("opponent")
-	if not mochi.valid(opponent, "entity"):
+	if not mochi.text.valid(opponent, "entity"):
 		return
 
 	opponent_name = e.content("opponent_name")
-	if not mochi.valid(opponent_name, "name"):
+	if not mochi.text.valid(opponent_name, "name"):
 		return
 
 	white = e.content("white")
-	if not mochi.valid(white, "entity"):
+	if not mochi.text.valid(white, "entity"):
 		return
 
 	created = e.content("created")
-	if not mochi.valid(str(created), "integer"):
+	if not mochi.text.valid(str(created), "integer"):
 		return
 
 	result = mochi.db.execute(
@@ -557,11 +557,11 @@ def event_move(e):
 	mochi.db.execute("update games set fen=?, pgn=?, status=?, winner=?, draw_offer=null, updated=? where id=?", fen, pgn, status, winner, now, game["id"])
 
 	id = e.content("message")
-	if not mochi.valid(str(id), "id"):
+	if not mochi.text.valid(str(id), "id"):
 		id = mochi.uid()
 
 	created = e.content("created")
-	if not mochi.valid(str(created), "integer"):
+	if not mochi.text.valid(str(created), "integer"):
 		created = now
 
 	name = e.content("name") or "Opponent"
@@ -587,15 +587,15 @@ def event_message(e):
 		return
 
 	id = e.content("message")
-	if not mochi.valid(str(id), "id"):
+	if not mochi.text.valid(str(id), "id"):
 		return
 
 	created = e.content("created")
-	if not mochi.valid(str(created), "integer"):
+	if not mochi.text.valid(str(created), "integer"):
 		return
 
 	body = e.content("body")
-	if not mochi.valid(str(body), "text"):
+	if not mochi.text.valid(str(body), "text"):
 		return
 	if len(str(body)) > 10000:
 		return
