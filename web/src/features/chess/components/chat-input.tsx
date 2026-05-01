@@ -47,7 +47,7 @@ export function ChatInput({
         </Button>
       </div>
       {errorMessage && (
-        <p className="text-destructive text-right text-[10px] px-1">
+        <p className="text-destructive text-end text-[10px] px-1">
           {errorMessage}
         </p>
       )}

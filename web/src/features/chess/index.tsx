@@ -418,11 +418,11 @@ export function ChessGame() {
                                     onClick={handleDrawOffer}
                                     disabled={drawOfferMutation.isPending}
                                   >
-                                    <Handshake className='mr-2 size-4' /> <Trans>Offer draw</Trans>
+                                    <Handshake className='me-2 size-4' /> <Trans>Offer draw</Trans>
                                   </DropdownMenuItem>
                                 )}
                                 <DropdownMenuItem onClick={() => setShowResignDialog(true)}>
-                                  <Flag className='mr-2 size-4' /> <Trans>Resign</Trans>
+                                  <Flag className='me-2 size-4' /> <Trans>Resign</Trans>
                                 </DropdownMenuItem>
                               </>
                             ) : (
@@ -431,10 +431,10 @@ export function ChessGame() {
                                   onClick={handleRematch}
                                   disabled={rematchMutation.isPending}
                                 >
-                                  <RotateCcw className='mr-2 size-4' /> <Trans>Rematch</Trans>
+                                  <RotateCcw className='me-2 size-4' /> <Trans>Rematch</Trans>
                                 </DropdownMenuItem>
                                 <DropdownMenuItem onClick={handleDelete}>
-                                  <Trash2 className='mr-2 size-4' /> <Trans>Delete game</Trans>
+                                  <Trash2 className='me-2 size-4' /> <Trans>Delete game</Trans>
                                 </DropdownMenuItem>
                               </>
                             )}
@@ -479,7 +479,7 @@ export function ChessGame() {
           </div>
 
           {/* Right: Chat sidebar */}
-          <div className="hidden min-[900px]:flex w-72 lg:w-80 flex-col border-l">
+          <div className="hidden min-[900px]:flex w-72 lg:w-80 flex-col border-s">
             <div className="border-b px-3 py-2">
               <h3 className="text-sm font-medium"><Trans>Chat</Trans></h3>
             </div>
@@ -545,7 +545,7 @@ export function ChessGame() {
         confirmText={
           resignMutation.isPending ? (
             <>
-              <Loader2 className="mr-2 size-4 animate-spin" />
+              <Loader2 className="me-2 size-4 animate-spin" />
               <Trans>Resigning...</Trans>
             </>
           ) : (
