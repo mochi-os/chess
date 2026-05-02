@@ -11,7 +11,8 @@
     "format:check": "prettier --check .",
     "format": "prettier --write .",
     "knip": "pnpm -C ../../.. exec knip --workspace apps/chess/web",
-    "i18n:extract": "lingui extract"
+    "i18n:extract": "lingui extract",
+    "i18n:check": "lingui extract --clean && git diff --exit-code -- src/locales || (echo \"\\033[1;31mCatalogs out of date \u2014 run pnpm i18n:extract and commit.\\033[0m\" && exit 1)"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
