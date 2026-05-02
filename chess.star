@@ -55,14 +55,14 @@ def get_opponent(game, user_id):
 # Load game by ID from action input, validate ID and player access
 def load_game(a):
 	if not mochi.text.valid(a.input("game"), "id"):
-		a.error_label(400, "errors.invalid_game_id")
+		a.error.label(400, "errors.invalid_game_id")
 		return None
 	game = mochi.db.row("select * from games where id=?", a.input("game"))
 	if not game:
-		a.error_label(404, "errors.game_not_found")
+		a.error.label(404, "errors.game_not_found")
 		return None
 	if game["identity"] != a.user.identity.id and game["opponent"] != a.user.identity.id:
-		a.error_label(403, "errors.not_a_player_in_this_game")
+		a.error.label(403, "errors.not_a_player_in_this_game")
 		return None
 	return game
 
@@ -97,17 +97,17 @@ def valid_fen(fen):
 def action_create(a):
 	opponent = a.input("opponent")
 	if not mochi.text.valid(opponent, "entity"):
-		a.error_label(400, "errors.invalid_opponent")
+		a.error.label(400, "errors.invalid_opponent")
 		return
 
 	if opponent == a.user.identity.id:
-		a.error_label(400, "errors.cannot_play_against_yourself")
+		a.error.label(400, "errors.cannot_play_against_yourself")
 		return
 
 	# Verify opponent is a friend
 	friend = mochi.service.call("friends", "get", a.user.identity.id, opponent)
 	if not friend:
-		a.error_label(400, "errors.can_only_play_with_friends")
+		a.error.label(400, "errors.can_only_play_with_friends")
 		return
 
 	opponent_name = friend["name"]
@@ -210,13 +210,13 @@ def action_send(a):
 
 	body = a.input("body", "")
 	if not mochi.text.valid(body, "text"):
-		a.error_label(400, "errors.invalid_message")
+		a.error.label(400, "errors.invalid_message")
 		return
 	if len(body) > 10000:
-		a.error_label(400, "errors.message_too_long")
+		a.error.label(400, "errors.message_too_long")
 		return
 	if not body.strip():
-		a.error_label(400, "errors.message_cannot_be_empty")
+		a.error.label(400, "errors.message_cannot_be_empty")
 		return
 
 	id = mochi.uid()
@@ -243,14 +243,14 @@ def action_move(a):
 		return
 
 	if game["status"] != "active":
-		a.error_label(400, "errors.game_is_not_active")
+		a.error.label(400, "errors.game_is_not_active")
 		return
 
 	# Validate turn
 	turn = "w" if " w " in game["fen"] else "b"
 	player_color = "w" if game["white"] == a.user.identity.id else "b"
 	if turn != player_color:
-		a.error_label(400, "errors.not_your_turn")
+		a.error.label(400, "errors.not_your_turn")
 		return
 
 	# Get move data from frontend
@@ -264,23 +264,23 @@ def action_move(a):
 	winner = a.input("winner", "")
 
 	if not move_from or not move_to or not fen or not san:
-		a.error_label(400, "errors.missing_move_data")
+		a.error.label(400, "errors.missing_move_data")
 		return
 	if not valid_square(move_from) or not valid_square(move_to):
-		a.error_label(400, "errors.invalid_square")
+		a.error.label(400, "errors.invalid_square")
 		return
 	if promotion and promotion not in ("q", "r", "b", "n"):
-		a.error_label(400, "errors.invalid_promotion")
+		a.error.label(400, "errors.invalid_promotion")
 		return
 
 	if len(san) > 10:
-		a.error_label(400, "errors.invalid_move_notation")
+		a.error.label(400, "errors.invalid_move_notation")
 		return
 	if not valid_fen(fen):
-		a.error_label(400, "errors.invalid_board_state")
+		a.error.label(400, "errors.invalid_board_state")
 		return
 	if pgn and len(pgn) > 10000:
-		a.error_label(400, "errors.pgn_too_long")
+		a.error.label(400, "errors.pgn_too_long")
 		return
 
 	# Validate status and winner
@@ -329,7 +329,7 @@ def action_resign(a):
 		return
 
 	if game["status"] != "active":
-		a.error_label(400, "errors.game_is_not_active")
+		a.error.label(400, "errors.game_is_not_active")
 		return
 
 	# Winner is the opponent
@@ -362,11 +362,11 @@ def action_draw_offer(a):
 		return
 
 	if game["status"] != "active":
-		a.error_label(400, "errors.game_is_not_active")
+		a.error.label(400, "errors.game_is_not_active")
 		return
 
 	if game["draw_offer"] == a.user.identity.id:
-		a.error_label(400, "errors.you_already_offered_a_draw")
+		a.error.label(400, "errors.you_already_offered_a_draw")
 		return
 
 	other = get_opponent(game, a.user.identity.id)
@@ -397,11 +397,11 @@ def action_draw_accept(a):
 		return
 
 	if game["status"] != "active":
-		a.error_label(400, "errors.game_is_not_active")
+		a.error.label(400, "errors.game_is_not_active")
 		return
 
 	if not game["draw_offer"] or game["draw_offer"] == a.user.identity.id:
-		a.error_label(400, "errors.no_draw_offer_to_accept")
+		a.error.label(400, "errors.no_draw_offer_to_accept")
 		return
 
 	other = get_opponent(game, a.user.identity.id)
@@ -432,11 +432,11 @@ def action_draw_decline(a):
 		return
 
 	if game["status"] != "active":
-		a.error_label(400, "errors.game_is_not_active")
+		a.error.label(400, "errors.game_is_not_active")
 		return
 
 	if not game["draw_offer"] or game["draw_offer"] == a.user.identity.id:
-		a.error_label(400, "errors.no_draw_offer_to_decline")
+		a.error.label(400, "errors.no_draw_offer_to_decline")
 		return
 
 	other = get_opponent(game, a.user.identity.id)
@@ -467,7 +467,7 @@ def action_delete(a):
 		return
 
 	if game["status"] == "active":
-		a.error_label(400, "errors.cannot_delete_an_active_game")
+		a.error.label(400, "errors.cannot_delete_an_active_game")
 		return
 
 	mochi.db.execute("delete from messages where game=?", game["id"])
