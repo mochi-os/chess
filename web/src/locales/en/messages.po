@@ -13,6 +13,23 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
+#. placeholder {0}: pieces .map(({ type, count }) => getPieceLabel(type, count)) .join(', ')
+#: src/features/chess/components/captured-pieces-strip.tsx:83
+msgid "{colorName} captured {0}"
+msgstr "{colorName} captured {0}"
+
+#: src/features/chess/components/captured-pieces-strip.tsx:82
+msgid "{colorName} has not captured any pieces"
+msgstr "{colorName} has not captured any pieces"
+
+#: src/features/chess/components/captured-pieces-strip.tsx:33
+msgid "{count} pieces"
+msgstr "{count} pieces"
+
+#: src/features/chess/components/draw-offer-banner.tsx:25
+msgid "{opponentName} offered a draw"
+msgstr "{opponentName} offered a draw"
+
 #: src/features/chess/index.tsx:80
 msgid "{opponentName} resigned — you win!"
 msgstr "{opponentName} resigned — you win!"
@@ -20,6 +37,14 @@ msgstr "{opponentName} resigned — you win!"
 #: src/features/chess/index.tsx:88
 msgid "{opponentName}'s move"
 msgstr "{opponentName}'s move"
+
+#: src/features/chess/components/chat-message-list.tsx:207
+msgid "{subject} played <0>{san}</0>"
+msgstr "{subject} played <0>{san}</0>"
+
+#: src/features/chess/components/chat-message-list.tsx:205
+msgid "{subject} took <0>{san}</0>"
+msgstr "{subject} took <0>{san}</0>"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:52
 msgid "12 hours"
@@ -32,6 +57,10 @@ msgstr "24 hours"
 #: ../../../lib/web/src/lib/preference-utils.ts:61
 msgid "Absolute (date and time)"
 msgstr "Absolute (date and time)"
+
+#: src/features/chess/components/draw-offer-banner.tsx:41
+msgid "Accept"
+msgstr "Accept"
 
 #: ../../../lib/web/src/features/errors/forbidden.tsx:12
 msgid "Access Forbidden"
@@ -57,7 +86,7 @@ msgstr "Account type"
 msgid "Account verified"
 msgstr "Account verified"
 
-#: src/components/layout/chess-layout.tsx:105
+#: src/components/layout/chess-layout.tsx:106
 msgid "Active Games"
 msgstr "Active Games"
 
@@ -122,6 +151,10 @@ msgstr "All"
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "Are you sure you want to log out? You will need to log in again to access your account."
 
+#: src/features/chess/index.tsx:544
+msgid "Are you sure you want to resign? {opponentName} will win the game."
+msgstr "Are you sure you want to resign? {opponentName} will win the game."
+
 #: ../../../lib/web/src/components/data-table/column-header.tsx:56
 msgid "Asc"
 msgstr "Asc"
@@ -136,9 +169,21 @@ msgstr "Back"
 msgid "Back to Home"
 msgstr "Back to Home"
 
+#: src/features/chess/lib/use-chess-piece-name.ts:15
+msgid "bishop"
+msgstr "bishop"
+
+#: src/features/chess/components/captured-pieces-strip.tsx:15
 #: src/features/chess/index.tsx:391
 msgid "Black"
 msgstr "Black"
+
+#. placeholder {0}: pieceName(piece.type)
+#. placeholder {0}: pieceName(type)
+#: src/features/chess/components/chess-board.tsx:302
+#: src/features/chess/components/chess-piece-icon.tsx:304
+msgid "Black {0}"
+msgstr "Black {0}"
 
 #: ../../../lib/web/src/components/post-tags.tsx:160
 msgid "Boost interest"
@@ -152,7 +197,7 @@ msgstr "Boost interest"
 #: ../../../lib/web/src/features/accounts/account-add.tsx:185
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:86
 #: src/features/chess/components/new-game.tsx:140
-#: src/features/chess/components/promotion-dialog.tsx:97
+#: src/features/chess/components/promotion-dialog.tsx:99
 msgid "Cancel"
 msgstr "Cancel"
 
@@ -190,6 +235,14 @@ msgstr "Checkmate — you win!"
 #: src/features/chess/index.tsx:331
 msgid "Chess"
 msgstr "Chess"
+
+#: src/features/chess/components/chess-board.tsx:257
+msgid "Chess board. Use arrow keys to navigate, Enter or Space to select."
+msgstr "Chess board. Use arrow keys to navigate, Enter or Space to select."
+
+#: src/features/chess/components/chess-board.tsx:256
+msgid "Chess board. Your turn. Use arrow keys to navigate, Enter or Space to select."
+msgstr "Chess board. Your turn. Use arrow keys to navigate, Enter or Space to select."
 
 #: src/features/chess/components/game-empty-state.tsx:18
 msgid "Choose a game from the sidebar or start a new one."
@@ -270,7 +323,7 @@ msgstr "Coming Soon!"
 msgid "Compact"
 msgstr "Compact"
 
-#: src/components/layout/chess-layout.tsx:116
+#: src/components/layout/chess-layout.tsx:117
 msgid "Completed"
 msgstr "Completed"
 
@@ -311,6 +364,10 @@ msgstr "Dark"
 #: ../../../lib/web/src/components/profile-dropdown.tsx:120
 msgid "Dark mode"
 msgstr "Dark mode"
+
+#: src/features/chess/components/draw-offer-banner.tsx:34
+msgid "Decline"
+msgstr "Decline"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:297
 msgid "Default"
@@ -358,6 +415,10 @@ msgstr "Download"
 #: src/features/chess/index.tsx:75
 msgid "Draw"
 msgstr "Draw"
+
+#: src/features/chess/index.tsx:450
+msgid "Draw offered — waiting for {opponentName}"
+msgstr "Draw offered — waiting for {opponentName}"
 
 #: ../../../lib/web/src/components/layout/app-sidebar.tsx:35
 msgid "Expand sidebar"
@@ -493,6 +554,14 @@ msgstr "Interests"
 msgid "Invalid verification code"
 msgstr "Invalid verification code"
 
+#: src/features/chess/lib/use-chess-piece-name.ts:12
+msgid "king"
+msgstr "king"
+
+#: src/features/chess/lib/use-chess-piece-name.ts:16
+msgid "knight"
+msgstr "knight"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:273
 msgid "Layout"
 msgstr "Layout"
@@ -569,7 +638,7 @@ msgstr "Monday"
 msgid "New"
 msgstr "New"
 
-#: src/components/layout/chess-layout.tsx:130
+#: src/components/layout/chess-layout.tsx:131
 #: src/features/chess/components/game-empty-state.tsx:22
 #: src/features/chess/components/game-empty-state.tsx:38
 msgid "New game"
@@ -611,7 +680,7 @@ msgstr "No groups available"
 msgid "No matches."
 msgstr "No matches."
 
-#: src/features/chess/components/chat-message-list.tsx:152
+#: src/features/chess/components/chat-message-list.tsx:153
 msgid "No messages yet"
 msgstr "No messages yet"
 
@@ -692,6 +761,10 @@ msgstr "Other"
 msgid "Owner"
 msgstr "Owner"
 
+#: src/features/chess/lib/use-chess-piece-name.ts:17
+msgid "pawn"
+msgstr "pawn"
+
 #: src/features/chess/components/new-game.tsx:62
 msgid "Please select a friend"
 msgstr "Please select a friend"
@@ -704,6 +777,19 @@ msgstr "Previous image"
 #: ../../../lib/web/src/components/profile-dropdown.tsx:111
 msgid "Profile"
 msgstr "Profile"
+
+#. placeholder {0}: pieceName(piece)
+#: src/features/chess/components/promotion-dialog.tsx:74
+msgid "Promote to {0}"
+msgstr "Promote to {0}"
+
+#: src/features/chess/components/promotion-dialog.tsx:69
+msgid "Promote to:"
+msgstr "Promote to:"
+
+#: src/features/chess/lib/use-chess-piece-name.ts:13
+msgid "queen"
+msgstr "queen"
 
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:216
 #: ../../../lib/web/src/components/search-entity-page.tsx:191
@@ -757,6 +843,7 @@ msgid "Reset all settings to default values"
 msgstr "Reset all settings to default values"
 
 #: src/features/chess/index.tsx:425
+#: src/features/chess/index.tsx:552
 msgid "Resign"
 msgstr "Resign"
 
@@ -771,6 +858,10 @@ msgstr "Resigning..."
 #: ../../../lib/web/src/components/config-drawer.tsx:348
 msgid "Right to Left"
 msgstr "Right to Left"
+
+#: src/features/chess/lib/use-chess-piece-name.ts:14
+msgid "rook"
+msgstr "rook"
 
 #: ../../../lib/web/src/components/data-table/pagination.tsx:60
 msgid "Rows per page"
@@ -1013,6 +1104,10 @@ msgstr "Unauthorized Access"
 msgid "United States"
 msgstr "United States"
 
+#: src/hooks/useGameWebsocket.ts:162
+msgid "Unknown"
+msgstr "Unknown"
+
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:131
 msgid "Unverified"
 msgstr "Unverified"
@@ -1065,9 +1160,21 @@ msgstr "Website is under maintenance!"
 msgid "Wednesday"
 msgstr "Wednesday"
 
+#: src/features/chess/components/captured-pieces-strip.tsx:15
 #: src/features/chess/index.tsx:391
 msgid "White"
 msgstr "White"
+
+#. placeholder {0}: pieceName(piece.type)
+#. placeholder {0}: pieceName(type)
+#: src/features/chess/components/chess-board.tsx:302
+#: src/features/chess/components/chess-piece-icon.tsx:304
+msgid "White {0}"
+msgstr "White {0}"
+
+#: src/features/chess/components/chat-message-list.tsx:197
+msgid "You"
+msgstr "You"
 
 #: src/features/chess/index.tsx:81
 msgid "You resigned — {opponentName} wins"

@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useState } from 'react'
+import { useLingui } from '@lingui/react/macro'
 import {
   useQueryClient,
   type QueryClient,
@@ -27,7 +28,8 @@ const isSameMessage = (incoming: GameMessage, existing: GameMessage): boolean =>
 
 const createMessageFromPayload = (
   gameId: string,
-  payload: ChatWebsocketMessagePayload
+  payload: ChatWebsocketMessagePayload,
+  unknownSenderLabel: string,
 ): GameMessage => {
   const created =
     typeof payload.created === 'number'
@@ -35,7 +37,7 @@ const createMessageFromPayload = (
       : Math.floor(Date.now() / 1000)
   const messageBody =
     typeof payload.body === 'string' ? payload.body : String(payload.body ?? '')
-  const senderName = typeof payload.name === 'string' ? payload.name : "Unknown"
+  const senderName = typeof payload.name === 'string' ? payload.name : unknownSenderLabel
   const senderId = typeof payload.member === 'string' ? payload.member : ''
   const msgType = typeof payload.type === 'string' ? payload.type as GameMessage['type'] : 'message'
 
@@ -53,7 +55,8 @@ const createMessageFromPayload = (
 const handleWebsocketPayload = (
   gameId: string,
   payload: ChatWebsocketMessagePayload,
-  queryClient: QueryClient
+  queryClient: QueryClient,
+  unknownSenderLabel: string,
 ) => {
   if (!gameId) return
 
@@ -115,7 +118,7 @@ const handleWebsocketPayload = (
   }
 
   // Append message to messages cache for all types (message, move, system)
-  const incomingMessage = createMessageFromPayload(gameId, payload)
+  const incomingMessage = createMessageFromPayload(gameId, payload, unknownSenderLabel)
 
   queryClient.setQueryData<InfiniteData<GetMessagesResponse>>(
     gameKeys.messages(gameId),
@@ -155,6 +158,8 @@ export const useGameWebsocket = (
   gameId?: string,
   gameKey?: string
 ): UseGameWebsocketResult => {
+  const { t } = useLingui()
+  const unknownSenderLabel = t`Unknown`
   const manager = useWebsocketManager()
   const queryClient = useQueryClient()
   const [snapshot, setSnapshot] = useState<{
@@ -173,7 +178,7 @@ export const useGameWebsocket = (
     const unsubscribe = manager.subscribe(gameId, {
       chatKey: gameKey,
       onMessage: (event) => {
-        handleWebsocketPayload(event.chatId, event.payload, queryClient)
+        handleWebsocketPayload(event.chatId, event.payload, queryClient, unknownSenderLabel)
       },
       onStatusChange: (nextSnapshot) => {
         setSnapshot(nextSnapshot)

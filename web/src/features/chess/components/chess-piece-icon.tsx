@@ -1,3 +1,4 @@
+import { useLingui } from '@lingui/react/macro'
 import { cn } from '@mochi/web'
 import {
   type ComponentPropsWithoutRef,
@@ -6,9 +7,9 @@ import {
   useId,
 } from 'react'
 import {
-  CHESS_PIECE_NAMES,
   type ChessPieceType,
 } from '../lib/chess-pieces'
+import { useChessPieceName } from '../lib/use-chess-piece-name'
 
 type ChessPieceColor = 'w' | 'b'
 
@@ -293,12 +294,14 @@ export function ChessPieceIcon({
   'aria-label': ariaLabel,
   ...props
 }: ChessPieceIconProps) {
+  const { t } = useLingui()
+  const pieceName = useChessPieceName()
   const filterId = useId().replace(/:/g, '')
   const palette = PIECE_PALETTES[color]
   const resolvedAriaLabel =
     decorative
       ? undefined
-      : ariaLabel ?? `${color === 'w' ? "White" : "Black"} ${CHESS_PIECE_NAMES[type]}`
+      : ariaLabel ?? (color === 'w' ? t`White ${pieceName(type)}` : t`Black ${pieceName(type)}`)
 
   return (
     <svg

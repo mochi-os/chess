@@ -1,3 +1,5 @@
+import { plural } from '@lingui/core/macro'
+import { useLingui } from '@lingui/react/macro'
 import { ChessPieceIcon } from './chess-piece-icon'
 import {
   type CapturedPieceType,
@@ -9,22 +11,29 @@ interface CapturedPiecesStripProps {
   pieces: CapturedPieceCount[]
 }
 
-const COLOR_NAMES: Record<'w' | 'b', string> = {
-  w: 'White',
-  b: 'Black',
+function useColorName(color: 'w' | 'b'): string {
+  const { t } = useLingui()
+  return color === 'w' ? t`White` : t`Black`
 }
 
-function getPieceLabel(type: CapturedPieceType, count: number): string {
-  const names: Record<CapturedPieceType, string> = {
-    p: 'pawn',
-    n: 'knight',
-    b: 'bishop',
-    r: 'rook',
-    q: 'queen',
+function usePieceLabel() {
+  const { t } = useLingui()
+  return (type: CapturedPieceType, count: number): string => {
+    switch (type) {
+      case 'p':
+        return plural(count, { one: '# pawn', other: '# pawns' })
+      case 'n':
+        return plural(count, { one: '# knight', other: '# knights' })
+      case 'b':
+        return plural(count, { one: '# bishop', other: '# bishops' })
+      case 'r':
+        return plural(count, { one: '# rook', other: '# rooks' })
+      case 'q':
+        return plural(count, { one: '# queen', other: '# queens' })
+      default:
+        return t`${count} pieces`
+    }
   }
-
-  const pieceName = names[type]
-  return count === 1 ? pieceName : `${count} ${pieceName}s`
 }
 
 function CapturedPieceStack({
@@ -65,11 +74,14 @@ export function CapturedPiecesStrip({
   capturedByColor,
   pieces,
 }: CapturedPiecesStripProps) {
+  const { t } = useLingui()
   const capturedPieceColor = capturedByColor === 'w' ? 'b' : 'w'
+  const colorName = useColorName(capturedByColor)
+  const getPieceLabel = usePieceLabel()
   const ariaLabel =
     pieces.length === 0
-      ? `${COLOR_NAMES[capturedByColor]} has not captured any pieces`
-      : `${COLOR_NAMES[capturedByColor]} captured ${pieces
+      ? t`${colorName} has not captured any pieces`
+      : t`${colorName} captured ${pieces
         .map(({ type, count }) => getPieceLabel(type, count))
         .join(', ')}`
 

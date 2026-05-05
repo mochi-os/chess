@@ -87,5 +87,13 @@ export default defineConfig(
   {
     files: ['**/*.{ts,tsx}'],
     ...i18nConfig,
+    // chess has zero unwrapped strings — promote rule to error.
+    rules: {
+      ...i18nConfig.rules,
+      'lingui/no-unlocalized-strings': [
+        'error',
+        i18nConfig.rules['lingui/no-unlocalized-strings'][1],
+      ],
+    },
   }
 )

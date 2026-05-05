@@ -6,6 +6,29 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: @lingui/cli\n"
 "Language: bn\n"
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Plural-Forms: \n"
+
+#. placeholder {0}: pieces .map(({ type, count }) => getPieceLabel(type, count)) .join(', ')
+#: src/features/chess/components/captured-pieces-strip.tsx:83
+msgid "{colorName} captured {0}"
+msgstr "{colorName} {0} দখল করেছে"
+
+#: src/features/chess/components/captured-pieces-strip.tsx:82
+msgid "{colorName} has not captured any pieces"
+msgstr "{colorName} কোনো গুটি দখল করেনি"
+
+#: src/features/chess/components/captured-pieces-strip.tsx:33
+msgid "{count} pieces"
+msgstr "{count}টি গুটি"
+
+#: src/features/chess/components/draw-offer-banner.tsx:25
+msgid "{opponentName} offered a draw"
+msgstr "{opponentName} ড্র প্রস্তাব করেছে"
 
 #: src/features/chess/index.tsx:80
 msgid "{opponentName} resigned — you win!"
@@ -14,6 +37,14 @@ msgstr "{opponentName} পদত্যাগ করেছে — আপনি �
 #: src/features/chess/index.tsx:88
 msgid "{opponentName}'s move"
 msgstr "{opponentName}-এর চাল"
+
+#: src/features/chess/components/chat-message-list.tsx:207
+msgid "{subject} played <0>{san}</0>"
+msgstr "{subject} <0>{san}</0> খেলেছে"
+
+#: src/features/chess/components/chat-message-list.tsx:205
+msgid "{subject} took <0>{san}</0>"
+msgstr "{subject} <0>{san}</0> নিয়েছে"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:52
 msgid "12 hours"
@@ -26,6 +57,10 @@ msgstr "২৪ ঘণ্টা"
 #: ../../../lib/web/src/lib/preference-utils.ts:61
 msgid "Absolute (date and time)"
 msgstr "নিরঙ্কুশ (তারিখ এবং সময়)"
+
+#: src/features/chess/components/draw-offer-banner.tsx:41
+msgid "Accept"
+msgstr "গ্রহণ করুন"
 
 #: ../../../lib/web/src/features/errors/forbidden.tsx:12
 msgid "Access Forbidden"
@@ -51,7 +86,7 @@ msgstr "অ্যাকাউন্টের ধরন"
 msgid "Account verified"
 msgstr "অ্যাকাউন্ট যাচাই করা হয়েছে"
 
-#: src/components/layout/chess-layout.tsx:105
+#: src/components/layout/chess-layout.tsx:106
 msgid "Active Games"
 msgstr "সক্রিয় গেম"
 
@@ -116,6 +151,10 @@ msgstr "সব"
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "আপনি কি নিশ্চিত লগআউট করতে চান? আপনার অ্যাকাউন্টে অ্যাক্সেস করতে আবার লগইন করতে হবে।"
 
+#: src/features/chess/index.tsx:544
+msgid "Are you sure you want to resign? {opponentName} will win the game."
+msgstr "আপনি কি নিশ্চিত যে আপনি হার মানতে চান? {opponentName} খেলায় জিতবে।"
+
 #: ../../../lib/web/src/components/data-table/column-header.tsx:56
 msgid "Asc"
 msgstr "ঊর্ধ্বক্রম"
@@ -130,9 +169,21 @@ msgstr "ফিরে যান"
 msgid "Back to Home"
 msgstr "হোমে ফিরে যান"
 
+#: src/features/chess/lib/use-chess-piece-name.ts:15
+msgid "bishop"
+msgstr "গজ"
+
+#: src/features/chess/components/captured-pieces-strip.tsx:15
 #: src/features/chess/index.tsx:391
 msgid "Black"
 msgstr "কালো"
+
+#. placeholder {0}: pieceName(piece.type)
+#. placeholder {0}: pieceName(type)
+#: src/features/chess/components/chess-board.tsx:302
+#: src/features/chess/components/chess-piece-icon.tsx:304
+msgid "Black {0}"
+msgstr "কালো {0}"
 
 #: ../../../lib/web/src/components/post-tags.tsx:160
 msgid "Boost interest"
@@ -146,7 +197,7 @@ msgstr "আগ্রহ বৃদ্ধি করুন"
 #: ../../../lib/web/src/features/accounts/account-add.tsx:185
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:86
 #: src/features/chess/components/new-game.tsx:140
-#: src/features/chess/components/promotion-dialog.tsx:97
+#: src/features/chess/components/promotion-dialog.tsx:99
 msgid "Cancel"
 msgstr "বাতিল করুন"
 
@@ -184,6 +235,14 @@ msgstr "চেকমেট — আপনি জিতেছেন!"
 #: src/features/chess/index.tsx:331
 msgid "Chess"
 msgstr "দাবা"
+
+#: src/features/chess/components/chess-board.tsx:257
+msgid "Chess board. Use arrow keys to navigate, Enter or Space to select."
+msgstr "দাবার বোর্ড। নেভিগেট করতে অ্যারো কী, নির্বাচন করতে Enter বা Space ব্যবহার করুন।"
+
+#: src/features/chess/components/chess-board.tsx:256
+msgid "Chess board. Your turn. Use arrow keys to navigate, Enter or Space to select."
+msgstr "দাবার বোর্ড। আপনার পালা। নেভিগেট করতে অ্যারো কী, নির্বাচন করতে Enter বা Space ব্যবহার করুন।"
 
 #: src/features/chess/components/game-empty-state.tsx:18
 msgid "Choose a game from the sidebar or start a new one."
@@ -264,7 +323,7 @@ msgstr "শীঘ্রই আসছে!"
 msgid "Compact"
 msgstr "কম্প্যাক্ট"
 
-#: src/components/layout/chess-layout.tsx:116
+#: src/components/layout/chess-layout.tsx:117
 msgid "Completed"
 msgstr "সম্পন্ন"
 
@@ -305,6 +364,10 @@ msgstr "ডার্ক"
 #: ../../../lib/web/src/components/profile-dropdown.tsx:120
 msgid "Dark mode"
 msgstr "ডার্ক মোড"
+
+#: src/features/chess/components/draw-offer-banner.tsx:34
+msgid "Decline"
+msgstr "প্রত্যাখ্যান করুন"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:297
 msgid "Default"
@@ -352,6 +415,10 @@ msgstr "ডাউনলোড"
 #: src/features/chess/index.tsx:75
 msgid "Draw"
 msgstr "ড্র"
+
+#: src/features/chess/index.tsx:450
+msgid "Draw offered — waiting for {opponentName}"
+msgstr "ড্র প্রস্তাব করা হয়েছে — {opponentName}-এর জন্য অপেক্ষা করা হচ্ছে"
 
 #: ../../../lib/web/src/components/layout/app-sidebar.tsx:35
 msgid "Expand sidebar"
@@ -487,6 +554,14 @@ msgstr "আগ্রহসমূহ"
 msgid "Invalid verification code"
 msgstr "অবৈধ যাচাইকরণ কোড"
 
+#: src/features/chess/lib/use-chess-piece-name.ts:12
+msgid "king"
+msgstr "রাজা"
+
+#: src/features/chess/lib/use-chess-piece-name.ts:16
+msgid "knight"
+msgstr "ঘোড়া"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:273
 msgid "Layout"
 msgstr "লেআউট"
@@ -563,7 +638,7 @@ msgstr "সোমবার"
 msgid "New"
 msgstr "নতুন"
 
-#: src/components/layout/chess-layout.tsx:130
+#: src/components/layout/chess-layout.tsx:131
 #: src/features/chess/components/game-empty-state.tsx:22
 #: src/features/chess/components/game-empty-state.tsx:38
 msgid "New game"
@@ -605,7 +680,7 @@ msgstr "কোনো গ্রুপ উপলব্ধ নেই"
 msgid "No matches."
 msgstr "কোনো মিল নেই।"
 
-#: src/features/chess/components/chat-message-list.tsx:152
+#: src/features/chess/components/chat-message-list.tsx:153
 msgid "No messages yet"
 msgstr "এখনও কোনো বার্তা নেই"
 
@@ -686,6 +761,10 @@ msgstr "অন্যান্য"
 msgid "Owner"
 msgstr "মালিক"
 
+#: src/features/chess/lib/use-chess-piece-name.ts:17
+msgid "pawn"
+msgstr "বোড়ে"
+
 #: src/features/chess/components/new-game.tsx:62
 msgid "Please select a friend"
 msgstr "অনুগ্রহ করে একজন বন্ধু নির্বাচন করুন"
@@ -698,6 +777,19 @@ msgstr "পূর্ববর্তী ছবি"
 #: ../../../lib/web/src/components/profile-dropdown.tsx:111
 msgid "Profile"
 msgstr "প্রোফাইল"
+
+#. placeholder {0}: pieceName(piece)
+#: src/features/chess/components/promotion-dialog.tsx:74
+msgid "Promote to {0}"
+msgstr "{0}-এ উন্নীত করুন"
+
+#: src/features/chess/components/promotion-dialog.tsx:69
+msgid "Promote to:"
+msgstr "উন্নীত করুন:"
+
+#: src/features/chess/lib/use-chess-piece-name.ts:13
+msgid "queen"
+msgstr "মন্ত্রী"
 
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:216
 #: ../../../lib/web/src/components/search-entity-page.tsx:191
@@ -751,6 +843,7 @@ msgid "Reset all settings to default values"
 msgstr "সমস্ত সেটিংস ডিফল্ট মানে রিসেট করুন"
 
 #: src/features/chess/index.tsx:425
+#: src/features/chess/index.tsx:552
 msgid "Resign"
 msgstr "পদত্যাগ"
 
@@ -765,6 +858,10 @@ msgstr "পদত্যাগ করা হচ্ছে..."
 #: ../../../lib/web/src/components/config-drawer.tsx:348
 msgid "Right to Left"
 msgstr "ডান থেকে বাম"
+
+#: src/features/chess/lib/use-chess-piece-name.ts:14
+msgid "rook"
+msgstr "নৌকা"
 
 #: ../../../lib/web/src/components/data-table/pagination.tsx:60
 msgid "Rows per page"
@@ -1007,6 +1104,10 @@ msgstr "অননুমোদিত অ্যাক্সেস"
 msgid "United States"
 msgstr "যুক্তরাষ্ট্র"
 
+#: src/hooks/useGameWebsocket.ts:162
+msgid "Unknown"
+msgstr "অজানা"
+
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:131
 msgid "Unverified"
 msgstr "যাচাই করা হয়নি"
@@ -1059,9 +1160,21 @@ msgstr "ওয়েবসাইট রক্ষণাবেক্ষণাধ�
 msgid "Wednesday"
 msgstr "বুধবার"
 
+#: src/features/chess/components/captured-pieces-strip.tsx:15
 #: src/features/chess/index.tsx:391
 msgid "White"
 msgstr "সাদা"
+
+#. placeholder {0}: pieceName(piece.type)
+#. placeholder {0}: pieceName(type)
+#: src/features/chess/components/chess-board.tsx:302
+#: src/features/chess/components/chess-piece-icon.tsx:304
+msgid "White {0}"
+msgstr "সাদা {0}"
+
+#: src/features/chess/components/chat-message-list.tsx:197
+msgid "You"
+msgstr "আপনি"
 
 #: src/features/chess/index.tsx:81
 msgid "You resigned — {opponentName} wins"

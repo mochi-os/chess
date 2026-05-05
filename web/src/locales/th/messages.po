@@ -13,6 +13,23 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
+#. placeholder {0}: pieces .map(({ type, count }) => getPieceLabel(type, count)) .join(', ')
+#: src/features/chess/components/captured-pieces-strip.tsx:83
+msgid "{colorName} captured {0}"
+msgstr "{colorName} จับ {0} ได้"
+
+#: src/features/chess/components/captured-pieces-strip.tsx:82
+msgid "{colorName} has not captured any pieces"
+msgstr "{colorName} ยังไม่ได้จับหมากใด ๆ"
+
+#: src/features/chess/components/captured-pieces-strip.tsx:33
+msgid "{count} pieces"
+msgstr "หมาก {count} ตัว"
+
+#: src/features/chess/components/draw-offer-banner.tsx:25
+msgid "{opponentName} offered a draw"
+msgstr "{opponentName} เสนอเสมอ"
+
 #: src/features/chess/index.tsx:80
 msgid "{opponentName} resigned — you win!"
 msgstr "{opponentName} ยอมแพ้ — คุณชนะ!"
@@ -20,6 +37,14 @@ msgstr "{opponentName} ยอมแพ้ — คุณชนะ!"
 #: src/features/chess/index.tsx:88
 msgid "{opponentName}'s move"
 msgstr "ตาของ {opponentName}"
+
+#: src/features/chess/components/chat-message-list.tsx:207
+msgid "{subject} played <0>{san}</0>"
+msgstr "{subject} เดิน <0>{san}</0>"
+
+#: src/features/chess/components/chat-message-list.tsx:205
+msgid "{subject} took <0>{san}</0>"
+msgstr "{subject} จับ <0>{san}</0>"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:52
 msgid "12 hours"
@@ -32,6 +57,10 @@ msgstr "24 ชั่วโมง"
 #: ../../../lib/web/src/lib/preference-utils.ts:61
 msgid "Absolute (date and time)"
 msgstr "สัมบูรณ์ (วันที่และเวลา)"
+
+#: src/features/chess/components/draw-offer-banner.tsx:41
+msgid "Accept"
+msgstr "ยอมรับ"
 
 #: ../../../lib/web/src/features/errors/forbidden.tsx:12
 msgid "Access Forbidden"
@@ -57,7 +86,7 @@ msgstr "ประเภทบัญชี"
 msgid "Account verified"
 msgstr "ยืนยันบัญชีแล้ว"
 
-#: src/components/layout/chess-layout.tsx:105
+#: src/components/layout/chess-layout.tsx:106
 msgid "Active Games"
 msgstr "เกมที่ใช้งานอยู่"
 
@@ -122,6 +151,10 @@ msgstr "ทั้งหมด"
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "คุณแน่ใจหรือไม่ว่าต้องการออกจากระบบ? คุณจะต้องเข้าสู่ระบบอีกครั้งเพื่อเข้าถึงบัญชีของคุณ"
 
+#: src/features/chess/index.tsx:544
+msgid "Are you sure you want to resign? {opponentName} will win the game."
+msgstr "คุณแน่ใจหรือไม่ว่าต้องการยอมแพ้? {opponentName} จะชนะเกม"
+
 #: ../../../lib/web/src/components/data-table/column-header.tsx:56
 msgid "Asc"
 msgstr "น้อยไปมาก"
@@ -136,9 +169,21 @@ msgstr "ย้อนกลับ"
 msgid "Back to Home"
 msgstr "กลับไปยังหน้าแรก"
 
+#: src/features/chess/lib/use-chess-piece-name.ts:15
+msgid "bishop"
+msgstr "บิชอป"
+
+#: src/features/chess/components/captured-pieces-strip.tsx:15
 #: src/features/chess/index.tsx:391
 msgid "Black"
 msgstr "ดำ"
+
+#. placeholder {0}: pieceName(piece.type)
+#. placeholder {0}: pieceName(type)
+#: src/features/chess/components/chess-board.tsx:302
+#: src/features/chess/components/chess-piece-icon.tsx:304
+msgid "Black {0}"
+msgstr "{0} ดำ"
 
 #: ../../../lib/web/src/components/post-tags.tsx:160
 msgid "Boost interest"
@@ -152,7 +197,7 @@ msgstr "เพิ่มความสนใจ"
 #: ../../../lib/web/src/features/accounts/account-add.tsx:185
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:86
 #: src/features/chess/components/new-game.tsx:140
-#: src/features/chess/components/promotion-dialog.tsx:97
+#: src/features/chess/components/promotion-dialog.tsx:99
 msgid "Cancel"
 msgstr "ยกเลิก"
 
@@ -190,6 +235,14 @@ msgstr "Checkmate — คุณชนะ!"
 #: src/features/chess/index.tsx:331
 msgid "Chess"
 msgstr "หมากรุก"
+
+#: src/features/chess/components/chess-board.tsx:257
+msgid "Chess board. Use arrow keys to navigate, Enter or Space to select."
+msgstr "กระดานหมากรุก ใช้ปุ่มลูกศรเพื่อนำทาง Enter หรือ Space เพื่อเลือก"
+
+#: src/features/chess/components/chess-board.tsx:256
+msgid "Chess board. Your turn. Use arrow keys to navigate, Enter or Space to select."
+msgstr "กระดานหมากรุก ตาของคุณ ใช้ปุ่มลูกศรเพื่อนำทาง Enter หรือ Space เพื่อเลือก"
 
 #: src/features/chess/components/game-empty-state.tsx:18
 msgid "Choose a game from the sidebar or start a new one."
@@ -270,7 +323,7 @@ msgstr "เร็วๆนี้!"
 msgid "Compact"
 msgstr "กะทัดรัด"
 
-#: src/components/layout/chess-layout.tsx:116
+#: src/components/layout/chess-layout.tsx:117
 msgid "Completed"
 msgstr "เสร็จสมบูรณ์"
 
@@ -311,6 +364,10 @@ msgstr "มืด"
 #: ../../../lib/web/src/components/profile-dropdown.tsx:120
 msgid "Dark mode"
 msgstr "โหมดมืด"
+
+#: src/features/chess/components/draw-offer-banner.tsx:34
+msgid "Decline"
+msgstr "ปฏิเสธ"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:297
 msgid "Default"
@@ -358,6 +415,10 @@ msgstr "ดาวน์โหลด"
 #: src/features/chess/index.tsx:75
 msgid "Draw"
 msgstr "เสมอ"
+
+#: src/features/chess/index.tsx:450
+msgid "Draw offered — waiting for {opponentName}"
+msgstr "เสนอเสมอแล้ว — กำลังรอ {opponentName}"
 
 #: ../../../lib/web/src/components/layout/app-sidebar.tsx:35
 msgid "Expand sidebar"
@@ -493,6 +554,14 @@ msgstr "ความสนใจ"
 msgid "Invalid verification code"
 msgstr "รหัสยืนยันไม่ถูกต้อง"
 
+#: src/features/chess/lib/use-chess-piece-name.ts:12
+msgid "king"
+msgstr "ขุน"
+
+#: src/features/chess/lib/use-chess-piece-name.ts:16
+msgid "knight"
+msgstr "ม้า"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:273
 msgid "Layout"
 msgstr "เลย์เอาต์"
@@ -569,7 +638,7 @@ msgstr "วันจันทร์"
 msgid "New"
 msgstr "ใหม่"
 
-#: src/components/layout/chess-layout.tsx:130
+#: src/components/layout/chess-layout.tsx:131
 #: src/features/chess/components/game-empty-state.tsx:22
 #: src/features/chess/components/game-empty-state.tsx:38
 msgid "New game"
@@ -611,7 +680,7 @@ msgstr "ไม่มีกลุ่มที่ใช้งานได้"
 msgid "No matches."
 msgstr "ไม่พบรายการที่ตรงกัน"
 
-#: src/features/chess/components/chat-message-list.tsx:152
+#: src/features/chess/components/chat-message-list.tsx:153
 msgid "No messages yet"
 msgstr "ยังไม่มีข้อความ"
 
@@ -692,6 +761,10 @@ msgstr "อื่น ๆ"
 msgid "Owner"
 msgstr "เจ้าของ"
 
+#: src/features/chess/lib/use-chess-piece-name.ts:17
+msgid "pawn"
+msgstr "เบี้ย"
+
 #: src/features/chess/components/new-game.tsx:62
 msgid "Please select a friend"
 msgstr "กรุณาเลือกเพื่อน"
@@ -704,6 +777,19 @@ msgstr "รูปก่อนหน้า"
 #: ../../../lib/web/src/components/profile-dropdown.tsx:111
 msgid "Profile"
 msgstr "โปรไฟล์"
+
+#. placeholder {0}: pieceName(piece)
+#: src/features/chess/components/promotion-dialog.tsx:74
+msgid "Promote to {0}"
+msgstr "เลื่อนขั้นเป็น {0}"
+
+#: src/features/chess/components/promotion-dialog.tsx:69
+msgid "Promote to:"
+msgstr "เลื่อนขั้นเป็น:"
+
+#: src/features/chess/lib/use-chess-piece-name.ts:13
+msgid "queen"
+msgstr "ควีน"
 
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:216
 #: ../../../lib/web/src/components/search-entity-page.tsx:191
@@ -757,6 +843,7 @@ msgid "Reset all settings to default values"
 msgstr "รีเซ็ตการตั้งค่าทั้งหมดเป็นค่าเริ่มต้น"
 
 #: src/features/chess/index.tsx:425
+#: src/features/chess/index.tsx:552
 msgid "Resign"
 msgstr "ยอมแพ้"
 
@@ -771,6 +858,10 @@ msgstr "กำลังยอมแพ้..."
 #: ../../../lib/web/src/components/config-drawer.tsx:348
 msgid "Right to Left"
 msgstr "ขวาไปซ้าย"
+
+#: src/features/chess/lib/use-chess-piece-name.ts:14
+msgid "rook"
+msgstr "เรือ"
 
 #: ../../../lib/web/src/components/data-table/pagination.tsx:60
 msgid "Rows per page"
@@ -1013,6 +1104,10 @@ msgstr "การเข้าถึงที่ไม่ได้รับอน
 msgid "United States"
 msgstr "สหรัฐอเมริกา"
 
+#: src/hooks/useGameWebsocket.ts:162
+msgid "Unknown"
+msgstr "ไม่ทราบ"
+
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:131
 msgid "Unverified"
 msgstr "ยังไม่ยืนยัน"
@@ -1065,9 +1160,21 @@ msgstr "เว็บไซต์อยู่ระหว่างการบำ
 msgid "Wednesday"
 msgstr "วันพุธ"
 
+#: src/features/chess/components/captured-pieces-strip.tsx:15
 #: src/features/chess/index.tsx:391
 msgid "White"
 msgstr "ขาว"
+
+#. placeholder {0}: pieceName(piece.type)
+#. placeholder {0}: pieceName(type)
+#: src/features/chess/components/chess-board.tsx:302
+#: src/features/chess/components/chess-piece-icon.tsx:304
+msgid "White {0}"
+msgstr "{0} ขาว"
+
+#: src/features/chess/components/chat-message-list.tsx:197
+msgid "You"
+msgstr "คุณ"
 
 #: src/features/chess/index.tsx:81
 msgid "You resigned — {opponentName} wins"

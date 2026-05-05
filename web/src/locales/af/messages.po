@@ -13,6 +13,23 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
+#. placeholder {0}: pieces .map(({ type, count }) => getPieceLabel(type, count)) .join(', ')
+#: src/features/chess/components/captured-pieces-strip.tsx:83
+msgid "{colorName} captured {0}"
+msgstr "{colorName} het {0} geslaan"
+
+#: src/features/chess/components/captured-pieces-strip.tsx:82
+msgid "{colorName} has not captured any pieces"
+msgstr "{colorName} het nog geen stukke geslaan nie"
+
+#: src/features/chess/components/captured-pieces-strip.tsx:33
+msgid "{count} pieces"
+msgstr "{count} stukke"
+
+#: src/features/chess/components/draw-offer-banner.tsx:25
+msgid "{opponentName} offered a draw"
+msgstr "{opponentName} het gelykop aangebied"
+
 #: src/features/chess/index.tsx:80
 msgid "{opponentName} resigned — you win!"
 msgstr "{opponentName} het bedank — jy wen!"
@@ -20,6 +37,14 @@ msgstr "{opponentName} het bedank — jy wen!"
 #: src/features/chess/index.tsx:88
 msgid "{opponentName}'s move"
 msgstr "{opponentName} se skuif"
+
+#: src/features/chess/components/chat-message-list.tsx:207
+msgid "{subject} played <0>{san}</0>"
+msgstr "{subject} het <0>{san}</0> gespeel"
+
+#: src/features/chess/components/chat-message-list.tsx:205
+msgid "{subject} took <0>{san}</0>"
+msgstr "{subject} het <0>{san}</0> geslaan"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:52
 msgid "12 hours"
@@ -32,6 +57,10 @@ msgstr "24 uur"
 #: ../../../lib/web/src/lib/preference-utils.ts:61
 msgid "Absolute (date and time)"
 msgstr "Absoluut (datum en tyd)"
+
+#: src/features/chess/components/draw-offer-banner.tsx:41
+msgid "Accept"
+msgstr "Aanvaar"
 
 #: ../../../lib/web/src/features/errors/forbidden.tsx:12
 msgid "Access Forbidden"
@@ -57,7 +86,7 @@ msgstr "Rekeningtipe"
 msgid "Account verified"
 msgstr "Rekening geverifieer"
 
-#: src/components/layout/chess-layout.tsx:105
+#: src/components/layout/chess-layout.tsx:106
 msgid "Active Games"
 msgstr "Aktiewe speletjies"
 
@@ -122,6 +151,10 @@ msgstr "Alle"
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "Is jy seker jy wil afmeld? Jy sal weer moet aanmeld om toegang tot jou rekening te kry."
 
+#: src/features/chess/index.tsx:544
+msgid "Are you sure you want to resign? {opponentName} will win the game."
+msgstr "Is jy seker jy wil oorgee? {opponentName} sal die spel wen."
+
 #: ../../../lib/web/src/components/data-table/column-header.tsx:56
 msgid "Asc"
 msgstr "Stygend"
@@ -136,9 +169,21 @@ msgstr "Terug"
 msgid "Back to Home"
 msgstr "Terug na tuis"
 
+#: src/features/chess/lib/use-chess-piece-name.ts:15
+msgid "bishop"
+msgstr "loper"
+
+#: src/features/chess/components/captured-pieces-strip.tsx:15
 #: src/features/chess/index.tsx:391
 msgid "Black"
 msgstr "Swart"
+
+#. placeholder {0}: pieceName(piece.type)
+#. placeholder {0}: pieceName(type)
+#: src/features/chess/components/chess-board.tsx:302
+#: src/features/chess/components/chess-piece-icon.tsx:304
+msgid "Black {0}"
+msgstr "Swart {0}"
 
 #: ../../../lib/web/src/components/post-tags.tsx:160
 msgid "Boost interest"
@@ -152,7 +197,7 @@ msgstr "Versterk belangstelling"
 #: ../../../lib/web/src/features/accounts/account-add.tsx:185
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:86
 #: src/features/chess/components/new-game.tsx:140
-#: src/features/chess/components/promotion-dialog.tsx:97
+#: src/features/chess/components/promotion-dialog.tsx:99
 msgid "Cancel"
 msgstr "Kanselleer"
 
@@ -190,6 +235,14 @@ msgstr "Skaakmat — jy wen!"
 #: src/features/chess/index.tsx:331
 msgid "Chess"
 msgstr "Skaak"
+
+#: src/features/chess/components/chess-board.tsx:257
+msgid "Chess board. Use arrow keys to navigate, Enter or Space to select."
+msgstr "Skaakbord. Gebruik pylsleutels om te navigeer, Enter of Spasie om te kies."
+
+#: src/features/chess/components/chess-board.tsx:256
+msgid "Chess board. Your turn. Use arrow keys to navigate, Enter or Space to select."
+msgstr "Skaakbord. Jou beurt. Gebruik pylsleutels om te navigeer, Enter of Spasie om te kies."
 
 #: src/features/chess/components/game-empty-state.tsx:18
 msgid "Choose a game from the sidebar or start a new one."
@@ -270,7 +323,7 @@ msgstr "Kom binnekort!"
 msgid "Compact"
 msgstr "Kompak"
 
-#: src/components/layout/chess-layout.tsx:116
+#: src/components/layout/chess-layout.tsx:117
 msgid "Completed"
 msgstr "Voltooi"
 
@@ -311,6 +364,10 @@ msgstr "Donker"
 #: ../../../lib/web/src/components/profile-dropdown.tsx:120
 msgid "Dark mode"
 msgstr "Donker modus"
+
+#: src/features/chess/components/draw-offer-banner.tsx:34
+msgid "Decline"
+msgstr "Wys af"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:297
 msgid "Default"
@@ -358,6 +415,10 @@ msgstr "Laai af"
 #: src/features/chess/index.tsx:75
 msgid "Draw"
 msgstr "Gelykop"
+
+#: src/features/chess/index.tsx:450
+msgid "Draw offered — waiting for {opponentName}"
+msgstr "Gelykop aangebied — wag vir {opponentName}"
 
 #: ../../../lib/web/src/components/layout/app-sidebar.tsx:35
 msgid "Expand sidebar"
@@ -493,6 +554,14 @@ msgstr "Belange"
 msgid "Invalid verification code"
 msgstr "Ongeldige verifikasiekode"
 
+#: src/features/chess/lib/use-chess-piece-name.ts:12
+msgid "king"
+msgstr "koning"
+
+#: src/features/chess/lib/use-chess-piece-name.ts:16
+msgid "knight"
+msgstr "ruiter"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:273
 msgid "Layout"
 msgstr "Uitleg"
@@ -569,7 +638,7 @@ msgstr "Maandag"
 msgid "New"
 msgstr "Nuut"
 
-#: src/components/layout/chess-layout.tsx:130
+#: src/components/layout/chess-layout.tsx:131
 #: src/features/chess/components/game-empty-state.tsx:22
 #: src/features/chess/components/game-empty-state.tsx:38
 msgid "New game"
@@ -611,7 +680,7 @@ msgstr "Geen groepe beskikbaar nie"
 msgid "No matches."
 msgstr "Geen passe nie."
 
-#: src/features/chess/components/chat-message-list.tsx:152
+#: src/features/chess/components/chat-message-list.tsx:153
 msgid "No messages yet"
 msgstr "Nog geen boodskappe nie"
 
@@ -692,6 +761,10 @@ msgstr "Ander"
 msgid "Owner"
 msgstr "Eienaar"
 
+#: src/features/chess/lib/use-chess-piece-name.ts:17
+msgid "pawn"
+msgstr "pion"
+
 #: src/features/chess/components/new-game.tsx:62
 msgid "Please select a friend"
 msgstr "Kies asseblief 'n vriend"
@@ -704,6 +777,19 @@ msgstr "Vorige prent"
 #: ../../../lib/web/src/components/profile-dropdown.tsx:111
 msgid "Profile"
 msgstr "Profiel"
+
+#. placeholder {0}: pieceName(piece)
+#: src/features/chess/components/promotion-dialog.tsx:74
+msgid "Promote to {0}"
+msgstr "Bevorder tot {0}"
+
+#: src/features/chess/components/promotion-dialog.tsx:69
+msgid "Promote to:"
+msgstr "Bevorder tot:"
+
+#: src/features/chess/lib/use-chess-piece-name.ts:13
+msgid "queen"
+msgstr "dame"
 
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:216
 #: ../../../lib/web/src/components/search-entity-page.tsx:191
@@ -757,6 +843,7 @@ msgid "Reset all settings to default values"
 msgstr "Stel alle instellings terug na verstekwaardes"
 
 #: src/features/chess/index.tsx:425
+#: src/features/chess/index.tsx:552
 msgid "Resign"
 msgstr "Bedank"
 
@@ -771,6 +858,10 @@ msgstr "Besig om te bedank..."
 #: ../../../lib/web/src/components/config-drawer.tsx:348
 msgid "Right to Left"
 msgstr "Regs na links"
+
+#: src/features/chess/lib/use-chess-piece-name.ts:14
+msgid "rook"
+msgstr "toring"
 
 #: ../../../lib/web/src/components/data-table/pagination.tsx:60
 msgid "Rows per page"
@@ -1013,6 +1104,10 @@ msgstr "Nie-toegelate toegang"
 msgid "United States"
 msgstr "Verenigde State"
 
+#: src/hooks/useGameWebsocket.ts:162
+msgid "Unknown"
+msgstr "Onbekend"
+
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:131
 msgid "Unverified"
 msgstr "Ongeverifieer"
@@ -1065,9 +1160,21 @@ msgstr "Webwerf is onder instandhouding!"
 msgid "Wednesday"
 msgstr "Woensdag"
 
+#: src/features/chess/components/captured-pieces-strip.tsx:15
 #: src/features/chess/index.tsx:391
 msgid "White"
 msgstr "Wit"
+
+#. placeholder {0}: pieceName(piece.type)
+#. placeholder {0}: pieceName(type)
+#: src/features/chess/components/chess-board.tsx:302
+#: src/features/chess/components/chess-piece-icon.tsx:304
+msgid "White {0}"
+msgstr "Wit {0}"
+
+#: src/features/chess/components/chat-message-list.tsx:197
+msgid "You"
+msgstr "Jy"
 
 #: src/features/chess/index.tsx:81
 msgid "You resigned — {opponentName} wins"

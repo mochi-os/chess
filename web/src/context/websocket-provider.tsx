@@ -20,11 +20,13 @@ const buildManager = (): ChatWebsocketManager | null => {
         return response.game.key
       } catch (error) {
         if (import.meta.env.DEV) {
+          /* eslint-disable lingui/no-unlocalized-strings -- dev-only diagnostic log, not user-facing */
           globalThis.console?.error?.(
             '[WebSocket] Failed to fetch game key',
             gameId,
             error
           )
+          /* eslint-enable lingui/no-unlocalized-strings */
         }
         return undefined
       }

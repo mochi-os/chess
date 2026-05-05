@@ -447,7 +447,7 @@ export function ChessGame() {
                         ? game.draw_offer === myIdentity
                           ? (
                               <p className='text-sm text-muted-foreground'>
-                                Draw offered — waiting for {opponentName}
+                                <Trans>Draw offered — waiting for {opponentName}</Trans>
                               </p>
                             )
                           : (
@@ -541,7 +541,7 @@ export function ChessGame() {
         open={showResignDialog}
         onOpenChange={setShowResignDialog}
         title={t`Resign game?`}
-        desc={`Are you sure you want to resign? ${opponentName} will win the game.`}
+        desc={t`Are you sure you want to resign? ${opponentName} will win the game.`}
         confirmText={
           resignMutation.isPending ? (
             <>
@@ -549,7 +549,7 @@ export function ChessGame() {
               <Trans>Resigning...</Trans>
             </>
           ) : (
-            'Resign'
+            t`Resign`
           )
         }
         destructive

@@ -1,10 +1,11 @@
 import { useCallback, useMemo, useState } from 'react'
 import { Chess, type Square } from 'chess.js'
+import { useLingui } from '@lingui/react/macro'
 import { cn } from '@mochi/web'
 import { CapturedPiecesStrip } from './captured-pieces-strip'
 import { ChessPieceIcon } from './chess-piece-icon'
 import { getCapturedPiecesSummary } from '../lib/captured-pieces'
-import { CHESS_PIECE_NAMES } from '../lib/chess-pieces'
+import { useChessPieceName } from '../lib/use-chess-piece-name'
 import { PromotionDialog } from './promotion-dialog'
 
 const FILES = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']
@@ -29,6 +30,8 @@ export function ChessBoard({
   onMove,
   lastMove,
 }: ChessBoardProps) {
+  const { t } = useLingui()
+  const pieceName = useChessPieceName()
   const [dragFrom, setDragFrom] = useState<string | null>(null)
   const [legalTargets, setLegalTargets] = useState<Set<string>>(new Set())
   const [promotionPending, setPromotionPending] = useState<{
@@ -249,7 +252,9 @@ export function ChessBoard({
           }}
           tabIndex={0}
           role="application"
-          aria-label={`Chess board${isActive && isMyTurn ? '. Your turn' : ''}. Use arrow keys to navigate, Enter or Space to select.`}
+          aria-label={isActive && isMyTurn
+            ? t`Chess board. Your turn. Use arrow keys to navigate, Enter or Space to select.`
+            : t`Chess board. Use arrow keys to navigate, Enter or Space to select.`}
           onFocus={() => {
             setIsBoardFocused(true)
             if (!keyboardPos) setKeyboardPos(myColor === 'w' ? [6, 4] : [1, 4])
@@ -294,7 +299,7 @@ export function ChessBoard({
               >
                 {hasPiece && (
                   <ChessPieceIcon
-                    aria-label={`${piece.color === 'w' ? "White" : "Black"} ${CHESS_PIECE_NAMES[piece.type]}`}
+                    aria-label={piece.color === 'w' ? t`White ${pieceName(piece.type)}` : t`Black ${pieceName(piece.type)}`}
                     color={piece.color}
                     className={cn(
                       'chess-piece select-none size-[80%] sm:size-[74%] lg:size-[72%]',

@@ -6,6 +6,29 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: @lingui/cli\n"
 "Language: te\n"
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Plural-Forms: \n"
+
+#. placeholder {0}: pieces .map(({ type, count }) => getPieceLabel(type, count)) .join(', ')
+#: src/features/chess/components/captured-pieces-strip.tsx:83
+msgid "{colorName} captured {0}"
+msgstr "{colorName} {0}ను పట్టుకుంది"
+
+#: src/features/chess/components/captured-pieces-strip.tsx:82
+msgid "{colorName} has not captured any pieces"
+msgstr "{colorName} ఏ పావులను పట్టుకోలేదు"
+
+#: src/features/chess/components/captured-pieces-strip.tsx:33
+msgid "{count} pieces"
+msgstr "{count} పావులు"
+
+#: src/features/chess/components/draw-offer-banner.tsx:25
+msgid "{opponentName} offered a draw"
+msgstr "{opponentName} డ్రా అందించారు"
 
 #: src/features/chess/index.tsx:80
 msgid "{opponentName} resigned — you win!"
@@ -14,6 +37,14 @@ msgstr "{opponentName} రాజీనామా చేశారు — మీర
 #: src/features/chess/index.tsx:88
 msgid "{opponentName}'s move"
 msgstr "{opponentName} యొక్క మూవ్"
+
+#: src/features/chess/components/chat-message-list.tsx:207
+msgid "{subject} played <0>{san}</0>"
+msgstr "{subject} <0>{san}</0> ఆడారు"
+
+#: src/features/chess/components/chat-message-list.tsx:205
+msgid "{subject} took <0>{san}</0>"
+msgstr "{subject} <0>{san}</0>ను తీసుకున్నారు"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:52
 msgid "12 hours"
@@ -26,6 +57,10 @@ msgstr "24 గంటలు"
 #: ../../../lib/web/src/lib/preference-utils.ts:61
 msgid "Absolute (date and time)"
 msgstr "సంపూర్ణ (తేదీ మరియు సమయం)"
+
+#: src/features/chess/components/draw-offer-banner.tsx:41
+msgid "Accept"
+msgstr "అంగీకరించండి"
 
 #: ../../../lib/web/src/features/errors/forbidden.tsx:12
 msgid "Access Forbidden"
@@ -51,7 +86,7 @@ msgstr "ఖాతా రకం"
 msgid "Account verified"
 msgstr "ఖాతా ధృవీకరించబడింది"
 
-#: src/components/layout/chess-layout.tsx:105
+#: src/components/layout/chess-layout.tsx:106
 msgid "Active Games"
 msgstr "క్రియాశీల ఆటలు"
 
@@ -116,6 +151,10 @@ msgstr "అన్నీ"
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "మీరు లాగ్ అవుట్ చేయాలనుకుంటున్నారా? మీ ఖాతాను యాక్సెస్ చేయడానికి మీరు మళ్లీ లాగిన్ చేయవలసి ఉంటుంది."
 
+#: src/features/chess/index.tsx:544
+msgid "Are you sure you want to resign? {opponentName} will win the game."
+msgstr "మీరు నిజంగా రాజీనామా చేయాలనుకుంటున్నారా? {opponentName} ఆటను గెలుస్తాడు."
+
 #: ../../../lib/web/src/components/data-table/column-header.tsx:56
 msgid "Asc"
 msgstr "ఆరోహణ"
@@ -130,9 +169,21 @@ msgstr "వెనుకకు"
 msgid "Back to Home"
 msgstr "హోమ్‌కి తిరిగి"
 
+#: src/features/chess/lib/use-chess-piece-name.ts:15
+msgid "bishop"
+msgstr "శకటం"
+
+#: src/features/chess/components/captured-pieces-strip.tsx:15
 #: src/features/chess/index.tsx:391
 msgid "Black"
 msgstr "నలుపు"
+
+#. placeholder {0}: pieceName(piece.type)
+#. placeholder {0}: pieceName(type)
+#: src/features/chess/components/chess-board.tsx:302
+#: src/features/chess/components/chess-piece-icon.tsx:304
+msgid "Black {0}"
+msgstr "నలుపు {0}"
 
 #: ../../../lib/web/src/components/post-tags.tsx:160
 msgid "Boost interest"
@@ -146,7 +197,7 @@ msgstr "ఆసక్తిని పెంచండి"
 #: ../../../lib/web/src/features/accounts/account-add.tsx:185
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:86
 #: src/features/chess/components/new-game.tsx:140
-#: src/features/chess/components/promotion-dialog.tsx:97
+#: src/features/chess/components/promotion-dialog.tsx:99
 msgid "Cancel"
 msgstr "రద్దు చేయండి"
 
@@ -184,6 +235,14 @@ msgstr "చెక్‌మేట్ — మీరు గెలిచారు!"
 #: src/features/chess/index.tsx:331
 msgid "Chess"
 msgstr "చెస్"
+
+#: src/features/chess/components/chess-board.tsx:257
+msgid "Chess board. Use arrow keys to navigate, Enter or Space to select."
+msgstr "చెస్ బోర్డ్. నావిగేట్ చేయడానికి బాణం కీలు, ఎంచుకోవడానికి Enter లేదా Space ఉపయోగించండి."
+
+#: src/features/chess/components/chess-board.tsx:256
+msgid "Chess board. Your turn. Use arrow keys to navigate, Enter or Space to select."
+msgstr "చెస్ బోర్డ్. మీ వంతు. నావిగేట్ చేయడానికి బాణం కీలు, ఎంచుకోవడానికి Enter లేదా Space ఉపయోగించండి."
 
 #: src/features/chess/components/game-empty-state.tsx:18
 msgid "Choose a game from the sidebar or start a new one."
@@ -264,7 +323,7 @@ msgstr "త్వరలో వస్తోంది!"
 msgid "Compact"
 msgstr "కాంపాక్ట్"
 
-#: src/components/layout/chess-layout.tsx:116
+#: src/components/layout/chess-layout.tsx:117
 msgid "Completed"
 msgstr "పూర్తయింది"
 
@@ -305,6 +364,10 @@ msgstr "డార్క్"
 #: ../../../lib/web/src/components/profile-dropdown.tsx:120
 msgid "Dark mode"
 msgstr "డార్క్ మోడ్"
+
+#: src/features/chess/components/draw-offer-banner.tsx:34
+msgid "Decline"
+msgstr "తిరస్కరించండి"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:297
 msgid "Default"
@@ -352,6 +415,10 @@ msgstr "డౌన్‌లోడ్"
 #: src/features/chess/index.tsx:75
 msgid "Draw"
 msgstr "డ్రా"
+
+#: src/features/chess/index.tsx:450
+msgid "Draw offered — waiting for {opponentName}"
+msgstr "డ్రా అందించబడింది — {opponentName} కోసం వేచి ఉంది"
 
 #: ../../../lib/web/src/components/layout/app-sidebar.tsx:35
 msgid "Expand sidebar"
@@ -487,6 +554,14 @@ msgstr "ఆసక్తులు"
 msgid "Invalid verification code"
 msgstr "చెల్లని ధృవీకరణ కోడ్"
 
+#: src/features/chess/lib/use-chess-piece-name.ts:12
+msgid "king"
+msgstr "రాజు"
+
+#: src/features/chess/lib/use-chess-piece-name.ts:16
+msgid "knight"
+msgstr "గుర్రం"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:273
 msgid "Layout"
 msgstr "లేఅవుట్"
@@ -563,7 +638,7 @@ msgstr "సోమవారం"
 msgid "New"
 msgstr "కొత్తది"
 
-#: src/components/layout/chess-layout.tsx:130
+#: src/components/layout/chess-layout.tsx:131
 #: src/features/chess/components/game-empty-state.tsx:22
 #: src/features/chess/components/game-empty-state.tsx:38
 msgid "New game"
@@ -605,7 +680,7 @@ msgstr "గ్రూపులు అందుబాటులో లేవు"
 msgid "No matches."
 msgstr "మ్యాచ్‌లు లేవు."
 
-#: src/features/chess/components/chat-message-list.tsx:152
+#: src/features/chess/components/chat-message-list.tsx:153
 msgid "No messages yet"
 msgstr "ఇంకా సందేశాలు లేవు"
 
@@ -686,6 +761,10 @@ msgstr "ఇతర"
 msgid "Owner"
 msgstr "ఓనర్"
 
+#: src/features/chess/lib/use-chess-piece-name.ts:17
+msgid "pawn"
+msgstr "బంటు"
+
 #: src/features/chess/components/new-game.tsx:62
 msgid "Please select a friend"
 msgstr "స్నేహితుడిని ఎంచుకోండి"
@@ -698,6 +777,19 @@ msgstr "మునుపటి చిత్రం"
 #: ../../../lib/web/src/components/profile-dropdown.tsx:111
 msgid "Profile"
 msgstr "ప్రొఫైల్"
+
+#. placeholder {0}: pieceName(piece)
+#: src/features/chess/components/promotion-dialog.tsx:74
+msgid "Promote to {0}"
+msgstr "{0} గా ప్రమోట్ చేయండి"
+
+#: src/features/chess/components/promotion-dialog.tsx:69
+msgid "Promote to:"
+msgstr "ప్రమోట్ చేయండి:"
+
+#: src/features/chess/lib/use-chess-piece-name.ts:13
+msgid "queen"
+msgstr "మంత్రి"
 
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:216
 #: ../../../lib/web/src/components/search-entity-page.tsx:191
@@ -751,6 +843,7 @@ msgid "Reset all settings to default values"
 msgstr "అన్ని సెట్టింగ్‌లను డిఫాల్ట్ విలువలకు రీసెట్ చేయండి"
 
 #: src/features/chess/index.tsx:425
+#: src/features/chess/index.tsx:552
 msgid "Resign"
 msgstr "రిజైన్"
 
@@ -765,6 +858,10 @@ msgstr "రిజైన్ చేస్తోంది..."
 #: ../../../lib/web/src/components/config-drawer.tsx:348
 msgid "Right to Left"
 msgstr "కుడి నుండి ఎడమకు"
+
+#: src/features/chess/lib/use-chess-piece-name.ts:14
+msgid "rook"
+msgstr "ఏనుగు"
 
 #: ../../../lib/web/src/components/data-table/pagination.tsx:60
 msgid "Rows per page"
@@ -1007,6 +1104,10 @@ msgstr "అనుమతి లేని యాక్సెస్"
 msgid "United States"
 msgstr "యునైటెడ్ స్టేట్స్"
 
+#: src/hooks/useGameWebsocket.ts:162
+msgid "Unknown"
+msgstr "తెలియదు"
+
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:131
 msgid "Unverified"
 msgstr "ధృవీకరించబడలేదు"
@@ -1059,9 +1160,21 @@ msgstr "వెబ్‌సైట్ మెయింటెనెన్స్‌�
 msgid "Wednesday"
 msgstr "బుధవారం"
 
+#: src/features/chess/components/captured-pieces-strip.tsx:15
 #: src/features/chess/index.tsx:391
 msgid "White"
 msgstr "తెలుపు"
+
+#. placeholder {0}: pieceName(piece.type)
+#. placeholder {0}: pieceName(type)
+#: src/features/chess/components/chess-board.tsx:302
+#: src/features/chess/components/chess-piece-icon.tsx:304
+msgid "White {0}"
+msgstr "తెలుపు {0}"
+
+#: src/features/chess/components/chat-message-list.tsx:197
+msgid "You"
+msgstr "మీరు"
 
 #: src/features/chess/index.tsx:81
 msgid "You resigned — {opponentName} wins"

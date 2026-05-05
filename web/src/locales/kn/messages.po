@@ -6,6 +6,29 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: @lingui/cli\n"
 "Language: kn\n"
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Plural-Forms: \n"
+
+#. placeholder {0}: pieces .map(({ type, count }) => getPieceLabel(type, count)) .join(', ')
+#: src/features/chess/components/captured-pieces-strip.tsx:83
+msgid "{colorName} captured {0}"
+msgstr "{colorName} {0} ಅನ್ನು ಹಿಡಿಯಿತು"
+
+#: src/features/chess/components/captured-pieces-strip.tsx:82
+msgid "{colorName} has not captured any pieces"
+msgstr "{colorName} ಯಾವುದೇ ಕಾಯಿಗಳನ್ನು ಹಿಡಿದಿಲ್ಲ"
+
+#: src/features/chess/components/captured-pieces-strip.tsx:33
+msgid "{count} pieces"
+msgstr "{count} ಕಾಯಿಗಳು"
+
+#: src/features/chess/components/draw-offer-banner.tsx:25
+msgid "{opponentName} offered a draw"
+msgstr "{opponentName} ಡ್ರಾ ನೀಡಿದರು"
 
 #: src/features/chess/index.tsx:80
 msgid "{opponentName} resigned — you win!"
@@ -14,6 +37,14 @@ msgstr "{opponentName} ರಾಜೀನಾಮೆ ನೀಡಿದ್ದಾರೆ �
 #: src/features/chess/index.tsx:88
 msgid "{opponentName}'s move"
 msgstr "{opponentName} ರ ಚಲನೆ"
+
+#: src/features/chess/components/chat-message-list.tsx:207
+msgid "{subject} played <0>{san}</0>"
+msgstr "{subject} <0>{san}</0> ಆಡಿದರು"
+
+#: src/features/chess/components/chat-message-list.tsx:205
+msgid "{subject} took <0>{san}</0>"
+msgstr "{subject} <0>{san}</0> ಅನ್ನು ತೆಗೆದುಕೊಂಡರು"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:52
 msgid "12 hours"
@@ -26,6 +57,10 @@ msgstr "24 ಗಂಟೆಗಳು"
 #: ../../../lib/web/src/lib/preference-utils.ts:61
 msgid "Absolute (date and time)"
 msgstr "ಸಂಪೂರ್ಣ (ದಿನಾಂಕ ಮತ್ತು ಸಮಯ)"
+
+#: src/features/chess/components/draw-offer-banner.tsx:41
+msgid "Accept"
+msgstr "ಸ್ವೀಕರಿಸಿ"
 
 #: ../../../lib/web/src/features/errors/forbidden.tsx:12
 msgid "Access Forbidden"
@@ -51,7 +86,7 @@ msgstr "ಖಾತೆಯ ಪ್ರಕಾರ"
 msgid "Account verified"
 msgstr "ಖಾತೆ ಪರಿಶೀಲಿಸಲಾಗಿದೆ"
 
-#: src/components/layout/chess-layout.tsx:105
+#: src/components/layout/chess-layout.tsx:106
 msgid "Active Games"
 msgstr "ಸಕ್ರಿಯ ಆಟಗಳು"
 
@@ -116,6 +151,10 @@ msgstr "ಎಲ್ಲಾ"
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "ಲಾಗ್ ಔಟ್ ಮಾಡಲು ನೀವು ಖಚಿತವಾಗಿದ್ದೀರಾ? ನಿಮ್ಮ ಖಾತೆಯನ್ನು ಪ್ರವೇಶಿಸಲು ನೀವು ಮತ್ತೆ ಲಾಗ್ ಇನ್ ಮಾಡಬೇಕಾಗುತ್ತದೆ."
 
+#: src/features/chess/index.tsx:544
+msgid "Are you sure you want to resign? {opponentName} will win the game."
+msgstr "ನೀವು ಶರಣಾಗಲು ಖಚಿತವಾಗಿದ್ದೀರಾ? {opponentName} ಆಟವನ್ನು ಗೆಲ್ಲುತ್ತಾರೆ."
+
 #: ../../../lib/web/src/components/data-table/column-header.tsx:56
 msgid "Asc"
 msgstr "ಆರೋಹಣ"
@@ -130,9 +169,21 @@ msgstr "ಹಿಂದೆ"
 msgid "Back to Home"
 msgstr "ಮುಖಪುಟಕ್ಕೆ ಹಿಂದೆ"
 
+#: src/features/chess/lib/use-chess-piece-name.ts:15
+msgid "bishop"
+msgstr "ಒಂಟೆ"
+
+#: src/features/chess/components/captured-pieces-strip.tsx:15
 #: src/features/chess/index.tsx:391
 msgid "Black"
 msgstr "ಕಪ್ಪು"
+
+#. placeholder {0}: pieceName(piece.type)
+#. placeholder {0}: pieceName(type)
+#: src/features/chess/components/chess-board.tsx:302
+#: src/features/chess/components/chess-piece-icon.tsx:304
+msgid "Black {0}"
+msgstr "ಕಪ್ಪು {0}"
 
 #: ../../../lib/web/src/components/post-tags.tsx:160
 msgid "Boost interest"
@@ -146,7 +197,7 @@ msgstr "ಆಸಕ್ತಿಯನ್ನು ಹೆಚ್ಚಿಸಿ"
 #: ../../../lib/web/src/features/accounts/account-add.tsx:185
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:86
 #: src/features/chess/components/new-game.tsx:140
-#: src/features/chess/components/promotion-dialog.tsx:97
+#: src/features/chess/components/promotion-dialog.tsx:99
 msgid "Cancel"
 msgstr "ರದ್ದುಮಾಡಿ"
 
@@ -184,6 +235,14 @@ msgstr "ಚೆಕ್‌ಮೇಟ್ — ನೀವು ಗೆದ್ದಿದ್ದ
 #: src/features/chess/index.tsx:331
 msgid "Chess"
 msgstr "ಚೆಸ್"
+
+#: src/features/chess/components/chess-board.tsx:257
+msgid "Chess board. Use arrow keys to navigate, Enter or Space to select."
+msgstr "ಚೆಸ್ ಬೋರ್ಡ್. ನ್ಯಾವಿಗೇಟ್ ಮಾಡಲು ಬಾಣದ ಕೀಲಿಗಳನ್ನು, ಆಯ್ಕೆ ಮಾಡಲು Enter ಅಥವಾ Space ಬಳಸಿ."
+
+#: src/features/chess/components/chess-board.tsx:256
+msgid "Chess board. Your turn. Use arrow keys to navigate, Enter or Space to select."
+msgstr "ಚೆಸ್ ಬೋರ್ಡ್. ನಿಮ್ಮ ಸರದಿ. ನ್ಯಾವಿಗೇಟ್ ಮಾಡಲು ಬಾಣದ ಕೀಲಿಗಳನ್ನು, ಆಯ್ಕೆ ಮಾಡಲು Enter ಅಥವಾ Space ಬಳಸಿ."
 
 #: src/features/chess/components/game-empty-state.tsx:18
 msgid "Choose a game from the sidebar or start a new one."
@@ -264,7 +323,7 @@ msgstr "ಶೀಘ್ರದಲ್ಲೇ ಬರಲಿದೆ!"
 msgid "Compact"
 msgstr "ಕಾಂಪ್ಯಾಕ್ಟ್"
 
-#: src/components/layout/chess-layout.tsx:116
+#: src/components/layout/chess-layout.tsx:117
 msgid "Completed"
 msgstr "ಪೂರ್ಣಗೊಂಡಿದೆ"
 
@@ -305,6 +364,10 @@ msgstr "ಡಾರ್ಕ್"
 #: ../../../lib/web/src/components/profile-dropdown.tsx:120
 msgid "Dark mode"
 msgstr "ಡಾರ್ಕ್ ಮೋಡ್"
+
+#: src/features/chess/components/draw-offer-banner.tsx:34
+msgid "Decline"
+msgstr "ತಿರಸ್ಕರಿಸಿ"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:297
 msgid "Default"
@@ -352,6 +415,10 @@ msgstr "ಡೌನ್‌ಲೋಡ್"
 #: src/features/chess/index.tsx:75
 msgid "Draw"
 msgstr "ಡ್ರಾ"
+
+#: src/features/chess/index.tsx:450
+msgid "Draw offered — waiting for {opponentName}"
+msgstr "ಡ್ರಾ ನೀಡಲಾಗಿದೆ — {opponentName} ಗಾಗಿ ಕಾಯಲಾಗುತ್ತಿದೆ"
 
 #: ../../../lib/web/src/components/layout/app-sidebar.tsx:35
 msgid "Expand sidebar"
@@ -487,6 +554,14 @@ msgstr "ಆಸಕ್ತಿಗಳು"
 msgid "Invalid verification code"
 msgstr "ಅಮಾನ್ಯ ಪರಿಶೀಲನಾ ಕೋಡ್"
 
+#: src/features/chess/lib/use-chess-piece-name.ts:12
+msgid "king"
+msgstr "ರಾಜ"
+
+#: src/features/chess/lib/use-chess-piece-name.ts:16
+msgid "knight"
+msgstr "ಕುದುರೆ"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:273
 msgid "Layout"
 msgstr "ಲೇಔಟ್"
@@ -563,7 +638,7 @@ msgstr "ಸೋಮವಾರ"
 msgid "New"
 msgstr "ಹೊಸ"
 
-#: src/components/layout/chess-layout.tsx:130
+#: src/components/layout/chess-layout.tsx:131
 #: src/features/chess/components/game-empty-state.tsx:22
 #: src/features/chess/components/game-empty-state.tsx:38
 msgid "New game"
@@ -605,7 +680,7 @@ msgstr "ಯಾವುದೇ ಗ್ರೂಪ್‌ಗಳು ಲಭ್ಯವಿಲ�
 msgid "No matches."
 msgstr "ಯಾವುದೇ ಹೊಂದಾಣಿಕೆಗಳಿಲ್ಲ."
 
-#: src/features/chess/components/chat-message-list.tsx:152
+#: src/features/chess/components/chat-message-list.tsx:153
 msgid "No messages yet"
 msgstr "ಇನ್ನೂ ಯಾವುದೇ ಸಂದೇಶಗಳಿಲ್ಲ"
 
@@ -686,6 +761,10 @@ msgstr "ಇತರ"
 msgid "Owner"
 msgstr "ಮಾಲೀಕ"
 
+#: src/features/chess/lib/use-chess-piece-name.ts:17
+msgid "pawn"
+msgstr "ಪದಾತಿ"
+
 #: src/features/chess/components/new-game.tsx:62
 msgid "Please select a friend"
 msgstr "ದಯವಿಟ್ಟು ಸ್ನೇಹಿತರನ್ನು ಆಯ್ಕೆಮಾಡಿ"
@@ -698,6 +777,19 @@ msgstr "ಹಿಂದಿನ ಚಿತ್ರ"
 #: ../../../lib/web/src/components/profile-dropdown.tsx:111
 msgid "Profile"
 msgstr "ಪ್ರೊಫೈಲ್"
+
+#. placeholder {0}: pieceName(piece)
+#: src/features/chess/components/promotion-dialog.tsx:74
+msgid "Promote to {0}"
+msgstr "{0} ಗೆ ಬಡ್ತಿ ನೀಡಿ"
+
+#: src/features/chess/components/promotion-dialog.tsx:69
+msgid "Promote to:"
+msgstr "ಬಡ್ತಿ ನೀಡಿ:"
+
+#: src/features/chess/lib/use-chess-piece-name.ts:13
+msgid "queen"
+msgstr "ಮಂತ್ರಿ"
 
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:216
 #: ../../../lib/web/src/components/search-entity-page.tsx:191
@@ -751,6 +843,7 @@ msgid "Reset all settings to default values"
 msgstr "ಎಲ್ಲಾ ಸೆಟ್ಟಿಂಗ್‌ಗಳನ್ನು ಡೀಫಾಲ್ಟ್ ಮೌಲ್ಯಗಳಿಗೆ ರೀಸೆಟ್ ಮಾಡಿ"
 
 #: src/features/chess/index.tsx:425
+#: src/features/chess/index.tsx:552
 msgid "Resign"
 msgstr "ರಾಜೀನಾಮೆ"
 
@@ -765,6 +858,10 @@ msgstr "ರಾಜೀನಾಮೆ ನೀಡಲಾಗುತ್ತಿದೆ..."
 #: ../../../lib/web/src/components/config-drawer.tsx:348
 msgid "Right to Left"
 msgstr "ಬಲದಿಂದ ಎಡಕ್ಕೆ"
+
+#: src/features/chess/lib/use-chess-piece-name.ts:14
+msgid "rook"
+msgstr "ಆನೆ"
 
 #: ../../../lib/web/src/components/data-table/pagination.tsx:60
 msgid "Rows per page"
@@ -1007,6 +1104,10 @@ msgstr "ಅನುಮತಿಸದ ಪ್ರವೇಶ"
 msgid "United States"
 msgstr "ಯುನೈಟೆಡ್ ಸ್ಟೇಟ್ಸ್"
 
+#: src/hooks/useGameWebsocket.ts:162
+msgid "Unknown"
+msgstr "ಅಜ್ಞಾತ"
+
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:131
 msgid "Unverified"
 msgstr "ಪರಿಶೀಲಿಸದ"
@@ -1059,9 +1160,21 @@ msgstr "ವೆಬ್‌ಸೈಟ್ ನಿರ್ವಹಣೆಯಲ್ಲಿದ�
 msgid "Wednesday"
 msgstr "ಬುಧವಾರ"
 
+#: src/features/chess/components/captured-pieces-strip.tsx:15
 #: src/features/chess/index.tsx:391
 msgid "White"
 msgstr "ಬಿಳಿ"
+
+#. placeholder {0}: pieceName(piece.type)
+#. placeholder {0}: pieceName(type)
+#: src/features/chess/components/chess-board.tsx:302
+#: src/features/chess/components/chess-piece-icon.tsx:304
+msgid "White {0}"
+msgstr "ಬಿಳಿ {0}"
+
+#: src/features/chess/components/chat-message-list.tsx:197
+msgid "You"
+msgstr "ನೀವು"
 
 #: src/features/chess/index.tsx:81
 msgid "You resigned — {opponentName} wins"

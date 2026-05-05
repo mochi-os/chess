@@ -29,6 +29,7 @@ function opponentIcon(opponentId: string): React.FC {
         />
       )
     }
+    // eslint-disable-next-line lingui/no-unlocalized-strings -- React displayName is dev-tooling only, not user-facing
     Icon.displayName = `OpponentIcon(${opponentId})`
     opponentIconCache.set(opponentId, Icon)
   }

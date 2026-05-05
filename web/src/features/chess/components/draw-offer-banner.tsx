@@ -1,3 +1,4 @@
+import { Trans, useLingui } from '@lingui/react/macro'
 import { Button } from '@mochi/web'
 import { Loader2 } from 'lucide-react'
 
@@ -16,11 +17,12 @@ export function DrawOfferBanner({
   isAccepting,
   isDeclining,
 }: DrawOfferBannerProps) {
+  const { t } = useLingui()
   const disabled = isAccepting || isDeclining
   return (
     <div className="flex items-center justify-between gap-2 rounded-md border bg-muted/50 px-3 py-2">
       <span className="text-sm font-medium">
-        {opponentName} offered a draw
+        <Trans>{opponentName} offered a draw</Trans>
       </span>
       <div className="flex items-center gap-2">
         <Button
@@ -29,14 +31,14 @@ export function DrawOfferBanner({
           onClick={onDecline}
           disabled={disabled}
         >
-          {isDeclining ? <Loader2 className="size-4 animate-spin" /> : 'Decline'}
+          {isDeclining ? <Loader2 className="size-4 animate-spin" /> : t`Decline`}
         </Button>
         <Button
           size="sm"
           onClick={onAccept}
           disabled={disabled}
         >
-          {isAccepting ? <Loader2 className="size-4 animate-spin" /> : 'Accept'}
+          {isAccepting ? <Loader2 className="size-4 animate-spin" /> : t`Accept`}
         </Button>
       </div>
     </div>

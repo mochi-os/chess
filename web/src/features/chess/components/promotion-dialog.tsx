@@ -1,8 +1,8 @@
 import { useEffect, useId, useRef } from 'react'
-import { Trans } from '@lingui/react/macro'
+import { Trans, useLingui } from '@lingui/react/macro'
 import { cn } from '@mochi/web'
 import { ChessPieceIcon } from './chess-piece-icon'
-import { CHESS_PIECE_NAMES } from '../lib/chess-pieces'
+import { useChessPieceName } from '../lib/use-chess-piece-name'
 
 const PROMOTION_PIECES = ['q', 'r', 'b', 'n'] as const
 const PROMOTION_SHORTCUTS = ['1', '2', '3', '4'] as const
@@ -18,6 +18,8 @@ export function PromotionDialog({
   onSelect,
   onCancel,
 }: PromotionDialogProps) {
+  const { t } = useLingui()
+  const pieceName = useChessPieceName()
   const titleId = useId()
   const queenButtonRef = useRef<HTMLButtonElement | null>(null)
   const previousFocusRef = useRef<HTMLElement | null>(null)
@@ -64,12 +66,12 @@ export function PromotionDialog({
         role="dialog"
       >
         <h2 className="text-sm font-medium text-center mb-2" id={titleId}>
-          Promote to:
+          <Trans>Promote to:</Trans>
         </h2>
         <div className="flex gap-1">
           {PROMOTION_PIECES.map((piece, index) => (
             <button
-              aria-label={`Promote to ${CHESS_PIECE_NAMES[piece]}`}
+              aria-label={t`Promote to ${pieceName(piece)}`}
               aria-keyshortcuts={PROMOTION_SHORTCUTS[index]}
               key={piece}
               ref={piece === 'q' ? queenButtonRef : undefined}

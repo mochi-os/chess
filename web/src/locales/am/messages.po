@@ -13,6 +13,23 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
+#. placeholder {0}: pieces .map(({ type, count }) => getPieceLabel(type, count)) .join(', ')
+#: src/features/chess/components/captured-pieces-strip.tsx:83
+msgid "{colorName} captured {0}"
+msgstr "{colorName} {0}ን ያዘ"
+
+#: src/features/chess/components/captured-pieces-strip.tsx:82
+msgid "{colorName} has not captured any pieces"
+msgstr "{colorName} ምንም ቁራጭ አልያዘም"
+
+#: src/features/chess/components/captured-pieces-strip.tsx:33
+msgid "{count} pieces"
+msgstr "{count} ቁራጮች"
+
+#: src/features/chess/components/draw-offer-banner.tsx:25
+msgid "{opponentName} offered a draw"
+msgstr "{opponentName} አቻ አቅርቧል"
+
 #: src/features/chess/index.tsx:80
 msgid "{opponentName} resigned — you win!"
 msgstr "{opponentName} ተወ — እርስዎ አሸንፈዋል!"
@@ -20,6 +37,14 @@ msgstr "{opponentName} ተወ — እርስዎ አሸንፈዋል!"
 #: src/features/chess/index.tsx:88
 msgid "{opponentName}'s move"
 msgstr "የ{opponentName} እንቅስቃሴ"
+
+#: src/features/chess/components/chat-message-list.tsx:207
+msgid "{subject} played <0>{san}</0>"
+msgstr "{subject} <0>{san}</0> ተጫውቷል"
+
+#: src/features/chess/components/chat-message-list.tsx:205
+msgid "{subject} took <0>{san}</0>"
+msgstr "{subject} <0>{san}</0>ን ያዘ"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:52
 msgid "12 hours"
@@ -32,6 +57,10 @@ msgstr "24 ሰዓት"
 #: ../../../lib/web/src/lib/preference-utils.ts:61
 msgid "Absolute (date and time)"
 msgstr "ፍጹም (ቀንና ሰዓት)"
+
+#: src/features/chess/components/draw-offer-banner.tsx:41
+msgid "Accept"
+msgstr "ተቀበል"
 
 #: ../../../lib/web/src/features/errors/forbidden.tsx:12
 msgid "Access Forbidden"
@@ -57,7 +86,7 @@ msgstr "የመለያ ዓይነት"
 msgid "Account verified"
 msgstr "መለያ ተረጋግጧል"
 
-#: src/components/layout/chess-layout.tsx:105
+#: src/components/layout/chess-layout.tsx:106
 msgid "Active Games"
 msgstr "ንቁ ጨዋታዎች"
 
@@ -122,6 +151,10 @@ msgstr "ሁሉም"
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "መውጣት እንደምትፈልግ እርግጠኛ ነህ? መለያህን ለመድረስ ዳግም መግባት ያስፈልግሃል።"
 
+#: src/features/chess/index.tsx:544
+msgid "Are you sure you want to resign? {opponentName} will win the game."
+msgstr "በእርግጥ መልቀቅ ይፈልጋሉ? {opponentName} ጨዋታውን ያሸንፋል።"
+
 #: ../../../lib/web/src/components/data-table/column-header.tsx:56
 msgid "Asc"
 msgstr "ዕርገት"
@@ -136,9 +169,21 @@ msgstr "ተመለስ"
 msgid "Back to Home"
 msgstr "ወደ መነሻ ተመለስ"
 
+#: src/features/chess/lib/use-chess-piece-name.ts:15
+msgid "bishop"
+msgstr "ፈረሰኛ"
+
+#: src/features/chess/components/captured-pieces-strip.tsx:15
 #: src/features/chess/index.tsx:391
 msgid "Black"
 msgstr "ጥቁር"
+
+#. placeholder {0}: pieceName(piece.type)
+#. placeholder {0}: pieceName(type)
+#: src/features/chess/components/chess-board.tsx:302
+#: src/features/chess/components/chess-piece-icon.tsx:304
+msgid "Black {0}"
+msgstr "ጥቁር {0}"
 
 #: ../../../lib/web/src/components/post-tags.tsx:160
 msgid "Boost interest"
@@ -152,7 +197,7 @@ msgstr "ፍላጎትን አሳድግ"
 #: ../../../lib/web/src/features/accounts/account-add.tsx:185
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:86
 #: src/features/chess/components/new-game.tsx:140
-#: src/features/chess/components/promotion-dialog.tsx:97
+#: src/features/chess/components/promotion-dialog.tsx:99
 msgid "Cancel"
 msgstr "ይቅር"
 
@@ -190,6 +235,14 @@ msgstr "ቼክሜት — አሸንፈሃል!"
 #: src/features/chess/index.tsx:331
 msgid "Chess"
 msgstr "ቼዝ"
+
+#: src/features/chess/components/chess-board.tsx:257
+msgid "Chess board. Use arrow keys to navigate, Enter or Space to select."
+msgstr "የቼዝ ሰሌዳ። ለመጓዝ የቀስት ቁልፎችን፣ ለመምረጥ Enter ወይም Space ይጠቀሙ።"
+
+#: src/features/chess/components/chess-board.tsx:256
+msgid "Chess board. Your turn. Use arrow keys to navigate, Enter or Space to select."
+msgstr "የቼዝ ሰሌዳ። የእርስዎ ተራ። ለመጓዝ የቀስት ቁልፎችን፣ ለመምረጥ Enter ወይም Space ይጠቀሙ።"
 
 #: src/features/chess/components/game-empty-state.tsx:18
 msgid "Choose a game from the sidebar or start a new one."
@@ -270,7 +323,7 @@ msgstr "በቅርብ ይመጣል!"
 msgid "Compact"
 msgstr "የታመቀ"
 
-#: src/components/layout/chess-layout.tsx:116
+#: src/components/layout/chess-layout.tsx:117
 msgid "Completed"
 msgstr "ተጠናቅቋል"
 
@@ -311,6 +364,10 @@ msgstr "ጨለማ"
 #: ../../../lib/web/src/components/profile-dropdown.tsx:120
 msgid "Dark mode"
 msgstr "ጨለማ ሁነታ"
+
+#: src/features/chess/components/draw-offer-banner.tsx:34
+msgid "Decline"
+msgstr "አትቀበል"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:297
 msgid "Default"
@@ -358,6 +415,10 @@ msgstr "አውርድ"
 #: src/features/chess/index.tsx:75
 msgid "Draw"
 msgstr "አቻ"
+
+#: src/features/chess/index.tsx:450
+msgid "Draw offered — waiting for {opponentName}"
+msgstr "አቻ ቀርቧል — {opponentName}ን በመጠበቅ ላይ"
 
 #: ../../../lib/web/src/components/layout/app-sidebar.tsx:35
 msgid "Expand sidebar"
@@ -493,6 +554,14 @@ msgstr "ፍላጎቶች"
 msgid "Invalid verification code"
 msgstr "ልክ ያልሆነ የማረጋገጫ ኮድ"
 
+#: src/features/chess/lib/use-chess-piece-name.ts:12
+msgid "king"
+msgstr "ንጉስ"
+
+#: src/features/chess/lib/use-chess-piece-name.ts:16
+msgid "knight"
+msgstr "ፈረስ"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:273
 msgid "Layout"
 msgstr "አቀማመጥ"
@@ -569,7 +638,7 @@ msgstr "ሰኞ"
 msgid "New"
 msgstr "አዲስ"
 
-#: src/components/layout/chess-layout.tsx:130
+#: src/components/layout/chess-layout.tsx:131
 #: src/features/chess/components/game-empty-state.tsx:22
 #: src/features/chess/components/game-empty-state.tsx:38
 msgid "New game"
@@ -611,7 +680,7 @@ msgstr "ምንም ቡድኖች የሉም"
 msgid "No matches."
 msgstr "ምንም ግጥሚያዎች የሉም።"
 
-#: src/features/chess/components/chat-message-list.tsx:152
+#: src/features/chess/components/chat-message-list.tsx:153
 msgid "No messages yet"
 msgstr "እስካሁን መልዕክቶች የሉም"
 
@@ -692,6 +761,10 @@ msgstr "ሌላ"
 msgid "Owner"
 msgstr "ባለቤት"
 
+#: src/features/chess/lib/use-chess-piece-name.ts:17
+msgid "pawn"
+msgstr "ወታደር"
+
 #: src/features/chess/components/new-game.tsx:62
 msgid "Please select a friend"
 msgstr "እባክዎን ጓደኛ ይምረጡ"
@@ -704,6 +777,19 @@ msgstr "ቀዳሚ ምስል"
 #: ../../../lib/web/src/components/profile-dropdown.tsx:111
 msgid "Profile"
 msgstr "መገለጫ"
+
+#. placeholder {0}: pieceName(piece)
+#: src/features/chess/components/promotion-dialog.tsx:74
+msgid "Promote to {0}"
+msgstr "ወደ {0} ከፍ ያድርጉ"
+
+#: src/features/chess/components/promotion-dialog.tsx:69
+msgid "Promote to:"
+msgstr "ከፍ ያድርጉ:"
+
+#: src/features/chess/lib/use-chess-piece-name.ts:13
+msgid "queen"
+msgstr "ንግስት"
 
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:216
 #: ../../../lib/web/src/components/search-entity-page.tsx:191
@@ -757,6 +843,7 @@ msgid "Reset all settings to default values"
 msgstr "ሁሉንም ቅንብሮች ወደ ነባሪ እሴቶች ዳግም አስጀምር"
 
 #: src/features/chess/index.tsx:425
+#: src/features/chess/index.tsx:552
 msgid "Resign"
 msgstr "ለቀቅ"
 
@@ -771,6 +858,10 @@ msgstr "በመልቀቅ ላይ..."
 #: ../../../lib/web/src/components/config-drawer.tsx:348
 msgid "Right to Left"
 msgstr "ከቀኝ ወደ ግራ"
+
+#: src/features/chess/lib/use-chess-piece-name.ts:14
+msgid "rook"
+msgstr "ግንብ"
 
 #: ../../../lib/web/src/components/data-table/pagination.tsx:60
 msgid "Rows per page"
@@ -1013,6 +1104,10 @@ msgstr "ያልተፈቀደ መዳረሻ"
 msgid "United States"
 msgstr "ዩናይትድ ስቴትስ"
 
+#: src/hooks/useGameWebsocket.ts:162
+msgid "Unknown"
+msgstr "ያልታወቀ"
+
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:131
 msgid "Unverified"
 msgstr "ያልተረጋገጠ"
@@ -1065,9 +1160,21 @@ msgstr "ድረ-ገጽ በጥገና ላይ ነው!"
 msgid "Wednesday"
 msgstr "ረቡዕ"
 
+#: src/features/chess/components/captured-pieces-strip.tsx:15
 #: src/features/chess/index.tsx:391
 msgid "White"
 msgstr "ነጭ"
+
+#. placeholder {0}: pieceName(piece.type)
+#. placeholder {0}: pieceName(type)
+#: src/features/chess/components/chess-board.tsx:302
+#: src/features/chess/components/chess-piece-icon.tsx:304
+msgid "White {0}"
+msgstr "ነጭ {0}"
+
+#: src/features/chess/components/chat-message-list.tsx:197
+msgid "You"
+msgstr "እርስዎ"
 
 #: src/features/chess/index.tsx:81
 msgid "You resigned — {opponentName} wins"
