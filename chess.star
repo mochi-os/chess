@@ -520,7 +520,7 @@ def event_new(e):
 	if result == 0:
 		return
 
-	notify("activity", "", "Chess game", identity_name + " started a game", "/chess/" + game_id)
+	notify("activity", "", mochi.app.label("notifications.title.game"), mochi.app.label("notifications.body.started_game", name=identity_name), "/chess/" + game_id)
 
 # Received a move event
 def event_move(e):
@@ -574,7 +574,7 @@ def event_move(e):
 		"fen": fen, "pgn": pgn, "status": status, "winner": winner or "",
 		"draw_offer": ""
 	})
-	notify("activity", "", "Chess move", name + " played " + san, "/chess/" + game["id"])
+	notify("activity", "", mochi.app.label("notifications.title.move"), mochi.app.label("notifications.body.played_move", name=name, move=san), "/chess/" + game["id"])
 
 # Received a chat message event
 def event_message(e):
@@ -605,7 +605,7 @@ def event_message(e):
 	mochi.db.execute("insert or ignore into messages ( id, game, member, name, body, type, created ) values ( ?, ?, ?, ?, ?, 'message', ? )", id, game["id"], sender, name, body, created)
 
 	mochi.websocket.write(game["key"], {"type": "message", "created": created, "member": sender, "name": name, "body": body})
-	notify("message", "", "Chess message", name + ": " + body, "/chess/" + game["id"])
+	notify("message", "", mochi.app.label("notifications.title.message"), name + ": " + body, "/chess/" + game["id"])
 
 # Received a resign event
 def event_resign(e):
@@ -618,7 +618,7 @@ def event_resign(e):
 		return
 
 	winner = e.content("winner")
-	body = e.content("body") or "Opponent resigned"
+	body = e.content("body") or mochi.app.label("notifications.body.opponent_resigned")
 
 	# Derive winner: the other player (not the one who resigned)
 	players = [game["identity"], game["opponent"]]
@@ -632,7 +632,7 @@ def event_resign(e):
 	mochi.db.execute("insert into messages ( id, game, member, name, body, type, created ) values ( ?, ?, ?, ?, ?, 'system', ? )", id, game["id"], sender, "", body, now)
 
 	mochi.websocket.write(game["key"], {"type": "system", "event": "resign", "created": now, "body": body, "winner": winner or ""})
-	notify("activity", "", "Chess game", body, "/chess/" + game["id"])
+	notify("activity", "", mochi.app.label("notifications.title.game"), body, "/chess/" + game["id"])
 
 # Received a draw offer event
 def event_draw_offer(e):
@@ -644,7 +644,7 @@ def event_draw_offer(e):
 	if sender != game["identity"] and sender != game["opponent"]:
 		return
 
-	body = e.content("body") or "Draw offered"
+	body = e.content("body") or mochi.app.label("notifications.body.draw_offered")
 
 	now = mochi.time.now()
 	mochi.db.execute("update games set draw_offer=?, updated=? where id=?", sender, now, game["id"])
@@ -653,7 +653,7 @@ def event_draw_offer(e):
 	mochi.db.execute("insert into messages ( id, game, member, name, body, type, created ) values ( ?, ?, ?, ?, ?, 'system', ? )", id, game["id"], sender, "", body, now)
 
 	mochi.websocket.write(game["key"], {"type": "system", "event": "draw_offer", "created": now, "body": body, "draw_offer": sender})
-	notify("activity", "", "Chess", body, "/chess/" + game["id"])
+	notify("activity", "", mochi.app.label("notifications.title.chess"), body, "/chess/" + game["id"])
 
 # Received a draw accept event
 def event_draw_accept(e):
@@ -665,7 +665,7 @@ def event_draw_accept(e):
 	if sender != game["identity"] and sender != game["opponent"]:
 		return
 
-	body = e.content("body") or "Draw agreed"
+	body = e.content("body") or mochi.app.label("notifications.body.draw_agreed")
 
 	now = mochi.time.now()
 	mochi.db.execute("update games set status='draw', draw_offer=null, updated=? where id=?", now, game["id"])
@@ -674,7 +674,7 @@ def event_draw_accept(e):
 	mochi.db.execute("insert into messages ( id, game, member, name, body, type, created ) values ( ?, ?, ?, ?, ?, 'system', ? )", id, game["id"], sender, "", body, now)
 
 	mochi.websocket.write(game["key"], {"type": "system", "event": "draw_accept", "created": now, "body": body})
-	notify("activity", "", "Chess", body, "/chess/" + game["id"])
+	notify("activity", "", mochi.app.label("notifications.title.chess"), body, "/chess/" + game["id"])
 
 # Received a draw decline event
 def event_draw_decline(e):
@@ -686,7 +686,7 @@ def event_draw_decline(e):
 	if sender != game["identity"] and sender != game["opponent"]:
 		return
 
-	body = e.content("body") or "Draw declined"
+	body = e.content("body") or mochi.app.label("notifications.body.draw_declined")
 
 	now = mochi.time.now()
 	mochi.db.execute("update games set draw_offer=null, updated=? where id=?", now, game["id"])
@@ -695,5 +695,5 @@ def event_draw_decline(e):
 	mochi.db.execute("insert into messages ( id, game, member, name, body, type, created ) values ( ?, ?, ?, ?, ?, 'system', ? )", id, game["id"], sender, "", body, now)
 
 	mochi.websocket.write(game["key"], {"type": "system", "event": "draw_decline", "created": now, "body": body, "draw_offer": ""})
-	notify("activity", "", "Chess", body, "/chess/" + game["id"])
+	notify("activity", "", mochi.app.label("notifications.title.chess"), body, "/chess/" + game["id"])
 
