@@ -14,15 +14,35 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. placeholder {0}: pieces .map(({ type, count }) => getPieceLabel(type, count)) .join(', ')
-#: src/features/chess/components/captured-pieces-strip.tsx:83
+#: src/features/chess/components/captured-pieces-strip.tsx:84
 msgid "{colorName} captured {0}"
 msgstr "{colorName} het {0} geslaan"
 
-#: src/features/chess/components/captured-pieces-strip.tsx:82
+#: src/features/chess/components/captured-pieces-strip.tsx:83
 msgid "{colorName} has not captured any pieces"
 msgstr "{colorName} het nog geen stukke geslaan nie"
 
-#: src/features/chess/components/captured-pieces-strip.tsx:33
+#: src/features/chess/components/captured-pieces-strip.tsx:28
+msgid "{count, plural, one {# bishop} other {# bishops}}"
+msgstr ""
+
+#: src/features/chess/components/captured-pieces-strip.tsx:26
+msgid "{count, plural, one {# knight} other {# knights}}"
+msgstr ""
+
+#: src/features/chess/components/captured-pieces-strip.tsx:24
+msgid "{count, plural, one {# pawn} other {# pawns}}"
+msgstr ""
+
+#: src/features/chess/components/captured-pieces-strip.tsx:32
+msgid "{count, plural, one {# queen} other {# queens}}"
+msgstr ""
+
+#: src/features/chess/components/captured-pieces-strip.tsx:30
+msgid "{count, plural, one {# rook} other {# rooks}}"
+msgstr ""
+
+#: src/features/chess/components/captured-pieces-strip.tsx:34
 msgid "{count} pieces"
 msgstr "{count} stukke"
 
@@ -46,15 +66,15 @@ msgstr "{subject} het <0>{san}</0> gespeel"
 msgid "{subject} took <0>{san}</0>"
 msgstr "{subject} het <0>{san}</0> geslaan"
 
-#: ../../../lib/web/src/lib/preference-utils.ts:52
+#: ../../../lib/web/src/lib/preference-utils.ts:39
 msgid "12 hours"
 msgstr "12 uur"
 
-#: ../../../lib/web/src/lib/preference-utils.ts:51
+#: ../../../lib/web/src/lib/preference-utils.ts:38
 msgid "24 hours"
 msgstr "24 uur"
 
-#: ../../../lib/web/src/lib/preference-utils.ts:61
+#: ../../../lib/web/src/lib/preference-utils.ts:48
 msgid "Absolute (date and time)"
 msgstr "Absoluut (datum en tyd)"
 
@@ -173,7 +193,7 @@ msgstr "Terug na tuis"
 msgid "bishop"
 msgstr "loper"
 
-#: src/features/chess/components/captured-pieces-strip.tsx:15
+#: src/features/chess/components/captured-pieces-strip.tsx:16
 #: src/features/chess/index.tsx:391
 msgid "Black"
 msgstr "Swart"
@@ -392,11 +412,11 @@ msgstr "Besonderhede-paneel"
 #: ../../../lib/web/src/components/language-picker.tsx:145
 #: ../../../lib/web/src/components/timezone-select.tsx:43
 #: ../../../lib/web/src/components/timezone-select.tsx:80
-#: ../../../lib/web/src/lib/preference-utils.ts:38
-#: ../../../lib/web/src/lib/preference-utils.ts:50
-#: ../../../lib/web/src/lib/preference-utils.ts:68
-#: ../../../lib/web/src/lib/preference-utils.ts:82
-#: ../../../lib/web/src/lib/preference-utils.ts:94
+#: ../../../lib/web/src/lib/preference-utils.ts:25
+#: ../../../lib/web/src/lib/preference-utils.ts:37
+#: ../../../lib/web/src/lib/preference-utils.ts:55
+#: ../../../lib/web/src/lib/preference-utils.ts:69
+#: ../../../lib/web/src/lib/preference-utils.ts:81
 msgid "Detect from web browser"
 msgstr "Spoor op vanaf webblaaier"
 
@@ -477,7 +497,7 @@ msgstr "Kon nie kategorie opdateer nie"
 msgid "Floating"
 msgstr "Drywend"
 
-#: ../../../lib/web/src/lib/preference-utils.ts:73
+#: ../../../lib/web/src/lib/preference-utils.ts:60
 msgid "Friday"
 msgstr "Vrydag"
 
@@ -538,7 +558,7 @@ msgstr "Tuis"
 msgid "Hot"
 msgstr "Warm"
 
-#: ../../../lib/web/src/lib/preference-utils.ts:96
+#: ../../../lib/web/src/lib/preference-utils.ts:83
 msgid "Imperial"
 msgstr "Imperiaal"
 
@@ -609,10 +629,6 @@ msgstr "Suksesvol afgemeld"
 msgid "Logging out…"
 msgstr "Besig om af te meld…"
 
-#: ../../../lib/web/src/lib/preference-utils.ts:25
-msgid "Luma (Default)"
-msgstr "Luma (verstek)"
-
 #: ../../../lib/web/src/components/layout/notification-menu.tsx:86
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:220
 msgid "Mark all as read"
@@ -626,11 +642,11 @@ msgstr "Kieslys"
 msgid "Message"
 msgstr "Boodskap"
 
-#: ../../../lib/web/src/lib/preference-utils.ts:95
+#: ../../../lib/web/src/lib/preference-utils.ts:82
 msgid "Metric"
 msgstr "Metriek"
 
-#: ../../../lib/web/src/lib/preference-utils.ts:69
+#: ../../../lib/web/src/lib/preference-utils.ts:56
 msgid "Monday"
 msgstr "Maandag"
 
@@ -804,11 +820,11 @@ msgstr "Besig om na aanmelding te herlei."
 msgid "Reduce interest"
 msgstr "Verminder belangstelling"
 
-#: ../../../lib/web/src/lib/preference-utils.ts:60
+#: ../../../lib/web/src/lib/preference-utils.ts:47
 msgid "Relative (5m, 3h, 2d)"
 msgstr "Relatief (5m, 3h, 2d)"
 
-#: ../../../lib/web/src/lib/preference-utils.ts:59
+#: ../../../lib/web/src/lib/preference-utils.ts:46
 msgid "Relative within 24 hours, else absolute"
 msgstr "Relatief binne 24 uur, andersins absoluut"
 
@@ -867,7 +883,7 @@ msgstr "toring"
 msgid "Rows per page"
 msgstr "Rye per bladsy"
 
-#: ../../../lib/web/src/lib/preference-utils.ts:74
+#: ../../../lib/web/src/lib/preference-utils.ts:61
 msgid "Saturday"
 msgstr "Saterdag"
 
@@ -1001,7 +1017,7 @@ msgstr "Bly egter ingeskakel!"
 msgid "Subject"
 msgstr "Onderwerp"
 
-#: ../../../lib/web/src/lib/preference-utils.ts:75
+#: ../../../lib/web/src/lib/preference-utils.ts:62
 msgid "Sunday"
 msgstr "Sondag"
 
@@ -1026,7 +1042,7 @@ msgstr "Tema"
 msgid "Theme Settings"
 msgstr "Tema-instellings"
 
-#: ../../../lib/web/src/lib/preference-utils.ts:72
+#: ../../../lib/web/src/lib/preference-utils.ts:59
 msgid "Thursday"
 msgstr "Donderdag"
 
@@ -1067,7 +1083,7 @@ msgstr "Probeer jou soekterme aanpas"
 msgid "Try again"
 msgstr "Probeer weer"
 
-#: ../../../lib/web/src/lib/preference-utils.ts:70
+#: ../../../lib/web/src/lib/preference-utils.ts:57
 msgid "Tuesday"
 msgstr "Dinsdag"
 
@@ -1100,7 +1116,7 @@ msgstr "Nie toegewys nie"
 msgid "Unauthorized Access"
 msgstr "Nie-toegelate toegang"
 
-#: ../../../lib/web/src/lib/preference-utils.ts:97
+#: ../../../lib/web/src/lib/preference-utils.ts:84
 msgid "United States"
 msgstr "Verenigde State"
 
@@ -1156,11 +1172,11 @@ msgstr "Ons sal binnekort weer aanlyn wees."
 msgid "Website is under maintenance!"
 msgstr "Webwerf is onder instandhouding!"
 
-#: ../../../lib/web/src/lib/preference-utils.ts:71
+#: ../../../lib/web/src/lib/preference-utils.ts:58
 msgid "Wednesday"
 msgstr "Woensdag"
 
-#: src/features/chess/components/captured-pieces-strip.tsx:15
+#: src/features/chess/components/captured-pieces-strip.tsx:16
 #: src/features/chess/index.tsx:391
 msgid "White"
 msgstr "Wit"
