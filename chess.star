@@ -646,8 +646,21 @@ def event_draw_offer(e):
 
 	body = e.content("body") or mochi.app.label("notifications.body.draw_offered")
 
+	# LWW gate: both players can offer draw concurrently from different
+	# hosts. Use the sender's `created` (the action's local now at offer
+	# time) and only apply if it's strictly newer than what we've
+	# recorded. The action always includes `created`; fall back to local
+	# now for safety against malformed events.
 	now = mochi.time.now()
-	mochi.db.execute("update games set draw_offer=?, updated=? where id=?", sender, now, game["id"])
+	incoming = str(e.content("created", "0"))
+	if mochi.text.valid(incoming, "integer"):
+		incoming = int(incoming)
+	else:
+		incoming = now
+	if game["updated"] and incoming <= game["updated"]:
+		return
+
+	mochi.db.execute("update games set draw_offer=?, updated=? where id=?", sender, incoming, game["id"])
 
 	id = mochi.uid()
 	mochi.db.execute("insert into messages ( id, game, member, name, body, type, created ) values ( ?, ?, ?, ?, ?, 'system', ? )", id, game["id"], sender, "", body, now)
