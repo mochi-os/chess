@@ -40,7 +40,7 @@ export function ChatMessageList({
   currentUserIdentity,
 }: ChatMessageListProps) {
   const { t } = useLingui()
-  const { formatDate, formatTime } = useFormat()
+  const { formatDate, formatDateTime } = useFormat()
   const scrollContainerRef = useRef<HTMLDivElement | null>(null)
   const messagesEndRef = useRef<HTMLDivElement | null>(null)
   const prevScrollHeightRef = useRef<number>(0)
@@ -224,7 +224,7 @@ export function ChatMessageList({
                 <div className="flex items-end gap-1.5">
                   {isSent && (
                     <span className="text-muted-foreground/70 opacity-0 transition-opacity group-hover:opacity-100 text-[9px]">
-                      {formatTime(new Date(message.created * 1000))}
+                      {formatDateTime(new Date(message.created * 1000))}
                     </span>
                   )}
 
@@ -241,7 +241,7 @@ export function ChatMessageList({
 
                   {!isSent && (
                     <span className="text-muted-foreground/70 opacity-0 transition-opacity group-hover:opacity-100 text-[9px]">
-                      {formatTime(new Date(message.created * 1000))}
+                      {formatDateTime(new Date(message.created * 1000))}
                     </span>
                   )}
                 </div>
