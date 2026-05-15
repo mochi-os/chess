@@ -1,5 +1,5 @@
 import { useEffect, useMemo, type ReactNode } from 'react'
-import { isInShell } from '@mochi/web'
+import { useAuthStore } from '@mochi/web'
 import { gamesApi } from '@/api/games'
 import {
   ChatWebsocketManager,
@@ -8,12 +8,13 @@ import {
 import { WebsocketContext } from '@/context/websocket-context'
 
 const buildManager = (): ChatWebsocketManager | null => {
-  if (typeof window === 'undefined' || isInShell()) {
+  if (typeof window === 'undefined') {
     return null
   }
 
   const baseOptions: ChatWebsocketManagerOptions = {
     baseUrl: import.meta.env.VITE_WEBSOCKET_URL ?? window.location.origin,
+    getToken: () => useAuthStore.getState().token,
     getChatKey: async (gameId: string) => {
       try {
         const response = await gamesApi.detail(gameId)
