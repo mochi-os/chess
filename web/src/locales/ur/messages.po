@@ -284,7 +284,7 @@ msgstr "بائیں سے دائیں یا دائیں سے بائیں سائٹ کی
 msgid "Choose between system preference, light mode, or dark mode"
 msgstr "سسٹم کی ترجیح، light موڈ، یا dark موڈ میں سے منتخب کریں"
 
-#: ../../../lib/web/src/components/language-picker.tsx:167
+#: ../../../lib/web/src/components/language-picker.tsx:174
 msgid "Choose language"
 msgstr "زبان منتخب کریں"
 
@@ -335,11 +335,16 @@ msgstr "تلاش بند کریں"
 msgid "Collapse sidebar"
 msgstr "سائڈ بار سکیڑیں"
 
+#: ../../../lib/web/src/lib/preference-utils.ts:93
+msgid "Comfortable"
+msgstr "آرام دہ"
+
 #: ../../../lib/web/src/components/coming-soon.tsx:9
 msgid "Coming Soon!"
 msgstr "جلد آرہا ہے!"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:302
+#: ../../../lib/web/src/lib/preference-utils.ts:92
 msgid "Compact"
 msgstr "کمپیکٹ"
 
@@ -367,6 +372,10 @@ msgstr "جاری رکھیں"
 #: ../../../lib/web/src/components/ui/copy-button.tsx:60
 msgid "Copy"
 msgstr "کاپی کریں"
+
+#: ../../../lib/web/src/features/document/document-page.tsx:81
+msgid "Could not load this document. Please try again later."
+msgstr "یہ دستاویز لوڈ نہیں ہو سکی۔ براہ کرم بعد میں دوبارہ کوشش کریں۔"
 
 #: src/features/chess/components/new-game.tsx:148
 msgid "Creating..."
@@ -409,7 +418,7 @@ msgstr "گھٹتا ہوا"
 msgid "Details Panel"
 msgstr "تفصیلات کا پینل"
 
-#: ../../../lib/web/src/components/language-picker.tsx:145
+#: ../../../lib/web/src/components/language-picker.tsx:152
 #: ../../../lib/web/src/components/timezone-select.tsx:43
 #: ../../../lib/web/src/components/timezone-select.tsx:80
 #: ../../../lib/web/src/lib/preference-utils.ts:25
@@ -440,9 +449,17 @@ msgstr "برابر"
 msgid "Draw offered — waiting for {opponentName}"
 msgstr "ڈرا کی پیشکش کی گئی — {opponentName} کا انتظار ہے"
 
+#: ../../../lib/web/src/lib/preference-utils.ts:134
+msgid "Dyslexia-friendly"
+msgstr "ڈسلیکسیا کے لیے موزوں"
+
 #: ../../../lib/web/src/components/layout/app-sidebar.tsx:35
 msgid "Expand sidebar"
 msgstr "سائڈبار پھیلائیں"
+
+#: ../../../lib/web/src/lib/preference-utils.ts:124
+msgid "Extra large"
+msgstr "بہت بڑا"
 
 #: src/features/chess/index.tsx:200
 msgid "Failed to accept draw"
@@ -504,6 +521,14 @@ msgstr "جمعہ"
 #: ../../../lib/web/src/components/travelling-picker.tsx:149
 msgid "From"
 msgstr "سے"
+
+#: ../../../lib/web/src/lib/preference-utils.ts:91
+#: ../../../lib/web/src/lib/preference-utils.ts:101
+#: ../../../lib/web/src/lib/preference-utils.ts:112
+#: ../../../lib/web/src/lib/preference-utils.ts:120
+#: ../../../lib/web/src/lib/preference-utils.ts:131
+msgid "From theme"
+msgstr "تھیم سے"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:307
 msgid "Full layout"
@@ -582,6 +607,11 @@ msgstr "بادشاہ"
 msgid "knight"
 msgstr "گھوڑا"
 
+#: ../../../lib/web/src/lib/preference-utils.ts:105
+#: ../../../lib/web/src/lib/preference-utils.ts:123
+msgid "Large"
+msgstr "بڑا"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:273
 msgid "Layout"
 msgstr "لے آؤٹ"
@@ -604,6 +634,7 @@ msgid "Load more"
 msgstr "مزید لوڈ کریں"
 
 #: ../../../lib/web/src/components/ui/load-more.tsx:32
+#: ../../../lib/web/src/features/document/document-page.tsx:87
 msgid "Loading…"
 msgstr "لوڈ ہو رہا ہے…"
 
@@ -633,6 +664,10 @@ msgstr "لاگ آؤٹ ہو رہا ہے…"
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:220
 msgid "Mark all as read"
 msgstr "سب کو پڑھا ہوا نشان زد کریں"
+
+#: ../../../lib/web/src/lib/preference-utils.ts:104
+msgid "Medium"
+msgstr "درمیانہ"
 
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx:152
 msgid "Menu"
@@ -692,10 +727,6 @@ msgstr "ابھی تک کوئی گیمز نہیں"
 msgid "No groups available"
 msgstr "کوئی گروپ دستیاب نہیں"
 
-#: ../../../lib/web/src/components/language-picker.tsx:177
-msgid "No matches."
-msgstr "کوئی matches نہیں۔"
-
 #: src/features/chess/components/chat-message-list.tsx:153
 msgid "No messages yet"
 msgstr "ابھی تک کوئی پیغامات نہیں"
@@ -726,8 +757,14 @@ msgid "No users found"
 msgstr "کوئی صارفین نہیں ملے"
 
 #: ../../../lib/web/src/components/person-picker.tsx:349
+#: ../../../lib/web/src/lib/preference-utils.ts:102
+#: ../../../lib/web/src/lib/preference-utils.ts:113
 msgid "None"
 msgstr "کوئی نہیں"
+
+#: ../../../lib/web/src/lib/preference-utils.ts:122
+msgid "Normal"
+msgstr "عام"
 
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:132
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:146
@@ -788,6 +825,11 @@ msgstr "براہ کرم ایک دوست منتخب کریں"
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:332
 msgid "Previous image"
 msgstr "پچھلی تصویر"
+
+#: ../../../lib/web/src/components/server-documents-footer.tsx:24
+#: ../../../lib/web/src/features/document/document-page.tsx:41
+msgid "Privacy"
+msgstr "پرائیویسی"
 
 #: ../../../lib/web/src/components/layout/nav-user.tsx:134
 #: ../../../lib/web/src/components/profile-dropdown.tsx:111
@@ -911,10 +953,6 @@ msgstr "صارفین تلاش کریں"
 msgid "Search..."
 msgstr "تلاش کریں..."
 
-#: ../../../lib/web/src/components/language-picker.tsx:175
-msgid "Search…"
-msgstr "تلاش کریں…"
-
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:174
 #: ../../../lib/web/src/components/search-entity-page.tsx:149
 #: ../../../lib/web/src/features/access/access-dialog.tsx:199
@@ -965,6 +1003,15 @@ msgstr "تھیم کی ترجیح منتخب کریں"
 msgid "Send message"
 msgstr "پیغام بھیجیں"
 
+#: ../../../lib/web/src/lib/preference-utils.ts:133
+msgid "Serif"
+msgstr "سیرف"
+
+#: ../../../lib/web/src/components/server-documents-footer.tsx:16
+#: ../../../lib/web/src/features/document/document-page.tsx:37
+msgid "Server rules"
+msgstr "سرور قواعد"
+
 #: ../../../lib/web/src/lib/api-client.ts:224
 msgid "Session expired"
 msgstr "سیشن کی میعاد ختم ہو گئی"
@@ -997,6 +1044,15 @@ msgstr "سائن آؤٹ کیا جا رہا ہے..."
 msgid "Skip to Main"
 msgstr "مین پر جائیں"
 
+#: ../../../lib/web/src/lib/preference-utils.ts:103
+#: ../../../lib/web/src/lib/preference-utils.ts:121
+msgid "Small"
+msgstr "چھوٹا"
+
+#: ../../../lib/web/src/lib/preference-utils.ts:94
+msgid "Spacious"
+msgstr "کشادہ"
+
 #: src/features/chess/index.tsx:71
 msgid "Stalemate — draw"
 msgstr "تعطل — ڈرا"
@@ -1023,6 +1079,7 @@ msgstr "اتوار"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:195
 #: ../../../lib/web/src/lib/preference-utils.ts:18
+#: ../../../lib/web/src/lib/preference-utils.ts:132
 msgid "System"
 msgstr "سسٹم"
 
@@ -1033,6 +1090,11 @@ msgstr "ٹیگ"
 #: ../../../lib/web/src/components/layout/team-switcher.tsx:60
 msgid "Teams/Apps"
 msgstr "ٹیمز/ایپس"
+
+#: ../../../lib/web/src/components/server-documents-footer.tsx:20
+#: ../../../lib/web/src/features/document/document-page.tsx:39
+msgid "Terms and conditions"
+msgstr "شرائط و ضوابط"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:181
 msgid "Theme"

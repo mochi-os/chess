@@ -284,7 +284,7 @@ msgstr "වමේ-සිට-දකුණට හෝ දකුණේ-සිට-ව
 msgid "Choose between system preference, light mode, or dark mode"
 msgstr "පද්ධති අභිරුචිය, ආලෝකමත් ආකාරය හෝ අඳුරු ආකාරය අතර තෝරන්න"
 
-#: ../../../lib/web/src/components/language-picker.tsx:167
+#: ../../../lib/web/src/components/language-picker.tsx:174
 msgid "Choose language"
 msgstr "භාෂාව තෝරන්න"
 
@@ -335,11 +335,16 @@ msgstr "සෙවුම වසන්න"
 msgid "Collapse sidebar"
 msgstr "පැති තීරුව හකුළන්න"
 
+#: ../../../lib/web/src/lib/preference-utils.ts:93
+msgid "Comfortable"
+msgstr "සුවිශේෂ"
+
 #: ../../../lib/web/src/components/coming-soon.tsx:9
 msgid "Coming Soon!"
 msgstr "ළඟදීම පැමිණේ!"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:302
+#: ../../../lib/web/src/lib/preference-utils.ts:92
 msgid "Compact"
 msgstr "සංයුක්ත"
 
@@ -367,6 +372,10 @@ msgstr "ඉදිරියට"
 #: ../../../lib/web/src/components/ui/copy-button.tsx:60
 msgid "Copy"
 msgstr "පිටපත් කරන්න"
+
+#: ../../../lib/web/src/features/document/document-page.tsx:81
+msgid "Could not load this document. Please try again later."
+msgstr "මෙම ලේඛනය පූරණය කළ නොහැකි විය. කරුණාකර පසුව නැවත උත්සාහ කරන්න."
 
 #: src/features/chess/components/new-game.tsx:148
 msgid "Creating..."
@@ -409,7 +418,7 @@ msgstr "අවරෝහණ"
 msgid "Details Panel"
 msgstr "විස්තර Panel"
 
-#: ../../../lib/web/src/components/language-picker.tsx:145
+#: ../../../lib/web/src/components/language-picker.tsx:152
 #: ../../../lib/web/src/components/timezone-select.tsx:43
 #: ../../../lib/web/src/components/timezone-select.tsx:80
 #: ../../../lib/web/src/lib/preference-utils.ts:25
@@ -440,9 +449,17 @@ msgstr "සමතය"
 msgid "Draw offered — waiting for {opponentName}"
 msgstr "ජය පරාජය ඉදිරිපත් කළා — {opponentName} සඳහා බලා සිටිමින්"
 
+#: ../../../lib/web/src/lib/preference-utils.ts:134
+msgid "Dyslexia-friendly"
+msgstr "ඩිස්ලෙක්සියාවට මිත්‍ර"
+
 #: ../../../lib/web/src/components/layout/app-sidebar.tsx:35
 msgid "Expand sidebar"
 msgstr "පැති තීරුව ප්‍රසාරණය කරන්න"
+
+#: ../../../lib/web/src/lib/preference-utils.ts:124
+msgid "Extra large"
+msgstr "අමතර විශාල"
 
 #: src/features/chess/index.tsx:200
 msgid "Failed to accept draw"
@@ -504,6 +521,14 @@ msgstr "සිකුරාදා"
 #: ../../../lib/web/src/components/travelling-picker.tsx:149
 msgid "From"
 msgstr "සිට"
+
+#: ../../../lib/web/src/lib/preference-utils.ts:91
+#: ../../../lib/web/src/lib/preference-utils.ts:101
+#: ../../../lib/web/src/lib/preference-utils.ts:112
+#: ../../../lib/web/src/lib/preference-utils.ts:120
+#: ../../../lib/web/src/lib/preference-utils.ts:131
+msgid "From theme"
+msgstr "තේමාවෙන්"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:307
 msgid "Full layout"
@@ -582,6 +607,11 @@ msgstr "රජ"
 msgid "knight"
 msgstr "අශ්වයා"
 
+#: ../../../lib/web/src/lib/preference-utils.ts:105
+#: ../../../lib/web/src/lib/preference-utils.ts:123
+msgid "Large"
+msgstr "විශාල"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:273
 msgid "Layout"
 msgstr "පිරිසැලසුම"
@@ -604,6 +634,7 @@ msgid "Load more"
 msgstr "තවත් පූරණය කරන්න"
 
 #: ../../../lib/web/src/components/ui/load-more.tsx:32
+#: ../../../lib/web/src/features/document/document-page.tsx:87
 msgid "Loading…"
 msgstr "පූරණය වෙමින්…"
 
@@ -633,6 +664,10 @@ msgstr "ඉවත් වෙමින්…"
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:220
 msgid "Mark all as read"
 msgstr "සියල්ල කියවූ ලෙස සලකුණු කරන්න"
+
+#: ../../../lib/web/src/lib/preference-utils.ts:104
+msgid "Medium"
+msgstr "මධ්‍යම"
 
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx:152
 msgid "Menu"
@@ -692,10 +727,6 @@ msgstr "තවම ක්‍රීඩා නැත"
 msgid "No groups available"
 msgstr "කණ්ඩායම් ලබා ගත නොහැක"
 
-#: ../../../lib/web/src/components/language-picker.tsx:177
-msgid "No matches."
-msgstr "ගැලපීම් නැත."
-
 #: src/features/chess/components/chat-message-list.tsx:153
 msgid "No messages yet"
 msgstr "තවම පණිවිඩ නැත"
@@ -726,8 +757,14 @@ msgid "No users found"
 msgstr "පරිශීලකයන් හමු නොවීය"
 
 #: ../../../lib/web/src/components/person-picker.tsx:349
+#: ../../../lib/web/src/lib/preference-utils.ts:102
+#: ../../../lib/web/src/lib/preference-utils.ts:113
 msgid "None"
 msgstr "කිසිවක් නැත"
+
+#: ../../../lib/web/src/lib/preference-utils.ts:122
+msgid "Normal"
+msgstr "සාමාන්‍ය"
 
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:132
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:146
@@ -788,6 +825,11 @@ msgstr "කරුණාකර මිතුරෙකු තෝරන්න"
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:332
 msgid "Previous image"
 msgstr "පෙර පින්තූරය"
+
+#: ../../../lib/web/src/components/server-documents-footer.tsx:24
+#: ../../../lib/web/src/features/document/document-page.tsx:41
+msgid "Privacy"
+msgstr "පෞද්ගලිකත්වය"
 
 #: ../../../lib/web/src/components/layout/nav-user.tsx:134
 #: ../../../lib/web/src/components/profile-dropdown.tsx:111
@@ -911,10 +953,6 @@ msgstr "පරිශීලකයින් සොයන්න"
 msgid "Search..."
 msgstr "සොයන්න..."
 
-#: ../../../lib/web/src/components/language-picker.tsx:175
-msgid "Search…"
-msgstr "සොයන්න…"
-
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:174
 #: ../../../lib/web/src/components/search-entity-page.tsx:149
 #: ../../../lib/web/src/features/access/access-dialog.tsx:199
@@ -965,6 +1003,15 @@ msgstr "theme මනාපය තෝරන්න"
 msgid "Send message"
 msgstr "පණිවිඩය යවන්න"
 
+#: ../../../lib/web/src/lib/preference-utils.ts:133
+msgid "Serif"
+msgstr "සෙරිෆ්"
+
+#: ../../../lib/web/src/components/server-documents-footer.tsx:16
+#: ../../../lib/web/src/features/document/document-page.tsx:37
+msgid "Server rules"
+msgstr "සේවාදායක නීති"
+
 #: ../../../lib/web/src/lib/api-client.ts:224
 msgid "Session expired"
 msgstr "සැසිය කල් ඉකුත් විය"
@@ -997,6 +1044,15 @@ msgstr "පිට වෙමින්..."
 msgid "Skip to Main"
 msgstr "ප්‍රධාන කොටසට මඟ හරින්න"
 
+#: ../../../lib/web/src/lib/preference-utils.ts:103
+#: ../../../lib/web/src/lib/preference-utils.ts:121
+msgid "Small"
+msgstr "කුඩා"
+
+#: ../../../lib/web/src/lib/preference-utils.ts:94
+msgid "Spacious"
+msgstr "විශාල"
+
 #: src/features/chess/index.tsx:71
 msgid "Stalemate — draw"
 msgstr "අවලංගු තත්ත්වය — සම ජයක්"
@@ -1023,6 +1079,7 @@ msgstr "ඉරිදා"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:195
 #: ../../../lib/web/src/lib/preference-utils.ts:18
+#: ../../../lib/web/src/lib/preference-utils.ts:132
 msgid "System"
 msgstr "පද්ධතිය"
 
@@ -1033,6 +1090,11 @@ msgstr "ටැගය"
 #: ../../../lib/web/src/components/layout/team-switcher.tsx:60
 msgid "Teams/Apps"
 msgstr "කණ්ඩායම්/යෙදුම්"
+
+#: ../../../lib/web/src/components/server-documents-footer.tsx:20
+#: ../../../lib/web/src/features/document/document-page.tsx:39
+msgid "Terms and conditions"
+msgstr "නියම සහ කොන්දේසි"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:181
 msgid "Theme"
