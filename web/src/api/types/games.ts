@@ -29,6 +29,10 @@ export interface GameMessage {
   name: string
   body: string
   type: MessageType
+  // For type 'system': the event kind (resign / draw_offer / draw_accept /
+  // draw_decline), used to render localised text. Empty/absent on legacy
+  // rows, which fall back to `body`.
+  event?: string
   created: number
 }
 

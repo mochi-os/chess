@@ -46,23 +46,27 @@ msgstr "{count, plural, one {# rook} few {# rooks} many {# rooks} other {# rooks
 msgid "{count} pieces"
 msgstr "{count} biċċiet"
 
+#: src/features/chess/components/chat-message-list.tsx:190
+msgid "{name} declined the draw"
+msgstr "{name} ċaħad id-draw"
+
+#: src/features/chess/components/chat-message-list.tsx:186
+msgid "{name} offered a draw"
+msgstr "{name} offra draw"
+
+#: src/features/chess/components/chat-message-list.tsx:184
+msgid "{name} resigned"
+msgstr "{name} irriżenja"
+
 #: src/features/chess/components/draw-offer-banner.tsx:25
 msgid "{opponentName} offered a draw"
 msgstr "{opponentName} offra draw"
 
-#: src/features/chess/index.tsx:80
-msgid "{opponentName} resigned — you win!"
-msgstr "{opponentName} irriżenja — int rebaħt!"
-
-#: src/features/chess/index.tsx:88
-msgid "{opponentName}'s move"
-msgstr "Il-mossa ta' {opponentName}"
-
-#: src/features/chess/components/chat-message-list.tsx:207
+#: src/features/chess/components/chat-message-list.tsx:219
 msgid "{subject} played <0>{san}</0>"
 msgstr "{subject} laqat <0>{san}</0>"
 
-#: src/features/chess/components/chat-message-list.tsx:205
+#: src/features/chess/components/chat-message-list.tsx:217
 msgid "{subject} took <0>{san}</0>"
 msgstr "{subject} ħa <0>{san}</0>"
 
@@ -175,13 +179,17 @@ msgstr "Kollha"
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "Żgur trid toħroġ? Trid terġa' tidħol biex taċċessa l-kont tiegħek."
 
-#: src/features/chess/index.tsx:544
+#: src/features/chess/index.tsx:547
 msgid "Are you sure you want to resign? {opponentName} will win the game."
 msgstr "Żgur trid tirriżenja? {opponentName} tirbaħ il-logħba."
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:56
 msgid "Asc"
 msgstr "Tielgħa"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:312
+msgid "Authenticator code"
+msgstr "Kodiċi tal-awtentikazzjoni"
 
 #: ../../../lib/web/src/components/place-picker.tsx:152
 msgid "Back"
@@ -198,7 +206,7 @@ msgid "bishop"
 msgstr "bishop"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:16
-#: src/features/chess/index.tsx:391
+#: src/features/chess/index.tsx:394
 msgid "Black"
 msgstr "Iswed"
 
@@ -214,6 +222,7 @@ msgid "Boost interest"
 msgstr "Saħħaħ l-interess"
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx:64
+#: ../../../lib/web/src/components/step-up-dialog.tsx:360
 #: ../../../lib/web/src/components/travelling-picker.tsx:292
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:245
 #: ../../../lib/web/src/features/access/access-dialog.tsx:325
@@ -225,38 +234,22 @@ msgstr "Saħħaħ l-interess"
 msgid "Cancel"
 msgstr "Ikkanċella"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:131
+#: ../../../lib/web/src/components/notification-category-button.tsx:135
 msgid "Category for this notification"
 msgstr "Kategorija għal din in-notifika"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:115
+#: ../../../lib/web/src/components/notification-category-button.tsx:119
 msgid "Change notification category"
 msgstr "Ibdel il-kategorija tan-notifika"
 
-#: src/features/chess/index.tsx:484
-#: src/features/chess/index.tsx:516
+#: src/features/chess/index.tsx:487
+#: src/features/chess/index.tsx:519
 msgid "Chat"
 msgstr "Chat"
 
-#: src/features/chess/index.tsx:85
-msgid "Check — {opponentName}'s move"
-msgstr "Check — il-mossa ta' {opponentName}"
-
-#: src/features/chess/index.tsx:85
-msgid "Check — your move"
-msgstr "Check — il-mossa tiegħek"
-
-#: src/features/chess/index.tsx:67
-msgid "Checkmate — {opponentName} wins"
-msgstr "Checkmate — {opponentName} rebaħ"
-
-#: src/features/chess/index.tsx:66
-msgid "Checkmate — you win!"
-msgstr "Checkmate — int rebaħt!"
-
-#: src/features/chess/index.tsx:93
-#: src/features/chess/index.tsx:319
-#: src/features/chess/index.tsx:331
+#: src/features/chess/index.tsx:96
+#: src/features/chess/index.tsx:322
+#: src/features/chess/index.tsx:334
 msgid "Chess"
 msgstr "Chess"
 
@@ -373,6 +366,10 @@ msgstr "Informazzjoni u dettalji kuntestwali."
 msgid "Continue"
 msgstr "Kompli"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:349
+msgid "Continue with {label}"
+msgstr "Kompli b'{label}"
+
 #: ../../../lib/web/src/components/ui/copy-button.tsx:60
 msgid "Copy"
 msgstr "Ikkupja"
@@ -380,6 +377,18 @@ msgstr "Ikkupja"
 #: ../../../lib/web/src/features/document/document-page.tsx:81
 msgid "Could not load this document. Please try again later."
 msgstr "Ma setax itella' dan id-dokument. Jekk jogħġbok ipprova mill-ġdid iktar tard."
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:181
+msgid "Couldn't send the code. Please try again."
+msgstr "Ma setax jintbagħat il-kodiċi. Jekk jogħġbok erġa' pprova."
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:133
+msgid "Couldn't start re-authentication. Please try again."
+msgstr "Ma setgħetx tinbeda l-awtentikazzjoni mill-ġdid. Jekk jogħġbok erġa' pprova."
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:218
+msgid "Couldn't verify with that account. Please try again."
+msgstr "Ma stajniex nivverifikaw b'dak il-kont. Jekk jogħġbok erġa' pprova."
 
 #: src/features/chess/components/new-game.tsx:148
 msgid "Creating..."
@@ -410,9 +419,13 @@ msgstr "Default"
 msgid "Default AI account"
 msgstr "Kont AI default"
 
-#: src/features/chess/index.tsx:437
+#: src/features/chess/index.tsx:440
 msgid "Delete game"
 msgstr "Ħassar logħba"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:90
+msgid "Delete your account on the old server"
+msgstr "Ħassar il-kont tiegħek fuq is-server il-qadim"
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:60
 msgid "Desc"
@@ -437,6 +450,10 @@ msgstr "Iskopri mill-browser"
 msgid "Direction"
 msgstr "Direzzjoni"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:73
+msgid "Dismiss"
+msgstr "Warrab"
+
 #: ../../../lib/web/src/components/ui/sidebar.tsx:235
 msgid "Displays the mobile sidebar."
 msgstr "Juri l-barra tal-ġenb tal-mobile."
@@ -445,17 +462,29 @@ msgstr "Juri l-barra tal-ġenb tal-mobile."
 msgid "Download"
 msgstr "Niżżel"
 
-#: src/features/chess/index.tsx:75
-msgid "Draw"
-msgstr "Pinġi"
+#: src/features/chess/components/chat-message-list.tsx:188
+msgid "Draw agreed"
+msgstr "Draw maqbul"
 
-#: src/features/chess/index.tsx:450
+#: src/features/chess/index.tsx:453
 msgid "Draw offered — waiting for {opponentName}"
 msgstr "Patta offruta — qed nistenna lil {opponentName}"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:134
 msgid "Dyslexia-friendly"
 msgstr "Adattat għad-disleksja"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:286
+msgid "Email code"
+msgstr "Kodiċi tal-email"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:296
+msgid "Enter the code from your email"
+msgstr "Daħħal il-kodiċi mill-email tiegħek"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:321
+msgid "Enter your authenticator code"
+msgstr "Daħħal il-kodiċi tal-awtentikatur tiegħek"
 
 #: ../../../lib/web/src/components/layout/app-sidebar.tsx:35
 msgid "Expand sidebar"
@@ -465,7 +494,7 @@ msgstr "Espandi s-sidebar"
 msgid "Extra large"
 msgstr "Kbir ħafna"
 
-#: src/features/chess/index.tsx:200
+#: src/features/chess/index.tsx:203
 msgid "Failed to accept draw"
 msgstr "Ma rnexxiex jiġi aċċettat il-patta"
 
@@ -477,19 +506,19 @@ msgstr "Ma rnexxiex jiżdied il-kont"
 msgid "Failed to create game"
 msgstr "Ma rnexxiex tinħoloq il-logħba"
 
-#: src/features/chess/index.tsx:215
+#: src/features/chess/index.tsx:218
 msgid "Failed to create rematch"
 msgstr "Ma rnexxiex tinħoloq it-tieni partita"
 
-#: src/features/chess/index.tsx:205
+#: src/features/chess/index.tsx:208
 msgid "Failed to decline draw"
 msgstr "Ma rnexxiex jiġi rrifjutat il-patta"
 
-#: src/features/chess/index.tsx:226
+#: src/features/chess/index.tsx:229
 msgid "Failed to delete game"
 msgstr "Ma rnexxiex titħassar il-logħba"
 
-#: src/features/chess/index.tsx:195
+#: src/features/chess/index.tsx:198
 msgid "Failed to offer draw"
 msgstr "Ma rnexxiex jiġi offrut il-patta"
 
@@ -497,12 +526,12 @@ msgstr "Ma rnexxiex jiġi offrut il-patta"
 msgid "Failed to remove account"
 msgstr "Ma rnexxiex jitneħħa l-kont"
 
-#: src/features/chess/index.tsx:188
+#: src/features/chess/index.tsx:191
 msgid "Failed to resign"
 msgstr "Ma rnexxiex jiġi rriżenjat"
 
-#: src/features/chess/index.tsx:500
-#: src/features/chess/index.tsx:532
+#: src/features/chess/index.tsx:503
+#: src/features/chess/index.tsx:535
 msgid "Failed to send"
 msgstr "Ma rnexxiex jintbagħat"
 
@@ -510,9 +539,13 @@ msgstr "Ma rnexxiex jintbagħat"
 msgid "Failed to send verification code"
 msgstr "Ma rnexxiex jintbagħat il-kodiċi tal-verifika"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:104
+#: ../../../lib/web/src/components/notification-category-button.tsx:108
 msgid "Failed to update category"
 msgstr "Ma rnexxiex tiġi aġġornata l-kategorija"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:79
+msgid "Finish moving your account"
+msgstr "Lesti t-trasferiment tal-kont tiegħek"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:244
 msgid "Floating"
@@ -542,7 +575,7 @@ msgstr "Layout sħiħ"
 msgid "Game created"
 msgstr "Inħolqot il-logħba"
 
-#: src/features/chess/index.tsx:222
+#: src/features/chess/index.tsx:225
 msgid "Game deleted"
 msgstr "Tħassret il-logħba"
 
@@ -756,7 +789,7 @@ msgstr "Ma nstabu l-ebda riżultati."
 msgid "No time zone found."
 msgstr "Ma nstabu l-ebda żona ta' ħin."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:135
+#: ../../../lib/web/src/components/notification-category-button.tsx:139
 msgid "No topic record yet — try again after the next notification."
 msgstr "Għadu m'hemm l-ebda rekord tat-topic — erġa' pprova wara n-notifika li jmiss."
 
@@ -780,7 +813,7 @@ msgstr "Normali"
 msgid "Notifications"
 msgstr "Notifiki"
 
-#: src/features/chess/index.tsx:421
+#: src/features/chess/index.tsx:424
 msgid "Offer draw"
 msgstr "Offri draw"
 
@@ -793,11 +826,11 @@ msgstr "Oops! Paġna Mhux Misjuba!"
 msgid "Open account actions"
 msgstr "Iftaħ azzjonijiet tal-kont"
 
-#: src/features/chess/index.tsx:400
+#: src/features/chess/index.tsx:403
 msgid "Open chat panel"
 msgstr "Iftaħ panel tal-chat"
 
-#: src/features/chess/index.tsx:408
+#: src/features/chess/index.tsx:411
 msgid "Open game actions"
 msgstr "Iftaħ azzjonijiet tal-logħba"
 
@@ -821,6 +854,18 @@ msgstr "Oħra"
 #: ../../../lib/web/src/features/access/access-list.tsx:213
 msgid "Owner"
 msgstr "Sid"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:331
+msgid "Passkey"
+msgstr ""
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:206
+msgid "Passkey verification failed. Please try again."
+msgstr "Il-verifika tal-passkey falliet. Jekk jogħġbok erġa' pprova."
+
+#: ../../../lib/web/src/components/restore-banner.tsx:126
+msgid "Passkeys"
+msgstr "Ċwievet tal-aċċess"
 
 #: src/features/chess/lib/use-chess-piece-name.ts:17
 msgid "pawn"
@@ -857,6 +902,14 @@ msgstr "Ippromovi għal:"
 msgid "queen"
 msgstr "queen"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:98
+msgid "Re-link your accounts on this server"
+msgstr "Erġa' għaqqad il-kontijiet tiegħek fuq dan is-server"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:120
+msgid "Re-register your passkeys on this server"
+msgstr "Erġa' rreġistra ċ-ċwievet tal-aċċess tiegħek fuq dan is-server"
+
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:216
 #: ../../../lib/web/src/components/search-entity-page.tsx:191
 msgid "Recommended"
@@ -878,7 +931,7 @@ msgstr "Relattiv (5m, 3h, 2d)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "Relattiv fi 24 siegħa, inkella assolut"
 
-#: src/features/chess/index.tsx:434
+#: src/features/chess/index.tsx:437
 msgid "Rematch"
 msgstr "Logħba mill-ġdid"
 
@@ -900,6 +953,10 @@ msgstr "Tneħħi l-aċċess?"
 msgid "Remove interest"
 msgstr "Neħħi interess"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:364
+msgid "Resend email"
+msgstr "Erġa' ibgħat l-email"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:77
 #: ../../../lib/web/src/components/data-table/toolbar.tsx:78
 msgid "Reset"
@@ -909,16 +966,16 @@ msgstr "Reset"
 msgid "Reset all settings to default values"
 msgstr "Irriżetta s-settings kollha għall-valuri default"
 
-#: src/features/chess/index.tsx:425
-#: src/features/chess/index.tsx:552
+#: src/features/chess/index.tsx:428
+#: src/features/chess/index.tsx:555
 msgid "Resign"
 msgstr "Irriżenja"
 
-#: src/features/chess/index.tsx:543
+#: src/features/chess/index.tsx:546
 msgid "Resign game?"
 msgstr "Tirriżenja l-logħba?"
 
-#: src/features/chess/index.tsx:549
+#: src/features/chess/index.tsx:552
 msgid "Resigning..."
 msgstr "Qed jirriżenja..."
 
@@ -1012,6 +1069,10 @@ msgstr "Agħżel preferenza tat-tema"
 msgid "Send again"
 msgstr "Ibgħat mill-ġdid"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:304
+msgid "Send email"
+msgstr "Ibgħat email"
+
 #: src/features/chess/components/chat-input.tsx:40
 msgid "Send message"
 msgstr "Ibgħat messaġġ"
@@ -1066,10 +1127,6 @@ msgstr "Żgħir"
 msgid "Spacious"
 msgstr "Wiesa'"
 
-#: src/features/chess/index.tsx:71
-msgid "Stalemate — draw"
-msgstr "Stalemate — draw"
-
 #: src/features/chess/components/new-game.tsx:94
 msgid "Start a new chess game"
 msgstr "Ibda logħba taċ-ċess ġdida"
@@ -1108,6 +1165,10 @@ msgstr "Timijiet/Apps"
 #: ../../../lib/web/src/features/document/document-page.tsx:39
 msgid "Terms and conditions"
 msgstr "Termini u kondizzjonijiet"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:192
+msgid "That code is incorrect or has expired."
+msgstr "Dak il-kodiċi mhux korrett jew skada."
 
 #: ../../../lib/web/src/components/config-drawer.tsx:181
 msgid "Theme"
@@ -1186,7 +1247,7 @@ msgstr "Ittajpja biex tfittex..."
 msgid "Unable to redirect to login. Please try again."
 msgstr "Ma rnexxiex jirridrettja għal-login. Jekk jogħġbok erġa' pprova."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:143
+#: ../../../lib/web/src/components/notification-category-button.tsx:147
 msgid "Unassigned"
 msgstr "Mhux assenjat"
 
@@ -1198,13 +1259,17 @@ msgstr "Aċċess Mhux Awtorizzat"
 msgid "United States"
 msgstr "Stati Uniti"
 
-#: src/hooks/useGameWebsocket.ts:162
+#: src/hooks/useGameWebsocket.ts:164
 msgid "Unknown"
 msgstr "Mhux magħruf"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:131
 msgid "Unverified"
 msgstr "Mhux ivverifikat"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:335
+msgid "Use your passkey"
+msgstr "Uża l-passkey tiegħek"
 
 #: ../../../lib/web/src/features/access/access-dialog.tsx:155
 msgid "User"
@@ -1222,6 +1287,7 @@ msgstr "Kodiċi ta' verifika mibgħut"
 msgid "Verification failed"
 msgstr "Verifika falliet"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:385
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:164
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:106
 msgid "Verify"
@@ -1230,6 +1296,10 @@ msgstr "Ivverifika"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:58
 msgid "Verify email address"
 msgstr "Ivverifika l-indirizz tal-email"
+
+#: ../../../lib/web/src/components/attachment-gallery.tsx:63
+msgid "Video thumbnail"
+msgstr "Thumbnail tal-vidjo"
 
 #: ../../../lib/web/src/components/data-table/view-options.tsx:30
 msgid "View"
@@ -1256,7 +1326,7 @@ msgid "Wednesday"
 msgstr "L-Erbgħa"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:16
-#: src/features/chess/index.tsx:391
+#: src/features/chess/index.tsx:394
 msgid "White"
 msgstr "Abjad"
 
@@ -1267,14 +1337,10 @@ msgstr "Abjad"
 msgid "White {0}"
 msgstr "Abjad {0}"
 
-#: src/features/chess/components/chat-message-list.tsx:197
+#: src/features/chess/components/chat-message-list.tsx:209
 msgid "You"
 msgstr "Int"
 
-#: src/features/chess/index.tsx:81
-msgid "You resigned — {opponentName} wins"
-msgstr "Irriżenjajt — {opponentName} jirbaħ"
-
-#: src/features/chess/index.tsx:88
-msgid "Your move"
-msgstr "Il-mossa tiegħek"
+#: ../../../lib/web/src/components/restore-banner.tsx:82
+msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
+msgstr "Il-kont tiegħek ġie miċċaqqlaq hawn minn {source}. Sakemm tħassru hemm, il-messaġġi u n-notifiki jistgħu jaslu fuq iż-żewġ servers, xi kontenut tiegħek jibqa' jingħata mis-server il-qadim, u s-segwaċi jistgħu jieħdu ftit minuti biex isibuk hawn."

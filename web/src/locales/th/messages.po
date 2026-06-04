@@ -46,23 +46,27 @@ msgstr "{count, plural, other {เรือ # ตัว}}"
 msgid "{count} pieces"
 msgstr "หมาก {count} ตัว"
 
+#: src/features/chess/components/chat-message-list.tsx:190
+msgid "{name} declined the draw"
+msgstr "{name} ปฏิเสธการเสมอ"
+
+#: src/features/chess/components/chat-message-list.tsx:186
+msgid "{name} offered a draw"
+msgstr "{name} เสนอเสมอ"
+
+#: src/features/chess/components/chat-message-list.tsx:184
+msgid "{name} resigned"
+msgstr "{name} ยอมแพ้"
+
 #: src/features/chess/components/draw-offer-banner.tsx:25
 msgid "{opponentName} offered a draw"
 msgstr "{opponentName} เสนอเสมอ"
 
-#: src/features/chess/index.tsx:80
-msgid "{opponentName} resigned — you win!"
-msgstr "{opponentName} ยอมแพ้ — คุณชนะ!"
-
-#: src/features/chess/index.tsx:88
-msgid "{opponentName}'s move"
-msgstr "ตาของ {opponentName}"
-
-#: src/features/chess/components/chat-message-list.tsx:207
+#: src/features/chess/components/chat-message-list.tsx:219
 msgid "{subject} played <0>{san}</0>"
 msgstr "{subject} เดิน <0>{san}</0>"
 
-#: src/features/chess/components/chat-message-list.tsx:205
+#: src/features/chess/components/chat-message-list.tsx:217
 msgid "{subject} took <0>{san}</0>"
 msgstr "{subject} จับ <0>{san}</0>"
 
@@ -175,13 +179,17 @@ msgstr "ทั้งหมด"
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "คุณแน่ใจหรือไม่ว่าต้องการออกจากระบบ? คุณจะต้องเข้าสู่ระบบอีกครั้งเพื่อเข้าถึงบัญชีของคุณ"
 
-#: src/features/chess/index.tsx:544
+#: src/features/chess/index.tsx:547
 msgid "Are you sure you want to resign? {opponentName} will win the game."
 msgstr "คุณแน่ใจหรือไม่ว่าต้องการยอมแพ้? {opponentName} จะชนะเกม"
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:56
 msgid "Asc"
 msgstr "น้อยไปมาก"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:312
+msgid "Authenticator code"
+msgstr "รหัส Authenticator"
 
 #: ../../../lib/web/src/components/place-picker.tsx:152
 msgid "Back"
@@ -198,7 +206,7 @@ msgid "bishop"
 msgstr "บิชอป"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:16
-#: src/features/chess/index.tsx:391
+#: src/features/chess/index.tsx:394
 msgid "Black"
 msgstr "ดำ"
 
@@ -214,6 +222,7 @@ msgid "Boost interest"
 msgstr "เพิ่มความสนใจ"
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx:64
+#: ../../../lib/web/src/components/step-up-dialog.tsx:360
 #: ../../../lib/web/src/components/travelling-picker.tsx:292
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:245
 #: ../../../lib/web/src/features/access/access-dialog.tsx:325
@@ -225,38 +234,22 @@ msgstr "เพิ่มความสนใจ"
 msgid "Cancel"
 msgstr "ยกเลิก"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:131
+#: ../../../lib/web/src/components/notification-category-button.tsx:135
 msgid "Category for this notification"
 msgstr "หมวดหมู่สำหรับการแจ้งเตือนนี้"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:115
+#: ../../../lib/web/src/components/notification-category-button.tsx:119
 msgid "Change notification category"
 msgstr "เปลี่ยนหมวดหมู่การแจ้งเตือน"
 
-#: src/features/chess/index.tsx:484
-#: src/features/chess/index.tsx:516
+#: src/features/chess/index.tsx:487
+#: src/features/chess/index.tsx:519
 msgid "Chat"
 msgstr "แชท"
 
-#: src/features/chess/index.tsx:85
-msgid "Check — {opponentName}'s move"
-msgstr "Check — ตาของ{opponentName}"
-
-#: src/features/chess/index.tsx:85
-msgid "Check — your move"
-msgstr "Check — ตาของคุณ"
-
-#: src/features/chess/index.tsx:67
-msgid "Checkmate — {opponentName} wins"
-msgstr "Checkmate — {opponentName}ชนะ"
-
-#: src/features/chess/index.tsx:66
-msgid "Checkmate — you win!"
-msgstr "Checkmate — คุณชนะ!"
-
-#: src/features/chess/index.tsx:93
-#: src/features/chess/index.tsx:319
-#: src/features/chess/index.tsx:331
+#: src/features/chess/index.tsx:96
+#: src/features/chess/index.tsx:322
+#: src/features/chess/index.tsx:334
 msgid "Chess"
 msgstr "หมากรุก"
 
@@ -373,6 +366,10 @@ msgstr "ข้อมูลบริบทและรายละเอียด
 msgid "Continue"
 msgstr "ดำเนินการต่อ"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:349
+msgid "Continue with {label}"
+msgstr "ดำเนินการต่อด้วย {label}"
+
 #: ../../../lib/web/src/components/ui/copy-button.tsx:60
 msgid "Copy"
 msgstr "คัดลอก"
@@ -380,6 +377,18 @@ msgstr "คัดลอก"
 #: ../../../lib/web/src/features/document/document-page.tsx:81
 msgid "Could not load this document. Please try again later."
 msgstr "ไม่สามารถโหลดเอกสารนี้ได้ โปรดลองอีกครั้งในภายหลัง"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:181
+msgid "Couldn't send the code. Please try again."
+msgstr "ส่งรหัสไม่สำเร็จ โปรดลองอีกครั้ง"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:133
+msgid "Couldn't start re-authentication. Please try again."
+msgstr "เริ่มการยืนยันตัวตนอีกครั้งไม่สำเร็จ โปรดลองอีกครั้ง"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:218
+msgid "Couldn't verify with that account. Please try again."
+msgstr "ไม่สามารถยืนยันด้วยบัญชีนั้นได้ โปรดลองอีกครั้ง"
 
 #: src/features/chess/components/new-game.tsx:148
 msgid "Creating..."
@@ -410,9 +419,13 @@ msgstr "ค่าเริ่มต้น"
 msgid "Default AI account"
 msgstr "บัญชี AI เริ่มต้น"
 
-#: src/features/chess/index.tsx:437
+#: src/features/chess/index.tsx:440
 msgid "Delete game"
 msgstr "ลบเกม"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:90
+msgid "Delete your account on the old server"
+msgstr "ลบบัญชีของคุณบนเซิร์ฟเวอร์เดิม"
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:60
 msgid "Desc"
@@ -437,6 +450,10 @@ msgstr "ตรวจจับจากเว็บเบราว์เซอร
 msgid "Direction"
 msgstr "ทิศทาง"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:73
+msgid "Dismiss"
+msgstr "ปิด"
+
 #: ../../../lib/web/src/components/ui/sidebar.tsx:235
 msgid "Displays the mobile sidebar."
 msgstr "แสดงแถบด้านข้างบนมือถือ"
@@ -445,17 +462,29 @@ msgstr "แสดงแถบด้านข้างบนมือถือ"
 msgid "Download"
 msgstr "ดาวน์โหลด"
 
-#: src/features/chess/index.tsx:75
-msgid "Draw"
-msgstr "เสมอ"
+#: src/features/chess/components/chat-message-list.tsx:188
+msgid "Draw agreed"
+msgstr "ตกลงเสมอ"
 
-#: src/features/chess/index.tsx:450
+#: src/features/chess/index.tsx:453
 msgid "Draw offered — waiting for {opponentName}"
 msgstr "เสนอเสมอแล้ว — กำลังรอ {opponentName}"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:134
 msgid "Dyslexia-friendly"
 msgstr "เหมาะสำหรับผู้บกพร่องการอ่าน"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:286
+msgid "Email code"
+msgstr "รหัสอีเมล"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:296
+msgid "Enter the code from your email"
+msgstr "ป้อนรหัสจากอีเมลของคุณ"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:321
+msgid "Enter your authenticator code"
+msgstr "ป้อนรหัสจากแอปยืนยันตัวตนของคุณ"
 
 #: ../../../lib/web/src/components/layout/app-sidebar.tsx:35
 msgid "Expand sidebar"
@@ -465,7 +494,7 @@ msgstr "ขยายแถบด้านข้าง"
 msgid "Extra large"
 msgstr "ใหญ่พิเศษ"
 
-#: src/features/chess/index.tsx:200
+#: src/features/chess/index.tsx:203
 msgid "Failed to accept draw"
 msgstr "ไม่สามารถยอมรับการเสมอได้"
 
@@ -477,19 +506,19 @@ msgstr "ไม่สามารถเพิ่มบัญชีได้"
 msgid "Failed to create game"
 msgstr "ไม่สามารถสร้างเกมได้"
 
-#: src/features/chess/index.tsx:215
+#: src/features/chess/index.tsx:218
 msgid "Failed to create rematch"
 msgstr "ไม่สามารถสร้างการแข่งใหม่ได้"
 
-#: src/features/chess/index.tsx:205
+#: src/features/chess/index.tsx:208
 msgid "Failed to decline draw"
 msgstr "ไม่สามารถปฏิเสธการเสมอได้"
 
-#: src/features/chess/index.tsx:226
+#: src/features/chess/index.tsx:229
 msgid "Failed to delete game"
 msgstr "ไม่สามารถลบเกมได้"
 
-#: src/features/chess/index.tsx:195
+#: src/features/chess/index.tsx:198
 msgid "Failed to offer draw"
 msgstr "ไม่สามารถเสนอเสมอได้"
 
@@ -497,12 +526,12 @@ msgstr "ไม่สามารถเสนอเสมอได้"
 msgid "Failed to remove account"
 msgstr "ไม่สามารถเอาบัญชีออกได้"
 
-#: src/features/chess/index.tsx:188
+#: src/features/chess/index.tsx:191
 msgid "Failed to resign"
 msgstr "ไม่สามารถยอมแพ้ได้"
 
-#: src/features/chess/index.tsx:500
-#: src/features/chess/index.tsx:532
+#: src/features/chess/index.tsx:503
+#: src/features/chess/index.tsx:535
 msgid "Failed to send"
 msgstr "ไม่สามารถส่งได้"
 
@@ -510,9 +539,13 @@ msgstr "ไม่สามารถส่งได้"
 msgid "Failed to send verification code"
 msgstr "ไม่สามารถส่งรหัสยืนยันได้"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:104
+#: ../../../lib/web/src/components/notification-category-button.tsx:108
 msgid "Failed to update category"
 msgstr "ไม่สามารถอัปเดตหมวดหมู่ได้"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:79
+msgid "Finish moving your account"
+msgstr "เสร็จสิ้นการย้ายบัญชี"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:244
 msgid "Floating"
@@ -542,7 +575,7 @@ msgstr "เลย์เอาต์เต็ม"
 msgid "Game created"
 msgstr "สร้างเกมแล้ว"
 
-#: src/features/chess/index.tsx:222
+#: src/features/chess/index.tsx:225
 msgid "Game deleted"
 msgstr "ลบเกมแล้ว"
 
@@ -756,7 +789,7 @@ msgstr "ไม่พบผลลัพธ์"
 msgid "No time zone found."
 msgstr "ไม่พบเขตเวลา"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:135
+#: ../../../lib/web/src/components/notification-category-button.tsx:139
 msgid "No topic record yet — try again after the next notification."
 msgstr "ยังไม่มีบันทึกหัวข้อ — ลองอีกครั้งหลังการแจ้งเตือนครั้งถัดไป"
 
@@ -780,7 +813,7 @@ msgstr "ปกติ"
 msgid "Notifications"
 msgstr "การแจ้งเตือน"
 
-#: src/features/chess/index.tsx:421
+#: src/features/chess/index.tsx:424
 msgid "Offer draw"
 msgstr "เสนอเสมอ"
 
@@ -793,11 +826,11 @@ msgstr "ขออภัย! ไม่พบหน้านี้!"
 msgid "Open account actions"
 msgstr "เปิดการดำเนินการของบัญชี"
 
-#: src/features/chess/index.tsx:400
+#: src/features/chess/index.tsx:403
 msgid "Open chat panel"
 msgstr "เปิดแผงแชต"
 
-#: src/features/chess/index.tsx:408
+#: src/features/chess/index.tsx:411
 msgid "Open game actions"
 msgstr "เปิดการดำเนินการของเกม"
 
@@ -821,6 +854,18 @@ msgstr "อื่น ๆ"
 #: ../../../lib/web/src/features/access/access-list.tsx:213
 msgid "Owner"
 msgstr "เจ้าของ"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:331
+msgid "Passkey"
+msgstr "พาสคีย์"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:206
+msgid "Passkey verification failed. Please try again."
+msgstr "การยืนยันด้วยพาสคีย์ล้มเหลว โปรดลองอีกครั้ง"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:126
+msgid "Passkeys"
+msgstr "พาสคีย์"
 
 #: src/features/chess/lib/use-chess-piece-name.ts:17
 msgid "pawn"
@@ -857,6 +902,14 @@ msgstr "เลื่อนขั้นเป็น:"
 msgid "queen"
 msgstr "ควีน"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:98
+msgid "Re-link your accounts on this server"
+msgstr "เชื่อมโยงบัญชีของคุณใหม่บนเซิร์ฟเวอร์นี้"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:120
+msgid "Re-register your passkeys on this server"
+msgstr "ลงทะเบียนพาสคีย์ของคุณใหม่บนเซิร์ฟเวอร์นี้"
+
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:216
 #: ../../../lib/web/src/components/search-entity-page.tsx:191
 msgid "Recommended"
@@ -878,7 +931,7 @@ msgstr "แบบสัมพัทธ์ (5m, 3h, 2d)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "สัมพัทธ์ภายใน 24 ชั่วโมง นอกนั้นแบบสัมบูรณ์"
 
-#: src/features/chess/index.tsx:434
+#: src/features/chess/index.tsx:437
 msgid "Rematch"
 msgstr "แข่งใหม่"
 
@@ -900,6 +953,10 @@ msgstr "ลบสิทธิ์การเข้าถึง?"
 msgid "Remove interest"
 msgstr "ลบความสนใจ"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:364
+msgid "Resend email"
+msgstr "ส่งอีเมลอีกครั้ง"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:77
 #: ../../../lib/web/src/components/data-table/toolbar.tsx:78
 msgid "Reset"
@@ -909,16 +966,16 @@ msgstr "รีเซ็ต"
 msgid "Reset all settings to default values"
 msgstr "รีเซ็ตการตั้งค่าทั้งหมดเป็นค่าเริ่มต้น"
 
-#: src/features/chess/index.tsx:425
-#: src/features/chess/index.tsx:552
+#: src/features/chess/index.tsx:428
+#: src/features/chess/index.tsx:555
 msgid "Resign"
 msgstr "ยอมแพ้"
 
-#: src/features/chess/index.tsx:543
+#: src/features/chess/index.tsx:546
 msgid "Resign game?"
 msgstr "ยอมแพ้เกม?"
 
-#: src/features/chess/index.tsx:549
+#: src/features/chess/index.tsx:552
 msgid "Resigning..."
 msgstr "กำลังยอมแพ้..."
 
@@ -1012,6 +1069,10 @@ msgstr "เลือกการตั้งค่าธีม"
 msgid "Send again"
 msgstr "ส่งอีกครั้ง"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:304
+msgid "Send email"
+msgstr "ส่งอีเมล"
+
 #: src/features/chess/components/chat-input.tsx:40
 msgid "Send message"
 msgstr "ส่งข้อความ"
@@ -1066,10 +1127,6 @@ msgstr "เล็ก"
 msgid "Spacious"
 msgstr "กว้างขวาง"
 
-#: src/features/chess/index.tsx:71
-msgid "Stalemate — draw"
-msgstr "ตันกัน — เสมอ"
-
 #: src/features/chess/components/new-game.tsx:94
 msgid "Start a new chess game"
 msgstr "เริ่มเกมหมากรุกใหม่"
@@ -1108,6 +1165,10 @@ msgstr "ทีม/แอป"
 #: ../../../lib/web/src/features/document/document-page.tsx:39
 msgid "Terms and conditions"
 msgstr "ข้อกำหนดและเงื่อนไข"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:192
+msgid "That code is incorrect or has expired."
+msgstr "รหัสนั้นไม่ถูกต้องหรือหมดอายุแล้ว"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:181
 msgid "Theme"
@@ -1186,7 +1247,7 @@ msgstr "พิมพ์เพื่อค้นหา..."
 msgid "Unable to redirect to login. Please try again."
 msgstr "ไม่สามารถเปลี่ยนเส้นทางไปยังการเข้าสู่ระบบได้ โปรดลองอีกครั้ง"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:143
+#: ../../../lib/web/src/components/notification-category-button.tsx:147
 msgid "Unassigned"
 msgstr "ยังไม่กำหนด"
 
@@ -1198,13 +1259,17 @@ msgstr "การเข้าถึงที่ไม่ได้รับอน
 msgid "United States"
 msgstr "สหรัฐอเมริกา"
 
-#: src/hooks/useGameWebsocket.ts:162
+#: src/hooks/useGameWebsocket.ts:164
 msgid "Unknown"
 msgstr "ไม่ทราบ"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:131
 msgid "Unverified"
 msgstr "ยังไม่ยืนยัน"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:335
+msgid "Use your passkey"
+msgstr "ใช้พาสคีย์ของคุณ"
 
 #: ../../../lib/web/src/features/access/access-dialog.tsx:155
 msgid "User"
@@ -1222,6 +1287,7 @@ msgstr "ส่งรหัสยืนยันแล้ว"
 msgid "Verification failed"
 msgstr "การยืนยันไม่สำเร็จ"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:385
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:164
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:106
 msgid "Verify"
@@ -1230,6 +1296,10 @@ msgstr "ยืนยัน"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:58
 msgid "Verify email address"
 msgstr "ยืนยันที่อยู่อีเมล"
+
+#: ../../../lib/web/src/components/attachment-gallery.tsx:63
+msgid "Video thumbnail"
+msgstr "ภาพย่อวิดีโอ"
 
 #: ../../../lib/web/src/components/data-table/view-options.tsx:30
 msgid "View"
@@ -1256,7 +1326,7 @@ msgid "Wednesday"
 msgstr "วันพุธ"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:16
-#: src/features/chess/index.tsx:391
+#: src/features/chess/index.tsx:394
 msgid "White"
 msgstr "ขาว"
 
@@ -1267,14 +1337,10 @@ msgstr "ขาว"
 msgid "White {0}"
 msgstr "{0} ขาว"
 
-#: src/features/chess/components/chat-message-list.tsx:197
+#: src/features/chess/components/chat-message-list.tsx:209
 msgid "You"
 msgstr "คุณ"
 
-#: src/features/chess/index.tsx:81
-msgid "You resigned — {opponentName} wins"
-msgstr "คุณยอมแพ้ — {opponentName} ชนะ"
-
-#: src/features/chess/index.tsx:88
-msgid "Your move"
-msgstr "ตาของคุณ"
+#: ../../../lib/web/src/components/restore-banner.tsx:82
+msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
+msgstr "บัญชีของคุณถูกย้ายมาที่นี่จาก {source} จนกว่าคุณจะลบออกที่นั่น ข้อความและการแจ้งเตือนอาจไปถึงทั้งสองเซิร์ฟเวอร์ เนื้อหาบางส่วนของคุณยังคงให้บริการจากเซิร์ฟเวอร์เดิม และผู้ติดตามอาจต้องใช้เวลาสักครู่เพื่อพบคุณที่นี่"

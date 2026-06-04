@@ -46,23 +46,27 @@ msgstr "{count, plural, one {# тэрэг} other {# тэрэг}}"
 msgid "{count} pieces"
 msgstr "{count} хэсэг"
 
+#: src/features/chess/components/chat-message-list.tsx:190
+msgid "{name} declined the draw"
+msgstr "{name} тэнцэхээс татгалзсан"
+
+#: src/features/chess/components/chat-message-list.tsx:186
+msgid "{name} offered a draw"
+msgstr "{name} тэнцэх санал тавьсан"
+
+#: src/features/chess/components/chat-message-list.tsx:184
+msgid "{name} resigned"
+msgstr "{name} бууж өгсөн"
+
 #: src/features/chess/components/draw-offer-banner.tsx:25
 msgid "{opponentName} offered a draw"
 msgstr "{opponentName} тэнцлэлд санал болгосон"
 
-#: src/features/chess/index.tsx:80
-msgid "{opponentName} resigned — you win!"
-msgstr "{opponentName} бууж өгсөн — та хождог!"
-
-#: src/features/chess/index.tsx:88
-msgid "{opponentName}'s move"
-msgstr "{opponentName}-н нүүдэл"
-
-#: src/features/chess/components/chat-message-list.tsx:207
+#: src/features/chess/components/chat-message-list.tsx:219
 msgid "{subject} played <0>{san}</0>"
 msgstr "{subject} <0>{san}</0>-г тоглосон"
 
-#: src/features/chess/components/chat-message-list.tsx:205
+#: src/features/chess/components/chat-message-list.tsx:217
 msgid "{subject} took <0>{san}</0>"
 msgstr "{subject} <0>{san}</0>-г авсан"
 
@@ -175,13 +179,17 @@ msgstr "Бүгд"
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "Гарахдаа итгэлтэй байна уу? Бүртгэлдээ дахин нэвтрэхдээ дахин нэвтрэх шаардлагатай."
 
-#: src/features/chess/index.tsx:544
+#: src/features/chess/index.tsx:547
 msgid "Are you sure you want to resign? {opponentName} will win the game."
 msgstr "Бууж өгөхдөө итгэлтэй байна уу? {opponentName} тоглоомд ялна."
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:56
 msgid "Asc"
 msgstr "Өсөх"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:312
+msgid "Authenticator code"
+msgstr "Authenticator код"
 
 #: ../../../lib/web/src/components/place-picker.tsx:152
 msgid "Back"
@@ -198,7 +206,7 @@ msgid "bishop"
 msgstr "офицер"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:16
-#: src/features/chess/index.tsx:391
+#: src/features/chess/index.tsx:394
 msgid "Black"
 msgstr "Хар"
 
@@ -214,6 +222,7 @@ msgid "Boost interest"
 msgstr "Сонирхлыг идэвхжүүлэх"
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx:64
+#: ../../../lib/web/src/components/step-up-dialog.tsx:360
 #: ../../../lib/web/src/components/travelling-picker.tsx:292
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:245
 #: ../../../lib/web/src/features/access/access-dialog.tsx:325
@@ -225,38 +234,22 @@ msgstr "Сонирхлыг идэвхжүүлэх"
 msgid "Cancel"
 msgstr "Цуцлах"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:131
+#: ../../../lib/web/src/components/notification-category-button.tsx:135
 msgid "Category for this notification"
 msgstr "Энэ мэдэгдлийн ангилал"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:115
+#: ../../../lib/web/src/components/notification-category-button.tsx:119
 msgid "Change notification category"
 msgstr "Мэдэгдлийн ангиллыг солих"
 
-#: src/features/chess/index.tsx:484
-#: src/features/chess/index.tsx:516
+#: src/features/chess/index.tsx:487
+#: src/features/chess/index.tsx:519
 msgid "Chat"
 msgstr "Чат"
 
-#: src/features/chess/index.tsx:85
-msgid "Check — {opponentName}'s move"
-msgstr "Шах — {opponentName}-ийн нүүдэл"
-
-#: src/features/chess/index.tsx:85
-msgid "Check — your move"
-msgstr "Шах — таны нүүдэл"
-
-#: src/features/chess/index.tsx:67
-msgid "Checkmate — {opponentName} wins"
-msgstr "Шахмат — {opponentName} ялсан"
-
-#: src/features/chess/index.tsx:66
-msgid "Checkmate — you win!"
-msgstr "Шахмат — та ялсан!"
-
-#: src/features/chess/index.tsx:93
-#: src/features/chess/index.tsx:319
-#: src/features/chess/index.tsx:331
+#: src/features/chess/index.tsx:96
+#: src/features/chess/index.tsx:322
+#: src/features/chess/index.tsx:334
 msgid "Chess"
 msgstr "Шатар"
 
@@ -373,6 +366,10 @@ msgstr "Контекст мэдээлэл ба дэлгэрэнгүй."
 msgid "Continue"
 msgstr "Үргэлжлүүлэх"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:349
+msgid "Continue with {label}"
+msgstr "{label}-р үргэлжлүүлэх"
+
 #: ../../../lib/web/src/components/ui/copy-button.tsx:60
 msgid "Copy"
 msgstr "Хуулах"
@@ -380,6 +377,18 @@ msgstr "Хуулах"
 #: ../../../lib/web/src/features/document/document-page.tsx:81
 msgid "Could not load this document. Please try again later."
 msgstr "Энэ баримт бичгийг ачаалж чадсангүй. Дараа дахин оролдоно уу."
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:181
+msgid "Couldn't send the code. Please try again."
+msgstr "Кодыг илгээж чадсангүй. Дахин оролдоно уу."
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:133
+msgid "Couldn't start re-authentication. Please try again."
+msgstr "Дахин баталгаажуулалтыг эхлүүлж чадсангүй. Дахин оролдоно уу."
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:218
+msgid "Couldn't verify with that account. Please try again."
+msgstr "Тэр бүртгэлээр баталгаажуулж чадсангүй. Дахин оролдоно уу."
 
 #: src/features/chess/components/new-game.tsx:148
 msgid "Creating..."
@@ -410,9 +419,13 @@ msgstr "Үндсэн"
 msgid "Default AI account"
 msgstr "Үндсэн AI бүртгэл"
 
-#: src/features/chess/index.tsx:437
+#: src/features/chess/index.tsx:440
 msgid "Delete game"
 msgstr "Тоглоом устгах"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:90
+msgid "Delete your account on the old server"
+msgstr "Хуучин серверт байгаа бүртгэлээ устгана уу"
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:60
 msgid "Desc"
@@ -437,6 +450,10 @@ msgstr "Хөтчөөс илрүүлэх"
 msgid "Direction"
 msgstr "Чиглэл"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:73
+msgid "Dismiss"
+msgstr "Болих"
+
 #: ../../../lib/web/src/components/ui/sidebar.tsx:235
 msgid "Displays the mobile sidebar."
 msgstr "Гар утасны хажуугийн самбарыг харуулна."
@@ -445,17 +462,29 @@ msgstr "Гар утасны хажуугийн самбарыг харуулна
 msgid "Download"
 msgstr "Татах"
 
-#: src/features/chess/index.tsx:75
-msgid "Draw"
-msgstr "Зурах"
+#: src/features/chess/components/chat-message-list.tsx:188
+msgid "Draw agreed"
+msgstr "Тэнцэхээр тохиролцов"
 
-#: src/features/chess/index.tsx:450
+#: src/features/chess/index.tsx:453
 msgid "Draw offered — waiting for {opponentName}"
 msgstr "Тэнцэх санал болгосон — {opponentName}-г хүлээж байна"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:134
 msgid "Dyslexia-friendly"
 msgstr "Дислексид зориулсан"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:286
+msgid "Email code"
+msgstr "Имэйл код"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:296
+msgid "Enter the code from your email"
+msgstr "Имэйлд ирсэн кодоо оруулна уу"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:321
+msgid "Enter your authenticator code"
+msgstr "Баталгаажуулагчийн кодоо оруулна уу"
 
 #: ../../../lib/web/src/components/layout/app-sidebar.tsx:35
 msgid "Expand sidebar"
@@ -465,7 +494,7 @@ msgstr "Хажуугийн самбарыг тэлэх"
 msgid "Extra large"
 msgstr "Маш том"
 
-#: src/features/chess/index.tsx:200
+#: src/features/chess/index.tsx:203
 msgid "Failed to accept draw"
 msgstr "Тэнцэх саналыг хүлээн авч чадсангүй"
 
@@ -477,19 +506,19 @@ msgstr "Бүртгэл нэмж чадсангүй"
 msgid "Failed to create game"
 msgstr "Тоглоом үүсгэж чадсангүй"
 
-#: src/features/chess/index.tsx:215
+#: src/features/chess/index.tsx:218
 msgid "Failed to create rematch"
 msgstr "Дахин тоглолт үүсгэж чадсангүй"
 
-#: src/features/chess/index.tsx:205
+#: src/features/chess/index.tsx:208
 msgid "Failed to decline draw"
 msgstr "Тэнцэх саналаас татгалзаж чадсангүй"
 
-#: src/features/chess/index.tsx:226
+#: src/features/chess/index.tsx:229
 msgid "Failed to delete game"
 msgstr "Тоглоом устгаж чадсангүй"
 
-#: src/features/chess/index.tsx:195
+#: src/features/chess/index.tsx:198
 msgid "Failed to offer draw"
 msgstr "Тэнцэх санал тавьж чадсангүй"
 
@@ -497,12 +526,12 @@ msgstr "Тэнцэх санал тавьж чадсангүй"
 msgid "Failed to remove account"
 msgstr "Бүртгэл хасч чадсангүй"
 
-#: src/features/chess/index.tsx:188
+#: src/features/chess/index.tsx:191
 msgid "Failed to resign"
 msgstr "Бууж өгч чадсангүй"
 
-#: src/features/chess/index.tsx:500
-#: src/features/chess/index.tsx:532
+#: src/features/chess/index.tsx:503
+#: src/features/chess/index.tsx:535
 msgid "Failed to send"
 msgstr "Илгээж чадсангүй"
 
@@ -510,9 +539,13 @@ msgstr "Илгээж чадсангүй"
 msgid "Failed to send verification code"
 msgstr "Баталгаажуулах код илгээж чадсангүй"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:104
+#: ../../../lib/web/src/components/notification-category-button.tsx:108
 msgid "Failed to update category"
 msgstr "Ангилал шинэчилж чадсангүй"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:79
+msgid "Finish moving your account"
+msgstr "Бүртгэлээ шилжүүлэхийг дуусгана уу"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:244
 msgid "Floating"
@@ -542,7 +575,7 @@ msgstr "Бүрэн зохион байгуулалт"
 msgid "Game created"
 msgstr "Тоглоом үүсгэгдсэн"
 
-#: src/features/chess/index.tsx:222
+#: src/features/chess/index.tsx:225
 msgid "Game deleted"
 msgstr "Тоглоом устгагдсан"
 
@@ -756,7 +789,7 @@ msgstr "Үр дүн олдсонгүй."
 msgid "No time zone found."
 msgstr "Цагийн бүс олдсонгүй."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:135
+#: ../../../lib/web/src/components/notification-category-button.tsx:139
 msgid "No topic record yet — try again after the next notification."
 msgstr "Сэдвийн бичлэг алга — дараагийн мэдэгдлийн дараа дахин оролдоно уу."
 
@@ -780,7 +813,7 @@ msgstr "Энгийн"
 msgid "Notifications"
 msgstr "Мэдэгдэл"
 
-#: src/features/chess/index.tsx:421
+#: src/features/chess/index.tsx:424
 msgid "Offer draw"
 msgstr "Тэнцэх санал"
 
@@ -793,11 +826,11 @@ msgstr "Уучлаарай! Хуудас олдсонгүй!"
 msgid "Open account actions"
 msgstr "Бүртгэлийн үйлдлүүдийг нээх"
 
-#: src/features/chess/index.tsx:400
+#: src/features/chess/index.tsx:403
 msgid "Open chat panel"
 msgstr "Чатны самбар нээх"
 
-#: src/features/chess/index.tsx:408
+#: src/features/chess/index.tsx:411
 msgid "Open game actions"
 msgstr "Тоглоомын үйлдлүүдийг нээх"
 
@@ -821,6 +854,18 @@ msgstr "Бусад"
 #: ../../../lib/web/src/features/access/access-list.tsx:213
 msgid "Owner"
 msgstr "Эзэмшигч"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:331
+msgid "Passkey"
+msgstr "Нэвтрэх түлхүүр"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:206
+msgid "Passkey verification failed. Please try again."
+msgstr "Нэвтрэх түлхүүрийн баталгаажуулалт амжилтгүй боллоо. Дахин оролдоно уу."
+
+#: ../../../lib/web/src/components/restore-banner.tsx:126
+msgid "Passkeys"
+msgstr "Passkey-ууд"
 
 #: src/features/chess/lib/use-chess-piece-name.ts:17
 msgid "pawn"
@@ -857,6 +902,14 @@ msgstr "Дэвшүүлэх:"
 msgid "queen"
 msgstr "хатан хаан"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:98
+msgid "Re-link your accounts on this server"
+msgstr "Энэ серверт бүртгэлүүдээ дахин холбоно уу"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:120
+msgid "Re-register your passkeys on this server"
+msgstr "Энэ серверт нэвтрэх түлхүүрээ дахин бүртгүүлнэ үү"
+
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:216
 #: ../../../lib/web/src/components/search-entity-page.tsx:191
 msgid "Recommended"
@@ -878,7 +931,7 @@ msgstr "Харьцангуй (5м, 3ц, 2ө)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "24 цагийн дотор харьцангуй, эс бөгөөс үнэмлэхүй"
 
-#: src/features/chess/index.tsx:434
+#: src/features/chess/index.tsx:437
 msgid "Rematch"
 msgstr "Дахин тоглох"
 
@@ -900,6 +953,10 @@ msgstr "Хандалтыг хасах уу?"
 msgid "Remove interest"
 msgstr "Сонирхол хасах"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:364
+msgid "Resend email"
+msgstr "Имэйлийг дахин илгээх"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:77
 #: ../../../lib/web/src/components/data-table/toolbar.tsx:78
 msgid "Reset"
@@ -909,16 +966,16 @@ msgstr "Шинэчлэх"
 msgid "Reset all settings to default values"
 msgstr "Бүх тохиргоог анхдагч утгад нь сэргээх"
 
-#: src/features/chess/index.tsx:425
-#: src/features/chess/index.tsx:552
+#: src/features/chess/index.tsx:428
+#: src/features/chess/index.tsx:555
 msgid "Resign"
 msgstr "Тэрсэх"
 
-#: src/features/chess/index.tsx:543
+#: src/features/chess/index.tsx:546
 msgid "Resign game?"
 msgstr "Тоглоомоос тэрсэх үү?"
 
-#: src/features/chess/index.tsx:549
+#: src/features/chess/index.tsx:552
 msgid "Resigning..."
 msgstr "Тэрсэж байна..."
 
@@ -1012,6 +1069,10 @@ msgstr "Загварын тохируулга сонгох"
 msgid "Send again"
 msgstr "Дахин илгээх"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:304
+msgid "Send email"
+msgstr "Имэйл илгээх"
+
 #: src/features/chess/components/chat-input.tsx:40
 msgid "Send message"
 msgstr "Зурвас илгээх"
@@ -1066,10 +1127,6 @@ msgstr "Жижиг"
 msgid "Spacious"
 msgstr "Уужим"
 
-#: src/features/chess/index.tsx:71
-msgid "Stalemate — draw"
-msgstr "Тэнцсэн — тэнцэв"
-
 #: src/features/chess/components/new-game.tsx:94
 msgid "Start a new chess game"
 msgstr "Шинэ шатрын тоглоом эхлүүлэх"
@@ -1108,6 +1165,10 @@ msgstr "Баг/Программууд"
 #: ../../../lib/web/src/features/document/document-page.tsx:39
 msgid "Terms and conditions"
 msgstr "Нөхцөл"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:192
+msgid "That code is incorrect or has expired."
+msgstr "Энэ код буруу эсвэл хугацаа нь дууссан байна."
 
 #: ../../../lib/web/src/components/config-drawer.tsx:181
 msgid "Theme"
@@ -1186,7 +1247,7 @@ msgstr "Хайхын тулд бичих..."
 msgid "Unable to redirect to login. Please try again."
 msgstr "Нэвтрэлт рүү чиглүүлэх боломжгүй. Дахин оролдоно уу."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:143
+#: ../../../lib/web/src/components/notification-category-button.tsx:147
 msgid "Unassigned"
 msgstr "Хариуцсан хүн оноогоогүй"
 
@@ -1198,13 +1259,17 @@ msgstr "Зөвшөөрөлгүй хандалт"
 msgid "United States"
 msgstr "АНУ"
 
-#: src/hooks/useGameWebsocket.ts:162
+#: src/hooks/useGameWebsocket.ts:164
 msgid "Unknown"
 msgstr "Үл мэдэгдэх"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:131
 msgid "Unverified"
 msgstr "Баталгаажаагүй"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:335
+msgid "Use your passkey"
+msgstr "Нэвтрэх түлхүүрээ ашиглах"
 
 #: ../../../lib/web/src/features/access/access-dialog.tsx:155
 msgid "User"
@@ -1222,6 +1287,7 @@ msgstr "Баталгаажуулах код илгээгдсэн"
 msgid "Verification failed"
 msgstr "Баталгаажуулалт амжилтгүй"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:385
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:164
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:106
 msgid "Verify"
@@ -1230,6 +1296,10 @@ msgstr "Баталгаажуулах"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:58
 msgid "Verify email address"
 msgstr "Имэйл хаягийг баталгаажуулах"
+
+#: ../../../lib/web/src/components/attachment-gallery.tsx:63
+msgid "Video thumbnail"
+msgstr "Видеоны жижиг зураг"
 
 #: ../../../lib/web/src/components/data-table/view-options.tsx:30
 msgid "View"
@@ -1256,7 +1326,7 @@ msgid "Wednesday"
 msgstr "Лхагва гараг"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:16
-#: src/features/chess/index.tsx:391
+#: src/features/chess/index.tsx:394
 msgid "White"
 msgstr "Цагаан"
 
@@ -1267,14 +1337,10 @@ msgstr "Цагаан"
 msgid "White {0}"
 msgstr "Цагаан {0}"
 
-#: src/features/chess/components/chat-message-list.tsx:197
+#: src/features/chess/components/chat-message-list.tsx:209
 msgid "You"
 msgstr "Та"
 
-#: src/features/chess/index.tsx:81
-msgid "You resigned — {opponentName} wins"
-msgstr "Та бууж өгсөн — {opponentName} хождог"
-
-#: src/features/chess/index.tsx:88
-msgid "Your move"
-msgstr "Таны нүүдэл"
+#: ../../../lib/web/src/components/restore-banner.tsx:82
+msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
+msgstr "Таны бүртгэл {source}-с энд шилжсэн. Тэнд устгах хүртэл мессеж, мэдэгдлүүд хоёр сервер рүү хүрч болно, таны зарим контент хуучин серверээс ирсээр байж болно, дагагчид таныг эндээс олоход хэдэн минут зарцуулж магадгүй."

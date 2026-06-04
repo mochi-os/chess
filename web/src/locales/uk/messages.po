@@ -46,23 +46,27 @@ msgstr "{count, plural, one {# тура} few {# тури} many {# тур} other 
 msgid "{count} pieces"
 msgstr "{count} фігур"
 
+#: src/features/chess/components/chat-message-list.tsx:190
+msgid "{name} declined the draw"
+msgstr "{name} відхилив нічию"
+
+#: src/features/chess/components/chat-message-list.tsx:186
+msgid "{name} offered a draw"
+msgstr "{name} запропонував нічию"
+
+#: src/features/chess/components/chat-message-list.tsx:184
+msgid "{name} resigned"
+msgstr "{name} здався"
+
 #: src/features/chess/components/draw-offer-banner.tsx:25
 msgid "{opponentName} offered a draw"
 msgstr "{opponentName} запропонував нічию"
 
-#: src/features/chess/index.tsx:80
-msgid "{opponentName} resigned — you win!"
-msgstr "{opponentName} здався — ви перемогли!"
-
-#: src/features/chess/index.tsx:88
-msgid "{opponentName}'s move"
-msgstr "Хід {opponentName}"
-
-#: src/features/chess/components/chat-message-list.tsx:207
+#: src/features/chess/components/chat-message-list.tsx:219
 msgid "{subject} played <0>{san}</0>"
 msgstr "{subject} зіграв <0>{san}</0>"
 
-#: src/features/chess/components/chat-message-list.tsx:205
+#: src/features/chess/components/chat-message-list.tsx:217
 msgid "{subject} took <0>{san}</0>"
 msgstr "{subject} взяв <0>{san}</0>"
 
@@ -175,13 +179,17 @@ msgstr "Усі"
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "Ви впевнені, що хочете вийти? Вам доведеться увійти знову, щоб отримати доступ до облікового запису."
 
-#: src/features/chess/index.tsx:544
+#: src/features/chess/index.tsx:547
 msgid "Are you sure you want to resign? {opponentName} will win the game."
 msgstr "Ви впевнені, що хочете здатися? {opponentName} виграє партію."
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:56
 msgid "Asc"
 msgstr "За зрост."
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:312
+msgid "Authenticator code"
+msgstr "Код автентифікатора"
 
 #: ../../../lib/web/src/components/place-picker.tsx:152
 msgid "Back"
@@ -198,7 +206,7 @@ msgid "bishop"
 msgstr "слон"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:16
-#: src/features/chess/index.tsx:391
+#: src/features/chess/index.tsx:394
 msgid "Black"
 msgstr "Чорний"
 
@@ -214,6 +222,7 @@ msgid "Boost interest"
 msgstr "Підвищити інтерес"
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx:64
+#: ../../../lib/web/src/components/step-up-dialog.tsx:360
 #: ../../../lib/web/src/components/travelling-picker.tsx:292
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:245
 #: ../../../lib/web/src/features/access/access-dialog.tsx:325
@@ -225,38 +234,22 @@ msgstr "Підвищити інтерес"
 msgid "Cancel"
 msgstr "Скасувати"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:131
+#: ../../../lib/web/src/components/notification-category-button.tsx:135
 msgid "Category for this notification"
 msgstr "Категорія цього сповіщення"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:115
+#: ../../../lib/web/src/components/notification-category-button.tsx:119
 msgid "Change notification category"
 msgstr "Змінити категорію сповіщення"
 
-#: src/features/chess/index.tsx:484
-#: src/features/chess/index.tsx:516
+#: src/features/chess/index.tsx:487
+#: src/features/chess/index.tsx:519
 msgid "Chat"
 msgstr "Чат"
 
-#: src/features/chess/index.tsx:85
-msgid "Check — {opponentName}'s move"
-msgstr "Шах — хід гравця {opponentName}"
-
-#: src/features/chess/index.tsx:85
-msgid "Check — your move"
-msgstr "Шах — ваш хід"
-
-#: src/features/chess/index.tsx:67
-msgid "Checkmate — {opponentName} wins"
-msgstr "Мат — переміг {opponentName}"
-
-#: src/features/chess/index.tsx:66
-msgid "Checkmate — you win!"
-msgstr "Мат — ви виграли!"
-
-#: src/features/chess/index.tsx:93
-#: src/features/chess/index.tsx:319
-#: src/features/chess/index.tsx:331
+#: src/features/chess/index.tsx:96
+#: src/features/chess/index.tsx:322
+#: src/features/chess/index.tsx:334
 msgid "Chess"
 msgstr "Шахи"
 
@@ -373,6 +366,10 @@ msgstr "Контекстна інформація та деталі."
 msgid "Continue"
 msgstr "Продовжити"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:349
+msgid "Continue with {label}"
+msgstr "Продовжити з {label}"
+
 #: ../../../lib/web/src/components/ui/copy-button.tsx:60
 msgid "Copy"
 msgstr "Копіювати"
@@ -380,6 +377,18 @@ msgstr "Копіювати"
 #: ../../../lib/web/src/features/document/document-page.tsx:81
 msgid "Could not load this document. Please try again later."
 msgstr "Не вдалося завантажити цей документ. Спробуйте пізніше."
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:181
+msgid "Couldn't send the code. Please try again."
+msgstr "Не вдалося надіслати код. Спробуйте ще раз."
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:133
+msgid "Couldn't start re-authentication. Please try again."
+msgstr "Не вдалося розпочати повторну автентифікацію. Спробуйте ще раз."
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:218
+msgid "Couldn't verify with that account. Please try again."
+msgstr "Не вдалося підтвердити за допомогою цього облікового запису. Спробуйте ще раз."
 
 #: src/features/chess/components/new-game.tsx:148
 msgid "Creating..."
@@ -410,9 +419,13 @@ msgstr "За замовчуванням"
 msgid "Default AI account"
 msgstr "AI-обліковий запис за замовчуванням"
 
-#: src/features/chess/index.tsx:437
+#: src/features/chess/index.tsx:440
 msgid "Delete game"
 msgstr "Видалити гру"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:90
+msgid "Delete your account on the old server"
+msgstr "Видаліть свій обліковий запис на старому сервері"
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:60
 msgid "Desc"
@@ -437,6 +450,10 @@ msgstr "Визначати з веббраузера"
 msgid "Direction"
 msgstr "Напрямок"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:73
+msgid "Dismiss"
+msgstr "Закрити"
+
 #: ../../../lib/web/src/components/ui/sidebar.tsx:235
 msgid "Displays the mobile sidebar."
 msgstr "Відображає мобільну бічну панель."
@@ -445,17 +462,29 @@ msgstr "Відображає мобільну бічну панель."
 msgid "Download"
 msgstr "Завантажити"
 
-#: src/features/chess/index.tsx:75
-msgid "Draw"
-msgstr "Нічия"
+#: src/features/chess/components/chat-message-list.tsx:188
+msgid "Draw agreed"
+msgstr "Нічию узгоджено"
 
-#: src/features/chess/index.tsx:450
+#: src/features/chess/index.tsx:453
 msgid "Draw offered — waiting for {opponentName}"
 msgstr "Запропоновано нічию — очікування на {opponentName}"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:134
 msgid "Dyslexia-friendly"
 msgstr "Підходить при дислексії"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:286
+msgid "Email code"
+msgstr "Код електронної пошти"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:296
+msgid "Enter the code from your email"
+msgstr "Введіть код зі свого електронного листа"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:321
+msgid "Enter your authenticator code"
+msgstr "Введіть код з програми автентифікації"
 
 #: ../../../lib/web/src/components/layout/app-sidebar.tsx:35
 msgid "Expand sidebar"
@@ -465,7 +494,7 @@ msgstr "Розгорнути бічну панель"
 msgid "Extra large"
 msgstr "Дуже великий"
 
-#: src/features/chess/index.tsx:200
+#: src/features/chess/index.tsx:203
 msgid "Failed to accept draw"
 msgstr "Не вдалося прийняти нічию"
 
@@ -477,19 +506,19 @@ msgstr "Не вдалося додати обліковий запис"
 msgid "Failed to create game"
 msgstr "Не вдалося створити гру"
 
-#: src/features/chess/index.tsx:215
+#: src/features/chess/index.tsx:218
 msgid "Failed to create rematch"
 msgstr "Не вдалося створити реванш"
 
-#: src/features/chess/index.tsx:205
+#: src/features/chess/index.tsx:208
 msgid "Failed to decline draw"
 msgstr "Не вдалося відхилити нічию"
 
-#: src/features/chess/index.tsx:226
+#: src/features/chess/index.tsx:229
 msgid "Failed to delete game"
 msgstr "Не вдалося видалити гру"
 
-#: src/features/chess/index.tsx:195
+#: src/features/chess/index.tsx:198
 msgid "Failed to offer draw"
 msgstr "Не вдалося запропонувати нічию"
 
@@ -497,12 +526,12 @@ msgstr "Не вдалося запропонувати нічию"
 msgid "Failed to remove account"
 msgstr "Не вдалося видалити обліковий запис"
 
-#: src/features/chess/index.tsx:188
+#: src/features/chess/index.tsx:191
 msgid "Failed to resign"
 msgstr "Не вдалося здатися"
 
-#: src/features/chess/index.tsx:500
-#: src/features/chess/index.tsx:532
+#: src/features/chess/index.tsx:503
+#: src/features/chess/index.tsx:535
 msgid "Failed to send"
 msgstr "Не вдалося надіслати"
 
@@ -510,9 +539,13 @@ msgstr "Не вдалося надіслати"
 msgid "Failed to send verification code"
 msgstr "Не вдалося надіслати код підтвердження"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:104
+#: ../../../lib/web/src/components/notification-category-button.tsx:108
 msgid "Failed to update category"
 msgstr "Не вдалося оновити категорію"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:79
+msgid "Finish moving your account"
+msgstr "Завершіть переміщення облікового запису"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:244
 msgid "Floating"
@@ -542,7 +575,7 @@ msgstr "Повний макет"
 msgid "Game created"
 msgstr "Гру створено"
 
-#: src/features/chess/index.tsx:222
+#: src/features/chess/index.tsx:225
 msgid "Game deleted"
 msgstr "Гру видалено"
 
@@ -756,7 +789,7 @@ msgstr "Результатів не знайдено."
 msgid "No time zone found."
 msgstr "Часовий пояс не знайдено."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:135
+#: ../../../lib/web/src/components/notification-category-button.tsx:139
 msgid "No topic record yet — try again after the next notification."
 msgstr "Запису про тему ще немає — спробуйте ще раз після наступного сповіщення."
 
@@ -780,7 +813,7 @@ msgstr "Звичайний"
 msgid "Notifications"
 msgstr "Сповіщення"
 
-#: src/features/chess/index.tsx:421
+#: src/features/chess/index.tsx:424
 msgid "Offer draw"
 msgstr "Запропонувати нічию"
 
@@ -793,11 +826,11 @@ msgstr "Ой! Сторінку не знайдено!"
 msgid "Open account actions"
 msgstr "Відкрити дії з обліковим записом"
 
-#: src/features/chess/index.tsx:400
+#: src/features/chess/index.tsx:403
 msgid "Open chat panel"
 msgstr "Відкрити панель чату"
 
-#: src/features/chess/index.tsx:408
+#: src/features/chess/index.tsx:411
 msgid "Open game actions"
 msgstr "Відкрити дії гри"
 
@@ -821,6 +854,18 @@ msgstr "Інше"
 #: ../../../lib/web/src/features/access/access-list.tsx:213
 msgid "Owner"
 msgstr "Власник"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:331
+msgid "Passkey"
+msgstr "Ключ доступу"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:206
+msgid "Passkey verification failed. Please try again."
+msgstr "Не вдалося перевірити ключ доступу. Спробуйте ще раз."
+
+#: ../../../lib/web/src/components/restore-banner.tsx:126
+msgid "Passkeys"
+msgstr "Ключі доступу"
 
 #: src/features/chess/lib/use-chess-piece-name.ts:17
 msgid "pawn"
@@ -857,6 +902,14 @@ msgstr "Перетворити на:"
 msgid "queen"
 msgstr "ферзь"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:98
+msgid "Re-link your accounts on this server"
+msgstr "Повторно прив'яжіть облікові записи на цьому сервері"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:120
+msgid "Re-register your passkeys on this server"
+msgstr "Зареєструйте свої ключі доступу на цьому сервері знову"
+
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:216
 #: ../../../lib/web/src/components/search-entity-page.tsx:191
 msgid "Recommended"
@@ -878,7 +931,7 @@ msgstr "Відносний (5хв, 3год, 2д)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "Відносний протягом 24 годин, інакше абсолютний"
 
-#: src/features/chess/index.tsx:434
+#: src/features/chess/index.tsx:437
 msgid "Rematch"
 msgstr "Реванш"
 
@@ -900,6 +953,10 @@ msgstr "Видалити доступ?"
 msgid "Remove interest"
 msgstr "Видалити інтерес"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:364
+msgid "Resend email"
+msgstr "Надіслати лист повторно"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:77
 #: ../../../lib/web/src/components/data-table/toolbar.tsx:78
 msgid "Reset"
@@ -909,16 +966,16 @@ msgstr "Скинути"
 msgid "Reset all settings to default values"
 msgstr "Скинути всі налаштування до значень за замовчуванням"
 
-#: src/features/chess/index.tsx:425
-#: src/features/chess/index.tsx:552
+#: src/features/chess/index.tsx:428
+#: src/features/chess/index.tsx:555
 msgid "Resign"
 msgstr "Здатися"
 
-#: src/features/chess/index.tsx:543
+#: src/features/chess/index.tsx:546
 msgid "Resign game?"
 msgstr "Здатися у грі?"
 
-#: src/features/chess/index.tsx:549
+#: src/features/chess/index.tsx:552
 msgid "Resigning..."
 msgstr "Здача..."
 
@@ -1012,6 +1069,10 @@ msgstr "Виберіть тему"
 msgid "Send again"
 msgstr "Надіслати ще раз"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:304
+msgid "Send email"
+msgstr "Надіслати лист"
+
 #: src/features/chess/components/chat-input.tsx:40
 msgid "Send message"
 msgstr "Надіслати повідомлення"
@@ -1066,10 +1127,6 @@ msgstr "Малий"
 msgid "Spacious"
 msgstr "Просторий"
 
-#: src/features/chess/index.tsx:71
-msgid "Stalemate — draw"
-msgstr "Пат — нічия"
-
 #: src/features/chess/components/new-game.tsx:94
 msgid "Start a new chess game"
 msgstr "Почати нову шахову партію"
@@ -1108,6 +1165,10 @@ msgstr "Команди/застосунки"
 #: ../../../lib/web/src/features/document/document-page.tsx:39
 msgid "Terms and conditions"
 msgstr "Умови та правила"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:192
+msgid "That code is incorrect or has expired."
+msgstr "Цей код неправильний або його термін дії минув."
 
 #: ../../../lib/web/src/components/config-drawer.tsx:181
 msgid "Theme"
@@ -1186,7 +1247,7 @@ msgstr "Введіть для пошуку..."
 msgid "Unable to redirect to login. Please try again."
 msgstr "Не вдається перенаправити на сторінку входу. Спробуйте ще раз."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:143
+#: ../../../lib/web/src/components/notification-category-button.tsx:147
 msgid "Unassigned"
 msgstr "Не призначено"
 
@@ -1198,13 +1259,17 @@ msgstr "Неавторизований доступ"
 msgid "United States"
 msgstr "Сполучені Штати"
 
-#: src/hooks/useGameWebsocket.ts:162
+#: src/hooks/useGameWebsocket.ts:164
 msgid "Unknown"
 msgstr "Невідомо"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:131
 msgid "Unverified"
 msgstr "Не перевірено"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:335
+msgid "Use your passkey"
+msgstr "Скористайтеся ключем доступу"
 
 #: ../../../lib/web/src/features/access/access-dialog.tsx:155
 msgid "User"
@@ -1222,6 +1287,7 @@ msgstr "Код підтвердження надіслано"
 msgid "Verification failed"
 msgstr "Перевірка не вдалася"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:385
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:164
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:106
 msgid "Verify"
@@ -1230,6 +1296,10 @@ msgstr "Перевірити"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:58
 msgid "Verify email address"
 msgstr "Підтвердити електронну адресу"
+
+#: ../../../lib/web/src/components/attachment-gallery.tsx:63
+msgid "Video thumbnail"
+msgstr "Мініатюра відео"
 
 #: ../../../lib/web/src/components/data-table/view-options.tsx:30
 msgid "View"
@@ -1256,7 +1326,7 @@ msgid "Wednesday"
 msgstr "Середа"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:16
-#: src/features/chess/index.tsx:391
+#: src/features/chess/index.tsx:394
 msgid "White"
 msgstr "Білий"
 
@@ -1267,14 +1337,10 @@ msgstr "Білий"
 msgid "White {0}"
 msgstr "Білий {0}"
 
-#: src/features/chess/components/chat-message-list.tsx:197
+#: src/features/chess/components/chat-message-list.tsx:209
 msgid "You"
 msgstr "Ви"
 
-#: src/features/chess/index.tsx:81
-msgid "You resigned — {opponentName} wins"
-msgstr "Ви здалися — перемагає {opponentName}"
-
-#: src/features/chess/index.tsx:88
-msgid "Your move"
-msgstr "Ваш хід"
+#: ../../../lib/web/src/components/restore-banner.tsx:82
+msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
+msgstr "Ваш обліковий запис переміщено сюди з {source}. Поки ви не видалите його там, повідомлення та сповіщення можуть надходити на обидва сервери, частина вашого вмісту продовжить надаватися зі старого сервера, а підписникам може знадобитися кілька хвилин, щоб знайти вас тут."

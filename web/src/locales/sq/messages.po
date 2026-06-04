@@ -46,23 +46,27 @@ msgstr "{count, plural, one {# kala} other {# kala}}"
 msgid "{count} pieces"
 msgstr "{count} figura"
 
+#: src/features/chess/components/chat-message-list.tsx:190
+msgid "{name} declined the draw"
+msgstr "{name} refuzoi barazimin"
+
+#: src/features/chess/components/chat-message-list.tsx:186
+msgid "{name} offered a draw"
+msgstr "{name} ofroi barazim"
+
+#: src/features/chess/components/chat-message-list.tsx:184
+msgid "{name} resigned"
+msgstr "{name} dorëzoi"
+
 #: src/features/chess/components/draw-offer-banner.tsx:25
 msgid "{opponentName} offered a draw"
 msgstr "{opponentName} ofroi një barazim"
 
-#: src/features/chess/index.tsx:80
-msgid "{opponentName} resigned — you win!"
-msgstr "{opponentName} u dorëzua — fitove!"
-
-#: src/features/chess/index.tsx:88
-msgid "{opponentName}'s move"
-msgstr "Lëvizja e {opponentName}"
-
-#: src/features/chess/components/chat-message-list.tsx:207
+#: src/features/chess/components/chat-message-list.tsx:219
 msgid "{subject} played <0>{san}</0>"
 msgstr "{subject} luajti <0>{san}</0>"
 
-#: src/features/chess/components/chat-message-list.tsx:205
+#: src/features/chess/components/chat-message-list.tsx:217
 msgid "{subject} took <0>{san}</0>"
 msgstr "{subject} mori <0>{san}</0>"
 
@@ -175,13 +179,17 @@ msgstr "Të gjitha"
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "Je i sigurt që do të dalësh? Do të të duhet të rihysh për të hyrë në llogarinë tënde."
 
-#: src/features/chess/index.tsx:544
+#: src/features/chess/index.tsx:547
 msgid "Are you sure you want to resign? {opponentName} will win the game."
 msgstr "Je i sigurt që do të dorëzohesh? {opponentName} do të fitojë lojën."
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:56
 msgid "Asc"
 msgstr "Rritës"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:312
+msgid "Authenticator code"
+msgstr "Kodi i autentikuesit"
 
 #: ../../../lib/web/src/components/place-picker.tsx:152
 msgid "Back"
@@ -198,7 +206,7 @@ msgid "bishop"
 msgstr "fil"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:16
-#: src/features/chess/index.tsx:391
+#: src/features/chess/index.tsx:394
 msgid "Black"
 msgstr "I zi"
 
@@ -214,6 +222,7 @@ msgid "Boost interest"
 msgstr "Rrit interesin"
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx:64
+#: ../../../lib/web/src/components/step-up-dialog.tsx:360
 #: ../../../lib/web/src/components/travelling-picker.tsx:292
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:245
 #: ../../../lib/web/src/features/access/access-dialog.tsx:325
@@ -225,38 +234,22 @@ msgstr "Rrit interesin"
 msgid "Cancel"
 msgstr "Anulo"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:131
+#: ../../../lib/web/src/components/notification-category-button.tsx:135
 msgid "Category for this notification"
 msgstr "Kategoria për këtë njoftim"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:115
+#: ../../../lib/web/src/components/notification-category-button.tsx:119
 msgid "Change notification category"
 msgstr "Ndrysho kategorinë e njoftimit"
 
-#: src/features/chess/index.tsx:484
-#: src/features/chess/index.tsx:516
+#: src/features/chess/index.tsx:487
+#: src/features/chess/index.tsx:519
 msgid "Chat"
 msgstr "Bisedë"
 
-#: src/features/chess/index.tsx:85
-msgid "Check — {opponentName}'s move"
-msgstr "Shahu — radha e {opponentName}"
-
-#: src/features/chess/index.tsx:85
-msgid "Check — your move"
-msgstr "Shahu — radha jote"
-
-#: src/features/chess/index.tsx:67
-msgid "Checkmate — {opponentName} wins"
-msgstr "Mat — {opponentName} fitoi"
-
-#: src/features/chess/index.tsx:66
-msgid "Checkmate — you win!"
-msgstr "Mat — fitove!"
-
-#: src/features/chess/index.tsx:93
-#: src/features/chess/index.tsx:319
-#: src/features/chess/index.tsx:331
+#: src/features/chess/index.tsx:96
+#: src/features/chess/index.tsx:322
+#: src/features/chess/index.tsx:334
 msgid "Chess"
 msgstr "Chess"
 
@@ -373,6 +366,10 @@ msgstr "Informacion kontekstual dhe detaje."
 msgid "Continue"
 msgstr "Vazhdo"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:349
+msgid "Continue with {label}"
+msgstr "Vazhdo me {label}"
+
 #: ../../../lib/web/src/components/ui/copy-button.tsx:60
 msgid "Copy"
 msgstr "Kopjo"
@@ -380,6 +377,18 @@ msgstr "Kopjo"
 #: ../../../lib/web/src/features/document/document-page.tsx:81
 msgid "Could not load this document. Please try again later."
 msgstr "Nuk mund të ngarkohej ky dokument. Provo më vonë."
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:181
+msgid "Couldn't send the code. Please try again."
+msgstr "Kodi nuk mund të dërgohej. Ju lutemi provoni përsëri."
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:133
+msgid "Couldn't start re-authentication. Please try again."
+msgstr "Rivërtetimi nuk mund të niste. Ju lutemi provoni përsëri."
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:218
+msgid "Couldn't verify with that account. Please try again."
+msgstr "Nuk u verifikua dot me atë llogari. Ju lutemi provoni përsëri."
 
 #: src/features/chess/components/new-game.tsx:148
 msgid "Creating..."
@@ -410,9 +419,13 @@ msgstr "I parazgjedhur"
 msgid "Default AI account"
 msgstr "Llogaria e parazgjedhur AI"
 
-#: src/features/chess/index.tsx:437
+#: src/features/chess/index.tsx:440
 msgid "Delete game"
 msgstr "Fshi lojën"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:90
+msgid "Delete your account on the old server"
+msgstr "Fshini llogarinë tuaj në serverin e vjetër"
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:60
 msgid "Desc"
@@ -437,6 +450,10 @@ msgstr "Zbulo nga shfletuesi i web-it"
 msgid "Direction"
 msgstr "Drejtimi"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:73
+msgid "Dismiss"
+msgstr "Hidhe"
+
 #: ../../../lib/web/src/components/ui/sidebar.tsx:235
 msgid "Displays the mobile sidebar."
 msgstr "Shfaq anën mobile."
@@ -445,17 +462,29 @@ msgstr "Shfaq anën mobile."
 msgid "Download"
 msgstr "Shkarko"
 
-#: src/features/chess/index.tsx:75
-msgid "Draw"
-msgstr "Barazim"
+#: src/features/chess/components/chat-message-list.tsx:188
+msgid "Draw agreed"
+msgstr "Barazimi u pranua"
 
-#: src/features/chess/index.tsx:450
+#: src/features/chess/index.tsx:453
 msgid "Draw offered — waiting for {opponentName}"
 msgstr "U ofrua barazim — duke pritur për {opponentName}"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:134
 msgid "Dyslexia-friendly"
 msgstr "I përshtatshëm për disleksi"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:286
+msgid "Email code"
+msgstr "Kodi me email"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:296
+msgid "Enter the code from your email"
+msgstr "Vendosni kodin nga email-i juaj"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:321
+msgid "Enter your authenticator code"
+msgstr "Vendosni kodin e aplikacionit të vërtetimit"
 
 #: ../../../lib/web/src/components/layout/app-sidebar.tsx:35
 msgid "Expand sidebar"
@@ -465,7 +494,7 @@ msgstr "Zgjero shiritin anësor"
 msgid "Extra large"
 msgstr "Shumë i madh"
 
-#: src/features/chess/index.tsx:200
+#: src/features/chess/index.tsx:203
 msgid "Failed to accept draw"
 msgstr "Pranimi i barazimit dështoi"
 
@@ -477,19 +506,19 @@ msgstr "Shtimi i llogarisë dështoi"
 msgid "Failed to create game"
 msgstr "Krijimi i lojës dështoi"
 
-#: src/features/chess/index.tsx:215
+#: src/features/chess/index.tsx:218
 msgid "Failed to create rematch"
 msgstr "Krijimi i ndeshjes së re dështoi"
 
-#: src/features/chess/index.tsx:205
+#: src/features/chess/index.tsx:208
 msgid "Failed to decline draw"
 msgstr "Refuzimi i barazimit dështoi"
 
-#: src/features/chess/index.tsx:226
+#: src/features/chess/index.tsx:229
 msgid "Failed to delete game"
 msgstr "Fshirja e lojës dështoi"
 
-#: src/features/chess/index.tsx:195
+#: src/features/chess/index.tsx:198
 msgid "Failed to offer draw"
 msgstr "Ofrimi i barazimit dështoi"
 
@@ -497,12 +526,12 @@ msgstr "Ofrimi i barazimit dështoi"
 msgid "Failed to remove account"
 msgstr "Heqja e llogarisë dështoi"
 
-#: src/features/chess/index.tsx:188
+#: src/features/chess/index.tsx:191
 msgid "Failed to resign"
 msgstr "Dorëzimi dështoi"
 
-#: src/features/chess/index.tsx:500
-#: src/features/chess/index.tsx:532
+#: src/features/chess/index.tsx:503
+#: src/features/chess/index.tsx:535
 msgid "Failed to send"
 msgstr "Dërgimi dështoi"
 
@@ -510,9 +539,13 @@ msgstr "Dërgimi dështoi"
 msgid "Failed to send verification code"
 msgstr "Dërgimi i kodit të verifikimit dështoi"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:104
+#: ../../../lib/web/src/components/notification-category-button.tsx:108
 msgid "Failed to update category"
 msgstr "Përditësimi i kategorisë dështoi"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:79
+msgid "Finish moving your account"
+msgstr "Përfundoni lëvizjen e llogarisë suaj"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:244
 msgid "Floating"
@@ -542,7 +575,7 @@ msgstr "Paraqitje e plotë"
 msgid "Game created"
 msgstr "Loja u krijua"
 
-#: src/features/chess/index.tsx:222
+#: src/features/chess/index.tsx:225
 msgid "Game deleted"
 msgstr "Loja u fshi"
 
@@ -756,7 +789,7 @@ msgstr "S'u gjet asnjë rezultat."
 msgid "No time zone found."
 msgstr "S'u gjet asnjë zonë kohore."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:135
+#: ../../../lib/web/src/components/notification-category-button.tsx:139
 msgid "No topic record yet — try again after the next notification."
 msgstr "Ende asnjë regjistrim teme — provoni përsëri pas njoftimit tjetër."
 
@@ -780,7 +813,7 @@ msgstr "Normale"
 msgid "Notifications"
 msgstr "Njoftime"
 
-#: src/features/chess/index.tsx:421
+#: src/features/chess/index.tsx:424
 msgid "Offer draw"
 msgstr "Ofro barazim"
 
@@ -793,11 +826,11 @@ msgstr "Ups! Faqja s'u gjet!"
 msgid "Open account actions"
 msgstr "Hap veprimet e llogarisë"
 
-#: src/features/chess/index.tsx:400
+#: src/features/chess/index.tsx:403
 msgid "Open chat panel"
 msgstr "Hap panelin e bisedës"
 
-#: src/features/chess/index.tsx:408
+#: src/features/chess/index.tsx:411
 msgid "Open game actions"
 msgstr "Hap veprimet e lojës"
 
@@ -821,6 +854,18 @@ msgstr "Tjetër"
 #: ../../../lib/web/src/features/access/access-list.tsx:213
 msgid "Owner"
 msgstr "Pronari"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:331
+msgid "Passkey"
+msgstr "Kyç"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:206
+msgid "Passkey verification failed. Please try again."
+msgstr "Verifikimi i çelësit të hyrjes dështoi. Ju lutemi provoni përsëri."
+
+#: ../../../lib/web/src/components/restore-banner.tsx:126
+msgid "Passkeys"
+msgstr "Kyçet"
 
 #: src/features/chess/lib/use-chess-piece-name.ts:17
 msgid "pawn"
@@ -857,6 +902,14 @@ msgstr "Promovo në:"
 msgid "queen"
 msgstr "mbretëreshë"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:98
+msgid "Re-link your accounts on this server"
+msgstr "Rilinkoni llogaritë tuaja në këtë server"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:120
+msgid "Re-register your passkeys on this server"
+msgstr "Riregjistroni çelësat tuaj të hyrjes në këtë server"
+
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:216
 #: ../../../lib/web/src/components/search-entity-page.tsx:191
 msgid "Recommended"
@@ -878,7 +931,7 @@ msgstr "Relative (5m, 3h, 2d)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "Relative brenda 24 orëve, përndryshe absolute"
 
-#: src/features/chess/index.tsx:434
+#: src/features/chess/index.tsx:437
 msgid "Rematch"
 msgstr "Përsërit ndeshjen"
 
@@ -900,6 +953,10 @@ msgstr "Të hiqet qasja?"
 msgid "Remove interest"
 msgstr "Hiq interesin"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:364
+msgid "Resend email"
+msgstr "Ridërgo email-in"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:77
 #: ../../../lib/web/src/components/data-table/toolbar.tsx:78
 msgid "Reset"
@@ -909,16 +966,16 @@ msgstr "Rivendos"
 msgid "Reset all settings to default values"
 msgstr "Rivendos të gjitha cilësimet në vlerat parazgjedhura"
 
-#: src/features/chess/index.tsx:425
-#: src/features/chess/index.tsx:552
+#: src/features/chess/index.tsx:428
+#: src/features/chess/index.tsx:555
 msgid "Resign"
 msgstr "Dorëzohu"
 
-#: src/features/chess/index.tsx:543
+#: src/features/chess/index.tsx:546
 msgid "Resign game?"
 msgstr "Të dorëzohesh nga loja?"
 
-#: src/features/chess/index.tsx:549
+#: src/features/chess/index.tsx:552
 msgid "Resigning..."
 msgstr "Duke u dorëzuar..."
 
@@ -1012,6 +1069,10 @@ msgstr "Zgjidh preferencën e temës"
 msgid "Send again"
 msgstr "Dërgo përsëri"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:304
+msgid "Send email"
+msgstr "Dërgo email"
+
 #: src/features/chess/components/chat-input.tsx:40
 msgid "Send message"
 msgstr "Dërgo mesazhin"
@@ -1066,10 +1127,6 @@ msgstr "I vogël"
 msgid "Spacious"
 msgstr "I hapësirshëm"
 
-#: src/features/chess/index.tsx:71
-msgid "Stalemate — draw"
-msgstr "Stalemate — barazim"
-
 #: src/features/chess/components/new-game.tsx:94
 msgid "Start a new chess game"
 msgstr "Fillo një lojë të re shahu"
@@ -1108,6 +1165,10 @@ msgstr "Ekipet/Aplikacionet"
 #: ../../../lib/web/src/features/document/document-page.tsx:39
 msgid "Terms and conditions"
 msgstr "Kushtet dhe rregullat"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:192
+msgid "That code is incorrect or has expired."
+msgstr "Ai kod është i pasaktë ose ka skaduar."
 
 #: ../../../lib/web/src/components/config-drawer.tsx:181
 msgid "Theme"
@@ -1186,7 +1247,7 @@ msgstr "Shkruaj për të kërkuar..."
 msgid "Unable to redirect to login. Please try again."
 msgstr "Nuk mund të ridrejtohet te hyrja. Ju lutemi provoni përsëri."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:143
+#: ../../../lib/web/src/components/notification-category-button.tsx:147
 msgid "Unassigned"
 msgstr "I pacaktuar"
 
@@ -1198,13 +1259,17 @@ msgstr "Akses i paautorizuar"
 msgid "United States"
 msgstr "Shtetet e Bashkuara"
 
-#: src/hooks/useGameWebsocket.ts:162
+#: src/hooks/useGameWebsocket.ts:164
 msgid "Unknown"
 msgstr "I panjohur"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:131
 msgid "Unverified"
 msgstr "I paverifikuar"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:335
+msgid "Use your passkey"
+msgstr "Përdorni çelësin tuaj të hyrjes"
 
 #: ../../../lib/web/src/features/access/access-dialog.tsx:155
 msgid "User"
@@ -1222,6 +1287,7 @@ msgstr "Kodi i verifikimit u dërgua"
 msgid "Verification failed"
 msgstr "Verifikimi dështoi"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:385
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:164
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:106
 msgid "Verify"
@@ -1230,6 +1296,10 @@ msgstr "Verifiko"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:58
 msgid "Verify email address"
 msgstr "Verifiko adresën e email-it"
+
+#: ../../../lib/web/src/components/attachment-gallery.tsx:63
+msgid "Video thumbnail"
+msgstr "Miniatura e videos"
 
 #: ../../../lib/web/src/components/data-table/view-options.tsx:30
 msgid "View"
@@ -1256,7 +1326,7 @@ msgid "Wednesday"
 msgstr "E mërkurë"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:16
-#: src/features/chess/index.tsx:391
+#: src/features/chess/index.tsx:394
 msgid "White"
 msgstr "I bardhë"
 
@@ -1267,14 +1337,10 @@ msgstr "I bardhë"
 msgid "White {0}"
 msgstr "I bardhi {0}"
 
-#: src/features/chess/components/chat-message-list.tsx:197
+#: src/features/chess/components/chat-message-list.tsx:209
 msgid "You"
 msgstr "Ti"
 
-#: src/features/chess/index.tsx:81
-msgid "You resigned — {opponentName} wins"
-msgstr "U dorëzove — {opponentName} fiton"
-
-#: src/features/chess/index.tsx:88
-msgid "Your move"
-msgstr "Lëvizja jote"
+#: ../../../lib/web/src/components/restore-banner.tsx:82
+msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
+msgstr "Llogaria juaj u zhvendos këtu nga {source}. Derisa ta fshini atje, mesazhet dhe njoftimet mund të arrijnë në të dy serverët, një pjesë e përmbajtjes suaj vazhdon të shërbejë nga serveri i vjetër dhe ndjekësit mund të kenë nevojë për disa minuta që t'ju gjejnë këtu."

@@ -78,9 +78,4 @@ export const gamesApi = {
 
   delete: (gameId: string) =>
     client.post<DeleteResponse>(endpoints.game.delete(gameId)),
-
-  checkSubscription: () =>
-    client
-      .get<{ data: { exists: boolean } } | { exists: boolean }>('/-/notifications/check')
-      .then((res) => unwrapData<{ exists: boolean }>(res)),
 }

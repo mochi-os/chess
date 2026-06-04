@@ -46,23 +46,27 @@ msgstr "{count, plural, one {# tura} other {# tura}}"
 msgid "{count} pieces"
 msgstr "{count} bölek"
 
+#: src/features/chess/components/chat-message-list.tsx:190
+msgid "{name} declined the draw"
+msgstr "{name} deňligi ret etdi"
+
+#: src/features/chess/components/chat-message-list.tsx:186
+msgid "{name} offered a draw"
+msgstr "{name} deňlik teklip etdi"
+
+#: src/features/chess/components/chat-message-list.tsx:184
+msgid "{name} resigned"
+msgstr "{name} boýun egdi"
+
 #: src/features/chess/components/draw-offer-banner.tsx:25
 msgid "{opponentName} offered a draw"
 msgstr "{opponentName} deňme-deň teklip etdi"
 
-#: src/features/chess/index.tsx:80
-msgid "{opponentName} resigned — you win!"
-msgstr "{opponentName} ýüz öwürdi — sen ýeňdiň!"
-
-#: src/features/chess/index.tsx:88
-msgid "{opponentName}'s move"
-msgstr "{opponentName} -yň hereketi"
-
-#: src/features/chess/components/chat-message-list.tsx:207
+#: src/features/chess/components/chat-message-list.tsx:219
 msgid "{subject} played <0>{san}</0>"
 msgstr "{subject} <0>{san}</0> oýnady"
 
-#: src/features/chess/components/chat-message-list.tsx:205
+#: src/features/chess/components/chat-message-list.tsx:217
 msgid "{subject} took <0>{san}</0>"
 msgstr "{subject} <0>{san}</0> aldy"
 
@@ -175,13 +179,17 @@ msgstr "Hemmesi"
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "Çykmak isleýärsiňizmi? Hasabyňyza girmek üçin täzeden girmeli bolarsyňyz."
 
-#: src/features/chess/index.tsx:544
+#: src/features/chess/index.tsx:547
 msgid "Are you sure you want to resign? {opponentName} will win the game."
 msgstr "Boýun egmek isleýärsiňizmi? {opponentName} oýny utar."
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:56
 msgid "Asc"
 msgstr "Aşak"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:312
+msgid "Authenticator code"
+msgstr "Autentifikator kody"
 
 #: ../../../lib/web/src/components/place-picker.tsx:152
 msgid "Back"
@@ -198,7 +206,7 @@ msgid "bishop"
 msgstr "fil"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:16
-#: src/features/chess/index.tsx:391
+#: src/features/chess/index.tsx:394
 msgid "Black"
 msgstr "Gara"
 
@@ -214,6 +222,7 @@ msgid "Boost interest"
 msgstr "Gyzyklanmany ýokarlandyrmak"
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx:64
+#: ../../../lib/web/src/components/step-up-dialog.tsx:360
 #: ../../../lib/web/src/components/travelling-picker.tsx:292
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:245
 #: ../../../lib/web/src/features/access/access-dialog.tsx:325
@@ -225,38 +234,22 @@ msgstr "Gyzyklanmany ýokarlandyrmak"
 msgid "Cancel"
 msgstr "Ýatyrmak"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:131
+#: ../../../lib/web/src/components/notification-category-button.tsx:135
 msgid "Category for this notification"
 msgstr "Bu bildiriş üçin kategoriýa"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:115
+#: ../../../lib/web/src/components/notification-category-button.tsx:119
 msgid "Change notification category"
 msgstr "Bildiriş kategoriýasyny üýtgetmek"
 
-#: src/features/chess/index.tsx:484
-#: src/features/chess/index.tsx:516
+#: src/features/chess/index.tsx:487
+#: src/features/chess/index.tsx:519
 msgid "Chat"
 msgstr "Söhbetdeşlik"
 
-#: src/features/chess/index.tsx:85
-msgid "Check — {opponentName}'s move"
-msgstr "Şah — {opponentName} hereketi"
-
-#: src/features/chess/index.tsx:85
-msgid "Check — your move"
-msgstr "Şah — siziň hereketiňiz"
-
-#: src/features/chess/index.tsx:67
-msgid "Checkmate — {opponentName} wins"
-msgstr "Mat — {opponentName} utdy"
-
-#: src/features/chess/index.tsx:66
-msgid "Checkmate — you win!"
-msgstr "Mat — siz utdyňyz!"
-
-#: src/features/chess/index.tsx:93
-#: src/features/chess/index.tsx:319
-#: src/features/chess/index.tsx:331
+#: src/features/chess/index.tsx:96
+#: src/features/chess/index.tsx:322
+#: src/features/chess/index.tsx:334
 msgid "Chess"
 msgstr "Şahmat"
 
@@ -373,6 +366,10 @@ msgstr "Kontekstual maglumat we jikme-jiklikler."
 msgid "Continue"
 msgstr "Dowam etmek"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:349
+msgid "Continue with {label}"
+msgstr "{label} bilen dowam et"
+
 #: ../../../lib/web/src/components/ui/copy-button.tsx:60
 msgid "Copy"
 msgstr "Nusgalamak"
@@ -380,6 +377,18 @@ msgstr "Nusgalamak"
 #: ../../../lib/web/src/features/document/document-page.tsx:81
 msgid "Could not load this document. Please try again later."
 msgstr "Bu resminamany ýüklemedi. Soň gaýtadan synanyşyň."
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:181
+msgid "Couldn't send the code. Please try again."
+msgstr "Kody ugratmak başartmady. Täzeden synanyşyň."
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:133
+msgid "Couldn't start re-authentication. Please try again."
+msgstr "Gaýtadan tassyklamany başlatmak başartmady. Täzeden synanyşyň."
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:218
+msgid "Couldn't verify with that account. Please try again."
+msgstr "Şol hasap bilen barlap bolmady. Täzeden synanyşyň."
 
 #: src/features/chess/components/new-game.tsx:148
 msgid "Creating..."
@@ -410,9 +419,13 @@ msgstr "Adaty"
 msgid "Default AI account"
 msgstr "Adaty AI hasap"
 
-#: src/features/chess/index.tsx:437
+#: src/features/chess/index.tsx:440
 msgid "Delete game"
 msgstr "Oýun pozmak"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:90
+msgid "Delete your account on the old server"
+msgstr "Köne serwerdäki hasabyňyzy pozy"
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:60
 msgid "Desc"
@@ -437,6 +450,10 @@ msgstr "Web brauzerden anyklamak"
 msgid "Direction"
 msgstr "Ugur"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:73
+msgid "Dismiss"
+msgstr "Goýbermek"
+
 #: ../../../lib/web/src/components/ui/sidebar.tsx:235
 msgid "Displays the mobile sidebar."
 msgstr "Mobil gapdal paneli görkezýär."
@@ -445,17 +462,29 @@ msgstr "Mobil gapdal paneli görkezýär."
 msgid "Download"
 msgstr "Ýükläp al"
 
-#: src/features/chess/index.tsx:75
-msgid "Draw"
-msgstr "Deňme-deň"
+#: src/features/chess/components/chat-message-list.tsx:188
+msgid "Draw agreed"
+msgstr "Deňlik kabul edildi"
 
-#: src/features/chess/index.tsx:450
+#: src/features/chess/index.tsx:453
 msgid "Draw offered — waiting for {opponentName}"
 msgstr "Deňme-deň teklip edildi — {opponentName} garaşylýar"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:134
 msgid "Dyslexia-friendly"
 msgstr "Disleksiýa uýgunlaşan"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:286
+msgid "Email code"
+msgstr "E-poçta kody"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:296
+msgid "Enter the code from your email"
+msgstr "E-poçtaňyzdaky kody giriziň"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:321
+msgid "Enter your authenticator code"
+msgstr "Autentifikator koduňyzy giriziň"
 
 #: ../../../lib/web/src/components/layout/app-sidebar.tsx:35
 msgid "Expand sidebar"
@@ -465,7 +494,7 @@ msgstr "Gapdal paneli giňelt"
 msgid "Extra large"
 msgstr "Goşmaça uly"
 
-#: src/features/chess/index.tsx:200
+#: src/features/chess/index.tsx:203
 msgid "Failed to accept draw"
 msgstr "Deňme-deň kabul edilmedi"
 
@@ -477,19 +506,19 @@ msgstr "Hasap goşulmady"
 msgid "Failed to create game"
 msgstr "Oýun döredilmedi"
 
-#: src/features/chess/index.tsx:215
+#: src/features/chess/index.tsx:218
 msgid "Failed to create rematch"
 msgstr "Gaýtalama döredilmedi"
 
-#: src/features/chess/index.tsx:205
+#: src/features/chess/index.tsx:208
 msgid "Failed to decline draw"
 msgstr "Deňme-deň ret edilmedi"
 
-#: src/features/chess/index.tsx:226
+#: src/features/chess/index.tsx:229
 msgid "Failed to delete game"
 msgstr "Oýun pozulmady"
 
-#: src/features/chess/index.tsx:195
+#: src/features/chess/index.tsx:198
 msgid "Failed to offer draw"
 msgstr "Deňme-deň teklip edilmedi"
 
@@ -497,12 +526,12 @@ msgstr "Deňme-deň teklip edilmedi"
 msgid "Failed to remove account"
 msgstr "Hasap aýrylmady"
 
-#: src/features/chess/index.tsx:188
+#: src/features/chess/index.tsx:191
 msgid "Failed to resign"
 msgstr "Boýun egilmedi"
 
-#: src/features/chess/index.tsx:500
-#: src/features/chess/index.tsx:532
+#: src/features/chess/index.tsx:503
+#: src/features/chess/index.tsx:535
 msgid "Failed to send"
 msgstr "Iberilmedi"
 
@@ -510,9 +539,13 @@ msgstr "Iberilmedi"
 msgid "Failed to send verification code"
 msgstr "Tassyklama kody iberilmedi"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:104
+#: ../../../lib/web/src/components/notification-category-button.tsx:108
 msgid "Failed to update category"
 msgstr "Kategoriýa täzelenmedi"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:79
+msgid "Finish moving your account"
+msgstr "Hasabyňyzy göçürip gutaryň"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:244
 msgid "Floating"
@@ -542,7 +575,7 @@ msgstr "Doly ýerleşiş"
 msgid "Game created"
 msgstr "Oýun döredildi"
 
-#: src/features/chess/index.tsx:222
+#: src/features/chess/index.tsx:225
 msgid "Game deleted"
 msgstr "Oýun pozuldy"
 
@@ -756,7 +789,7 @@ msgstr "Netijeler tapylmady."
 msgid "No time zone found."
 msgstr "Wagt zolagy tapylmady."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:135
+#: ../../../lib/web/src/components/notification-category-button.tsx:139
 msgid "No topic record yet — try again after the next notification."
 msgstr "Heniz mowzuk ýazgysy ýok — indiki bildirişden soň gaýtadan synanyşyň."
 
@@ -780,7 +813,7 @@ msgstr "Adaty"
 msgid "Notifications"
 msgstr "Bildirişler"
 
-#: src/features/chess/index.tsx:421
+#: src/features/chess/index.tsx:424
 msgid "Offer draw"
 msgstr "Deňme-deň hödürle"
 
@@ -793,11 +826,11 @@ msgstr "Eý dostum! Sahypa tapylmady!"
 msgid "Open account actions"
 msgstr "Hasap hereketlerini aç"
 
-#: src/features/chess/index.tsx:400
+#: src/features/chess/index.tsx:403
 msgid "Open chat panel"
 msgstr "Söhbet panelini aç"
 
-#: src/features/chess/index.tsx:408
+#: src/features/chess/index.tsx:411
 msgid "Open game actions"
 msgstr "Oýun hereketlerini aç"
 
@@ -821,6 +854,18 @@ msgstr "Beýleki"
 #: ../../../lib/web/src/features/access/access-list.tsx:213
 msgid "Owner"
 msgstr "Eýesi"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:331
+msgid "Passkey"
+msgstr ""
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:206
+msgid "Passkey verification failed. Please try again."
+msgstr "Giriş açary bilen tassyklamak şowsuz boldy. Täzeden synanyşyň."
+
+#: ../../../lib/web/src/components/restore-banner.tsx:126
+msgid "Passkeys"
+msgstr "Giriş açarlary"
 
 #: src/features/chess/lib/use-chess-piece-name.ts:17
 msgid "pawn"
@@ -857,6 +902,14 @@ msgstr "Şuňa ýokarlandyr:"
 msgid "queen"
 msgstr "şa zenan"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:98
+msgid "Re-link your accounts on this server"
+msgstr "Bu serwerde hasaplaryňyzy täzeden baglanyşdyryň"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:120
+msgid "Re-register your passkeys on this server"
+msgstr "Bu serwerde giriş açarlaryňyzy gaýtadan hasaba alyň"
+
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:216
 #: ../../../lib/web/src/components/search-entity-page.tsx:191
 msgid "Recommended"
@@ -878,7 +931,7 @@ msgstr "Otnositel (5m, 3h, 2d)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "24 sagat içinde otnositel, başga absolýut"
 
-#: src/features/chess/index.tsx:434
+#: src/features/chess/index.tsx:437
 msgid "Rematch"
 msgstr "Gaýtadan oýun"
 
@@ -900,6 +953,10 @@ msgstr "Girişi aýyrmak?"
 msgid "Remove interest"
 msgstr "Gyzyklanmany aýyr"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:364
+msgid "Resend email"
+msgstr "E-poçtany gaýtadan iber"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:77
 #: ../../../lib/web/src/components/data-table/toolbar.tsx:78
 msgid "Reset"
@@ -909,16 +966,16 @@ msgstr "Täzeden başlat"
 msgid "Reset all settings to default values"
 msgstr "Ähli sazlamalary deslapky bahalara gaýtar"
 
-#: src/features/chess/index.tsx:425
-#: src/features/chess/index.tsx:552
+#: src/features/chess/index.tsx:428
+#: src/features/chess/index.tsx:555
 msgid "Resign"
 msgstr "Resign et"
 
-#: src/features/chess/index.tsx:543
+#: src/features/chess/index.tsx:546
 msgid "Resign game?"
 msgstr "Oýny resign etmek?"
 
-#: src/features/chess/index.tsx:549
+#: src/features/chess/index.tsx:552
 msgid "Resigning..."
 msgstr "Resign edilýär..."
 
@@ -1012,6 +1069,10 @@ msgstr "Tema saýlawyňy saýla"
 msgid "Send again"
 msgstr "Täzeden iber"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:304
+msgid "Send email"
+msgstr "E-poçt iber"
+
 #: src/features/chess/components/chat-input.tsx:40
 msgid "Send message"
 msgstr "Habar iber"
@@ -1066,10 +1127,6 @@ msgstr "Kiçi"
 msgid "Spacious"
 msgstr "Giňiş"
 
-#: src/features/chess/index.tsx:71
-msgid "Stalemate — draw"
-msgstr "Stalemate — deňme-deň"
-
 #: src/features/chess/components/new-game.tsx:94
 msgid "Start a new chess game"
 msgstr "Täze küşt oýny başla"
@@ -1108,6 +1165,10 @@ msgstr "Toparlar/Programmalar"
 #: ../../../lib/web/src/features/document/document-page.tsx:39
 msgid "Terms and conditions"
 msgstr "Şertler"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:192
+msgid "That code is incorrect or has expired."
+msgstr "Ol kod nädogry ýa-da möhleti geçen."
 
 #: ../../../lib/web/src/components/config-drawer.tsx:181
 msgid "Theme"
@@ -1186,7 +1247,7 @@ msgstr "Gözlemek üçin ýaz..."
 msgid "Unable to redirect to login. Please try again."
 msgstr "Girişe ugradyp bolmady. Gaýtadan synanyş."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:143
+#: ../../../lib/web/src/components/notification-category-button.tsx:147
 msgid "Unassigned"
 msgstr "Bellenilmedik"
 
@@ -1198,13 +1259,17 @@ msgstr "Rugsatsyz giriş"
 msgid "United States"
 msgstr "Birleşen Ştatlar"
 
-#: src/hooks/useGameWebsocket.ts:162
+#: src/hooks/useGameWebsocket.ts:164
 msgid "Unknown"
 msgstr "Näbelli"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:131
 msgid "Unverified"
 msgstr "Tassyklanmadyk"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:335
+msgid "Use your passkey"
+msgstr "Giriş açaryňyzy ulanyň"
 
 #: ../../../lib/web/src/features/access/access-dialog.tsx:155
 msgid "User"
@@ -1222,6 +1287,7 @@ msgstr "Tassyklama kody iberildi"
 msgid "Verification failed"
 msgstr "Tassyklama şowsuz boldy"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:385
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:164
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:106
 msgid "Verify"
@@ -1230,6 +1296,10 @@ msgstr "Tassykla"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:58
 msgid "Verify email address"
 msgstr "E-poçta salgysyny tassykla"
+
+#: ../../../lib/web/src/components/attachment-gallery.tsx:63
+msgid "Video thumbnail"
+msgstr "Wideo eskizi"
 
 #: ../../../lib/web/src/components/data-table/view-options.tsx:30
 msgid "View"
@@ -1256,7 +1326,7 @@ msgid "Wednesday"
 msgstr "Çarşenbe"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:16
-#: src/features/chess/index.tsx:391
+#: src/features/chess/index.tsx:394
 msgid "White"
 msgstr "Ak"
 
@@ -1267,14 +1337,10 @@ msgstr "Ak"
 msgid "White {0}"
 msgstr "Ak {0}"
 
-#: src/features/chess/components/chat-message-list.tsx:197
+#: src/features/chess/components/chat-message-list.tsx:209
 msgid "You"
 msgstr "Sen"
 
-#: src/features/chess/index.tsx:81
-msgid "You resigned — {opponentName} wins"
-msgstr "Sen ýüz öwürdiň — {opponentName} ýeňdi"
-
-#: src/features/chess/index.tsx:88
-msgid "Your move"
-msgstr "Hereketiň"
+#: ../../../lib/web/src/components/restore-banner.tsx:82
+msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
+msgstr "Hasabyňyz {source} serwерinden bu ýere geçirildi. Şol ýerden pozýançaňyz, habarlar we duýduryşlar iki serwere hem ýetip biler, käbir mazmunyňyz köne serweriň üsti bilen berler, yzarlaýanlar sizi bu ýerde tapmak üçin birnäçe minut gerek bolup biler."

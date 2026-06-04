@@ -46,23 +46,27 @@ msgstr "{count, plural, one {# rook} other {# iirook}}"
 msgid "{count} pieces"
 msgstr "Iziqwenga ezingu-{count}"
 
+#: src/features/chess/components/chat-message-list.tsx:190
+msgid "{name} declined the draw"
+msgstr "{name} wala ukulingana"
+
+#: src/features/chess/components/chat-message-list.tsx:186
+msgid "{name} offered a draw"
+msgstr "{name} ucebise ukulingana"
+
+#: src/features/chess/components/chat-message-list.tsx:184
+msgid "{name} resigned"
+msgstr "{name} unikele"
+
 #: src/features/chess/components/draw-offer-banner.tsx:25
 msgid "{opponentName} offered a draw"
 msgstr "{opponentName} unike idrowu"
 
-#: src/features/chess/index.tsx:80
-msgid "{opponentName} resigned — you win!"
-msgstr "{opponentName} uyekile — uphumelele!"
-
-#: src/features/chess/index.tsx:88
-msgid "{opponentName}'s move"
-msgstr "Umqhubo ka-{opponentName}"
-
-#: src/features/chess/components/chat-message-list.tsx:207
+#: src/features/chess/components/chat-message-list.tsx:219
 msgid "{subject} played <0>{san}</0>"
 msgstr "{subject} udlale <0>{san}</0>"
 
-#: src/features/chess/components/chat-message-list.tsx:205
+#: src/features/chess/components/chat-message-list.tsx:217
 msgid "{subject} took <0>{san}</0>"
 msgstr "{subject} uthathe <0>{san}</0>"
 
@@ -175,13 +179,17 @@ msgstr "Konke"
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "Uqinisekile ufuna ukuphuma? Kuya kufuneka ungene kwakhona ukuze ufikelele kwi-akhawunti yakho."
 
-#: src/features/chess/index.tsx:544
+#: src/features/chess/index.tsx:547
 msgid "Are you sure you want to resign? {opponentName} will win the game."
 msgstr "Uqinisekile ukuba ufuna ukunikezela? {opponentName} uza kuphumelela umdlalo."
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:56
 msgid "Asc"
 msgstr "Enyukayo"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:312
+msgid "Authenticator code"
+msgstr "Ikhowudi yokuqinisekisa"
 
 #: ../../../lib/web/src/components/place-picker.tsx:152
 msgid "Back"
@@ -198,7 +206,7 @@ msgid "bishop"
 msgstr "ibhishophu"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:16
-#: src/features/chess/index.tsx:391
+#: src/features/chess/index.tsx:394
 msgid "Black"
 msgstr "Mnyama"
 
@@ -214,6 +222,7 @@ msgid "Boost interest"
 msgstr "Khulisa umdla"
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx:64
+#: ../../../lib/web/src/components/step-up-dialog.tsx:360
 #: ../../../lib/web/src/components/travelling-picker.tsx:292
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:245
 #: ../../../lib/web/src/features/access/access-dialog.tsx:325
@@ -225,38 +234,22 @@ msgstr "Khulisa umdla"
 msgid "Cancel"
 msgstr "Rhoxisa"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:131
+#: ../../../lib/web/src/components/notification-category-button.tsx:135
 msgid "Category for this notification"
 msgstr "Udidi lwesi saziso"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:115
+#: ../../../lib/web/src/components/notification-category-button.tsx:119
 msgid "Change notification category"
 msgstr "Tshintsha udidi lwesaziso"
 
-#: src/features/chess/index.tsx:484
-#: src/features/chess/index.tsx:516
+#: src/features/chess/index.tsx:487
+#: src/features/chess/index.tsx:519
 msgid "Chat"
 msgstr "Incoko"
 
-#: src/features/chess/index.tsx:85
-msgid "Check — {opponentName}'s move"
-msgstr "Check — ihambo ka-{opponentName}"
-
-#: src/features/chess/index.tsx:85
-msgid "Check — your move"
-msgstr "Check — ihambo yakho"
-
-#: src/features/chess/index.tsx:67
-msgid "Checkmate — {opponentName} wins"
-msgstr "Checkmate — u-{opponentName} uyaphumelela"
-
-#: src/features/chess/index.tsx:66
-msgid "Checkmate — you win!"
-msgstr "Checkmate — uyaphumelela!"
-
-#: src/features/chess/index.tsx:93
-#: src/features/chess/index.tsx:319
-#: src/features/chess/index.tsx:331
+#: src/features/chess/index.tsx:96
+#: src/features/chess/index.tsx:322
+#: src/features/chess/index.tsx:334
 msgid "Chess"
 msgstr "Itshesi"
 
@@ -373,6 +366,10 @@ msgstr "Ulwazi nenkcukacha zomxholo."
 msgid "Continue"
 msgstr "Qhubeka"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:349
+msgid "Continue with {label}"
+msgstr "Qhubeka nge-{label}"
+
 #: ../../../lib/web/src/components/ui/copy-button.tsx:60
 msgid "Copy"
 msgstr "Kotshela"
@@ -380,6 +377,18 @@ msgstr "Kotshela"
 #: ../../../lib/web/src/features/document/document-page.tsx:81
 msgid "Could not load this document. Please try again later."
 msgstr "Akukwazekanga ukulayisha olu xwebhu. Nceda uzame kwakhona kamva."
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:181
+msgid "Couldn't send the code. Please try again."
+msgstr "Ayikwazanga ukuthumela ikhowudi. Nceda uzame kwakhona."
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:133
+msgid "Couldn't start re-authentication. Please try again."
+msgstr "Ayikwazanga ukuqalisa ukuqinisekiswa kwakhona. Nceda uzame kwakhona."
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:218
+msgid "Couldn't verify with that account. Please try again."
+msgstr "Akukwazekanga ukuqinisekisa ngaloo akhawunti. Nceda uzame kwakhona."
 
 #: src/features/chess/components/new-game.tsx:148
 msgid "Creating..."
@@ -410,9 +419,13 @@ msgstr "Eyoqobo"
 msgid "Default AI account"
 msgstr "I-akhawunti yoqobo ye-AI"
 
-#: src/features/chess/index.tsx:437
+#: src/features/chess/index.tsx:440
 msgid "Delete game"
 msgstr "Cima umdlalo"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:90
+msgid "Delete your account on the old server"
+msgstr "Cima i-akhawunti yakho kwiseva endala"
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:60
 msgid "Desc"
@@ -437,6 +450,10 @@ msgstr "Bhaqa kwibhrawuza yewebhu"
 msgid "Direction"
 msgstr "Icala"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:73
+msgid "Dismiss"
+msgstr "Yikhabe"
+
 #: ../../../lib/web/src/components/ui/sidebar.tsx:235
 msgid "Displays the mobile sidebar."
 msgstr "Ibonisa ibara lecala leselula."
@@ -445,17 +462,29 @@ msgstr "Ibonisa ibara lecala leselula."
 msgid "Download"
 msgstr "Khuphela"
 
-#: src/features/chess/index.tsx:75
-msgid "Draw"
-msgstr "Zoba"
+#: src/features/chess/components/chat-message-list.tsx:188
+msgid "Draw agreed"
+msgstr "Kuvunyelwene ngokulingana"
 
-#: src/features/chess/index.tsx:450
+#: src/features/chess/index.tsx:453
 msgid "Draw offered — waiting for {opponentName}"
 msgstr "Idrowu inikiwe — kulindwe {opponentName}"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:134
 msgid "Dyslexia-friendly"
 msgstr "Yamkelekile kwidyslexia"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:286
+msgid "Email code"
+msgstr "Ikhowudi ye-imeyili"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:296
+msgid "Enter the code from your email"
+msgstr "Faka ikhowudi evela kwi-imeyile yakho"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:321
+msgid "Enter your authenticator code"
+msgstr "Faka ikhowudi yakho yesiqinisekisi"
 
 #: ../../../lib/web/src/components/layout/app-sidebar.tsx:35
 msgid "Expand sidebar"
@@ -465,7 +494,7 @@ msgstr "Yandisa ibara lecala"
 msgid "Extra large"
 msgstr "Inkulu kakhulu"
 
-#: src/features/chess/index.tsx:200
+#: src/features/chess/index.tsx:203
 msgid "Failed to accept draw"
 msgstr "Ayiphumelelanga ukwamkela ukulingana"
 
@@ -477,19 +506,19 @@ msgstr "Ayiphumelelanga ukongeza iakhawunti"
 msgid "Failed to create game"
 msgstr "Ayiphumelelanga ukudala umdlalo"
 
-#: src/features/chess/index.tsx:215
+#: src/features/chess/index.tsx:218
 msgid "Failed to create rematch"
 msgstr "Ayiphumelelanga ukudala umdlalo omtsha"
 
-#: src/features/chess/index.tsx:205
+#: src/features/chess/index.tsx:208
 msgid "Failed to decline draw"
 msgstr "Ayiphumelelanga ukwala ukulingana"
 
-#: src/features/chess/index.tsx:226
+#: src/features/chess/index.tsx:229
 msgid "Failed to delete game"
 msgstr "Ayiphumelelanga ukucima umdlalo"
 
-#: src/features/chess/index.tsx:195
+#: src/features/chess/index.tsx:198
 msgid "Failed to offer draw"
 msgstr "Ayiphumelelanga ukunika ukulingana"
 
@@ -497,12 +526,12 @@ msgstr "Ayiphumelelanga ukunika ukulingana"
 msgid "Failed to remove account"
 msgstr "Ayiphumelelanga ukususa iakhawunti"
 
-#: src/features/chess/index.tsx:188
+#: src/features/chess/index.tsx:191
 msgid "Failed to resign"
 msgstr "Ayiphumelelanga ukurhoxa"
 
-#: src/features/chess/index.tsx:500
-#: src/features/chess/index.tsx:532
+#: src/features/chess/index.tsx:503
+#: src/features/chess/index.tsx:535
 msgid "Failed to send"
 msgstr "Ayiphumelelanga ukuthumela"
 
@@ -510,9 +539,13 @@ msgstr "Ayiphumelelanga ukuthumela"
 msgid "Failed to send verification code"
 msgstr "Ayiphumelelanga ukuthumela ikhowudi yokuqinisekisa"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:104
+#: ../../../lib/web/src/components/notification-category-button.tsx:108
 msgid "Failed to update category"
 msgstr "Ayiphumelelanga ukuhlaziya udidi"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:79
+msgid "Finish moving your account"
+msgstr "Gqiba ukufudusa i-akhawunti yakho"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:244
 msgid "Floating"
@@ -542,7 +575,7 @@ msgstr "Ulungelelaniso olupheleleyo"
 msgid "Game created"
 msgstr "Umdlalo udaliwe"
 
-#: src/features/chess/index.tsx:222
+#: src/features/chess/index.tsx:225
 msgid "Game deleted"
 msgstr "Umdlalo ucinyiwe"
 
@@ -756,7 +789,7 @@ msgstr "Akukho ziphumo zifumanekileyo."
 msgid "No time zone found."
 msgstr "Akukho mmandla wexesha ufumanekileyo."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:135
+#: ../../../lib/web/src/components/notification-category-button.tsx:139
 msgid "No topic record yet — try again after the next notification."
 msgstr "Akukho rekhodi yomxholo okwangoku — zama kwakhona emva kwesaziso esilandelayo."
 
@@ -780,7 +813,7 @@ msgstr "Eqhelekileyo"
 msgid "Notifications"
 msgstr "Izaziso"
 
-#: src/features/chess/index.tsx:421
+#: src/features/chess/index.tsx:424
 msgid "Offer draw"
 msgstr "Bona ngokulinganayo"
 
@@ -793,11 +826,11 @@ msgstr "Yhu! Iphepha Alifumanekanga!"
 msgid "Open account actions"
 msgstr "Vula izenzo zeakhawunti"
 
-#: src/features/chess/index.tsx:400
+#: src/features/chess/index.tsx:403
 msgid "Open chat panel"
 msgstr "Vula iphaneli yencoko"
 
-#: src/features/chess/index.tsx:408
+#: src/features/chess/index.tsx:411
 msgid "Open game actions"
 msgstr "Vula izenzo zomdlalo"
 
@@ -821,6 +854,18 @@ msgstr "Okunye"
 #: ../../../lib/web/src/features/access/access-list.tsx:213
 msgid "Owner"
 msgstr "Umnini"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:331
+msgid "Passkey"
+msgstr "Isitshixo sokungena"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:206
+msgid "Passkey verification failed. Please try again."
+msgstr "Ukuqinisekiswa kwe-passkey akuphumelelanga. Nceda uzame kwakhona."
+
+#: ../../../lib/web/src/components/restore-banner.tsx:126
+msgid "Passkeys"
+msgstr "Ii-passkey"
 
 #: src/features/chess/lib/use-chess-piece-name.ts:17
 msgid "pawn"
@@ -857,6 +902,14 @@ msgstr "Nyusa ibe:"
 msgid "queen"
 msgstr "ukumkanikazi"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:98
+msgid "Re-link your accounts on this server"
+msgstr "Phinda udibanise iiakhawunti zakho kwiseva yesi"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:120
+msgid "Re-register your passkeys on this server"
+msgstr "Phinda ubhalise izitshixo zakho zokufikelela kule seva"
+
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:216
 #: ../../../lib/web/src/components/search-entity-page.tsx:191
 msgid "Recommended"
@@ -878,7 +931,7 @@ msgstr "Khwiniyene (5m, 3h, 2d)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "Khwiniyene kumayure angama-24, kungenjalo kupheleleyo"
 
-#: src/features/chess/index.tsx:434
+#: src/features/chess/index.tsx:437
 msgid "Rematch"
 msgstr "Phinda udlale"
 
@@ -900,6 +953,10 @@ msgstr "Susa ufikelelo?"
 msgid "Remove interest"
 msgstr "Susa umnxili"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:364
+msgid "Resend email"
+msgstr "Thumela kwakhona i-imeyile"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:77
 #: ../../../lib/web/src/components/data-table/toolbar.tsx:78
 msgid "Reset"
@@ -909,16 +966,16 @@ msgstr "Buyisela"
 msgid "Reset all settings to default values"
 msgstr "Buyisela zonke iisetingi kumaxabiso amiselweyo"
 
-#: src/features/chess/index.tsx:425
-#: src/features/chess/index.tsx:552
+#: src/features/chess/index.tsx:428
+#: src/features/chess/index.tsx:555
 msgid "Resign"
 msgstr "Rhoxa"
 
-#: src/features/chess/index.tsx:543
+#: src/features/chess/index.tsx:546
 msgid "Resign game?"
 msgstr "Rhoxa kumdlalo?"
 
-#: src/features/chess/index.tsx:549
+#: src/features/chess/index.tsx:552
 msgid "Resigning..."
 msgstr "Iyarhoxa..."
 
@@ -1012,6 +1069,10 @@ msgstr "Khetha okukhethiweyo kwetimu"
 msgid "Send again"
 msgstr "Thumela kwakhona"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:304
+msgid "Send email"
+msgstr "Thumela i-imeyile"
+
 #: src/features/chess/components/chat-input.tsx:40
 msgid "Send message"
 msgstr "Thumela umyalezo"
@@ -1066,10 +1127,6 @@ msgstr "Encinci"
 msgid "Spacious"
 msgstr "Banzi"
 
-#: src/features/chess/index.tsx:71
-msgid "Stalemate — draw"
-msgstr "Akukho mphumeleli — yahlula"
-
 #: src/features/chess/components/new-game.tsx:94
 msgid "Start a new chess game"
 msgstr "Qalisa umdlalo omtsha we-chess"
@@ -1108,6 +1165,10 @@ msgstr "Amaqela/Ii-app"
 #: ../../../lib/web/src/features/document/document-page.tsx:39
 msgid "Terms and conditions"
 msgstr "Imigaqo nemiqathango"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:192
+msgid "That code is incorrect or has expired."
+msgstr "Loo khowudi ayichanekanga okanye iphelelwe lixesha."
 
 #: ../../../lib/web/src/components/config-drawer.tsx:181
 msgid "Theme"
@@ -1186,7 +1247,7 @@ msgstr "Bhala ukukhangela..."
 msgid "Unable to redirect to login. Please try again."
 msgstr "Akukwazeki ukuthunyelwa kwindawo yokungena. Nceda uzame kwakhona."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:143
+#: ../../../lib/web/src/components/notification-category-button.tsx:147
 msgid "Unassigned"
 msgstr "Akwabelwanga"
 
@@ -1198,13 +1259,17 @@ msgstr "Ufikelelo Olungavunyelwanga"
 msgid "United States"
 msgstr "United States"
 
-#: src/hooks/useGameWebsocket.ts:162
+#: src/hooks/useGameWebsocket.ts:164
 msgid "Unknown"
 msgstr "Akwaziwa"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:131
 msgid "Unverified"
 msgstr "Ayingqinwanga"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:335
+msgid "Use your passkey"
+msgstr "Sebenzisa i-passkey yakho"
 
 #: ../../../lib/web/src/features/access/access-dialog.tsx:155
 msgid "User"
@@ -1222,6 +1287,7 @@ msgstr "Ikhowudi yoqinisekiso ithunyelwe"
 msgid "Verification failed"
 msgstr "Uqinisekiso lusilele"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:385
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:164
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:106
 msgid "Verify"
@@ -1230,6 +1296,10 @@ msgstr "Qinisekisa"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:58
 msgid "Verify email address"
 msgstr "Qinisekisa idilesi ye-imeyile"
+
+#: ../../../lib/web/src/components/attachment-gallery.tsx:63
+msgid "Video thumbnail"
+msgstr "Umfanekiso omfutshane wevidiyo"
 
 #: ../../../lib/web/src/components/data-table/view-options.tsx:30
 msgid "View"
@@ -1256,7 +1326,7 @@ msgid "Wednesday"
 msgstr "Ulwesithathu"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:16
-#: src/features/chess/index.tsx:391
+#: src/features/chess/index.tsx:394
 msgid "White"
 msgstr "Mhlophe"
 
@@ -1267,14 +1337,10 @@ msgstr "Mhlophe"
 msgid "White {0}"
 msgstr "{0} eMhlophe"
 
-#: src/features/chess/components/chat-message-list.tsx:197
+#: src/features/chess/components/chat-message-list.tsx:209
 msgid "You"
 msgstr "Wena"
 
-#: src/features/chess/index.tsx:81
-msgid "You resigned — {opponentName} wins"
-msgstr "Uyekile — {opponentName} uphumelele"
-
-#: src/features/chess/index.tsx:88
-msgid "Your move"
-msgstr "Umqhubo wakho"
+#: ../../../lib/web/src/components/restore-banner.tsx:82
+msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
+msgstr "I-akhawunti yakho ihanjiswe apha ukusuka ku-{source}. Kude ukuze uyicime apho, iimessage nezaziso zingafika kumaseva omabini, inxalenye yemixholo yakho iqhubeka isebenziswa kwiseva endala, kwaye abalandeli bangathatha imizuzu embalwa ukukufumana apha."

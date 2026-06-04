@@ -46,23 +46,27 @@ msgstr "{count, plural, other {# tore}}"
 msgid "{count} pieces"
 msgstr "{count} na piyesa"
 
+#: src/features/chess/components/chat-message-list.tsx:190
+msgid "{name} declined the draw"
+msgstr "Tinanggihan ni {name} ang tabla"
+
+#: src/features/chess/components/chat-message-list.tsx:186
+msgid "{name} offered a draw"
+msgstr "Nag-alok ng tabla si {name}"
+
+#: src/features/chess/components/chat-message-list.tsx:184
+msgid "{name} resigned"
+msgstr "Sumuko si {name}"
+
 #: src/features/chess/components/draw-offer-banner.tsx:25
 msgid "{opponentName} offered a draw"
 msgstr "Nag-alok ng draw si {opponentName}"
 
-#: src/features/chess/index.tsx:80
-msgid "{opponentName} resigned — you win!"
-msgstr "Sumuko si {opponentName} — nanalo ka!"
-
-#: src/features/chess/index.tsx:88
-msgid "{opponentName}'s move"
-msgstr "Galaw ni {opponentName}"
-
-#: src/features/chess/components/chat-message-list.tsx:207
+#: src/features/chess/components/chat-message-list.tsx:219
 msgid "{subject} played <0>{san}</0>"
 msgstr "Naglaro si {subject} ng <0>{san}</0>"
 
-#: src/features/chess/components/chat-message-list.tsx:205
+#: src/features/chess/components/chat-message-list.tsx:217
 msgid "{subject} took <0>{san}</0>"
 msgstr "Kinuha ni {subject} ang <0>{san}</0>"
 
@@ -175,13 +179,17 @@ msgstr "Lahat"
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "Sigurado ka bang gusto mong mag-log out? Kakailanganin mong mag-log in muli para ma-access ang iyong account."
 
-#: src/features/chess/index.tsx:544
+#: src/features/chess/index.tsx:547
 msgid "Are you sure you want to resign? {opponentName} will win the game."
 msgstr "Sigurado ka bang gusto mong sumuko? Mananalo si {opponentName} sa laro."
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:56
 msgid "Asc"
 msgstr "Asc"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:312
+msgid "Authenticator code"
+msgstr "Code ng authenticator"
 
 #: ../../../lib/web/src/components/place-picker.tsx:152
 msgid "Back"
@@ -198,7 +206,7 @@ msgid "bishop"
 msgstr "obispo"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:16
-#: src/features/chess/index.tsx:391
+#: src/features/chess/index.tsx:394
 msgid "Black"
 msgstr "Itim"
 
@@ -214,6 +222,7 @@ msgid "Boost interest"
 msgstr "Palakasin ang interes"
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx:64
+#: ../../../lib/web/src/components/step-up-dialog.tsx:360
 #: ../../../lib/web/src/components/travelling-picker.tsx:292
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:245
 #: ../../../lib/web/src/features/access/access-dialog.tsx:325
@@ -225,38 +234,22 @@ msgstr "Palakasin ang interes"
 msgid "Cancel"
 msgstr "Kanselahin"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:131
+#: ../../../lib/web/src/components/notification-category-button.tsx:135
 msgid "Category for this notification"
 msgstr "Category para sa notification na ito"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:115
+#: ../../../lib/web/src/components/notification-category-button.tsx:119
 msgid "Change notification category"
 msgstr "Baguhin ang category ng notification"
 
-#: src/features/chess/index.tsx:484
-#: src/features/chess/index.tsx:516
+#: src/features/chess/index.tsx:487
+#: src/features/chess/index.tsx:519
 msgid "Chat"
 msgstr "Chat"
 
-#: src/features/chess/index.tsx:85
-msgid "Check — {opponentName}'s move"
-msgstr "Check — galaw na ni {opponentName}"
-
-#: src/features/chess/index.tsx:85
-msgid "Check — your move"
-msgstr "Check — galaw mo na"
-
-#: src/features/chess/index.tsx:67
-msgid "Checkmate — {opponentName} wins"
-msgstr "Checkmate — nanalo si {opponentName}"
-
-#: src/features/chess/index.tsx:66
-msgid "Checkmate — you win!"
-msgstr "Checkmate — nanalo ka!"
-
-#: src/features/chess/index.tsx:93
-#: src/features/chess/index.tsx:319
-#: src/features/chess/index.tsx:331
+#: src/features/chess/index.tsx:96
+#: src/features/chess/index.tsx:322
+#: src/features/chess/index.tsx:334
 msgid "Chess"
 msgstr "Chess"
 
@@ -373,6 +366,10 @@ msgstr "Contextual na impormasyon at detalye."
 msgid "Continue"
 msgstr "Magpatuloy"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:349
+msgid "Continue with {label}"
+msgstr "Magpatuloy gamit ang {label}"
+
 #: ../../../lib/web/src/components/ui/copy-button.tsx:60
 msgid "Copy"
 msgstr "Kopyahin"
@@ -380,6 +377,18 @@ msgstr "Kopyahin"
 #: ../../../lib/web/src/features/document/document-page.tsx:81
 msgid "Could not load this document. Please try again later."
 msgstr "Hindi ma-load ang document na ito. Subukan muli mamaya."
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:181
+msgid "Couldn't send the code. Please try again."
+msgstr "Hindi naipadala ang code. Pakisubukang muli."
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:133
+msgid "Couldn't start re-authentication. Please try again."
+msgstr "Hindi masimulan ang muling pagpapatunay. Pakisubukang muli."
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:218
+msgid "Couldn't verify with that account. Please try again."
+msgstr "Hindi ma-verify gamit ang account na iyon. Pakisubukang muli."
 
 #: src/features/chess/components/new-game.tsx:148
 msgid "Creating..."
@@ -410,9 +419,13 @@ msgstr "Default"
 msgid "Default AI account"
 msgstr "Default na AI account"
 
-#: src/features/chess/index.tsx:437
+#: src/features/chess/index.tsx:440
 msgid "Delete game"
 msgstr "I-delete ang game"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:90
+msgid "Delete your account on the old server"
+msgstr "Burahin ang iyong account sa lumang server"
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:60
 msgid "Desc"
@@ -437,6 +450,10 @@ msgstr "Tukuyin mula sa web browser"
 msgid "Direction"
 msgstr "Direksyon"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:73
+msgid "Dismiss"
+msgstr "I-dismiss"
+
 #: ../../../lib/web/src/components/ui/sidebar.tsx:235
 msgid "Displays the mobile sidebar."
 msgstr "Ipinapakita ang mobile sidebar."
@@ -445,17 +462,29 @@ msgstr "Ipinapakita ang mobile sidebar."
 msgid "Download"
 msgstr "I-download"
 
-#: src/features/chess/index.tsx:75
-msgid "Draw"
-msgstr "Draw"
+#: src/features/chess/components/chat-message-list.tsx:188
+msgid "Draw agreed"
+msgstr "Napagkasunduang tabla"
 
-#: src/features/chess/index.tsx:450
+#: src/features/chess/index.tsx:453
 msgid "Draw offered — waiting for {opponentName}"
 msgstr "Inalok ang draw — naghihintay kay {opponentName}"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:134
 msgid "Dyslexia-friendly"
 msgstr "Angkop sa dyslexia"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:286
+msgid "Email code"
+msgstr "Code ng email"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:296
+msgid "Enter the code from your email"
+msgstr "Ilagay ang code mula sa iyong email"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:321
+msgid "Enter your authenticator code"
+msgstr "Ilagay ang iyong authenticator code"
 
 #: ../../../lib/web/src/components/layout/app-sidebar.tsx:35
 msgid "Expand sidebar"
@@ -465,7 +494,7 @@ msgstr "I-expand ang sidebar"
 msgid "Extra large"
 msgstr "Sobrang laki"
 
-#: src/features/chess/index.tsx:200
+#: src/features/chess/index.tsx:203
 msgid "Failed to accept draw"
 msgstr "Nabigong tanggapin ang draw"
 
@@ -477,19 +506,19 @@ msgstr "Nabigong magdagdag ng account"
 msgid "Failed to create game"
 msgstr "Nabigong gumawa ng game"
 
-#: src/features/chess/index.tsx:215
+#: src/features/chess/index.tsx:218
 msgid "Failed to create rematch"
 msgstr "Nabigong gumawa ng rematch"
 
-#: src/features/chess/index.tsx:205
+#: src/features/chess/index.tsx:208
 msgid "Failed to decline draw"
 msgstr "Nabigong tanggihan ang draw"
 
-#: src/features/chess/index.tsx:226
+#: src/features/chess/index.tsx:229
 msgid "Failed to delete game"
 msgstr "Nabigong magdelete ng game"
 
-#: src/features/chess/index.tsx:195
+#: src/features/chess/index.tsx:198
 msgid "Failed to offer draw"
 msgstr "Nabigong mag-offer ng draw"
 
@@ -497,12 +526,12 @@ msgstr "Nabigong mag-offer ng draw"
 msgid "Failed to remove account"
 msgstr "Nabigong tanggalin ang account"
 
-#: src/features/chess/index.tsx:188
+#: src/features/chess/index.tsx:191
 msgid "Failed to resign"
 msgstr "Nabigong mag-resign"
 
-#: src/features/chess/index.tsx:500
-#: src/features/chess/index.tsx:532
+#: src/features/chess/index.tsx:503
+#: src/features/chess/index.tsx:535
 msgid "Failed to send"
 msgstr "Nabigong magpadala"
 
@@ -510,9 +539,13 @@ msgstr "Nabigong magpadala"
 msgid "Failed to send verification code"
 msgstr "Nabigong magpadala ng verification code"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:104
+#: ../../../lib/web/src/components/notification-category-button.tsx:108
 msgid "Failed to update category"
 msgstr "Nabigong i-update ang category"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:79
+msgid "Finish moving your account"
+msgstr "Tapusin ang paglipat ng iyong account"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:244
 msgid "Floating"
@@ -542,7 +575,7 @@ msgstr "Full layout"
 msgid "Game created"
 msgstr "Nagawa ang game"
 
-#: src/features/chess/index.tsx:222
+#: src/features/chess/index.tsx:225
 msgid "Game deleted"
 msgstr "Nadelete ang game"
 
@@ -756,7 +789,7 @@ msgstr "Walang nakitang resulta."
 msgid "No time zone found."
 msgstr "Walang nakitang time zone."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:135
+#: ../../../lib/web/src/components/notification-category-button.tsx:139
 msgid "No topic record yet — try again after the next notification."
 msgstr "Wala pang topic record — subukan muli pagkatapos ng susunod na notification."
 
@@ -780,7 +813,7 @@ msgstr "Karaniwan"
 msgid "Notifications"
 msgstr "Mga Notification"
 
-#: src/features/chess/index.tsx:421
+#: src/features/chess/index.tsx:424
 msgid "Offer draw"
 msgstr "Mag-alok ng tabla"
 
@@ -793,11 +826,11 @@ msgstr "Ay! Hindi Nahanap ang Pahina!"
 msgid "Open account actions"
 msgstr "Buksan ang mga aksyon ng account"
 
-#: src/features/chess/index.tsx:400
+#: src/features/chess/index.tsx:403
 msgid "Open chat panel"
 msgstr "Buksan ang chat panel"
 
-#: src/features/chess/index.tsx:408
+#: src/features/chess/index.tsx:411
 msgid "Open game actions"
 msgstr "Buksan ang mga aksyon ng laro"
 
@@ -821,6 +854,18 @@ msgstr "Iba pa"
 #: ../../../lib/web/src/features/access/access-list.tsx:213
 msgid "Owner"
 msgstr "May-ari"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:331
+msgid "Passkey"
+msgstr ""
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:206
+msgid "Passkey verification failed. Please try again."
+msgstr "Nabigo ang pag-verify ng passkey. Pakisubukang muli."
+
+#: ../../../lib/web/src/components/restore-banner.tsx:126
+msgid "Passkeys"
+msgstr "Mga Passkey"
 
 #: src/features/chess/lib/use-chess-piece-name.ts:17
 msgid "pawn"
@@ -857,6 +902,14 @@ msgstr "I-promote sa:"
 msgid "queen"
 msgstr "reyna"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:98
+msgid "Re-link your accounts on this server"
+msgstr "I-relink ang iyong mga account sa server na ito"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:120
+msgid "Re-register your passkeys on this server"
+msgstr "Muling irehistro ang iyong mga passkey sa server na ito"
+
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:216
 #: ../../../lib/web/src/components/search-entity-page.tsx:191
 msgid "Recommended"
@@ -878,7 +931,7 @@ msgstr "Relatibo (5m, 3h, 2d)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "Relatibo sa loob ng 24 na oras, kung hindi ay absolute"
 
-#: src/features/chess/index.tsx:434
+#: src/features/chess/index.tsx:437
 msgid "Rematch"
 msgstr "Rematch"
 
@@ -900,6 +953,10 @@ msgstr "Alisin ang access?"
 msgid "Remove interest"
 msgstr "Alisin ang interes"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:364
+msgid "Resend email"
+msgstr "Muling ipadala ang email"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:77
 #: ../../../lib/web/src/components/data-table/toolbar.tsx:78
 msgid "Reset"
@@ -909,16 +966,16 @@ msgstr "I-reset"
 msgid "Reset all settings to default values"
 msgstr "I-reset ang lahat ng setting sa mga default na halaga"
 
-#: src/features/chess/index.tsx:425
-#: src/features/chess/index.tsx:552
+#: src/features/chess/index.tsx:428
+#: src/features/chess/index.tsx:555
 msgid "Resign"
 msgstr "Sumuko"
 
-#: src/features/chess/index.tsx:543
+#: src/features/chess/index.tsx:546
 msgid "Resign game?"
 msgstr "Sumuko sa laro?"
 
-#: src/features/chess/index.tsx:549
+#: src/features/chess/index.tsx:552
 msgid "Resigning..."
 msgstr "Sumusuko..."
 
@@ -1012,6 +1069,10 @@ msgstr "Pumili ng theme preference"
 msgid "Send again"
 msgstr "Ipadala muli"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:304
+msgid "Send email"
+msgstr "Magpadala ng email"
+
 #: src/features/chess/components/chat-input.tsx:40
 msgid "Send message"
 msgstr "Ipadala ang mensahe"
@@ -1066,10 +1127,6 @@ msgstr "Maliit"
 msgid "Spacious"
 msgstr "Maluwag"
 
-#: src/features/chess/index.tsx:71
-msgid "Stalemate — draw"
-msgstr "Stalemate — patas"
-
 #: src/features/chess/components/new-game.tsx:94
 msgid "Start a new chess game"
 msgstr "Magsimula ng bagong laro ng chess"
@@ -1108,6 +1165,10 @@ msgstr "Teams/Apps"
 #: ../../../lib/web/src/features/document/document-page.tsx:39
 msgid "Terms and conditions"
 msgstr "Mga tuntunin at kundisyon"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:192
+msgid "That code is incorrect or has expired."
+msgstr "Mali ang code na iyon o nag-expire na."
 
 #: ../../../lib/web/src/components/config-drawer.tsx:181
 msgid "Theme"
@@ -1186,7 +1247,7 @@ msgstr "Mag-type para maghanap..."
 msgid "Unable to redirect to login. Please try again."
 msgstr "Hindi maka-redirect sa login. Pakisubukang muli."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:143
+#: ../../../lib/web/src/components/notification-category-button.tsx:147
 msgid "Unassigned"
 msgstr "Walang nakatalaga"
 
@@ -1198,13 +1259,17 @@ msgstr "Hindi Pinahihintulutang Pag-access"
 msgid "United States"
 msgstr "United States"
 
-#: src/hooks/useGameWebsocket.ts:162
+#: src/hooks/useGameWebsocket.ts:164
 msgid "Unknown"
 msgstr "Hindi alam"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:131
 msgid "Unverified"
 msgstr "Hindi naberipika"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:335
+msgid "Use your passkey"
+msgstr "Gamitin ang iyong passkey"
 
 #: ../../../lib/web/src/features/access/access-dialog.tsx:155
 msgid "User"
@@ -1222,6 +1287,7 @@ msgstr "Naipadala ang verification code"
 msgid "Verification failed"
 msgstr "Nabigo ang beripikasyon"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:385
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:164
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:106
 msgid "Verify"
@@ -1230,6 +1296,10 @@ msgstr "Beripikahin"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:58
 msgid "Verify email address"
 msgstr "Beripikahin ang email address"
+
+#: ../../../lib/web/src/components/attachment-gallery.tsx:63
+msgid "Video thumbnail"
+msgstr "Thumbnail ng video"
 
 #: ../../../lib/web/src/components/data-table/view-options.tsx:30
 msgid "View"
@@ -1256,7 +1326,7 @@ msgid "Wednesday"
 msgstr "Miyerkules"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:16
-#: src/features/chess/index.tsx:391
+#: src/features/chess/index.tsx:394
 msgid "White"
 msgstr "Puti"
 
@@ -1267,14 +1337,10 @@ msgstr "Puti"
 msgid "White {0}"
 msgstr "Puting {0}"
 
-#: src/features/chess/components/chat-message-list.tsx:197
+#: src/features/chess/components/chat-message-list.tsx:209
 msgid "You"
 msgstr "Ikaw"
 
-#: src/features/chess/index.tsx:81
-msgid "You resigned — {opponentName} wins"
-msgstr "Sumuko ka — nanalo si {opponentName}"
-
-#: src/features/chess/index.tsx:88
-msgid "Your move"
-msgstr "Galaw mo"
+#: ../../../lib/web/src/components/restore-banner.tsx:82
+msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
+msgstr "Ang iyong account ay inilipat dito mula sa {source}. Hanggang hindi mo ito binubura doon, ang mga mensahe at abiso ay maaaring maabot ang parehong mga server, ang ilan sa iyong nilalaman ay patuloy na pinaglilingkuran mula sa lumang server, at ang mga tagasunod ay maaaring maglaan ng ilang minuto upang mahanap ka dito."

@@ -46,23 +46,27 @@ msgstr "{count, plural, one {# dorre} other {# dorre}}"
 msgid "{count} pieces"
 msgstr "{count} pieza"
 
+#: src/features/chess/components/chat-message-list.tsx:190
+msgid "{name} declined the draw"
+msgstr "{name}(e)k berdinketa ukatu du"
+
+#: src/features/chess/components/chat-message-list.tsx:186
+msgid "{name} offered a draw"
+msgstr "{name}(e)k berdinketa eskaini du"
+
+#: src/features/chess/components/chat-message-list.tsx:184
+msgid "{name} resigned"
+msgstr "{name} amore eman du"
+
 #: src/features/chess/components/draw-offer-banner.tsx:25
 msgid "{opponentName} offered a draw"
 msgstr "{opponentName}-(e)k berdinketa eskaini du"
 
-#: src/features/chess/index.tsx:80
-msgid "{opponentName} resigned — you win!"
-msgstr "{opponentName}-(e)k etsi du — irabazi duzu!"
-
-#: src/features/chess/index.tsx:88
-msgid "{opponentName}'s move"
-msgstr "{opponentName}-(r)en mugimendua"
-
-#: src/features/chess/components/chat-message-list.tsx:207
+#: src/features/chess/components/chat-message-list.tsx:219
 msgid "{subject} played <0>{san}</0>"
 msgstr "{subject}-(e)k <0>{san}</0> jokatu du"
 
-#: src/features/chess/components/chat-message-list.tsx:205
+#: src/features/chess/components/chat-message-list.tsx:217
 msgid "{subject} took <0>{san}</0>"
 msgstr "{subject}-(e)k <0>{san}</0> hartu du"
 
@@ -175,13 +179,17 @@ msgstr "Guztiak"
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "Ziur al zaude saioa amaitu nahi duzula? Berriro hasi beharko duzu saioa zure kontura sartzeko."
 
-#: src/features/chess/index.tsx:544
+#: src/features/chess/index.tsx:547
 msgid "Are you sure you want to resign? {opponentName} will win the game."
 msgstr "Ziur al zaude amore eman nahi duzula? {opponentName}-(e)k irabaziko du jokoa."
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:56
 msgid "Asc"
 msgstr "Goranzkoa"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:312
+msgid "Authenticator code"
+msgstr "Autentifikatzaile kodea"
 
 #: ../../../lib/web/src/components/place-picker.tsx:152
 msgid "Back"
@@ -198,7 +206,7 @@ msgid "bishop"
 msgstr "alfila"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:16
-#: src/features/chess/index.tsx:391
+#: src/features/chess/index.tsx:394
 msgid "Black"
 msgstr "Beltza"
 
@@ -214,6 +222,7 @@ msgid "Boost interest"
 msgstr "Bultzatu interesa"
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx:64
+#: ../../../lib/web/src/components/step-up-dialog.tsx:360
 #: ../../../lib/web/src/components/travelling-picker.tsx:292
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:245
 #: ../../../lib/web/src/features/access/access-dialog.tsx:325
@@ -225,38 +234,22 @@ msgstr "Bultzatu interesa"
 msgid "Cancel"
 msgstr "Utzi"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:131
+#: ../../../lib/web/src/components/notification-category-button.tsx:135
 msgid "Category for this notification"
 msgstr "Jakinarazpen honentzako kategoria"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:115
+#: ../../../lib/web/src/components/notification-category-button.tsx:119
 msgid "Change notification category"
 msgstr "Aldatu jakinarazpen kategoria"
 
-#: src/features/chess/index.tsx:484
-#: src/features/chess/index.tsx:516
+#: src/features/chess/index.tsx:487
+#: src/features/chess/index.tsx:519
 msgid "Chat"
 msgstr "Txata"
 
-#: src/features/chess/index.tsx:85
-msgid "Check — {opponentName}'s move"
-msgstr "Xake — {opponentName}-(r)en jokaldia"
-
-#: src/features/chess/index.tsx:85
-msgid "Check — your move"
-msgstr "Xake — zure jokaldia"
-
-#: src/features/chess/index.tsx:67
-msgid "Checkmate — {opponentName} wins"
-msgstr "Mate — {opponentName}-(e)k irabazi du"
-
-#: src/features/chess/index.tsx:66
-msgid "Checkmate — you win!"
-msgstr "Mate — zuk irabazi duzu!"
-
-#: src/features/chess/index.tsx:93
-#: src/features/chess/index.tsx:319
-#: src/features/chess/index.tsx:331
+#: src/features/chess/index.tsx:96
+#: src/features/chess/index.tsx:322
+#: src/features/chess/index.tsx:334
 msgid "Chess"
 msgstr "Xakea"
 
@@ -373,6 +366,10 @@ msgstr "Testuinguruko informazioa eta xehetasunak."
 msgid "Continue"
 msgstr "Jarraitu"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:349
+msgid "Continue with {label}"
+msgstr "Jarraitu {label} erabiliz"
+
 #: ../../../lib/web/src/components/ui/copy-button.tsx:60
 msgid "Copy"
 msgstr "Kopiatu"
@@ -380,6 +377,18 @@ msgstr "Kopiatu"
 #: ../../../lib/web/src/features/document/document-page.tsx:81
 msgid "Could not load this document. Please try again later."
 msgstr "Ezin izan da dokumentu hau kargatu. Saiatu berriro geroago."
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:181
+msgid "Couldn't send the code. Please try again."
+msgstr "Ezin izan da kodea bidali. Saiatu berriro."
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:133
+msgid "Couldn't start re-authentication. Please try again."
+msgstr "Ezin izan da berrautentifikazioa hasi. Saiatu berriro."
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:218
+msgid "Couldn't verify with that account. Please try again."
+msgstr "Ezin izan da kontu horrekin egiaztatu. Saiatu berriro."
 
 #: src/features/chess/components/new-game.tsx:148
 msgid "Creating..."
@@ -410,9 +419,13 @@ msgstr "Lehenetsia"
 msgid "Default AI account"
 msgstr "Lehenetsitako AA kontua"
 
-#: src/features/chess/index.tsx:437
+#: src/features/chess/index.tsx:440
 msgid "Delete game"
 msgstr "Ezabatu jokoa"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:90
+msgid "Delete your account on the old server"
+msgstr "Ezabatu zure kontua zerbitzari zaharrean"
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:60
 msgid "Desc"
@@ -437,6 +450,10 @@ msgstr "Detektatu web nabigatzailetik"
 msgid "Direction"
 msgstr "Norabidea"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:73
+msgid "Dismiss"
+msgstr "Baztertu"
+
 #: ../../../lib/web/src/components/ui/sidebar.tsx:235
 msgid "Displays the mobile sidebar."
 msgstr "Mugikorraren alboko barra erakusten du."
@@ -445,17 +462,29 @@ msgstr "Mugikorraren alboko barra erakusten du."
 msgid "Download"
 msgstr "Deskargatu"
 
-#: src/features/chess/index.tsx:75
-msgid "Draw"
-msgstr "Berdinketa"
+#: src/features/chess/components/chat-message-list.tsx:188
+msgid "Draw agreed"
+msgstr "Berdinketa adostuta"
 
-#: src/features/chess/index.tsx:450
+#: src/features/chess/index.tsx:453
 msgid "Draw offered — waiting for {opponentName}"
 msgstr "Berdinketa eskainita — {opponentName} itxaroten"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:134
 msgid "Dyslexia-friendly"
 msgstr "Dislexiarako egokia"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:286
+msgid "Email code"
+msgstr "Posta elektronikoko kodea"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:296
+msgid "Enter the code from your email"
+msgstr "Sartu zure mezu elektronikoko kodea"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:321
+msgid "Enter your authenticator code"
+msgstr "Sartu zure autentifikazio-aplikazioaren kodea"
 
 #: ../../../lib/web/src/components/layout/app-sidebar.tsx:35
 msgid "Expand sidebar"
@@ -465,7 +494,7 @@ msgstr "Zabaldu alboko barra"
 msgid "Extra large"
 msgstr "Oso handia"
 
-#: src/features/chess/index.tsx:200
+#: src/features/chess/index.tsx:203
 msgid "Failed to accept draw"
 msgstr "Ezin izan da berdinketa onartu"
 
@@ -477,19 +506,19 @@ msgstr "Ezin izan da kontua gehitu"
 msgid "Failed to create game"
 msgstr "Ezin izan da jokoa sortu"
 
-#: src/features/chess/index.tsx:215
+#: src/features/chess/index.tsx:218
 msgid "Failed to create rematch"
 msgstr "Ezin izan da errebantxa sortu"
 
-#: src/features/chess/index.tsx:205
+#: src/features/chess/index.tsx:208
 msgid "Failed to decline draw"
 msgstr "Ezin izan da berdinketa errefusatu"
 
-#: src/features/chess/index.tsx:226
+#: src/features/chess/index.tsx:229
 msgid "Failed to delete game"
 msgstr "Ezin izan da jokoa ezabatu"
 
-#: src/features/chess/index.tsx:195
+#: src/features/chess/index.tsx:198
 msgid "Failed to offer draw"
 msgstr "Ezin izan da berdinketa eskaini"
 
@@ -497,12 +526,12 @@ msgstr "Ezin izan da berdinketa eskaini"
 msgid "Failed to remove account"
 msgstr "Ezin izan da kontua kendu"
 
-#: src/features/chess/index.tsx:188
+#: src/features/chess/index.tsx:191
 msgid "Failed to resign"
 msgstr "Ezin izan da amore eman"
 
-#: src/features/chess/index.tsx:500
-#: src/features/chess/index.tsx:532
+#: src/features/chess/index.tsx:503
+#: src/features/chess/index.tsx:535
 msgid "Failed to send"
 msgstr "Ezin izan da bidali"
 
@@ -510,9 +539,13 @@ msgstr "Ezin izan da bidali"
 msgid "Failed to send verification code"
 msgstr "Ezin izan da egiaztapen-kodea bidali"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:104
+#: ../../../lib/web/src/components/notification-category-button.tsx:108
 msgid "Failed to update category"
 msgstr "Ezin izan da kategoria eguneratu"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:79
+msgid "Finish moving your account"
+msgstr "Amaitu kontuaren mugiketa"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:244
 msgid "Floating"
@@ -542,7 +575,7 @@ msgstr "Diseinu osoa"
 msgid "Game created"
 msgstr "Jokoa sortuta"
 
-#: src/features/chess/index.tsx:222
+#: src/features/chess/index.tsx:225
 msgid "Game deleted"
 msgstr "Jokoa ezabatuta"
 
@@ -756,7 +789,7 @@ msgstr "Ez da emaitzarik aurkitu."
 msgid "No time zone found."
 msgstr "Ez da ordu-zonarik aurkitu."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:135
+#: ../../../lib/web/src/components/notification-category-button.tsx:139
 msgid "No topic record yet — try again after the next notification."
 msgstr "Oraindik gairik ez — saiatu berriro hurrengo jakinarazpenaren ondoren."
 
@@ -780,7 +813,7 @@ msgstr "Arrunta"
 msgid "Notifications"
 msgstr "Jakinarazpenak"
 
-#: src/features/chess/index.tsx:421
+#: src/features/chess/index.tsx:424
 msgid "Offer draw"
 msgstr "Eskaini berdinketa"
 
@@ -793,11 +826,11 @@ msgstr "Hutsegitea! Ez da orria aurkitu!"
 msgid "Open account actions"
 msgstr "Ireki kontuaren ekintzak"
 
-#: src/features/chess/index.tsx:400
+#: src/features/chess/index.tsx:403
 msgid "Open chat panel"
 msgstr "Ireki txat-panela"
 
-#: src/features/chess/index.tsx:408
+#: src/features/chess/index.tsx:411
 msgid "Open game actions"
 msgstr "Ireki joko-ekintzak"
 
@@ -821,6 +854,18 @@ msgstr "Bestelakoa"
 #: ../../../lib/web/src/features/access/access-list.tsx:213
 msgid "Owner"
 msgstr "Jabea"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:331
+msgid "Passkey"
+msgstr "Passkey-a"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:206
+msgid "Passkey verification failed. Please try again."
+msgstr "Sarbide-gakoaren egiaztapenak huts egin du. Saiatu berriro."
+
+#: ../../../lib/web/src/components/restore-banner.tsx:126
+msgid "Passkeys"
+msgstr "Passkey-ak"
 
 #: src/features/chess/lib/use-chess-piece-name.ts:17
 msgid "pawn"
@@ -857,6 +902,14 @@ msgstr "Sustatu hona:"
 msgid "queen"
 msgstr "erregina"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:98
+msgid "Re-link your accounts on this server"
+msgstr "Berriro lotu zure kontuak zerbitzari honetan"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:120
+msgid "Re-register your passkeys on this server"
+msgstr "Erregistratu berriro zure sarbide-gakoak zerbitzari honetan"
+
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:216
 #: ../../../lib/web/src/components/search-entity-page.tsx:191
 msgid "Recommended"
@@ -878,7 +931,7 @@ msgstr "Erlatiboa (5m, 3o, 2e)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "Erlatiboa 24 ordu barruan, bestela absolutua"
 
-#: src/features/chess/index.tsx:434
+#: src/features/chess/index.tsx:437
 msgid "Rematch"
 msgstr "Itzulketa-partida"
 
@@ -900,6 +953,10 @@ msgstr "Sarbidea kendu?"
 msgid "Remove interest"
 msgstr "Kendu interesa"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:364
+msgid "Resend email"
+msgstr "Bidali mezua berriro"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:77
 #: ../../../lib/web/src/components/data-table/toolbar.tsx:78
 msgid "Reset"
@@ -909,16 +966,16 @@ msgstr "Berrezarri"
 msgid "Reset all settings to default values"
 msgstr "Berrezarri ezarpen guztiak balio lehenetsietara"
 
-#: src/features/chess/index.tsx:425
-#: src/features/chess/index.tsx:552
+#: src/features/chess/index.tsx:428
+#: src/features/chess/index.tsx:555
 msgid "Resign"
 msgstr "Amore eman"
 
-#: src/features/chess/index.tsx:543
+#: src/features/chess/index.tsx:546
 msgid "Resign game?"
 msgstr "Jokoan amore eman?"
 
-#: src/features/chess/index.tsx:549
+#: src/features/chess/index.tsx:552
 msgid "Resigning..."
 msgstr "Amore ematen..."
 
@@ -1012,6 +1069,10 @@ msgstr "Hautatu gaiaren hobespena"
 msgid "Send again"
 msgstr "Bidali berriz"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:304
+msgid "Send email"
+msgstr "Bidali emaila"
+
 #: src/features/chess/components/chat-input.tsx:40
 msgid "Send message"
 msgstr "Bidali mezua"
@@ -1066,10 +1127,6 @@ msgstr "Txikia"
 msgid "Spacious"
 msgstr "Lasaia"
 
-#: src/features/chess/index.tsx:71
-msgid "Stalemate — draw"
-msgstr "Itsumandoa — berdinketa"
-
 #: src/features/chess/components/new-game.tsx:94
 msgid "Start a new chess game"
 msgstr "Hasi xake partida berria"
@@ -1108,6 +1165,10 @@ msgstr "Taldeak/Aplikazioak"
 #: ../../../lib/web/src/features/document/document-page.tsx:39
 msgid "Terms and conditions"
 msgstr "Baldintzak"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:192
+msgid "That code is incorrect or has expired."
+msgstr "Kode hori okerra da edo iraungi egin da."
 
 #: ../../../lib/web/src/components/config-drawer.tsx:181
 msgid "Theme"
@@ -1186,7 +1247,7 @@ msgstr "Idatzi bilatzeko..."
 msgid "Unable to redirect to login. Please try again."
 msgstr "Ezin da saio-hasierara birbideratu. Saiatu berriro."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:143
+#: ../../../lib/web/src/components/notification-category-button.tsx:147
 msgid "Unassigned"
 msgstr "Esleitu gabe"
 
@@ -1198,13 +1259,17 @@ msgstr "Baimen gabeko sarbidea"
 msgid "United States"
 msgstr "Estatu Batuak"
 
-#: src/hooks/useGameWebsocket.ts:162
+#: src/hooks/useGameWebsocket.ts:164
 msgid "Unknown"
 msgstr "Ezezaguna"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:131
 msgid "Unverified"
 msgstr "Egiaztatu gabe"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:335
+msgid "Use your passkey"
+msgstr "Erabili zure sarbide-gakoa"
 
 #: ../../../lib/web/src/features/access/access-dialog.tsx:155
 msgid "User"
@@ -1222,6 +1287,7 @@ msgstr "Egiaztatze-kodea bidali da"
 msgid "Verification failed"
 msgstr "Egiaztatzeak huts egin du"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:385
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:164
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:106
 msgid "Verify"
@@ -1230,6 +1296,10 @@ msgstr "Egiaztatu"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:58
 msgid "Verify email address"
 msgstr "Egiaztatu helbide elektronikoa"
+
+#: ../../../lib/web/src/components/attachment-gallery.tsx:63
+msgid "Video thumbnail"
+msgstr "Bideoaren miniatura"
 
 #: ../../../lib/web/src/components/data-table/view-options.tsx:30
 msgid "View"
@@ -1256,7 +1326,7 @@ msgid "Wednesday"
 msgstr "Asteazkena"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:16
-#: src/features/chess/index.tsx:391
+#: src/features/chess/index.tsx:394
 msgid "White"
 msgstr "Zuria"
 
@@ -1267,14 +1337,10 @@ msgstr "Zuria"
 msgid "White {0}"
 msgstr "Zuria {0}"
 
-#: src/features/chess/components/chat-message-list.tsx:197
+#: src/features/chess/components/chat-message-list.tsx:209
 msgid "You"
 msgstr "Zu"
 
-#: src/features/chess/index.tsx:81
-msgid "You resigned — {opponentName} wins"
-msgstr "Etsi duzu — {opponentName}-(e)k irabazi du"
-
-#: src/features/chess/index.tsx:88
-msgid "Your move"
-msgstr "Zure mugimendua"
+#: ../../../lib/web/src/components/restore-banner.tsx:82
+msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
+msgstr "Zure kontua {source}-etik hona mugitu da. Han ezabatu arte, mezuak eta jakinarazpenak bi zerbitzarietara irits daitezke, zure edukiaren zati bat zerbitzari zaharretik ematen jarraitzen du, eta jarraitzaileek minutu batzuk behar izan ditzakete zu hemen aurkitzeko."

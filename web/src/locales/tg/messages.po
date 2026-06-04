@@ -46,23 +46,27 @@ msgstr "{count, plural, one {# рух} other {# рух}}"
 msgid "{count} pieces"
 msgstr "{count} муҳраҳо"
 
+#: src/features/chess/components/chat-message-list.tsx:190
+msgid "{name} declined the draw"
+msgstr "{name} баробариро рад кард"
+
+#: src/features/chess/components/chat-message-list.tsx:186
+msgid "{name} offered a draw"
+msgstr "{name} баробариро пешниҳод кард"
+
+#: src/features/chess/components/chat-message-list.tsx:184
+msgid "{name} resigned"
+msgstr "{name} таслим шуд"
+
 #: src/features/chess/components/draw-offer-banner.tsx:25
 msgid "{opponentName} offered a draw"
 msgstr "{opponentName} баробариро пешниҳод кард"
 
-#: src/features/chess/index.tsx:80
-msgid "{opponentName} resigned — you win!"
-msgstr "{opponentName} истеъфо дод — шумо мебаред!"
-
-#: src/features/chess/index.tsx:88
-msgid "{opponentName}'s move"
-msgstr "Ҳаракати {opponentName}"
-
-#: src/features/chess/components/chat-message-list.tsx:207
+#: src/features/chess/components/chat-message-list.tsx:219
 msgid "{subject} played <0>{san}</0>"
 msgstr "{subject} <0>{san}</0> бозӣ кард"
 
-#: src/features/chess/components/chat-message-list.tsx:205
+#: src/features/chess/components/chat-message-list.tsx:217
 msgid "{subject} took <0>{san}</0>"
 msgstr "{subject} <0>{san}</0> гирифт"
 
@@ -175,13 +179,17 @@ msgstr "Ҳама"
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "Шумо мутмаин ҳастед, ки мехоҳед хориҷ шавед? Барои дастрасӣ ба ҳисоб бояд аз нав ворид шавед."
 
-#: src/features/chess/index.tsx:544
+#: src/features/chess/index.tsx:547
 msgid "Are you sure you want to resign? {opponentName} will win the game."
 msgstr "Шумо мутмаин ҳастед, ки мехоҳед таслим шавед? {opponentName} бозиро мебарад."
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:56
 msgid "Asc"
 msgstr "Афзоянда"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:312
+msgid "Authenticator code"
+msgstr "Коди Authenticator"
 
 #: ../../../lib/web/src/components/place-picker.tsx:152
 msgid "Back"
@@ -198,7 +206,7 @@ msgid "bishop"
 msgstr "пил"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:16
-#: src/features/chess/index.tsx:391
+#: src/features/chess/index.tsx:394
 msgid "Black"
 msgstr "Сиёҳ"
 
@@ -214,6 +222,7 @@ msgid "Boost interest"
 msgstr "Афзоиши таваҷҷуҳ"
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx:64
+#: ../../../lib/web/src/components/step-up-dialog.tsx:360
 #: ../../../lib/web/src/components/travelling-picker.tsx:292
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:245
 #: ../../../lib/web/src/features/access/access-dialog.tsx:325
@@ -225,38 +234,22 @@ msgstr "Афзоиши таваҷҷуҳ"
 msgid "Cancel"
 msgstr "Бекор кардан"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:131
+#: ../../../lib/web/src/components/notification-category-button.tsx:135
 msgid "Category for this notification"
 msgstr "Категория барои ин огоҳинома"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:115
+#: ../../../lib/web/src/components/notification-category-button.tsx:119
 msgid "Change notification category"
 msgstr "Тағйири категорияи огоҳинома"
 
-#: src/features/chess/index.tsx:484
-#: src/features/chess/index.tsx:516
+#: src/features/chess/index.tsx:487
+#: src/features/chess/index.tsx:519
 msgid "Chat"
 msgstr "Чат"
 
-#: src/features/chess/index.tsx:85
-msgid "Check — {opponentName}'s move"
-msgstr "Чек — навбати {opponentName}"
-
-#: src/features/chess/index.tsx:85
-msgid "Check — your move"
-msgstr "Чек — навбати шумо"
-
-#: src/features/chess/index.tsx:67
-msgid "Checkmate — {opponentName} wins"
-msgstr "Шоҳмот — {opponentName} бурд"
-
-#: src/features/chess/index.tsx:66
-msgid "Checkmate — you win!"
-msgstr "Шоҳмот — шумо бурдед!"
-
-#: src/features/chess/index.tsx:93
-#: src/features/chess/index.tsx:319
-#: src/features/chess/index.tsx:331
+#: src/features/chess/index.tsx:96
+#: src/features/chess/index.tsx:322
+#: src/features/chess/index.tsx:334
 msgid "Chess"
 msgstr "Шоҳмот"
 
@@ -373,6 +366,10 @@ msgstr "Маълумоти заминавӣ ва тафсилот."
 msgid "Continue"
 msgstr "Идома"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:349
+msgid "Continue with {label}"
+msgstr "Бо {label} идома диҳед"
+
 #: ../../../lib/web/src/components/ui/copy-button.tsx:60
 msgid "Copy"
 msgstr "Нусхабардорӣ"
@@ -380,6 +377,18 @@ msgstr "Нусхабардорӣ"
 #: ../../../lib/web/src/features/document/document-page.tsx:81
 msgid "Could not load this document. Please try again later."
 msgstr "Ин ҳуҷҷатро бор карда натавонист. Лутфан баъдтар такрор кунед."
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:181
+msgid "Couldn't send the code. Please try again."
+msgstr "Рамзро фиристодан имконнопазир буд. Лутфан, аз нав кӯшиш кунед."
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:133
+msgid "Couldn't start re-authentication. Please try again."
+msgstr "Аз нав аутентификатсияро оғоз кардан имконнопазир буд. Лутфан, аз нав кӯшиш кунед."
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:218
+msgid "Couldn't verify with that account. Please try again."
+msgstr "Бо он ҳисоб тасдиқ кардан имконнопазир буд. Лутфан, бори дигар кӯшиш кунед."
 
 #: src/features/chess/components/new-game.tsx:148
 msgid "Creating..."
@@ -410,9 +419,13 @@ msgstr "Пешфарз"
 msgid "Default AI account"
 msgstr "Ҳисоби пешфарз AI"
 
-#: src/features/chess/index.tsx:437
+#: src/features/chess/index.tsx:440
 msgid "Delete game"
 msgstr "Нест кардани бозӣ"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:90
+msgid "Delete your account on the old server"
+msgstr "Ҳисоби худро дар сервери кӯҳна нест кунед"
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:60
 msgid "Desc"
@@ -437,6 +450,10 @@ msgstr "Аз браузери веб муайян кардан"
 msgid "Direction"
 msgstr "Самт"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:73
+msgid "Dismiss"
+msgstr "Рад кардан"
+
 #: ../../../lib/web/src/components/ui/sidebar.tsx:235
 msgid "Displays the mobile sidebar."
 msgstr "Панели канории мобилиро намоиш медиҳад."
@@ -445,17 +462,29 @@ msgstr "Панели канории мобилиро намоиш медиҳад
 msgid "Download"
 msgstr "Боргирӣ"
 
-#: src/features/chess/index.tsx:75
-msgid "Draw"
-msgstr "Кашидан"
+#: src/features/chess/components/chat-message-list.tsx:188
+msgid "Draw agreed"
+msgstr "Баробарӣ қабул шуд"
 
-#: src/features/chess/index.tsx:450
+#: src/features/chess/index.tsx:453
 msgid "Draw offered — waiting for {opponentName}"
 msgstr "Қарор пешниҳод шуд — мунтазири {opponentName}"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:134
 msgid "Dyslexia-friendly"
 msgstr "Барои дислексия мувофиқ"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:286
+msgid "Email code"
+msgstr "Рамзи email"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:296
+msgid "Enter the code from your email"
+msgstr "Рамзро аз почтаи электронии худ ворид кунед"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:321
+msgid "Enter your authenticator code"
+msgstr "Рамзи аутентификатори худро ворид кунед"
 
 #: ../../../lib/web/src/components/layout/app-sidebar.tsx:35
 msgid "Expand sidebar"
@@ -465,7 +494,7 @@ msgstr "Васеъ кардани панели канорӣ"
 msgid "Extra large"
 msgstr "Хеле калон"
 
-#: src/features/chess/index.tsx:200
+#: src/features/chess/index.tsx:203
 msgid "Failed to accept draw"
 msgstr "Қабули қарор ба анҷом нарасид"
 
@@ -477,19 +506,19 @@ msgstr "Илова кардани ҳисоб ба анҷом нарасид"
 msgid "Failed to create game"
 msgstr "Эҷоди бозӣ ба анҷом нарасид"
 
-#: src/features/chess/index.tsx:215
+#: src/features/chess/index.tsx:218
 msgid "Failed to create rematch"
 msgstr "Эҷоди бозии нав ба анҷом нарасид"
 
-#: src/features/chess/index.tsx:205
+#: src/features/chess/index.tsx:208
 msgid "Failed to decline draw"
 msgstr "Рад кардани қарор ба анҷом нарасид"
 
-#: src/features/chess/index.tsx:226
+#: src/features/chess/index.tsx:229
 msgid "Failed to delete game"
 msgstr "Ҳазфи бозӣ ба анҷом нарасид"
 
-#: src/features/chess/index.tsx:195
+#: src/features/chess/index.tsx:198
 msgid "Failed to offer draw"
 msgstr "Пешниҳоди қарор ба анҷом нарасид"
 
@@ -497,12 +526,12 @@ msgstr "Пешниҳоди қарор ба анҷом нарасид"
 msgid "Failed to remove account"
 msgstr "Бартараф кардани ҳисоб ба анҷом нарасид"
 
-#: src/features/chess/index.tsx:188
+#: src/features/chess/index.tsx:191
 msgid "Failed to resign"
 msgstr "Истеъфо ба анҷом нарасид"
 
-#: src/features/chess/index.tsx:500
-#: src/features/chess/index.tsx:532
+#: src/features/chess/index.tsx:503
+#: src/features/chess/index.tsx:535
 msgid "Failed to send"
 msgstr "Ирсол ба анҷом нарасид"
 
@@ -510,9 +539,13 @@ msgstr "Ирсол ба анҷом нарасид"
 msgid "Failed to send verification code"
 msgstr "Ирсоли рамзи тасдиқ ба анҷом нарасид"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:104
+#: ../../../lib/web/src/components/notification-category-button.tsx:108
 msgid "Failed to update category"
 msgstr "Навсозии категория ба анҷом нарасид"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:79
+msgid "Finish moving your account"
+msgstr "Интиқоли ҳисобро анҷом диҳед"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:244
 msgid "Floating"
@@ -542,7 +575,7 @@ msgstr "Тарҳбандии пурра"
 msgid "Game created"
 msgstr "Бозӣ сохта шуд"
 
-#: src/features/chess/index.tsx:222
+#: src/features/chess/index.tsx:225
 msgid "Game deleted"
 msgstr "Бозӣ ҳазф шуд"
 
@@ -756,7 +789,7 @@ msgstr "Ягон натиҷа ёфт нашуд."
 msgid "No time zone found."
 msgstr "Ягон минтақаи вақт ёфт нашуд."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:135
+#: ../../../lib/web/src/components/notification-category-button.tsx:139
 msgid "No topic record yet — try again after the next notification."
 msgstr "Ягон сабти мавзӯъ ҳоло нест — пас аз огоҳиномаи навбатӣ боз кӯшиш кунед."
 
@@ -780,7 +813,7 @@ msgstr "Муқаррарӣ"
 msgid "Notifications"
 msgstr "Огоҳиномаҳо"
 
-#: src/features/chess/index.tsx:421
+#: src/features/chess/index.tsx:424
 msgid "Offer draw"
 msgstr "Пешниҳоди дуруст"
 
@@ -793,11 +826,11 @@ msgstr "Эҳ! Саҳифа ёфт нашуд!"
 msgid "Open account actions"
 msgstr "Кушодани амалҳои ҳисоб"
 
-#: src/features/chess/index.tsx:400
+#: src/features/chess/index.tsx:403
 msgid "Open chat panel"
 msgstr "Кушодани панели чат"
 
-#: src/features/chess/index.tsx:408
+#: src/features/chess/index.tsx:411
 msgid "Open game actions"
 msgstr "Кушодани амалҳои бозӣ"
 
@@ -821,6 +854,18 @@ msgstr "Дигар"
 #: ../../../lib/web/src/features/access/access-list.tsx:213
 msgid "Owner"
 msgstr "Соҳиб"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:331
+msgid "Passkey"
+msgstr "Калиди дастрасӣ"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:206
+msgid "Passkey verification failed. Please try again."
+msgstr "Тасдиқи калиди дастрасӣ ноком шуд. Лутфан, аз нав кӯшиш кунед."
+
+#: ../../../lib/web/src/components/restore-banner.tsx:126
+msgid "Passkeys"
+msgstr "Калидҳои дастрасӣ"
 
 #: src/features/chess/lib/use-chess-piece-name.ts:17
 msgid "pawn"
@@ -857,6 +902,14 @@ msgstr "Тарфеъ ба:"
 msgid "queen"
 msgstr "ферз"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:98
+msgid "Re-link your accounts on this server"
+msgstr "Ҳисобҳоятонро дар ин сервер аз нав пайванд кунед"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:120
+msgid "Re-register your passkeys on this server"
+msgstr "Калидҳои дастрасии худро дар ин сервер аз нав сабт кунед"
+
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:216
 #: ../../../lib/web/src/components/search-entity-page.tsx:191
 msgid "Recommended"
@@ -878,7 +931,7 @@ msgstr "Нисбӣ (5д, 3с, 2р)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "Нисбӣ дар 24 соат, дар акси ҳол мутлақ"
 
-#: src/features/chess/index.tsx:434
+#: src/features/chess/index.tsx:437
 msgid "Rematch"
 msgstr "Бозиҳои такрорӣ"
 
@@ -900,6 +953,10 @@ msgstr "Дастрасиро хориҷ кардан?"
 msgid "Remove interest"
 msgstr "Хориҷ кардани шавқу ҳавас"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:364
+msgid "Resend email"
+msgstr "Мактубро дубора фиристед"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:77
 #: ../../../lib/web/src/components/data-table/toolbar.tsx:78
 msgid "Reset"
@@ -909,16 +966,16 @@ msgstr "Барқарорсозӣ"
 msgid "Reset all settings to default values"
 msgstr "Барқарорсозии ҳамаи танзимот ба қиматҳои нобаёнӣ"
 
-#: src/features/chess/index.tsx:425
-#: src/features/chess/index.tsx:552
+#: src/features/chess/index.tsx:428
+#: src/features/chess/index.tsx:555
 msgid "Resign"
 msgstr "Таслим"
 
-#: src/features/chess/index.tsx:543
+#: src/features/chess/index.tsx:546
 msgid "Resign game?"
 msgstr "Аз бозӣ таслим шудан?"
 
-#: src/features/chess/index.tsx:549
+#: src/features/chess/index.tsx:552
 msgid "Resigning..."
 msgstr "Таслим шудан..."
 
@@ -1012,6 +1069,10 @@ msgstr "Афзалияти мавзӯъро интихоб кунед"
 msgid "Send again"
 msgstr "Бори дигар фиристодан"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:304
+msgid "Send email"
+msgstr "Имейл фиристодан"
+
 #: src/features/chess/components/chat-input.tsx:40
 msgid "Send message"
 msgstr "Паём фиристодан"
@@ -1066,10 +1127,6 @@ msgstr "Хурд"
 msgid "Spacious"
 msgstr "Васеъ"
 
-#: src/features/chess/index.tsx:71
-msgid "Stalemate — draw"
-msgstr "Бозӣ баробар"
-
 #: src/features/chess/components/new-game.tsx:94
 msgid "Start a new chess game"
 msgstr "Бозии нави шоҳмотро оғоз кунед"
@@ -1108,6 +1165,10 @@ msgstr "Дастаҳо/Барномаҳо"
 #: ../../../lib/web/src/features/document/document-page.tsx:39
 msgid "Terms and conditions"
 msgstr "Шартҳо ва шартномаҳо"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:192
+msgid "That code is incorrect or has expired."
+msgstr "Он рамз нодуруст аст ё мӯҳлаташ гузаштааст."
 
 #: ../../../lib/web/src/components/config-drawer.tsx:181
 msgid "Theme"
@@ -1186,7 +1247,7 @@ msgstr "Барои ҷустуҷӯ чоп кунед..."
 msgid "Unable to redirect to login. Please try again."
 msgstr "Ба воридшавӣ равона кардан имконнопазир аст. Лутфан дубора кӯшиш кунед."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:143
+#: ../../../lib/web/src/components/notification-category-button.tsx:147
 msgid "Unassigned"
 msgstr "Таъин нашудааст"
 
@@ -1198,13 +1259,17 @@ msgstr "Дастрасии иҷозат додашуда не"
 msgid "United States"
 msgstr "Иёлоти Муттаҳида"
 
-#: src/hooks/useGameWebsocket.ts:162
+#: src/hooks/useGameWebsocket.ts:164
 msgid "Unknown"
 msgstr "Номаълум"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:131
 msgid "Unverified"
 msgstr "Тасдиқ нашудааст"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:335
+msgid "Use your passkey"
+msgstr "Калиди дастрасии худро истифода баред"
 
 #: ../../../lib/web/src/features/access/access-dialog.tsx:155
 msgid "User"
@@ -1222,6 +1287,7 @@ msgstr "Рамзи тасдиқ фиристода шуд"
 msgid "Verification failed"
 msgstr "Тасдиқ ноком шуд"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:385
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:164
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:106
 msgid "Verify"
@@ -1230,6 +1296,10 @@ msgstr "Тасдиқ кардан"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:58
 msgid "Verify email address"
 msgstr "Тасдиқи суроғаи почтаи электронӣ"
+
+#: ../../../lib/web/src/components/attachment-gallery.tsx:63
+msgid "Video thumbnail"
+msgstr "Эскизи видео"
 
 #: ../../../lib/web/src/components/data-table/view-options.tsx:30
 msgid "View"
@@ -1256,7 +1326,7 @@ msgid "Wednesday"
 msgstr "Чоршанбе"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:16
-#: src/features/chess/index.tsx:391
+#: src/features/chess/index.tsx:394
 msgid "White"
 msgstr "Сафед"
 
@@ -1267,14 +1337,10 @@ msgstr "Сафед"
 msgid "White {0}"
 msgstr "Сафед {0}"
 
-#: src/features/chess/components/chat-message-list.tsx:197
+#: src/features/chess/components/chat-message-list.tsx:209
 msgid "You"
 msgstr "Шумо"
 
-#: src/features/chess/index.tsx:81
-msgid "You resigned — {opponentName} wins"
-msgstr "Шумо истеъфо додед — {opponentName} мебарад"
-
-#: src/features/chess/index.tsx:88
-msgid "Your move"
-msgstr "Ҳаракати шумо"
+#: ../../../lib/web/src/components/restore-banner.tsx:82
+msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
+msgstr "Ҳисоби шумо аз {source} ба ин ҷо интиқол дода шуд. То он гоҳ, ки онро дар он ҷо нест накунед, паёмҳо ва огоҳиҳо метавонанд ба ҳарду сервер расанд, қисмати муайяни мазмуни шумо аз сервери кӯҳна хизмат медиҳад ва пайравон метавонанд чанд дақиқа вақт барои ёфтани шумо дар ин ҷо сарф кунанд."

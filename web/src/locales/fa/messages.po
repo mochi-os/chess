@@ -46,23 +46,27 @@ msgstr "{count, plural, one {# رخ} other {# رخ}}"
 msgid "{count} pieces"
 msgstr "{count} مهره"
 
+#: src/features/chess/components/chat-message-list.tsx:190
+msgid "{name} declined the draw"
+msgstr "{name} تساوی را رد کرد"
+
+#: src/features/chess/components/chat-message-list.tsx:186
+msgid "{name} offered a draw"
+msgstr "{name} پیشنهاد تساوی داد"
+
+#: src/features/chess/components/chat-message-list.tsx:184
+msgid "{name} resigned"
+msgstr "{name} تسلیم شد"
+
 #: src/features/chess/components/draw-offer-banner.tsx:25
 msgid "{opponentName} offered a draw"
 msgstr "{opponentName} پیشنهاد مساوی داد"
 
-#: src/features/chess/index.tsx:80
-msgid "{opponentName} resigned — you win!"
-msgstr "{opponentName} تسلیم شد — شما برنده شدید!"
-
-#: src/features/chess/index.tsx:88
-msgid "{opponentName}'s move"
-msgstr "نوبت {opponentName}"
-
-#: src/features/chess/components/chat-message-list.tsx:207
+#: src/features/chess/components/chat-message-list.tsx:219
 msgid "{subject} played <0>{san}</0>"
 msgstr "{subject} <0>{san}</0> را بازی کرد"
 
-#: src/features/chess/components/chat-message-list.tsx:205
+#: src/features/chess/components/chat-message-list.tsx:217
 msgid "{subject} took <0>{san}</0>"
 msgstr "{subject} <0>{san}</0> را گرفت"
 
@@ -175,13 +179,17 @@ msgstr "همه"
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "آیا از خروج از حساب مطمئن هستید؟ برای دسترسی به حساب باید دوباره وارد شوید."
 
-#: src/features/chess/index.tsx:544
+#: src/features/chess/index.tsx:547
 msgid "Are you sure you want to resign? {opponentName} will win the game."
 msgstr "آیا از تسلیم شدن مطمئن هستید؟ {opponentName} برندهٔ بازی می‌شود."
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:56
 msgid "Asc"
 msgstr "صعودی"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:312
+msgid "Authenticator code"
+msgstr "کد احراز هویت"
 
 #: ../../../lib/web/src/components/place-picker.tsx:152
 msgid "Back"
@@ -198,7 +206,7 @@ msgid "bishop"
 msgstr "فیل"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:16
-#: src/features/chess/index.tsx:391
+#: src/features/chess/index.tsx:394
 msgid "Black"
 msgstr "سیاه"
 
@@ -214,6 +222,7 @@ msgid "Boost interest"
 msgstr "تقویت علاقه"
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx:64
+#: ../../../lib/web/src/components/step-up-dialog.tsx:360
 #: ../../../lib/web/src/components/travelling-picker.tsx:292
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:245
 #: ../../../lib/web/src/features/access/access-dialog.tsx:325
@@ -225,38 +234,22 @@ msgstr "تقویت علاقه"
 msgid "Cancel"
 msgstr "لغو"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:131
+#: ../../../lib/web/src/components/notification-category-button.tsx:135
 msgid "Category for this notification"
 msgstr "دستهٔ این اعلان"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:115
+#: ../../../lib/web/src/components/notification-category-button.tsx:119
 msgid "Change notification category"
 msgstr "تغییر دستهٔ اعلان"
 
-#: src/features/chess/index.tsx:484
-#: src/features/chess/index.tsx:516
+#: src/features/chess/index.tsx:487
+#: src/features/chess/index.tsx:519
 msgid "Chat"
 msgstr "گفت‌وگو"
 
-#: src/features/chess/index.tsx:85
-msgid "Check — {opponentName}'s move"
-msgstr "کیش — نوبت {opponentName}"
-
-#: src/features/chess/index.tsx:85
-msgid "Check — your move"
-msgstr "کیش — نوبت شماست"
-
-#: src/features/chess/index.tsx:67
-msgid "Checkmate — {opponentName} wins"
-msgstr "مات — {opponentName} برنده شد"
-
-#: src/features/chess/index.tsx:66
-msgid "Checkmate — you win!"
-msgstr "مات — شما بردید!"
-
-#: src/features/chess/index.tsx:93
-#: src/features/chess/index.tsx:319
-#: src/features/chess/index.tsx:331
+#: src/features/chess/index.tsx:96
+#: src/features/chess/index.tsx:322
+#: src/features/chess/index.tsx:334
 msgid "Chess"
 msgstr "شطرنج"
 
@@ -373,6 +366,10 @@ msgstr "اطلاعات زمینه‌ای و جزئیات."
 msgid "Continue"
 msgstr "ادامه"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:349
+msgid "Continue with {label}"
+msgstr "ادامه با {label}"
+
 #: ../../../lib/web/src/components/ui/copy-button.tsx:60
 msgid "Copy"
 msgstr "کپی"
@@ -380,6 +377,18 @@ msgstr "کپی"
 #: ../../../lib/web/src/features/document/document-page.tsx:81
 msgid "Could not load this document. Please try again later."
 msgstr "بارگذاری این سند ممکن نشد. لطفاً بعداً دوباره تلاش کنید."
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:181
+msgid "Couldn't send the code. Please try again."
+msgstr "ارسال کد ممکن نشد. لطفاً دوباره تلاش کنید."
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:133
+msgid "Couldn't start re-authentication. Please try again."
+msgstr "شروع احراز هویت مجدد ممکن نشد. لطفاً دوباره تلاش کنید."
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:218
+msgid "Couldn't verify with that account. Please try again."
+msgstr "تأیید با آن حساب ممکن نشد. لطفاً دوباره تلاش کنید."
 
 #: src/features/chess/components/new-game.tsx:148
 msgid "Creating..."
@@ -410,9 +419,13 @@ msgstr "پیش‌فرض"
 msgid "Default AI account"
 msgstr "حساب پیش‌فرض هوش مصنوعی"
 
-#: src/features/chess/index.tsx:437
+#: src/features/chess/index.tsx:440
 msgid "Delete game"
 msgstr "حذف بازی"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:90
+msgid "Delete your account on the old server"
+msgstr "حساب کاربری خود را در سرور قدیمی حذف کنید"
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:60
 msgid "Desc"
@@ -437,6 +450,10 @@ msgstr "تشخیص از مرورگر وب"
 msgid "Direction"
 msgstr "جهت"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:73
+msgid "Dismiss"
+msgstr "بستن"
+
 #: ../../../lib/web/src/components/ui/sidebar.tsx:235
 msgid "Displays the mobile sidebar."
 msgstr "نوار کناری موبایل را نمایش می‌دهد."
@@ -445,17 +462,29 @@ msgstr "نوار کناری موبایل را نمایش می‌دهد."
 msgid "Download"
 msgstr "دانلود"
 
-#: src/features/chess/index.tsx:75
-msgid "Draw"
-msgstr "تساوی"
+#: src/features/chess/components/chat-message-list.tsx:188
+msgid "Draw agreed"
+msgstr "تساوی پذیرفته شد"
 
-#: src/features/chess/index.tsx:450
+#: src/features/chess/index.tsx:453
 msgid "Draw offered — waiting for {opponentName}"
 msgstr "پیشنهاد تساوی داده شد — در انتظار {opponentName}"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:134
 msgid "Dyslexia-friendly"
 msgstr "مناسب برای دیسلکسی"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:286
+msgid "Email code"
+msgstr "کد ایمیل"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:296
+msgid "Enter the code from your email"
+msgstr "کد دریافتی از ایمیل خود را وارد کنید"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:321
+msgid "Enter your authenticator code"
+msgstr "کد برنامه احرازکننده هویت خود را وارد کنید"
 
 #: ../../../lib/web/src/components/layout/app-sidebar.tsx:35
 msgid "Expand sidebar"
@@ -465,7 +494,7 @@ msgstr "گسترش نوار کناری"
 msgid "Extra large"
 msgstr "خیلی بزرگ"
 
-#: src/features/chess/index.tsx:200
+#: src/features/chess/index.tsx:203
 msgid "Failed to accept draw"
 msgstr "پذیرش تساوی ناموفق بود"
 
@@ -477,19 +506,19 @@ msgstr "افزودن حساب ناموفق بود"
 msgid "Failed to create game"
 msgstr "ایجاد بازی ناموفق بود"
 
-#: src/features/chess/index.tsx:215
+#: src/features/chess/index.tsx:218
 msgid "Failed to create rematch"
 msgstr "ایجاد بازی مجدد ناموفق بود"
 
-#: src/features/chess/index.tsx:205
+#: src/features/chess/index.tsx:208
 msgid "Failed to decline draw"
 msgstr "رد تساوی ناموفق بود"
 
-#: src/features/chess/index.tsx:226
+#: src/features/chess/index.tsx:229
 msgid "Failed to delete game"
 msgstr "حذف بازی ناموفق بود"
 
-#: src/features/chess/index.tsx:195
+#: src/features/chess/index.tsx:198
 msgid "Failed to offer draw"
 msgstr "پیشنهاد تساوی ناموفق بود"
 
@@ -497,12 +526,12 @@ msgstr "پیشنهاد تساوی ناموفق بود"
 msgid "Failed to remove account"
 msgstr "حذف حساب ناموفق بود"
 
-#: src/features/chess/index.tsx:188
+#: src/features/chess/index.tsx:191
 msgid "Failed to resign"
 msgstr "تسلیم شدن ناموفق بود"
 
-#: src/features/chess/index.tsx:500
-#: src/features/chess/index.tsx:532
+#: src/features/chess/index.tsx:503
+#: src/features/chess/index.tsx:535
 msgid "Failed to send"
 msgstr "ارسال ناموفق بود"
 
@@ -510,9 +539,13 @@ msgstr "ارسال ناموفق بود"
 msgid "Failed to send verification code"
 msgstr "ارسال کد تأیید ناموفق بود"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:104
+#: ../../../lib/web/src/components/notification-category-button.tsx:108
 msgid "Failed to update category"
 msgstr "به‌روزرسانی دسته ناموفق بود"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:79
+msgid "Finish moving your account"
+msgstr "انتقال حساب کاربری خود را تکمیل کنید"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:244
 msgid "Floating"
@@ -542,7 +575,7 @@ msgstr "چیدمان کامل"
 msgid "Game created"
 msgstr "بازی ایجاد شد"
 
-#: src/features/chess/index.tsx:222
+#: src/features/chess/index.tsx:225
 msgid "Game deleted"
 msgstr "بازی حذف شد"
 
@@ -756,7 +789,7 @@ msgstr "نتیجه‌ای یافت نشد."
 msgid "No time zone found."
 msgstr "منطقه زمانی یافت نشد."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:135
+#: ../../../lib/web/src/components/notification-category-button.tsx:139
 msgid "No topic record yet — try again after the next notification."
 msgstr "هنوز هیچ رکوردی برای موضوع وجود ندارد — پس از اعلان بعدی دوباره تلاش کنید."
 
@@ -780,7 +813,7 @@ msgstr "معمولی"
 msgid "Notifications"
 msgstr "اعلان‌ها"
 
-#: src/features/chess/index.tsx:421
+#: src/features/chess/index.tsx:424
 msgid "Offer draw"
 msgstr "پیشنهاد تساوی"
 
@@ -793,11 +826,11 @@ msgstr "اوه! صفحه پیدا نشد!"
 msgid "Open account actions"
 msgstr "باز کردن اقدامات حساب"
 
-#: src/features/chess/index.tsx:400
+#: src/features/chess/index.tsx:403
 msgid "Open chat panel"
 msgstr "باز کردن پنل گفت‌وگو"
 
-#: src/features/chess/index.tsx:408
+#: src/features/chess/index.tsx:411
 msgid "Open game actions"
 msgstr "باز کردن اقدامات بازی"
 
@@ -821,6 +854,18 @@ msgstr "سایر"
 #: ../../../lib/web/src/features/access/access-list.tsx:213
 msgid "Owner"
 msgstr "مالک"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:331
+msgid "Passkey"
+msgstr "پسکی"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:206
+msgid "Passkey verification failed. Please try again."
+msgstr "تأیید با کلید عبور ناموفق بود. لطفاً دوباره تلاش کنید."
+
+#: ../../../lib/web/src/components/restore-banner.tsx:126
+msgid "Passkeys"
+msgstr "پسکی‌ها"
 
 #: src/features/chess/lib/use-chess-piece-name.ts:17
 msgid "pawn"
@@ -857,6 +902,14 @@ msgstr "ارتقا به:"
 msgid "queen"
 msgstr "وزیر"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:98
+msgid "Re-link your accounts on this server"
+msgstr "حساب‌های خود را در این سرور مجدداً پیوند دهید"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:120
+msgid "Re-register your passkeys on this server"
+msgstr "کلیدهای عبور خود را دوباره در این سرور ثبت کنید"
+
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:216
 #: ../../../lib/web/src/components/search-entity-page.tsx:191
 msgid "Recommended"
@@ -878,7 +931,7 @@ msgstr "نسبی (۵د، ۳س، ۲ر)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "در ۲۴ ساعت نسبی، در غیر این صورت مطلق"
 
-#: src/features/chess/index.tsx:434
+#: src/features/chess/index.tsx:437
 msgid "Rematch"
 msgstr "بازی مجدد"
 
@@ -900,6 +953,10 @@ msgstr "حذف دسترسی؟"
 msgid "Remove interest"
 msgstr "حذف علاقه"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:364
+msgid "Resend email"
+msgstr "ارسال مجدد ایمیل"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:77
 #: ../../../lib/web/src/components/data-table/toolbar.tsx:78
 msgid "Reset"
@@ -909,16 +966,16 @@ msgstr "بازنشانی"
 msgid "Reset all settings to default values"
 msgstr "بازنشانی همه تنظیمات به مقادیر پیش‌فرض"
 
-#: src/features/chess/index.tsx:425
-#: src/features/chess/index.tsx:552
+#: src/features/chess/index.tsx:428
+#: src/features/chess/index.tsx:555
 msgid "Resign"
 msgstr "تسلیم"
 
-#: src/features/chess/index.tsx:543
+#: src/features/chess/index.tsx:546
 msgid "Resign game?"
 msgstr "بازی را تسلیم می‌شوید؟"
 
-#: src/features/chess/index.tsx:549
+#: src/features/chess/index.tsx:552
 msgid "Resigning..."
 msgstr "در حال تسلیم..."
 
@@ -1012,6 +1069,10 @@ msgstr "انتخاب ترجیح تم"
 msgid "Send again"
 msgstr "ارسال مجدد"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:304
+msgid "Send email"
+msgstr "ارسال ایمیل"
+
 #: src/features/chess/components/chat-input.tsx:40
 msgid "Send message"
 msgstr "ارسال پیام"
@@ -1066,10 +1127,6 @@ msgstr "کوچک"
 msgid "Spacious"
 msgstr "گسترده"
 
-#: src/features/chess/index.tsx:71
-msgid "Stalemate — draw"
-msgstr "بن‌بست — مساوی"
-
 #: src/features/chess/components/new-game.tsx:94
 msgid "Start a new chess game"
 msgstr "شروع بازی شطرنج جدید"
@@ -1108,6 +1165,10 @@ msgstr "تیم‌ها/اپ‌ها"
 #: ../../../lib/web/src/features/document/document-page.tsx:39
 msgid "Terms and conditions"
 msgstr "شرایط و ضوابط"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:192
+msgid "That code is incorrect or has expired."
+msgstr "این کد نادرست است یا منقضی شده است."
 
 #: ../../../lib/web/src/components/config-drawer.tsx:181
 msgid "Theme"
@@ -1186,7 +1247,7 @@ msgstr "برای جست‌وجو تایپ کنید..."
 msgid "Unable to redirect to login. Please try again."
 msgstr "ریدایرکت به ورود ممکن نیست. لطفاً دوباره تلاش کنید."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:143
+#: ../../../lib/web/src/components/notification-category-button.tsx:147
 msgid "Unassigned"
 msgstr "بدون اختصاص"
 
@@ -1198,13 +1259,17 @@ msgstr "دسترسی غیرمجاز"
 msgid "United States"
 msgstr "ایالات متحده"
 
-#: src/hooks/useGameWebsocket.ts:162
+#: src/hooks/useGameWebsocket.ts:164
 msgid "Unknown"
 msgstr "ناشناخته"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:131
 msgid "Unverified"
 msgstr "تأیید نشده"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:335
+msgid "Use your passkey"
+msgstr "از کلید عبور خود استفاده کنید"
 
 #: ../../../lib/web/src/features/access/access-dialog.tsx:155
 msgid "User"
@@ -1222,6 +1287,7 @@ msgstr "کد تأیید ارسال شد"
 msgid "Verification failed"
 msgstr "تأیید ناموفق بود"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:385
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:164
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:106
 msgid "Verify"
@@ -1230,6 +1296,10 @@ msgstr "تأیید"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:58
 msgid "Verify email address"
 msgstr "تأیید نشانی ایمیل"
+
+#: ../../../lib/web/src/components/attachment-gallery.tsx:63
+msgid "Video thumbnail"
+msgstr "بندانگشتی ویدیو"
 
 #: ../../../lib/web/src/components/data-table/view-options.tsx:30
 msgid "View"
@@ -1256,7 +1326,7 @@ msgid "Wednesday"
 msgstr "چهارشنبه"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:16
-#: src/features/chess/index.tsx:391
+#: src/features/chess/index.tsx:394
 msgid "White"
 msgstr "سفید"
 
@@ -1267,14 +1337,10 @@ msgstr "سفید"
 msgid "White {0}"
 msgstr "سفید {0}"
 
-#: src/features/chess/components/chat-message-list.tsx:197
+#: src/features/chess/components/chat-message-list.tsx:209
 msgid "You"
 msgstr "شما"
 
-#: src/features/chess/index.tsx:81
-msgid "You resigned — {opponentName} wins"
-msgstr "شما تسلیم شدید — {opponentName} برنده شد"
-
-#: src/features/chess/index.tsx:88
-msgid "Your move"
-msgstr "نوبت شما"
+#: ../../../lib/web/src/components/restore-banner.tsx:82
+msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
+msgstr "حساب کاربری شما از {source} به اینجا منتقل شده است. تا زمانی که آن را آنجا حذف نکنید، پیام‌ها و اعلان‌ها ممکن است به هر دو سرور برسند، بخشی از محتوای شما همچنان از سرور قدیمی ارائه می‌شود، و دنبال‌کنندگان ممکن است چند دقیقه‌ای طول بکشد تا شما را اینجا پیدا کنند."

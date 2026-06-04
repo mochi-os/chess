@@ -46,23 +46,27 @@ msgstr "{count, plural, one {# тура} other {# тура}}"
 msgid "{count} pieces"
 msgstr "{count} даана"
 
+#: src/features/chess/components/chat-message-list.tsx:190
+msgid "{name} declined the draw"
+msgstr "{name} тең оюндан баш тартты"
+
+#: src/features/chess/components/chat-message-list.tsx:186
+msgid "{name} offered a draw"
+msgstr "{name} тең оюн сунуштады"
+
+#: src/features/chess/components/chat-message-list.tsx:184
+msgid "{name} resigned"
+msgstr "{name} баш тартты"
+
 #: src/features/chess/components/draw-offer-banner.tsx:25
 msgid "{opponentName} offered a draw"
 msgstr "{opponentName} теңме-тең сунуш кылды"
 
-#: src/features/chess/index.tsx:80
-msgid "{opponentName} resigned — you win!"
-msgstr "{opponentName} баш тартты — сиз жеңдиңиз!"
-
-#: src/features/chess/index.tsx:88
-msgid "{opponentName}'s move"
-msgstr "{opponentName} жүрүшү"
-
-#: src/features/chess/components/chat-message-list.tsx:207
+#: src/features/chess/components/chat-message-list.tsx:219
 msgid "{subject} played <0>{san}</0>"
 msgstr "{subject} ойноду <0>{san}</0>"
 
-#: src/features/chess/components/chat-message-list.tsx:205
+#: src/features/chess/components/chat-message-list.tsx:217
 msgid "{subject} took <0>{san}</0>"
 msgstr "{subject} алды <0>{san}</0>"
 
@@ -175,13 +179,17 @@ msgstr "Баары"
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "Чыгууну каалайсызбы? Аккаунтуңузга кайра кирүү керек болот."
 
-#: src/features/chess/index.tsx:544
+#: src/features/chess/index.tsx:547
 msgid "Are you sure you want to resign? {opponentName} will win the game."
 msgstr "Багынууну каалайсызбы? Оюнду {opponentName} утат."
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:56
 msgid "Asc"
 msgstr "Өсүү"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:312
+msgid "Authenticator code"
+msgstr "Authenticator коду"
 
 #: ../../../lib/web/src/components/place-picker.tsx:152
 msgid "Back"
@@ -198,7 +206,7 @@ msgid "bishop"
 msgstr "епископ"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:16
-#: src/features/chess/index.tsx:391
+#: src/features/chess/index.tsx:394
 msgid "Black"
 msgstr "Кара"
 
@@ -214,6 +222,7 @@ msgid "Boost interest"
 msgstr "Кызыгууну күчөтүү"
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx:64
+#: ../../../lib/web/src/components/step-up-dialog.tsx:360
 #: ../../../lib/web/src/components/travelling-picker.tsx:292
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:245
 #: ../../../lib/web/src/features/access/access-dialog.tsx:325
@@ -225,38 +234,22 @@ msgstr "Кызыгууну күчөтүү"
 msgid "Cancel"
 msgstr "Жокко чыгаруу"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:131
+#: ../../../lib/web/src/components/notification-category-button.tsx:135
 msgid "Category for this notification"
 msgstr "Бул эскертүү үчүн категория"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:115
+#: ../../../lib/web/src/components/notification-category-button.tsx:119
 msgid "Change notification category"
 msgstr "Эскертүү категориясын өзгөртүү"
 
-#: src/features/chess/index.tsx:484
-#: src/features/chess/index.tsx:516
+#: src/features/chess/index.tsx:487
+#: src/features/chess/index.tsx:519
 msgid "Chat"
 msgstr "Чат"
 
-#: src/features/chess/index.tsx:85
-msgid "Check — {opponentName}'s move"
-msgstr "Шах — {opponentName} кезеги"
-
-#: src/features/chess/index.tsx:85
-msgid "Check — your move"
-msgstr "Шах — сиздин кезек"
-
-#: src/features/chess/index.tsx:67
-msgid "Checkmate — {opponentName} wins"
-msgstr "Мат — {opponentName} утту"
-
-#: src/features/chess/index.tsx:66
-msgid "Checkmate — you win!"
-msgstr "Мат — сиз уттуңуз!"
-
-#: src/features/chess/index.tsx:93
-#: src/features/chess/index.tsx:319
-#: src/features/chess/index.tsx:331
+#: src/features/chess/index.tsx:96
+#: src/features/chess/index.tsx:322
+#: src/features/chess/index.tsx:334
 msgid "Chess"
 msgstr "Шахмат"
 
@@ -373,6 +366,10 @@ msgstr "Контексттик маалымат жана деталдар."
 msgid "Continue"
 msgstr "Улантуу"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:349
+msgid "Continue with {label}"
+msgstr "{label} менен улантуу"
+
 #: ../../../lib/web/src/components/ui/copy-button.tsx:60
 msgid "Copy"
 msgstr "Көчүрүү"
@@ -380,6 +377,18 @@ msgstr "Көчүрүү"
 #: ../../../lib/web/src/features/document/document-page.tsx:81
 msgid "Could not load this document. Please try again later."
 msgstr "Бул документти жүктөө мүмкүн болбоду. Кийинчерээк кайра аракет кылыңыз."
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:181
+msgid "Couldn't send the code. Please try again."
+msgstr "Кодду жөнөтүү мүмкүн болгон жок. Кайра аракет кылыңыз."
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:133
+msgid "Couldn't start re-authentication. Please try again."
+msgstr "Кайра аутентификацияны баштоо мүмкүн болгон жок. Кайра аракет кылыңыз."
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:218
+msgid "Couldn't verify with that account. Please try again."
+msgstr "Бул каттоо эсеби менен текшерүү мүмкүн болбоду. Кайра аракет кылыңыз."
 
 #: src/features/chess/components/new-game.tsx:148
 msgid "Creating..."
@@ -410,9 +419,13 @@ msgstr "Демейки"
 msgid "Default AI account"
 msgstr "Демейки AI аккаунту"
 
-#: src/features/chess/index.tsx:437
+#: src/features/chess/index.tsx:440
 msgid "Delete game"
 msgstr "Оюнду жок кылуу"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:90
+msgid "Delete your account on the old server"
+msgstr "Эски серверден аккаунтуңузду жок кылыңыз"
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:60
 msgid "Desc"
@@ -437,6 +450,10 @@ msgstr "Веб-браузерден аныктоо"
 msgid "Direction"
 msgstr "Багыт"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:73
+msgid "Dismiss"
+msgstr "Четке кагуу"
+
 #: ../../../lib/web/src/components/ui/sidebar.tsx:235
 msgid "Displays the mobile sidebar."
 msgstr "Мобилдик каптал тилкесин көрсөтөт."
@@ -445,17 +462,29 @@ msgstr "Мобилдик каптал тилкесин көрсөтөт."
 msgid "Download"
 msgstr "Жүктөп алуу"
 
-#: src/features/chess/index.tsx:75
-msgid "Draw"
-msgstr "Теңтайлаш"
+#: src/features/chess/components/chat-message-list.tsx:188
+msgid "Draw agreed"
+msgstr "Тең оюнга макул болушту"
 
-#: src/features/chess/index.tsx:450
+#: src/features/chess/index.tsx:453
 msgid "Draw offered — waiting for {opponentName}"
 msgstr "Теңтайлаш сунушталды — {opponentName} күтүлүүдө"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:134
 msgid "Dyslexia-friendly"
 msgstr "Дислексияга ыңгайлуу"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:286
+msgid "Email code"
+msgstr "Электрондук почта коду"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:296
+msgid "Enter the code from your email"
+msgstr "Электрондук почтаңыздагы кодду киргизиңиз"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:321
+msgid "Enter your authenticator code"
+msgstr "Authenticator кодун киргизиңиз"
 
 #: ../../../lib/web/src/components/layout/app-sidebar.tsx:35
 msgid "Expand sidebar"
@@ -465,7 +494,7 @@ msgstr "Каптал тилкесин жайылтуу"
 msgid "Extra large"
 msgstr "Өтө чоң"
 
-#: src/features/chess/index.tsx:200
+#: src/features/chess/index.tsx:203
 msgid "Failed to accept draw"
 msgstr "Теңтайлашты кабыл алуу ишке ашкан жок"
 
@@ -477,19 +506,19 @@ msgstr "Эсеп кошуу ишке ашкан жок"
 msgid "Failed to create game"
 msgstr "Оюн түзүү ишке ашкан жок"
 
-#: src/features/chess/index.tsx:215
+#: src/features/chess/index.tsx:218
 msgid "Failed to create rematch"
 msgstr "Кайра матч түзүү ишке ашкан жок"
 
-#: src/features/chess/index.tsx:205
+#: src/features/chess/index.tsx:208
 msgid "Failed to decline draw"
 msgstr "Теңтайлаштан баш тартуу ишке ашкан жок"
 
-#: src/features/chess/index.tsx:226
+#: src/features/chess/index.tsx:229
 msgid "Failed to delete game"
 msgstr "Оюнду өчүрүү ишке ашкан жок"
 
-#: src/features/chess/index.tsx:195
+#: src/features/chess/index.tsx:198
 msgid "Failed to offer draw"
 msgstr "Теңтайлаш сунуштоо ишке ашкан жок"
 
@@ -497,12 +526,12 @@ msgstr "Теңтайлаш сунуштоо ишке ашкан жок"
 msgid "Failed to remove account"
 msgstr "Эсепти алып салуу ишке ашкан жок"
 
-#: src/features/chess/index.tsx:188
+#: src/features/chess/index.tsx:191
 msgid "Failed to resign"
 msgstr "Багынуу ишке ашкан жок"
 
-#: src/features/chess/index.tsx:500
-#: src/features/chess/index.tsx:532
+#: src/features/chess/index.tsx:503
+#: src/features/chess/index.tsx:535
 msgid "Failed to send"
 msgstr "Жөнөтүү ишке ашкан жок"
 
@@ -510,9 +539,13 @@ msgstr "Жөнөтүү ишке ашкан жок"
 msgid "Failed to send verification code"
 msgstr "Текшерүү кодун жөнөтүү ишке ашкан жок"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:104
+#: ../../../lib/web/src/components/notification-category-button.tsx:108
 msgid "Failed to update category"
 msgstr "Категорияны жаңылоо ишке ашкан жок"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:79
+msgid "Finish moving your account"
+msgstr "Аккаунтуңузду көчүрүүнү аяктаңыз"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:244
 msgid "Floating"
@@ -542,7 +575,7 @@ msgstr "Толук жайгашуу"
 msgid "Game created"
 msgstr "Оюн түзүлдү"
 
-#: src/features/chess/index.tsx:222
+#: src/features/chess/index.tsx:225
 msgid "Game deleted"
 msgstr "Оюн өчүрүлдү"
 
@@ -756,7 +789,7 @@ msgstr "Натыйжалар табылган жок."
 msgid "No time zone found."
 msgstr "Убакыт алкагы табылган жок."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:135
+#: ../../../lib/web/src/components/notification-category-button.tsx:139
 msgid "No topic record yet — try again after the next notification."
 msgstr "Тема жазуусу азырынча жок — кийинки билдирмеден кийин кайра аракет кылыңыз."
 
@@ -780,7 +813,7 @@ msgstr "Кадимки"
 msgid "Notifications"
 msgstr "Билдирмелер"
 
-#: src/features/chess/index.tsx:421
+#: src/features/chess/index.tsx:424
 msgid "Offer draw"
 msgstr "Тең оюн сунуштоо"
 
@@ -793,11 +826,11 @@ msgstr "Аттиң! Барак табылган жок!"
 msgid "Open account actions"
 msgstr "Аккаунт аракеттерин ачуу"
 
-#: src/features/chess/index.tsx:400
+#: src/features/chess/index.tsx:403
 msgid "Open chat panel"
 msgstr "Чат панелин ачуу"
 
-#: src/features/chess/index.tsx:408
+#: src/features/chess/index.tsx:411
 msgid "Open game actions"
 msgstr "Оюн аракеттерин ачуу"
 
@@ -821,6 +854,18 @@ msgstr "Башка"
 #: ../../../lib/web/src/features/access/access-list.tsx:213
 msgid "Owner"
 msgstr "Ээси"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:331
+msgid "Passkey"
+msgstr ""
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:206
+msgid "Passkey verification failed. Please try again."
+msgstr "Passkey текшерүүсү ишке ашкан жок. Кайра аракет кылыңыз."
+
+#: ../../../lib/web/src/components/restore-banner.tsx:126
+msgid "Passkeys"
+msgstr "Кирүү ачкычтары"
 
 #: src/features/chess/lib/use-chess-piece-name.ts:17
 msgid "pawn"
@@ -857,6 +902,14 @@ msgstr "Көтөрүү:"
 msgid "queen"
 msgstr "королева"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:98
+msgid "Re-link your accounts on this server"
+msgstr "Бул серверде аккаунттарыңызды кайра байлаңыз"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:120
+msgid "Re-register your passkeys on this server"
+msgstr "Бул серверде кирүү ачкычтарыңызды кайра каттаңыз"
+
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:216
 #: ../../../lib/web/src/components/search-entity-page.tsx:191
 msgid "Recommended"
@@ -878,7 +931,7 @@ msgstr "Салыштырмалуу (5m, 3h, 2d)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "24 саат ичинде салыштырмалуу, антпесе абсолюттук"
 
-#: src/features/chess/index.tsx:434
+#: src/features/chess/index.tsx:437
 msgid "Rematch"
 msgstr "Кайра оюн"
 
@@ -900,6 +953,10 @@ msgstr "Кирүүнү аласызбы?"
 msgid "Remove interest"
 msgstr "Кызыгууну алуу"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:364
+msgid "Resend email"
+msgstr "Катты кайра жөнөтүү"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:77
 #: ../../../lib/web/src/components/data-table/toolbar.tsx:78
 msgid "Reset"
@@ -909,16 +966,16 @@ msgstr "Баштапкы абалга кайтаруу"
 msgid "Reset all settings to default values"
 msgstr "Бардык жөндөөлөрдү демейки маанилерге кайтаруу"
 
-#: src/features/chess/index.tsx:425
-#: src/features/chess/index.tsx:552
+#: src/features/chess/index.tsx:428
+#: src/features/chess/index.tsx:555
 msgid "Resign"
 msgstr "Баш тартуу"
 
-#: src/features/chess/index.tsx:543
+#: src/features/chess/index.tsx:546
 msgid "Resign game?"
 msgstr "Оюндан баш тартасызбы?"
 
-#: src/features/chess/index.tsx:549
+#: src/features/chess/index.tsx:552
 msgid "Resigning..."
 msgstr "Баш тартылууда..."
 
@@ -1012,6 +1069,10 @@ msgstr "Тема жөндөөсүн тандоо"
 msgid "Send again"
 msgstr "Кайра жөнөтүү"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:304
+msgid "Send email"
+msgstr "Электрондук почта жөнөтүү"
+
 #: src/features/chess/components/chat-input.tsx:40
 msgid "Send message"
 msgstr "Билдирүү жөнөтүү"
@@ -1066,10 +1127,6 @@ msgstr "Кичине"
 msgid "Spacious"
 msgstr "Кенен"
 
-#: src/features/chess/index.tsx:71
-msgid "Stalemate — draw"
-msgstr "Эч нерсеге барбас — теңме-тең"
-
 #: src/features/chess/components/new-game.tsx:94
 msgid "Start a new chess game"
 msgstr "Жаңы шахмат оюнун баштоо"
@@ -1108,6 +1165,10 @@ msgstr "Командалар/Колдонмолор"
 #: ../../../lib/web/src/features/document/document-page.tsx:39
 msgid "Terms and conditions"
 msgstr "Эрежелер жана шарттар"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:192
+msgid "That code is incorrect or has expired."
+msgstr "Бул код туура эмес же мөөнөтү бүткөн."
 
 #: ../../../lib/web/src/components/config-drawer.tsx:181
 msgid "Theme"
@@ -1186,7 +1247,7 @@ msgstr "Издөө үчүн жазыңыз..."
 msgid "Unable to redirect to login. Please try again."
 msgstr "Кирүүгө багыттоо мүмкүн эмес. Кайра аракет кылыңыз."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:143
+#: ../../../lib/web/src/components/notification-category-button.tsx:147
 msgid "Unassigned"
 msgstr "Дайындалган эмес"
 
@@ -1198,13 +1259,17 @@ msgstr "Уруксатсыз кирүү"
 msgid "United States"
 msgstr "Кошмо Штаттар"
 
-#: src/hooks/useGameWebsocket.ts:162
+#: src/hooks/useGameWebsocket.ts:164
 msgid "Unknown"
 msgstr "Белгисиз"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:131
 msgid "Unverified"
 msgstr "Текшерилген эмес"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:335
+msgid "Use your passkey"
+msgstr "Passkey колдонуңуз"
 
 #: ../../../lib/web/src/features/access/access-dialog.tsx:155
 msgid "User"
@@ -1222,6 +1287,7 @@ msgstr "Текшерүү коду жөнөтүлдү"
 msgid "Verification failed"
 msgstr "Текшерүү ишке ашкан жок"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:385
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:164
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:106
 msgid "Verify"
@@ -1230,6 +1296,10 @@ msgstr "Текшерүү"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:58
 msgid "Verify email address"
 msgstr "Электрондук почта дарегин текшерүү"
+
+#: ../../../lib/web/src/components/attachment-gallery.tsx:63
+msgid "Video thumbnail"
+msgstr "Видеонун эскизи"
 
 #: ../../../lib/web/src/components/data-table/view-options.tsx:30
 msgid "View"
@@ -1256,7 +1326,7 @@ msgid "Wednesday"
 msgstr "Шаршемби"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:16
-#: src/features/chess/index.tsx:391
+#: src/features/chess/index.tsx:394
 msgid "White"
 msgstr "Ак"
 
@@ -1267,14 +1337,10 @@ msgstr "Ак"
 msgid "White {0}"
 msgstr "Ак {0}"
 
-#: src/features/chess/components/chat-message-list.tsx:197
+#: src/features/chess/components/chat-message-list.tsx:209
 msgid "You"
 msgstr "Сиз"
 
-#: src/features/chess/index.tsx:81
-msgid "You resigned — {opponentName} wins"
-msgstr "Сиз баш тарттыңыз — {opponentName} жеңди"
-
-#: src/features/chess/index.tsx:88
-msgid "Your move"
-msgstr "Сиздин жүрүшүңүз"
+#: ../../../lib/web/src/components/restore-banner.tsx:82
+msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
+msgstr "Аккаунтуңуз {source} дан бул жерге которулду. Аны ал жерде жоккун кана дебегенче, билдирүүлөр жана эскертмелер эки серверге тең жете алат, мазмунуңуздун бир бөлүгү эски серверден берилүүдө калат, ал эми жолдоочулар сизди бул жерден табуу үчүн бир нече мүнөт керек кылышы мүмкүн."

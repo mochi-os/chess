@@ -46,23 +46,27 @@ msgstr "{count, plural, other {ရထား #}}"
 msgid "{count} pieces"
 msgstr "ပစ္စည်း {count} ခု"
 
+#: src/features/chess/components/chat-message-list.tsx:190
+msgid "{name} declined the draw"
+msgstr "{name} သရေကျရန် ငြင်းဆိုသည်"
+
+#: src/features/chess/components/chat-message-list.tsx:186
+msgid "{name} offered a draw"
+msgstr "{name} သရေကျရန် ကမ်းလှမ်းသည်"
+
+#: src/features/chess/components/chat-message-list.tsx:184
+msgid "{name} resigned"
+msgstr "{name} အရှုံးပေးလိုက်သည်"
+
 #: src/features/chess/components/draw-offer-banner.tsx:25
 msgid "{opponentName} offered a draw"
 msgstr "{opponentName} က သရေ ပေးခဲ့သည်"
 
-#: src/features/chess/index.tsx:80
-msgid "{opponentName} resigned — you win!"
-msgstr "{opponentName} လက်လျှော့ခဲ့သည် — သင်နိုင်ပြီ!"
-
-#: src/features/chess/index.tsx:88
-msgid "{opponentName}'s move"
-msgstr "{opponentName} ၏ အလှည့်"
-
-#: src/features/chess/components/chat-message-list.tsx:207
+#: src/features/chess/components/chat-message-list.tsx:219
 msgid "{subject} played <0>{san}</0>"
 msgstr "{subject} က <0>{san}</0> ကို ကစားခဲ့သည်"
 
-#: src/features/chess/components/chat-message-list.tsx:205
+#: src/features/chess/components/chat-message-list.tsx:217
 msgid "{subject} took <0>{san}</0>"
 msgstr "{subject} က <0>{san}</0> ကို ယူခဲ့သည်"
 
@@ -175,13 +179,17 @@ msgstr "အားလုံး"
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "log out လုပ်မှာသေချာပါသလား? သင့်အကောင့်ကို ပြန်ဝင်ရန် log in ပြန်လုပ်ရမည်။"
 
-#: src/features/chess/index.tsx:544
+#: src/features/chess/index.tsx:547
 msgid "Are you sure you want to resign? {opponentName} will win the game."
 msgstr "လက်လျှော့မှာသေချာပါသလား? {opponentName} က ပွဲကို နိုင်မည်ဖြစ်သည်။"
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:56
 msgid "Asc"
 msgstr "Asc"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:312
+msgid "Authenticator code"
+msgstr "Authenticator ကုဒ်"
 
 #: ../../../lib/web/src/components/place-picker.tsx:152
 msgid "Back"
@@ -198,7 +206,7 @@ msgid "bishop"
 msgstr "ဆင်"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:16
-#: src/features/chess/index.tsx:391
+#: src/features/chess/index.tsx:394
 msgid "Black"
 msgstr "အနက်"
 
@@ -214,6 +222,7 @@ msgid "Boost interest"
 msgstr "စိတ်ဝင်စားမှု မြှင့်တင်မည်"
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx:64
+#: ../../../lib/web/src/components/step-up-dialog.tsx:360
 #: ../../../lib/web/src/components/travelling-picker.tsx:292
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:245
 #: ../../../lib/web/src/features/access/access-dialog.tsx:325
@@ -225,38 +234,22 @@ msgstr "စိတ်ဝင်စားမှု မြှင့်တင်မ�
 msgid "Cancel"
 msgstr "မလုပ်တော့ပါ"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:131
+#: ../../../lib/web/src/components/notification-category-button.tsx:135
 msgid "Category for this notification"
 msgstr "ဤအကြောင်းကြားချက်အတွက် အမျိုးအစား"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:115
+#: ../../../lib/web/src/components/notification-category-button.tsx:119
 msgid "Change notification category"
 msgstr "အကြောင်းကြားချက် အမျိုးအစား ပြောင်းမည်"
 
-#: src/features/chess/index.tsx:484
-#: src/features/chess/index.tsx:516
+#: src/features/chess/index.tsx:487
+#: src/features/chess/index.tsx:519
 msgid "Chat"
 msgstr "စကားပြောခန်း"
 
-#: src/features/chess/index.tsx:85
-msgid "Check — {opponentName}'s move"
-msgstr "Check — {opponentName} ၏ အလှည့်"
-
-#: src/features/chess/index.tsx:85
-msgid "Check — your move"
-msgstr "Check — သင့်အလှည့်"
-
-#: src/features/chess/index.tsx:67
-msgid "Checkmate — {opponentName} wins"
-msgstr "Checkmate — {opponentName} နိုင်သည်"
-
-#: src/features/chess/index.tsx:66
-msgid "Checkmate — you win!"
-msgstr "Checkmate — သင် နိုင်သည်!"
-
-#: src/features/chess/index.tsx:93
-#: src/features/chess/index.tsx:319
-#: src/features/chess/index.tsx:331
+#: src/features/chess/index.tsx:96
+#: src/features/chess/index.tsx:322
+#: src/features/chess/index.tsx:334
 msgid "Chess"
 msgstr "ဆက်စ်"
 
@@ -373,6 +366,10 @@ msgstr "ဆက်စပ်အချက်အလက်နှင့် အသေ�
 msgid "Continue"
 msgstr "ဆက်လက်လုပ်ဆောင်မည်"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:349
+msgid "Continue with {label}"
+msgstr "{label} ဖြင့် ဆက်လက်လုပ်ဆောင်ပါ"
+
 #: ../../../lib/web/src/components/ui/copy-button.tsx:60
 msgid "Copy"
 msgstr "ကူးမည်"
@@ -380,6 +377,18 @@ msgstr "ကူးမည်"
 #: ../../../lib/web/src/features/document/document-page.tsx:81
 msgid "Could not load this document. Please try again later."
 msgstr "ဤစာရွက်စာတမ်းကို ဖွင့်၍ မရပါ။ နောက်မှ ထပ်စမ်းကြည့်ပါ။"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:181
+msgid "Couldn't send the code. Please try again."
+msgstr "ကုဒ်ကို ပို့၍မရပါ။ ကျေးဇူးပြု၍ ထပ်စမ်းကြည့်ပါ။"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:133
+msgid "Couldn't start re-authentication. Please try again."
+msgstr "ပြန်လည်အတည်ပြုခြင်းကို စတင်၍မရပါ။ ကျေးဇူးပြု၍ ထပ်စမ်းကြည့်ပါ။"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:218
+msgid "Couldn't verify with that account. Please try again."
+msgstr "ထိုအကောင့်ဖြင့် အတည်ပြု၍မရပါ။ ကျေးဇူးပြု၍ ထပ်မံကြိုးစားပါ။"
 
 #: src/features/chess/components/new-game.tsx:148
 msgid "Creating..."
@@ -410,9 +419,13 @@ msgstr "မူရင်း"
 msgid "Default AI account"
 msgstr "မူရင်း AI အကောင့်"
 
-#: src/features/chess/index.tsx:437
+#: src/features/chess/index.tsx:440
 msgid "Delete game"
 msgstr "ဂိမ်း ဖျက်မည်"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:90
+msgid "Delete your account on the old server"
+msgstr "ဟောင်းသောဆာဗာမှ သင်၏အကောင့်ကို ဖျက်ပါ"
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:60
 msgid "Desc"
@@ -437,6 +450,10 @@ msgstr "Web browser မှ ရှာဖွေဖော်ထုတ်မည်"
 msgid "Direction"
 msgstr "ဦးတည်ရာ"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:73
+msgid "Dismiss"
+msgstr "ပယ်မည်"
+
 #: ../../../lib/web/src/components/ui/sidebar.tsx:235
 msgid "Displays the mobile sidebar."
 msgstr "မိုဘိုင်း ဘေးဘားကို ပြသသည်။"
@@ -445,17 +462,29 @@ msgstr "မိုဘိုင်း ဘေးဘားကို ပြသသည�
 msgid "Download"
 msgstr "ဒေါင်းလုဒ်"
 
-#: src/features/chess/index.tsx:75
-msgid "Draw"
-msgstr "သရေ"
+#: src/features/chess/components/chat-message-list.tsx:188
+msgid "Draw agreed"
+msgstr "သရေကျရန် သဘောတူသည်"
 
-#: src/features/chess/index.tsx:450
+#: src/features/chess/index.tsx:453
 msgid "Draw offered — waiting for {opponentName}"
 msgstr "သရေ ကမ်းလှမ်းထားသည် — {opponentName} ကို စောင့်နေသည်"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:134
 msgid "Dyslexia-friendly"
 msgstr "စာဖတ်ရခက်သူများအတွက်ရိုးရှင်း"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:286
+msgid "Email code"
+msgstr "အီးမေးလ် ကုဒ်"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:296
+msgid "Enter the code from your email"
+msgstr "သင့်အီးမေးလ်မှ ကုဒ်ကို ထည့်ပါ"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:321
+msgid "Enter your authenticator code"
+msgstr "သင့်အထောက်အထားစိစစ်ရေးကုဒ်ကို ထည့်ပါ"
 
 #: ../../../lib/web/src/components/layout/app-sidebar.tsx:35
 msgid "Expand sidebar"
@@ -465,7 +494,7 @@ msgstr "ဘေးဘားကို ချဲ့ပါ"
 msgid "Extra large"
 msgstr "အလွန်ကြီး"
 
-#: src/features/chess/index.tsx:200
+#: src/features/chess/index.tsx:203
 msgid "Failed to accept draw"
 msgstr "သရေ လက်ခံ၍ မရပါ"
 
@@ -477,19 +506,19 @@ msgstr "အကောင့် ထည့်၍ မရပါ"
 msgid "Failed to create game"
 msgstr "ဂိမ်း ဖန်တီး၍ မရပါ"
 
-#: src/features/chess/index.tsx:215
+#: src/features/chess/index.tsx:218
 msgid "Failed to create rematch"
 msgstr "ပြန်ပြိုင်ပွဲ ဖန်တီး၍ မရပါ"
 
-#: src/features/chess/index.tsx:205
+#: src/features/chess/index.tsx:208
 msgid "Failed to decline draw"
 msgstr "သရေ ငြင်းပယ်၍ မရပါ"
 
-#: src/features/chess/index.tsx:226
+#: src/features/chess/index.tsx:229
 msgid "Failed to delete game"
 msgstr "ဂိမ်း ဖျက်၍ မရပါ"
 
-#: src/features/chess/index.tsx:195
+#: src/features/chess/index.tsx:198
 msgid "Failed to offer draw"
 msgstr "သရေ ကမ်းလှမ်း၍ မရပါ"
 
@@ -497,12 +526,12 @@ msgstr "သရေ ကမ်းလှမ်း၍ မရပါ"
 msgid "Failed to remove account"
 msgstr "အကောင့် ဖယ်ရှား၍ မရပါ"
 
-#: src/features/chess/index.tsx:188
+#: src/features/chess/index.tsx:191
 msgid "Failed to resign"
 msgstr "ရှုံးရန် ထုတ်ပြန်၍ မရပါ"
 
-#: src/features/chess/index.tsx:500
-#: src/features/chess/index.tsx:532
+#: src/features/chess/index.tsx:503
+#: src/features/chess/index.tsx:535
 msgid "Failed to send"
 msgstr "ပို့၍ မရပါ"
 
@@ -510,9 +539,13 @@ msgstr "ပို့၍ မရပါ"
 msgid "Failed to send verification code"
 msgstr "အတည်ပြုကုဒ် ပို့၍ မရပါ"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:104
+#: ../../../lib/web/src/components/notification-category-button.tsx:108
 msgid "Failed to update category"
 msgstr "အမျိုးအစား ပြင်ဆင်၍ မရပါ"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:79
+msgid "Finish moving your account"
+msgstr "အကောင့်ရွှေ့ပြောင်းခြင်း ပြီးဆုံးပါ"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:244
 msgid "Floating"
@@ -542,7 +575,7 @@ msgstr "အပြည့် အပြင်အဆင်"
 msgid "Game created"
 msgstr "ဂိမ်း ဖန်တီးပြီးပါပြီ"
 
-#: src/features/chess/index.tsx:222
+#: src/features/chess/index.tsx:225
 msgid "Game deleted"
 msgstr "ဂိမ်း ဖျက်ပြီးပါပြီ"
 
@@ -756,7 +789,7 @@ msgstr "ရလဒ်များ မတွေ့ပါ။"
 msgid "No time zone found."
 msgstr "အချိန်ဇုန် မတွေ့ပါ။"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:135
+#: ../../../lib/web/src/components/notification-category-button.tsx:139
 msgid "No topic record yet — try again after the next notification."
 msgstr "topic မှတ်တမ်း မရှိသေးပါ — နောက်အသိပေးချက်ပြီးနောက် ထပ်စမ်းကြည့်ပါ။"
 
@@ -780,7 +813,7 @@ msgstr "ပုံမှန်"
 msgid "Notifications"
 msgstr "အသိပေးချက်များ"
 
-#: src/features/chess/index.tsx:421
+#: src/features/chess/index.tsx:424
 msgid "Offer draw"
 msgstr "ထိုးကွက် ပြန်မျှခြင်း ကမ်းလှမ်း"
 
@@ -793,11 +826,11 @@ msgstr "အိုး! စာမျက်နှာ မတွေ့ပါ!"
 msgid "Open account actions"
 msgstr "အကောင့် လုပ်ဆောင်ချက်များကို ဖွင့်"
 
-#: src/features/chess/index.tsx:400
+#: src/features/chess/index.tsx:403
 msgid "Open chat panel"
 msgstr "ချတ် panel ကို ဖွင့်"
 
-#: src/features/chess/index.tsx:408
+#: src/features/chess/index.tsx:411
 msgid "Open game actions"
 msgstr "ဂိမ်း လုပ်ဆောင်ချက်များကို ဖွင့်"
 
@@ -821,6 +854,18 @@ msgstr "အခြား"
 #: ../../../lib/web/src/features/access/access-list.tsx:213
 msgid "Owner"
 msgstr "ပိုင်ရှင်"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:331
+msgid "Passkey"
+msgstr ""
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:206
+msgid "Passkey verification failed. Please try again."
+msgstr "ပတ်စ်ကီးအတည်ပြုခြင်း မအောင်မြင်ပါ။ ကျေးဇူးပြု၍ ထပ်စမ်းကြည့်ပါ။"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:126
+msgid "Passkeys"
+msgstr "Passkey များ"
 
 #: src/features/chess/lib/use-chess-piece-name.ts:17
 msgid "pawn"
@@ -857,6 +902,14 @@ msgstr "သို့ မြှင့်တင် -"
 msgid "queen"
 msgstr "မိဖုရား"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:98
+msgid "Re-link your accounts on this server"
+msgstr "ဤဆာဗာပေါ်တွင် သင်၏အကောင့်များကို ပြန်လည်ချိတ်ဆက်ပါ"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:120
+msgid "Re-register your passkeys on this server"
+msgstr "ဤဆာဗာတွင် သင်၏ passkey များကို ပြန်လည်မှတ်ပုံတင်ပါ"
+
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:216
 #: ../../../lib/web/src/components/search-entity-page.tsx:191
 msgid "Recommended"
@@ -878,7 +931,7 @@ msgstr "ဆက်စပ် (5m, 3h, 2d)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "၂၄ နာရီအတွင်း ဆက်စပ်၊ ပြင်ပတွင် တိကျသော"
 
-#: src/features/chess/index.tsx:434
+#: src/features/chess/index.tsx:437
 msgid "Rematch"
 msgstr "ပြန်ကစား"
 
@@ -900,6 +953,10 @@ msgstr "ဝင်ရောက်ခွင့် ဖယ်ရှားမလာ�
 msgid "Remove interest"
 msgstr "စိတ်ဝင်စားမှု ဖယ်ရှား"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:364
+msgid "Resend email"
+msgstr "အီးမေးလ်ပြန်ပို့ရန်"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:77
 #: ../../../lib/web/src/components/data-table/toolbar.tsx:78
 msgid "Reset"
@@ -909,16 +966,16 @@ msgstr "ပြန်စတင်"
 msgid "Reset all settings to default values"
 msgstr "ဆက်တင်အားလုံးကို ပုံသေတန်ဖိုးများသို့ ပြန်ထား"
 
-#: src/features/chess/index.tsx:425
-#: src/features/chess/index.tsx:552
+#: src/features/chess/index.tsx:428
+#: src/features/chess/index.tsx:555
 msgid "Resign"
 msgstr "ရှုံးကြောင်းပြော"
 
-#: src/features/chess/index.tsx:543
+#: src/features/chess/index.tsx:546
 msgid "Resign game?"
 msgstr "ဂိမ်း ရှုံးကြောင်းပြောမလား?"
 
-#: src/features/chess/index.tsx:549
+#: src/features/chess/index.tsx:552
 msgid "Resigning..."
 msgstr "ရှုံးကြောင်းပြောနေသည်..."
 
@@ -1012,6 +1069,10 @@ msgstr "အပြင်အဆင် ဦးစားပေးကို ရွေ�
 msgid "Send again"
 msgstr "ထပ်ပို့ပါ"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:304
+msgid "Send email"
+msgstr "အီးမေးလ်ပို့ရန်"
+
 #: src/features/chess/components/chat-input.tsx:40
 msgid "Send message"
 msgstr "မက်ဆေ့ပို့မည်"
@@ -1066,10 +1127,6 @@ msgstr "သေး"
 msgid "Spacious"
 msgstr "ကျယ်ပြန့်သော"
 
-#: src/features/chess/index.tsx:71
-msgid "Stalemate — draw"
-msgstr "ပြိုင်ဆိုင်ရာ မအောင်မြင်ပါ — တစ်ဖက်နှင့်တစ်ဖက် တူ"
-
 #: src/features/chess/components/new-game.tsx:94
 msgid "Start a new chess game"
 msgstr "Chess ဂိမ်းအသစ် စတင်ပါ"
@@ -1108,6 +1165,10 @@ msgstr "အဖွဲ့များ/Apps"
 #: ../../../lib/web/src/features/document/document-page.tsx:39
 msgid "Terms and conditions"
 msgstr "စည်းကမ်းချက်များ"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:192
+msgid "That code is incorrect or has expired."
+msgstr "ထိုကုဒ်မှားနေသည် သို့မဟုတ် သက်တမ်းကုန်သွားပြီ။"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:181
 msgid "Theme"
@@ -1186,7 +1247,7 @@ msgstr "ရှာရန် ရိုက်ပါ..."
 msgid "Unable to redirect to login. Please try again."
 msgstr "Login သို့ redirect လုပ်၍ မရပါ။ ထပ်ကြိုးစားပါ။"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:143
+#: ../../../lib/web/src/components/notification-category-button.tsx:147
 msgid "Unassigned"
 msgstr "မသတ်မှတ်ထား"
 
@@ -1198,13 +1259,17 @@ msgstr "ခွင့်ပြုမထားသော ဝင်ရောက်�
 msgid "United States"
 msgstr "United States"
 
-#: src/hooks/useGameWebsocket.ts:162
+#: src/hooks/useGameWebsocket.ts:164
 msgid "Unknown"
 msgstr "မသိရသော"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:131
 msgid "Unverified"
 msgstr "အတည်ပြုမထား"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:335
+msgid "Use your passkey"
+msgstr "သင့်ပတ်စ်ကီးကို သုံးပါ"
 
 #: ../../../lib/web/src/features/access/access-dialog.tsx:155
 msgid "User"
@@ -1222,6 +1287,7 @@ msgstr "အတည်ပြု ကုဒ် ပို့ပြီး"
 msgid "Verification failed"
 msgstr "အတည်ပြုခြင်း မအောင်မြင်ပါ"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:385
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:164
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:106
 msgid "Verify"
@@ -1230,6 +1296,10 @@ msgstr "အတည်ပြုမည်"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:58
 msgid "Verify email address"
 msgstr "အီးမေးလ် လိပ်စာ အတည်ပြုမည်"
+
+#: ../../../lib/web/src/components/attachment-gallery.tsx:63
+msgid "Video thumbnail"
+msgstr "ဗီဒီယို thumbnail"
 
 #: ../../../lib/web/src/components/data-table/view-options.tsx:30
 msgid "View"
@@ -1256,7 +1326,7 @@ msgid "Wednesday"
 msgstr "ဗုဒ္ဓဟူး"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:16
-#: src/features/chess/index.tsx:391
+#: src/features/chess/index.tsx:394
 msgid "White"
 msgstr "အဖြူ"
 
@@ -1267,14 +1337,10 @@ msgstr "အဖြူ"
 msgid "White {0}"
 msgstr "အဖြူ {0}"
 
-#: src/features/chess/components/chat-message-list.tsx:197
+#: src/features/chess/components/chat-message-list.tsx:209
 msgid "You"
 msgstr "သင်"
 
-#: src/features/chess/index.tsx:81
-msgid "You resigned — {opponentName} wins"
-msgstr "သင် လက်လျှော့ခဲ့သည် — {opponentName} နိုင်သည်"
-
-#: src/features/chess/index.tsx:88
-msgid "Your move"
-msgstr "သင်၏ အလှည့်"
+#: ../../../lib/web/src/components/restore-banner.tsx:82
+msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
+msgstr "သင်၏အကောင့်ကို {source} မှ ဤနေရာသို့ ရွှေ့ပြောင်းခဲ့သည်။ သင်ကာကိုဖျက်မသည်အထိ၊ မက်ဆေ့ချ်များနှင့် အကြောင်းကြားချက်များ ဆာဗာနှစ်ခုလုံးသို့ ရောက်နိုင်သည်၊ သင်၏အချို့သောအကြောင်းအရာများကို ဟောင်းသောဆာဗာမှ ဆက်လက်ပေးဆောင်နေမည်ဖြစ်ပြီး ကြည့်ရှုသူများ သင်ကိုဤနေရာတွင် ရှာဖွေရန် မိနစ်အနည်းငယ် ကြာနိုင်သည်။"

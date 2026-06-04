@@ -46,23 +46,27 @@ msgstr "{count, plural, one {# હાથી} other {# હાથીઓ}}"
 msgid "{count} pieces"
 msgstr "{count} પ્યાદાં"
 
+#: src/features/chess/components/chat-message-list.tsx:190
+msgid "{name} declined the draw"
+msgstr "{name}એ ડ્રો નકાર્યો"
+
+#: src/features/chess/components/chat-message-list.tsx:186
+msgid "{name} offered a draw"
+msgstr "{name}એ ડ્રોની દરખાસ્ત કરી"
+
+#: src/features/chess/components/chat-message-list.tsx:184
+msgid "{name} resigned"
+msgstr "{name}એ રાજીનામું આપ્યું"
+
 #: src/features/chess/components/draw-offer-banner.tsx:25
 msgid "{opponentName} offered a draw"
 msgstr "{opponentName}એ ડ્રોની ઓફર કરી"
 
-#: src/features/chess/index.tsx:80
-msgid "{opponentName} resigned — you win!"
-msgstr "{opponentName} એ રાજીનામું આપ્યું — તમે જીત્યા!"
-
-#: src/features/chess/index.tsx:88
-msgid "{opponentName}'s move"
-msgstr "{opponentName} ની ચાલ"
-
-#: src/features/chess/components/chat-message-list.tsx:207
+#: src/features/chess/components/chat-message-list.tsx:219
 msgid "{subject} played <0>{san}</0>"
 msgstr "{subject}એ <0>{san}</0> રમ્યું"
 
-#: src/features/chess/components/chat-message-list.tsx:205
+#: src/features/chess/components/chat-message-list.tsx:217
 msgid "{subject} took <0>{san}</0>"
 msgstr "{subject}એ <0>{san}</0> લીધું"
 
@@ -175,13 +179,17 @@ msgstr "બધા"
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "શું તમે ખરેખર લૉગ આઉટ કરવા માંગો છો? તમારા ખાતાને ઍક્સેસ કરવા તમારે ફરી લૉગ ઇન કરવું પડશે."
 
-#: src/features/chess/index.tsx:544
+#: src/features/chess/index.tsx:547
 msgid "Are you sure you want to resign? {opponentName} will win the game."
 msgstr "શું તમે ખરેખર રાજીનામું આપવા માંગો છો? {opponentName} રમત જીતી જશે."
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:56
 msgid "Asc"
 msgstr "ચડતા"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:312
+msgid "Authenticator code"
+msgstr "Authenticator કોડ"
 
 #: ../../../lib/web/src/components/place-picker.tsx:152
 msgid "Back"
@@ -198,7 +206,7 @@ msgid "bishop"
 msgstr "ઊંટ"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:16
-#: src/features/chess/index.tsx:391
+#: src/features/chess/index.tsx:394
 msgid "Black"
 msgstr "કાળું"
 
@@ -214,6 +222,7 @@ msgid "Boost interest"
 msgstr "રુચિ વધારો"
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx:64
+#: ../../../lib/web/src/components/step-up-dialog.tsx:360
 #: ../../../lib/web/src/components/travelling-picker.tsx:292
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:245
 #: ../../../lib/web/src/features/access/access-dialog.tsx:325
@@ -225,38 +234,22 @@ msgstr "રુચિ વધારો"
 msgid "Cancel"
 msgstr "રદ કરો"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:131
+#: ../../../lib/web/src/components/notification-category-button.tsx:135
 msgid "Category for this notification"
 msgstr "આ સૂચના માટેની શ્રેણી"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:115
+#: ../../../lib/web/src/components/notification-category-button.tsx:119
 msgid "Change notification category"
 msgstr "સૂચના શ્રેણી બદલો"
 
-#: src/features/chess/index.tsx:484
-#: src/features/chess/index.tsx:516
+#: src/features/chess/index.tsx:487
+#: src/features/chess/index.tsx:519
 msgid "Chat"
 msgstr "ચેટ"
 
-#: src/features/chess/index.tsx:85
-msgid "Check — {opponentName}'s move"
-msgstr "ચેક — {opponentName} ની ચાલ"
-
-#: src/features/chess/index.tsx:85
-msgid "Check — your move"
-msgstr "ચેક — તમારી ચાલ"
-
-#: src/features/chess/index.tsx:67
-msgid "Checkmate — {opponentName} wins"
-msgstr "ચેકમેટ — {opponentName} જીત્યા"
-
-#: src/features/chess/index.tsx:66
-msgid "Checkmate — you win!"
-msgstr "ચેકમેટ — તમે જીત્યા!"
-
-#: src/features/chess/index.tsx:93
-#: src/features/chess/index.tsx:319
-#: src/features/chess/index.tsx:331
+#: src/features/chess/index.tsx:96
+#: src/features/chess/index.tsx:322
+#: src/features/chess/index.tsx:334
 msgid "Chess"
 msgstr "ચેસ"
 
@@ -373,6 +366,10 @@ msgstr "સંદર્ભ માહિતી અને વિગતો."
 msgid "Continue"
 msgstr "ચાલુ રાખો"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:349
+msgid "Continue with {label}"
+msgstr "{label} વડે ચાલુ રાખો"
+
 #: ../../../lib/web/src/components/ui/copy-button.tsx:60
 msgid "Copy"
 msgstr "કૉપિ કરો"
@@ -380,6 +377,18 @@ msgstr "કૉપિ કરો"
 #: ../../../lib/web/src/features/document/document-page.tsx:81
 msgid "Could not load this document. Please try again later."
 msgstr "આ દસ્તાવેજ લોડ કરી શક્યા નહીં. કૃપા કરીને પછીથી ફરી પ્રયાસ કરો."
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:181
+msgid "Couldn't send the code. Please try again."
+msgstr "કોડ મોકલી શકાયો નહીં. કૃપા કરીને ફરી પ્રયાસ કરો."
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:133
+msgid "Couldn't start re-authentication. Please try again."
+msgstr "પુનઃપ્રમાણીકરણ શરૂ કરી શકાયું નહીં. કૃપા કરીને ફરી પ્રયાસ કરો."
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:218
+msgid "Couldn't verify with that account. Please try again."
+msgstr "તે ખાતા વડે ચકાસણી કરી શકાઈ નહીં. કૃપા કરીને ફરી પ્રયાસ કરો."
 
 #: src/features/chess/components/new-game.tsx:148
 msgid "Creating..."
@@ -410,9 +419,13 @@ msgstr "ડિફૉલ્ટ"
 msgid "Default AI account"
 msgstr "ડિફૉલ્ટ AI ખાતું"
 
-#: src/features/chess/index.tsx:437
+#: src/features/chess/index.tsx:440
 msgid "Delete game"
 msgstr "રમત કાઢી નાખો"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:90
+msgid "Delete your account on the old server"
+msgstr "જૂના સર્વર પર તમારું ખાતું કાઢી નાખો"
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:60
 msgid "Desc"
@@ -437,6 +450,10 @@ msgstr "વેબ બ્રાઉઝરમાંથી શોધો"
 msgid "Direction"
 msgstr "દિશા"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:73
+msgid "Dismiss"
+msgstr "રદ કરો"
+
 #: ../../../lib/web/src/components/ui/sidebar.tsx:235
 msgid "Displays the mobile sidebar."
 msgstr "મોબાઇલ સાઇડબાર દર્શાવે છે."
@@ -445,17 +462,29 @@ msgstr "મોબાઇલ સાઇડબાર દર્શાવે છે."
 msgid "Download"
 msgstr "ડાઉનલોડ કરો"
 
-#: src/features/chess/index.tsx:75
-msgid "Draw"
-msgstr "ડ્રો"
+#: src/features/chess/components/chat-message-list.tsx:188
+msgid "Draw agreed"
+msgstr "ડ્રો સ્વીકારાયો"
 
-#: src/features/chess/index.tsx:450
+#: src/features/chess/index.tsx:453
 msgid "Draw offered — waiting for {opponentName}"
 msgstr "ડ્રોની ઓફર કરી — {opponentName}ની રાહ જોઈ રહ્યા છીએ"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:134
 msgid "Dyslexia-friendly"
 msgstr "ડિસ્લેક્સિયા-મૈત્રીપૂર્ણ"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:286
+msgid "Email code"
+msgstr "ઇમેઇલ કોડ"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:296
+msgid "Enter the code from your email"
+msgstr "તમારા ઈમેલમાંથી કોડ દાખલ કરો"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:321
+msgid "Enter your authenticator code"
+msgstr "તમારો ઑથેન્ટિકેટર કોડ દાખલ કરો"
 
 #: ../../../lib/web/src/components/layout/app-sidebar.tsx:35
 msgid "Expand sidebar"
@@ -465,7 +494,7 @@ msgstr "સાઇડબાર વિસ્તૃત કરો"
 msgid "Extra large"
 msgstr "વધારાનું મોટું"
 
-#: src/features/chess/index.tsx:200
+#: src/features/chess/index.tsx:203
 msgid "Failed to accept draw"
 msgstr "ડ્રો સ્વીકારવામાં નિષ્ફળ"
 
@@ -477,19 +506,19 @@ msgstr "એકાઉન્ટ ઉમેરવામાં નિષ્ફળ"
 msgid "Failed to create game"
 msgstr "ગેમ બનાવવામાં નિષ્ફળ"
 
-#: src/features/chess/index.tsx:215
+#: src/features/chess/index.tsx:218
 msgid "Failed to create rematch"
 msgstr "રિમેચ બનાવવામાં નિષ્ફળ"
 
-#: src/features/chess/index.tsx:205
+#: src/features/chess/index.tsx:208
 msgid "Failed to decline draw"
 msgstr "ડ્રો નકારવામાં નિષ્ફળ"
 
-#: src/features/chess/index.tsx:226
+#: src/features/chess/index.tsx:229
 msgid "Failed to delete game"
 msgstr "ગેમ કાઢી નાખવામાં નિષ્ફળ"
 
-#: src/features/chess/index.tsx:195
+#: src/features/chess/index.tsx:198
 msgid "Failed to offer draw"
 msgstr "ડ્રો ઑફર કરવામાં નિષ્ફળ"
 
@@ -497,12 +526,12 @@ msgstr "ડ્રો ઑફર કરવામાં નિષ્ફળ"
 msgid "Failed to remove account"
 msgstr "એકાઉન્ટ દૂર કરવામાં નિષ્ફળ"
 
-#: src/features/chess/index.tsx:188
+#: src/features/chess/index.tsx:191
 msgid "Failed to resign"
 msgstr "રિઝાઇન કરવામાં નિષ્ફળ"
 
-#: src/features/chess/index.tsx:500
-#: src/features/chess/index.tsx:532
+#: src/features/chess/index.tsx:503
+#: src/features/chess/index.tsx:535
 msgid "Failed to send"
 msgstr "મોકલવામાં નિષ્ફળ"
 
@@ -510,9 +539,13 @@ msgstr "મોકલવામાં નિષ્ફળ"
 msgid "Failed to send verification code"
 msgstr "ચકાસણી કોડ મોકલવામાં નિષ્ફળ"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:104
+#: ../../../lib/web/src/components/notification-category-button.tsx:108
 msgid "Failed to update category"
 msgstr "કેટેગરી અપડેટ કરવામાં નિષ્ફળ"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:79
+msgid "Finish moving your account"
+msgstr "તમારું ખાતું ખસેડવાનું પૂર્ણ કરો"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:244
 msgid "Floating"
@@ -542,7 +575,7 @@ msgstr "સંપૂર્ણ લેઆઉટ"
 msgid "Game created"
 msgstr "ગેમ બનાવી"
 
-#: src/features/chess/index.tsx:222
+#: src/features/chess/index.tsx:225
 msgid "Game deleted"
 msgstr "ગેમ કાઢી નાખી"
 
@@ -756,7 +789,7 @@ msgstr "કોઈ પરિણામો મળ્યા નથી."
 msgid "No time zone found."
 msgstr "કોઈ ટાઇમ ઝોન મળ્યો નથી."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:135
+#: ../../../lib/web/src/components/notification-category-button.tsx:139
 msgid "No topic record yet — try again after the next notification."
 msgstr "હજુ સુધી કોઈ ટોપિક રેકોર્ડ નથી — પછીની સૂચના પછી ફરી પ્રયાસ કરો."
 
@@ -780,7 +813,7 @@ msgstr "સામાન્ય"
 msgid "Notifications"
 msgstr "સૂચનાઓ"
 
-#: src/features/chess/index.tsx:421
+#: src/features/chess/index.tsx:424
 msgid "Offer draw"
 msgstr "ડ્રો ઑફર કરો"
 
@@ -793,11 +826,11 @@ msgstr "ઓહ! પેજ મળ્યું નથી!"
 msgid "Open account actions"
 msgstr "ખાતાની ક્રિયાઓ ખોલો"
 
-#: src/features/chess/index.tsx:400
+#: src/features/chess/index.tsx:403
 msgid "Open chat panel"
 msgstr "ચેટ પેનલ ખોલો"
 
-#: src/features/chess/index.tsx:408
+#: src/features/chess/index.tsx:411
 msgid "Open game actions"
 msgstr "ગેમ ક્રિયાઓ ખોલો"
 
@@ -821,6 +854,18 @@ msgstr "અન્ય"
 #: ../../../lib/web/src/features/access/access-list.tsx:213
 msgid "Owner"
 msgstr "માલિક"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:331
+msgid "Passkey"
+msgstr "પાસકી"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:206
+msgid "Passkey verification failed. Please try again."
+msgstr "પાસકી ચકાસણી નિષ્ફળ ગઈ. કૃપા કરીને ફરી પ્રયાસ કરો."
+
+#: ../../../lib/web/src/components/restore-banner.tsx:126
+msgid "Passkeys"
+msgstr "પાસકીઝ"
 
 #: src/features/chess/lib/use-chess-piece-name.ts:17
 msgid "pawn"
@@ -857,6 +902,14 @@ msgstr "બઢતી આપો:"
 msgid "queen"
 msgstr "વજીર"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:98
+msgid "Re-link your accounts on this server"
+msgstr "આ સર્વર પર તમારા ખાતાઓ ફરીથી જોડો"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:120
+msgid "Re-register your passkeys on this server"
+msgstr "આ સર્વર પર તમારી પાસકી ફરીથી નોંધણી કરો"
+
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:216
 #: ../../../lib/web/src/components/search-entity-page.tsx:191
 msgid "Recommended"
@@ -878,7 +931,7 @@ msgstr "સાપેક્ષ (5m, 3h, 2d)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "24 કલાકની અંદર સાપેક્ષ, અન્યથા સંપૂર્ણ"
 
-#: src/features/chess/index.tsx:434
+#: src/features/chess/index.tsx:437
 msgid "Rematch"
 msgstr "ફરી મેચ"
 
@@ -900,6 +953,10 @@ msgstr "ઍક્સેસ દૂર કરો?"
 msgid "Remove interest"
 msgstr "રસ દૂર કરો"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:364
+msgid "Resend email"
+msgstr "ઇમેઇલ ફરી મોકલો"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:77
 #: ../../../lib/web/src/components/data-table/toolbar.tsx:78
 msgid "Reset"
@@ -909,16 +966,16 @@ msgstr "રીસેટ કરો"
 msgid "Reset all settings to default values"
 msgstr "તમામ સેટિંગ્સને ડિફૉલ્ટ મૂલ્યો પર રીસેટ કરો"
 
-#: src/features/chess/index.tsx:425
-#: src/features/chess/index.tsx:552
+#: src/features/chess/index.tsx:428
+#: src/features/chess/index.tsx:555
 msgid "Resign"
 msgstr "રિઝાઇન કરો"
 
-#: src/features/chess/index.tsx:543
+#: src/features/chess/index.tsx:546
 msgid "Resign game?"
 msgstr "ગેમ રિઝાઇન કરો?"
 
-#: src/features/chess/index.tsx:549
+#: src/features/chess/index.tsx:552
 msgid "Resigning..."
 msgstr "રિઝાઇન કરી રહ્યું છે..."
 
@@ -1012,6 +1069,10 @@ msgstr "થીમ પસંદગી પસંદ કરો"
 msgid "Send again"
 msgstr "ફરી મોકલો"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:304
+msgid "Send email"
+msgstr "ઇમેઇલ મોકલો"
+
 #: src/features/chess/components/chat-input.tsx:40
 msgid "Send message"
 msgstr "સંદેશ મોકલો"
@@ -1066,10 +1127,6 @@ msgstr "નાનું"
 msgid "Spacious"
 msgstr "વિશાળ"
 
-#: src/features/chess/index.tsx:71
-msgid "Stalemate — draw"
-msgstr "સ્ટેલમેટ — ડ્રો"
-
 #: src/features/chess/components/new-game.tsx:94
 msgid "Start a new chess game"
 msgstr "નવી ચેસ રમત શરૂ કરો"
@@ -1108,6 +1165,10 @@ msgstr "ટીમો/એપ્સ"
 #: ../../../lib/web/src/features/document/document-page.tsx:39
 msgid "Terms and conditions"
 msgstr "નિયમો અને શરતો"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:192
+msgid "That code is incorrect or has expired."
+msgstr "તે કોડ ખોટો છે અથવા સમયસમાપ્ત થઈ ગયો છે."
 
 #: ../../../lib/web/src/components/config-drawer.tsx:181
 msgid "Theme"
@@ -1186,7 +1247,7 @@ msgstr "શોધવા માટે ટાઇપ કરો..."
 msgid "Unable to redirect to login. Please try again."
 msgstr "લૉગિન પર રીડાયરેક્ટ કરી શકાતું નથી. કૃપા કરીને ફરી પ્રયાસ કરો."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:143
+#: ../../../lib/web/src/components/notification-category-button.tsx:147
 msgid "Unassigned"
 msgstr "અસોંપાયેલ"
 
@@ -1198,13 +1259,17 @@ msgstr "અનધિકૃત ઍક્સેસ"
 msgid "United States"
 msgstr "યુનાઇટેડ સ્ટેટ્સ"
 
-#: src/hooks/useGameWebsocket.ts:162
+#: src/hooks/useGameWebsocket.ts:164
 msgid "Unknown"
 msgstr "અજાણ્યું"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:131
 msgid "Unverified"
 msgstr "અપ્રમાણિત"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:335
+msgid "Use your passkey"
+msgstr "તમારી પાસકીનો ઉપયોગ કરો"
 
 #: ../../../lib/web/src/features/access/access-dialog.tsx:155
 msgid "User"
@@ -1222,6 +1287,7 @@ msgstr "ચકાસણી કોડ મોકલ્યો"
 msgid "Verification failed"
 msgstr "ચકાસણી નિષ્ફળ"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:385
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:164
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:106
 msgid "Verify"
@@ -1230,6 +1296,10 @@ msgstr "ચકાસો"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:58
 msgid "Verify email address"
 msgstr "ઈમેઇલ સરનામું ચકાસો"
+
+#: ../../../lib/web/src/components/attachment-gallery.tsx:63
+msgid "Video thumbnail"
+msgstr "વિડિયો થંબનેલ"
 
 #: ../../../lib/web/src/components/data-table/view-options.tsx:30
 msgid "View"
@@ -1256,7 +1326,7 @@ msgid "Wednesday"
 msgstr "બુધવાર"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:16
-#: src/features/chess/index.tsx:391
+#: src/features/chess/index.tsx:394
 msgid "White"
 msgstr "સફેદ"
 
@@ -1267,14 +1337,10 @@ msgstr "સફેદ"
 msgid "White {0}"
 msgstr "સફેદ {0}"
 
-#: src/features/chess/components/chat-message-list.tsx:197
+#: src/features/chess/components/chat-message-list.tsx:209
 msgid "You"
 msgstr "તમે"
 
-#: src/features/chess/index.tsx:81
-msgid "You resigned — {opponentName} wins"
-msgstr "તમે રાજીનામું આપ્યું — {opponentName} જીત્યા"
-
-#: src/features/chess/index.tsx:88
-msgid "Your move"
-msgstr "તમારી ચાલ"
+#: ../../../lib/web/src/components/restore-banner.tsx:82
+msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
+msgstr "તમારું ખાતું {source} પરથી અહીં ખસેડવામાં આવ્યું. જ્યાં સુધી તમે ત્યાં તેને કાઢી ન નાખો, સંદેશા અને સૂચનાઓ બંને સર્વર સુધી પહોંચી શકે, કેટલીક સામગ્રી જૂના સર્વરથી પ્રદાન કરાતી રહે, અને ફૉલોઅર્સ ને તમને અહીં શોધવામાં થોડી મિનિટ લાગી શકે."

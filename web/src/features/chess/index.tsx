@@ -52,13 +52,16 @@ import { ChatInput } from './components/chat-input'
 
 const EMPTY_MOVE_HISTORY: readonly string[] = []
 
-function useChessStatusText(
+// Plain function (not a hook) so it can be called from inside conditional JSX
+// without violating the rules of hooks. The `t` tag is passed in from the
+// component's own useLingui() call.
+function chessStatusText(
+  t: ReturnType<typeof useLingui>['t'],
   game: Game,
   myIdentity: string,
   isMyTurn: boolean,
   isCheck: boolean
 ): string {
-  const { t } = useLingui()
   const opponentName = getOpponentName(game, myIdentity)
 
   if (game.status === 'checkmate') {
@@ -384,7 +387,7 @@ export function ChessGame() {
                     title={opponentName}
                     opponentFingerprint={opponentFingerprint || undefined}
                     opponentName={opponentName}
-                    status={useChessStatusText(game, myIdentity, isMyTurn, isCheck)}
+                    status={chessStatusText(t, game, myIdentity, isMyTurn, isCheck)}
                     stats={
                       <GameHeaderStat
                         icon={<GameHeaderStoneDot color={myColor === 'w' ? 'white' : 'black'} />}

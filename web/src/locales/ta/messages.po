@@ -46,23 +46,27 @@ msgstr "{count, plural, one {# யானை} other {# யானைகள்}}"
 msgid "{count} pieces"
 msgstr "{count} காய்கள்"
 
+#: src/features/chess/components/chat-message-list.tsx:190
+msgid "{name} declined the draw"
+msgstr "{name} சமநிலையை மறுத்தார்"
+
+#: src/features/chess/components/chat-message-list.tsx:186
+msgid "{name} offered a draw"
+msgstr "{name} சமநிலையை முன்மொழிந்தார்"
+
+#: src/features/chess/components/chat-message-list.tsx:184
+msgid "{name} resigned"
+msgstr "{name} விட்டுக்கொடுத்தார்"
+
 #: src/features/chess/components/draw-offer-banner.tsx:25
 msgid "{opponentName} offered a draw"
 msgstr "{opponentName} சமநிலை வழங்கினார்"
 
-#: src/features/chess/index.tsx:80
-msgid "{opponentName} resigned — you win!"
-msgstr "{opponentName} விலகினார் — நீங்கள் வெற்றி பெற்றீர்கள்!"
-
-#: src/features/chess/index.tsx:88
-msgid "{opponentName}'s move"
-msgstr "{opponentName}-ன் நகர்வு"
-
-#: src/features/chess/components/chat-message-list.tsx:207
+#: src/features/chess/components/chat-message-list.tsx:219
 msgid "{subject} played <0>{san}</0>"
 msgstr "{subject} <0>{san}</0> விளையாடினார்"
 
-#: src/features/chess/components/chat-message-list.tsx:205
+#: src/features/chess/components/chat-message-list.tsx:217
 msgid "{subject} took <0>{san}</0>"
 msgstr "{subject} <0>{san}</0>-ஐ எடுத்தார்"
 
@@ -175,13 +179,17 @@ msgstr "அனைத்தும்"
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "வெளியேற விரும்புகிறீர்களா? உங்கள் கணக்கை அணுக மீண்டும் உள்நுழைய வேண்டும்."
 
-#: src/features/chess/index.tsx:544
+#: src/features/chess/index.tsx:547
 msgid "Are you sure you want to resign? {opponentName} will win the game."
 msgstr "நீங்கள் சரணடைய விரும்புகிறீர்களா? {opponentName} விளையாட்டை வெல்வார்."
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:56
 msgid "Asc"
 msgstr "ஏறு"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:312
+msgid "Authenticator code"
+msgstr "அங்கீகரிப்பு குறியீடு"
 
 #: ../../../lib/web/src/components/place-picker.tsx:152
 msgid "Back"
@@ -198,7 +206,7 @@ msgid "bishop"
 msgstr "ஒட்டகம்"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:16
-#: src/features/chess/index.tsx:391
+#: src/features/chess/index.tsx:394
 msgid "Black"
 msgstr "கருப்பு"
 
@@ -214,6 +222,7 @@ msgid "Boost interest"
 msgstr "ஆர்வத்தை அதிகரி"
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx:64
+#: ../../../lib/web/src/components/step-up-dialog.tsx:360
 #: ../../../lib/web/src/components/travelling-picker.tsx:292
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:245
 #: ../../../lib/web/src/features/access/access-dialog.tsx:325
@@ -225,38 +234,22 @@ msgstr "ஆர்வத்தை அதிகரி"
 msgid "Cancel"
 msgstr "ரத்துசெய்"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:131
+#: ../../../lib/web/src/components/notification-category-button.tsx:135
 msgid "Category for this notification"
 msgstr "இந்த அறிவிப்புக்கான வகை"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:115
+#: ../../../lib/web/src/components/notification-category-button.tsx:119
 msgid "Change notification category"
 msgstr "அறிவிப்பு வகையை மாற்று"
 
-#: src/features/chess/index.tsx:484
-#: src/features/chess/index.tsx:516
+#: src/features/chess/index.tsx:487
+#: src/features/chess/index.tsx:519
 msgid "Chat"
 msgstr "அரட்டை"
 
-#: src/features/chess/index.tsx:85
-msgid "Check — {opponentName}'s move"
-msgstr "செக் — {opponentName} நகர்வு"
-
-#: src/features/chess/index.tsx:85
-msgid "Check — your move"
-msgstr "செக் — உங்கள் நகர்வு"
-
-#: src/features/chess/index.tsx:67
-msgid "Checkmate — {opponentName} wins"
-msgstr "செக்மேட் — {opponentName} வென்றார்"
-
-#: src/features/chess/index.tsx:66
-msgid "Checkmate — you win!"
-msgstr "செக்மேட் — நீங்கள் வென்றீர்கள்!"
-
-#: src/features/chess/index.tsx:93
-#: src/features/chess/index.tsx:319
-#: src/features/chess/index.tsx:331
+#: src/features/chess/index.tsx:96
+#: src/features/chess/index.tsx:322
+#: src/features/chess/index.tsx:334
 msgid "Chess"
 msgstr "சதுரங்கம்"
 
@@ -373,6 +366,10 @@ msgstr "சூழல் சார்ந்த தகவல் மற்றும
 msgid "Continue"
 msgstr "தொடர்"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:349
+msgid "Continue with {label}"
+msgstr "{label} மூலம் தொடரவும்"
+
 #: ../../../lib/web/src/components/ui/copy-button.tsx:60
 msgid "Copy"
 msgstr "நகலெடு"
@@ -380,6 +377,18 @@ msgstr "நகலெடு"
 #: ../../../lib/web/src/features/document/document-page.tsx:81
 msgid "Could not load this document. Please try again later."
 msgstr "இந்த ஆவணத்தை ஏற்ற முடியவில்லை. பிறகு மீண்டும் முயற்சிக்கவும்."
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:181
+msgid "Couldn't send the code. Please try again."
+msgstr "குறியீட்டை அனுப்ப முடியவில்லை. மீண்டும் முயற்சிக்கவும்."
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:133
+msgid "Couldn't start re-authentication. Please try again."
+msgstr "மறுஅங்கீகாரத்தைத் தொடங்க முடியவில்லை. மீண்டும் முயற்சிக்கவும்."
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:218
+msgid "Couldn't verify with that account. Please try again."
+msgstr "அந்தக் கணக்கைச் சரிபார்க்க முடியவில்லை. மீண்டும் முயற்சிக்கவும்."
 
 #: src/features/chess/components/new-game.tsx:148
 msgid "Creating..."
@@ -410,9 +419,13 @@ msgstr "இயல்புநிலை"
 msgid "Default AI account"
 msgstr "இயல்புநிலை AI கணக்கு"
 
-#: src/features/chess/index.tsx:437
+#: src/features/chess/index.tsx:440
 msgid "Delete game"
 msgstr "விளையாட்டை நீக்கு"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:90
+msgid "Delete your account on the old server"
+msgstr "பழைய சேவையகத்தில் உங்கள் கணக்கை நீக்கவும்"
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:60
 msgid "Desc"
@@ -437,6 +450,10 @@ msgstr "வலை உலாவியிலிருந்து கண்டற�
 msgid "Direction"
 msgstr "திசை"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:73
+msgid "Dismiss"
+msgstr "நிராகரி"
+
 #: ../../../lib/web/src/components/ui/sidebar.tsx:235
 msgid "Displays the mobile sidebar."
 msgstr "மொபைல் பக்கப்பட்டியைக் காட்டுகிறது."
@@ -445,17 +462,29 @@ msgstr "மொபைல் பக்கப்பட்டியைக் கா�
 msgid "Download"
 msgstr "பதிவிறக்கு"
 
-#: src/features/chess/index.tsx:75
-msgid "Draw"
-msgstr "டிரா"
+#: src/features/chess/components/chat-message-list.tsx:188
+msgid "Draw agreed"
+msgstr "சமநிலை ஒப்புக்கொள்ளப்பட்டது"
 
-#: src/features/chess/index.tsx:450
+#: src/features/chess/index.tsx:453
 msgid "Draw offered — waiting for {opponentName}"
 msgstr "சமநிலை வழங்கப்பட்டது — {opponentName}-க்காக காத்திருக்கிறது"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:134
 msgid "Dyslexia-friendly"
 msgstr "டிஸ்லெக்சியாவுக்கு உகந்தது"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:286
+msgid "Email code"
+msgstr "மின்னஞ்சல் குறியீடு"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:296
+msgid "Enter the code from your email"
+msgstr "உங்கள் மின்னஞ்சலில் உள்ள குறியீட்டை உள்ளிடவும்"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:321
+msgid "Enter your authenticator code"
+msgstr "உங்கள் அங்கீகரிப்பான் குறியீட்டை உள்ளிடவும்"
 
 #: ../../../lib/web/src/components/layout/app-sidebar.tsx:35
 msgid "Expand sidebar"
@@ -465,7 +494,7 @@ msgstr "பக்கப்பட்டியை விரிவாக்கு"
 msgid "Extra large"
 msgstr "மிகப் பெரியது"
 
-#: src/features/chess/index.tsx:200
+#: src/features/chess/index.tsx:203
 msgid "Failed to accept draw"
 msgstr "டிராவை ஏற்க முடியவில்லை"
 
@@ -477,19 +506,19 @@ msgstr "கணக்கைச் சேர்க்க முடியவில�
 msgid "Failed to create game"
 msgstr "ஆட்டத்தை உருவாக்க முடியவில்லை"
 
-#: src/features/chess/index.tsx:215
+#: src/features/chess/index.tsx:218
 msgid "Failed to create rematch"
 msgstr "மறுபோட்டியை உருவாக்க முடியவில்லை"
 
-#: src/features/chess/index.tsx:205
+#: src/features/chess/index.tsx:208
 msgid "Failed to decline draw"
 msgstr "டிராவை மறுக்க முடியவில்லை"
 
-#: src/features/chess/index.tsx:226
+#: src/features/chess/index.tsx:229
 msgid "Failed to delete game"
 msgstr "ஆட்டத்தை நீக்க முடியவில்லை"
 
-#: src/features/chess/index.tsx:195
+#: src/features/chess/index.tsx:198
 msgid "Failed to offer draw"
 msgstr "டிரா வழங்க முடியவில்லை"
 
@@ -497,12 +526,12 @@ msgstr "டிரா வழங்க முடியவில்லை"
 msgid "Failed to remove account"
 msgstr "கணக்கை நீக்க முடியவில்லை"
 
-#: src/features/chess/index.tsx:188
+#: src/features/chess/index.tsx:191
 msgid "Failed to resign"
 msgstr "ராஜினாமா செய்ய முடியவில்லை"
 
-#: src/features/chess/index.tsx:500
-#: src/features/chess/index.tsx:532
+#: src/features/chess/index.tsx:503
+#: src/features/chess/index.tsx:535
 msgid "Failed to send"
 msgstr "அனுப்ப முடியவில்லை"
 
@@ -510,9 +539,13 @@ msgstr "அனுப்ப முடியவில்லை"
 msgid "Failed to send verification code"
 msgstr "சரிபார்ப்பு குறியீட்டை அனுப்ப முடியவில்லை"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:104
+#: ../../../lib/web/src/components/notification-category-button.tsx:108
 msgid "Failed to update category"
 msgstr "வகையைப் புதுப்பிக்க முடியவில்லை"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:79
+msgid "Finish moving your account"
+msgstr "கணக்கை நகர்த்துவதை முடிக்கவும்"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:244
 msgid "Floating"
@@ -542,7 +575,7 @@ msgstr "முழு தளவமைப்பு"
 msgid "Game created"
 msgstr "ஆட்டம் உருவாக்கப்பட்டது"
 
-#: src/features/chess/index.tsx:222
+#: src/features/chess/index.tsx:225
 msgid "Game deleted"
 msgstr "ஆட்டம் நீக்கப்பட்டது"
 
@@ -756,7 +789,7 @@ msgstr "முடிவுகள் எதுவும் கிடைக்க�
 msgid "No time zone found."
 msgstr "நேர மண்டலம் எதுவும் கிடைக்கவில்லை."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:135
+#: ../../../lib/web/src/components/notification-category-button.tsx:139
 msgid "No topic record yet — try again after the next notification."
 msgstr "தலைப்புப் பதிவு இன்னும் இல்லை — அடுத்த அறிவிப்புக்குப் பிறகு மீண்டும் முயற்சிக்கவும்."
 
@@ -780,7 +813,7 @@ msgstr "சாதாரணம்"
 msgid "Notifications"
 msgstr "அறிவிப்புகள்"
 
-#: src/features/chess/index.tsx:421
+#: src/features/chess/index.tsx:424
 msgid "Offer draw"
 msgstr "சம நிலை வழங்கவும்"
 
@@ -793,11 +826,11 @@ msgstr "அய்யோ! பக்கம் கிடைக்கவில்ல
 msgid "Open account actions"
 msgstr "கணக்கு செயல்களைத் திறக்கவும்"
 
-#: src/features/chess/index.tsx:400
+#: src/features/chess/index.tsx:403
 msgid "Open chat panel"
 msgstr "அரட்டை பேனலைத் திறக்கவும்"
 
-#: src/features/chess/index.tsx:408
+#: src/features/chess/index.tsx:411
 msgid "Open game actions"
 msgstr "விளையாட்டு செயல்களைத் திறக்கவும்"
 
@@ -821,6 +854,18 @@ msgstr "மற்றவை"
 #: ../../../lib/web/src/features/access/access-list.tsx:213
 msgid "Owner"
 msgstr "உரிமையாளர்"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:331
+msgid "Passkey"
+msgstr "கடவுக்குறி"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:206
+msgid "Passkey verification failed. Please try again."
+msgstr "கடவுவிசை சரிபார்ப்பு தோல்வியடைந்தது. மீண்டும் முயற்சிக்கவும்."
+
+#: ../../../lib/web/src/components/restore-banner.tsx:126
+msgid "Passkeys"
+msgstr "Passkeyக்கள்"
 
 #: src/features/chess/lib/use-chess-piece-name.ts:17
 msgid "pawn"
@@ -857,6 +902,14 @@ msgstr "பதவி உயர்த்து:"
 msgid "queen"
 msgstr "மந்திரி"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:98
+msgid "Re-link your accounts on this server"
+msgstr "இந்த சேவையகத்தில் உங்கள் கணக்குகளை மீண்டும் இணைக்கவும்"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:120
+msgid "Re-register your passkeys on this server"
+msgstr "இந்த சேவையகத்தில் உங்கள் கடவுச்சாவிகளை மீண்டும் பதிவு செய்யவும்"
+
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:216
 #: ../../../lib/web/src/components/search-entity-page.tsx:191
 msgid "Recommended"
@@ -878,7 +931,7 @@ msgstr "சார்பு (5m, 3h, 2d)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "24 மணி நேரத்திற்குள் சார்பு, இல்லையெனில் முழுமையானது"
 
-#: src/features/chess/index.tsx:434
+#: src/features/chess/index.tsx:437
 msgid "Rematch"
 msgstr "மறுபோட்டி"
 
@@ -900,6 +953,10 @@ msgstr "அணுகலை அகற்றவா?"
 msgid "Remove interest"
 msgstr "ஆர்வத்தை அகற்று"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:364
+msgid "Resend email"
+msgstr "மின்னஞ்சலை மீண்டும் அனுப்பு"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:77
 #: ../../../lib/web/src/components/data-table/toolbar.tsx:78
 msgid "Reset"
@@ -909,16 +966,16 @@ msgstr "மீட்டமை"
 msgid "Reset all settings to default values"
 msgstr "அனைத்து அமைப்புகளையும் இயல்பு மதிப்புகளுக்கு மீட்டமைக்கவும்"
 
-#: src/features/chess/index.tsx:425
-#: src/features/chess/index.tsx:552
+#: src/features/chess/index.tsx:428
+#: src/features/chess/index.tsx:555
 msgid "Resign"
 msgstr "விலகு"
 
-#: src/features/chess/index.tsx:543
+#: src/features/chess/index.tsx:546
 msgid "Resign game?"
 msgstr "விளையாட்டிலிருந்து விலகவா?"
 
-#: src/features/chess/index.tsx:549
+#: src/features/chess/index.tsx:552
 msgid "Resigning..."
 msgstr "விலகுகிறது..."
 
@@ -1012,6 +1069,10 @@ msgstr "தீம் விருப்பத்தை தேர்ந்தெ�
 msgid "Send again"
 msgstr "மீண்டும் அனுப்பு"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:304
+msgid "Send email"
+msgstr "மின்னஞ்சல் அனுப்பு"
+
 #: src/features/chess/components/chat-input.tsx:40
 msgid "Send message"
 msgstr "செய்தியை அனுப்பு"
@@ -1066,10 +1127,6 @@ msgstr "சிறியது"
 msgid "Spacious"
 msgstr "விரிவான"
 
-#: src/features/chess/index.tsx:71
-msgid "Stalemate — draw"
-msgstr "முட்டுச் சந்து — டிரா"
-
 #: src/features/chess/components/new-game.tsx:94
 msgid "Start a new chess game"
 msgstr "புதிய சதுரங்க கேமை தொடங்கு"
@@ -1108,6 +1165,10 @@ msgstr "டீம்கள்/ஆப்கள்"
 #: ../../../lib/web/src/features/document/document-page.tsx:39
 msgid "Terms and conditions"
 msgstr "விதிமுறைகள் மற்றும் நிபந்தனைகள்"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:192
+msgid "That code is incorrect or has expired."
+msgstr "அந்தக் குறியீடு தவறானது அல்லது காலாவதியாகிவிட்டது."
 
 #: ../../../lib/web/src/components/config-drawer.tsx:181
 msgid "Theme"
@@ -1186,7 +1247,7 @@ msgstr "தேட தட்டச்சு செய்..."
 msgid "Unable to redirect to login. Please try again."
 msgstr "உள்நுழைவுக்கு திருப்பி விட முடியவில்லை. தயவுசெய்து மீண்டும் முயற்சி செய்யுங்கள்."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:143
+#: ../../../lib/web/src/components/notification-category-button.tsx:147
 msgid "Unassigned"
 msgstr "ஒதுக்கப்படாதது"
 
@@ -1198,13 +1259,17 @@ msgstr "அனுமதிக்கப்படாத அணுகல்"
 msgid "United States"
 msgstr "ஐக்கிய அமெரிக்கா"
 
-#: src/hooks/useGameWebsocket.ts:162
+#: src/hooks/useGameWebsocket.ts:164
 msgid "Unknown"
 msgstr "தெரியாதது"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:131
 msgid "Unverified"
 msgstr "சரிபார்க்கப்படாதது"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:335
+msgid "Use your passkey"
+msgstr "உங்கள் கடவுவிசையைப் பயன்படுத்தவும்"
 
 #: ../../../lib/web/src/features/access/access-dialog.tsx:155
 msgid "User"
@@ -1222,6 +1287,7 @@ msgstr "சரிபார்ப்பு குறியீடு அனுப�
 msgid "Verification failed"
 msgstr "சரிபார்ப்பு தோல்வியடைந்தது"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:385
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:164
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:106
 msgid "Verify"
@@ -1230,6 +1296,10 @@ msgstr "சரிபார்"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:58
 msgid "Verify email address"
 msgstr "மின்னஞ்சல் முகவரியை சரிபார்"
+
+#: ../../../lib/web/src/components/attachment-gallery.tsx:63
+msgid "Video thumbnail"
+msgstr "வீடியோ சிறுபடம்"
 
 #: ../../../lib/web/src/components/data-table/view-options.tsx:30
 msgid "View"
@@ -1256,7 +1326,7 @@ msgid "Wednesday"
 msgstr "புதன்கிழமை"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:16
-#: src/features/chess/index.tsx:391
+#: src/features/chess/index.tsx:394
 msgid "White"
 msgstr "வெள்ளை"
 
@@ -1267,14 +1337,10 @@ msgstr "வெள்ளை"
 msgid "White {0}"
 msgstr "வெள்ளை {0}"
 
-#: src/features/chess/components/chat-message-list.tsx:197
+#: src/features/chess/components/chat-message-list.tsx:209
 msgid "You"
 msgstr "நீங்கள்"
 
-#: src/features/chess/index.tsx:81
-msgid "You resigned — {opponentName} wins"
-msgstr "நீங்கள் விலகினீர்கள் — {opponentName} வெற்றி பெற்றார்"
-
-#: src/features/chess/index.tsx:88
-msgid "Your move"
-msgstr "உங்கள் நகர்வு"
+#: ../../../lib/web/src/components/restore-banner.tsx:82
+msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
+msgstr "உங்கள் கணக்கு {source} இலிருந்து இங்கே நகர்த்தப்பட்டது. நீங்கள் அதை அங்கே நீக்கும் வரை, செய்திகளும் அறிவிப்புகளும் இரண்டு சேவையகங்களையும் அடையலாம், உங்கள் சில உள்ளடக்கம் பழைய சேவையகத்தில் இருந்து தொடர்ந்து வழங்கப்படும், மேலும் உங்கள் பின்தொடர்பவர்கள் இங்கே உங்களை கண்டுபிடிக்க சில நிமிடங்கள் ஆகலாம்."

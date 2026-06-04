@@ -175,15 +175,27 @@ export function ChatMessageList({
           </div>
 
           {groupedMessages[key].map((message, index) => {
-            // System messages
+            // System messages — localise per viewer from the event kind +
+            // actor name. Legacy rows (no event) fall back to the stored body.
             if (message.type === 'system') {
+              const name = message.name
+              let text = message.body
+              if (message.event === 'resign') {
+                text = t`${name} resigned`
+              } else if (message.event === 'draw_offer') {
+                text = t`${name} offered a draw`
+              } else if (message.event === 'draw_accept') {
+                text = t`Draw agreed`
+              } else if (message.event === 'draw_decline') {
+                text = t`${name} declined the draw`
+              }
               return (
                 <div
                   key={`${message.id}-${index}`}
                   className="flex justify-center py-1"
                 >
                   <span className="text-muted-foreground text-[11px] italic">
-                    {message.body}
+                    {text}
                   </span>
                 </div>
               )

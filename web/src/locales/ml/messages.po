@@ -46,23 +46,27 @@ msgstr "{count, plural, one {# ആന} other {# ആനകൾ}}"
 msgid "{count} pieces"
 msgstr "{count} കരുക്കൾ"
 
+#: src/features/chess/components/chat-message-list.tsx:190
+msgid "{name} declined the draw"
+msgstr "{name} സമനില നിരസിച്ചു"
+
+#: src/features/chess/components/chat-message-list.tsx:186
+msgid "{name} offered a draw"
+msgstr "{name} സമനില വാഗ്ദാനം ചെയ്തു"
+
+#: src/features/chess/components/chat-message-list.tsx:184
+msgid "{name} resigned"
+msgstr "{name} കീഴടങ്ങി"
+
 #: src/features/chess/components/draw-offer-banner.tsx:25
 msgid "{opponentName} offered a draw"
 msgstr "{opponentName} സമനില വാഗ്ദാനം ചെയ്തു"
 
-#: src/features/chess/index.tsx:80
-msgid "{opponentName} resigned — you win!"
-msgstr "{opponentName} രാജിവെച്ചു — നിങ്ങൾ വിജയിച്ചു!"
-
-#: src/features/chess/index.tsx:88
-msgid "{opponentName}'s move"
-msgstr "{opponentName}-ന്റെ നീക്കം"
-
-#: src/features/chess/components/chat-message-list.tsx:207
+#: src/features/chess/components/chat-message-list.tsx:219
 msgid "{subject} played <0>{san}</0>"
 msgstr "{subject} <0>{san}</0> കളിച്ചു"
 
-#: src/features/chess/components/chat-message-list.tsx:205
+#: src/features/chess/components/chat-message-list.tsx:217
 msgid "{subject} took <0>{san}</0>"
 msgstr "{subject} <0>{san}</0> എടുത്തു"
 
@@ -175,13 +179,17 @@ msgstr "എല്ലാം"
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "ലോഗ് ഔട്ട് ചെയ്യണമെന്ന് നിങ്ങൾക്ക് ഉറപ്പാണോ? നിങ്ങളുടെ അക്കൗണ്ട് ആക്സസ് ചെയ്യാൻ വീണ്ടും ലോഗിൻ ചെയ്യേണ്ടിവരും."
 
-#: src/features/chess/index.tsx:544
+#: src/features/chess/index.tsx:547
 msgid "Are you sure you want to resign? {opponentName} will win the game."
 msgstr "നിങ്ങൾ കീഴടങ്ങാൻ തീർച്ചയാണോ? {opponentName} ഗെയിം ജയിക്കും."
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:56
 msgid "Asc"
 msgstr "Asc"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:312
+msgid "Authenticator code"
+msgstr "Authenticator കോഡ്"
 
 #: ../../../lib/web/src/components/place-picker.tsx:152
 msgid "Back"
@@ -198,7 +206,7 @@ msgid "bishop"
 msgstr "ഒട്ടകം"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:16
-#: src/features/chess/index.tsx:391
+#: src/features/chess/index.tsx:394
 msgid "Black"
 msgstr "കറുപ്പ്"
 
@@ -214,6 +222,7 @@ msgid "Boost interest"
 msgstr "താൽപ്പര്യം വർദ്ധിപ്പിക്കുക"
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx:64
+#: ../../../lib/web/src/components/step-up-dialog.tsx:360
 #: ../../../lib/web/src/components/travelling-picker.tsx:292
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:245
 #: ../../../lib/web/src/features/access/access-dialog.tsx:325
@@ -225,38 +234,22 @@ msgstr "താൽപ്പര്യം വർദ്ധിപ്പിക്ക�
 msgid "Cancel"
 msgstr "റദ്ദാക്കുക"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:131
+#: ../../../lib/web/src/components/notification-category-button.tsx:135
 msgid "Category for this notification"
 msgstr "ഈ അറിയിപ്പിനുള്ള വിഭാഗം"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:115
+#: ../../../lib/web/src/components/notification-category-button.tsx:119
 msgid "Change notification category"
 msgstr "അറിയിപ്പ് വിഭാഗം മാറ്റുക"
 
-#: src/features/chess/index.tsx:484
-#: src/features/chess/index.tsx:516
+#: src/features/chess/index.tsx:487
+#: src/features/chess/index.tsx:519
 msgid "Chat"
 msgstr "ചാറ്റ്"
 
-#: src/features/chess/index.tsx:85
-msgid "Check — {opponentName}'s move"
-msgstr "Check — {opponentName}-ന്റെ നീക്കം"
-
-#: src/features/chess/index.tsx:85
-msgid "Check — your move"
-msgstr "Check — നിങ്ങളുടെ നീക്കം"
-
-#: src/features/chess/index.tsx:67
-msgid "Checkmate — {opponentName} wins"
-msgstr "Checkmate — {opponentName} ജയിച്ചു"
-
-#: src/features/chess/index.tsx:66
-msgid "Checkmate — you win!"
-msgstr "Checkmate — നിങ്ങൾ ജയിച്ചു!"
-
-#: src/features/chess/index.tsx:93
-#: src/features/chess/index.tsx:319
-#: src/features/chess/index.tsx:331
+#: src/features/chess/index.tsx:96
+#: src/features/chess/index.tsx:322
+#: src/features/chess/index.tsx:334
 msgid "Chess"
 msgstr "ചെസ്സ്"
 
@@ -373,6 +366,10 @@ msgstr "സന്ദർഭോചിത വിവരങ്ങളും വിശ�
 msgid "Continue"
 msgstr "തുടരുക"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:349
+msgid "Continue with {label}"
+msgstr "{label} ഉപയോഗിച്ച് തുടരുക"
+
 #: ../../../lib/web/src/components/ui/copy-button.tsx:60
 msgid "Copy"
 msgstr "പകർത്തുക"
@@ -380,6 +377,18 @@ msgstr "പകർത്തുക"
 #: ../../../lib/web/src/features/document/document-page.tsx:81
 msgid "Could not load this document. Please try again later."
 msgstr "ഈ ഡോക്യുമെന്റ് ലോഡ് ചെയ്യാൻ കഴിഞ്ഞില്ല. ദയവായി പിന്നീട് വീണ്ടും ശ്രമിക്കുക."
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:181
+msgid "Couldn't send the code. Please try again."
+msgstr "കോഡ് അയയ്ക്കാനായില്ല. ദയവായി വീണ്ടും ശ്രമിക്കുക."
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:133
+msgid "Couldn't start re-authentication. Please try again."
+msgstr "വീണ്ടും പരിശോധന ആരംഭിക്കാനായില്ല. ദയവായി വീണ്ടും ശ്രമിക്കുക."
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:218
+msgid "Couldn't verify with that account. Please try again."
+msgstr "ആ അക്കൗണ്ട് ഉപയോഗിച്ച് പരിശോധിക്കാനായില്ല. വീണ്ടും ശ്രമിക്കുക."
 
 #: src/features/chess/components/new-game.tsx:148
 msgid "Creating..."
@@ -410,9 +419,13 @@ msgstr "ഡിഫോൾട്ട്"
 msgid "Default AI account"
 msgstr "ഡിഫോൾട്ട് AI അക്കൗണ്ട്"
 
-#: src/features/chess/index.tsx:437
+#: src/features/chess/index.tsx:440
 msgid "Delete game"
 msgstr "ഗെയിം ഇല്ലാതാക്കുക"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:90
+msgid "Delete your account on the old server"
+msgstr "പഴയ സെർവറിൽ നിങ്ങളുടെ അക്കൗണ്ട് ഇല്ലാതാക്കുക"
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:60
 msgid "Desc"
@@ -437,6 +450,10 @@ msgstr "വെബ് ബ്രൗസറിൽ നിന്ന് കണ്ടെ
 msgid "Direction"
 msgstr "ദിശ"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:73
+msgid "Dismiss"
+msgstr "ഒഴിവാക്കുക"
+
 #: ../../../lib/web/src/components/ui/sidebar.tsx:235
 msgid "Displays the mobile sidebar."
 msgstr "മൊബൈൽ സൈഡ്‌ബാർ പ്രദർശിപ്പിക്കുന്നു."
@@ -445,17 +462,29 @@ msgstr "മൊബൈൽ സൈഡ്‌ബാർ പ്രദർശിപ്പ�
 msgid "Download"
 msgstr "ഡൗൺലോഡ്"
 
-#: src/features/chess/index.tsx:75
-msgid "Draw"
-msgstr "സമനില"
+#: src/features/chess/components/chat-message-list.tsx:188
+msgid "Draw agreed"
+msgstr "സമനില അംഗീകരിച്ചു"
 
-#: src/features/chess/index.tsx:450
+#: src/features/chess/index.tsx:453
 msgid "Draw offered — waiting for {opponentName}"
 msgstr "സമനില വാഗ്ദാനം ചെയ്തു — {opponentName}-നായി കാത്തിരിക്കുന്നു"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:134
 msgid "Dyslexia-friendly"
 msgstr "ഡിസ്ലെക്സിയ-സൗഹൃദം"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:286
+msgid "Email code"
+msgstr "ഇമെയിൽ കോഡ്"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:296
+msgid "Enter the code from your email"
+msgstr "നിങ്ങളുടെ ഇമെയിലിലെ കോഡ് നൽകുക"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:321
+msgid "Enter your authenticator code"
+msgstr "നിങ്ങളുടെ ഓതെന്റിക്കേറ്റർ കോഡ് നൽകുക"
 
 #: ../../../lib/web/src/components/layout/app-sidebar.tsx:35
 msgid "Expand sidebar"
@@ -465,7 +494,7 @@ msgstr "സൈഡ്‌ബാർ വികസിപ്പിക്കുക"
 msgid "Extra large"
 msgstr "അധിക വലുത്"
 
-#: src/features/chess/index.tsx:200
+#: src/features/chess/index.tsx:203
 msgid "Failed to accept draw"
 msgstr "സമനില സ്വീകരിക്കുന്നതിൽ പരാജയപ്പെട്ടു"
 
@@ -477,19 +506,19 @@ msgstr "അക്കൗണ്ട് ചേർക്കുന്നതിൽ പ�
 msgid "Failed to create game"
 msgstr "ഗെയിം സൃഷ്ടിക്കുന്നതിൽ പരാജയപ്പെട്ടു"
 
-#: src/features/chess/index.tsx:215
+#: src/features/chess/index.tsx:218
 msgid "Failed to create rematch"
 msgstr "റീമാച്ച് സൃഷ്ടിക്കുന്നതിൽ പരാജയപ്പെട്ടു"
 
-#: src/features/chess/index.tsx:205
+#: src/features/chess/index.tsx:208
 msgid "Failed to decline draw"
 msgstr "സമനില നിരസിക്കുന്നതിൽ പരാജയപ്പെട്ടു"
 
-#: src/features/chess/index.tsx:226
+#: src/features/chess/index.tsx:229
 msgid "Failed to delete game"
 msgstr "ഗെയിം ഇല്ലാതാക്കുന്നതിൽ പരാജയപ്പെട്ടു"
 
-#: src/features/chess/index.tsx:195
+#: src/features/chess/index.tsx:198
 msgid "Failed to offer draw"
 msgstr "സമനില വാഗ്ദാനം ചെയ്യുന്നതിൽ പരാജയപ്പെട്ടു"
 
@@ -497,12 +526,12 @@ msgstr "സമനില വാഗ്ദാനം ചെയ്യുന്നത�
 msgid "Failed to remove account"
 msgstr "അക്കൗണ്ട് നീക്കം ചെയ്യുന്നതിൽ പരാജയപ്പെട്ടു"
 
-#: src/features/chess/index.tsx:188
+#: src/features/chess/index.tsx:191
 msgid "Failed to resign"
 msgstr "രാജിവയ്ക്കുന്നതിൽ പരാജയപ്പെട്ടു"
 
-#: src/features/chess/index.tsx:500
-#: src/features/chess/index.tsx:532
+#: src/features/chess/index.tsx:503
+#: src/features/chess/index.tsx:535
 msgid "Failed to send"
 msgstr "അയയ്ക്കുന്നതിൽ പരാജയപ്പെട്ടു"
 
@@ -510,9 +539,13 @@ msgstr "അയയ്ക്കുന്നതിൽ പരാജയപ്പെ�
 msgid "Failed to send verification code"
 msgstr "സ്ഥിരീകരണ കോഡ് അയയ്ക്കുന്നതിൽ പരാജയപ്പെട്ടു"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:104
+#: ../../../lib/web/src/components/notification-category-button.tsx:108
 msgid "Failed to update category"
 msgstr "വിഭാഗം പുതുക്കുന്നതിൽ പരാജയപ്പെട്ടു"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:79
+msgid "Finish moving your account"
+msgstr "നിങ്ങളുടെ അക്കൗണ്ട് മാറ്റൽ പൂർത്തിയാക്കുക"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:244
 msgid "Floating"
@@ -542,7 +575,7 @@ msgstr "പൂർണ്ണ ലേഔട്ട്"
 msgid "Game created"
 msgstr "ഗെയിം സൃഷ്ടിച്ചു"
 
-#: src/features/chess/index.tsx:222
+#: src/features/chess/index.tsx:225
 msgid "Game deleted"
 msgstr "ഗെയിം ഇല്ലാതാക്കി"
 
@@ -756,7 +789,7 @@ msgstr "ഫലങ്ങളൊന്നും കണ്ടെത്തിയി�
 msgid "No time zone found."
 msgstr "സമയ മേഖലയൊന്നും കണ്ടെത്തിയില്ല."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:135
+#: ../../../lib/web/src/components/notification-category-button.tsx:139
 msgid "No topic record yet — try again after the next notification."
 msgstr "വിഷയ റെക്കോർഡ് ഇതുവരെയില്ല — അടുത്ത അറിയിപ്പിന് ശേഷം വീണ്ടും ശ്രമിക്കുക."
 
@@ -780,7 +813,7 @@ msgstr "സാധാരണം"
 msgid "Notifications"
 msgstr "അറിയിപ്പുകൾ"
 
-#: src/features/chess/index.tsx:421
+#: src/features/chess/index.tsx:424
 msgid "Offer draw"
 msgstr "സമനില വാഗ്ദാനം ചെയ്യുക"
 
@@ -793,11 +826,11 @@ msgstr "ഓ! പേജ് കണ്ടെത്തിയില്ല!"
 msgid "Open account actions"
 msgstr "അക്കൗണ്ട് പ്രവർത്തനങ്ങൾ തുറക്കുക"
 
-#: src/features/chess/index.tsx:400
+#: src/features/chess/index.tsx:403
 msgid "Open chat panel"
 msgstr "ചാറ്റ് പാനൽ തുറക്കുക"
 
-#: src/features/chess/index.tsx:408
+#: src/features/chess/index.tsx:411
 msgid "Open game actions"
 msgstr "ഗെയിം പ്രവർത്തനങ്ങൾ തുറക്കുക"
 
@@ -821,6 +854,18 @@ msgstr "മറ്റുള്ളവ"
 #: ../../../lib/web/src/features/access/access-list.tsx:213
 msgid "Owner"
 msgstr "ഉടമ"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:331
+msgid "Passkey"
+msgstr "പാസ്കീ"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:206
+msgid "Passkey verification failed. Please try again."
+msgstr "പാസ്‌കീ പരിശോധന പരാജയപ്പെട്ടു. ദയവായി വീണ്ടും ശ്രമിക്കുക."
+
+#: ../../../lib/web/src/components/restore-banner.tsx:126
+msgid "Passkeys"
+msgstr "പാസ്കീകൾ"
 
 #: src/features/chess/lib/use-chess-piece-name.ts:17
 msgid "pawn"
@@ -857,6 +902,14 @@ msgstr "ഉയർത്തുക:"
 msgid "queen"
 msgstr "മന്ത്രി"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:98
+msgid "Re-link your accounts on this server"
+msgstr "ഈ സെർവറിൽ നിങ്ങളുടെ അക്കൗണ്ടുകൾ വീണ്ടും ലിങ്ക് ചെയ്യുക"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:120
+msgid "Re-register your passkeys on this server"
+msgstr "ഈ സെർവറിൽ നിങ്ങളുടെ പാസ്‌കീകൾ വീണ്ടും രജിസ്റ്റർ ചെയ്യുക"
+
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:216
 #: ../../../lib/web/src/components/search-entity-page.tsx:191
 msgid "Recommended"
@@ -878,7 +931,7 @@ msgstr "24 മണിക്കൂറിനുള്ളിൽ ആപേക്ഷ�
 msgid "Relative within 24 hours, else absolute"
 msgstr "റിലീസ് ട്രാക്കുകൾ"
 
-#: src/features/chess/index.tsx:434
+#: src/features/chess/index.tsx:437
 msgid "Rematch"
 msgstr "നീക്കം ചെയ്യുക"
 
@@ -900,6 +953,10 @@ msgstr "അക്കൗണ്ട് നീക്കം ചെയ്യണോ?"
 msgid "Remove interest"
 msgstr "item നീക്കം ചെയ്യുക"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:364
+msgid "Resend email"
+msgstr "ഇമെയിൽ വീണ്ടും അയയ്ക്കുക"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:77
 #: ../../../lib/web/src/components/data-table/toolbar.tsx:78
 msgid "Reset"
@@ -909,16 +966,16 @@ msgstr "എല്ലാ സെറ്റിങ്ങുകളും ഡിഫോ�
 msgid "Reset all settings to default values"
 msgstr "മുൻഗണനകൾ റീസെറ്റ് ചെയ്യണോ?"
 
-#: src/features/chess/index.tsx:425
-#: src/features/chess/index.tsx:552
+#: src/features/chess/index.tsx:428
+#: src/features/chess/index.tsx:555
 msgid "Resign"
 msgstr "ഗെയിം പിന്മാറണോ?"
 
-#: src/features/chess/index.tsx:543
+#: src/features/chess/index.tsx:546
 msgid "Resign game?"
 msgstr "പിന്മാറുന്നു..."
 
-#: src/features/chess/index.tsx:549
+#: src/features/chess/index.tsx:552
 msgid "Resigning..."
 msgstr "റെസല്യൂഷൻ"
 
@@ -1012,6 +1069,10 @@ msgstr "തീം മുൻഗണന തിരഞ്ഞെടുക്കുക"
 msgid "Send again"
 msgstr "വീണ്ടും അയയ്ക്കുക"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:304
+msgid "Send email"
+msgstr "ഇമെയിൽ അയയ്ക്കുക"
+
 #: src/features/chess/components/chat-input.tsx:40
 msgid "Send message"
 msgstr "സന്ദേശം അയയ്ക്കുക"
@@ -1066,10 +1127,6 @@ msgstr "ചെറുത്"
 msgid "Spacious"
 msgstr "വിശാലം"
 
-#: src/features/chess/index.tsx:71
-msgid "Stalemate — draw"
-msgstr "സ്റ്റേൽമേറ്റ് — സമനില"
-
 #: src/features/chess/components/new-game.tsx:94
 msgid "Start a new chess game"
 msgstr "ഒരു പുതിയ ചെസ് ഗെയിം ആരംഭിക്കുക"
@@ -1108,6 +1165,10 @@ msgstr "ടീമുകൾ/ആപ്പുകൾ"
 #: ../../../lib/web/src/features/document/document-page.tsx:39
 msgid "Terms and conditions"
 msgstr "നിബന്ധനകളും വ്യവസ്ഥകളും"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:192
+msgid "That code is incorrect or has expired."
+msgstr "ആ കോഡ് തെറ്റാണ് അല്ലെങ്കിൽ കാലഹരണപ്പെട്ടു."
 
 #: ../../../lib/web/src/components/config-drawer.tsx:181
 msgid "Theme"
@@ -1186,7 +1247,7 @@ msgstr "തിരയാൻ ടൈപ്പ് ചെയ്യുക..."
 msgid "Unable to redirect to login. Please try again."
 msgstr "ലോഗിനിലേക്ക് റീഡയറക്റ്റ് ചെയ്യാൻ കഴിയുന്നില്ല. വീണ്ടും ശ്രമിക്കുക."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:143
+#: ../../../lib/web/src/components/notification-category-button.tsx:147
 msgid "Unassigned"
 msgstr "നിയോഗിച്ചിട്ടില്ല"
 
@@ -1198,13 +1259,17 @@ msgstr "അനുവദിക്കാത്ത ആക്സസ്"
 msgid "United States"
 msgstr "യുണൈറ്റഡ് സ്റ്റേറ്റ്സ്"
 
-#: src/hooks/useGameWebsocket.ts:162
+#: src/hooks/useGameWebsocket.ts:164
 msgid "Unknown"
 msgstr "അജ്ഞാതം"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:131
 msgid "Unverified"
 msgstr "സ്ഥിരീകരിച്ചിട്ടില്ല"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:335
+msgid "Use your passkey"
+msgstr "നിങ്ങളുടെ പാസ്‌കീ ഉപയോഗിക്കുക"
 
 #: ../../../lib/web/src/features/access/access-dialog.tsx:155
 msgid "User"
@@ -1222,6 +1287,7 @@ msgstr "സ്ഥിരീകരണ കോഡ് അയച്ചു"
 msgid "Verification failed"
 msgstr "സ്ഥിരീകരണം പരാജയപ്പെട്ടു"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:385
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:164
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:106
 msgid "Verify"
@@ -1230,6 +1296,10 @@ msgstr "സ്ഥിരീകരിക്കുക"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:58
 msgid "Verify email address"
 msgstr "ഇമെയിൽ വിലാസം സ്ഥിരീകരിക്കുക"
+
+#: ../../../lib/web/src/components/attachment-gallery.tsx:63
+msgid "Video thumbnail"
+msgstr "വീഡിയോ തംബ്നെയിൽ"
 
 #: ../../../lib/web/src/components/data-table/view-options.tsx:30
 msgid "View"
@@ -1256,7 +1326,7 @@ msgid "Wednesday"
 msgstr "ബുധനാഴ്ച"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:16
-#: src/features/chess/index.tsx:391
+#: src/features/chess/index.tsx:394
 msgid "White"
 msgstr "വെള്ള"
 
@@ -1267,14 +1337,10 @@ msgstr "വെള്ള"
 msgid "White {0}"
 msgstr "വെളുപ്പ് {0}"
 
-#: src/features/chess/components/chat-message-list.tsx:197
+#: src/features/chess/components/chat-message-list.tsx:209
 msgid "You"
 msgstr "നിങ്ങൾ"
 
-#: src/features/chess/index.tsx:81
-msgid "You resigned — {opponentName} wins"
-msgstr "നിങ്ങൾ രാജിവെച്ചു — {opponentName} വിജയിക്കുന്നു"
-
-#: src/features/chess/index.tsx:88
-msgid "Your move"
-msgstr "നിങ്ങളുടെ നീക്കം"
+#: ../../../lib/web/src/components/restore-banner.tsx:82
+msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
+msgstr "നിങ്ങളുടെ അക്കൗണ്ട് {source} ൽ നിന്ന് ഇവിടേക്ക് മാറ്റി. അവിടെ ഇല്ലാതാക്കുന്നതുവരെ, സന്ദേശങ്ങളും അറിയിപ്പുകളും രണ്ട് സെർവറുകളിലും എത്തിയേക്കാം, നിങ്ങളുടെ ചില ഉള്ളടക്കം പഴയ സെർവറിൽ നിന്ന് വിതരണം ചെയ്യപ്പെടും, ഫോളോവർമാർ ഇവിടെ നിങ്ങളെ കണ്ടെത്താൻ ഏതാനും മിനിറ്റ് എടുക്കാം."

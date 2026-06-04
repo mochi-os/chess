@@ -46,23 +46,27 @@ msgstr "{count, plural, other {# rúùkù}}"
 msgid "{count} pieces"
 msgstr "Ẹyọ {count}"
 
+#: src/features/chess/components/chat-message-list.tsx:190
+msgid "{name} declined the draw"
+msgstr "{name} kọ ìfòyebánilọ́pọ̀"
+
+#: src/features/chess/components/chat-message-list.tsx:186
+msgid "{name} offered a draw"
+msgstr "{name} dábàá ìfòyebánilọ́pọ̀"
+
+#: src/features/chess/components/chat-message-list.tsx:184
+msgid "{name} resigned"
+msgstr "{name} jọwọ́ ara rẹ̀"
+
 #: src/features/chess/components/draw-offer-banner.tsx:25
 msgid "{opponentName} offered a draw"
 msgstr "{opponentName} fún ní ìdábọ̀"
 
-#: src/features/chess/index.tsx:80
-msgid "{opponentName} resigned — you win!"
-msgstr "{opponentName} fi ipò sílẹ̀ — o borí!"
-
-#: src/features/chess/index.tsx:88
-msgid "{opponentName}'s move"
-msgstr "Ìṣíkiri ti {opponentName}"
-
-#: src/features/chess/components/chat-message-list.tsx:207
+#: src/features/chess/components/chat-message-list.tsx:219
 msgid "{subject} played <0>{san}</0>"
 msgstr "{subject} ṣe <0>{san}</0>"
 
-#: src/features/chess/components/chat-message-list.tsx:205
+#: src/features/chess/components/chat-message-list.tsx:217
 msgid "{subject} took <0>{san}</0>"
 msgstr "{subject} mú <0>{san}</0>"
 
@@ -175,13 +179,17 @@ msgstr "Gbogbo"
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "Ṣé o dájú pé o fẹ́ jáde? Wàá nílò láti wọlé lẹ́ẹ̀kan sí i láti rí àkáǹtì rẹ."
 
-#: src/features/chess/index.tsx:544
+#: src/features/chess/index.tsx:547
 msgid "Are you sure you want to resign? {opponentName} will win the game."
 msgstr "Ǹjẹ́ ó dájú pé o fẹ́ jọ̀wọ́? {opponentName} yóò ṣẹ́gun ìdíje náà."
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:56
 msgid "Asc"
 msgstr "Àsc"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:312
+msgid "Authenticator code"
+msgstr "Kóòdù olùfọwọ́sí"
 
 #: ../../../lib/web/src/components/place-picker.tsx:152
 msgid "Back"
@@ -198,7 +206,7 @@ msgid "bishop"
 msgstr "bíṣọ́ọ̀bù"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:16
-#: src/features/chess/index.tsx:391
+#: src/features/chess/index.tsx:394
 msgid "Black"
 msgstr "Dúdú"
 
@@ -214,6 +222,7 @@ msgid "Boost interest"
 msgstr "Mú ìfẹ́ pọ̀"
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx:64
+#: ../../../lib/web/src/components/step-up-dialog.tsx:360
 #: ../../../lib/web/src/components/travelling-picker.tsx:292
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:245
 #: ../../../lib/web/src/features/access/access-dialog.tsx:325
@@ -225,38 +234,22 @@ msgstr "Mú ìfẹ́ pọ̀"
 msgid "Cancel"
 msgstr "Fagilé"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:131
+#: ../../../lib/web/src/components/notification-category-button.tsx:135
 msgid "Category for this notification"
 msgstr "Ẹ̀ka fún ìfitónilétí yìí"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:115
+#: ../../../lib/web/src/components/notification-category-button.tsx:119
 msgid "Change notification category"
 msgstr "Yí ẹ̀ka ìfitónilétí padà"
 
-#: src/features/chess/index.tsx:484
-#: src/features/chess/index.tsx:516
+#: src/features/chess/index.tsx:487
+#: src/features/chess/index.tsx:519
 msgid "Chat"
 msgstr "Ìjíròrò"
 
-#: src/features/chess/index.tsx:85
-msgid "Check — {opponentName}'s move"
-msgstr "Check — ìṣíkiri {opponentName}"
-
-#: src/features/chess/index.tsx:85
-msgid "Check — your move"
-msgstr "Check — ìṣíkiri rẹ"
-
-#: src/features/chess/index.tsx:67
-msgid "Checkmate — {opponentName} wins"
-msgstr "Checkmate — {opponentName} ṣẹgun"
-
-#: src/features/chess/index.tsx:66
-msgid "Checkmate — you win!"
-msgstr "Checkmate — o ṣẹgun!"
-
-#: src/features/chess/index.tsx:93
-#: src/features/chess/index.tsx:319
-#: src/features/chess/index.tsx:331
+#: src/features/chess/index.tsx:96
+#: src/features/chess/index.tsx:322
+#: src/features/chess/index.tsx:334
 msgid "Chess"
 msgstr "Chess"
 
@@ -373,6 +366,10 @@ msgstr "Ìròyìn àti ẹ̀kúnrẹ́rẹ́ ipò."
 msgid "Continue"
 msgstr "Tẹ̀síwájú"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:349
+msgid "Continue with {label}"
+msgstr "Tẹ̀síwájú pẹ̀lú {label}"
+
 #: ../../../lib/web/src/components/ui/copy-button.tsx:60
 msgid "Copy"
 msgstr "Ṣe àdàkọ"
@@ -380,6 +377,18 @@ msgstr "Ṣe àdàkọ"
 #: ../../../lib/web/src/features/document/document-page.tsx:81
 msgid "Could not load this document. Please try again later."
 msgstr "Kò lè kó ìwé yìí. Jọ̀wọ́ gbìyànjú lẹ́ẹ̀kan sí i."
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:181
+msgid "Couldn't send the code. Please try again."
+msgstr "Kò lè fi kóòdù náà ránṣẹ́. Jọ̀wọ́ gbìyànjú lẹ́ẹ̀kan sí i."
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:133
+msgid "Couldn't start re-authentication. Please try again."
+msgstr "Kò lè bẹ̀rẹ̀ ìjẹ́rìísí-padà. Jọ̀wọ́ gbìyànjú lẹ́ẹ̀kan sí i."
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:218
+msgid "Couldn't verify with that account. Please try again."
+msgstr "A kò lè fọwọ́sí pẹ̀lú àkàùntì yẹn. Jọ̀wọ́ gbìyànjú lẹ́ẹ̀kansí."
 
 #: src/features/chess/components/new-game.tsx:148
 msgid "Creating..."
@@ -410,9 +419,13 @@ msgstr "Àìpé"
 msgid "Default AI account"
 msgstr "Àkáǹtì AI àìpé"
 
-#: src/features/chess/index.tsx:437
+#: src/features/chess/index.tsx:440
 msgid "Delete game"
 msgstr "Pa eré rẹ́"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:90
+msgid "Delete your account on the old server"
+msgstr "Pa akonti rẹ rẹ lori olupin atijọ"
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:60
 msgid "Desc"
@@ -437,6 +450,10 @@ msgstr "Ṣàwárí láti web browser"
 msgid "Direction"
 msgstr "Ìtọ́sọ́nà"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:73
+msgid "Dismiss"
+msgstr "Mú kúrò"
+
 #: ../../../lib/web/src/components/ui/sidebar.tsx:235
 msgid "Displays the mobile sidebar."
 msgstr "Ó ń fi sidebar fóònù hàn."
@@ -445,17 +462,29 @@ msgstr "Ó ń fi sidebar fóònù hàn."
 msgid "Download"
 msgstr "Gbà sílẹ̀"
 
-#: src/features/chess/index.tsx:75
-msgid "Draw"
-msgstr "Ìbárapọ̀"
+#: src/features/chess/components/chat-message-list.tsx:188
+msgid "Draw agreed"
+msgstr "Ìfòyebánilọ́pọ̀ ti gbà"
 
-#: src/features/chess/index.tsx:450
+#: src/features/chess/index.tsx:453
 msgid "Draw offered — waiting for {opponentName}"
 msgstr "A fún ní ìdábọ̀ — ń dúró de {opponentName}"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:134
 msgid "Dyslexia-friendly"
 msgstr "Ẹ̀dá lóàfin fún àìmoọ̀rọ̀"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:286
+msgid "Email code"
+msgstr "Kóòdù ímẹ́ẹ̀lì"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:296
+msgid "Enter the code from your email"
+msgstr "Tẹ koodu láti inú ímeèlì rẹ"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:321
+msgid "Enter your authenticator code"
+msgstr "Tẹ kóòdù authenticator rẹ"
 
 #: ../../../lib/web/src/components/layout/app-sidebar.tsx:35
 msgid "Expand sidebar"
@@ -465,7 +494,7 @@ msgstr "Fẹ̀ sidebar"
 msgid "Extra large"
 msgstr "Tóbi gan"
 
-#: src/features/chess/index.tsx:200
+#: src/features/chess/index.tsx:203
 msgid "Failed to accept draw"
 msgstr "Kò lè gba ìbárapọ̀"
 
@@ -477,19 +506,19 @@ msgstr "Kò lè fi àkántì kún"
 msgid "Failed to create game"
 msgstr "Kò lè dá eré"
 
-#: src/features/chess/index.tsx:215
+#: src/features/chess/index.tsx:218
 msgid "Failed to create rematch"
 msgstr "Kò lè dá ìbárapọ̀ tuntun"
 
-#: src/features/chess/index.tsx:205
+#: src/features/chess/index.tsx:208
 msgid "Failed to decline draw"
 msgstr "Kò lè kọ ìbárapọ̀"
 
-#: src/features/chess/index.tsx:226
+#: src/features/chess/index.tsx:229
 msgid "Failed to delete game"
 msgstr "Kò lè pa eré rẹ́"
 
-#: src/features/chess/index.tsx:195
+#: src/features/chess/index.tsx:198
 msgid "Failed to offer draw"
 msgstr "Kò lè dábàá ìbárapọ̀"
 
@@ -497,12 +526,12 @@ msgstr "Kò lè dábàá ìbárapọ̀"
 msgid "Failed to remove account"
 msgstr "Kò lè mú àkántì kúrò"
 
-#: src/features/chess/index.tsx:188
+#: src/features/chess/index.tsx:191
 msgid "Failed to resign"
 msgstr "Kò lè jọ̀wọ́"
 
-#: src/features/chess/index.tsx:500
-#: src/features/chess/index.tsx:532
+#: src/features/chess/index.tsx:503
+#: src/features/chess/index.tsx:535
 msgid "Failed to send"
 msgstr "Kò lè firanṣẹ́"
 
@@ -510,9 +539,13 @@ msgstr "Kò lè firanṣẹ́"
 msgid "Failed to send verification code"
 msgstr "Kò lè firanṣẹ́ kóòdù ìjẹ́rìí"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:104
+#: ../../../lib/web/src/components/notification-category-button.tsx:108
 msgid "Failed to update category"
 msgstr "Kò lè mú ẹ̀ka dòde"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:79
+msgid "Finish moving your account"
+msgstr "Pari gbigbe akonti rẹ"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:244
 msgid "Floating"
@@ -542,7 +575,7 @@ msgstr "Àtòjọ kíkún"
 msgid "Game created"
 msgstr "A ti dá eré"
 
-#: src/features/chess/index.tsx:222
+#: src/features/chess/index.tsx:225
 msgid "Game deleted"
 msgstr "A ti pa eré rẹ́"
 
@@ -756,7 +789,7 @@ msgstr "A kò rí àbájáde kankan."
 msgid "No time zone found."
 msgstr "A kò rí àgbègbè àkókò kankan."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:135
+#: ../../../lib/web/src/components/notification-category-button.tsx:139
 msgid "No topic record yet — try again after the next notification."
 msgstr "Kò sí àkọsílẹ̀ kókó síbẹ̀ — gbìyànjú lẹ́ẹ̀kan síi lẹ́yìn ìfìtọ́nisí tó kàn."
 
@@ -780,7 +813,7 @@ msgstr "Déédéé"
 msgid "Notifications"
 msgstr "Àwọn ìfìtọ́nisí"
 
-#: src/features/chess/index.tsx:421
+#: src/features/chess/index.tsx:424
 msgid "Offer draw"
 msgstr "Pèsè ìdọ́gba"
 
@@ -793,11 +826,11 @@ msgstr "Aàá! A Kò Rí Ojú-ìwé!"
 msgid "Open account actions"
 msgstr "Ṣí àwọn iṣẹ́ ìròyìn"
 
-#: src/features/chess/index.tsx:400
+#: src/features/chess/index.tsx:403
 msgid "Open chat panel"
 msgstr "Ṣí àwòrán chat"
 
-#: src/features/chess/index.tsx:408
+#: src/features/chess/index.tsx:411
 msgid "Open game actions"
 msgstr "Ṣí àwọn iṣẹ́ eré"
 
@@ -821,6 +854,18 @@ msgstr "Mìíràn"
 #: ../../../lib/web/src/features/access/access-list.tsx:213
 msgid "Owner"
 msgstr "Onílé"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:331
+msgid "Passkey"
+msgstr "Kọ́kọ́rọ́-ìwọlé"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:206
+msgid "Passkey verification failed. Please try again."
+msgstr "Ìjẹ́rìísí passkey kùnà. Jọ̀wọ́ gbìyànjú lẹ́ẹ̀kan sí i."
+
+#: ../../../lib/web/src/components/restore-banner.tsx:126
+msgid "Passkeys"
+msgstr "Àwọn passkey"
 
 #: src/features/chess/lib/use-chess-piece-name.ts:17
 msgid "pawn"
@@ -857,6 +902,14 @@ msgstr "Gbé sí:"
 msgid "queen"
 msgstr "ayaba"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:98
+msgid "Re-link your accounts on this server"
+msgstr "Tun so akonti rẹ pọ lori olupin yii"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:120
+msgid "Re-register your passkeys on this server"
+msgstr "Tún àwọn bọ́tìnì ìwọlé rẹ forúkọsílẹ̀ lórí olùpèsè yìí"
+
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:216
 #: ../../../lib/web/src/components/search-entity-page.tsx:191
 msgid "Recommended"
@@ -878,7 +931,7 @@ msgstr "Pẹ̀lú ìbáṣepọ̀ (5m, 3h, 2d)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "Pẹ̀lú ìbáṣepọ̀ nínú wákàtí 24, bí ó ṣíkù absolute"
 
-#: src/features/chess/index.tsx:434
+#: src/features/chess/index.tsx:437
 msgid "Rematch"
 msgstr "Tún bá"
 
@@ -900,6 +953,10 @@ msgstr "Yọ àyè kúrò?"
 msgid "Remove interest"
 msgstr "Yọ ìfẹ́ kúrò"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:364
+msgid "Resend email"
+msgstr "Tún ìmélì náà ránṣẹ́"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:77
 #: ../../../lib/web/src/components/data-table/toolbar.tsx:78
 msgid "Reset"
@@ -909,16 +966,16 @@ msgstr "Pa padà"
 msgid "Reset all settings to default values"
 msgstr "Pa gbogbo ètò padà sí àwọn iye àbùdá"
 
-#: src/features/chess/index.tsx:425
-#: src/features/chess/index.tsx:552
+#: src/features/chess/index.tsx:428
+#: src/features/chess/index.tsx:555
 msgid "Resign"
 msgstr "Fi sílẹ̀"
 
-#: src/features/chess/index.tsx:543
+#: src/features/chess/index.tsx:546
 msgid "Resign game?"
 msgstr "Fi eré sílẹ̀?"
 
-#: src/features/chess/index.tsx:549
+#: src/features/chess/index.tsx:552
 msgid "Resigning..."
 msgstr "Ń fi sílẹ̀..."
 
@@ -1012,6 +1069,10 @@ msgstr "Yan àfẹ́nilọ́kàn theme"
 msgid "Send again"
 msgstr "Fi ránṣẹ́ lẹ́ẹ̀kan sí i"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:304
+msgid "Send email"
+msgstr "Fi ímeèlì ránṣẹ́"
+
 #: src/features/chess/components/chat-input.tsx:40
 msgid "Send message"
 msgstr "Fi ìránṣẹ́ ránṣẹ́"
@@ -1066,10 +1127,6 @@ msgstr "Kékeré"
 msgid "Spacious"
 msgstr "Àáyè"
 
-#: src/features/chess/index.tsx:71
-msgid "Stalemate — draw"
-msgstr "Stalemate — díẹ̀"
-
 #: src/features/chess/components/new-game.tsx:94
 msgid "Start a new chess game"
 msgstr "Bẹ̀rẹ̀ eré chess tuntun"
@@ -1108,6 +1165,10 @@ msgstr "Àwọn ẹgbẹ́/Apps"
 #: ../../../lib/web/src/features/document/document-page.tsx:39
 msgid "Terms and conditions"
 msgstr "Àwọn ọ̀rọ̀ àti àwọn ipò"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:192
+msgid "That code is incorrect or has expired."
+msgstr "Kóòdù yẹn kò tọ̀nà tàbí ó ti pé."
 
 #: ../../../lib/web/src/components/config-drawer.tsx:181
 msgid "Theme"
@@ -1186,7 +1247,7 @@ msgstr "Tẹ láti wá..."
 msgid "Unable to redirect to login. Please try again."
 msgstr "A kò lè darí sí ojú-ìwé wíwọlé. Jọ̀wọ́ gbìyànjú lẹ́ẹ̀kan sí i."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:143
+#: ../../../lib/web/src/components/notification-category-button.tsx:147
 msgid "Unassigned"
 msgstr "Aláìyàn"
 
@@ -1198,13 +1259,17 @@ msgstr "Ààyè Aláìláyè"
 msgid "United States"
 msgstr "United States"
 
-#: src/hooks/useGameWebsocket.ts:162
+#: src/hooks/useGameWebsocket.ts:164
 msgid "Unknown"
 msgstr "Aláìmọ̀"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:131
 msgid "Unverified"
 msgstr "Kò tíì jẹ́rìí sí"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:335
+msgid "Use your passkey"
+msgstr "Lo passkey rẹ"
 
 #: ../../../lib/web/src/features/access/access-dialog.tsx:155
 msgid "User"
@@ -1222,6 +1287,7 @@ msgstr "Kóòdù ìjẹ́rìísí ti ránṣẹ́"
 msgid "Verification failed"
 msgstr "Ìjẹ́rìísí kùnà"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:385
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:164
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:106
 msgid "Verify"
@@ -1230,6 +1296,10 @@ msgstr "Jẹ́rìí sí"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:58
 msgid "Verify email address"
 msgstr "Jẹ́rìí sí àdírẹ́sì email"
+
+#: ../../../lib/web/src/components/attachment-gallery.tsx:63
+msgid "Video thumbnail"
+msgstr "Àwòrán kékeré fídíò"
 
 #: ../../../lib/web/src/components/data-table/view-options.tsx:30
 msgid "View"
@@ -1256,7 +1326,7 @@ msgid "Wednesday"
 msgstr "Ọjọ́rú"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:16
-#: src/features/chess/index.tsx:391
+#: src/features/chess/index.tsx:394
 msgid "White"
 msgstr "Funfun"
 
@@ -1267,14 +1337,10 @@ msgstr "Funfun"
 msgid "White {0}"
 msgstr "{0} Funfun"
 
-#: src/features/chess/components/chat-message-list.tsx:197
+#: src/features/chess/components/chat-message-list.tsx:209
 msgid "You"
 msgstr "Ìwọ"
 
-#: src/features/chess/index.tsx:81
-msgid "You resigned — {opponentName} wins"
-msgstr "O fi ipò sílẹ̀ — {opponentName} borí"
-
-#: src/features/chess/index.tsx:88
-msgid "Your move"
-msgstr "Ìṣíkiri rẹ"
+#: ../../../lib/web/src/components/restore-banner.tsx:82
+msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
+msgstr "A gbe akonti rẹ wá ibi lati {source}. Titi iwọ o fi pa rẹ nibẹ, awọn ifiranṣẹ ati awọn iwifunni le de olupin mejeeji, diẹ ninu akoonu rẹ tẹsiwaju lati sin lati olupin atijọ, ati awọn olutẹle le gba iṣẹju diẹ lati wa ọ nibi."

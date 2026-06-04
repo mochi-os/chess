@@ -46,23 +46,27 @@ msgstr "{count, plural, other {# ルーク}}"
 msgid "{count} pieces"
 msgstr "{count}個の駒"
 
+#: src/features/chess/components/chat-message-list.tsx:190
+msgid "{name} declined the draw"
+msgstr "{name}が引き分けを拒否しました"
+
+#: src/features/chess/components/chat-message-list.tsx:186
+msgid "{name} offered a draw"
+msgstr "{name}が引き分けを提案しました"
+
+#: src/features/chess/components/chat-message-list.tsx:184
+msgid "{name} resigned"
+msgstr "{name}が投了しました"
+
 #: src/features/chess/components/draw-offer-banner.tsx:25
 msgid "{opponentName} offered a draw"
 msgstr "{opponentName}が引き分けを提案しました"
 
-#: src/features/chess/index.tsx:80
-msgid "{opponentName} resigned — you win!"
-msgstr "{opponentName}が投了しました — あなたの勝ち！"
-
-#: src/features/chess/index.tsx:88
-msgid "{opponentName}'s move"
-msgstr "{opponentName}の番です"
-
-#: src/features/chess/components/chat-message-list.tsx:207
+#: src/features/chess/components/chat-message-list.tsx:219
 msgid "{subject} played <0>{san}</0>"
 msgstr "{subject}が<0>{san}</0>を指しました"
 
-#: src/features/chess/components/chat-message-list.tsx:205
+#: src/features/chess/components/chat-message-list.tsx:217
 msgid "{subject} took <0>{san}</0>"
 msgstr "{subject}が<0>{san}</0>で取りました"
 
@@ -175,13 +179,17 @@ msgstr "すべて"
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "本当にログアウトしますか？再度アクセスするにはログインが必要です。"
 
-#: src/features/chess/index.tsx:544
+#: src/features/chess/index.tsx:547
 msgid "Are you sure you want to resign? {opponentName} will win the game."
 msgstr "本当に投了しますか?{opponentName}の勝ちになります。"
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:56
 msgid "Asc"
 msgstr "昇順"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:312
+msgid "Authenticator code"
+msgstr "認証コード"
 
 #: ../../../lib/web/src/components/place-picker.tsx:152
 msgid "Back"
@@ -198,7 +206,7 @@ msgid "bishop"
 msgstr "ビショップ"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:16
-#: src/features/chess/index.tsx:391
+#: src/features/chess/index.tsx:394
 msgid "Black"
 msgstr "黒"
 
@@ -214,6 +222,7 @@ msgid "Boost interest"
 msgstr "関心を高める"
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx:64
+#: ../../../lib/web/src/components/step-up-dialog.tsx:360
 #: ../../../lib/web/src/components/travelling-picker.tsx:292
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:245
 #: ../../../lib/web/src/features/access/access-dialog.tsx:325
@@ -225,38 +234,22 @@ msgstr "関心を高める"
 msgid "Cancel"
 msgstr "キャンセル"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:131
+#: ../../../lib/web/src/components/notification-category-button.tsx:135
 msgid "Category for this notification"
 msgstr "この通知のカテゴリ"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:115
+#: ../../../lib/web/src/components/notification-category-button.tsx:119
 msgid "Change notification category"
 msgstr "通知カテゴリを変更"
 
-#: src/features/chess/index.tsx:484
-#: src/features/chess/index.tsx:516
+#: src/features/chess/index.tsx:487
+#: src/features/chess/index.tsx:519
 msgid "Chat"
 msgstr "チャット"
 
-#: src/features/chess/index.tsx:85
-msgid "Check — {opponentName}'s move"
-msgstr "チェック — {opponentName}の番です"
-
-#: src/features/chess/index.tsx:85
-msgid "Check — your move"
-msgstr "チェック — あなたの番です"
-
-#: src/features/chess/index.tsx:67
-msgid "Checkmate — {opponentName} wins"
-msgstr "チェックメイト — {opponentName}の勝ち"
-
-#: src/features/chess/index.tsx:66
-msgid "Checkmate — you win!"
-msgstr "チェックメイト — 勝ちました！"
-
-#: src/features/chess/index.tsx:93
-#: src/features/chess/index.tsx:319
-#: src/features/chess/index.tsx:331
+#: src/features/chess/index.tsx:96
+#: src/features/chess/index.tsx:322
+#: src/features/chess/index.tsx:334
 msgid "Chess"
 msgstr "チェス"
 
@@ -373,6 +366,10 @@ msgstr "コンテキスト情報と詳細。"
 msgid "Continue"
 msgstr "続行"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:349
+msgid "Continue with {label}"
+msgstr "{label} で続行"
+
 #: ../../../lib/web/src/components/ui/copy-button.tsx:60
 msgid "Copy"
 msgstr "コピー"
@@ -380,6 +377,18 @@ msgstr "コピー"
 #: ../../../lib/web/src/features/document/document-page.tsx:81
 msgid "Could not load this document. Please try again later."
 msgstr "このドキュメントを読み込めませんでした。後ほどもう一度お試しください。"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:181
+msgid "Couldn't send the code. Please try again."
+msgstr "コードを送信できませんでした。もう一度お試しください。"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:133
+msgid "Couldn't start re-authentication. Please try again."
+msgstr "再認証を開始できませんでした。もう一度お試しください。"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:218
+msgid "Couldn't verify with that account. Please try again."
+msgstr "そのアカウントで確認できませんでした。もう一度お試しください。"
 
 #: src/features/chess/components/new-game.tsx:148
 msgid "Creating..."
@@ -410,9 +419,13 @@ msgstr "デフォルト"
 msgid "Default AI account"
 msgstr "デフォルト AI アカウント"
 
-#: src/features/chess/index.tsx:437
+#: src/features/chess/index.tsx:440
 msgid "Delete game"
 msgstr "ゲームを削除"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:90
+msgid "Delete your account on the old server"
+msgstr "旧サーバーのアカウントを削除する"
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:60
 msgid "Desc"
@@ -437,6 +450,10 @@ msgstr "ウェブブラウザから検出"
 msgid "Direction"
 msgstr "方向"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:73
+msgid "Dismiss"
+msgstr "閉じる"
+
 #: ../../../lib/web/src/components/ui/sidebar.tsx:235
 msgid "Displays the mobile sidebar."
 msgstr "モバイルサイドバーを表示します。"
@@ -445,17 +462,29 @@ msgstr "モバイルサイドバーを表示します。"
 msgid "Download"
 msgstr "ダウンロード"
 
-#: src/features/chess/index.tsx:75
-msgid "Draw"
-msgstr "引き分け"
+#: src/features/chess/components/chat-message-list.tsx:188
+msgid "Draw agreed"
+msgstr "引き分けが成立しました"
 
-#: src/features/chess/index.tsx:450
+#: src/features/chess/index.tsx:453
 msgid "Draw offered — waiting for {opponentName}"
 msgstr "引き分けを提案しました — {opponentName}の応答を待っています"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:134
 msgid "Dyslexia-friendly"
 msgstr "ディスレクシア対応"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:286
+msgid "Email code"
+msgstr "メールコード"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:296
+msgid "Enter the code from your email"
+msgstr "メールに記載されたコードを入力してください"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:321
+msgid "Enter your authenticator code"
+msgstr "認証アプリのコードを入力"
 
 #: ../../../lib/web/src/components/layout/app-sidebar.tsx:35
 msgid "Expand sidebar"
@@ -465,7 +494,7 @@ msgstr "サイドバーを展開"
 msgid "Extra large"
 msgstr "特大"
 
-#: src/features/chess/index.tsx:200
+#: src/features/chess/index.tsx:203
 msgid "Failed to accept draw"
 msgstr "引き分けの承諾に失敗しました"
 
@@ -477,19 +506,19 @@ msgstr "アカウントの追加に失敗しました"
 msgid "Failed to create game"
 msgstr "ゲームの作成に失敗しました"
 
-#: src/features/chess/index.tsx:215
+#: src/features/chess/index.tsx:218
 msgid "Failed to create rematch"
 msgstr "再戦の作成に失敗しました"
 
-#: src/features/chess/index.tsx:205
+#: src/features/chess/index.tsx:208
 msgid "Failed to decline draw"
 msgstr "引き分けの拒否に失敗しました"
 
-#: src/features/chess/index.tsx:226
+#: src/features/chess/index.tsx:229
 msgid "Failed to delete game"
 msgstr "ゲームの削除に失敗しました"
 
-#: src/features/chess/index.tsx:195
+#: src/features/chess/index.tsx:198
 msgid "Failed to offer draw"
 msgstr "引き分けの申し出に失敗しました"
 
@@ -497,12 +526,12 @@ msgstr "引き分けの申し出に失敗しました"
 msgid "Failed to remove account"
 msgstr "アカウントの削除に失敗しました"
 
-#: src/features/chess/index.tsx:188
+#: src/features/chess/index.tsx:191
 msgid "Failed to resign"
 msgstr "投了に失敗しました"
 
-#: src/features/chess/index.tsx:500
-#: src/features/chess/index.tsx:532
+#: src/features/chess/index.tsx:503
+#: src/features/chess/index.tsx:535
 msgid "Failed to send"
 msgstr "送信に失敗しました"
 
@@ -510,9 +539,13 @@ msgstr "送信に失敗しました"
 msgid "Failed to send verification code"
 msgstr "確認コードの送信に失敗しました"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:104
+#: ../../../lib/web/src/components/notification-category-button.tsx:108
 msgid "Failed to update category"
 msgstr "カテゴリの更新に失敗しました"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:79
+msgid "Finish moving your account"
+msgstr "アカウントの移行を完了する"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:244
 msgid "Floating"
@@ -542,7 +575,7 @@ msgstr "フルレイアウト"
 msgid "Game created"
 msgstr "ゲームを作成しました"
 
-#: src/features/chess/index.tsx:222
+#: src/features/chess/index.tsx:225
 msgid "Game deleted"
 msgstr "ゲームを削除しました"
 
@@ -756,7 +789,7 @@ msgstr "結果が見つかりません。"
 msgid "No time zone found."
 msgstr "タイムゾーンが見つかりません。"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:135
+#: ../../../lib/web/src/components/notification-category-button.tsx:139
 msgid "No topic record yet — try again after the next notification."
 msgstr "まだトピック記録がありません — 次の通知後にもう一度お試しください。"
 
@@ -780,7 +813,7 @@ msgstr "標準"
 msgid "Notifications"
 msgstr "通知"
 
-#: src/features/chess/index.tsx:421
+#: src/features/chess/index.tsx:424
 msgid "Offer draw"
 msgstr "引き分けを申し出る"
 
@@ -793,11 +826,11 @@ msgstr "ページが見つかりません!"
 msgid "Open account actions"
 msgstr "アカウントのアクションを開く"
 
-#: src/features/chess/index.tsx:400
+#: src/features/chess/index.tsx:403
 msgid "Open chat panel"
 msgstr "チャットパネルを開く"
 
-#: src/features/chess/index.tsx:408
+#: src/features/chess/index.tsx:411
 msgid "Open game actions"
 msgstr "ゲーム操作を開く"
 
@@ -821,6 +854,18 @@ msgstr "その他"
 #: ../../../lib/web/src/features/access/access-list.tsx:213
 msgid "Owner"
 msgstr "オーナー"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:331
+msgid "Passkey"
+msgstr "パスキー"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:206
+msgid "Passkey verification failed. Please try again."
+msgstr "パスキーの認証に失敗しました。もう一度お試しください。"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:126
+msgid "Passkeys"
+msgstr "パスキー"
 
 #: src/features/chess/lib/use-chess-piece-name.ts:17
 msgid "pawn"
@@ -857,6 +902,14 @@ msgstr "昇格先:"
 msgid "queen"
 msgstr "クイーン"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:98
+msgid "Re-link your accounts on this server"
+msgstr "このサーバーでアカウントを再リンクする"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:120
+msgid "Re-register your passkeys on this server"
+msgstr "このサーバーでパスキーを再登録してください"
+
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:216
 #: ../../../lib/web/src/components/search-entity-page.tsx:191
 msgid "Recommended"
@@ -878,7 +931,7 @@ msgstr "相対 (5分、3時間、2日)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "24時間以内は相対、それ以外は絶対"
 
-#: src/features/chess/index.tsx:434
+#: src/features/chess/index.tsx:437
 msgid "Rematch"
 msgstr "再戦"
 
@@ -900,6 +953,10 @@ msgstr "アクセスを削除しますか?"
 msgid "Remove interest"
 msgstr "関心を削除"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:364
+msgid "Resend email"
+msgstr "メールを再送信"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:77
 #: ../../../lib/web/src/components/data-table/toolbar.tsx:78
 msgid "Reset"
@@ -909,16 +966,16 @@ msgstr "リセット"
 msgid "Reset all settings to default values"
 msgstr "すべての設定をデフォルト値にリセット"
 
-#: src/features/chess/index.tsx:425
-#: src/features/chess/index.tsx:552
+#: src/features/chess/index.tsx:428
+#: src/features/chess/index.tsx:555
 msgid "Resign"
 msgstr "投了"
 
-#: src/features/chess/index.tsx:543
+#: src/features/chess/index.tsx:546
 msgid "Resign game?"
 msgstr "ゲームを投了しますか?"
 
-#: src/features/chess/index.tsx:549
+#: src/features/chess/index.tsx:552
 msgid "Resigning..."
 msgstr "投了中..."
 
@@ -1012,6 +1069,10 @@ msgstr "テーマの設定を選択"
 msgid "Send again"
 msgstr "再送信"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:304
+msgid "Send email"
+msgstr "メールを送信"
+
 #: src/features/chess/components/chat-input.tsx:40
 msgid "Send message"
 msgstr "メッセージを送信"
@@ -1066,10 +1127,6 @@ msgstr "小"
 msgid "Spacious"
 msgstr "ゆったり"
 
-#: src/features/chess/index.tsx:71
-msgid "Stalemate — draw"
-msgstr "ステイルメイト — 引き分け"
-
 #: src/features/chess/components/new-game.tsx:94
 msgid "Start a new chess game"
 msgstr "新しいチェスのゲームを始める"
@@ -1108,6 +1165,10 @@ msgstr "チーム/アプリ"
 #: ../../../lib/web/src/features/document/document-page.tsx:39
 msgid "Terms and conditions"
 msgstr "利用規約"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:192
+msgid "That code is incorrect or has expired."
+msgstr "そのコードは正しくないか、有効期限が切れています。"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:181
 msgid "Theme"
@@ -1186,7 +1247,7 @@ msgstr "入力して検索…"
 msgid "Unable to redirect to login. Please try again."
 msgstr "ログインページにリダイレクトできません。再試行してください。"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:143
+#: ../../../lib/web/src/components/notification-category-button.tsx:147
 msgid "Unassigned"
 msgstr "未割り当て"
 
@@ -1198,13 +1259,17 @@ msgstr "認証されていないアクセス"
 msgid "United States"
 msgstr "アメリカ合衆国"
 
-#: src/hooks/useGameWebsocket.ts:162
+#: src/hooks/useGameWebsocket.ts:164
 msgid "Unknown"
 msgstr "不明"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:131
 msgid "Unverified"
 msgstr "未認証"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:335
+msgid "Use your passkey"
+msgstr "パスキーを使用"
 
 #: ../../../lib/web/src/features/access/access-dialog.tsx:155
 msgid "User"
@@ -1222,6 +1287,7 @@ msgstr "確認コードを送信しました"
 msgid "Verification failed"
 msgstr "確認に失敗しました"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:385
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:164
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:106
 msgid "Verify"
@@ -1230,6 +1296,10 @@ msgstr "認証"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:58
 msgid "Verify email address"
 msgstr "メールアドレスを認証"
+
+#: ../../../lib/web/src/components/attachment-gallery.tsx:63
+msgid "Video thumbnail"
+msgstr "動画のサムネイル"
 
 #: ../../../lib/web/src/components/data-table/view-options.tsx:30
 msgid "View"
@@ -1256,7 +1326,7 @@ msgid "Wednesday"
 msgstr "水曜日"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:16
-#: src/features/chess/index.tsx:391
+#: src/features/chess/index.tsx:394
 msgid "White"
 msgstr "白"
 
@@ -1267,14 +1337,10 @@ msgstr "白"
 msgid "White {0}"
 msgstr "白の{0}"
 
-#: src/features/chess/components/chat-message-list.tsx:197
+#: src/features/chess/components/chat-message-list.tsx:209
 msgid "You"
 msgstr "あなた"
 
-#: src/features/chess/index.tsx:81
-msgid "You resigned — {opponentName} wins"
-msgstr "投了しました — {opponentName}の勝ち"
-
-#: src/features/chess/index.tsx:88
-msgid "Your move"
-msgstr "あなたの番です"
+#: ../../../lib/web/src/components/restore-banner.tsx:82
+msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
+msgstr "アカウントが{source}からここに移行されました。そちらで削除するまで、メッセージや通知が両方のサーバーに届く場合があり、一部のコンテンツは旧サーバーから引き続き提供され、フォロワーがここであなたを見つけるまで数分かかる場合があります。"

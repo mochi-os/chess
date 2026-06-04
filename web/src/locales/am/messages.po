@@ -46,23 +46,27 @@ msgstr "{count, plural, one {# ግንብ} other {# ግንቦች}}"
 msgid "{count} pieces"
 msgstr "{count} ቁራጮች"
 
+#: src/features/chess/components/chat-message-list.tsx:190
+msgid "{name} declined the draw"
+msgstr "{name} አቻ ጨዋታውን አልተቀበለም"
+
+#: src/features/chess/components/chat-message-list.tsx:186
+msgid "{name} offered a draw"
+msgstr "{name} አቻ ጨዋታ አቀረበ"
+
+#: src/features/chess/components/chat-message-list.tsx:184
+msgid "{name} resigned"
+msgstr "{name} እጅ ሰጠ"
+
 #: src/features/chess/components/draw-offer-banner.tsx:25
 msgid "{opponentName} offered a draw"
 msgstr "{opponentName} አቻ አቅርቧል"
 
-#: src/features/chess/index.tsx:80
-msgid "{opponentName} resigned — you win!"
-msgstr "{opponentName} ተወ — እርስዎ አሸንፈዋል!"
-
-#: src/features/chess/index.tsx:88
-msgid "{opponentName}'s move"
-msgstr "የ{opponentName} እንቅስቃሴ"
-
-#: src/features/chess/components/chat-message-list.tsx:207
+#: src/features/chess/components/chat-message-list.tsx:219
 msgid "{subject} played <0>{san}</0>"
 msgstr "{subject} <0>{san}</0> ተጫውቷል"
 
-#: src/features/chess/components/chat-message-list.tsx:205
+#: src/features/chess/components/chat-message-list.tsx:217
 msgid "{subject} took <0>{san}</0>"
 msgstr "{subject} <0>{san}</0>ን ያዘ"
 
@@ -175,13 +179,17 @@ msgstr "ሁሉም"
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "መውጣት እንደምትፈልግ እርግጠኛ ነህ? መለያህን ለመድረስ ዳግም መግባት ያስፈልግሃል።"
 
-#: src/features/chess/index.tsx:544
+#: src/features/chess/index.tsx:547
 msgid "Are you sure you want to resign? {opponentName} will win the game."
 msgstr "በእርግጥ መልቀቅ ይፈልጋሉ? {opponentName} ጨዋታውን ያሸንፋል።"
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:56
 msgid "Asc"
 msgstr "ዕርገት"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:312
+msgid "Authenticator code"
+msgstr "የማረጋገጫ ኮድ"
 
 #: ../../../lib/web/src/components/place-picker.tsx:152
 msgid "Back"
@@ -198,7 +206,7 @@ msgid "bishop"
 msgstr "ፈረሰኛ"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:16
-#: src/features/chess/index.tsx:391
+#: src/features/chess/index.tsx:394
 msgid "Black"
 msgstr "ጥቁር"
 
@@ -214,6 +222,7 @@ msgid "Boost interest"
 msgstr "ፍላጎትን አሳድግ"
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx:64
+#: ../../../lib/web/src/components/step-up-dialog.tsx:360
 #: ../../../lib/web/src/components/travelling-picker.tsx:292
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:245
 #: ../../../lib/web/src/features/access/access-dialog.tsx:325
@@ -225,38 +234,22 @@ msgstr "ፍላጎትን አሳድግ"
 msgid "Cancel"
 msgstr "ይቅር"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:131
+#: ../../../lib/web/src/components/notification-category-button.tsx:135
 msgid "Category for this notification"
 msgstr "ለዚህ ማሳወቂያ ምድብ"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:115
+#: ../../../lib/web/src/components/notification-category-button.tsx:119
 msgid "Change notification category"
 msgstr "የማሳወቂያ ምድብ ለውጥ"
 
-#: src/features/chess/index.tsx:484
-#: src/features/chess/index.tsx:516
+#: src/features/chess/index.tsx:487
+#: src/features/chess/index.tsx:519
 msgid "Chat"
 msgstr "ውይይት"
 
-#: src/features/chess/index.tsx:85
-msgid "Check — {opponentName}'s move"
-msgstr "ቼክ — የ{opponentName} ተራ"
-
-#: src/features/chess/index.tsx:85
-msgid "Check — your move"
-msgstr "ቼክ — የአንተ ተራ"
-
-#: src/features/chess/index.tsx:67
-msgid "Checkmate — {opponentName} wins"
-msgstr "ቼክሜት — {opponentName} አሸንፏል"
-
-#: src/features/chess/index.tsx:66
-msgid "Checkmate — you win!"
-msgstr "ቼክሜት — አሸንፈሃል!"
-
-#: src/features/chess/index.tsx:93
-#: src/features/chess/index.tsx:319
-#: src/features/chess/index.tsx:331
+#: src/features/chess/index.tsx:96
+#: src/features/chess/index.tsx:322
+#: src/features/chess/index.tsx:334
 msgid "Chess"
 msgstr "ቼዝ"
 
@@ -373,6 +366,10 @@ msgstr "የአውድ መረጃና ዝርዝሮች።"
 msgid "Continue"
 msgstr "ቀጥል"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:349
+msgid "Continue with {label}"
+msgstr "በ{label} ይቀጥሉ"
+
 #: ../../../lib/web/src/components/ui/copy-button.tsx:60
 msgid "Copy"
 msgstr "ቅዳ"
@@ -380,6 +377,18 @@ msgstr "ቅዳ"
 #: ../../../lib/web/src/features/document/document-page.tsx:81
 msgid "Could not load this document. Please try again later."
 msgstr "ይህን ሰነድ መጫን አልተቻለም። እባክዎ በኋላ እንደገና ይሞክሩ።"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:181
+msgid "Couldn't send the code. Please try again."
+msgstr "ኮዱን መላክ አልተቻለም። እባክዎ እንደገና ይሞክሩ።"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:133
+msgid "Couldn't start re-authentication. Please try again."
+msgstr "እንደገና ማረጋገጥን መጀመር አልተቻለም። እባክዎ እንደገና ይሞክሩ።"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:218
+msgid "Couldn't verify with that account. Please try again."
+msgstr "በዚያ መለያ ማረጋገጥ አልተቻለም። እባክዎ እንደገና ይሞክሩ።"
 
 #: src/features/chess/components/new-game.tsx:148
 msgid "Creating..."
@@ -410,9 +419,13 @@ msgstr "ነባሪ"
 msgid "Default AI account"
 msgstr "ነባሪ የAI መለያ"
 
-#: src/features/chess/index.tsx:437
+#: src/features/chess/index.tsx:440
 msgid "Delete game"
 msgstr "ጨዋታ ሰርዝ"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:90
+msgid "Delete your account on the old server"
+msgstr "በድሮ ሰርቨር ላይ ያለ መለያህን ሰርዝ"
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:60
 msgid "Desc"
@@ -437,6 +450,10 @@ msgstr "ከድር አሳሽ አውቅ"
 msgid "Direction"
 msgstr "አቅጣጫ"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:73
+msgid "Dismiss"
+msgstr "አጥፋ"
+
 #: ../../../lib/web/src/components/ui/sidebar.tsx:235
 msgid "Displays the mobile sidebar."
 msgstr "የሞባይል ጎንደርን ያሳያል።"
@@ -445,17 +462,29 @@ msgstr "የሞባይል ጎንደርን ያሳያል።"
 msgid "Download"
 msgstr "አውርድ"
 
-#: src/features/chess/index.tsx:75
-msgid "Draw"
-msgstr "አቻ"
+#: src/features/chess/components/chat-message-list.tsx:188
+msgid "Draw agreed"
+msgstr "አቻ ጨዋታ ተስማምቷል"
 
-#: src/features/chess/index.tsx:450
+#: src/features/chess/index.tsx:453
 msgid "Draw offered — waiting for {opponentName}"
 msgstr "አቻ ቀርቧል — {opponentName}ን በመጠበቅ ላይ"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:134
 msgid "Dyslexia-friendly"
 msgstr "ለዲስሌክሲያ ምቹ"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:286
+msgid "Email code"
+msgstr "የኢሜይል ኮድ"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:296
+msgid "Enter the code from your email"
+msgstr "ከኢሜይልዎ የመጣውን ኮድ ያስገቡ"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:321
+msgid "Enter your authenticator code"
+msgstr "የአረጋጋጭዎን ኮድ ያስገቡ"
 
 #: ../../../lib/web/src/components/layout/app-sidebar.tsx:35
 msgid "Expand sidebar"
@@ -465,7 +494,7 @@ msgstr "ጎንደርን ዘርጋ"
 msgid "Extra large"
 msgstr "በጣም ትልቅ"
 
-#: src/features/chess/index.tsx:200
+#: src/features/chess/index.tsx:203
 msgid "Failed to accept draw"
 msgstr "አቻ መቀበል አልተሳካም"
 
@@ -477,19 +506,19 @@ msgstr "መለያ መጨመር አልተሳካም"
 msgid "Failed to create game"
 msgstr "ጨዋታ መፍጠር አልተሳካም"
 
-#: src/features/chess/index.tsx:215
+#: src/features/chess/index.tsx:218
 msgid "Failed to create rematch"
 msgstr "እንደገና ጨዋታ መፍጠር አልተሳካም"
 
-#: src/features/chess/index.tsx:205
+#: src/features/chess/index.tsx:208
 msgid "Failed to decline draw"
 msgstr "አቻ ውድቅ ማድረግ አልተሳካም"
 
-#: src/features/chess/index.tsx:226
+#: src/features/chess/index.tsx:229
 msgid "Failed to delete game"
 msgstr "ጨዋታ መሰረዝ አልተሳካም"
 
-#: src/features/chess/index.tsx:195
+#: src/features/chess/index.tsx:198
 msgid "Failed to offer draw"
 msgstr "አቻ ማቅረብ አልተሳካም"
 
@@ -497,12 +526,12 @@ msgstr "አቻ ማቅረብ አልተሳካም"
 msgid "Failed to remove account"
 msgstr "መለያን ማስወገድ አልተሳካም"
 
-#: src/features/chess/index.tsx:188
+#: src/features/chess/index.tsx:191
 msgid "Failed to resign"
 msgstr "መልቀቅ አልተሳካም"
 
-#: src/features/chess/index.tsx:500
-#: src/features/chess/index.tsx:532
+#: src/features/chess/index.tsx:503
+#: src/features/chess/index.tsx:535
 msgid "Failed to send"
 msgstr "መላክ አልተሳካም"
 
@@ -510,9 +539,13 @@ msgstr "መላክ አልተሳካም"
 msgid "Failed to send verification code"
 msgstr "የማረጋገጫ ኮድ መላክ አልተሳካም"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:104
+#: ../../../lib/web/src/components/notification-category-button.tsx:108
 msgid "Failed to update category"
 msgstr "ምድብን ማዘመን አልተሳካም"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:79
+msgid "Finish moving your account"
+msgstr "የመለያ ዝውውርን አጠናቅ"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:244
 msgid "Floating"
@@ -542,7 +575,7 @@ msgstr "ሙሉ አቀማመጥ"
 msgid "Game created"
 msgstr "ጨዋታ ተፈጥሯል"
 
-#: src/features/chess/index.tsx:222
+#: src/features/chess/index.tsx:225
 msgid "Game deleted"
 msgstr "ጨዋታ ተሰርዟል"
 
@@ -756,7 +789,7 @@ msgstr "ምንም ውጤቶች አልተገኙም።"
 msgid "No time zone found."
 msgstr "ምንም የሰዓት ሰቅ አልተገኘም።"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:135
+#: ../../../lib/web/src/components/notification-category-button.tsx:139
 msgid "No topic record yet — try again after the next notification."
 msgstr "እስካሁን የርዕስ መዝገብ የለም — ከቀጣዩ ማሳወቂያ በኋላ እንደገና ይሞክሩ።"
 
@@ -780,7 +813,7 @@ msgstr "መደበኛ"
 msgid "Notifications"
 msgstr "ማሳወቂያዎች"
 
-#: src/features/chess/index.tsx:421
+#: src/features/chess/index.tsx:424
 msgid "Offer draw"
 msgstr "አቻ አቅርብ"
 
@@ -793,11 +826,11 @@ msgstr "ኦህ! ገጽ አልተገኘም!"
 msgid "Open account actions"
 msgstr "የመለያ ድርጊቶችን ክፈት"
 
-#: src/features/chess/index.tsx:400
+#: src/features/chess/index.tsx:403
 msgid "Open chat panel"
 msgstr "የውይይት ፓነልን ክፈት"
 
-#: src/features/chess/index.tsx:408
+#: src/features/chess/index.tsx:411
 msgid "Open game actions"
 msgstr "የጨዋታ ድርጊቶችን ክፈት"
 
@@ -821,6 +854,18 @@ msgstr "ሌላ"
 #: ../../../lib/web/src/features/access/access-list.tsx:213
 msgid "Owner"
 msgstr "ባለቤት"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:331
+msgid "Passkey"
+msgstr "የይለፍ ቁልፍ"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:206
+msgid "Passkey verification failed. Please try again."
+msgstr "የይለፍ ቁልፍ ማረጋገጫ አልተሳካም። እባክዎ እንደገና ይሞክሩ።"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:126
+msgid "Passkeys"
+msgstr "ፓስኪዎች"
 
 #: src/features/chess/lib/use-chess-piece-name.ts:17
 msgid "pawn"
@@ -857,6 +902,14 @@ msgstr "ከፍ ያድርጉ:"
 msgid "queen"
 msgstr "ንግስት"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:98
+msgid "Re-link your accounts on this server"
+msgstr "በዚህ ሰርቨር ላይ መለያዎችህን እንደገና አገናኝ"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:120
+msgid "Re-register your passkeys on this server"
+msgstr "የይለፍ ቁልፎችዎን በዚህ አገልጋይ ላይ እንደገና ይመዝግቡ"
+
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:216
 #: ../../../lib/web/src/components/search-entity-page.tsx:191
 msgid "Recommended"
@@ -878,7 +931,7 @@ msgstr "አንፃራዊ (5m, 3h, 2d)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "በ24 ሰዓታት ውስጥ አንፃራዊ፣ ካልሆነ ፍጹም"
 
-#: src/features/chess/index.tsx:434
+#: src/features/chess/index.tsx:437
 msgid "Rematch"
 msgstr "እንደገና ተወዳደር"
 
@@ -900,6 +953,10 @@ msgstr "ድረሳ ይወገድ?"
 msgid "Remove interest"
 msgstr "ፍላጎት አስወግድ"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:364
+msgid "Resend email"
+msgstr "ኢሜይል እንደገና ላክ"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:77
 #: ../../../lib/web/src/components/data-table/toolbar.tsx:78
 msgid "Reset"
@@ -909,16 +966,16 @@ msgstr "ዳግም አስጀምር"
 msgid "Reset all settings to default values"
 msgstr "ሁሉንም ቅንብሮች ወደ ነባሪ እሴቶች ዳግም አስጀምር"
 
-#: src/features/chess/index.tsx:425
-#: src/features/chess/index.tsx:552
+#: src/features/chess/index.tsx:428
+#: src/features/chess/index.tsx:555
 msgid "Resign"
 msgstr "ለቀቅ"
 
-#: src/features/chess/index.tsx:543
+#: src/features/chess/index.tsx:546
 msgid "Resign game?"
 msgstr "ጨዋታ ይለቀቅ?"
 
-#: src/features/chess/index.tsx:549
+#: src/features/chess/index.tsx:552
 msgid "Resigning..."
 msgstr "በመልቀቅ ላይ..."
 
@@ -1012,6 +1069,10 @@ msgstr "የገጽታ ምርጫ ይምረጡ"
 msgid "Send again"
 msgstr "እንደገና ላክ"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:304
+msgid "Send email"
+msgstr "ኢሜይል ላክ"
+
 #: src/features/chess/components/chat-input.tsx:40
 msgid "Send message"
 msgstr "መልዕክት ይላኩ"
@@ -1066,10 +1127,6 @@ msgstr "ትንሽ"
 msgid "Spacious"
 msgstr "ሰፊ"
 
-#: src/features/chess/index.tsx:71
-msgid "Stalemate — draw"
-msgstr "የማይነቃነቅ — አቻ"
-
 #: src/features/chess/components/new-game.tsx:94
 msgid "Start a new chess game"
 msgstr "አዲስ የቼዝ ጨዋታ ይጀምሩ"
@@ -1108,6 +1165,10 @@ msgstr "ቡድኖች/መተግበሪያዎች"
 #: ../../../lib/web/src/features/document/document-page.tsx:39
 msgid "Terms and conditions"
 msgstr "ውሎችና መመሪያዎች"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:192
+msgid "That code is incorrect or has expired."
+msgstr "ያ ኮድ የተሳሳተ ነው ወይም ጊዜው አልፎበታል።"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:181
 msgid "Theme"
@@ -1186,7 +1247,7 @@ msgstr "ለመፈለግ ይተይቡ..."
 msgid "Unable to redirect to login. Please try again."
 msgstr "ወደ መግቢያ መዞር አልተቻለም። እባክዎ እንደገና ይሞክሩ።"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:143
+#: ../../../lib/web/src/components/notification-category-button.tsx:147
 msgid "Unassigned"
 msgstr "ያልተመደበ"
 
@@ -1198,13 +1259,17 @@ msgstr "ያልተፈቀደ መዳረሻ"
 msgid "United States"
 msgstr "ዩናይትድ ስቴትስ"
 
-#: src/hooks/useGameWebsocket.ts:162
+#: src/hooks/useGameWebsocket.ts:164
 msgid "Unknown"
 msgstr "ያልታወቀ"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:131
 msgid "Unverified"
 msgstr "ያልተረጋገጠ"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:335
+msgid "Use your passkey"
+msgstr "የይለፍ ቁልፍዎን ይጠቀሙ"
 
 #: ../../../lib/web/src/features/access/access-dialog.tsx:155
 msgid "User"
@@ -1222,6 +1287,7 @@ msgstr "የማረጋገጫ ኮድ ተልኳል"
 msgid "Verification failed"
 msgstr "ማረጋገጫ አልተሳካም"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:385
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:164
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:106
 msgid "Verify"
@@ -1230,6 +1296,10 @@ msgstr "ያረጋግጡ"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:58
 msgid "Verify email address"
 msgstr "የኢሜይል አድራሻ ያረጋግጡ"
+
+#: ../../../lib/web/src/components/attachment-gallery.tsx:63
+msgid "Video thumbnail"
+msgstr "የቪዲዮ ጥፍር ምስል"
 
 #: ../../../lib/web/src/components/data-table/view-options.tsx:30
 msgid "View"
@@ -1256,7 +1326,7 @@ msgid "Wednesday"
 msgstr "ረቡዕ"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:16
-#: src/features/chess/index.tsx:391
+#: src/features/chess/index.tsx:394
 msgid "White"
 msgstr "ነጭ"
 
@@ -1267,14 +1337,10 @@ msgstr "ነጭ"
 msgid "White {0}"
 msgstr "ነጭ {0}"
 
-#: src/features/chess/components/chat-message-list.tsx:197
+#: src/features/chess/components/chat-message-list.tsx:209
 msgid "You"
 msgstr "እርስዎ"
 
-#: src/features/chess/index.tsx:81
-msgid "You resigned — {opponentName} wins"
-msgstr "ተዉ — {opponentName} አሸንፏል"
-
-#: src/features/chess/index.tsx:88
-msgid "Your move"
-msgstr "የእርስዎ እንቅስቃሴ"
+#: ../../../lib/web/src/components/restore-banner.tsx:82
+msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
+msgstr "መለያህ ከ{source} ወደዚህ ተዛውሯል። እዚያ እስኪሰርዝ ድረስ፣ መልዕክቶችና ማሳወቂያዎች ሁለቱ ሰርቨሮች ሊደርሱ ይችላሉ፣ አንዳንድ ይዘቶችህ ከድሮ ሰርቨር ሲቀርቡ ይቀጥላሉ፣ ተከታዮችህ ወደዚህ ለማግኘት ጥቂት ደቂቃዎች ሊወስድ ይችላል።"

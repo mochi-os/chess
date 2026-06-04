@@ -46,23 +46,27 @@ msgstr "{count, plural, other {# rooks}}"
 msgid "{count} pieces"
 msgstr "{count} បំណែក"
 
+#: src/features/chess/components/chat-message-list.tsx:190
+msgid "{name} declined the draw"
+msgstr "{name} បានបដិសេធការស្មើ"
+
+#: src/features/chess/components/chat-message-list.tsx:186
+msgid "{name} offered a draw"
+msgstr "{name} បានស្នើស្មើ"
+
+#: src/features/chess/components/chat-message-list.tsx:184
+msgid "{name} resigned"
+msgstr "{name} បានចុះចាញ់"
+
 #: src/features/chess/components/draw-offer-banner.tsx:25
 msgid "{opponentName} offered a draw"
 msgstr "{opponentName} បានស្នើស្មើ"
 
-#: src/features/chess/index.tsx:80
-msgid "{opponentName} resigned — you win!"
-msgstr "{opponentName} បានចុះចាញ់ — អ្នកឈ្នះ!"
-
-#: src/features/chess/index.tsx:88
-msgid "{opponentName}'s move"
-msgstr "ការផ្លាស់ទីរបស់ {opponentName}"
-
-#: src/features/chess/components/chat-message-list.tsx:207
+#: src/features/chess/components/chat-message-list.tsx:219
 msgid "{subject} played <0>{san}</0>"
 msgstr "{subject} បានលេង <0>{san}</0>"
 
-#: src/features/chess/components/chat-message-list.tsx:205
+#: src/features/chess/components/chat-message-list.tsx:217
 msgid "{subject} took <0>{san}</0>"
 msgstr "{subject} បានយក <0>{san}</0>"
 
@@ -175,13 +179,17 @@ msgstr "ទាំងអស់"
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "តើអ្នកប្រាកដថាចង់ចាកចេញមែនទេ? អ្នកនឹងត្រូវចូលម្តងទៀតដើម្បីចូលប្រើគណនីរបស់អ្នក។"
 
-#: src/features/chess/index.tsx:544
+#: src/features/chess/index.tsx:547
 msgid "Are you sure you want to resign? {opponentName} will win the game."
 msgstr "តើអ្នកប្រាកដថាចង់លាលែងពីតំណែងមែនទេ? {opponentName} នឹងឈ្នះហ្គេម។"
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:56
 msgid "Asc"
 msgstr "ឡើង"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:312
+msgid "Authenticator code"
+msgstr "កូដ Authenticator"
 
 #: ../../../lib/web/src/components/place-picker.tsx:152
 msgid "Back"
@@ -198,7 +206,7 @@ msgid "bishop"
 msgstr "bishop"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:16
-#: src/features/chess/index.tsx:391
+#: src/features/chess/index.tsx:394
 msgid "Black"
 msgstr "ខ្មៅ"
 
@@ -214,6 +222,7 @@ msgid "Boost interest"
 msgstr "បង្កើនចំណាប់អារម្មណ៍"
 
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx:64
+#: ../../../lib/web/src/components/step-up-dialog.tsx:360
 #: ../../../lib/web/src/components/travelling-picker.tsx:292
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:245
 #: ../../../lib/web/src/features/access/access-dialog.tsx:325
@@ -225,38 +234,22 @@ msgstr "បង្កើនចំណាប់អារម្មណ៍"
 msgid "Cancel"
 msgstr "បោះបង់"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:131
+#: ../../../lib/web/src/components/notification-category-button.tsx:135
 msgid "Category for this notification"
 msgstr "ប្រភេទសម្រាប់ការជូនដំណឹងនេះ"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:115
+#: ../../../lib/web/src/components/notification-category-button.tsx:119
 msgid "Change notification category"
 msgstr "ប្ដូរប្រភេទការជូនដំណឹង"
 
-#: src/features/chess/index.tsx:484
-#: src/features/chess/index.tsx:516
+#: src/features/chess/index.tsx:487
+#: src/features/chess/index.tsx:519
 msgid "Chat"
 msgstr "ជជែក"
 
-#: src/features/chess/index.tsx:85
-msgid "Check — {opponentName}'s move"
-msgstr "ឈ្ឆេក — វេនរបស់ {opponentName}"
-
-#: src/features/chess/index.tsx:85
-msgid "Check — your move"
-msgstr "ឈ្ឆេក — វេនរបស់អ្នក"
-
-#: src/features/chess/index.tsx:67
-msgid "Checkmate — {opponentName} wins"
-msgstr "ឈ្ឆេកម៉ាត — {opponentName} ឈ្នះ"
-
-#: src/features/chess/index.tsx:66
-msgid "Checkmate — you win!"
-msgstr "ឈ្ឆេកម៉ាត — អ្នកឈ្នះ!"
-
-#: src/features/chess/index.tsx:93
-#: src/features/chess/index.tsx:319
-#: src/features/chess/index.tsx:331
+#: src/features/chess/index.tsx:96
+#: src/features/chess/index.tsx:322
+#: src/features/chess/index.tsx:334
 msgid "Chess"
 msgstr "Chess"
 
@@ -373,6 +366,10 @@ msgstr "ព័ត៌មាន និងព័ត៌មានលម្អិត�
 msgid "Continue"
 msgstr "បន្ត"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:349
+msgid "Continue with {label}"
+msgstr "បន្តជាមួយ {label}"
+
 #: ../../../lib/web/src/components/ui/copy-button.tsx:60
 msgid "Copy"
 msgstr "ចម្លង"
@@ -380,6 +377,18 @@ msgstr "ចម្លង"
 #: ../../../lib/web/src/features/document/document-page.tsx:81
 msgid "Could not load this document. Please try again later."
 msgstr "មិនអាចផ្ទុកឯកសារនេះ។ សូមព្យាយាមម្តងទៀតនៅពេលក្រោយ។"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:181
+msgid "Couldn't send the code. Please try again."
+msgstr "មិនអាចផ្ញើកូដបានទេ។ សូមព្យាយាមម្ដងទៀត។"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:133
+msgid "Couldn't start re-authentication. Please try again."
+msgstr "មិនអាចចាប់ផ្ដើមការផ្ទៀងផ្ទាត់ឡើងវិញបានទេ។ សូមព្យាយាមម្ដងទៀត។"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:218
+msgid "Couldn't verify with that account. Please try again."
+msgstr "មិនអាចផ្ទៀងផ្ទាត់ជាមួយគណនីនោះបានទេ។ សូមព្យាយាមម្តងទៀត។"
 
 #: src/features/chess/components/new-game.tsx:148
 msgid "Creating..."
@@ -410,9 +419,13 @@ msgstr "លំនាំដើម"
 msgid "Default AI account"
 msgstr "គណនី AI លំនាំដើម"
 
-#: src/features/chess/index.tsx:437
+#: src/features/chess/index.tsx:440
 msgid "Delete game"
 msgstr "លុបហ្គេម"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:90
+msgid "Delete your account on the old server"
+msgstr "លុបគណនីរបស់អ្នកនៅម៉ាស៊ីនមេចាស់"
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:60
 msgid "Desc"
@@ -437,6 +450,10 @@ msgstr "រកឃើញពីកម្មវិធីរុករកគេហទ
 msgid "Direction"
 msgstr "ទិស"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:73
+msgid "Dismiss"
+msgstr "បិទ"
+
 #: ../../../lib/web/src/components/ui/sidebar.tsx:235
 msgid "Displays the mobile sidebar."
 msgstr "បង្ហាញរបារចំហៀងទូរស័ព្ទ។"
@@ -445,17 +462,29 @@ msgstr "បង្ហាញរបារចំហៀងទូរស័ព្ទ។
 msgid "Download"
 msgstr "ទាញយក"
 
-#: src/features/chess/index.tsx:75
-msgid "Draw"
-msgstr "ស្មើ"
+#: src/features/chess/components/chat-message-list.tsx:188
+msgid "Draw agreed"
+msgstr "បានយល់ព្រមស្មើ"
 
-#: src/features/chess/index.tsx:450
+#: src/features/chess/index.tsx:453
 msgid "Draw offered — waiting for {opponentName}"
 msgstr "បានស្នើស្មើ — កំពុងរង់ចាំ {opponentName}"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:134
 msgid "Dyslexia-friendly"
 msgstr "ស័ក្តិសមនឹងជំងឺឌីស្លេកស៊ី"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:286
+msgid "Email code"
+msgstr "កូដអ៊ីមែល"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:296
+msgid "Enter the code from your email"
+msgstr "បញ្ចូលកូដពីអ៊ីមែលរបស់អ្នក"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:321
+msgid "Enter your authenticator code"
+msgstr "បញ្ចូលកូដ authenticator របស់អ្នក"
 
 #: ../../../lib/web/src/components/layout/app-sidebar.tsx:35
 msgid "Expand sidebar"
@@ -465,7 +494,7 @@ msgstr "ពង្រីករបារចំហៀង"
 msgid "Extra large"
 msgstr "ធំពិសេស"
 
-#: src/features/chess/index.tsx:200
+#: src/features/chess/index.tsx:203
 msgid "Failed to accept draw"
 msgstr "បរាជ័យក្នុងការទទួលយកការស្មើ"
 
@@ -477,19 +506,19 @@ msgstr "បរាជ័យក្នុងការបន្ថែមគណនី
 msgid "Failed to create game"
 msgstr "បរាជ័យក្នុងការបង្កើតហ្គេម"
 
-#: src/features/chess/index.tsx:215
+#: src/features/chess/index.tsx:218
 msgid "Failed to create rematch"
 msgstr "បរាជ័យក្នុងការបង្កើតការប្រកួតឡើងវិញ"
 
-#: src/features/chess/index.tsx:205
+#: src/features/chess/index.tsx:208
 msgid "Failed to decline draw"
 msgstr "បរាជ័យក្នុងការបដិសេធការស្មើ"
 
-#: src/features/chess/index.tsx:226
+#: src/features/chess/index.tsx:229
 msgid "Failed to delete game"
 msgstr "បរាជ័យក្នុងការលុបហ្គេម"
 
-#: src/features/chess/index.tsx:195
+#: src/features/chess/index.tsx:198
 msgid "Failed to offer draw"
 msgstr "បរាជ័យក្នុងការស្នើស្មើ"
 
@@ -497,12 +526,12 @@ msgstr "បរាជ័យក្នុងការស្នើស្មើ"
 msgid "Failed to remove account"
 msgstr "បរាជ័យក្នុងការដកគណនី"
 
-#: src/features/chess/index.tsx:188
+#: src/features/chess/index.tsx:191
 msgid "Failed to resign"
 msgstr "បរាជ័យក្នុងការចុះចាញ់"
 
-#: src/features/chess/index.tsx:500
-#: src/features/chess/index.tsx:532
+#: src/features/chess/index.tsx:503
+#: src/features/chess/index.tsx:535
 msgid "Failed to send"
 msgstr "បរាជ័យក្នុងការផ្ញើ"
 
@@ -510,9 +539,13 @@ msgstr "បរាជ័យក្នុងការផ្ញើ"
 msgid "Failed to send verification code"
 msgstr "បរាជ័យក្នុងការផ្ញើកូដផ្ទៀងផ្ទាត់"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:104
+#: ../../../lib/web/src/components/notification-category-button.tsx:108
 msgid "Failed to update category"
 msgstr "បរាជ័យក្នុងការធ្វើបច្ចុប្បន្នភាពប្រភេទ"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:79
+msgid "Finish moving your account"
+msgstr "បញ្ចប់ការផ្លាស់ប្តូរគណនីរបស់អ្នក"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:244
 msgid "Floating"
@@ -542,7 +575,7 @@ msgstr "ប្លង់ពេញលេញ"
 msgid "Game created"
 msgstr "បានបង្កើតហ្គេម"
 
-#: src/features/chess/index.tsx:222
+#: src/features/chess/index.tsx:225
 msgid "Game deleted"
 msgstr "បានលុបហ្គេម"
 
@@ -756,7 +789,7 @@ msgstr "រកមិនឃើញលទ្ធផល។"
 msgid "No time zone found."
 msgstr "រកមិនឃើញតំបន់ពេលវេលា។"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:135
+#: ../../../lib/web/src/components/notification-category-button.tsx:139
 msgid "No topic record yet — try again after the next notification."
 msgstr "មិនទាន់មានកំណត់ត្រាប្រធានបទ — សាកល្បងម្តងទៀតបន្ទាប់ពីការជូនដំណឹងលើកក្រោយ។"
 
@@ -780,7 +813,7 @@ msgstr "ធម្មតា"
 msgid "Notifications"
 msgstr "ការជូនដំណឹង"
 
-#: src/features/chess/index.tsx:421
+#: src/features/chess/index.tsx:424
 msgid "Offer draw"
 msgstr "ផ្តល់ជូនការស្មើ"
 
@@ -793,11 +826,11 @@ msgstr "អូ! រកមិនឃើញទំព័រ!"
 msgid "Open account actions"
 msgstr "បើកសកម្មភាពគណនី"
 
-#: src/features/chess/index.tsx:400
+#: src/features/chess/index.tsx:403
 msgid "Open chat panel"
 msgstr "បើកបន្ទះសន្ទនា"
 
-#: src/features/chess/index.tsx:408
+#: src/features/chess/index.tsx:411
 msgid "Open game actions"
 msgstr "បើកសកម្មភាពហ្គេម"
 
@@ -821,6 +854,18 @@ msgstr "ផ្សេងទៀត"
 #: ../../../lib/web/src/features/access/access-list.tsx:213
 msgid "Owner"
 msgstr "ម្ចាស់"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:331
+msgid "Passkey"
+msgstr ""
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:206
+msgid "Passkey verification failed. Please try again."
+msgstr "ការផ្ទៀងផ្ទាត់ passkey បានបរាជ័យ។ សូមព្យាយាមម្ដងទៀត។"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:126
+msgid "Passkeys"
+msgstr "កូនសោចូល"
 
 #: src/features/chess/lib/use-chess-piece-name.ts:17
 msgid "pawn"
@@ -857,6 +902,14 @@ msgstr "ដំឡើងកម្រិតទៅ៖"
 msgid "queen"
 msgstr "queen"
 
+#: ../../../lib/web/src/components/restore-banner.tsx:98
+msgid "Re-link your accounts on this server"
+msgstr "ភ្ជាប់គណនីរបស់អ្នកឡើងវិញនៅម៉ាស៊ីនមេនេះ"
+
+#: ../../../lib/web/src/components/restore-banner.tsx:120
+msgid "Re-register your passkeys on this server"
+msgstr "ចុះឈ្មោះកូនសោចូលរបស់អ្នកឡើងវិញនៅលើម៉ាស៊ីនមេនេះ"
+
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:216
 #: ../../../lib/web/src/components/search-entity-page.tsx:191
 msgid "Recommended"
@@ -878,7 +931,7 @@ msgstr "ទាក់ទង (5m, 3h, 2d)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "ទាក់ទងក្នុង 24 ម៉ោង បើមិនដូច្នេះទេដាច់ខាត"
 
-#: src/features/chess/index.tsx:434
+#: src/features/chess/index.tsx:437
 msgid "Rematch"
 msgstr "ប្រកួតឡើងវិញ"
 
@@ -900,6 +953,10 @@ msgstr "យកសិទ្ធិចូលប្រើចេញ?"
 msgid "Remove interest"
 msgstr "យកចំណាប់អារម្មណ៍ចេញ"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:364
+msgid "Resend email"
+msgstr "ផ្ញើអ៊ីមែលឡើងវិញ"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:77
 #: ../../../lib/web/src/components/data-table/toolbar.tsx:78
 msgid "Reset"
@@ -909,16 +966,16 @@ msgstr "កំណត់ឡើងវិញ"
 msgid "Reset all settings to default values"
 msgstr "កំណត់ការកំណត់ទាំងអស់ឡើងវិញទៅតម្លៃលំនាំដើម"
 
-#: src/features/chess/index.tsx:425
-#: src/features/chess/index.tsx:552
+#: src/features/chess/index.tsx:428
+#: src/features/chess/index.tsx:555
 msgid "Resign"
 msgstr "ចុះចាញ់"
 
-#: src/features/chess/index.tsx:543
+#: src/features/chess/index.tsx:546
 msgid "Resign game?"
 msgstr "ចុះចាញ់ហ្គេម?"
 
-#: src/features/chess/index.tsx:549
+#: src/features/chess/index.tsx:552
 msgid "Resigning..."
 msgstr "កំពុងចុះចាញ់..."
 
@@ -1012,6 +1069,10 @@ msgstr "ជ្រើសរើសចំណូលចិត្តរូបរាង
 msgid "Send again"
 msgstr "ផ្ញើម្តងទៀត"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:304
+msgid "Send email"
+msgstr "ផ្ញើអ៊ីមែល"
+
 #: src/features/chess/components/chat-input.tsx:40
 msgid "Send message"
 msgstr "ផ្ញើសារ"
@@ -1066,10 +1127,6 @@ msgstr "តូច"
 msgid "Spacious"
 msgstr "ធំទូលាយ"
 
-#: src/features/chess/index.tsx:71
-msgid "Stalemate — draw"
-msgstr "ស្មើ — ស្មើគ្នា"
-
 #: src/features/chess/components/new-game.tsx:94
 msgid "Start a new chess game"
 msgstr "ចាប់ផ្តើមហ្គេមអុក ថ្មី"
@@ -1108,6 +1165,10 @@ msgstr "ក្រុម/កម្មវិធី"
 #: ../../../lib/web/src/features/document/document-page.tsx:39
 msgid "Terms and conditions"
 msgstr "លក្ខខណ្ឌ"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:192
+msgid "That code is incorrect or has expired."
+msgstr "កូដនោះមិនត្រឹមត្រូវ ឬផុតកំណត់ហើយ។"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:181
 msgid "Theme"
@@ -1186,7 +1247,7 @@ msgstr "វាយដើម្បីស្វែងរក..."
 msgid "Unable to redirect to login. Please try again."
 msgstr "មិនអាចប្តូរទិសទៅការចូល។ សូមព្យាយាមម្តងទៀត។"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:143
+#: ../../../lib/web/src/components/notification-category-button.tsx:147
 msgid "Unassigned"
 msgstr "មិនបានកំណត់"
 
@@ -1198,13 +1259,17 @@ msgstr "ការចូលប្រើដោយគ្មានសិទ្ធិ
 msgid "United States"
 msgstr "សហរដ្ឋអាមេរិក"
 
-#: src/hooks/useGameWebsocket.ts:162
+#: src/hooks/useGameWebsocket.ts:164
 msgid "Unknown"
 msgstr "មិនស្គាល់"
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:131
 msgid "Unverified"
 msgstr "មិនបានផ្ទៀងផ្ទាត់"
+
+#: ../../../lib/web/src/components/step-up-dialog.tsx:335
+msgid "Use your passkey"
+msgstr "ប្រើ passkey របស់អ្នក"
 
 #: ../../../lib/web/src/features/access/access-dialog.tsx:155
 msgid "User"
@@ -1222,6 +1287,7 @@ msgstr "បានផ្ញើកូដផ្ទៀងផ្ទាត់"
 msgid "Verification failed"
 msgstr "ការផ្ទៀងផ្ទាត់បរាជ័យ"
 
+#: ../../../lib/web/src/components/step-up-dialog.tsx:385
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:164
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:106
 msgid "Verify"
@@ -1230,6 +1296,10 @@ msgstr "ផ្ទៀងផ្ទាត់"
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:58
 msgid "Verify email address"
 msgstr "ផ្ទៀងផ្ទាត់អាសយដ្ឋានអ៊ីមែល"
+
+#: ../../../lib/web/src/components/attachment-gallery.tsx:63
+msgid "Video thumbnail"
+msgstr "រូបភាពតូចវីដេអូ"
 
 #: ../../../lib/web/src/components/data-table/view-options.tsx:30
 msgid "View"
@@ -1256,7 +1326,7 @@ msgid "Wednesday"
 msgstr "ថ្ងៃពុធ"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:16
-#: src/features/chess/index.tsx:391
+#: src/features/chess/index.tsx:394
 msgid "White"
 msgstr "ស"
 
@@ -1267,14 +1337,10 @@ msgstr "ស"
 msgid "White {0}"
 msgstr "ស {0}"
 
-#: src/features/chess/components/chat-message-list.tsx:197
+#: src/features/chess/components/chat-message-list.tsx:209
 msgid "You"
 msgstr "អ្នក"
 
-#: src/features/chess/index.tsx:81
-msgid "You resigned — {opponentName} wins"
-msgstr "អ្នកបានចុះចាញ់ — {opponentName} ឈ្នះ"
-
-#: src/features/chess/index.tsx:88
-msgid "Your move"
-msgstr "វេនរបស់អ្នក"
+#: ../../../lib/web/src/components/restore-banner.tsx:82
+msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
+msgstr "គណនីរបស់អ្នកត្រូវបានផ្លាស់ប្តូរមកទីនេះពី {source}។ រហូតដល់អ្នកលុបវានៅទីនោះ សារ និងការជូនដំណឹងអាចទៅដល់ម៉ាស៊ីនមេទាំងពីរ មាតិកាមួយចំនួនរបស់អ្នកនៅតែត្រូវបានបម្រើពីម៉ាស៊ីនមេចាស់ ហើយអ្នកតាមដានអាចចំណាយពេលប៉ុន្មាននាទីដើម្បីរកអ្នកនៅទីនេះ។"
