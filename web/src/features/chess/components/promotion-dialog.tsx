@@ -79,7 +79,7 @@ export function PromotionDialog({
               onClick={() => onSelect(piece)}
               className={cn(
                 'flex items-center justify-center w-14 h-14 rounded-lg',
-                'border border-border transition-colors hover:bg-accent',
+                'border border-border transition-colors hover:bg-hover',
                 'focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:outline-hidden'
               )}
             >
