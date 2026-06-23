@@ -5,7 +5,7 @@
 
 import { type FormEvent } from 'react'
 import { Trans } from '@lingui/react/macro'
-import { Button } from '@mochi/web'
+import { Button, Tooltip, TooltipContent, TooltipTrigger } from '@mochi/web'
 import { Loader2, Send } from 'lucide-react'
 import { t } from '@lingui/core/macro'
 
@@ -37,19 +37,24 @@ export function ChatInput({
             className="w-full bg-inherit text-xs focus-visible:outline-hidden"
           />
         </label>
-        <Button
-          type="submit"
-          size="icon"
-          className="bg-primary hover:bg-primary/80 rounded-full transition-colors size-7"
-          disabled={isSending || !newMessage.trim()}
-          aria-label={t`Send message`}
-        >
-          {isSending ? (
-            <Loader2 size={14} className="animate-spin" />
-          ) : (
-            <Send size={14} />
-          )}
-        </Button>
+        <Tooltip>
+          <TooltipTrigger asChild>
+            <Button
+              type="submit"
+              size="icon"
+              className="bg-primary hover:bg-primary/80 rounded-full transition-colors size-7"
+              disabled={isSending || !newMessage.trim()}
+              aria-label={t`Send message`}
+            >
+              {isSending ? (
+                <Loader2 size={14} className="animate-spin" />
+              ) : (
+                <Send size={14} />
+              )}
+            </Button>
+          </TooltipTrigger>
+          <TooltipContent>{t`Send message`}</TooltipContent>
+        </Tooltip>
       </div>
       {errorMessage && (
         <p className="text-destructive text-end text-[10px] px-1">

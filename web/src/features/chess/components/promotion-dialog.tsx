@@ -5,7 +5,7 @@
 
 import { useEffect, useId, useRef } from 'react'
 import { Trans, useLingui } from '@lingui/react/macro'
-import { cn } from '@mochi/web'
+import { cn, Tooltip, TooltipContent, TooltipTrigger } from '@mochi/web'
 import { ChessPieceIcon } from './chess-piece-icon'
 import { useChessPieceName } from '../lib/use-chess-piece-name'
 
@@ -75,25 +75,29 @@ export function PromotionDialog({
         </h2>
         <div className="flex gap-1">
           {PROMOTION_PIECES.map((piece, index) => (
-            <button
-              aria-label={t`Promote to ${pieceName(piece)}`}
-              aria-keyshortcuts={PROMOTION_SHORTCUTS[index]}
-              key={piece}
-              ref={piece === 'q' ? queenButtonRef : undefined}
-              type="button"
-              onClick={() => onSelect(piece)}
-              className={cn(
-                'flex items-center justify-center w-14 h-14 rounded-lg',
-                'border border-border transition-colors hover:bg-hover',
-                'focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:outline-hidden'
-              )}
-            >
-              <ChessPieceIcon
-                color={color}
-                className="size-10"
-                type={piece}
-              />
-            </button>
+            <Tooltip key={piece}>
+              <TooltipTrigger asChild>
+                <button
+                  aria-label={t`Promote to ${pieceName(piece)}`}
+                  aria-keyshortcuts={PROMOTION_SHORTCUTS[index]}
+                  ref={piece === 'q' ? queenButtonRef : undefined}
+                  type="button"
+                  onClick={() => onSelect(piece)}
+                  className={cn(
+                    'flex items-center justify-center w-14 h-14 rounded-lg',
+                    'border border-border transition-colors hover:bg-hover',
+                    'focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:outline-hidden'
+                  )}
+                >
+                  <ChessPieceIcon
+                    color={color}
+                    className="size-10"
+                    type={piece}
+                  />
+                </button>
+              </TooltipTrigger>
+              <TooltipContent>{t`Promote to ${pieceName(piece)}`}</TooltipContent>
+            </Tooltip>
           ))}
         </div>
         <button
