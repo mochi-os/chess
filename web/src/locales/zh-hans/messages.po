@@ -135,11 +135,11 @@ msgstr "添加账户"
 msgid "Add an account to receive notifications and use services."
 msgstr "添加账户以接收通知并使用服务。"
 
-#: src/features/chess/components/new-game.tsx:121
+#: src/features/chess/components/new-game.tsx:126
 msgid "Add friends"
 msgstr "添加好友"
 
-#: src/features/chess/components/new-game.tsx:114
+#: src/features/chess/components/new-game.tsx:119
 msgid "Add friends in the People app to start playing"
 msgstr "在人脉应用中添加好友即可开始游戏"
 
@@ -188,7 +188,7 @@ msgstr "发生意外错误"
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "确定要退出登录吗?你需要重新登录才能访问账户。"
 
-#: src/features/chess/index.tsx:552
+#: src/features/chess/index.tsx:561
 msgid "Are you sure you want to resign? {opponentName} will win the game."
 msgstr "确定要认输吗?{opponentName} 将赢得比赛。"
 
@@ -219,7 +219,7 @@ msgid "bishop"
 msgstr "象"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:399
+#: src/features/chess/index.tsx:408
 msgid "Black"
 msgstr "黑色"
 
@@ -244,7 +244,7 @@ msgstr "提升兴趣"
 #: ../../../lib/web/src/features/access/access-list.tsx:263
 #: ../../../lib/web/src/features/accounts/account-add.tsx:188
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:89
-#: src/features/chess/components/new-game.tsx:145
+#: src/features/chess/components/new-game.tsx:150
 #: src/features/chess/components/promotion-dialog.tsx:108
 msgid "Cancel"
 msgstr "取消"
@@ -258,14 +258,14 @@ msgstr "该通知的分类"
 msgid "Change notification category"
 msgstr "更改通知分类"
 
-#: src/features/chess/index.tsx:492
-#: src/features/chess/index.tsx:524
+#: src/features/chess/index.tsx:501
+#: src/features/chess/index.tsx:533
 msgid "Chat"
 msgstr "聊天"
 
-#: src/features/chess/index.tsx:101
-#: src/features/chess/index.tsx:327
-#: src/features/chess/index.tsx:339
+#: src/features/chess/index.tsx:102
+#: src/features/chess/index.tsx:336
+#: src/features/chess/index.tsx:348
 msgid "Chess"
 msgstr "国际象棋"
 
@@ -302,7 +302,7 @@ msgstr "在跟随系统、浅色模式或深色模式之间选择"
 msgid "Choose language"
 msgstr "选择语言"
 
-#: src/features/chess/components/new-game.tsx:105
+#: src/features/chess/components/new-game.tsx:110
 msgid "Choose opponent"
 msgstr "选择对手"
 
@@ -333,8 +333,8 @@ msgid "Clear selection (Escape)"
 msgstr "清除选择(Esc)"
 
 #: ../../../lib/web/src/components/ui/dialog.tsx:78
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:332
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:335
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:354
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:357
 #: ../../../lib/web/src/components/ui/sheet.tsx:79
 msgid "Close"
 msgstr "关闭"
@@ -355,8 +355,8 @@ msgstr "关闭搜索"
 
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:101
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:110
-#: ../../../lib/web/src/components/tree-row.tsx:255
-#: ../../../lib/web/src/components/tree-row.tsx:269
+#: ../../../lib/web/src/components/tree-row.tsx:338
+#: ../../../lib/web/src/components/tree-row.tsx:352
 msgid "Collapse"
 msgstr "收起"
 
@@ -422,7 +422,15 @@ msgstr "无法开始重新验证。请重试。"
 msgid "Couldn't verify with that account. Please try again."
 msgstr "无法使用该账户进行验证。请重试。"
 
-#: src/features/chess/components/new-game.tsx:153
+#: src/features/chess/components/new-game.tsx:64
+msgid "Creating game..."
+msgstr ""
+
+#: src/features/chess/index.tsx:321
+msgid "Creating rematch..."
+msgstr ""
+
+#: src/features/chess/components/new-game.tsx:158
 msgid "Creating..."
 msgstr "创建中..."
 
@@ -455,13 +463,17 @@ msgstr "默认"
 msgid "Default AI account"
 msgstr "默认 AI 账户"
 
-#: src/features/chess/index.tsx:445
+#: src/features/chess/index.tsx:454
 msgid "Delete game"
 msgstr "删除游戏"
 
 #: ../../../lib/web/src/components/restore-banner.tsx:99
 msgid "Delete your account on the old server"
 msgstr "删除旧服务器上的账户"
+
+#: src/features/chess/index.tsx:289
+msgid "Deleting game..."
+msgstr ""
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:63
 msgid "Desc"
@@ -499,16 +511,20 @@ msgstr "关闭"
 msgid "Displays the mobile sidebar."
 msgstr "显示移动端侧边栏。"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:320
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:326
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:338
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:348
 msgid "Download"
 msgstr "下载"
+
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:68
+msgid "Download failed"
+msgstr ""
 
 #: src/features/chess/components/chat-message-list.tsx:193
 msgid "Draw agreed"
 msgstr "同意和棋"
 
-#: src/features/chess/index.tsx:458
+#: src/features/chess/index.tsx:467
 msgid "Draw offered — waiting for {opponentName}"
 msgstr "已提议和棋 — 等待 {opponentName}"
 
@@ -534,8 +550,8 @@ msgstr "请输入您的身份验证器代码"
 
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:101
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:110
-#: ../../../lib/web/src/components/tree-row.tsx:255
-#: ../../../lib/web/src/components/tree-row.tsx:269
+#: ../../../lib/web/src/components/tree-row.tsx:338
+#: ../../../lib/web/src/components/tree-row.tsx:352
 msgid "Expand"
 msgstr "展开"
 
@@ -547,7 +563,7 @@ msgstr "展开侧边栏"
 msgid "Extra large"
 msgstr "特大"
 
-#: src/features/chess/index.tsx:208
+#: src/features/chess/index.tsx:209
 msgid "Failed to accept draw"
 msgstr "接受和棋失败"
 
@@ -555,23 +571,23 @@ msgstr "接受和棋失败"
 msgid "Failed to add account"
 msgstr "添加账户失败"
 
-#: src/features/chess/components/new-game.tsx:52
+#: src/features/chess/components/new-game.tsx:66
 msgid "Failed to create game"
 msgstr "创建游戏失败"
 
-#: src/features/chess/index.tsx:223
+#: src/features/chess/index.tsx:324
 msgid "Failed to create rematch"
 msgstr "创建再赛失败"
 
-#: src/features/chess/index.tsx:213
+#: src/features/chess/index.tsx:214
 msgid "Failed to decline draw"
 msgstr "拒绝和棋失败"
 
-#: src/features/chess/index.tsx:234
+#: src/features/chess/index.tsx:291
 msgid "Failed to delete game"
 msgstr "删除游戏失败"
 
-#: src/features/chess/index.tsx:203
+#: src/features/chess/index.tsx:204
 msgid "Failed to offer draw"
 msgstr "提议和棋失败"
 
@@ -579,12 +595,12 @@ msgstr "提议和棋失败"
 msgid "Failed to remove account"
 msgstr "移除账户失败"
 
-#: src/features/chess/index.tsx:196
+#: src/features/chess/index.tsx:197
 msgid "Failed to resign"
 msgstr "认输失败"
 
-#: src/features/chess/index.tsx:508
-#: src/features/chess/index.tsx:540
+#: src/features/chess/index.tsx:517
+#: src/features/chess/index.tsx:549
 msgid "Failed to send"
 msgstr "发送失败"
 
@@ -629,11 +645,11 @@ msgstr "来自主题"
 msgid "Full layout"
 msgstr "完整布局"
 
-#: src/features/chess/components/new-game.tsx:48
+#: src/features/chess/components/new-game.tsx:65
 msgid "Game created"
 msgstr "已创建游戏"
 
-#: src/features/chess/index.tsx:230
+#: src/features/chess/index.tsx:290
 msgid "Game deleted"
 msgstr "已删除游戏"
 
@@ -737,6 +753,10 @@ msgstr "浅色"
 msgid "Load more"
 msgstr "加载更多"
 
+#: ../../../lib/web/src/components/ui/loading-content.tsx:29
+msgid "Loading content…"
+msgstr ""
+
 #: ../../../lib/web/src/components/ui/load-more.tsx:35
 #: ../../../lib/web/src/features/document/document-page.tsx:90
 msgid "Loading…"
@@ -804,12 +824,12 @@ msgstr "新建"
 msgid "New game"
 msgstr "新游戏"
 
-#: src/features/chess/components/new-game.tsx:96
+#: src/features/chess/components/new-game.tsx:101
 msgid "New Game"
 msgstr "新游戏"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:366
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:371
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:388
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:393
 msgid "Next image"
 msgstr "下一张图片"
 
@@ -821,11 +841,11 @@ msgstr "尚未配置访问规则。添加规则以控制谁可以访问此资源
 msgid "No connected accounts"
 msgstr "无已连接的账户"
 
-#: src/features/chess/components/new-game.tsx:131
+#: src/features/chess/components/new-game.tsx:136
 msgid "No friends found"
 msgstr "未找到好友"
 
-#: src/features/chess/components/new-game.tsx:113
+#: src/features/chess/components/new-game.tsx:118
 msgid "No friends yet"
 msgstr "暂无好友"
 
@@ -888,7 +908,7 @@ msgstr "未设置"
 msgid "Notifications"
 msgstr "通知"
 
-#: src/features/chess/index.tsx:429
+#: src/features/chess/index.tsx:438
 msgid "Offer draw"
 msgstr "提议和棋"
 
@@ -901,16 +921,16 @@ msgstr "抱歉!页面未找到!"
 msgid "Open account actions"
 msgstr "打开账户操作"
 
-#: ../../../lib/web/src/components/layout/nav-group.tsx:152
-#: ../../../lib/web/src/components/layout/nav-group.tsx:157
+#: ../../../lib/web/src/components/layout/nav-group.tsx:182
+#: ../../../lib/web/src/components/layout/nav-group.tsx:187
 msgid "Open actions"
 msgstr "打开操作"
 
-#: src/features/chess/index.tsx:408
+#: src/features/chess/index.tsx:417
 msgid "Open chat panel"
 msgstr "打开聊天面板"
 
-#: src/features/chess/index.tsx:416
+#: src/features/chess/index.tsx:425
 msgid "Open game actions"
 msgstr "打开游戏操作"
 
@@ -957,12 +977,12 @@ msgstr "兵"
 msgid "Please check your internet connection and try again."
 msgstr "请检查您的网络连接后重试。"
 
-#: src/features/chess/components/new-game.tsx:67
+#: src/features/chess/components/new-game.tsx:57
 msgid "Please select a friend"
 msgstr "请选择一位好友"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:351
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:356
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:373
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:378
 msgid "Previous image"
 msgstr "上一张图片"
 
@@ -1024,9 +1044,13 @@ msgstr "相对时间(5分钟、3小时、2天)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "24 小时内显示相对时间,否则显示绝对时间"
 
-#: src/features/chess/index.tsx:442
+#: src/features/chess/index.tsx:451
 msgid "Rematch"
 msgstr "再来一局"
+
+#: src/features/chess/index.tsx:322
+msgid "Rematch created"
+msgstr ""
 
 #: ../../../lib/web/src/features/access/access-list.tsx:265
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:180
@@ -1060,16 +1084,16 @@ msgstr "重置"
 msgid "Reset all settings to default values"
 msgstr "将所有设置重置为默认值"
 
-#: src/features/chess/index.tsx:433
-#: src/features/chess/index.tsx:560
+#: src/features/chess/index.tsx:442
+#: src/features/chess/index.tsx:569
 msgid "Resign"
 msgstr "认输"
 
-#: src/features/chess/index.tsx:551
+#: src/features/chess/index.tsx:560
 msgid "Resign game?"
 msgstr "认输?"
 
-#: src/features/chess/index.tsx:557
+#: src/features/chess/index.tsx:566
 msgid "Resigning..."
 msgstr "正在认输..."
 
@@ -1124,7 +1148,7 @@ msgstr "搜索..."
 msgid "Searching..."
 msgstr "正在搜索..."
 
-#: src/features/chess/components/new-game.tsx:130
+#: src/features/chess/components/new-game.tsx:135
 msgid "Select a friend..."
 msgstr "选择好友..."
 
@@ -1243,11 +1267,11 @@ msgstr "小"
 msgid "Spacious"
 msgstr "宽松"
 
-#: src/features/chess/components/new-game.tsx:99
+#: src/features/chess/components/new-game.tsx:104
 msgid "Start a new chess game"
 msgstr "开始新国际象棋对局"
 
-#: src/features/chess/components/new-game.tsx:153
+#: src/features/chess/components/new-game.tsx:158
 msgid "Start game"
 msgstr "开始游戏"
 
@@ -1312,10 +1336,10 @@ msgstr "切换列"
 msgid "Toggle right panel"
 msgstr "切换右侧面板"
 
-#: ../../../lib/web/src/components/layout/nav-group.tsx:321
-#: ../../../lib/web/src/components/layout/nav-group.tsx:328
-#: ../../../lib/web/src/components/layout/nav-group.tsx:451
-#: ../../../lib/web/src/components/layout/nav-group.tsx:458
+#: ../../../lib/web/src/components/layout/nav-group.tsx:351
+#: ../../../lib/web/src/components/layout/nav-group.tsx:358
+#: ../../../lib/web/src/components/layout/nav-group.tsx:481
+#: ../../../lib/web/src/components/layout/nav-group.tsx:488
 msgid "Toggle section"
 msgstr "展开/折叠区块"
 
@@ -1462,7 +1486,7 @@ msgid "Wednesday"
 msgstr "星期三"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:399
+#: src/features/chess/index.tsx:408
 msgid "White"
 msgstr "白"
 

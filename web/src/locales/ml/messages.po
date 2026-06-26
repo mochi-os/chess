@@ -135,11 +135,11 @@ msgstr "അക്കൗണ്ട് ചേർക്കുക"
 msgid "Add an account to receive notifications and use services."
 msgstr "അറിയിപ്പുകൾ സ്വീകരിക്കാനും സേവനങ്ങൾ ഉപയോഗിക്കാനും ഒരു അക്കൗണ്ട് ചേർക്കുക."
 
-#: src/features/chess/components/new-game.tsx:121
+#: src/features/chess/components/new-game.tsx:126
 msgid "Add friends"
 msgstr "സുഹൃത്തുക്കളെ ചേർക്കുക"
 
-#: src/features/chess/components/new-game.tsx:114
+#: src/features/chess/components/new-game.tsx:119
 msgid "Add friends in the People app to start playing"
 msgstr "കളി തുടങ്ങാൻ People ആപ്പിൽ സുഹൃത്തുക്കളെ ചേർക്കുക"
 
@@ -188,7 +188,7 @@ msgstr "അപ്രതീക്ഷിത പിശക് സംഭവിച്�
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "ലോഗ് ഔട്ട് ചെയ്യണമെന്ന് നിങ്ങൾക്ക് ഉറപ്പാണോ? നിങ്ങളുടെ അക്കൗണ്ട് ആക്സസ് ചെയ്യാൻ വീണ്ടും ലോഗിൻ ചെയ്യേണ്ടിവരും."
 
-#: src/features/chess/index.tsx:552
+#: src/features/chess/index.tsx:561
 msgid "Are you sure you want to resign? {opponentName} will win the game."
 msgstr "നിങ്ങൾ കീഴടങ്ങാൻ തീർച്ചയാണോ? {opponentName} ഗെയിം ജയിക്കും."
 
@@ -219,7 +219,7 @@ msgid "bishop"
 msgstr "ഒട്ടകം"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:399
+#: src/features/chess/index.tsx:408
 msgid "Black"
 msgstr "കറുപ്പ്"
 
@@ -244,7 +244,7 @@ msgstr "താൽപ്പര്യം വർദ്ധിപ്പിക്ക�
 #: ../../../lib/web/src/features/access/access-list.tsx:263
 #: ../../../lib/web/src/features/accounts/account-add.tsx:188
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:89
-#: src/features/chess/components/new-game.tsx:145
+#: src/features/chess/components/new-game.tsx:150
 #: src/features/chess/components/promotion-dialog.tsx:108
 msgid "Cancel"
 msgstr "റദ്ദാക്കുക"
@@ -258,14 +258,14 @@ msgstr "ഈ അറിയിപ്പിനുള്ള വിഭാഗം"
 msgid "Change notification category"
 msgstr "അറിയിപ്പ് വിഭാഗം മാറ്റുക"
 
-#: src/features/chess/index.tsx:492
-#: src/features/chess/index.tsx:524
+#: src/features/chess/index.tsx:501
+#: src/features/chess/index.tsx:533
 msgid "Chat"
 msgstr "ചാറ്റ്"
 
-#: src/features/chess/index.tsx:101
-#: src/features/chess/index.tsx:327
-#: src/features/chess/index.tsx:339
+#: src/features/chess/index.tsx:102
+#: src/features/chess/index.tsx:336
+#: src/features/chess/index.tsx:348
 msgid "Chess"
 msgstr "ചെസ്സ്"
 
@@ -302,7 +302,7 @@ msgstr "സിസ്റ്റം മുൻഗണന, ലൈറ്റ് മോ�
 msgid "Choose language"
 msgstr "ഭാഷ തിരഞ്ഞെടുക്കുക"
 
-#: src/features/chess/components/new-game.tsx:105
+#: src/features/chess/components/new-game.tsx:110
 msgid "Choose opponent"
 msgstr "എതിരാളിയെ തിരഞ്ഞെടുക്കുക"
 
@@ -333,8 +333,8 @@ msgid "Clear selection (Escape)"
 msgstr "തിരഞ്ഞെടുപ്പ് മായ്ക്കുക (Escape)"
 
 #: ../../../lib/web/src/components/ui/dialog.tsx:78
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:332
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:335
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:354
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:357
 #: ../../../lib/web/src/components/ui/sheet.tsx:79
 msgid "Close"
 msgstr "അടയ്ക്കുക"
@@ -355,8 +355,8 @@ msgstr "തിരയൽ അടയ്ക്കുക"
 
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:101
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:110
-#: ../../../lib/web/src/components/tree-row.tsx:255
-#: ../../../lib/web/src/components/tree-row.tsx:269
+#: ../../../lib/web/src/components/tree-row.tsx:338
+#: ../../../lib/web/src/components/tree-row.tsx:352
 msgid "Collapse"
 msgstr "ചുരുക്കുക"
 
@@ -422,7 +422,15 @@ msgstr "വീണ്ടും പരിശോധന ആരംഭിക്കാ�
 msgid "Couldn't verify with that account. Please try again."
 msgstr "ആ അക്കൗണ്ട് ഉപയോഗിച്ച് പരിശോധിക്കാനായില്ല. വീണ്ടും ശ്രമിക്കുക."
 
-#: src/features/chess/components/new-game.tsx:153
+#: src/features/chess/components/new-game.tsx:64
+msgid "Creating game..."
+msgstr ""
+
+#: src/features/chess/index.tsx:321
+msgid "Creating rematch..."
+msgstr ""
+
+#: src/features/chess/components/new-game.tsx:158
 msgid "Creating..."
 msgstr "സൃഷ്ടിക്കുന്നു..."
 
@@ -455,13 +463,17 @@ msgstr "ഡിഫോൾട്ട്"
 msgid "Default AI account"
 msgstr "ഡിഫോൾട്ട് AI അക്കൗണ്ട്"
 
-#: src/features/chess/index.tsx:445
+#: src/features/chess/index.tsx:454
 msgid "Delete game"
 msgstr "ഗെയിം ഇല്ലാതാക്കുക"
 
 #: ../../../lib/web/src/components/restore-banner.tsx:99
 msgid "Delete your account on the old server"
 msgstr "പഴയ സെർവറിൽ നിങ്ങളുടെ അക്കൗണ്ട് ഇല്ലാതാക്കുക"
+
+#: src/features/chess/index.tsx:289
+msgid "Deleting game..."
+msgstr ""
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:63
 msgid "Desc"
@@ -499,16 +511,20 @@ msgstr "ഒഴിവാക്കുക"
 msgid "Displays the mobile sidebar."
 msgstr "മൊബൈൽ സൈഡ്‌ബാർ പ്രദർശിപ്പിക്കുന്നു."
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:320
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:326
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:338
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:348
 msgid "Download"
 msgstr "ഡൗൺലോഡ്"
+
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:68
+msgid "Download failed"
+msgstr ""
 
 #: src/features/chess/components/chat-message-list.tsx:193
 msgid "Draw agreed"
 msgstr "സമനില അംഗീകരിച്ചു"
 
-#: src/features/chess/index.tsx:458
+#: src/features/chess/index.tsx:467
 msgid "Draw offered — waiting for {opponentName}"
 msgstr "സമനില വാഗ്ദാനം ചെയ്തു — {opponentName}-നായി കാത്തിരിക്കുന്നു"
 
@@ -534,8 +550,8 @@ msgstr "നിങ്ങളുടെ ഓതെന്റിക്കേറ്റ�
 
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:101
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:110
-#: ../../../lib/web/src/components/tree-row.tsx:255
-#: ../../../lib/web/src/components/tree-row.tsx:269
+#: ../../../lib/web/src/components/tree-row.tsx:338
+#: ../../../lib/web/src/components/tree-row.tsx:352
 msgid "Expand"
 msgstr "വികസിപ്പിക്കുക"
 
@@ -547,7 +563,7 @@ msgstr "സൈഡ്‌ബാർ വികസിപ്പിക്കുക"
 msgid "Extra large"
 msgstr "അധിക വലുത്"
 
-#: src/features/chess/index.tsx:208
+#: src/features/chess/index.tsx:209
 msgid "Failed to accept draw"
 msgstr "സമനില സ്വീകരിക്കുന്നതിൽ പരാജയപ്പെട്ടു"
 
@@ -555,23 +571,23 @@ msgstr "സമനില സ്വീകരിക്കുന്നതിൽ പ�
 msgid "Failed to add account"
 msgstr "അക്കൗണ്ട് ചേർക്കുന്നതിൽ പരാജയപ്പെട്ടു"
 
-#: src/features/chess/components/new-game.tsx:52
+#: src/features/chess/components/new-game.tsx:66
 msgid "Failed to create game"
 msgstr "ഗെയിം സൃഷ്ടിക്കുന്നതിൽ പരാജയപ്പെട്ടു"
 
-#: src/features/chess/index.tsx:223
+#: src/features/chess/index.tsx:324
 msgid "Failed to create rematch"
 msgstr "റീമാച്ച് സൃഷ്ടിക്കുന്നതിൽ പരാജയപ്പെട്ടു"
 
-#: src/features/chess/index.tsx:213
+#: src/features/chess/index.tsx:214
 msgid "Failed to decline draw"
 msgstr "സമനില നിരസിക്കുന്നതിൽ പരാജയപ്പെട്ടു"
 
-#: src/features/chess/index.tsx:234
+#: src/features/chess/index.tsx:291
 msgid "Failed to delete game"
 msgstr "ഗെയിം ഇല്ലാതാക്കുന്നതിൽ പരാജയപ്പെട്ടു"
 
-#: src/features/chess/index.tsx:203
+#: src/features/chess/index.tsx:204
 msgid "Failed to offer draw"
 msgstr "സമനില വാഗ്ദാനം ചെയ്യുന്നതിൽ പരാജയപ്പെട്ടു"
 
@@ -579,12 +595,12 @@ msgstr "സമനില വാഗ്ദാനം ചെയ്യുന്നത�
 msgid "Failed to remove account"
 msgstr "അക്കൗണ്ട് നീക്കം ചെയ്യുന്നതിൽ പരാജയപ്പെട്ടു"
 
-#: src/features/chess/index.tsx:196
+#: src/features/chess/index.tsx:197
 msgid "Failed to resign"
 msgstr "രാജിവയ്ക്കുന്നതിൽ പരാജയപ്പെട്ടു"
 
-#: src/features/chess/index.tsx:508
-#: src/features/chess/index.tsx:540
+#: src/features/chess/index.tsx:517
+#: src/features/chess/index.tsx:549
 msgid "Failed to send"
 msgstr "അയയ്ക്കുന്നതിൽ പരാജയപ്പെട്ടു"
 
@@ -629,11 +645,11 @@ msgstr "തീമിൽ നിന്ന്"
 msgid "Full layout"
 msgstr "പൂർണ്ണ ലേഔട്ട്"
 
-#: src/features/chess/components/new-game.tsx:48
+#: src/features/chess/components/new-game.tsx:65
 msgid "Game created"
 msgstr "ഗെയിം സൃഷ്ടിച്ചു"
 
-#: src/features/chess/index.tsx:230
+#: src/features/chess/index.tsx:290
 msgid "Game deleted"
 msgstr "ഗെയിം ഇല്ലാതാക്കി"
 
@@ -737,6 +753,10 @@ msgstr "ലൈറ്റ്"
 msgid "Load more"
 msgstr "കൂടുതൽ ലോഡുചെയ്യുക"
 
+#: ../../../lib/web/src/components/ui/loading-content.tsx:29
+msgid "Loading content…"
+msgstr ""
+
 #: ../../../lib/web/src/components/ui/load-more.tsx:35
 #: ../../../lib/web/src/features/document/document-page.tsx:90
 msgid "Loading…"
@@ -804,12 +824,12 @@ msgstr "പുതിയത്"
 msgid "New game"
 msgstr "പുതിയ ഗെയിം"
 
-#: src/features/chess/components/new-game.tsx:96
+#: src/features/chess/components/new-game.tsx:101
 msgid "New Game"
 msgstr "പുതിയ ഗെയിം"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:366
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:371
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:388
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:393
 msgid "Next image"
 msgstr "അടുത്ത ചിത്രം"
 
@@ -821,11 +841,11 @@ msgstr "ആക്സസ് നിയമങ്ങളൊന്നും കോൺ�
 msgid "No connected accounts"
 msgstr "ബന്ധിപ്പിച്ച അക്കൗണ്ടുകളൊന്നുമില്ല"
 
-#: src/features/chess/components/new-game.tsx:131
+#: src/features/chess/components/new-game.tsx:136
 msgid "No friends found"
 msgstr "സുഹൃത്തുക്കളെ കണ്ടെത്തിയില്ല"
 
-#: src/features/chess/components/new-game.tsx:113
+#: src/features/chess/components/new-game.tsx:118
 msgid "No friends yet"
 msgstr "സുഹൃത്തുക്കളാരും ഇതുവരെ ഇല്ല"
 
@@ -888,7 +908,7 @@ msgstr "സജ്ജമാക്കിയിട്ടില്ല"
 msgid "Notifications"
 msgstr "അറിയിപ്പുകൾ"
 
-#: src/features/chess/index.tsx:429
+#: src/features/chess/index.tsx:438
 msgid "Offer draw"
 msgstr "സമനില വാഗ്ദാനം ചെയ്യുക"
 
@@ -901,16 +921,16 @@ msgstr "ഓ! പേജ് കണ്ടെത്തിയില്ല!"
 msgid "Open account actions"
 msgstr "അക്കൗണ്ട് പ്രവർത്തനങ്ങൾ തുറക്കുക"
 
-#: ../../../lib/web/src/components/layout/nav-group.tsx:152
-#: ../../../lib/web/src/components/layout/nav-group.tsx:157
+#: ../../../lib/web/src/components/layout/nav-group.tsx:182
+#: ../../../lib/web/src/components/layout/nav-group.tsx:187
 msgid "Open actions"
 msgstr "പ്രവർത്തനങ്ങൾ തുറക്കുക"
 
-#: src/features/chess/index.tsx:408
+#: src/features/chess/index.tsx:417
 msgid "Open chat panel"
 msgstr "ചാറ്റ് പാനൽ തുറക്കുക"
 
-#: src/features/chess/index.tsx:416
+#: src/features/chess/index.tsx:425
 msgid "Open game actions"
 msgstr "ഗെയിം പ്രവർത്തനങ്ങൾ തുറക്കുക"
 
@@ -957,12 +977,12 @@ msgstr "കാലാൾ"
 msgid "Please check your internet connection and try again."
 msgstr "നിങ്ങളുടെ ഇന്റർനെറ്റ് കണക്ഷൻ പരിശോധിച്ച് വീണ്ടും ശ്രമിക്കുക."
 
-#: src/features/chess/components/new-game.tsx:67
+#: src/features/chess/components/new-game.tsx:57
 msgid "Please select a friend"
 msgstr "ഒരു സുഹൃത്തിനെ തിരഞ്ഞെടുക്കുക"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:351
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:356
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:373
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:378
 msgid "Previous image"
 msgstr "മുമ്പത്തെ ഫോട്ടോ"
 
@@ -1024,9 +1044,13 @@ msgstr "24 മണിക്കൂറിനുള്ളിൽ ആപേക്ഷ�
 msgid "Relative within 24 hours, else absolute"
 msgstr "റിലീസ് ട്രാക്കുകൾ"
 
-#: src/features/chess/index.tsx:442
+#: src/features/chess/index.tsx:451
 msgid "Rematch"
 msgstr "നീക്കം ചെയ്യുക"
+
+#: src/features/chess/index.tsx:322
+msgid "Rematch created"
+msgstr ""
 
 #: ../../../lib/web/src/features/access/access-list.tsx:265
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:180
@@ -1060,16 +1084,16 @@ msgstr "എല്ലാ സെറ്റിങ്ങുകളും ഡിഫോ�
 msgid "Reset all settings to default values"
 msgstr "മുൻഗണനകൾ റീസെറ്റ് ചെയ്യണോ?"
 
-#: src/features/chess/index.tsx:433
-#: src/features/chess/index.tsx:560
+#: src/features/chess/index.tsx:442
+#: src/features/chess/index.tsx:569
 msgid "Resign"
 msgstr "ഗെയിം പിന്മാറണോ?"
 
-#: src/features/chess/index.tsx:551
+#: src/features/chess/index.tsx:560
 msgid "Resign game?"
 msgstr "പിന്മാറുന്നു..."
 
-#: src/features/chess/index.tsx:557
+#: src/features/chess/index.tsx:566
 msgid "Resigning..."
 msgstr "റെസല്യൂഷൻ"
 
@@ -1124,7 +1148,7 @@ msgstr "തിരയുക..."
 msgid "Searching..."
 msgstr "തിരയുന്നു..."
 
-#: src/features/chess/components/new-game.tsx:130
+#: src/features/chess/components/new-game.tsx:135
 msgid "Select a friend..."
 msgstr "ഒരു സുഹൃത്തിനെ തിരഞ്ഞെടുക്കുക..."
 
@@ -1243,11 +1267,11 @@ msgstr "ചെറുത്"
 msgid "Spacious"
 msgstr "വിശാലം"
 
-#: src/features/chess/components/new-game.tsx:99
+#: src/features/chess/components/new-game.tsx:104
 msgid "Start a new chess game"
 msgstr "ഒരു പുതിയ ചെസ് ഗെയിം ആരംഭിക്കുക"
 
-#: src/features/chess/components/new-game.tsx:153
+#: src/features/chess/components/new-game.tsx:158
 msgid "Start game"
 msgstr "ഗെയിം ആരംഭിക്കുക"
 
@@ -1312,10 +1336,10 @@ msgstr "കോളങ്ങൾ ടോഗിൾ ചെയ്യുക"
 msgid "Toggle right panel"
 msgstr "വലത് പാനൽ ടോഗിൾ ചെയ്യുക"
 
-#: ../../../lib/web/src/components/layout/nav-group.tsx:321
-#: ../../../lib/web/src/components/layout/nav-group.tsx:328
-#: ../../../lib/web/src/components/layout/nav-group.tsx:451
-#: ../../../lib/web/src/components/layout/nav-group.tsx:458
+#: ../../../lib/web/src/components/layout/nav-group.tsx:351
+#: ../../../lib/web/src/components/layout/nav-group.tsx:358
+#: ../../../lib/web/src/components/layout/nav-group.tsx:481
+#: ../../../lib/web/src/components/layout/nav-group.tsx:488
 msgid "Toggle section"
 msgstr "വിഭാഗം മാറ്റുക"
 
@@ -1462,7 +1486,7 @@ msgid "Wednesday"
 msgstr "ബുധനാഴ്ച"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:399
+#: src/features/chess/index.tsx:408
 msgid "White"
 msgstr "വെള്ള"
 

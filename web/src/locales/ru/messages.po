@@ -135,11 +135,11 @@ msgstr "Добавить аккаунт"
 msgid "Add an account to receive notifications and use services."
 msgstr "Добавьте аккаунт, чтобы получать уведомления и использовать сервисы."
 
-#: src/features/chess/components/new-game.tsx:121
+#: src/features/chess/components/new-game.tsx:126
 msgid "Add friends"
 msgstr "Добавить друзей"
 
-#: src/features/chess/components/new-game.tsx:114
+#: src/features/chess/components/new-game.tsx:119
 msgid "Add friends in the People app to start playing"
 msgstr "Добавьте друзей в приложении People, чтобы начать играть"
 
@@ -188,7 +188,7 @@ msgstr "Произошла непредвиденная ошибка"
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "Вы уверены, что хотите выйти? Вам потребуется войти снова, чтобы получить доступ к аккаунту."
 
-#: src/features/chess/index.tsx:552
+#: src/features/chess/index.tsx:561
 msgid "Are you sure you want to resign? {opponentName} will win the game."
 msgstr "Вы уверены, что хотите сдаться? {opponentName} выиграет партию."
 
@@ -219,7 +219,7 @@ msgid "bishop"
 msgstr "слон"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:399
+#: src/features/chess/index.tsx:408
 msgid "Black"
 msgstr "Чёрный"
 
@@ -244,7 +244,7 @@ msgstr "Усилить интерес"
 #: ../../../lib/web/src/features/access/access-list.tsx:263
 #: ../../../lib/web/src/features/accounts/account-add.tsx:188
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:89
-#: src/features/chess/components/new-game.tsx:145
+#: src/features/chess/components/new-game.tsx:150
 #: src/features/chess/components/promotion-dialog.tsx:108
 msgid "Cancel"
 msgstr "Отмена"
@@ -258,14 +258,14 @@ msgstr "Категория этого уведомления"
 msgid "Change notification category"
 msgstr "Изменить категорию уведомления"
 
-#: src/features/chess/index.tsx:492
-#: src/features/chess/index.tsx:524
+#: src/features/chess/index.tsx:501
+#: src/features/chess/index.tsx:533
 msgid "Chat"
 msgstr "Чат"
 
-#: src/features/chess/index.tsx:101
-#: src/features/chess/index.tsx:327
-#: src/features/chess/index.tsx:339
+#: src/features/chess/index.tsx:102
+#: src/features/chess/index.tsx:336
+#: src/features/chess/index.tsx:348
 msgid "Chess"
 msgstr "Шахматы"
 
@@ -302,7 +302,7 @@ msgstr "Выберите системные настройки, светлый �
 msgid "Choose language"
 msgstr "Выберите язык"
 
-#: src/features/chess/components/new-game.tsx:105
+#: src/features/chess/components/new-game.tsx:110
 msgid "Choose opponent"
 msgstr "Выберите соперника"
 
@@ -333,8 +333,8 @@ msgid "Clear selection (Escape)"
 msgstr "Сбросить выбор (Escape)"
 
 #: ../../../lib/web/src/components/ui/dialog.tsx:78
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:332
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:335
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:354
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:357
 #: ../../../lib/web/src/components/ui/sheet.tsx:79
 msgid "Close"
 msgstr "Закрыть"
@@ -355,8 +355,8 @@ msgstr "Закрыть поиск"
 
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:101
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:110
-#: ../../../lib/web/src/components/tree-row.tsx:255
-#: ../../../lib/web/src/components/tree-row.tsx:269
+#: ../../../lib/web/src/components/tree-row.tsx:338
+#: ../../../lib/web/src/components/tree-row.tsx:352
 msgid "Collapse"
 msgstr "Свернуть"
 
@@ -422,7 +422,15 @@ msgstr "Не удалось начать повторную аутентифик
 msgid "Couldn't verify with that account. Please try again."
 msgstr "Не удалось выполнить проверку с этой учётной записью. Пожалуйста, попробуйте ещё раз."
 
-#: src/features/chess/components/new-game.tsx:153
+#: src/features/chess/components/new-game.tsx:64
+msgid "Creating game..."
+msgstr ""
+
+#: src/features/chess/index.tsx:321
+msgid "Creating rematch..."
+msgstr ""
+
+#: src/features/chess/components/new-game.tsx:158
 msgid "Creating..."
 msgstr "Создание..."
 
@@ -455,13 +463,17 @@ msgstr "По умолчанию"
 msgid "Default AI account"
 msgstr "Аккаунт ИИ по умолчанию"
 
-#: src/features/chess/index.tsx:445
+#: src/features/chess/index.tsx:454
 msgid "Delete game"
 msgstr "Удалить игру"
 
 #: ../../../lib/web/src/components/restore-banner.tsx:99
 msgid "Delete your account on the old server"
 msgstr "Удалите свой аккаунт на старом сервере"
+
+#: src/features/chess/index.tsx:289
+msgid "Deleting game..."
+msgstr ""
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:63
 msgid "Desc"
@@ -499,16 +511,20 @@ msgstr "Закрыть"
 msgid "Displays the mobile sidebar."
 msgstr "Отображает мобильную боковую панель."
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:320
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:326
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:338
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:348
 msgid "Download"
 msgstr "Скачать"
+
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:68
+msgid "Download failed"
+msgstr ""
 
 #: src/features/chess/components/chat-message-list.tsx:193
 msgid "Draw agreed"
 msgstr "Ничья согласована"
 
-#: src/features/chess/index.tsx:458
+#: src/features/chess/index.tsx:467
 msgid "Draw offered — waiting for {opponentName}"
 msgstr "Предложена ничья — ожидание ответа от {opponentName}"
 
@@ -534,8 +550,8 @@ msgstr "Введите код из приложения-аутентификат
 
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:101
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:110
-#: ../../../lib/web/src/components/tree-row.tsx:255
-#: ../../../lib/web/src/components/tree-row.tsx:269
+#: ../../../lib/web/src/components/tree-row.tsx:338
+#: ../../../lib/web/src/components/tree-row.tsx:352
 msgid "Expand"
 msgstr "Развернуть"
 
@@ -547,7 +563,7 @@ msgstr "Развернуть боковую панель"
 msgid "Extra large"
 msgstr "Очень крупный"
 
-#: src/features/chess/index.tsx:208
+#: src/features/chess/index.tsx:209
 msgid "Failed to accept draw"
 msgstr "Не удалось принять ничью"
 
@@ -555,23 +571,23 @@ msgstr "Не удалось принять ничью"
 msgid "Failed to add account"
 msgstr "Не удалось добавить аккаунт"
 
-#: src/features/chess/components/new-game.tsx:52
+#: src/features/chess/components/new-game.tsx:66
 msgid "Failed to create game"
 msgstr "Не удалось создать игру"
 
-#: src/features/chess/index.tsx:223
+#: src/features/chess/index.tsx:324
 msgid "Failed to create rematch"
 msgstr "Не удалось создать матч-реванш"
 
-#: src/features/chess/index.tsx:213
+#: src/features/chess/index.tsx:214
 msgid "Failed to decline draw"
 msgstr "Не удалось отклонить ничью"
 
-#: src/features/chess/index.tsx:234
+#: src/features/chess/index.tsx:291
 msgid "Failed to delete game"
 msgstr "Не удалось удалить игру"
 
-#: src/features/chess/index.tsx:203
+#: src/features/chess/index.tsx:204
 msgid "Failed to offer draw"
 msgstr "Не удалось предложить ничью"
 
@@ -579,12 +595,12 @@ msgstr "Не удалось предложить ничью"
 msgid "Failed to remove account"
 msgstr "Не удалось удалить аккаунт"
 
-#: src/features/chess/index.tsx:196
+#: src/features/chess/index.tsx:197
 msgid "Failed to resign"
 msgstr "Не удалось сдаться"
 
-#: src/features/chess/index.tsx:508
-#: src/features/chess/index.tsx:540
+#: src/features/chess/index.tsx:517
+#: src/features/chess/index.tsx:549
 msgid "Failed to send"
 msgstr "Не удалось отправить"
 
@@ -629,11 +645,11 @@ msgstr "Из темы"
 msgid "Full layout"
 msgstr "Полный макет"
 
-#: src/features/chess/components/new-game.tsx:48
+#: src/features/chess/components/new-game.tsx:65
 msgid "Game created"
 msgstr "Игра создана"
 
-#: src/features/chess/index.tsx:230
+#: src/features/chess/index.tsx:290
 msgid "Game deleted"
 msgstr "Игра удалена"
 
@@ -737,6 +753,10 @@ msgstr "Светлая"
 msgid "Load more"
 msgstr "Загрузить ещё"
 
+#: ../../../lib/web/src/components/ui/loading-content.tsx:29
+msgid "Loading content…"
+msgstr ""
+
 #: ../../../lib/web/src/components/ui/load-more.tsx:35
 #: ../../../lib/web/src/features/document/document-page.tsx:90
 msgid "Loading…"
@@ -804,12 +824,12 @@ msgstr "Новый"
 msgid "New game"
 msgstr "Новая игра"
 
-#: src/features/chess/components/new-game.tsx:96
+#: src/features/chess/components/new-game.tsx:101
 msgid "New Game"
 msgstr "Новая игра"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:366
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:371
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:388
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:393
 msgid "Next image"
 msgstr "Следующее изображение"
 
@@ -821,11 +841,11 @@ msgstr "Правила доступа не настроены. Добавьте 
 msgid "No connected accounts"
 msgstr "Нет подключённых учётных записей"
 
-#: src/features/chess/components/new-game.tsx:131
+#: src/features/chess/components/new-game.tsx:136
 msgid "No friends found"
 msgstr "Друзья не найдены"
 
-#: src/features/chess/components/new-game.tsx:113
+#: src/features/chess/components/new-game.tsx:118
 msgid "No friends yet"
 msgstr "Друзей пока нет"
 
@@ -888,7 +908,7 @@ msgstr "Не задано"
 msgid "Notifications"
 msgstr "Уведомления"
 
-#: src/features/chess/index.tsx:429
+#: src/features/chess/index.tsx:438
 msgid "Offer draw"
 msgstr "Предложить ничью"
 
@@ -901,16 +921,16 @@ msgstr "Упс! Страница не найдена!"
 msgid "Open account actions"
 msgstr "Открыть действия учётной записи"
 
-#: ../../../lib/web/src/components/layout/nav-group.tsx:152
-#: ../../../lib/web/src/components/layout/nav-group.tsx:157
+#: ../../../lib/web/src/components/layout/nav-group.tsx:182
+#: ../../../lib/web/src/components/layout/nav-group.tsx:187
 msgid "Open actions"
 msgstr "Открыть действия"
 
-#: src/features/chess/index.tsx:408
+#: src/features/chess/index.tsx:417
 msgid "Open chat panel"
 msgstr "Открыть панель чата"
 
-#: src/features/chess/index.tsx:416
+#: src/features/chess/index.tsx:425
 msgid "Open game actions"
 msgstr "Открыть действия игры"
 
@@ -957,12 +977,12 @@ msgstr "пешка"
 msgid "Please check your internet connection and try again."
 msgstr "Проверьте подключение к интернету и попробуйте снова."
 
-#: src/features/chess/components/new-game.tsx:67
+#: src/features/chess/components/new-game.tsx:57
 msgid "Please select a friend"
 msgstr "Пожалуйста, выберите друга"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:351
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:356
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:373
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:378
 msgid "Previous image"
 msgstr "Предыдущее изображение"
 
@@ -1024,9 +1044,13 @@ msgstr "Относительный (5м, 3ч, 2д)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "Относительный в пределах 24 часов, иначе абсолютный"
 
-#: src/features/chess/index.tsx:442
+#: src/features/chess/index.tsx:451
 msgid "Rematch"
 msgstr "Реванш"
+
+#: src/features/chess/index.tsx:322
+msgid "Rematch created"
+msgstr ""
 
 #: ../../../lib/web/src/features/access/access-list.tsx:265
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:180
@@ -1060,16 +1084,16 @@ msgstr "Сбросить"
 msgid "Reset all settings to default values"
 msgstr "Сбросить все настройки к значениям по умолчанию"
 
-#: src/features/chess/index.tsx:433
-#: src/features/chess/index.tsx:560
+#: src/features/chess/index.tsx:442
+#: src/features/chess/index.tsx:569
 msgid "Resign"
 msgstr "Сдаться"
 
-#: src/features/chess/index.tsx:551
+#: src/features/chess/index.tsx:560
 msgid "Resign game?"
 msgstr "Сдаться в игре?"
 
-#: src/features/chess/index.tsx:557
+#: src/features/chess/index.tsx:566
 msgid "Resigning..."
 msgstr "Сдача..."
 
@@ -1124,7 +1148,7 @@ msgstr "Поиск..."
 msgid "Searching..."
 msgstr "Поиск..."
 
-#: src/features/chess/components/new-game.tsx:130
+#: src/features/chess/components/new-game.tsx:135
 msgid "Select a friend..."
 msgstr "Выберите друга..."
 
@@ -1243,11 +1267,11 @@ msgstr "Мелкий"
 msgid "Spacious"
 msgstr "Просторный"
 
-#: src/features/chess/components/new-game.tsx:99
+#: src/features/chess/components/new-game.tsx:104
 msgid "Start a new chess game"
 msgstr "Начать новую партию в шахматы"
 
-#: src/features/chess/components/new-game.tsx:153
+#: src/features/chess/components/new-game.tsx:158
 msgid "Start game"
 msgstr "Начать игру"
 
@@ -1312,10 +1336,10 @@ msgstr "Переключить столбцы"
 msgid "Toggle right panel"
 msgstr "Переключить правую панель"
 
-#: ../../../lib/web/src/components/layout/nav-group.tsx:321
-#: ../../../lib/web/src/components/layout/nav-group.tsx:328
-#: ../../../lib/web/src/components/layout/nav-group.tsx:451
-#: ../../../lib/web/src/components/layout/nav-group.tsx:458
+#: ../../../lib/web/src/components/layout/nav-group.tsx:351
+#: ../../../lib/web/src/components/layout/nav-group.tsx:358
+#: ../../../lib/web/src/components/layout/nav-group.tsx:481
+#: ../../../lib/web/src/components/layout/nav-group.tsx:488
 msgid "Toggle section"
 msgstr "Свернуть/развернуть раздел"
 
@@ -1462,7 +1486,7 @@ msgid "Wednesday"
 msgstr "Среда"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:399
+#: src/features/chess/index.tsx:408
 msgid "White"
 msgstr "Белый"
 

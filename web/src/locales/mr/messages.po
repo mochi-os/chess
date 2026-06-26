@@ -135,11 +135,11 @@ msgstr "खाते जोडा"
 msgid "Add an account to receive notifications and use services."
 msgstr "सूचना प्राप्त करण्यासाठी आणि सेवा वापरण्यासाठी खाते जोडा."
 
-#: src/features/chess/components/new-game.tsx:121
+#: src/features/chess/components/new-game.tsx:126
 msgid "Add friends"
 msgstr "मित्र जोडा"
 
-#: src/features/chess/components/new-game.tsx:114
+#: src/features/chess/components/new-game.tsx:119
 msgid "Add friends in the People app to start playing"
 msgstr "खेळ सुरू करण्यासाठी People अॅपमध्ये मित्र जोडा"
 
@@ -188,7 +188,7 @@ msgstr "अनपेक्षित त्रुटी आली"
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "तुम्हाला खरोखरच लॉग आउट करायचे आहे का? तुमच्या खात्यात प्रवेश करण्यासाठी तुम्हाला पुन्हा लॉग इन करावे लागेल."
 
-#: src/features/chess/index.tsx:552
+#: src/features/chess/index.tsx:561
 msgid "Are you sure you want to resign? {opponentName} will win the game."
 msgstr "तुम्हाला खरंच राजीनामा द्यायचा आहे का? {opponentName} खेळ जिंकेल."
 
@@ -219,7 +219,7 @@ msgid "bishop"
 msgstr "उंट"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:399
+#: src/features/chess/index.tsx:408
 msgid "Black"
 msgstr "काळा"
 
@@ -244,7 +244,7 @@ msgstr "रुची वाढवा"
 #: ../../../lib/web/src/features/access/access-list.tsx:263
 #: ../../../lib/web/src/features/accounts/account-add.tsx:188
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:89
-#: src/features/chess/components/new-game.tsx:145
+#: src/features/chess/components/new-game.tsx:150
 #: src/features/chess/components/promotion-dialog.tsx:108
 msgid "Cancel"
 msgstr "रद्द करा"
@@ -258,14 +258,14 @@ msgstr "या सूचनेसाठी श्रेणी"
 msgid "Change notification category"
 msgstr "सूचना श्रेणी बदला"
 
-#: src/features/chess/index.tsx:492
-#: src/features/chess/index.tsx:524
+#: src/features/chess/index.tsx:501
+#: src/features/chess/index.tsx:533
 msgid "Chat"
 msgstr "चॅट"
 
-#: src/features/chess/index.tsx:101
-#: src/features/chess/index.tsx:327
-#: src/features/chess/index.tsx:339
+#: src/features/chess/index.tsx:102
+#: src/features/chess/index.tsx:336
+#: src/features/chess/index.tsx:348
 msgid "Chess"
 msgstr "बुद्धिबळ"
 
@@ -302,7 +302,7 @@ msgstr "सिस्टम प्राधान्य, लाइट मोड, 
 msgid "Choose language"
 msgstr "भाषा निवडा"
 
-#: src/features/chess/components/new-game.tsx:105
+#: src/features/chess/components/new-game.tsx:110
 msgid "Choose opponent"
 msgstr "प्रतिस्पर्धी निवडा"
 
@@ -333,8 +333,8 @@ msgid "Clear selection (Escape)"
 msgstr "निवड साफ करा (Escape)"
 
 #: ../../../lib/web/src/components/ui/dialog.tsx:78
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:332
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:335
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:354
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:357
 #: ../../../lib/web/src/components/ui/sheet.tsx:79
 msgid "Close"
 msgstr "बंद करा"
@@ -355,8 +355,8 @@ msgstr "शोध बंद करा"
 
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:101
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:110
-#: ../../../lib/web/src/components/tree-row.tsx:255
-#: ../../../lib/web/src/components/tree-row.tsx:269
+#: ../../../lib/web/src/components/tree-row.tsx:338
+#: ../../../lib/web/src/components/tree-row.tsx:352
 msgid "Collapse"
 msgstr "संकुचित करा"
 
@@ -422,7 +422,15 @@ msgstr "पुन्हा पडताळणी सुरू करता आ�
 msgid "Couldn't verify with that account. Please try again."
 msgstr "त्या खात्याने पडताळणी करता आली नाही. कृपया पुन्हा प्रयत्न करा."
 
-#: src/features/chess/components/new-game.tsx:153
+#: src/features/chess/components/new-game.tsx:64
+msgid "Creating game..."
+msgstr ""
+
+#: src/features/chess/index.tsx:321
+msgid "Creating rematch..."
+msgstr ""
+
+#: src/features/chess/components/new-game.tsx:158
 msgid "Creating..."
 msgstr "तयार करत आहे..."
 
@@ -455,13 +463,17 @@ msgstr "डीफॉल्ट"
 msgid "Default AI account"
 msgstr "डीफॉल्ट AI खाते"
 
-#: src/features/chess/index.tsx:445
+#: src/features/chess/index.tsx:454
 msgid "Delete game"
 msgstr "खेळ हटवा"
 
 #: ../../../lib/web/src/components/restore-banner.tsx:99
 msgid "Delete your account on the old server"
 msgstr "जुन्या सर्व्हरवरील तुमचे खाते हटवा"
+
+#: src/features/chess/index.tsx:289
+msgid "Deleting game..."
+msgstr ""
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:63
 msgid "Desc"
@@ -499,16 +511,20 @@ msgstr "काढून टाका"
 msgid "Displays the mobile sidebar."
 msgstr "मोबाइल साइडबार दाखवते."
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:320
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:326
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:338
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:348
 msgid "Download"
 msgstr "डाउनलोड"
+
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:68
+msgid "Download failed"
+msgstr ""
 
 #: src/features/chess/components/chat-message-list.tsx:193
 msgid "Draw agreed"
 msgstr "बरोबरी मान्य झाली"
 
-#: src/features/chess/index.tsx:458
+#: src/features/chess/index.tsx:467
 msgid "Draw offered — waiting for {opponentName}"
 msgstr "बरोबरी प्रस्तावित — {opponentName} ची वाट पाहत आहे"
 
@@ -534,8 +550,8 @@ msgstr "तुमचा ऑथेंटिकेटर कोड टाका"
 
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:101
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:110
-#: ../../../lib/web/src/components/tree-row.tsx:255
-#: ../../../lib/web/src/components/tree-row.tsx:269
+#: ../../../lib/web/src/components/tree-row.tsx:338
+#: ../../../lib/web/src/components/tree-row.tsx:352
 msgid "Expand"
 msgstr "विस्तृत करा"
 
@@ -547,7 +563,7 @@ msgstr "साइडबार विस्तृत करा"
 msgid "Extra large"
 msgstr "अतिरिक्त मोठे"
 
-#: src/features/chess/index.tsx:208
+#: src/features/chess/index.tsx:209
 msgid "Failed to accept draw"
 msgstr "ड्रॉ स्वीकारण्यात अयशस्वी"
 
@@ -555,23 +571,23 @@ msgstr "ड्रॉ स्वीकारण्यात अयशस्वी"
 msgid "Failed to add account"
 msgstr "खाते जोडण्यात अयशस्वी"
 
-#: src/features/chess/components/new-game.tsx:52
+#: src/features/chess/components/new-game.tsx:66
 msgid "Failed to create game"
 msgstr "गेम तयार करण्यात अयशस्वी"
 
-#: src/features/chess/index.tsx:223
+#: src/features/chess/index.tsx:324
 msgid "Failed to create rematch"
 msgstr "रीमॅच तयार करण्यात अयशस्वी"
 
-#: src/features/chess/index.tsx:213
+#: src/features/chess/index.tsx:214
 msgid "Failed to decline draw"
 msgstr "ड्रॉ नाकारण्यात अयशस्वी"
 
-#: src/features/chess/index.tsx:234
+#: src/features/chess/index.tsx:291
 msgid "Failed to delete game"
 msgstr "गेम हटवण्यात अयशस्वी"
 
-#: src/features/chess/index.tsx:203
+#: src/features/chess/index.tsx:204
 msgid "Failed to offer draw"
 msgstr "ड्रॉ ऑफर करण्यात अयशस्वी"
 
@@ -579,12 +595,12 @@ msgstr "ड्रॉ ऑफर करण्यात अयशस्वी"
 msgid "Failed to remove account"
 msgstr "खाते काढण्यात अयशस्वी"
 
-#: src/features/chess/index.tsx:196
+#: src/features/chess/index.tsx:197
 msgid "Failed to resign"
 msgstr "रिझाइन करण्यात अयशस्वी"
 
-#: src/features/chess/index.tsx:508
-#: src/features/chess/index.tsx:540
+#: src/features/chess/index.tsx:517
+#: src/features/chess/index.tsx:549
 msgid "Failed to send"
 msgstr "पाठवण्यात अयशस्वी"
 
@@ -629,11 +645,11 @@ msgstr "थीममधून"
 msgid "Full layout"
 msgstr "संपूर्ण लेआउट"
 
-#: src/features/chess/components/new-game.tsx:48
+#: src/features/chess/components/new-game.tsx:65
 msgid "Game created"
 msgstr "गेम तयार केला"
 
-#: src/features/chess/index.tsx:230
+#: src/features/chess/index.tsx:290
 msgid "Game deleted"
 msgstr "गेम हटवला"
 
@@ -737,6 +753,10 @@ msgstr "हलके"
 msgid "Load more"
 msgstr "अधिक लोड करा"
 
+#: ../../../lib/web/src/components/ui/loading-content.tsx:29
+msgid "Loading content…"
+msgstr ""
+
 #: ../../../lib/web/src/components/ui/load-more.tsx:35
 #: ../../../lib/web/src/features/document/document-page.tsx:90
 msgid "Loading…"
@@ -804,12 +824,12 @@ msgstr "नवीन"
 msgid "New game"
 msgstr "नवीन गेम"
 
-#: src/features/chess/components/new-game.tsx:96
+#: src/features/chess/components/new-game.tsx:101
 msgid "New Game"
 msgstr "नवीन गेम"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:366
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:371
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:388
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:393
 msgid "Next image"
 msgstr "पुढील इमेज"
 
@@ -821,11 +841,11 @@ msgstr "कोणतेही प्रवेश नियम कॉन्फि
 msgid "No connected accounts"
 msgstr "कनेक्ट केलेले अकाउंट्स नाहीत"
 
-#: src/features/chess/components/new-game.tsx:131
+#: src/features/chess/components/new-game.tsx:136
 msgid "No friends found"
 msgstr "मित्र सापडले नाहीत"
 
-#: src/features/chess/components/new-game.tsx:113
+#: src/features/chess/components/new-game.tsx:118
 msgid "No friends yet"
 msgstr "अद्याप मित्र नाहीत"
 
@@ -888,7 +908,7 @@ msgstr "सेट केलेले नाही"
 msgid "Notifications"
 msgstr "नोटिफिकेशन्स"
 
-#: src/features/chess/index.tsx:429
+#: src/features/chess/index.tsx:438
 msgid "Offer draw"
 msgstr "ड्रॉ ऑफर करा"
 
@@ -901,16 +921,16 @@ msgstr "अरेरे! पेज सापडले नाही!"
 msgid "Open account actions"
 msgstr "अकाउंट क्रिया उघडा"
 
-#: ../../../lib/web/src/components/layout/nav-group.tsx:152
-#: ../../../lib/web/src/components/layout/nav-group.tsx:157
+#: ../../../lib/web/src/components/layout/nav-group.tsx:182
+#: ../../../lib/web/src/components/layout/nav-group.tsx:187
 msgid "Open actions"
 msgstr "क्रिया उघडा"
 
-#: src/features/chess/index.tsx:408
+#: src/features/chess/index.tsx:417
 msgid "Open chat panel"
 msgstr "चॅट पॅनेल उघडा"
 
-#: src/features/chess/index.tsx:416
+#: src/features/chess/index.tsx:425
 msgid "Open game actions"
 msgstr "गेम क्रिया उघडा"
 
@@ -957,12 +977,12 @@ msgstr "प्यादा"
 msgid "Please check your internet connection and try again."
 msgstr "कृपया तुमचे इंटरनेट कनेक्शन तपासा आणि पुन्हा प्रयत्न करा."
 
-#: src/features/chess/components/new-game.tsx:67
+#: src/features/chess/components/new-game.tsx:57
 msgid "Please select a friend"
 msgstr "कृपया एक मित्र निवडा"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:351
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:356
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:373
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:378
 msgid "Previous image"
 msgstr "मागील इमेज"
 
@@ -1024,9 +1044,13 @@ msgstr "सापेक्ष (5m, 3h, 2d)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "24 तासांच्या आत सापेक्ष, अन्यथा निरपेक्ष"
 
-#: src/features/chess/index.tsx:442
+#: src/features/chess/index.tsx:451
 msgid "Rematch"
 msgstr "रीमॅच"
+
+#: src/features/chess/index.tsx:322
+msgid "Rematch created"
+msgstr ""
 
 #: ../../../lib/web/src/features/access/access-list.tsx:265
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:180
@@ -1060,16 +1084,16 @@ msgstr "रीसेट करा"
 msgid "Reset all settings to default values"
 msgstr "सर्व सेटिंग्ज डीफॉल्ट मूल्यांवर रीसेट करा"
 
-#: src/features/chess/index.tsx:433
-#: src/features/chess/index.tsx:560
+#: src/features/chess/index.tsx:442
+#: src/features/chess/index.tsx:569
 msgid "Resign"
 msgstr "राजीनामा द्या"
 
-#: src/features/chess/index.tsx:551
+#: src/features/chess/index.tsx:560
 msgid "Resign game?"
 msgstr "गेमचा राजीनामा द्यायचा?"
 
-#: src/features/chess/index.tsx:557
+#: src/features/chess/index.tsx:566
 msgid "Resigning..."
 msgstr "राजीनामा देत आहे..."
 
@@ -1124,7 +1148,7 @@ msgstr "शोधा..."
 msgid "Searching..."
 msgstr "शोधत आहे..."
 
-#: src/features/chess/components/new-game.tsx:130
+#: src/features/chess/components/new-game.tsx:135
 msgid "Select a friend..."
 msgstr "मित्र निवडा..."
 
@@ -1243,11 +1267,11 @@ msgstr "लहान"
 msgid "Spacious"
 msgstr "विस्तृत"
 
-#: src/features/chess/components/new-game.tsx:99
+#: src/features/chess/components/new-game.tsx:104
 msgid "Start a new chess game"
 msgstr "नवीन बुद्धिबळ गेम सुरू करा"
 
-#: src/features/chess/components/new-game.tsx:153
+#: src/features/chess/components/new-game.tsx:158
 msgid "Start game"
 msgstr "गेम सुरू करा"
 
@@ -1312,10 +1336,10 @@ msgstr "स्तंभ टॉगल करा"
 msgid "Toggle right panel"
 msgstr "उजवे पॅनेल टॉगल करा"
 
-#: ../../../lib/web/src/components/layout/nav-group.tsx:321
-#: ../../../lib/web/src/components/layout/nav-group.tsx:328
-#: ../../../lib/web/src/components/layout/nav-group.tsx:451
-#: ../../../lib/web/src/components/layout/nav-group.tsx:458
+#: ../../../lib/web/src/components/layout/nav-group.tsx:351
+#: ../../../lib/web/src/components/layout/nav-group.tsx:358
+#: ../../../lib/web/src/components/layout/nav-group.tsx:481
+#: ../../../lib/web/src/components/layout/nav-group.tsx:488
 msgid "Toggle section"
 msgstr "विभाग टॉगल करा"
 
@@ -1462,7 +1486,7 @@ msgid "Wednesday"
 msgstr "बुधवार"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:399
+#: src/features/chess/index.tsx:408
 msgid "White"
 msgstr "पांढरा"
 

@@ -135,11 +135,11 @@ msgstr "Бүртгэл нэмэх"
 msgid "Add an account to receive notifications and use services."
 msgstr "Мэдэгдэл хүлээн авах болон үйлчилгээ ашиглахын тулд бүртгэл нэмнэ."
 
-#: src/features/chess/components/new-game.tsx:121
+#: src/features/chess/components/new-game.tsx:126
 msgid "Add friends"
 msgstr "Найзууд нэмэх"
 
-#: src/features/chess/components/new-game.tsx:114
+#: src/features/chess/components/new-game.tsx:119
 msgid "Add friends in the People app to start playing"
 msgstr "Тоглоом эхлүүлэхийн тулд People апп дотор найз нэмнэ үү"
 
@@ -188,7 +188,7 @@ msgstr "Гэнэтийн алдаа гарлаа"
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "Гарахдаа итгэлтэй байна уу? Бүртгэлдээ дахин нэвтрэхдээ дахин нэвтрэх шаардлагатай."
 
-#: src/features/chess/index.tsx:552
+#: src/features/chess/index.tsx:561
 msgid "Are you sure you want to resign? {opponentName} will win the game."
 msgstr "Бууж өгөхдөө итгэлтэй байна уу? {opponentName} тоглоомд ялна."
 
@@ -219,7 +219,7 @@ msgid "bishop"
 msgstr "офицер"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:399
+#: src/features/chess/index.tsx:408
 msgid "Black"
 msgstr "Хар"
 
@@ -244,7 +244,7 @@ msgstr "Сонирхлыг идэвхжүүлэх"
 #: ../../../lib/web/src/features/access/access-list.tsx:263
 #: ../../../lib/web/src/features/accounts/account-add.tsx:188
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:89
-#: src/features/chess/components/new-game.tsx:145
+#: src/features/chess/components/new-game.tsx:150
 #: src/features/chess/components/promotion-dialog.tsx:108
 msgid "Cancel"
 msgstr "Цуцлах"
@@ -258,14 +258,14 @@ msgstr "Энэ мэдэгдлийн ангилал"
 msgid "Change notification category"
 msgstr "Мэдэгдлийн ангиллыг солих"
 
-#: src/features/chess/index.tsx:492
-#: src/features/chess/index.tsx:524
+#: src/features/chess/index.tsx:501
+#: src/features/chess/index.tsx:533
 msgid "Chat"
 msgstr "Чат"
 
-#: src/features/chess/index.tsx:101
-#: src/features/chess/index.tsx:327
-#: src/features/chess/index.tsx:339
+#: src/features/chess/index.tsx:102
+#: src/features/chess/index.tsx:336
+#: src/features/chess/index.tsx:348
 msgid "Chess"
 msgstr "Шатар"
 
@@ -302,7 +302,7 @@ msgstr "Системийн тохиргоо, гэрэл горим, эсвэл �
 msgid "Choose language"
 msgstr "Хэл сонгох"
 
-#: src/features/chess/components/new-game.tsx:105
+#: src/features/chess/components/new-game.tsx:110
 msgid "Choose opponent"
 msgstr "Өрсөлдөгчөө сонгох"
 
@@ -333,8 +333,8 @@ msgid "Clear selection (Escape)"
 msgstr "Сонголтыг цэвэрлэх (Escape)"
 
 #: ../../../lib/web/src/components/ui/dialog.tsx:78
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:332
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:335
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:354
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:357
 #: ../../../lib/web/src/components/ui/sheet.tsx:79
 msgid "Close"
 msgstr "Хаах"
@@ -355,8 +355,8 @@ msgstr "Хайлтыг хаах"
 
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:101
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:110
-#: ../../../lib/web/src/components/tree-row.tsx:255
-#: ../../../lib/web/src/components/tree-row.tsx:269
+#: ../../../lib/web/src/components/tree-row.tsx:338
+#: ../../../lib/web/src/components/tree-row.tsx:352
 msgid "Collapse"
 msgstr "Хураах"
 
@@ -422,7 +422,15 @@ msgstr "Дахин баталгаажуулалтыг эхлүүлж чадса�
 msgid "Couldn't verify with that account. Please try again."
 msgstr "Тэр бүртгэлээр баталгаажуулж чадсангүй. Дахин оролдоно уу."
 
-#: src/features/chess/components/new-game.tsx:153
+#: src/features/chess/components/new-game.tsx:64
+msgid "Creating game..."
+msgstr ""
+
+#: src/features/chess/index.tsx:321
+msgid "Creating rematch..."
+msgstr ""
+
+#: src/features/chess/components/new-game.tsx:158
 msgid "Creating..."
 msgstr "Үүсгэж байна..."
 
@@ -455,13 +463,17 @@ msgstr "Үндсэн"
 msgid "Default AI account"
 msgstr "Үндсэн AI бүртгэл"
 
-#: src/features/chess/index.tsx:445
+#: src/features/chess/index.tsx:454
 msgid "Delete game"
 msgstr "Тоглоом устгах"
 
 #: ../../../lib/web/src/components/restore-banner.tsx:99
 msgid "Delete your account on the old server"
 msgstr "Хуучин серверт байгаа бүртгэлээ устгана уу"
+
+#: src/features/chess/index.tsx:289
+msgid "Deleting game..."
+msgstr ""
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:63
 msgid "Desc"
@@ -499,16 +511,20 @@ msgstr "Болих"
 msgid "Displays the mobile sidebar."
 msgstr "Гар утасны хажуугийн самбарыг харуулна."
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:320
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:326
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:338
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:348
 msgid "Download"
 msgstr "Татах"
+
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:68
+msgid "Download failed"
+msgstr ""
 
 #: src/features/chess/components/chat-message-list.tsx:193
 msgid "Draw agreed"
 msgstr "Тэнцэхээр тохиролцов"
 
-#: src/features/chess/index.tsx:458
+#: src/features/chess/index.tsx:467
 msgid "Draw offered — waiting for {opponentName}"
 msgstr "Тэнцэх санал болгосон — {opponentName}-г хүлээж байна"
 
@@ -534,8 +550,8 @@ msgstr "Баталгаажуулагчийн кодоо оруулна уу"
 
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:101
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:110
-#: ../../../lib/web/src/components/tree-row.tsx:255
-#: ../../../lib/web/src/components/tree-row.tsx:269
+#: ../../../lib/web/src/components/tree-row.tsx:338
+#: ../../../lib/web/src/components/tree-row.tsx:352
 msgid "Expand"
 msgstr "Дэлгэх"
 
@@ -547,7 +563,7 @@ msgstr "Хажуугийн самбарыг тэлэх"
 msgid "Extra large"
 msgstr "Маш том"
 
-#: src/features/chess/index.tsx:208
+#: src/features/chess/index.tsx:209
 msgid "Failed to accept draw"
 msgstr "Тэнцэх саналыг хүлээн авч чадсангүй"
 
@@ -555,23 +571,23 @@ msgstr "Тэнцэх саналыг хүлээн авч чадсангүй"
 msgid "Failed to add account"
 msgstr "Бүртгэл нэмж чадсангүй"
 
-#: src/features/chess/components/new-game.tsx:52
+#: src/features/chess/components/new-game.tsx:66
 msgid "Failed to create game"
 msgstr "Тоглоом үүсгэж чадсангүй"
 
-#: src/features/chess/index.tsx:223
+#: src/features/chess/index.tsx:324
 msgid "Failed to create rematch"
 msgstr "Дахин тоглолт үүсгэж чадсангүй"
 
-#: src/features/chess/index.tsx:213
+#: src/features/chess/index.tsx:214
 msgid "Failed to decline draw"
 msgstr "Тэнцэх саналаас татгалзаж чадсангүй"
 
-#: src/features/chess/index.tsx:234
+#: src/features/chess/index.tsx:291
 msgid "Failed to delete game"
 msgstr "Тоглоом устгаж чадсангүй"
 
-#: src/features/chess/index.tsx:203
+#: src/features/chess/index.tsx:204
 msgid "Failed to offer draw"
 msgstr "Тэнцэх санал тавьж чадсангүй"
 
@@ -579,12 +595,12 @@ msgstr "Тэнцэх санал тавьж чадсангүй"
 msgid "Failed to remove account"
 msgstr "Бүртгэл хасч чадсангүй"
 
-#: src/features/chess/index.tsx:196
+#: src/features/chess/index.tsx:197
 msgid "Failed to resign"
 msgstr "Бууж өгч чадсангүй"
 
-#: src/features/chess/index.tsx:508
-#: src/features/chess/index.tsx:540
+#: src/features/chess/index.tsx:517
+#: src/features/chess/index.tsx:549
 msgid "Failed to send"
 msgstr "Илгээж чадсангүй"
 
@@ -629,11 +645,11 @@ msgstr "Загвараас"
 msgid "Full layout"
 msgstr "Бүрэн зохион байгуулалт"
 
-#: src/features/chess/components/new-game.tsx:48
+#: src/features/chess/components/new-game.tsx:65
 msgid "Game created"
 msgstr "Тоглоом үүсгэгдсэн"
 
-#: src/features/chess/index.tsx:230
+#: src/features/chess/index.tsx:290
 msgid "Game deleted"
 msgstr "Тоглоом устгагдсан"
 
@@ -737,6 +753,10 @@ msgstr "Цайвар"
 msgid "Load more"
 msgstr "Илүү ачаалах"
 
+#: ../../../lib/web/src/components/ui/loading-content.tsx:29
+msgid "Loading content…"
+msgstr ""
+
 #: ../../../lib/web/src/components/ui/load-more.tsx:35
 #: ../../../lib/web/src/features/document/document-page.tsx:90
 msgid "Loading…"
@@ -804,12 +824,12 @@ msgstr "Шинэ"
 msgid "New game"
 msgstr "Шинэ тоглоом"
 
-#: src/features/chess/components/new-game.tsx:96
+#: src/features/chess/components/new-game.tsx:101
 msgid "New Game"
 msgstr "Шинэ тоглоом"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:366
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:371
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:388
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:393
 msgid "Next image"
 msgstr "Дараагийн зураг"
 
@@ -821,11 +841,11 @@ msgstr "Хандалтын дүрэм тохируулагдаагүй байн�
 msgid "No connected accounts"
 msgstr "Холбогдсон бүртгэл байхгүй"
 
-#: src/features/chess/components/new-game.tsx:131
+#: src/features/chess/components/new-game.tsx:136
 msgid "No friends found"
 msgstr "Найз олдсонгүй"
 
-#: src/features/chess/components/new-game.tsx:113
+#: src/features/chess/components/new-game.tsx:118
 msgid "No friends yet"
 msgstr "Найз алга"
 
@@ -888,7 +908,7 @@ msgstr "Тохируулаагүй"
 msgid "Notifications"
 msgstr "Мэдэгдэл"
 
-#: src/features/chess/index.tsx:429
+#: src/features/chess/index.tsx:438
 msgid "Offer draw"
 msgstr "Тэнцэх санал"
 
@@ -901,16 +921,16 @@ msgstr "Уучлаарай! Хуудас олдсонгүй!"
 msgid "Open account actions"
 msgstr "Бүртгэлийн үйлдлүүдийг нээх"
 
-#: ../../../lib/web/src/components/layout/nav-group.tsx:152
-#: ../../../lib/web/src/components/layout/nav-group.tsx:157
+#: ../../../lib/web/src/components/layout/nav-group.tsx:182
+#: ../../../lib/web/src/components/layout/nav-group.tsx:187
 msgid "Open actions"
 msgstr "Үйлдлүүдийг нээх"
 
-#: src/features/chess/index.tsx:408
+#: src/features/chess/index.tsx:417
 msgid "Open chat panel"
 msgstr "Чатны самбар нээх"
 
-#: src/features/chess/index.tsx:416
+#: src/features/chess/index.tsx:425
 msgid "Open game actions"
 msgstr "Тоглоомын үйлдлүүдийг нээх"
 
@@ -957,12 +977,12 @@ msgstr "цэрэг"
 msgid "Please check your internet connection and try again."
 msgstr "Интернет холболтоо шалгаад дахин оролдоно уу."
 
-#: src/features/chess/components/new-game.tsx:67
+#: src/features/chess/components/new-game.tsx:57
 msgid "Please select a friend"
 msgstr "Найзаа сонгоно уу"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:351
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:356
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:373
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:378
 msgid "Previous image"
 msgstr "Өмнөх зураг"
 
@@ -1024,9 +1044,13 @@ msgstr "Харьцангуй (5м, 3ц, 2ө)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "24 цагийн дотор харьцангуй, эс бөгөөс үнэмлэхүй"
 
-#: src/features/chess/index.tsx:442
+#: src/features/chess/index.tsx:451
 msgid "Rematch"
 msgstr "Дахин тоглох"
+
+#: src/features/chess/index.tsx:322
+msgid "Rematch created"
+msgstr ""
 
 #: ../../../lib/web/src/features/access/access-list.tsx:265
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:180
@@ -1060,16 +1084,16 @@ msgstr "Шинэчлэх"
 msgid "Reset all settings to default values"
 msgstr "Бүх тохиргоог анхдагч утгад нь сэргээх"
 
-#: src/features/chess/index.tsx:433
-#: src/features/chess/index.tsx:560
+#: src/features/chess/index.tsx:442
+#: src/features/chess/index.tsx:569
 msgid "Resign"
 msgstr "Тэрсэх"
 
-#: src/features/chess/index.tsx:551
+#: src/features/chess/index.tsx:560
 msgid "Resign game?"
 msgstr "Тоглоомоос тэрсэх үү?"
 
-#: src/features/chess/index.tsx:557
+#: src/features/chess/index.tsx:566
 msgid "Resigning..."
 msgstr "Тэрсэж байна..."
 
@@ -1124,7 +1148,7 @@ msgstr "Хайх..."
 msgid "Searching..."
 msgstr "Хайж байна..."
 
-#: src/features/chess/components/new-game.tsx:130
+#: src/features/chess/components/new-game.tsx:135
 msgid "Select a friend..."
 msgstr "Найз сонгох..."
 
@@ -1243,11 +1267,11 @@ msgstr "Жижиг"
 msgid "Spacious"
 msgstr "Уужим"
 
-#: src/features/chess/components/new-game.tsx:99
+#: src/features/chess/components/new-game.tsx:104
 msgid "Start a new chess game"
 msgstr "Шинэ шатрын тоглоом эхлүүлэх"
 
-#: src/features/chess/components/new-game.tsx:153
+#: src/features/chess/components/new-game.tsx:158
 msgid "Start game"
 msgstr "Тоглоом эхлүүлэх"
 
@@ -1312,10 +1336,10 @@ msgstr "Багануудыг сэлгэх"
 msgid "Toggle right panel"
 msgstr "Баруун самбарыг солих"
 
-#: ../../../lib/web/src/components/layout/nav-group.tsx:321
-#: ../../../lib/web/src/components/layout/nav-group.tsx:328
-#: ../../../lib/web/src/components/layout/nav-group.tsx:451
-#: ../../../lib/web/src/components/layout/nav-group.tsx:458
+#: ../../../lib/web/src/components/layout/nav-group.tsx:351
+#: ../../../lib/web/src/components/layout/nav-group.tsx:358
+#: ../../../lib/web/src/components/layout/nav-group.tsx:481
+#: ../../../lib/web/src/components/layout/nav-group.tsx:488
 msgid "Toggle section"
 msgstr "Хэсгийг сэлгэх"
 
@@ -1462,7 +1486,7 @@ msgid "Wednesday"
 msgstr "Лхагва гараг"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:399
+#: src/features/chess/index.tsx:408
 msgid "White"
 msgstr "Цагаан"
 

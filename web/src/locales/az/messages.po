@@ -135,11 +135,11 @@ msgstr "Hesab əlavə et"
 msgid "Add an account to receive notifications and use services."
 msgstr "Bildiriş almaq və xidmətlərdən istifadə etmək üçün hesab əlavə edin."
 
-#: src/features/chess/components/new-game.tsx:121
+#: src/features/chess/components/new-game.tsx:126
 msgid "Add friends"
 msgstr "Dostlar əlavə et"
 
-#: src/features/chess/components/new-game.tsx:114
+#: src/features/chess/components/new-game.tsx:119
 msgid "Add friends in the People app to start playing"
 msgstr "Oynamağa başlamaq üçün People tətbiqində dost əlavə edin"
 
@@ -188,7 +188,7 @@ msgstr "Gözlənilməz xəta baş verdi"
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "Çıxmaq istədiyinizə əminsiniz? Hesabınıza giriş üçün yenidən daxil olmalı olacaqsınız."
 
-#: src/features/chess/index.tsx:552
+#: src/features/chess/index.tsx:561
 msgid "Are you sure you want to resign? {opponentName} will win the game."
 msgstr "Təslim olmaq istədiyinizə əminsiniz? {opponentName} oyunu qazanacaq."
 
@@ -219,7 +219,7 @@ msgid "bishop"
 msgstr "MCP serverlərinə qoşul"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:399
+#: src/features/chess/index.tsx:408
 msgid "Black"
 msgstr "Qara"
 
@@ -244,7 +244,7 @@ msgstr "Marağı artır"
 #: ../../../lib/web/src/features/access/access-list.tsx:263
 #: ../../../lib/web/src/features/accounts/account-add.tsx:188
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:89
-#: src/features/chess/components/new-game.tsx:145
+#: src/features/chess/components/new-game.tsx:150
 #: src/features/chess/components/promotion-dialog.tsx:108
 msgid "Cancel"
 msgstr "Ləğv et"
@@ -258,14 +258,14 @@ msgstr "Bu bildiriş üçün kateqoriya"
 msgid "Change notification category"
 msgstr "Bildiriş kateqoriyasını dəyişdir"
 
-#: src/features/chess/index.tsx:492
-#: src/features/chess/index.tsx:524
+#: src/features/chess/index.tsx:501
+#: src/features/chess/index.tsx:533
 msgid "Chat"
 msgstr "Söhbət"
 
-#: src/features/chess/index.tsx:101
-#: src/features/chess/index.tsx:327
-#: src/features/chess/index.tsx:339
+#: src/features/chess/index.tsx:102
+#: src/features/chess/index.tsx:336
+#: src/features/chess/index.tsx:348
 msgid "Chess"
 msgstr "Şahmat"
 
@@ -302,7 +302,7 @@ msgstr "Sistem üstünlüyü, açıq rejim və ya tünd rejim arasında seçim e
 msgid "Choose language"
 msgstr "Dil seçin"
 
-#: src/features/chess/components/new-game.tsx:105
+#: src/features/chess/components/new-game.tsx:110
 msgid "Choose opponent"
 msgstr "Rəqib seçin"
 
@@ -333,8 +333,8 @@ msgid "Clear selection (Escape)"
 msgstr "Seçimi təmizlə (Escape)"
 
 #: ../../../lib/web/src/components/ui/dialog.tsx:78
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:332
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:335
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:354
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:357
 #: ../../../lib/web/src/components/ui/sheet.tsx:79
 msgid "Close"
 msgstr "Bağla"
@@ -355,8 +355,8 @@ msgstr "Axtarışı bağla"
 
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:101
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:110
-#: ../../../lib/web/src/components/tree-row.tsx:255
-#: ../../../lib/web/src/components/tree-row.tsx:269
+#: ../../../lib/web/src/components/tree-row.tsx:338
+#: ../../../lib/web/src/components/tree-row.tsx:352
 msgid "Collapse"
 msgstr "Yığ"
 
@@ -422,7 +422,15 @@ msgstr "Yenidən autentifikasiyanı başlatmaq mümkün olmadı. Zəhmət olmasa
 msgid "Couldn't verify with that account. Please try again."
 msgstr "Bu hesabla doğrulama mümkün olmadı. Zəhmət olmasa, yenidən cəhd edin."
 
-#: src/features/chess/components/new-game.tsx:153
+#: src/features/chess/components/new-game.tsx:64
+msgid "Creating game..."
+msgstr ""
+
+#: src/features/chess/index.tsx:321
+msgid "Creating rematch..."
+msgstr ""
+
+#: src/features/chess/components/new-game.tsx:158
 msgid "Creating..."
 msgstr "Yaradılır..."
 
@@ -455,13 +463,17 @@ msgstr "Default"
 msgid "Default AI account"
 msgstr "Default AI hesabı"
 
-#: src/features/chess/index.tsx:445
+#: src/features/chess/index.tsx:454
 msgid "Delete game"
 msgstr "Oyunu sil"
 
 #: ../../../lib/web/src/components/restore-banner.tsx:99
 msgid "Delete your account on the old server"
 msgstr "Köhnə serverdə hesabınızı silin"
+
+#: src/features/chess/index.tsx:289
+msgid "Deleting game..."
+msgstr ""
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:63
 msgid "Desc"
@@ -499,16 +511,20 @@ msgstr "Rədd et"
 msgid "Displays the mobile sidebar."
 msgstr "Mobil yan paneli göstərir."
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:320
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:326
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:338
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:348
 msgid "Download"
 msgstr "Yüklə"
+
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:68
+msgid "Download failed"
+msgstr ""
 
 #: src/features/chess/components/chat-message-list.tsx:193
 msgid "Draw agreed"
 msgstr "Heç-heçə razılaşıldı"
 
-#: src/features/chess/index.tsx:458
+#: src/features/chess/index.tsx:467
 msgid "Draw offered — waiting for {opponentName}"
 msgstr "Heç-heçə təklif edildi — {opponentName} gözlənilir"
 
@@ -534,8 +550,8 @@ msgstr "Autentifikator kodunuzu daxil edin"
 
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:101
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:110
-#: ../../../lib/web/src/components/tree-row.tsx:255
-#: ../../../lib/web/src/components/tree-row.tsx:269
+#: ../../../lib/web/src/components/tree-row.tsx:338
+#: ../../../lib/web/src/components/tree-row.tsx:352
 msgid "Expand"
 msgstr "Genişlət"
 
@@ -547,7 +563,7 @@ msgstr "Yan paneli genişləndir"
 msgid "Extra large"
 msgstr "Çox böyük"
 
-#: src/features/chess/index.tsx:208
+#: src/features/chess/index.tsx:209
 msgid "Failed to accept draw"
 msgstr "Heç-heçəni qəbul etmək alınmadı"
 
@@ -555,23 +571,23 @@ msgstr "Heç-heçəni qəbul etmək alınmadı"
 msgid "Failed to add account"
 msgstr "Hesab əlavə etmək alınmadı"
 
-#: src/features/chess/components/new-game.tsx:52
+#: src/features/chess/components/new-game.tsx:66
 msgid "Failed to create game"
 msgstr "Oyun yaratmaq alınmadı"
 
-#: src/features/chess/index.tsx:223
+#: src/features/chess/index.tsx:324
 msgid "Failed to create rematch"
 msgstr "Təkrar oyun yaratmaq alınmadı"
 
-#: src/features/chess/index.tsx:213
+#: src/features/chess/index.tsx:214
 msgid "Failed to decline draw"
 msgstr "Heç-heçəni rədd etmək alınmadı"
 
-#: src/features/chess/index.tsx:234
+#: src/features/chess/index.tsx:291
 msgid "Failed to delete game"
 msgstr "Oyunu silmək alınmadı"
 
-#: src/features/chess/index.tsx:203
+#: src/features/chess/index.tsx:204
 msgid "Failed to offer draw"
 msgstr "Heç-heçə təklif etmək alınmadı"
 
@@ -579,12 +595,12 @@ msgstr "Heç-heçə təklif etmək alınmadı"
 msgid "Failed to remove account"
 msgstr "Hesabı silmək alınmadı"
 
-#: src/features/chess/index.tsx:196
+#: src/features/chess/index.tsx:197
 msgid "Failed to resign"
 msgstr "Təslim olmaq alınmadı"
 
-#: src/features/chess/index.tsx:508
-#: src/features/chess/index.tsx:540
+#: src/features/chess/index.tsx:517
+#: src/features/chess/index.tsx:549
 msgid "Failed to send"
 msgstr "Göndərmək alınmadı"
 
@@ -629,11 +645,11 @@ msgstr "Mövzudan"
 msgid "Full layout"
 msgstr "Tam tərtibat"
 
-#: src/features/chess/components/new-game.tsx:48
+#: src/features/chess/components/new-game.tsx:65
 msgid "Game created"
 msgstr "Oyun yaradıldı"
 
-#: src/features/chess/index.tsx:230
+#: src/features/chess/index.tsx:290
 msgid "Game deleted"
 msgstr "Oyun silindi"
 
@@ -737,6 +753,10 @@ msgstr "İşıqlı"
 msgid "Load more"
 msgstr "Daha çox yüklə"
 
+#: ../../../lib/web/src/components/ui/loading-content.tsx:29
+msgid "Loading content…"
+msgstr ""
+
 #: ../../../lib/web/src/components/ui/load-more.tsx:35
 #: ../../../lib/web/src/features/document/document-page.tsx:90
 msgid "Loading…"
@@ -804,12 +824,12 @@ msgstr "Yeni"
 msgid "New game"
 msgstr "Yeni oyun"
 
-#: src/features/chess/components/new-game.tsx:96
+#: src/features/chess/components/new-game.tsx:101
 msgid "New Game"
 msgstr "Yeni Oyun"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:366
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:371
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:388
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:393
 msgid "Next image"
 msgstr "Növbəti şəkil"
 
@@ -821,11 +841,11 @@ msgstr "Giriş qaydaları konfiqurasiya edilməyib. Bu resursa kimin daxil ola b
 msgid "No connected accounts"
 msgstr "Bağlı hesab yoxdur"
 
-#: src/features/chess/components/new-game.tsx:131
+#: src/features/chess/components/new-game.tsx:136
 msgid "No friends found"
 msgstr "Dost tapılmadı"
 
-#: src/features/chess/components/new-game.tsx:113
+#: src/features/chess/components/new-game.tsx:118
 msgid "No friends yet"
 msgstr "Hələ dost yoxdur"
 
@@ -888,7 +908,7 @@ msgstr "Təyin edilməyib"
 msgid "Notifications"
 msgstr "Bildirişlər"
 
-#: src/features/chess/index.tsx:429
+#: src/features/chess/index.tsx:438
 msgid "Offer draw"
 msgstr "Heç-heçə təklif et"
 
@@ -901,16 +921,16 @@ msgstr "Hopa! Səhifə Tapılmadı!"
 msgid "Open account actions"
 msgstr "Hesab əməliyyatlarını aç"
 
-#: ../../../lib/web/src/components/layout/nav-group.tsx:152
-#: ../../../lib/web/src/components/layout/nav-group.tsx:157
+#: ../../../lib/web/src/components/layout/nav-group.tsx:182
+#: ../../../lib/web/src/components/layout/nav-group.tsx:187
 msgid "Open actions"
 msgstr "Əməliyyatları aç"
 
-#: src/features/chess/index.tsx:408
+#: src/features/chess/index.tsx:417
 msgid "Open chat panel"
 msgstr "Söhbət panelini aç"
 
-#: src/features/chess/index.tsx:416
+#: src/features/chess/index.tsx:425
 msgid "Open game actions"
 msgstr "Oyun əməliyyatlarını aç"
 
@@ -957,12 +977,12 @@ msgstr "vəzir"
 msgid "Please check your internet connection and try again."
 msgstr "İnternet bağlantınızı yoxlayıb yenidən cəhd edin."
 
-#: src/features/chess/components/new-game.tsx:67
+#: src/features/chess/components/new-game.tsx:57
 msgid "Please select a friend"
 msgstr "Dost seçin"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:351
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:356
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:373
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:378
 msgid "Previous image"
 msgstr "Əvvəlki şəkil"
 
@@ -1024,9 +1044,13 @@ msgstr "Nisbi (5d, 3s, 2g)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "24 saat içində nisbi, əks halda mütləq"
 
-#: src/features/chess/index.tsx:442
+#: src/features/chess/index.tsx:451
 msgid "Rematch"
 msgstr "Yenidən qarşılaşma"
+
+#: src/features/chess/index.tsx:322
+msgid "Rematch created"
+msgstr ""
 
 #: ../../../lib/web/src/features/access/access-list.tsx:265
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:180
@@ -1060,16 +1084,16 @@ msgstr "Sıfırla"
 msgid "Reset all settings to default values"
 msgstr "Bütün parametrləri standart dəyərlərə sıfırla"
 
-#: src/features/chess/index.tsx:433
-#: src/features/chess/index.tsx:560
+#: src/features/chess/index.tsx:442
+#: src/features/chess/index.tsx:569
 msgid "Resign"
 msgstr "Təslim ol"
 
-#: src/features/chess/index.tsx:551
+#: src/features/chess/index.tsx:560
 msgid "Resign game?"
 msgstr "Oyundan təslim olunsun?"
 
-#: src/features/chess/index.tsx:557
+#: src/features/chess/index.tsx:566
 msgid "Resigning..."
 msgstr "Təslim olunur..."
 
@@ -1124,7 +1148,7 @@ msgstr "Axtar..."
 msgid "Searching..."
 msgstr "Axtarılır..."
 
-#: src/features/chess/components/new-game.tsx:130
+#: src/features/chess/components/new-game.tsx:135
 msgid "Select a friend..."
 msgstr "Dost seç..."
 
@@ -1243,11 +1267,11 @@ msgstr "Kiçik"
 msgid "Spacious"
 msgstr "Geniş"
 
-#: src/features/chess/components/new-game.tsx:99
+#: src/features/chess/components/new-game.tsx:104
 msgid "Start a new chess game"
 msgstr "Yeni şahmat oyununa başla"
 
-#: src/features/chess/components/new-game.tsx:153
+#: src/features/chess/components/new-game.tsx:158
 msgid "Start game"
 msgstr "Oyuna başla"
 
@@ -1312,10 +1336,10 @@ msgstr "Görünüş seçimlərini açıb-bağla"
 msgid "Toggle right panel"
 msgstr "Sağ paneli aç/bağla"
 
-#: ../../../lib/web/src/components/layout/nav-group.tsx:321
-#: ../../../lib/web/src/components/layout/nav-group.tsx:328
-#: ../../../lib/web/src/components/layout/nav-group.tsx:451
-#: ../../../lib/web/src/components/layout/nav-group.tsx:458
+#: ../../../lib/web/src/components/layout/nav-group.tsx:351
+#: ../../../lib/web/src/components/layout/nav-group.tsx:358
+#: ../../../lib/web/src/components/layout/nav-group.tsx:481
+#: ../../../lib/web/src/components/layout/nav-group.tsx:488
 msgid "Toggle section"
 msgstr "Bölməni aç/bağla"
 
@@ -1462,7 +1486,7 @@ msgid "Wednesday"
 msgstr "Digər wiki-lər bu wiki-ni replikasiya etdikdə burada görünəcəklər."
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:399
+#: src/features/chess/index.tsx:408
 msgid "White"
 msgstr "{colLabel}{rowLabel}-də ağ daş"
 

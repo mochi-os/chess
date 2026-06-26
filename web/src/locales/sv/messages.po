@@ -135,11 +135,11 @@ msgstr "Lägg till konto"
 msgid "Add an account to receive notifications and use services."
 msgstr "Lägg till ett konto för att ta emot aviseringar och använda tjänster."
 
-#: src/features/chess/components/new-game.tsx:121
+#: src/features/chess/components/new-game.tsx:126
 msgid "Add friends"
 msgstr "Lägg till vänner"
 
-#: src/features/chess/components/new-game.tsx:114
+#: src/features/chess/components/new-game.tsx:119
 msgid "Add friends in the People app to start playing"
 msgstr "Lägg till vänner i People-appen för att börja spela"
 
@@ -188,7 +188,7 @@ msgstr "Ett oväntat fel uppstod"
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "Är du säker på att du vill logga ut? Du behöver logga in igen för att komma åt ditt konto."
 
-#: src/features/chess/index.tsx:552
+#: src/features/chess/index.tsx:561
 msgid "Are you sure you want to resign? {opponentName} will win the game."
 msgstr "Är du säker på att du vill ge upp? {opponentName} kommer att vinna partiet."
 
@@ -219,7 +219,7 @@ msgid "bishop"
 msgstr "löpare"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:399
+#: src/features/chess/index.tsx:408
 msgid "Black"
 msgstr "Svart"
 
@@ -244,7 +244,7 @@ msgstr "Öka intresse"
 #: ../../../lib/web/src/features/access/access-list.tsx:263
 #: ../../../lib/web/src/features/accounts/account-add.tsx:188
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:89
-#: src/features/chess/components/new-game.tsx:145
+#: src/features/chess/components/new-game.tsx:150
 #: src/features/chess/components/promotion-dialog.tsx:108
 msgid "Cancel"
 msgstr "Avbryt"
@@ -258,14 +258,14 @@ msgstr "Kategori för denna avisering"
 msgid "Change notification category"
 msgstr "Ändra aviseringskategori"
 
-#: src/features/chess/index.tsx:492
-#: src/features/chess/index.tsx:524
+#: src/features/chess/index.tsx:501
+#: src/features/chess/index.tsx:533
 msgid "Chat"
 msgstr "Chatt"
 
-#: src/features/chess/index.tsx:101
-#: src/features/chess/index.tsx:327
-#: src/features/chess/index.tsx:339
+#: src/features/chess/index.tsx:102
+#: src/features/chess/index.tsx:336
+#: src/features/chess/index.tsx:348
 msgid "Chess"
 msgstr "Schack"
 
@@ -302,7 +302,7 @@ msgstr "Välj mellan systeminställning, ljust läge eller mörkt läge"
 msgid "Choose language"
 msgstr "Välj språk"
 
-#: src/features/chess/components/new-game.tsx:105
+#: src/features/chess/components/new-game.tsx:110
 msgid "Choose opponent"
 msgstr "Välj motståndare"
 
@@ -333,8 +333,8 @@ msgid "Clear selection (Escape)"
 msgstr "Rensa val (Escape)"
 
 #: ../../../lib/web/src/components/ui/dialog.tsx:78
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:332
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:335
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:354
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:357
 #: ../../../lib/web/src/components/ui/sheet.tsx:79
 msgid "Close"
 msgstr "Stäng"
@@ -355,8 +355,8 @@ msgstr "Stäng sökning"
 
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:101
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:110
-#: ../../../lib/web/src/components/tree-row.tsx:255
-#: ../../../lib/web/src/components/tree-row.tsx:269
+#: ../../../lib/web/src/components/tree-row.tsx:338
+#: ../../../lib/web/src/components/tree-row.tsx:352
 msgid "Collapse"
 msgstr "Fäll ihop"
 
@@ -422,7 +422,15 @@ msgstr "Det gick inte att starta omautentiseringen. Försök igen."
 msgid "Couldn't verify with that account. Please try again."
 msgstr "Det gick inte att verifiera med det kontot. Försök igen."
 
-#: src/features/chess/components/new-game.tsx:153
+#: src/features/chess/components/new-game.tsx:64
+msgid "Creating game..."
+msgstr ""
+
+#: src/features/chess/index.tsx:321
+msgid "Creating rematch..."
+msgstr ""
+
+#: src/features/chess/components/new-game.tsx:158
 msgid "Creating..."
 msgstr "Skapar..."
 
@@ -455,13 +463,17 @@ msgstr "Standard"
 msgid "Default AI account"
 msgstr "Standard AI-konto"
 
-#: src/features/chess/index.tsx:445
+#: src/features/chess/index.tsx:454
 msgid "Delete game"
 msgstr "Ta bort spel"
 
 #: ../../../lib/web/src/components/restore-banner.tsx:99
 msgid "Delete your account on the old server"
 msgstr "Ta bort ditt konto på den gamla servern"
+
+#: src/features/chess/index.tsx:289
+msgid "Deleting game..."
+msgstr ""
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:63
 msgid "Desc"
@@ -499,16 +511,20 @@ msgstr "Avfärda"
 msgid "Displays the mobile sidebar."
 msgstr "Visar mobil-sidofältet."
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:320
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:326
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:338
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:348
 msgid "Download"
 msgstr "Ladda ner"
+
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:68
+msgid "Download failed"
+msgstr ""
 
 #: src/features/chess/components/chat-message-list.tsx:193
 msgid "Draw agreed"
 msgstr "Remi överenskommen"
 
-#: src/features/chess/index.tsx:458
+#: src/features/chess/index.tsx:467
 msgid "Draw offered — waiting for {opponentName}"
 msgstr "Remi erbjuden — väntar på {opponentName}"
 
@@ -534,8 +550,8 @@ msgstr "Ange din autentiseringskod"
 
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:101
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:110
-#: ../../../lib/web/src/components/tree-row.tsx:255
-#: ../../../lib/web/src/components/tree-row.tsx:269
+#: ../../../lib/web/src/components/tree-row.tsx:338
+#: ../../../lib/web/src/components/tree-row.tsx:352
 msgid "Expand"
 msgstr "Expandera"
 
@@ -547,7 +563,7 @@ msgstr "Expandera sidofält"
 msgid "Extra large"
 msgstr "Extra stor"
 
-#: src/features/chess/index.tsx:208
+#: src/features/chess/index.tsx:209
 msgid "Failed to accept draw"
 msgstr "Kunde inte acceptera remi"
 
@@ -555,23 +571,23 @@ msgstr "Kunde inte acceptera remi"
 msgid "Failed to add account"
 msgstr "Kunde inte lägga till konto"
 
-#: src/features/chess/components/new-game.tsx:52
+#: src/features/chess/components/new-game.tsx:66
 msgid "Failed to create game"
 msgstr "Kunde inte skapa spel"
 
-#: src/features/chess/index.tsx:223
+#: src/features/chess/index.tsx:324
 msgid "Failed to create rematch"
 msgstr "Kunde inte skapa returmatch"
 
-#: src/features/chess/index.tsx:213
+#: src/features/chess/index.tsx:214
 msgid "Failed to decline draw"
 msgstr "Kunde inte avböja remi"
 
-#: src/features/chess/index.tsx:234
+#: src/features/chess/index.tsx:291
 msgid "Failed to delete game"
 msgstr "Kunde inte radera spel"
 
-#: src/features/chess/index.tsx:203
+#: src/features/chess/index.tsx:204
 msgid "Failed to offer draw"
 msgstr "Kunde inte erbjuda remi"
 
@@ -579,12 +595,12 @@ msgstr "Kunde inte erbjuda remi"
 msgid "Failed to remove account"
 msgstr "Kunde inte ta bort konto"
 
-#: src/features/chess/index.tsx:196
+#: src/features/chess/index.tsx:197
 msgid "Failed to resign"
 msgstr "Kunde inte ge upp"
 
-#: src/features/chess/index.tsx:508
-#: src/features/chess/index.tsx:540
+#: src/features/chess/index.tsx:517
+#: src/features/chess/index.tsx:549
 msgid "Failed to send"
 msgstr "Kunde inte skicka"
 
@@ -629,11 +645,11 @@ msgstr "Från tema"
 msgid "Full layout"
 msgstr "Fullständig layout"
 
-#: src/features/chess/components/new-game.tsx:48
+#: src/features/chess/components/new-game.tsx:65
 msgid "Game created"
 msgstr "Spel skapat"
 
-#: src/features/chess/index.tsx:230
+#: src/features/chess/index.tsx:290
 msgid "Game deleted"
 msgstr "Spel raderat"
 
@@ -737,6 +753,10 @@ msgstr "Ljust"
 msgid "Load more"
 msgstr "Läs in fler"
 
+#: ../../../lib/web/src/components/ui/loading-content.tsx:29
+msgid "Loading content…"
+msgstr ""
+
 #: ../../../lib/web/src/components/ui/load-more.tsx:35
 #: ../../../lib/web/src/features/document/document-page.tsx:90
 msgid "Loading…"
@@ -804,12 +824,12 @@ msgstr "Ny"
 msgid "New game"
 msgstr "Nytt spel"
 
-#: src/features/chess/components/new-game.tsx:96
+#: src/features/chess/components/new-game.tsx:101
 msgid "New Game"
 msgstr "Nytt spel"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:366
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:371
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:388
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:393
 msgid "Next image"
 msgstr "Nästa bild"
 
@@ -821,11 +841,11 @@ msgstr "Inga åtkomstregler konfigurerade. Lägg till regler för att styra vem 
 msgid "No connected accounts"
 msgstr "Inga anslutna konton"
 
-#: src/features/chess/components/new-game.tsx:131
+#: src/features/chess/components/new-game.tsx:136
 msgid "No friends found"
 msgstr "Inga vänner hittades"
 
-#: src/features/chess/components/new-game.tsx:113
+#: src/features/chess/components/new-game.tsx:118
 msgid "No friends yet"
 msgstr "Inga vänner ännu"
 
@@ -888,7 +908,7 @@ msgstr "Ej inställd"
 msgid "Notifications"
 msgstr "Aviseringar"
 
-#: src/features/chess/index.tsx:429
+#: src/features/chess/index.tsx:438
 msgid "Offer draw"
 msgstr "Erbjud remi"
 
@@ -901,16 +921,16 @@ msgstr "Hoppsan! Sidan hittades inte!"
 msgid "Open account actions"
 msgstr "Öppna kontoåtgärder"
 
-#: ../../../lib/web/src/components/layout/nav-group.tsx:152
-#: ../../../lib/web/src/components/layout/nav-group.tsx:157
+#: ../../../lib/web/src/components/layout/nav-group.tsx:182
+#: ../../../lib/web/src/components/layout/nav-group.tsx:187
 msgid "Open actions"
 msgstr "Öppna åtgärder"
 
-#: src/features/chess/index.tsx:408
+#: src/features/chess/index.tsx:417
 msgid "Open chat panel"
 msgstr "Öppna chattpanel"
 
-#: src/features/chess/index.tsx:416
+#: src/features/chess/index.tsx:425
 msgid "Open game actions"
 msgstr "Öppna spelåtgärder"
 
@@ -957,12 +977,12 @@ msgstr "bonde"
 msgid "Please check your internet connection and try again."
 msgstr "Kontrollera din internetanslutning och försök igen."
 
-#: src/features/chess/components/new-game.tsx:67
+#: src/features/chess/components/new-game.tsx:57
 msgid "Please select a friend"
 msgstr "Välj en vän"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:351
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:356
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:373
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:378
 msgid "Previous image"
 msgstr "Föregående bild"
 
@@ -1024,9 +1044,13 @@ msgstr "Relativ (5 min, 3 tim, 2 d)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "Relativ inom 24 timmar, annars absolut"
 
-#: src/features/chess/index.tsx:442
+#: src/features/chess/index.tsx:451
 msgid "Rematch"
 msgstr "Revansch"
+
+#: src/features/chess/index.tsx:322
+msgid "Rematch created"
+msgstr ""
 
 #: ../../../lib/web/src/features/access/access-list.tsx:265
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:180
@@ -1060,16 +1084,16 @@ msgstr "Återställ"
 msgid "Reset all settings to default values"
 msgstr "Återställ alla inställningar till standardvärden"
 
-#: src/features/chess/index.tsx:433
-#: src/features/chess/index.tsx:560
+#: src/features/chess/index.tsx:442
+#: src/features/chess/index.tsx:569
 msgid "Resign"
 msgstr "Ge upp"
 
-#: src/features/chess/index.tsx:551
+#: src/features/chess/index.tsx:560
 msgid "Resign game?"
 msgstr "Ge upp partiet?"
 
-#: src/features/chess/index.tsx:557
+#: src/features/chess/index.tsx:566
 msgid "Resigning..."
 msgstr "Ger upp..."
 
@@ -1124,7 +1148,7 @@ msgstr "Sök..."
 msgid "Searching..."
 msgstr "Söker..."
 
-#: src/features/chess/components/new-game.tsx:130
+#: src/features/chess/components/new-game.tsx:135
 msgid "Select a friend..."
 msgstr "Välj en vän..."
 
@@ -1243,11 +1267,11 @@ msgstr "Liten"
 msgid "Spacious"
 msgstr "Rymlig"
 
-#: src/features/chess/components/new-game.tsx:99
+#: src/features/chess/components/new-game.tsx:104
 msgid "Start a new chess game"
 msgstr "Starta ett nytt schackparti"
 
-#: src/features/chess/components/new-game.tsx:153
+#: src/features/chess/components/new-game.tsx:158
 msgid "Start game"
 msgstr "Starta spel"
 
@@ -1312,10 +1336,10 @@ msgstr "Växla kolumner"
 msgid "Toggle right panel"
 msgstr "Växla höger panel"
 
-#: ../../../lib/web/src/components/layout/nav-group.tsx:321
-#: ../../../lib/web/src/components/layout/nav-group.tsx:328
-#: ../../../lib/web/src/components/layout/nav-group.tsx:451
-#: ../../../lib/web/src/components/layout/nav-group.tsx:458
+#: ../../../lib/web/src/components/layout/nav-group.tsx:351
+#: ../../../lib/web/src/components/layout/nav-group.tsx:358
+#: ../../../lib/web/src/components/layout/nav-group.tsx:481
+#: ../../../lib/web/src/components/layout/nav-group.tsx:488
 msgid "Toggle section"
 msgstr "Växla avsnitt"
 
@@ -1462,7 +1486,7 @@ msgid "Wednesday"
 msgstr "Onsdag"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:399
+#: src/features/chess/index.tsx:408
 msgid "White"
 msgstr "Vit"
 

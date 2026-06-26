@@ -135,11 +135,11 @@ msgstr "បន្ថែមគណនី"
 msgid "Add an account to receive notifications and use services."
 msgstr "បន្ថែមគណនីដើម្បីទទួលបានការជូនដំណឹង និងប្រើប្រាស់សេវាកម្ម។"
 
-#: src/features/chess/components/new-game.tsx:121
+#: src/features/chess/components/new-game.tsx:126
 msgid "Add friends"
 msgstr "បន្ថែមមិត្តភក្តិ"
 
-#: src/features/chess/components/new-game.tsx:114
+#: src/features/chess/components/new-game.tsx:119
 msgid "Add friends in the People app to start playing"
 msgstr "បន្ថែមមិត្តភក្តិក្នុងកម្មវិធី People ដើម្បីចាប់ផ្តើមលេង"
 
@@ -188,7 +188,7 @@ msgstr "មានកំហុសដែលមិនបានរំពឹងទុ
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "តើអ្នកប្រាកដថាចង់ចាកចេញមែនទេ? អ្នកនឹងត្រូវចូលម្តងទៀតដើម្បីចូលប្រើគណនីរបស់អ្នក។"
 
-#: src/features/chess/index.tsx:552
+#: src/features/chess/index.tsx:561
 msgid "Are you sure you want to resign? {opponentName} will win the game."
 msgstr "តើអ្នកប្រាកដថាចង់លាលែងពីតំណែងមែនទេ? {opponentName} នឹងឈ្នះហ្គេម។"
 
@@ -219,7 +219,7 @@ msgid "bishop"
 msgstr "bishop"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:399
+#: src/features/chess/index.tsx:408
 msgid "Black"
 msgstr "ខ្មៅ"
 
@@ -244,7 +244,7 @@ msgstr "បង្កើនចំណាប់អារម្មណ៍"
 #: ../../../lib/web/src/features/access/access-list.tsx:263
 #: ../../../lib/web/src/features/accounts/account-add.tsx:188
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:89
-#: src/features/chess/components/new-game.tsx:145
+#: src/features/chess/components/new-game.tsx:150
 #: src/features/chess/components/promotion-dialog.tsx:108
 msgid "Cancel"
 msgstr "បោះបង់"
@@ -258,14 +258,14 @@ msgstr "ប្រភេទសម្រាប់ការជូនដំណឹង
 msgid "Change notification category"
 msgstr "ប្ដូរប្រភេទការជូនដំណឹង"
 
-#: src/features/chess/index.tsx:492
-#: src/features/chess/index.tsx:524
+#: src/features/chess/index.tsx:501
+#: src/features/chess/index.tsx:533
 msgid "Chat"
 msgstr "ជជែក"
 
-#: src/features/chess/index.tsx:101
-#: src/features/chess/index.tsx:327
-#: src/features/chess/index.tsx:339
+#: src/features/chess/index.tsx:102
+#: src/features/chess/index.tsx:336
+#: src/features/chess/index.tsx:348
 msgid "Chess"
 msgstr "Chess"
 
@@ -302,7 +302,7 @@ msgstr "ជ្រើសរើសរវាងចំណូលចិត្តប្
 msgid "Choose language"
 msgstr "ជ្រើសរើសភាសា"
 
-#: src/features/chess/components/new-game.tsx:105
+#: src/features/chess/components/new-game.tsx:110
 msgid "Choose opponent"
 msgstr "ជ្រើសរើសគូប្រកួត"
 
@@ -333,8 +333,8 @@ msgid "Clear selection (Escape)"
 msgstr "សម្អាតការជ្រើសរើស (Escape)"
 
 #: ../../../lib/web/src/components/ui/dialog.tsx:78
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:332
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:335
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:354
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:357
 #: ../../../lib/web/src/components/ui/sheet.tsx:79
 msgid "Close"
 msgstr "បិទ"
@@ -355,8 +355,8 @@ msgstr "បិទការស្វែងរក"
 
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:101
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:110
-#: ../../../lib/web/src/components/tree-row.tsx:255
-#: ../../../lib/web/src/components/tree-row.tsx:269
+#: ../../../lib/web/src/components/tree-row.tsx:338
+#: ../../../lib/web/src/components/tree-row.tsx:352
 msgid "Collapse"
 msgstr "បង្រួម"
 
@@ -422,7 +422,15 @@ msgstr "មិនអាចចាប់ផ្ដើមការផ្ទៀងផ
 msgid "Couldn't verify with that account. Please try again."
 msgstr "មិនអាចផ្ទៀងផ្ទាត់ជាមួយគណនីនោះបានទេ។ សូមព្យាយាមម្តងទៀត។"
 
-#: src/features/chess/components/new-game.tsx:153
+#: src/features/chess/components/new-game.tsx:64
+msgid "Creating game..."
+msgstr ""
+
+#: src/features/chess/index.tsx:321
+msgid "Creating rematch..."
+msgstr ""
+
+#: src/features/chess/components/new-game.tsx:158
 msgid "Creating..."
 msgstr "កំពុងបង្កើត..."
 
@@ -455,13 +463,17 @@ msgstr "លំនាំដើម"
 msgid "Default AI account"
 msgstr "គណនី AI លំនាំដើម"
 
-#: src/features/chess/index.tsx:445
+#: src/features/chess/index.tsx:454
 msgid "Delete game"
 msgstr "លុបហ្គេម"
 
 #: ../../../lib/web/src/components/restore-banner.tsx:99
 msgid "Delete your account on the old server"
 msgstr "លុបគណនីរបស់អ្នកនៅម៉ាស៊ីនមេចាស់"
+
+#: src/features/chess/index.tsx:289
+msgid "Deleting game..."
+msgstr ""
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:63
 msgid "Desc"
@@ -499,16 +511,20 @@ msgstr "បិទ"
 msgid "Displays the mobile sidebar."
 msgstr "បង្ហាញរបារចំហៀងទូរស័ព្ទ។"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:320
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:326
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:338
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:348
 msgid "Download"
 msgstr "ទាញយក"
+
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:68
+msgid "Download failed"
+msgstr ""
 
 #: src/features/chess/components/chat-message-list.tsx:193
 msgid "Draw agreed"
 msgstr "បានយល់ព្រមស្មើ"
 
-#: src/features/chess/index.tsx:458
+#: src/features/chess/index.tsx:467
 msgid "Draw offered — waiting for {opponentName}"
 msgstr "បានស្នើស្មើ — កំពុងរង់ចាំ {opponentName}"
 
@@ -534,8 +550,8 @@ msgstr "បញ្ចូលកូដ authenticator របស់អ្នក"
 
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:101
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:110
-#: ../../../lib/web/src/components/tree-row.tsx:255
-#: ../../../lib/web/src/components/tree-row.tsx:269
+#: ../../../lib/web/src/components/tree-row.tsx:338
+#: ../../../lib/web/src/components/tree-row.tsx:352
 msgid "Expand"
 msgstr "ពង្រីក"
 
@@ -547,7 +563,7 @@ msgstr "ពង្រីករបារចំហៀង"
 msgid "Extra large"
 msgstr "ធំពិសេស"
 
-#: src/features/chess/index.tsx:208
+#: src/features/chess/index.tsx:209
 msgid "Failed to accept draw"
 msgstr "បរាជ័យក្នុងការទទួលយកការស្មើ"
 
@@ -555,23 +571,23 @@ msgstr "បរាជ័យក្នុងការទទួលយកការស
 msgid "Failed to add account"
 msgstr "បរាជ័យក្នុងការបន្ថែមគណនី"
 
-#: src/features/chess/components/new-game.tsx:52
+#: src/features/chess/components/new-game.tsx:66
 msgid "Failed to create game"
 msgstr "បរាជ័យក្នុងការបង្កើតហ្គេម"
 
-#: src/features/chess/index.tsx:223
+#: src/features/chess/index.tsx:324
 msgid "Failed to create rematch"
 msgstr "បរាជ័យក្នុងការបង្កើតការប្រកួតឡើងវិញ"
 
-#: src/features/chess/index.tsx:213
+#: src/features/chess/index.tsx:214
 msgid "Failed to decline draw"
 msgstr "បរាជ័យក្នុងការបដិសេធការស្មើ"
 
-#: src/features/chess/index.tsx:234
+#: src/features/chess/index.tsx:291
 msgid "Failed to delete game"
 msgstr "បរាជ័យក្នុងការលុបហ្គេម"
 
-#: src/features/chess/index.tsx:203
+#: src/features/chess/index.tsx:204
 msgid "Failed to offer draw"
 msgstr "បរាជ័យក្នុងការស្នើស្មើ"
 
@@ -579,12 +595,12 @@ msgstr "បរាជ័យក្នុងការស្នើស្មើ"
 msgid "Failed to remove account"
 msgstr "បរាជ័យក្នុងការដកគណនី"
 
-#: src/features/chess/index.tsx:196
+#: src/features/chess/index.tsx:197
 msgid "Failed to resign"
 msgstr "បរាជ័យក្នុងការចុះចាញ់"
 
-#: src/features/chess/index.tsx:508
-#: src/features/chess/index.tsx:540
+#: src/features/chess/index.tsx:517
+#: src/features/chess/index.tsx:549
 msgid "Failed to send"
 msgstr "បរាជ័យក្នុងការផ្ញើ"
 
@@ -629,11 +645,11 @@ msgstr "ពីរូបរាង"
 msgid "Full layout"
 msgstr "ប្លង់ពេញលេញ"
 
-#: src/features/chess/components/new-game.tsx:48
+#: src/features/chess/components/new-game.tsx:65
 msgid "Game created"
 msgstr "បានបង្កើតហ្គេម"
 
-#: src/features/chess/index.tsx:230
+#: src/features/chess/index.tsx:290
 msgid "Game deleted"
 msgstr "បានលុបហ្គេម"
 
@@ -737,6 +753,10 @@ msgstr "ភ្លឺ"
 msgid "Load more"
 msgstr "ផ្ទុកបន្ថែម"
 
+#: ../../../lib/web/src/components/ui/loading-content.tsx:29
+msgid "Loading content…"
+msgstr ""
+
 #: ../../../lib/web/src/components/ui/load-more.tsx:35
 #: ../../../lib/web/src/features/document/document-page.tsx:90
 msgid "Loading…"
@@ -804,12 +824,12 @@ msgstr "ថ្មី"
 msgid "New game"
 msgstr "ហ្គេមថ្មី"
 
-#: src/features/chess/components/new-game.tsx:96
+#: src/features/chess/components/new-game.tsx:101
 msgid "New Game"
 msgstr "ហ្គេមថ្មី"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:366
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:371
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:388
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:393
 msgid "Next image"
 msgstr "រូបភាពបន្ទាប់"
 
@@ -821,11 +841,11 @@ msgstr "មិនមានច្បាប់ចូលប្រើបានកំ
 msgid "No connected accounts"
 msgstr "មិនមានគណនីភ្ជាប់"
 
-#: src/features/chess/components/new-game.tsx:131
+#: src/features/chess/components/new-game.tsx:136
 msgid "No friends found"
 msgstr "រកមិនឃើញមិត្តភក្តិ"
 
-#: src/features/chess/components/new-game.tsx:113
+#: src/features/chess/components/new-game.tsx:118
 msgid "No friends yet"
 msgstr "មិនទាន់មានមិត្តភក្តិ"
 
@@ -888,7 +908,7 @@ msgstr "មិនបានកំណត់"
 msgid "Notifications"
 msgstr "ការជូនដំណឹង"
 
-#: src/features/chess/index.tsx:429
+#: src/features/chess/index.tsx:438
 msgid "Offer draw"
 msgstr "ផ្តល់ជូនការស្មើ"
 
@@ -901,16 +921,16 @@ msgstr "អូ! រកមិនឃើញទំព័រ!"
 msgid "Open account actions"
 msgstr "បើកសកម្មភាពគណនី"
 
-#: ../../../lib/web/src/components/layout/nav-group.tsx:152
-#: ../../../lib/web/src/components/layout/nav-group.tsx:157
+#: ../../../lib/web/src/components/layout/nav-group.tsx:182
+#: ../../../lib/web/src/components/layout/nav-group.tsx:187
 msgid "Open actions"
 msgstr "បើកសកម្មភាព"
 
-#: src/features/chess/index.tsx:408
+#: src/features/chess/index.tsx:417
 msgid "Open chat panel"
 msgstr "បើកបន្ទះសន្ទនា"
 
-#: src/features/chess/index.tsx:416
+#: src/features/chess/index.tsx:425
 msgid "Open game actions"
 msgstr "បើកសកម្មភាពហ្គេម"
 
@@ -957,12 +977,12 @@ msgstr "pawn"
 msgid "Please check your internet connection and try again."
 msgstr "សូមពិនិត្យការតភ្ជាប់អ៊ីនធឺណិតរបស់អ្នក រួចព្យាយាមម្តងទៀត។"
 
-#: src/features/chess/components/new-game.tsx:67
+#: src/features/chess/components/new-game.tsx:57
 msgid "Please select a friend"
 msgstr "សូមជ្រើសរើសមិត្តភក្តិ"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:351
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:356
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:373
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:378
 msgid "Previous image"
 msgstr "រូបភាពមុន"
 
@@ -1024,9 +1044,13 @@ msgstr "ទាក់ទង (5m, 3h, 2d)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "ទាក់ទងក្នុង 24 ម៉ោង បើមិនដូច្នេះទេដាច់ខាត"
 
-#: src/features/chess/index.tsx:442
+#: src/features/chess/index.tsx:451
 msgid "Rematch"
 msgstr "ប្រកួតឡើងវិញ"
+
+#: src/features/chess/index.tsx:322
+msgid "Rematch created"
+msgstr ""
 
 #: ../../../lib/web/src/features/access/access-list.tsx:265
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:180
@@ -1060,16 +1084,16 @@ msgstr "កំណត់ឡើងវិញ"
 msgid "Reset all settings to default values"
 msgstr "កំណត់ការកំណត់ទាំងអស់ឡើងវិញទៅតម្លៃលំនាំដើម"
 
-#: src/features/chess/index.tsx:433
-#: src/features/chess/index.tsx:560
+#: src/features/chess/index.tsx:442
+#: src/features/chess/index.tsx:569
 msgid "Resign"
 msgstr "ចុះចាញ់"
 
-#: src/features/chess/index.tsx:551
+#: src/features/chess/index.tsx:560
 msgid "Resign game?"
 msgstr "ចុះចាញ់ហ្គេម?"
 
-#: src/features/chess/index.tsx:557
+#: src/features/chess/index.tsx:566
 msgid "Resigning..."
 msgstr "កំពុងចុះចាញ់..."
 
@@ -1124,7 +1148,7 @@ msgstr "ស្វែងរក..."
 msgid "Searching..."
 msgstr "កំពុងស្វែងរក..."
 
-#: src/features/chess/components/new-game.tsx:130
+#: src/features/chess/components/new-game.tsx:135
 msgid "Select a friend..."
 msgstr "ជ្រើសរើសមិត្តភក្តិ..."
 
@@ -1243,11 +1267,11 @@ msgstr "តូច"
 msgid "Spacious"
 msgstr "ធំទូលាយ"
 
-#: src/features/chess/components/new-game.tsx:99
+#: src/features/chess/components/new-game.tsx:104
 msgid "Start a new chess game"
 msgstr "ចាប់ផ្តើមហ្គេមអុក ថ្មី"
 
-#: src/features/chess/components/new-game.tsx:153
+#: src/features/chess/components/new-game.tsx:158
 msgid "Start game"
 msgstr "ចាប់ផ្តើមហ្គេម"
 
@@ -1312,10 +1336,10 @@ msgstr "បិទ/បើកជួរឈរ"
 msgid "Toggle right panel"
 msgstr "ប្តូរផ្ទាំងស្តាំ"
 
-#: ../../../lib/web/src/components/layout/nav-group.tsx:321
-#: ../../../lib/web/src/components/layout/nav-group.tsx:328
-#: ../../../lib/web/src/components/layout/nav-group.tsx:451
-#: ../../../lib/web/src/components/layout/nav-group.tsx:458
+#: ../../../lib/web/src/components/layout/nav-group.tsx:351
+#: ../../../lib/web/src/components/layout/nav-group.tsx:358
+#: ../../../lib/web/src/components/layout/nav-group.tsx:481
+#: ../../../lib/web/src/components/layout/nav-group.tsx:488
 msgid "Toggle section"
 msgstr "បិទ/បើកផ្នែក"
 
@@ -1462,7 +1486,7 @@ msgid "Wednesday"
 msgstr "ថ្ងៃពុធ"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:399
+#: src/features/chess/index.tsx:408
 msgid "White"
 msgstr "ស"
 

@@ -135,11 +135,11 @@ msgstr "Προσθήκη λογαριασμού"
 msgid "Add an account to receive notifications and use services."
 msgstr "Προσθέστε έναν λογαριασμό για να λαμβάνετε ειδοποιήσεις και να χρησιμοποιείτε υπηρεσίες."
 
-#: src/features/chess/components/new-game.tsx:121
+#: src/features/chess/components/new-game.tsx:126
 msgid "Add friends"
 msgstr "Προσθήκη φίλων"
 
-#: src/features/chess/components/new-game.tsx:114
+#: src/features/chess/components/new-game.tsx:119
 msgid "Add friends in the People app to start playing"
 msgstr "Προσθέστε φίλους στην εφαρμογή People για να ξεκινήσετε το παιχνίδι"
 
@@ -188,7 +188,7 @@ msgstr "Παρουσιάστηκε απροσδόκητο σφάλμα"
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "Είστε βέβαιοι ότι θέλετε να αποσυνδεθείτε; Θα πρέπει να συνδεθείτε ξανά για να αποκτήσετε πρόσβαση στον λογαριασμό σας."
 
-#: src/features/chess/index.tsx:552
+#: src/features/chess/index.tsx:561
 msgid "Are you sure you want to resign? {opponentName} will win the game."
 msgstr "Είστε σίγουροι ότι θέλετε να παραιτηθείτε; Ο/Η {opponentName} θα κερδίσει την παρτίδα."
 
@@ -219,7 +219,7 @@ msgid "bishop"
 msgstr "αξιωματικός"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:399
+#: src/features/chess/index.tsx:408
 msgid "Black"
 msgstr "Μαύρο"
 
@@ -244,7 +244,7 @@ msgstr "Ενίσχυση ενδιαφέροντος"
 #: ../../../lib/web/src/features/access/access-list.tsx:263
 #: ../../../lib/web/src/features/accounts/account-add.tsx:188
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:89
-#: src/features/chess/components/new-game.tsx:145
+#: src/features/chess/components/new-game.tsx:150
 #: src/features/chess/components/promotion-dialog.tsx:108
 msgid "Cancel"
 msgstr "Ακύρωση"
@@ -258,14 +258,14 @@ msgstr "Κατηγορία για αυτήν την ειδοποίηση"
 msgid "Change notification category"
 msgstr "Αλλαγή κατηγορίας ειδοποίησης"
 
-#: src/features/chess/index.tsx:492
-#: src/features/chess/index.tsx:524
+#: src/features/chess/index.tsx:501
+#: src/features/chess/index.tsx:533
 msgid "Chat"
 msgstr "Συνομιλία"
 
-#: src/features/chess/index.tsx:101
-#: src/features/chess/index.tsx:327
-#: src/features/chess/index.tsx:339
+#: src/features/chess/index.tsx:102
+#: src/features/chess/index.tsx:336
+#: src/features/chess/index.tsx:348
 msgid "Chess"
 msgstr "Σκάκι"
 
@@ -302,7 +302,7 @@ msgstr "Επιλέξτε ανάμεσα σε προτίμηση συστήματ
 msgid "Choose language"
 msgstr "Επιλογή γλώσσας"
 
-#: src/features/chess/components/new-game.tsx:105
+#: src/features/chess/components/new-game.tsx:110
 msgid "Choose opponent"
 msgstr "Επιλογή αντιπάλου"
 
@@ -333,8 +333,8 @@ msgid "Clear selection (Escape)"
 msgstr "Εκκαθάριση επιλογής (Escape)"
 
 #: ../../../lib/web/src/components/ui/dialog.tsx:78
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:332
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:335
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:354
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:357
 #: ../../../lib/web/src/components/ui/sheet.tsx:79
 msgid "Close"
 msgstr "Κλείσιμο"
@@ -355,8 +355,8 @@ msgstr "Κλείσιμο αναζήτησης"
 
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:101
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:110
-#: ../../../lib/web/src/components/tree-row.tsx:255
-#: ../../../lib/web/src/components/tree-row.tsx:269
+#: ../../../lib/web/src/components/tree-row.tsx:338
+#: ../../../lib/web/src/components/tree-row.tsx:352
 msgid "Collapse"
 msgstr "Σύμπτυξη"
 
@@ -422,7 +422,15 @@ msgstr "Δεν ήταν δυνατή η έναρξη του εκ νέου ελέ
 msgid "Couldn't verify with that account. Please try again."
 msgstr "Δεν ήταν δυνατή η επαλήθευση με αυτόν τον λογαριασμό. Δοκιμάστε ξανά."
 
-#: src/features/chess/components/new-game.tsx:153
+#: src/features/chess/components/new-game.tsx:64
+msgid "Creating game..."
+msgstr ""
+
+#: src/features/chess/index.tsx:321
+msgid "Creating rematch..."
+msgstr ""
+
+#: src/features/chess/components/new-game.tsx:158
 msgid "Creating..."
 msgstr "Δημιουργία..."
 
@@ -455,13 +463,17 @@ msgstr "Προεπιλογή"
 msgid "Default AI account"
 msgstr "Προεπιλεγμένος λογαριασμός AI"
 
-#: src/features/chess/index.tsx:445
+#: src/features/chess/index.tsx:454
 msgid "Delete game"
 msgstr "Διαγραφή παιχνιδιού"
 
 #: ../../../lib/web/src/components/restore-banner.tsx:99
 msgid "Delete your account on the old server"
 msgstr "Διαγράψτε τον λογαριασμό σας στον παλιό διακομιστή"
+
+#: src/features/chess/index.tsx:289
+msgid "Deleting game..."
+msgstr ""
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:63
 msgid "Desc"
@@ -499,16 +511,20 @@ msgstr "Απόρριψη"
 msgid "Displays the mobile sidebar."
 msgstr "Εμφανίζει την πλευρική μπάρα κινητού."
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:320
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:326
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:338
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:348
 msgid "Download"
 msgstr "Λήψη"
+
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:68
+msgid "Download failed"
+msgstr ""
 
 #: src/features/chess/components/chat-message-list.tsx:193
 msgid "Draw agreed"
 msgstr "Συμφωνήθηκε ισοπαλία"
 
-#: src/features/chess/index.tsx:458
+#: src/features/chess/index.tsx:467
 msgid "Draw offered — waiting for {opponentName}"
 msgstr "Προσφέρθηκε ισοπαλία — αναμονή για {opponentName}"
 
@@ -534,8 +550,8 @@ msgstr "Εισαγάγετε τον κωδικό της εφαρμογής ελ�
 
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:101
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:110
-#: ../../../lib/web/src/components/tree-row.tsx:255
-#: ../../../lib/web/src/components/tree-row.tsx:269
+#: ../../../lib/web/src/components/tree-row.tsx:338
+#: ../../../lib/web/src/components/tree-row.tsx:352
 msgid "Expand"
 msgstr "Ανάπτυξη"
 
@@ -547,7 +563,7 @@ msgstr "Επέκταση πλευρικής μπάρας"
 msgid "Extra large"
 msgstr "Πολύ μεγάλο"
 
-#: src/features/chess/index.tsx:208
+#: src/features/chess/index.tsx:209
 msgid "Failed to accept draw"
 msgstr "Αποτυχία αποδοχής ισοπαλίας"
 
@@ -555,23 +571,23 @@ msgstr "Αποτυχία αποδοχής ισοπαλίας"
 msgid "Failed to add account"
 msgstr "Αποτυχία προσθήκης λογαριασμού"
 
-#: src/features/chess/components/new-game.tsx:52
+#: src/features/chess/components/new-game.tsx:66
 msgid "Failed to create game"
 msgstr "Αποτυχία δημιουργίας παιχνιδιού"
 
-#: src/features/chess/index.tsx:223
+#: src/features/chess/index.tsx:324
 msgid "Failed to create rematch"
 msgstr "Αποτυχία δημιουργίας ρεβάνς"
 
-#: src/features/chess/index.tsx:213
+#: src/features/chess/index.tsx:214
 msgid "Failed to decline draw"
 msgstr "Αποτυχία απόρριψης ισοπαλίας"
 
-#: src/features/chess/index.tsx:234
+#: src/features/chess/index.tsx:291
 msgid "Failed to delete game"
 msgstr "Αποτυχία διαγραφής παιχνιδιού"
 
-#: src/features/chess/index.tsx:203
+#: src/features/chess/index.tsx:204
 msgid "Failed to offer draw"
 msgstr "Αποτυχία προσφοράς ισοπαλίας"
 
@@ -579,12 +595,12 @@ msgstr "Αποτυχία προσφοράς ισοπαλίας"
 msgid "Failed to remove account"
 msgstr "Αποτυχία αφαίρεσης λογαριασμού"
 
-#: src/features/chess/index.tsx:196
+#: src/features/chess/index.tsx:197
 msgid "Failed to resign"
 msgstr "Αποτυχία παραίτησης"
 
-#: src/features/chess/index.tsx:508
-#: src/features/chess/index.tsx:540
+#: src/features/chess/index.tsx:517
+#: src/features/chess/index.tsx:549
 msgid "Failed to send"
 msgstr "Αποτυχία αποστολής"
 
@@ -629,11 +645,11 @@ msgstr "Από το θέμα"
 msgid "Full layout"
 msgstr "Πλήρης διάταξη"
 
-#: src/features/chess/components/new-game.tsx:48
+#: src/features/chess/components/new-game.tsx:65
 msgid "Game created"
 msgstr "Το παιχνίδι δημιουργήθηκε"
 
-#: src/features/chess/index.tsx:230
+#: src/features/chess/index.tsx:290
 msgid "Game deleted"
 msgstr "Το παιχνίδι διαγράφηκε"
 
@@ -737,6 +753,10 @@ msgstr "Φωτεινό"
 msgid "Load more"
 msgstr "Φόρτωση περισσότερων"
 
+#: ../../../lib/web/src/components/ui/loading-content.tsx:29
+msgid "Loading content…"
+msgstr ""
+
 #: ../../../lib/web/src/components/ui/load-more.tsx:35
 #: ../../../lib/web/src/features/document/document-page.tsx:90
 msgid "Loading…"
@@ -804,12 +824,12 @@ msgstr "Νέο"
 msgid "New game"
 msgstr "Νέο παιχνίδι"
 
-#: src/features/chess/components/new-game.tsx:96
+#: src/features/chess/components/new-game.tsx:101
 msgid "New Game"
 msgstr "Νέο παιχνίδι"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:366
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:371
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:388
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:393
 msgid "Next image"
 msgstr "Επόμενη εικόνα"
 
@@ -821,11 +841,11 @@ msgstr "Δεν έχουν διαμορφωθεί κανόνες πρόσβαση
 msgid "No connected accounts"
 msgstr "Δεν υπάρχουν συνδεδεμένοι λογαριασμοί"
 
-#: src/features/chess/components/new-game.tsx:131
+#: src/features/chess/components/new-game.tsx:136
 msgid "No friends found"
 msgstr "Δεν βρέθηκαν φίλοι"
 
-#: src/features/chess/components/new-game.tsx:113
+#: src/features/chess/components/new-game.tsx:118
 msgid "No friends yet"
 msgstr "Δεν υπάρχουν ακόμη φίλοι"
 
@@ -888,7 +908,7 @@ msgstr "Δεν έχει οριστεί"
 msgid "Notifications"
 msgstr "Ειδοποιήσεις"
 
-#: src/features/chess/index.tsx:429
+#: src/features/chess/index.tsx:438
 msgid "Offer draw"
 msgstr "Πρόταση ισοπαλίας"
 
@@ -901,16 +921,16 @@ msgstr "Ωχ! Η σελίδα δεν βρέθηκε!"
 msgid "Open account actions"
 msgstr "Άνοιγμα ενεργειών λογαριασμού"
 
-#: ../../../lib/web/src/components/layout/nav-group.tsx:152
-#: ../../../lib/web/src/components/layout/nav-group.tsx:157
+#: ../../../lib/web/src/components/layout/nav-group.tsx:182
+#: ../../../lib/web/src/components/layout/nav-group.tsx:187
 msgid "Open actions"
 msgstr "Άνοιγμα ενεργειών"
 
-#: src/features/chess/index.tsx:408
+#: src/features/chess/index.tsx:417
 msgid "Open chat panel"
 msgstr "Άνοιγμα πίνακα συνομιλίας"
 
-#: src/features/chess/index.tsx:416
+#: src/features/chess/index.tsx:425
 msgid "Open game actions"
 msgstr "Άνοιγμα ενεργειών παιχνιδιού"
 
@@ -957,12 +977,12 @@ msgstr "πιόνι"
 msgid "Please check your internet connection and try again."
 msgstr "Ελέγξτε τη σύνδεσή σας στο διαδίκτυο και δοκιμάστε ξανά."
 
-#: src/features/chess/components/new-game.tsx:67
+#: src/features/chess/components/new-game.tsx:57
 msgid "Please select a friend"
 msgstr "Επιλέξτε έναν φίλο"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:351
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:356
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:373
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:378
 msgid "Previous image"
 msgstr "Προηγούμενη εικόνα"
 
@@ -1024,9 +1044,13 @@ msgstr "Σχετικό (5m, 3h, 2d)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "Σχετικό εντός 24 ωρών, αλλιώς απόλυτο"
 
-#: src/features/chess/index.tsx:442
+#: src/features/chess/index.tsx:451
 msgid "Rematch"
 msgstr "Ρεβάνς"
+
+#: src/features/chess/index.tsx:322
+msgid "Rematch created"
+msgstr ""
 
 #: ../../../lib/web/src/features/access/access-list.tsx:265
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:180
@@ -1060,16 +1084,16 @@ msgstr "Επαναφορά"
 msgid "Reset all settings to default values"
 msgstr "Επαναφορά όλων των ρυθμίσεων σε προεπιλεγμένες τιμές"
 
-#: src/features/chess/index.tsx:433
-#: src/features/chess/index.tsx:560
+#: src/features/chess/index.tsx:442
+#: src/features/chess/index.tsx:569
 msgid "Resign"
 msgstr "Παραίτηση"
 
-#: src/features/chess/index.tsx:551
+#: src/features/chess/index.tsx:560
 msgid "Resign game?"
 msgstr "Παραίτηση από το παιχνίδι;"
 
-#: src/features/chess/index.tsx:557
+#: src/features/chess/index.tsx:566
 msgid "Resigning..."
 msgstr "Παραίτηση..."
 
@@ -1124,7 +1148,7 @@ msgstr "Αναζήτηση..."
 msgid "Searching..."
 msgstr "Αναζήτηση..."
 
-#: src/features/chess/components/new-game.tsx:130
+#: src/features/chess/components/new-game.tsx:135
 msgid "Select a friend..."
 msgstr "Επιλέξτε έναν φίλο..."
 
@@ -1243,11 +1267,11 @@ msgstr "Μικρό"
 msgid "Spacious"
 msgstr "Ευρύχωρο"
 
-#: src/features/chess/components/new-game.tsx:99
+#: src/features/chess/components/new-game.tsx:104
 msgid "Start a new chess game"
 msgstr "Ξεκινήστε ένα νέο παιχνίδι σκάκι"
 
-#: src/features/chess/components/new-game.tsx:153
+#: src/features/chess/components/new-game.tsx:158
 msgid "Start game"
 msgstr "Έναρξη παιχνιδιού"
 
@@ -1312,10 +1336,10 @@ msgstr "Εναλλαγή στηλών"
 msgid "Toggle right panel"
 msgstr "Εναλλαγή δεξιού πίνακα"
 
-#: ../../../lib/web/src/components/layout/nav-group.tsx:321
-#: ../../../lib/web/src/components/layout/nav-group.tsx:328
-#: ../../../lib/web/src/components/layout/nav-group.tsx:451
-#: ../../../lib/web/src/components/layout/nav-group.tsx:458
+#: ../../../lib/web/src/components/layout/nav-group.tsx:351
+#: ../../../lib/web/src/components/layout/nav-group.tsx:358
+#: ../../../lib/web/src/components/layout/nav-group.tsx:481
+#: ../../../lib/web/src/components/layout/nav-group.tsx:488
 msgid "Toggle section"
 msgstr "Εναλλαγή ενότητας"
 
@@ -1462,7 +1486,7 @@ msgid "Wednesday"
 msgstr "Τετάρτη"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:399
+#: src/features/chess/index.tsx:408
 msgid "White"
 msgstr "Λευκό"
 
