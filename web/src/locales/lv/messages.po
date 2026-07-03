@@ -147,7 +147,7 @@ msgstr "Pievieno draugus People lietotnē, lai sāktu spēlēt"
 msgid "Add new account"
 msgstr "Pievienot jaunu kontu"
 
-#: ../../../lib/web/src/components/post-tags.tsx:129
+#: ../../../lib/web/src/components/post-tags.tsx:133
 msgid "Add tag..."
 msgstr "Pievienot tagu..."
 
@@ -176,11 +176,11 @@ msgstr "AI"
 msgid "All"
 msgstr "Visi"
 
-#: ../../../lib/web/src/lib/api-client.ts:192
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:159
 msgid "An error occurred"
 msgstr "Radās kļūda"
 
-#: ../../../lib/web/src/lib/api-client.ts:255
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:241
 msgid "An unexpected error occurred"
 msgstr "Radās negaidīta kļūda"
 
@@ -230,8 +230,8 @@ msgstr "Melnais"
 msgid "Black {0}"
 msgstr "Melnais {0}"
 
-#: ../../../lib/web/src/components/post-tags.tsx:172
-#: ../../../lib/web/src/components/post-tags.tsx:184
+#: ../../../lib/web/src/components/post-tags.tsx:176
+#: ../../../lib/web/src/components/post-tags.tsx:188
 msgid "Boost interest"
 msgstr "Veicināt interesi"
 
@@ -333,8 +333,8 @@ msgid "Clear selection (Escape)"
 msgstr "Notīrīt atlasi (Escape)"
 
 #: ../../../lib/web/src/components/ui/dialog.tsx:78
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:332
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:335
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:354
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:357
 #: ../../../lib/web/src/components/ui/sheet.tsx:79
 msgid "Close"
 msgstr "Aizvērt"
@@ -355,8 +355,8 @@ msgstr "Aizvērt meklēšanu"
 
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:101
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:110
-#: ../../../lib/web/src/components/tree-row.tsx:255
-#: ../../../lib/web/src/components/tree-row.tsx:269
+#: ../../../lib/web/src/components/tree-row.tsx:338
+#: ../../../lib/web/src/components/tree-row.tsx:352
 msgid "Collapse"
 msgstr "Sakļaut"
 
@@ -499,10 +499,14 @@ msgstr "Aizvērt"
 msgid "Displays the mobile sidebar."
 msgstr "Parāda mobilo sānu joslu."
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:320
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:326
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:338
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:348
 msgid "Download"
 msgstr "Lejupielādēt"
+
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:68
+msgid "Download failed"
+msgstr "Lejupielāde neizdevās"
 
 #: src/features/chess/components/chat-message-list.tsx:193
 msgid "Draw agreed"
@@ -534,8 +538,8 @@ msgstr "Ievadiet autentifikatora kodu"
 
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:101
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:110
-#: ../../../lib/web/src/components/tree-row.tsx:255
-#: ../../../lib/web/src/components/tree-row.tsx:269
+#: ../../../lib/web/src/components/tree-row.tsx:338
+#: ../../../lib/web/src/components/tree-row.tsx:352
 msgid "Expand"
 msgstr "Izvērst"
 
@@ -737,6 +741,10 @@ msgstr "Gaišs"
 msgid "Load more"
 msgstr "Ielādēt vairāk"
 
+#: ../../../lib/web/src/components/ui/loading-content.tsx:29
+msgid "Loading content…"
+msgstr "Notiek satura ielāde…"
+
 #: ../../../lib/web/src/components/ui/load-more.tsx:35
 #: ../../../lib/web/src/features/document/document-page.tsx:90
 msgid "Loading…"
@@ -790,7 +798,7 @@ msgstr "Metrisks"
 msgid "Monday"
 msgstr "Pirmdiena"
 
-#: ../../../lib/web/src/lib/api-client.ts:300
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:288
 msgid "Network error"
 msgstr "Tīkla kļūda"
 
@@ -808,8 +816,8 @@ msgstr "Jauna spēle"
 msgid "New Game"
 msgstr "Jauna spēle"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:366
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:371
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:388
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:393
 msgid "Next image"
 msgstr "Nākamais attēls"
 
@@ -901,8 +909,8 @@ msgstr "Hops! Lapa nav atrasta!"
 msgid "Open account actions"
 msgstr "Atvērt konta darbības"
 
-#: ../../../lib/web/src/components/layout/nav-group.tsx:152
-#: ../../../lib/web/src/components/layout/nav-group.tsx:157
+#: ../../../lib/web/src/components/layout/nav-group.tsx:182
+#: ../../../lib/web/src/components/layout/nav-group.tsx:187
 msgid "Open actions"
 msgstr "Atvērt darbības"
 
@@ -953,7 +961,7 @@ msgstr "Piekļuves atslēgas"
 msgid "pawn"
 msgstr "bandinieks"
 
-#: ../../../lib/web/src/lib/api-client.ts:301
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:289
 msgid "Please check your internet connection and try again."
 msgstr "Lūdzu, pārbaudiet interneta savienojumu un mēģiniet vēlreiz."
 
@@ -961,8 +969,8 @@ msgstr "Lūdzu, pārbaudiet interneta savienojumu un mēģiniet vēlreiz."
 msgid "Please select a friend"
 msgstr "Lūdzu, atlasiet draugu"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:351
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:356
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:373
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:378
 msgid "Previous image"
 msgstr "Iepriekšējais attēls"
 
@@ -1011,8 +1019,8 @@ msgstr "Ieteikts"
 msgid "Redirecting to login."
 msgstr "Pāradresē uz pieteikšanos."
 
-#: ../../../lib/web/src/components/post-tags.tsx:192
-#: ../../../lib/web/src/components/post-tags.tsx:204
+#: ../../../lib/web/src/components/post-tags.tsx:196
+#: ../../../lib/web/src/components/post-tags.tsx:208
 msgid "Reduce interest"
 msgstr "Samazināt interesi"
 
@@ -1042,8 +1050,8 @@ msgstr "Noņemt piekļuves noteikumu"
 msgid "Remove access?"
 msgstr "Noņemt piekļuvi?"
 
-#: ../../../lib/web/src/components/post-tags.tsx:212
-#: ../../../lib/web/src/components/post-tags.tsx:224
+#: ../../../lib/web/src/components/post-tags.tsx:216
+#: ../../../lib/web/src/components/post-tags.tsx:228
 msgid "Remove interest"
 msgstr "Noņemt interesi"
 
@@ -1181,8 +1189,8 @@ msgstr "Sūtīt ziņu"
 msgid "Serif"
 msgstr "Serifs"
 
-#: ../../../lib/web/src/lib/api-client.ts:259
-#: ../../../lib/web/src/lib/api-client.ts:284
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:245
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:271
 msgid "Server error"
 msgstr "Servera kļūda"
 
@@ -1191,7 +1199,7 @@ msgstr "Servera kļūda"
 msgid "Server rules"
 msgstr "Servera noteikumi"
 
-#: ../../../lib/web/src/lib/api-client.ts:227
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:209
 msgid "Session expired"
 msgstr "Sesijai beidzies derīgums"
 
@@ -1273,8 +1281,8 @@ msgstr "Sistēma"
 msgid "Tag"
 msgstr "Tags"
 
-#: ../../../lib/web/src/components/post-tags.tsx:96
-#: ../../../lib/web/src/components/post-tags.tsx:107
+#: ../../../lib/web/src/components/post-tags.tsx:100
+#: ../../../lib/web/src/components/post-tags.tsx:111
 msgid "Tags"
 msgstr "Tagi"
 
@@ -1312,10 +1320,10 @@ msgstr "Pārslēgt kolonnas"
 msgid "Toggle right panel"
 msgstr "Pārslēgt labo paneli"
 
-#: ../../../lib/web/src/components/layout/nav-group.tsx:321
-#: ../../../lib/web/src/components/layout/nav-group.tsx:328
-#: ../../../lib/web/src/components/layout/nav-group.tsx:451
-#: ../../../lib/web/src/components/layout/nav-group.tsx:458
+#: ../../../lib/web/src/components/layout/nav-group.tsx:351
+#: ../../../lib/web/src/components/layout/nav-group.tsx:358
+#: ../../../lib/web/src/components/layout/nav-group.tsx:481
+#: ../../../lib/web/src/components/layout/nav-group.tsx:488
 msgid "Toggle section"
 msgstr "Pārslēgt sadaļu"
 
@@ -1373,7 +1381,7 @@ msgstr "Ierakstiet, lai meklētu lietotājus"
 msgid "Type to search..."
 msgstr "Ierakstiet, lai meklētu..."
 
-#: ../../../lib/web/src/lib/api-client.ts:280
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:267
 msgid "Unable to connect to remote server"
 msgstr "Neizdevās izveidot savienojumu ar attālo serveri"
 

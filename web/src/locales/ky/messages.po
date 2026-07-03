@@ -147,7 +147,7 @@ msgstr "Ойноо үчүн People колдонмосунан дос кошуң�
 msgid "Add new account"
 msgstr "Жаңы аккаунт кошуу"
 
-#: ../../../lib/web/src/components/post-tags.tsx:129
+#: ../../../lib/web/src/components/post-tags.tsx:133
 msgid "Add tag..."
 msgstr "Тег кошуу..."
 
@@ -176,11 +176,11 @@ msgstr "AI"
 msgid "All"
 msgstr "Баары"
 
-#: ../../../lib/web/src/lib/api-client.ts:192
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:159
 msgid "An error occurred"
 msgstr "Ката кетти"
 
-#: ../../../lib/web/src/lib/api-client.ts:255
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:241
 msgid "An unexpected error occurred"
 msgstr "Күтүлбөгөн ката кетти"
 
@@ -230,8 +230,8 @@ msgstr "Кара"
 msgid "Black {0}"
 msgstr "Кара {0}"
 
-#: ../../../lib/web/src/components/post-tags.tsx:172
-#: ../../../lib/web/src/components/post-tags.tsx:184
+#: ../../../lib/web/src/components/post-tags.tsx:176
+#: ../../../lib/web/src/components/post-tags.tsx:188
 msgid "Boost interest"
 msgstr "Кызыгууну күчөтүү"
 
@@ -333,8 +333,8 @@ msgid "Clear selection (Escape)"
 msgstr "Тандоону тазалоо (Escape)"
 
 #: ../../../lib/web/src/components/ui/dialog.tsx:78
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:332
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:335
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:354
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:357
 #: ../../../lib/web/src/components/ui/sheet.tsx:79
 msgid "Close"
 msgstr "Жабуу"
@@ -355,8 +355,8 @@ msgstr "Издөөнү жабуу"
 
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:101
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:110
-#: ../../../lib/web/src/components/tree-row.tsx:255
-#: ../../../lib/web/src/components/tree-row.tsx:269
+#: ../../../lib/web/src/components/tree-row.tsx:338
+#: ../../../lib/web/src/components/tree-row.tsx:352
 msgid "Collapse"
 msgstr "Жыйыштыруу"
 
@@ -499,10 +499,14 @@ msgstr "Четке кагуу"
 msgid "Displays the mobile sidebar."
 msgstr "Мобилдик каптал тилкесин көрсөтөт."
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:320
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:326
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:338
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:348
 msgid "Download"
 msgstr "Жүктөп алуу"
+
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:68
+msgid "Download failed"
+msgstr "Жүктөп алуу ишке ашкан жок"
 
 #: src/features/chess/components/chat-message-list.tsx:193
 msgid "Draw agreed"
@@ -534,8 +538,8 @@ msgstr "Authenticator кодун киргизиңиз"
 
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:101
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:110
-#: ../../../lib/web/src/components/tree-row.tsx:255
-#: ../../../lib/web/src/components/tree-row.tsx:269
+#: ../../../lib/web/src/components/tree-row.tsx:338
+#: ../../../lib/web/src/components/tree-row.tsx:352
 msgid "Expand"
 msgstr "Жайып көрсөтүү"
 
@@ -737,6 +741,10 @@ msgstr "Жарык"
 msgid "Load more"
 msgstr "Дагы жүктөө"
 
+#: ../../../lib/web/src/components/ui/loading-content.tsx:29
+msgid "Loading content…"
+msgstr "Мазмун жүктөлүүдө…"
+
 #: ../../../lib/web/src/components/ui/load-more.tsx:35
 #: ../../../lib/web/src/features/document/document-page.tsx:90
 msgid "Loading…"
@@ -790,7 +798,7 @@ msgstr "Метрикалык"
 msgid "Monday"
 msgstr "Дүйшөмбү"
 
-#: ../../../lib/web/src/lib/api-client.ts:300
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:288
 msgid "Network error"
 msgstr "Тармак катасы"
 
@@ -808,8 +816,8 @@ msgstr "Жаңы оюн"
 msgid "New Game"
 msgstr "Жаңы оюн"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:366
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:371
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:388
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:393
 msgid "Next image"
 msgstr "Кийинки сүрөт"
 
@@ -901,8 +909,8 @@ msgstr "Аттиң! Барак табылган жок!"
 msgid "Open account actions"
 msgstr "Аккаунт аракеттерин ачуу"
 
-#: ../../../lib/web/src/components/layout/nav-group.tsx:152
-#: ../../../lib/web/src/components/layout/nav-group.tsx:157
+#: ../../../lib/web/src/components/layout/nav-group.tsx:182
+#: ../../../lib/web/src/components/layout/nav-group.tsx:187
 msgid "Open actions"
 msgstr "Аракеттерди ачуу"
 
@@ -953,7 +961,7 @@ msgstr "Кирүү ачкычтары"
 msgid "pawn"
 msgstr "пешка"
 
-#: ../../../lib/web/src/lib/api-client.ts:301
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:289
 msgid "Please check your internet connection and try again."
 msgstr "Интернет байланышыңызды текшерип, кайра аракет кылыңыз."
 
@@ -961,8 +969,8 @@ msgstr "Интернет байланышыңызды текшерип, кайр
 msgid "Please select a friend"
 msgstr "Досту тандаңыз"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:351
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:356
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:373
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:378
 msgid "Previous image"
 msgstr "Мурунку сүрөт"
 
@@ -1011,8 +1019,8 @@ msgstr "Сунушталган"
 msgid "Redirecting to login."
 msgstr "Кирүүгө кайра багытталууда."
 
-#: ../../../lib/web/src/components/post-tags.tsx:192
-#: ../../../lib/web/src/components/post-tags.tsx:204
+#: ../../../lib/web/src/components/post-tags.tsx:196
+#: ../../../lib/web/src/components/post-tags.tsx:208
 msgid "Reduce interest"
 msgstr "Кызыгууну азайтуу"
 
@@ -1042,8 +1050,8 @@ msgstr "Кирүү эрежесин алуу"
 msgid "Remove access?"
 msgstr "Кирүүнү аласызбы?"
 
-#: ../../../lib/web/src/components/post-tags.tsx:212
-#: ../../../lib/web/src/components/post-tags.tsx:224
+#: ../../../lib/web/src/components/post-tags.tsx:216
+#: ../../../lib/web/src/components/post-tags.tsx:228
 msgid "Remove interest"
 msgstr "Кызыгууну алуу"
 
@@ -1181,8 +1189,8 @@ msgstr "Билдирүү жөнөтүү"
 msgid "Serif"
 msgstr "Серифтүү"
 
-#: ../../../lib/web/src/lib/api-client.ts:259
-#: ../../../lib/web/src/lib/api-client.ts:284
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:245
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:271
 msgid "Server error"
 msgstr "Сервер катасы"
 
@@ -1191,7 +1199,7 @@ msgstr "Сервер катасы"
 msgid "Server rules"
 msgstr "Сервердин эрежелери"
 
-#: ../../../lib/web/src/lib/api-client.ts:227
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:209
 msgid "Session expired"
 msgstr "Сессиянын мөөнөтү бүттү"
 
@@ -1273,8 +1281,8 @@ msgstr "Системалык"
 msgid "Tag"
 msgstr "Тег"
 
-#: ../../../lib/web/src/components/post-tags.tsx:96
-#: ../../../lib/web/src/components/post-tags.tsx:107
+#: ../../../lib/web/src/components/post-tags.tsx:100
+#: ../../../lib/web/src/components/post-tags.tsx:111
 msgid "Tags"
 msgstr "Тегдер"
 
@@ -1312,10 +1320,10 @@ msgstr "Тилкелерди которуу"
 msgid "Toggle right panel"
 msgstr "Оң панелди алмаштыруу"
 
-#: ../../../lib/web/src/components/layout/nav-group.tsx:321
-#: ../../../lib/web/src/components/layout/nav-group.tsx:328
-#: ../../../lib/web/src/components/layout/nav-group.tsx:451
-#: ../../../lib/web/src/components/layout/nav-group.tsx:458
+#: ../../../lib/web/src/components/layout/nav-group.tsx:351
+#: ../../../lib/web/src/components/layout/nav-group.tsx:358
+#: ../../../lib/web/src/components/layout/nav-group.tsx:481
+#: ../../../lib/web/src/components/layout/nav-group.tsx:488
 msgid "Toggle section"
 msgstr "Бөлүмдү которуу"
 
@@ -1373,7 +1381,7 @@ msgstr "Колдонуучуларды издөө үчүн жазыңыз"
 msgid "Type to search..."
 msgstr "Издөө үчүн жазыңыз..."
 
-#: ../../../lib/web/src/lib/api-client.ts:280
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:267
 msgid "Unable to connect to remote server"
 msgstr "Алыскы серверге туташуу мүмкүн эмес"
 

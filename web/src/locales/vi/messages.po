@@ -147,7 +147,7 @@ msgstr "Thêm bạn trong ứng dụng People để bắt đầu chơi"
 msgid "Add new account"
 msgstr "Thêm tài khoản mới"
 
-#: ../../../lib/web/src/components/post-tags.tsx:129
+#: ../../../lib/web/src/components/post-tags.tsx:133
 msgid "Add tag..."
 msgstr "Thêm thẻ..."
 
@@ -176,11 +176,11 @@ msgstr "AI"
 msgid "All"
 msgstr "Tất cả"
 
-#: ../../../lib/web/src/lib/api-client.ts:192
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:159
 msgid "An error occurred"
 msgstr "Đã xảy ra lỗi"
 
-#: ../../../lib/web/src/lib/api-client.ts:255
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:241
 msgid "An unexpected error occurred"
 msgstr "Đã xảy ra lỗi không mong muốn"
 
@@ -230,8 +230,8 @@ msgstr "Đen"
 msgid "Black {0}"
 msgstr "{0} đen"
 
-#: ../../../lib/web/src/components/post-tags.tsx:172
-#: ../../../lib/web/src/components/post-tags.tsx:184
+#: ../../../lib/web/src/components/post-tags.tsx:176
+#: ../../../lib/web/src/components/post-tags.tsx:188
 msgid "Boost interest"
 msgstr "Đẩy mạnh sở thích"
 
@@ -333,8 +333,8 @@ msgid "Clear selection (Escape)"
 msgstr "Bỏ chọn (Escape)"
 
 #: ../../../lib/web/src/components/ui/dialog.tsx:78
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:332
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:335
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:354
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:357
 #: ../../../lib/web/src/components/ui/sheet.tsx:79
 msgid "Close"
 msgstr "Đóng"
@@ -355,8 +355,8 @@ msgstr "Đóng tìm kiếm"
 
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:101
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:110
-#: ../../../lib/web/src/components/tree-row.tsx:255
-#: ../../../lib/web/src/components/tree-row.tsx:269
+#: ../../../lib/web/src/components/tree-row.tsx:338
+#: ../../../lib/web/src/components/tree-row.tsx:352
 msgid "Collapse"
 msgstr "Thu gọn"
 
@@ -499,10 +499,14 @@ msgstr "Bỏ qua"
 msgid "Displays the mobile sidebar."
 msgstr "Hiển thị thanh bên di động."
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:320
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:326
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:338
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:348
 msgid "Download"
 msgstr "Tải xuống"
+
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:68
+msgid "Download failed"
+msgstr "Tải xuống thất bại"
 
 #: src/features/chess/components/chat-message-list.tsx:193
 msgid "Draw agreed"
@@ -534,8 +538,8 @@ msgstr "Nhập mã từ ứng dụng xác thực của bạn"
 
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:101
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:110
-#: ../../../lib/web/src/components/tree-row.tsx:255
-#: ../../../lib/web/src/components/tree-row.tsx:269
+#: ../../../lib/web/src/components/tree-row.tsx:338
+#: ../../../lib/web/src/components/tree-row.tsx:352
 msgid "Expand"
 msgstr "Mở rộng"
 
@@ -737,6 +741,10 @@ msgstr "Sáng"
 msgid "Load more"
 msgstr "Tải thêm"
 
+#: ../../../lib/web/src/components/ui/loading-content.tsx:29
+msgid "Loading content…"
+msgstr "Đang tải nội dung…"
+
 #: ../../../lib/web/src/components/ui/load-more.tsx:35
 #: ../../../lib/web/src/features/document/document-page.tsx:90
 msgid "Loading…"
@@ -790,7 +798,7 @@ msgstr "Hệ mét"
 msgid "Monday"
 msgstr "Thứ Hai"
 
-#: ../../../lib/web/src/lib/api-client.ts:300
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:288
 msgid "Network error"
 msgstr "Lỗi mạng"
 
@@ -808,8 +816,8 @@ msgstr "Trò chơi mới"
 msgid "New Game"
 msgstr "Trò chơi mới"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:366
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:371
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:388
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:393
 msgid "Next image"
 msgstr "Hình tiếp theo"
 
@@ -901,8 +909,8 @@ msgstr "Rất tiếc! Không tìm thấy trang!"
 msgid "Open account actions"
 msgstr "Mở thao tác tài khoản"
 
-#: ../../../lib/web/src/components/layout/nav-group.tsx:152
-#: ../../../lib/web/src/components/layout/nav-group.tsx:157
+#: ../../../lib/web/src/components/layout/nav-group.tsx:182
+#: ../../../lib/web/src/components/layout/nav-group.tsx:187
 msgid "Open actions"
 msgstr "Mở thao tác"
 
@@ -953,7 +961,7 @@ msgstr "Passkey"
 msgid "pawn"
 msgstr "tốt"
 
-#: ../../../lib/web/src/lib/api-client.ts:301
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:289
 msgid "Please check your internet connection and try again."
 msgstr "Vui lòng kiểm tra kết nối internet và thử lại."
 
@@ -961,8 +969,8 @@ msgstr "Vui lòng kiểm tra kết nối internet và thử lại."
 msgid "Please select a friend"
 msgstr "Vui lòng chọn bạn"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:351
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:356
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:373
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:378
 msgid "Previous image"
 msgstr "Hình trước"
 
@@ -1011,8 +1019,8 @@ msgstr "Được đề xuất"
 msgid "Redirecting to login."
 msgstr "Đang chuyển hướng đến đăng nhập."
 
-#: ../../../lib/web/src/components/post-tags.tsx:192
-#: ../../../lib/web/src/components/post-tags.tsx:204
+#: ../../../lib/web/src/components/post-tags.tsx:196
+#: ../../../lib/web/src/components/post-tags.tsx:208
 msgid "Reduce interest"
 msgstr "Giảm sự quan tâm"
 
@@ -1042,8 +1050,8 @@ msgstr "Xoá quy tắc truy cập"
 msgid "Remove access?"
 msgstr "Xoá quyền truy cập?"
 
-#: ../../../lib/web/src/components/post-tags.tsx:212
-#: ../../../lib/web/src/components/post-tags.tsx:224
+#: ../../../lib/web/src/components/post-tags.tsx:216
+#: ../../../lib/web/src/components/post-tags.tsx:228
 msgid "Remove interest"
 msgstr "Xoá sở thích"
 
@@ -1181,8 +1189,8 @@ msgstr "Gửi tin nhắn"
 msgid "Serif"
 msgstr "Có chân"
 
-#: ../../../lib/web/src/lib/api-client.ts:259
-#: ../../../lib/web/src/lib/api-client.ts:284
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:245
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:271
 msgid "Server error"
 msgstr "Lỗi máy chủ"
 
@@ -1191,7 +1199,7 @@ msgstr "Lỗi máy chủ"
 msgid "Server rules"
 msgstr "Quy tắc máy chủ"
 
-#: ../../../lib/web/src/lib/api-client.ts:227
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:209
 msgid "Session expired"
 msgstr "Phiên đã hết hạn"
 
@@ -1273,8 +1281,8 @@ msgstr "Hệ thống"
 msgid "Tag"
 msgstr "Thẻ"
 
-#: ../../../lib/web/src/components/post-tags.tsx:96
-#: ../../../lib/web/src/components/post-tags.tsx:107
+#: ../../../lib/web/src/components/post-tags.tsx:100
+#: ../../../lib/web/src/components/post-tags.tsx:111
 msgid "Tags"
 msgstr "Các thẻ"
 
@@ -1312,10 +1320,10 @@ msgstr "Bật/tắt cột"
 msgid "Toggle right panel"
 msgstr "Bật/tắt bảng bên phải"
 
-#: ../../../lib/web/src/components/layout/nav-group.tsx:321
-#: ../../../lib/web/src/components/layout/nav-group.tsx:328
-#: ../../../lib/web/src/components/layout/nav-group.tsx:451
-#: ../../../lib/web/src/components/layout/nav-group.tsx:458
+#: ../../../lib/web/src/components/layout/nav-group.tsx:351
+#: ../../../lib/web/src/components/layout/nav-group.tsx:358
+#: ../../../lib/web/src/components/layout/nav-group.tsx:481
+#: ../../../lib/web/src/components/layout/nav-group.tsx:488
 msgid "Toggle section"
 msgstr "Bật/tắt mục"
 
@@ -1373,7 +1381,7 @@ msgstr "Nhập để tìm người dùng"
 msgid "Type to search..."
 msgstr "Nhập để tìm kiếm..."
 
-#: ../../../lib/web/src/lib/api-client.ts:280
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:267
 msgid "Unable to connect to remote server"
 msgstr "Không thể kết nối đến máy chủ từ xa"
 

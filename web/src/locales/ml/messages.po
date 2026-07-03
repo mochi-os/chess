@@ -147,7 +147,7 @@ msgstr "കളി തുടങ്ങാൻ People ആപ്പിൽ സുഹ�
 msgid "Add new account"
 msgstr "പുതിയ അക്കൗണ്ട് ചേർക്കുക"
 
-#: ../../../lib/web/src/components/post-tags.tsx:129
+#: ../../../lib/web/src/components/post-tags.tsx:133
 msgid "Add tag..."
 msgstr "ടാഗ് ചേർക്കുക..."
 
@@ -176,11 +176,11 @@ msgstr "AI"
 msgid "All"
 msgstr "എല്ലാം"
 
-#: ../../../lib/web/src/lib/api-client.ts:192
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:159
 msgid "An error occurred"
 msgstr "ഒരു പിശക് സംഭവിച്ചു"
 
-#: ../../../lib/web/src/lib/api-client.ts:255
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:241
 msgid "An unexpected error occurred"
 msgstr "അപ്രതീക്ഷിത പിശക് സംഭവിച്ചു"
 
@@ -230,8 +230,8 @@ msgstr "കറുപ്പ്"
 msgid "Black {0}"
 msgstr "കറുപ്പ് {0}"
 
-#: ../../../lib/web/src/components/post-tags.tsx:172
-#: ../../../lib/web/src/components/post-tags.tsx:184
+#: ../../../lib/web/src/components/post-tags.tsx:176
+#: ../../../lib/web/src/components/post-tags.tsx:188
 msgid "Boost interest"
 msgstr "താൽപ്പര്യം വർദ്ധിപ്പിക്കുക"
 
@@ -333,8 +333,8 @@ msgid "Clear selection (Escape)"
 msgstr "തിരഞ്ഞെടുപ്പ് മായ്ക്കുക (Escape)"
 
 #: ../../../lib/web/src/components/ui/dialog.tsx:78
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:332
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:335
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:354
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:357
 #: ../../../lib/web/src/components/ui/sheet.tsx:79
 msgid "Close"
 msgstr "അടയ്ക്കുക"
@@ -355,8 +355,8 @@ msgstr "തിരയൽ അടയ്ക്കുക"
 
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:101
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:110
-#: ../../../lib/web/src/components/tree-row.tsx:255
-#: ../../../lib/web/src/components/tree-row.tsx:269
+#: ../../../lib/web/src/components/tree-row.tsx:338
+#: ../../../lib/web/src/components/tree-row.tsx:352
 msgid "Collapse"
 msgstr "ചുരുക്കുക"
 
@@ -499,10 +499,14 @@ msgstr "ഒഴിവാക്കുക"
 msgid "Displays the mobile sidebar."
 msgstr "മൊബൈൽ സൈഡ്‌ബാർ പ്രദർശിപ്പിക്കുന്നു."
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:320
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:326
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:338
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:348
 msgid "Download"
 msgstr "ഡൗൺലോഡ്"
+
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:68
+msgid "Download failed"
+msgstr "ഡൗൺലോഡ് പരാജയപ്പെട്ടു"
 
 #: src/features/chess/components/chat-message-list.tsx:193
 msgid "Draw agreed"
@@ -534,8 +538,8 @@ msgstr "നിങ്ങളുടെ ഓതെന്റിക്കേറ്റ�
 
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:101
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:110
-#: ../../../lib/web/src/components/tree-row.tsx:255
-#: ../../../lib/web/src/components/tree-row.tsx:269
+#: ../../../lib/web/src/components/tree-row.tsx:338
+#: ../../../lib/web/src/components/tree-row.tsx:352
 msgid "Expand"
 msgstr "വികസിപ്പിക്കുക"
 
@@ -737,6 +741,10 @@ msgstr "ലൈറ്റ്"
 msgid "Load more"
 msgstr "കൂടുതൽ ലോഡുചെയ്യുക"
 
+#: ../../../lib/web/src/components/ui/loading-content.tsx:29
+msgid "Loading content…"
+msgstr "ഉള്ളടക്കം ലോഡ് ചെയ്യുന്നു…"
+
 #: ../../../lib/web/src/components/ui/load-more.tsx:35
 #: ../../../lib/web/src/features/document/document-page.tsx:90
 msgid "Loading…"
@@ -790,7 +798,7 @@ msgstr "മെട്രിക്"
 msgid "Monday"
 msgstr "തിങ്കളാഴ്ച"
 
-#: ../../../lib/web/src/lib/api-client.ts:300
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:288
 msgid "Network error"
 msgstr "നെറ്റ്‌വർക്ക് പിശക്"
 
@@ -808,8 +816,8 @@ msgstr "പുതിയ ഗെയിം"
 msgid "New Game"
 msgstr "പുതിയ ഗെയിം"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:366
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:371
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:388
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:393
 msgid "Next image"
 msgstr "അടുത്ത ചിത്രം"
 
@@ -901,8 +909,8 @@ msgstr "ഓ! പേജ് കണ്ടെത്തിയില്ല!"
 msgid "Open account actions"
 msgstr "അക്കൗണ്ട് പ്രവർത്തനങ്ങൾ തുറക്കുക"
 
-#: ../../../lib/web/src/components/layout/nav-group.tsx:152
-#: ../../../lib/web/src/components/layout/nav-group.tsx:157
+#: ../../../lib/web/src/components/layout/nav-group.tsx:182
+#: ../../../lib/web/src/components/layout/nav-group.tsx:187
 msgid "Open actions"
 msgstr "പ്രവർത്തനങ്ങൾ തുറക്കുക"
 
@@ -953,7 +961,7 @@ msgstr "പാസ്കീകൾ"
 msgid "pawn"
 msgstr "കാലാൾ"
 
-#: ../../../lib/web/src/lib/api-client.ts:301
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:289
 msgid "Please check your internet connection and try again."
 msgstr "നിങ്ങളുടെ ഇന്റർനെറ്റ് കണക്ഷൻ പരിശോധിച്ച് വീണ്ടും ശ്രമിക്കുക."
 
@@ -961,8 +969,8 @@ msgstr "നിങ്ങളുടെ ഇന്റർനെറ്റ് കണക�
 msgid "Please select a friend"
 msgstr "ഒരു സുഹൃത്തിനെ തിരഞ്ഞെടുക്കുക"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:351
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:356
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:373
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:378
 msgid "Previous image"
 msgstr "മുമ്പത്തെ ഫോട്ടോ"
 
@@ -1011,8 +1019,8 @@ msgstr "ശുപാർശ ചെയ്യുന്ന CRM-കൾ"
 msgid "Redirecting to login."
 msgstr "Redirects"
 
-#: ../../../lib/web/src/components/post-tags.tsx:192
-#: ../../../lib/web/src/components/post-tags.tsx:204
+#: ../../../lib/web/src/components/post-tags.tsx:196
+#: ../../../lib/web/src/components/post-tags.tsx:208
 msgid "Reduce interest"
 msgstr "പുതുക്കുക"
 
@@ -1042,8 +1050,8 @@ msgstr "ആക്സസ് നീക്കം ചെയ്യണോ?"
 msgid "Remove access?"
 msgstr "അക്കൗണ്ട് നീക്കം ചെയ്യണോ?"
 
-#: ../../../lib/web/src/components/post-tags.tsx:212
-#: ../../../lib/web/src/components/post-tags.tsx:224
+#: ../../../lib/web/src/components/post-tags.tsx:216
+#: ../../../lib/web/src/components/post-tags.tsx:228
 msgid "Remove interest"
 msgstr "item നീക്കം ചെയ്യുക"
 
@@ -1181,8 +1189,8 @@ msgstr "സന്ദേശം അയയ്ക്കുക"
 msgid "Serif"
 msgstr "സെരിഫ്"
 
-#: ../../../lib/web/src/lib/api-client.ts:259
-#: ../../../lib/web/src/lib/api-client.ts:284
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:245
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:271
 msgid "Server error"
 msgstr "സെർവർ പിശക്"
 
@@ -1191,7 +1199,7 @@ msgstr "സെർവർ പിശക്"
 msgid "Server rules"
 msgstr "സെർവർ നിയമങ്ങൾ"
 
-#: ../../../lib/web/src/lib/api-client.ts:227
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:209
 msgid "Session expired"
 msgstr "സെഷൻ കാലഹരണപ്പെട്ടു"
 
@@ -1273,8 +1281,8 @@ msgstr "സിസ്റ്റം"
 msgid "Tag"
 msgstr "ടാഗ്"
 
-#: ../../../lib/web/src/components/post-tags.tsx:96
-#: ../../../lib/web/src/components/post-tags.tsx:107
+#: ../../../lib/web/src/components/post-tags.tsx:100
+#: ../../../lib/web/src/components/post-tags.tsx:111
 msgid "Tags"
 msgstr "ടാഗുകൾ"
 
@@ -1312,10 +1320,10 @@ msgstr "കോളങ്ങൾ ടോഗിൾ ചെയ്യുക"
 msgid "Toggle right panel"
 msgstr "വലത് പാനൽ ടോഗിൾ ചെയ്യുക"
 
-#: ../../../lib/web/src/components/layout/nav-group.tsx:321
-#: ../../../lib/web/src/components/layout/nav-group.tsx:328
-#: ../../../lib/web/src/components/layout/nav-group.tsx:451
-#: ../../../lib/web/src/components/layout/nav-group.tsx:458
+#: ../../../lib/web/src/components/layout/nav-group.tsx:351
+#: ../../../lib/web/src/components/layout/nav-group.tsx:358
+#: ../../../lib/web/src/components/layout/nav-group.tsx:481
+#: ../../../lib/web/src/components/layout/nav-group.tsx:488
 msgid "Toggle section"
 msgstr "വിഭാഗം മാറ്റുക"
 
@@ -1373,7 +1381,7 @@ msgstr "ഉപയോക്താക്കളെ തിരയാൻ ടൈപ്�
 msgid "Type to search..."
 msgstr "തിരയാൻ ടൈപ്പ് ചെയ്യുക..."
 
-#: ../../../lib/web/src/lib/api-client.ts:280
+#: ../../../lib/web/src/lib/api-response-interceptors.ts:267
 msgid "Unable to connect to remote server"
 msgstr "റിമോട്ട് സെർവറുമായി കണക്റ്റ് ചെയ്യാൻ കഴിഞ്ഞില്ല"
 
