@@ -4,7 +4,7 @@
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
 
 {
-	"version": "1.57",
+	"version": "1.58",
 	"label": "app.name",
 	"classes": ["game"],
 	"paths": ["chess"],
@@ -14,10 +14,9 @@
 	"execute": ["chess.star"],
 
 	"database": {
-		"schema": 4,
+		"schema": 1,
 		"file": "chess.db",
 		"create": {"function": "database_create"},
-		"upgrade": {"function": "database_upgrade"}
 	},
 
 	"icons": [

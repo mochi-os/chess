@@ -96,28 +96,6 @@ def database_create():
 	)""")
 	mochi.db.execute("create index if not exists messages_game_created on messages( game, created )")
 
-# Upgrade database
-def database_upgrade(to_version):
-	# v2/v3 were previously deleted; restored so dormant schema-1 DBs can
-	# still migrate forward. Migrations must be kept forever — a DB that
-	# never ran them otherwise strands on the old schema.
-	if to_version == 2:
-		cols = [r["name"] for r in mochi.db.table("games") or []]
-		if "draw_offer" not in cols:
-			mochi.db.execute("alter table games add column draw_offer text")
-	if to_version == 3:
-		mochi.db.execute("create index if not exists games_identity on games( identity )")
-		mochi.db.execute("create index if not exists games_opponent on games( opponent )")
-	if to_version == 4:
-		# Add messages.event so the frontend can render system messages
-		# (resign / draw offer / accept / decline) localised per viewer,
-		# instead of the pre-rendered English `body`. Legacy rows keep ''
-		# and fall back to the stored body.
-		cols = [r["name"] for r in mochi.db.table("messages") or []]
-		if "event" not in cols:
-			mochi.db.execute("alter table messages add column event text not null default ''")
-
-# Get friends list for new game
 def action_new(a):
 	friends = mochi.service.call("friends", "list", a.user.identity.id) or []
 	return {
