@@ -228,7 +228,7 @@ def action_messages(a):
 
 	before = None
 	before_str = a.input("before")
-	if before_str and mochi.text.valid(before_str, "natural"):
+	if before_str and mochi.text.valid(before_str, "integer"):
 		before = int(before_str)
 
 	if before:
