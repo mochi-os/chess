@@ -583,6 +583,11 @@ def event_new(e):
 	if not mochi.text.valid(str(created), "integer"):
 		return
 
+	# Verify the recipient is one of the two players - a friend must not be able
+	# to plant a game row in which this user is not a participant.
+	if e.header("to") not in [identity, opponent]:
+		return
+
 	result = mochi.db.execute(
 		"insert or ignore into games ( id, identity, identity_name, opponent, opponent_name, white, key, updated, created ) values ( ?, ?, ?, ?, ?, ?, ?, ?, ? )",
 		game_id, identity, identity_name, opponent, opponent_name, white, mochi.random.alphanumeric(16), mochi.time.now(), created
