@@ -108,7 +108,7 @@ function ChessLayoutInner() {
 
     if (activeGames.length > 0) {
       groups.push({
-        title: t`Active Games`,
+        title: t`Active games`,
         items: activeGames.map((game) => ({
           title: getName(game),
           url: `/${game.fingerprint ?? game.id}`,

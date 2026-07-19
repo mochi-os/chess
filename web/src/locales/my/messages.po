@@ -13,6 +13,11 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
+#. js-lingui-explicit-id
+#: ../../../lib/web/src/lib/error-normalizer.ts:204
+msgid "Please check your internet connection and try again."
+msgstr "သင့်အင်တာနက်ချိတ်ဆက်မှုကို စစ်ဆေးပြီး ထပ်မံကြိုးစားပါ။"
+
 #. placeholder {0}: pieces .map(({ type, count }) => getPieceLabel(type, count)) .join(', ')
 #: src/features/chess/components/captured-pieces-strip.tsx:89
 msgid "{colorName} captured {0}"
@@ -115,7 +120,7 @@ msgid "Account verified"
 msgstr "အကောင့် အတည်ပြုပြီး"
 
 #: src/components/layout/chess-layout.tsx:111
-msgid "Active Games"
+msgid "Active games"
 msgstr "လက်ရှိ Games"
 
 #: ../../../lib/web/src/features/accounts/account-add.tsx:196
@@ -151,7 +156,7 @@ msgstr "ကစားစတင်ရန် People app တွင် သူငယ�
 msgid "Add new account"
 msgstr "အကောင့်အသစ် ထည့်မည်"
 
-#: ../../../lib/web/src/components/post-tags.tsx:133
+#: ../../../lib/web/src/components/post-tags.tsx:137
 msgid "Add tag..."
 msgstr "tag ထည့်ရန်..."
 
@@ -234,8 +239,8 @@ msgstr "အနက်"
 msgid "Black {0}"
 msgstr "အနက် {0}"
 
-#: ../../../lib/web/src/components/post-tags.tsx:176
-#: ../../../lib/web/src/components/post-tags.tsx:188
+#: ../../../lib/web/src/components/post-tags.tsx:180
+#: ../../../lib/web/src/components/post-tags.tsx:192
 msgid "Boost interest"
 msgstr "စိတ်ဝင်စားမှု မြှင့်တင်မည်"
 
@@ -818,11 +823,8 @@ msgstr "အသစ်"
 #: src/components/layout/chess-layout.tsx:136
 #: src/features/chess/components/game-empty-state.tsx:27
 #: src/features/chess/components/game-empty-state.tsx:43
-msgid "New game"
-msgstr "ဂိမ်းအသစ်"
-
 #: src/features/chess/components/new-game.tsx:96
-msgid "New Game"
+msgid "New game"
 msgstr "ဂိမ်းအသစ်"
 
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:388
@@ -976,7 +978,6 @@ msgstr "စစ်သား"
 
 #: ../../../lib/web/src/features/errors/general-error.tsx:54
 #: ../../../lib/web/src/lib/api-response-interceptors.ts:304
-#: ../../../lib/web/src/lib/error-normalizer.ts:201
 msgid "Please check your internet connection and try again."
 msgstr "သင့်အင်တာနက်ချိတ်ဆက်မှုကို စစ်ဆေးပြီး ထပ်မံကြိုးစားပါ။"
 
@@ -1034,7 +1035,7 @@ msgid "Re-register your passkeys on this server"
 msgstr "ဤဆာဗာတွင် သင်၏ passkey များကို ပြန်လည်မှတ်ပုံတင်ပါ"
 
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:216
-#: ../../../lib/web/src/components/search-entity-page.tsx:240
+#: ../../../lib/web/src/components/search-entity-page.tsx:242
 msgid "Recommended"
 msgstr "အကြံပြုထား"
 
@@ -1042,8 +1043,8 @@ msgstr "အကြံပြုထား"
 msgid "Redirecting to login."
 msgstr "Login သို့ redirect လုပ်နေသည်။"
 
-#: ../../../lib/web/src/components/post-tags.tsx:196
-#: ../../../lib/web/src/components/post-tags.tsx:208
+#: ../../../lib/web/src/components/post-tags.tsx:200
+#: ../../../lib/web/src/components/post-tags.tsx:212
 msgid "Reduce interest"
 msgstr "စိတ်ဝင်စားမှု လျှော့ချ"
 
@@ -1073,8 +1074,8 @@ msgstr "ဝင်ရောက်ခွင့် စည်းမျဉ်း ဖ�
 msgid "Remove access?"
 msgstr "ဝင်ရောက်ခွင့် ဖယ်ရှားမလား?"
 
-#: ../../../lib/web/src/components/post-tags.tsx:216
-#: ../../../lib/web/src/components/post-tags.tsx:228
+#: ../../../lib/web/src/components/post-tags.tsx:220
+#: ../../../lib/web/src/components/post-tags.tsx:232
 msgid "Remove interest"
 msgstr "စိတ်ဝင်စားမှု ဖယ်ရှား"
 
@@ -1150,7 +1151,7 @@ msgid "Search..."
 msgstr "ရှာဖွေ..."
 
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:174
-#: ../../../lib/web/src/components/search-entity-page.tsx:198
+#: ../../../lib/web/src/components/search-entity-page.tsx:200
 #: ../../../lib/web/src/features/access/access-dialog.tsx:202
 msgid "Searching..."
 msgstr "ရှာဖွေနေသည်..."
@@ -1304,8 +1305,8 @@ msgstr "စနစ်"
 msgid "Tag"
 msgstr "Tag"
 
-#: ../../../lib/web/src/components/post-tags.tsx:100
-#: ../../../lib/web/src/components/post-tags.tsx:111
+#: ../../../lib/web/src/components/post-tags.tsx:101
+#: ../../../lib/web/src/components/post-tags.tsx:115
 msgid "Tags"
 msgstr "တက်ဂ်များ"
 
@@ -1382,7 +1383,7 @@ msgid "Travelling"
 msgstr "ခရီးသွားနေသည်"
 
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:190
-#: ../../../lib/web/src/components/search-entity-page.tsx:214
+#: ../../../lib/web/src/components/search-entity-page.tsx:216
 msgid "Try adjusting your search terms"
 msgstr "သင်၏ ရှာဖွေစကားလုံးများကို ပြင်ဆင်ကြည့်ပါ"
 
@@ -1471,7 +1472,7 @@ msgstr "အတည်ပြုမည်"
 msgid "Verify email address"
 msgstr "အီးမေးလ် လိပ်စာ အတည်ပြုမည်"
 
-#: ../../../lib/web/src/components/attachment-gallery.tsx:66
+#: ../../../lib/web/src/components/attachment-gallery.tsx:74
 msgid "Video thumbnail"
 msgstr "ဗီဒီယို thumbnail"
 

@@ -13,6 +13,11 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
+#. js-lingui-explicit-id
+#: ../../../lib/web/src/lib/error-normalizer.ts:204
+msgid "Please check your internet connection and try again."
+msgstr "कृपया आफ्नो इन्टरनेट जडान जाँच गरी पुनः प्रयास गर्नुहोस्।"
+
 #. placeholder {0}: pieces .map(({ type, count }) => getPieceLabel(type, count)) .join(', ')
 #: src/features/chess/components/captured-pieces-strip.tsx:89
 msgid "{colorName} captured {0}"
@@ -115,7 +120,7 @@ msgid "Account verified"
 msgstr "खाता प्रमाणीकरण गरियो"
 
 #: src/components/layout/chess-layout.tsx:111
-msgid "Active Games"
+msgid "Active games"
 msgstr "सक्रिय खेलहरू"
 
 #: ../../../lib/web/src/features/accounts/account-add.tsx:196
@@ -151,7 +156,7 @@ msgstr "खेल सुरु गर्न People एपमा साथीह�
 msgid "Add new account"
 msgstr "नयाँ खाता थप्नुहोस्"
 
-#: ../../../lib/web/src/components/post-tags.tsx:133
+#: ../../../lib/web/src/components/post-tags.tsx:137
 msgid "Add tag..."
 msgstr "ट्याग थप्नुहोस्..."
 
@@ -234,8 +239,8 @@ msgstr "कालो"
 msgid "Black {0}"
 msgstr "कालो {0}"
 
-#: ../../../lib/web/src/components/post-tags.tsx:176
-#: ../../../lib/web/src/components/post-tags.tsx:188
+#: ../../../lib/web/src/components/post-tags.tsx:180
+#: ../../../lib/web/src/components/post-tags.tsx:192
 msgid "Boost interest"
 msgstr "रुचि बढाउनुहोस्"
 
@@ -818,11 +823,8 @@ msgstr "नयाँ"
 #: src/components/layout/chess-layout.tsx:136
 #: src/features/chess/components/game-empty-state.tsx:27
 #: src/features/chess/components/game-empty-state.tsx:43
-msgid "New game"
-msgstr "नयाँ खेल"
-
 #: src/features/chess/components/new-game.tsx:96
-msgid "New Game"
+msgid "New game"
 msgstr "नयाँ खेल"
 
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:388
@@ -976,7 +978,6 @@ msgstr "प्यादा"
 
 #: ../../../lib/web/src/features/errors/general-error.tsx:54
 #: ../../../lib/web/src/lib/api-response-interceptors.ts:304
-#: ../../../lib/web/src/lib/error-normalizer.ts:201
 msgid "Please check your internet connection and try again."
 msgstr "कृपया आफ्नो इन्टरनेट जडान जाँच गरी पुनः प्रयास गर्नुहोस्।"
 
@@ -1034,7 +1035,7 @@ msgid "Re-register your passkeys on this server"
 msgstr "यस सर्भरमा तपाईंका पासकीहरू पुन: दर्ता गर्नुहोस्"
 
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:216
-#: ../../../lib/web/src/components/search-entity-page.tsx:240
+#: ../../../lib/web/src/components/search-entity-page.tsx:242
 msgid "Recommended"
 msgstr "सिफारिस गरिएको"
 
@@ -1042,8 +1043,8 @@ msgstr "सिफारिस गरिएको"
 msgid "Redirecting to login."
 msgstr "लग इनमा रिडाइरेक्ट गर्दै।"
 
-#: ../../../lib/web/src/components/post-tags.tsx:196
-#: ../../../lib/web/src/components/post-tags.tsx:208
+#: ../../../lib/web/src/components/post-tags.tsx:200
+#: ../../../lib/web/src/components/post-tags.tsx:212
 msgid "Reduce interest"
 msgstr "रुचि घटाउनुहोस्"
 
@@ -1073,8 +1074,8 @@ msgstr "पहुँच नियम हटाउनुहोस्"
 msgid "Remove access?"
 msgstr "पहुँच हटाउने?"
 
-#: ../../../lib/web/src/components/post-tags.tsx:216
-#: ../../../lib/web/src/components/post-tags.tsx:228
+#: ../../../lib/web/src/components/post-tags.tsx:220
+#: ../../../lib/web/src/components/post-tags.tsx:232
 msgid "Remove interest"
 msgstr "रुचि हटाउनुहोस्"
 
@@ -1150,7 +1151,7 @@ msgid "Search..."
 msgstr "खोज्नुहोस्..."
 
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:174
-#: ../../../lib/web/src/components/search-entity-page.tsx:198
+#: ../../../lib/web/src/components/search-entity-page.tsx:200
 #: ../../../lib/web/src/features/access/access-dialog.tsx:202
 msgid "Searching..."
 msgstr "खोज्दै..."
@@ -1304,8 +1305,8 @@ msgstr "प्रणाली"
 msgid "Tag"
 msgstr "ट्याग"
 
-#: ../../../lib/web/src/components/post-tags.tsx:100
-#: ../../../lib/web/src/components/post-tags.tsx:111
+#: ../../../lib/web/src/components/post-tags.tsx:101
+#: ../../../lib/web/src/components/post-tags.tsx:115
 msgid "Tags"
 msgstr "ट्यागहरू"
 
@@ -1382,7 +1383,7 @@ msgid "Travelling"
 msgstr "यात्रा गर्दै"
 
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:190
-#: ../../../lib/web/src/components/search-entity-page.tsx:214
+#: ../../../lib/web/src/components/search-entity-page.tsx:216
 msgid "Try adjusting your search terms"
 msgstr "आफ्ना खोज सर्तहरू समायोजन गर्ने प्रयास गर्नुहोस्"
 
@@ -1471,7 +1472,7 @@ msgstr "प्रमाणित गर्नुहोस्"
 msgid "Verify email address"
 msgstr "इमेल ठेगाना प्रमाणित गर्नुहोस्"
 
-#: ../../../lib/web/src/components/attachment-gallery.tsx:66
+#: ../../../lib/web/src/components/attachment-gallery.tsx:74
 msgid "Video thumbnail"
 msgstr "भिडियो थम्बनेल"
 

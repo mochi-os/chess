@@ -13,6 +13,11 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
+#. js-lingui-explicit-id
+#: ../../../lib/web/src/lib/error-normalizer.ts:204
+msgid "Please check your internet connection and try again."
+msgstr "உங்கள் இணைய இணைப்பைச் சரிபார்த்து மீண்டும் முயற்சிக்கவும்."
+
 #. placeholder {0}: pieces .map(({ type, count }) => getPieceLabel(type, count)) .join(', ')
 #: src/features/chess/components/captured-pieces-strip.tsx:89
 msgid "{colorName} captured {0}"
@@ -115,7 +120,7 @@ msgid "Account verified"
 msgstr "கணக்கு சரிபார்க்கப்பட்டது"
 
 #: src/components/layout/chess-layout.tsx:111
-msgid "Active Games"
+msgid "Active games"
 msgstr "செயலில் உள்ள விளையாட்டுகள்"
 
 #: ../../../lib/web/src/features/accounts/account-add.tsx:196
@@ -151,7 +156,7 @@ msgstr "விளையாட்டைத் தொடங்க People பயன
 msgid "Add new account"
 msgstr "புதிய கணக்கு சேர்"
 
-#: ../../../lib/web/src/components/post-tags.tsx:133
+#: ../../../lib/web/src/components/post-tags.tsx:137
 msgid "Add tag..."
 msgstr "டேக் சேர்..."
 
@@ -234,8 +239,8 @@ msgstr "கருப்பு"
 msgid "Black {0}"
 msgstr "கருப்பு {0}"
 
-#: ../../../lib/web/src/components/post-tags.tsx:176
-#: ../../../lib/web/src/components/post-tags.tsx:188
+#: ../../../lib/web/src/components/post-tags.tsx:180
+#: ../../../lib/web/src/components/post-tags.tsx:192
 msgid "Boost interest"
 msgstr "ஆர்வத்தை அதிகரி"
 
@@ -818,11 +823,8 @@ msgstr "புதியது"
 #: src/components/layout/chess-layout.tsx:136
 #: src/features/chess/components/game-empty-state.tsx:27
 #: src/features/chess/components/game-empty-state.tsx:43
-msgid "New game"
-msgstr "புதிய விளையாட்டு"
-
 #: src/features/chess/components/new-game.tsx:96
-msgid "New Game"
+msgid "New game"
 msgstr "புதிய விளையாட்டு"
 
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:388
@@ -976,7 +978,6 @@ msgstr "சிப்பாய்"
 
 #: ../../../lib/web/src/features/errors/general-error.tsx:54
 #: ../../../lib/web/src/lib/api-response-interceptors.ts:304
-#: ../../../lib/web/src/lib/error-normalizer.ts:201
 msgid "Please check your internet connection and try again."
 msgstr "உங்கள் இணைய இணைப்பைச் சரிபார்த்து மீண்டும் முயற்சிக்கவும்."
 
@@ -1034,7 +1035,7 @@ msgid "Re-register your passkeys on this server"
 msgstr "இந்த சேவையகத்தில் உங்கள் கடவுச்சாவிகளை மீண்டும் பதிவு செய்யவும்"
 
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:216
-#: ../../../lib/web/src/components/search-entity-page.tsx:240
+#: ../../../lib/web/src/components/search-entity-page.tsx:242
 msgid "Recommended"
 msgstr "பரிந்துரைக்கப்பட்டது"
 
@@ -1042,8 +1043,8 @@ msgstr "பரிந்துரைக்கப்பட்டது"
 msgid "Redirecting to login."
 msgstr "உள்நுழைவுக்கு redirect ஆகிறது."
 
-#: ../../../lib/web/src/components/post-tags.tsx:196
-#: ../../../lib/web/src/components/post-tags.tsx:208
+#: ../../../lib/web/src/components/post-tags.tsx:200
+#: ../../../lib/web/src/components/post-tags.tsx:212
 msgid "Reduce interest"
 msgstr "ஆர்வத்தைக் குறைக்கவும்"
 
@@ -1073,8 +1074,8 @@ msgstr "அணுகல் விதியை அகற்று"
 msgid "Remove access?"
 msgstr "அணுகலை அகற்றவா?"
 
-#: ../../../lib/web/src/components/post-tags.tsx:216
-#: ../../../lib/web/src/components/post-tags.tsx:228
+#: ../../../lib/web/src/components/post-tags.tsx:220
+#: ../../../lib/web/src/components/post-tags.tsx:232
 msgid "Remove interest"
 msgstr "ஆர்வத்தை அகற்று"
 
@@ -1150,7 +1151,7 @@ msgid "Search..."
 msgstr "தேடு..."
 
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:174
-#: ../../../lib/web/src/components/search-entity-page.tsx:198
+#: ../../../lib/web/src/components/search-entity-page.tsx:200
 #: ../../../lib/web/src/features/access/access-dialog.tsx:202
 msgid "Searching..."
 msgstr "தேடுகிறது..."
@@ -1304,8 +1305,8 @@ msgstr "சிஸ்டம்"
 msgid "Tag"
 msgstr "டேக்"
 
-#: ../../../lib/web/src/components/post-tags.tsx:100
-#: ../../../lib/web/src/components/post-tags.tsx:111
+#: ../../../lib/web/src/components/post-tags.tsx:101
+#: ../../../lib/web/src/components/post-tags.tsx:115
 msgid "Tags"
 msgstr "டேக்குகள்"
 
@@ -1382,7 +1383,7 @@ msgid "Travelling"
 msgstr "பயணிக்கிறது"
 
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:190
-#: ../../../lib/web/src/components/search-entity-page.tsx:214
+#: ../../../lib/web/src/components/search-entity-page.tsx:216
 msgid "Try adjusting your search terms"
 msgstr "உங்கள் தேடல் சொற்களை சரிசெய்ய முயற்சி செய்யுங்கள்"
 
@@ -1471,7 +1472,7 @@ msgstr "சரிபார்"
 msgid "Verify email address"
 msgstr "மின்னஞ்சல் முகவரியை சரிபார்"
 
-#: ../../../lib/web/src/components/attachment-gallery.tsx:66
+#: ../../../lib/web/src/components/attachment-gallery.tsx:74
 msgid "Video thumbnail"
 msgstr "வீடியோ சிறுபடம்"
 

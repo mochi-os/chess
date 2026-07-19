@@ -93,7 +93,7 @@ export function NewGame() {
       <ResponsiveDialogContent className="sm:max-w-[420px]">
         <ResponsiveDialogHeader>
           <ResponsiveDialogTitle className="flex items-center gap-2">
-            <Trans>New Game</Trans>
+            <Trans>New game</Trans>
           </ResponsiveDialogTitle>
           <ResponsiveDialogDescription className="sr-only">
             <Trans>Start a new chess game</Trans>
