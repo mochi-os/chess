@@ -104,6 +104,7 @@ export function ChessGame() {
   const { openNewGameDialog, setWebsocketStatus } = useSidebarContext()
   const [newMessage, setNewMessage] = useState('')
   const [showResignDialog, setShowResignDialog] = useState(false)
+  const [showDeleteDialog, setShowDeleteDialog] = useState(false)
   const [showMobileChat, setShowMobileChat] = useState(false)
   const [lastMove, setLastMove] = useState<{ from: string; to: string } | null>(null)
   const {
@@ -296,6 +297,7 @@ export function ChessGame() {
 
   const handleDelete = () => {
     if (!selectedGame) return
+    setShowDeleteDialog(false)
     deleteGameMutation.mutate({ gameId: selectedGame.id })
   }
 
@@ -441,7 +443,7 @@ export function ChessGame() {
                                 >
                                   <RotateCcw className='me-2 size-4' /> <Trans>Rematch</Trans>
                                 </DropdownMenuItem>
-                                <DropdownMenuItem onClick={handleDelete}>
+                                <DropdownMenuItem onClick={() => setShowDeleteDialog(true)}>
                                   <Trash2 className='me-2 size-4' /> <Trans>Delete game</Trans>
                                 </DropdownMenuItem>
                               </>
@@ -563,6 +565,27 @@ export function ChessGame() {
         destructive
         handleConfirm={handleResign}
         isLoading={resignMutation.isPending}
+      />
+
+      {/* Delete confirmation */}
+      <ConfirmDialog
+        open={showDeleteDialog}
+        onOpenChange={setShowDeleteDialog}
+        title={t`Delete game?`}
+        desc={t`This permanently deletes the game and its chat. This cannot be undone.`}
+        confirmText={
+          deleteGameMutation.isPending ? (
+            <>
+              <Loader2 className="me-2 size-4 animate-spin" />
+              <Trans>Deleting...</Trans>
+            </>
+          ) : (
+            t`Delete`
+          )
+        }
+        destructive
+        handleConfirm={handleDelete}
+        isLoading={deleteGameMutation.isPending}
       />
 
     </>

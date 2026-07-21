@@ -197,7 +197,7 @@ msgstr "Une erreur inattendue s'est produite"
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "Voulez-vous vraiment vous déconnecter ? Vous devrez vous reconnecter pour accéder à votre compte."
 
-#: src/features/chess/index.tsx:552
+#: src/features/chess/index.tsx:554
 msgid "Are you sure you want to resign? {opponentName} will win the game."
 msgstr "Êtes-vous sûr de vouloir abandonner ? {opponentName} gagnera la partie."
 
@@ -228,7 +228,7 @@ msgid "bishop"
 msgstr "fou"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:399
+#: src/features/chess/index.tsx:401
 msgid "Black"
 msgstr "Noir"
 
@@ -267,14 +267,14 @@ msgstr "Catégorie de cette notification"
 msgid "Change notification category"
 msgstr "Changer la catégorie de notification"
 
-#: src/features/chess/index.tsx:492
-#: src/features/chess/index.tsx:524
+#: src/features/chess/index.tsx:494
+#: src/features/chess/index.tsx:526
 msgid "Chat"
 msgstr "Chat"
 
 #: src/features/chess/index.tsx:101
-#: src/features/chess/index.tsx:327
-#: src/features/chess/index.tsx:339
+#: src/features/chess/index.tsx:329
+#: src/features/chess/index.tsx:341
 msgid "Chess"
 msgstr "Échecs"
 
@@ -468,13 +468,25 @@ msgstr "Par défaut"
 msgid "Default AI account"
 msgstr "Compte IA par défaut"
 
-#: src/features/chess/index.tsx:445
+#: src/features/chess/index.tsx:583
+msgid "Delete"
+msgstr ""
+
+#: src/features/chess/index.tsx:447
 msgid "Delete game"
 msgstr "Supprimer la partie"
+
+#: src/features/chess/index.tsx:574
+msgid "Delete game?"
+msgstr ""
 
 #: ../../../lib/web/src/components/restore-banner.tsx:99
 msgid "Delete your account on the old server"
 msgstr "Supprimez votre compte sur l'ancien serveur"
+
+#: src/features/chess/index.tsx:580
+msgid "Deleting..."
+msgstr ""
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:63
 msgid "Desc"
@@ -525,7 +537,7 @@ msgstr "Échec du téléchargement"
 msgid "Draw agreed"
 msgstr "Nulle acceptée"
 
-#: src/features/chess/index.tsx:458
+#: src/features/chess/index.tsx:460
 msgid "Draw offered — waiting for {opponentName}"
 msgstr "Nulle proposée — en attente de {opponentName}"
 
@@ -564,7 +576,7 @@ msgstr "Développer la barre latérale"
 msgid "Extra large"
 msgstr "Très grand"
 
-#: src/features/chess/index.tsx:208
+#: src/features/chess/index.tsx:209
 msgid "Failed to accept draw"
 msgstr "Échec de l'acceptation du match nul"
 
@@ -576,19 +588,19 @@ msgstr "Échec de l'ajout du compte"
 msgid "Failed to create game"
 msgstr "Échec de la création de la partie"
 
-#: src/features/chess/index.tsx:223
+#: src/features/chess/index.tsx:224
 msgid "Failed to create rematch"
 msgstr "Échec de la création de la revanche"
 
-#: src/features/chess/index.tsx:213
+#: src/features/chess/index.tsx:214
 msgid "Failed to decline draw"
 msgstr "Échec du refus du match nul"
 
-#: src/features/chess/index.tsx:234
+#: src/features/chess/index.tsx:235
 msgid "Failed to delete game"
 msgstr "Échec de la suppression de la partie"
 
-#: src/features/chess/index.tsx:203
+#: src/features/chess/index.tsx:204
 msgid "Failed to offer draw"
 msgstr "Échec de la proposition de match nul"
 
@@ -596,12 +608,12 @@ msgstr "Échec de la proposition de match nul"
 msgid "Failed to remove account"
 msgstr "Échec de la suppression du compte"
 
-#: src/features/chess/index.tsx:196
+#: src/features/chess/index.tsx:197
 msgid "Failed to resign"
 msgstr "Échec de l'abandon"
 
-#: src/features/chess/index.tsx:508
-#: src/features/chess/index.tsx:540
+#: src/features/chess/index.tsx:510
+#: src/features/chess/index.tsx:542
 msgid "Failed to send"
 msgstr "Échec de l'envoi"
 
@@ -650,7 +662,7 @@ msgstr "Disposition complète"
 msgid "Game created"
 msgstr "Partie créée"
 
-#: src/features/chess/index.tsx:230
+#: src/features/chess/index.tsx:231
 msgid "Game deleted"
 msgstr "Partie supprimée"
 
@@ -911,7 +923,7 @@ msgstr "Non défini"
 msgid "Notifications"
 msgstr "Notifications"
 
-#: src/features/chess/index.tsx:429
+#: src/features/chess/index.tsx:431
 msgid "Offer draw"
 msgstr "Proposer un match nul"
 
@@ -924,16 +936,16 @@ msgstr "Oups ! Page introuvable !"
 msgid "Open account actions"
 msgstr "Ouvrir les actions du compte"
 
-#: ../../../lib/web/src/components/layout/nav-group.tsx:182
-#: ../../../lib/web/src/components/layout/nav-group.tsx:187
+#: ../../../lib/web/src/components/layout/nav-group.tsx:202
+#: ../../../lib/web/src/components/layout/nav-group.tsx:207
 msgid "Open actions"
 msgstr "Ouvrir les actions"
 
-#: src/features/chess/index.tsx:408
+#: src/features/chess/index.tsx:410
 msgid "Open chat panel"
 msgstr "Ouvrir le panneau de chat"
 
-#: src/features/chess/index.tsx:416
+#: src/features/chess/index.tsx:418
 msgid "Open game actions"
 msgstr "Ouvrir les actions de la partie"
 
@@ -1056,7 +1068,7 @@ msgstr "Relatif (5min, 3h, 2j)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "Relatif dans les 24 heures, sinon absolu"
 
-#: src/features/chess/index.tsx:442
+#: src/features/chess/index.tsx:444
 msgid "Rematch"
 msgstr "Revanche"
 
@@ -1092,16 +1104,16 @@ msgstr "Réinitialiser"
 msgid "Reset all settings to default values"
 msgstr "Réinitialiser tous les paramètres aux valeurs par défaut"
 
-#: src/features/chess/index.tsx:433
-#: src/features/chess/index.tsx:560
+#: src/features/chess/index.tsx:435
+#: src/features/chess/index.tsx:562
 msgid "Resign"
 msgstr "Abandonner"
 
-#: src/features/chess/index.tsx:551
+#: src/features/chess/index.tsx:553
 msgid "Resign game?"
 msgstr "Abandonner la partie ?"
 
-#: src/features/chess/index.tsx:557
+#: src/features/chess/index.tsx:559
 msgid "Resigning..."
 msgstr "Abandon..."
 
@@ -1335,6 +1347,10 @@ msgstr "Thème"
 msgid "Theme Settings"
 msgstr "Paramètres du thème"
 
+#: src/features/chess/index.tsx:575
+msgid "This permanently deletes the game and its chat. This cannot be undone."
+msgstr ""
+
 #: ../../../lib/web/src/lib/preference-utils.ts:62
 msgid "Thursday"
 msgstr "Jeudi"
@@ -1348,10 +1364,10 @@ msgstr "Basculer les colonnes"
 msgid "Toggle right panel"
 msgstr "Basculer le panneau droit"
 
-#: ../../../lib/web/src/components/layout/nav-group.tsx:351
-#: ../../../lib/web/src/components/layout/nav-group.tsx:358
-#: ../../../lib/web/src/components/layout/nav-group.tsx:481
-#: ../../../lib/web/src/components/layout/nav-group.tsx:488
+#: ../../../lib/web/src/components/layout/nav-group.tsx:373
+#: ../../../lib/web/src/components/layout/nav-group.tsx:380
+#: ../../../lib/web/src/components/layout/nav-group.tsx:503
+#: ../../../lib/web/src/components/layout/nav-group.tsx:510
 msgid "Toggle section"
 msgstr "Afficher ou masquer la section"
 
@@ -1502,7 +1518,7 @@ msgid "Wednesday"
 msgstr "Mercredi"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:399
+#: src/features/chess/index.tsx:401
 msgid "White"
 msgstr "Blanc"
 

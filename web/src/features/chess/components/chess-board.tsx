@@ -262,7 +262,7 @@ export function ChessBoard({
             : t`Chess board. Use arrow keys to navigate, Enter or Space to select.`}
           onFocus={() => {
             setIsBoardFocused(true)
-            if (!keyboardPos) setKeyboardPos(myColor === 'w' ? [6, 4] : [1, 4])
+            if (!keyboardPos) setKeyboardPos(myColor === 'w' ? [6, 4] : [6, 3])
           }}
           onBlur={() => setIsBoardFocused(false)}
           onKeyDown={handleKeyDown}
