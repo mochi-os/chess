@@ -16,7 +16,7 @@ import {
   type ChatWebsocketMessagePayload,
   type WebsocketConnectionStatus,
 } from '@/lib/websocket-manager'
-import { gameKeys } from '@/hooks/useGames'
+import { gameKeys, consumeEcho } from '@/hooks/useGames'
 import { useWebsocketManager } from '@/hooks/useWebsocketManager'
 
 interface UseGameWebsocketResult {
@@ -144,7 +144,7 @@ const handleWebsocketPayload = (
       }
     )
 
-    if (!(myIdentity && payload.member === myIdentity)) {
+    if (!(myIdentity && payload.member === myIdentity && consumeEcho(gameId))) {
       void queryClient.invalidateQueries({
         queryKey: gameKeys.moveHistory(gameId),
       })

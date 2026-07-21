@@ -38,6 +38,23 @@ export const gameKeys = {
   newGame: () => ['games', 'new'] as const,
 }
 
+// Games this window has just sent a move for, so the websocket echo of our
+// own move can be told apart from the same move arriving in another window
+// of the same user, which still needs the refetch the mutation did here.
+const echoes = new Map<string, number>()
+const ECHO_LIFETIME = 15_000
+
+export const expectEcho = (gameId: string) => {
+  echoes.set(gameId, Date.now())
+}
+
+export const consumeEcho = (gameId: string): boolean => {
+  const sent = echoes.get(gameId)
+  if (sent === undefined) return false
+  echoes.delete(gameId)
+  return Date.now() - sent < ECHO_LIFETIME
+}
+
 export const useGameDetailQuery = (
   gameId?: string,
   options?: Omit<
@@ -206,7 +223,10 @@ export const useMoveMutation = (
   const queryClient = useQueryClient()
   const { onSuccess, ...restOptions } = options ?? {}
   return useMutation({
-    mutationFn: ({ gameId, ...payload }) => gamesApi.move(gameId, payload),
+    mutationFn: ({ gameId, ...payload }) => {
+      expectEcho(gameId)
+      return gamesApi.move(gameId, payload)
+    },
     onSuccess: (data, variables, context, mutation) => {
       queryClient.invalidateQueries({
         queryKey: gameKeys.messages(variables.gameId),
