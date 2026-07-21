@@ -494,6 +494,7 @@ export function ChessGame() {
               <h3 className="text-sm font-medium"><Trans>Chat</Trans></h3>
             </div>
             <ChatMessageList
+              key={selectedGame.id}
               messagesQuery={messagesQuery}
               chatMessages={chatMessages}
               isLoadingMessages={messagesQuery.isLoading}
@@ -526,6 +527,7 @@ export function ChessGame() {
             <SheetTitle className="text-sm font-medium"><Trans>Chat</Trans></SheetTitle>
           </SheetHeader>
           <ChatMessageList
+            key={selectedGame.id}
             messagesQuery={messagesQuery}
             chatMessages={chatMessages}
             isLoadingMessages={messagesQuery.isLoading}

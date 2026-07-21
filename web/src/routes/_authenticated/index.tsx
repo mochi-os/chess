@@ -20,7 +20,9 @@ export const Route = createFileRoute('/_authenticated/')({
 
     const lastGameId = await getLastGame()
     if (lastGameId) {
-      const gameExists = games.some(g => g.id === lastGameId)
+      const gameExists = games.some(
+        g => g.id === lastGameId || g.fingerprint === lastGameId
+      )
       if (gameExists) {
         throw redirect({ to: '/$gameId', params: { gameId: lastGameId } })
       } else {
