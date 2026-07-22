@@ -38,6 +38,23 @@ export const gameKeys = {
   newGame: () => ['games', 'new'] as const,
 }
 
+// Games this window has just sent a move for, so the websocket echo of our
+// own move can be told apart from the same move arriving in another window
+// of the same user, which still needs the refetch the mutation did here.
+const echoes = new Map<string, number>()
+const ECHO_LIFETIME = 15_000
+
+export const expectEcho = (gameId: string) => {
+  echoes.set(gameId, Date.now())
+}
+
+export const consumeEcho = (gameId: string): boolean => {
+  const sent = echoes.get(gameId)
+  if (sent === undefined) return false
+  echoes.delete(gameId)
+  return Date.now() - sent < ECHO_LIFETIME
+}
+
 export const useGameDetailQuery = (
   gameId?: string,
   options?: Omit<
@@ -206,18 +223,22 @@ export const useMoveMutation = (
   const queryClient = useQueryClient()
   const { onSuccess, ...restOptions } = options ?? {}
   return useMutation({
-    mutationFn: ({ gameId, ...payload }) => gamesApi.move(gameId, payload),
+    mutationFn: ({ gameId, ...payload }) => {
+      expectEcho(gameId)
+      return gamesApi.move(gameId, payload)
+    },
     onSuccess: (data, variables, context, mutation) => {
       queryClient.invalidateQueries({
         queryKey: gameKeys.messages(variables.gameId),
       })
       queryClient.invalidateQueries({
         queryKey: gameKeys.detail(variables.gameId),
+        exact: true,
       })
       queryClient.invalidateQueries({
         queryKey: gameKeys.moveHistory(variables.gameId),
       })
-      queryClient.invalidateQueries({ queryKey: gameKeys.all() })
+      queryClient.invalidateQueries({ queryKey: gameKeys.all(), exact: true })
       onSuccess?.(data, variables, context, mutation)
     },
     ...restOptions,
@@ -254,7 +275,7 @@ export const useCreateGameMutation = (
   return useMutation({
     mutationFn: (opponent: string) => gamesApi.create(opponent),
     onSuccess: (data, variables, context, mutation) => {
-      queryClient.invalidateQueries({ queryKey: gameKeys.all() })
+      queryClient.invalidateQueries({ queryKey: gameKeys.all(), exact: true })
       onSuccess?.(data, variables, context, mutation)
     },
     ...restOptions,
@@ -273,9 +294,10 @@ export const useResignMutation = (
   return useMutation({
     mutationFn: ({ gameId }: ResignVariables) => gamesApi.resign(gameId),
     onSuccess: (data, variables, context, mutation) => {
-      queryClient.invalidateQueries({ queryKey: gameKeys.all() })
+      queryClient.invalidateQueries({ queryKey: gameKeys.all(), exact: true })
       queryClient.invalidateQueries({
         queryKey: gameKeys.detail(variables.gameId),
+        exact: true,
       })
       onSuccess?.(data, variables, context, mutation)
     },
@@ -297,6 +319,7 @@ export const useDrawOfferMutation = (
     onSuccess: (data, variables, context, mutation) => {
       queryClient.invalidateQueries({
         queryKey: gameKeys.detail(variables.gameId),
+        exact: true,
       })
       onSuccess?.(data, variables, context, mutation)
     },
@@ -312,9 +335,10 @@ export const useDrawAcceptMutation = (
   return useMutation({
     mutationFn: ({ gameId }: DrawVariables) => gamesApi.drawAccept(gameId),
     onSuccess: (data, variables, context, mutation) => {
-      queryClient.invalidateQueries({ queryKey: gameKeys.all() })
+      queryClient.invalidateQueries({ queryKey: gameKeys.all(), exact: true })
       queryClient.invalidateQueries({
         queryKey: gameKeys.detail(variables.gameId),
+        exact: true,
       })
       onSuccess?.(data, variables, context, mutation)
     },
@@ -332,6 +356,7 @@ export const useDrawDeclineMutation = (
     onSuccess: (data, variables, context, mutation) => {
       queryClient.invalidateQueries({
         queryKey: gameKeys.detail(variables.gameId),
+        exact: true,
       })
       onSuccess?.(data, variables, context, mutation)
     },
@@ -351,7 +376,7 @@ export const useDeleteGameMutation = (
   return useMutation({
     mutationFn: ({ gameId }: DeleteGameVariables) => gamesApi.delete(gameId),
     onSuccess: (data, variables, context, mutation) => {
-      queryClient.invalidateQueries({ queryKey: gameKeys.all() })
+      queryClient.invalidateQueries({ queryKey: gameKeys.all(), exact: true })
       onSuccess?.(data, variables, context, mutation)
     },
     ...restOptions,
