@@ -197,7 +197,7 @@ msgstr "අනපේක්ෂිත දෝෂයක් සිදු විය"
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "ඔබට පිටවීමට අවශ්‍ය බව විශ්වාසද? ඔබේ ගිණුමට ප්‍රවේශ වීමට ඔබට නැවත පුරනය විය යුතුය."
 
-#: src/features/chess/index.tsx:552
+#: src/features/chess/index.tsx:554
 msgid "Are you sure you want to resign? {opponentName} will win the game."
 msgstr "ඔබට ඉල්ලා අස්වීමට අවශ්‍ය බව ස්ථිරද? {opponentName} ක්‍රීඩාව ජයගන්නෙයි."
 
@@ -228,7 +228,7 @@ msgid "bishop"
 msgstr "හාමුදුරුවෝ"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:399
+#: src/features/chess/index.tsx:401
 msgid "Black"
 msgstr "කළු"
 
@@ -267,14 +267,14 @@ msgstr "මෙම දැනුම්දීම සඳහා ප්‍රවර්
 msgid "Change notification category"
 msgstr "දැනුම්දීම් ප්‍රවර්ගය වෙනස් කරන්න"
 
-#: src/features/chess/index.tsx:492
-#: src/features/chess/index.tsx:524
+#: src/features/chess/index.tsx:494
+#: src/features/chess/index.tsx:526
 msgid "Chat"
 msgstr "චැට්"
 
 #: src/features/chess/index.tsx:101
-#: src/features/chess/index.tsx:327
-#: src/features/chess/index.tsx:339
+#: src/features/chess/index.tsx:329
+#: src/features/chess/index.tsx:341
 msgid "Chess"
 msgstr "චෙස්"
 
@@ -468,13 +468,25 @@ msgstr "පෙරනිමි"
 msgid "Default AI account"
 msgstr "පෙරනිමි AI ගිණුම"
 
-#: src/features/chess/index.tsx:445
+#: src/features/chess/index.tsx:583
+msgid "Delete"
+msgstr "මකන්න"
+
+#: src/features/chess/index.tsx:447
 msgid "Delete game"
 msgstr "ක්‍රීඩාව මකන්න"
+
+#: src/features/chess/index.tsx:574
+msgid "Delete game?"
+msgstr "ක්‍රීඩාව මකන්නද?"
 
 #: ../../../lib/web/src/components/restore-banner.tsx:99
 msgid "Delete your account on the old server"
 msgstr "පැරණි සේවාදායකයේ ඔබේ ගිණුම මකන්න"
+
+#: src/features/chess/index.tsx:580
+msgid "Deleting..."
+msgstr "මකමින්..."
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:63
 msgid "Desc"
@@ -525,7 +537,7 @@ msgstr "බාගත කිරීම අසාර්ථක විය"
 msgid "Draw agreed"
 msgstr "ජය පරාජයක් නැති බව එකඟ විය"
 
-#: src/features/chess/index.tsx:458
+#: src/features/chess/index.tsx:460
 msgid "Draw offered — waiting for {opponentName}"
 msgstr "ජය පරාජය ඉදිරිපත් කළා — {opponentName} සඳහා බලා සිටිමින්"
 
@@ -564,7 +576,7 @@ msgstr "පැති තීරුව ප්‍රසාරණය කරන්න
 msgid "Extra large"
 msgstr "අමතර විශාල"
 
-#: src/features/chess/index.tsx:208
+#: src/features/chess/index.tsx:209
 msgid "Failed to accept draw"
 msgstr "සමතයක් පිළිගැනීමට අසමත් විය"
 
@@ -576,19 +588,19 @@ msgstr "ගිණුම එක් කිරීමට අසමත් විය"
 msgid "Failed to create game"
 msgstr "ක්‍රීඩාවක් සෑදීමට අසමත් විය"
 
-#: src/features/chess/index.tsx:223
+#: src/features/chess/index.tsx:224
 msgid "Failed to create rematch"
 msgstr "නැවත තරඟයක් සෑදීමට අසමත් විය"
 
-#: src/features/chess/index.tsx:213
+#: src/features/chess/index.tsx:214
 msgid "Failed to decline draw"
 msgstr "සමතය ප්‍රතික්ෂේප කිරීමට අසමත් විය"
 
-#: src/features/chess/index.tsx:234
+#: src/features/chess/index.tsx:235
 msgid "Failed to delete game"
 msgstr "ක්‍රීඩාව මැකීමට අසමත් විය"
 
-#: src/features/chess/index.tsx:203
+#: src/features/chess/index.tsx:204
 msgid "Failed to offer draw"
 msgstr "සමතය ඉදිරිපත් කිරීමට අසමත් විය"
 
@@ -596,12 +608,12 @@ msgstr "සමතය ඉදිරිපත් කිරීමට අසමත්
 msgid "Failed to remove account"
 msgstr "ගිණුම ඉවත් කිරීමට අසමත් විය"
 
-#: src/features/chess/index.tsx:196
+#: src/features/chess/index.tsx:197
 msgid "Failed to resign"
 msgstr "ඉල්ලා අස්වීමට අසමත් විය"
 
-#: src/features/chess/index.tsx:508
-#: src/features/chess/index.tsx:540
+#: src/features/chess/index.tsx:510
+#: src/features/chess/index.tsx:542
 msgid "Failed to send"
 msgstr "යැවීමට අසමත් විය"
 
@@ -650,7 +662,7 @@ msgstr "සම්පූර්ණ පිරිසැලසුම"
 msgid "Game created"
 msgstr "ක්‍රීඩාව සාදන ලදී"
 
-#: src/features/chess/index.tsx:230
+#: src/features/chess/index.tsx:231
 msgid "Game deleted"
 msgstr "ක්‍රීඩාව මකන ලදී"
 
@@ -911,7 +923,7 @@ msgstr "සකසා නැත"
 msgid "Notifications"
 msgstr "දැනුම්දීම්"
 
-#: src/features/chess/index.tsx:429
+#: src/features/chess/index.tsx:431
 msgid "Offer draw"
 msgstr "draw එකක් යෝජනා කරන්න"
 
@@ -924,16 +936,16 @@ msgstr "අහෝ! පිටුව හමු නොවීය!"
 msgid "Open account actions"
 msgstr "ගිණුම් ක්‍රියා විවෘත කරන්න"
 
-#: ../../../lib/web/src/components/layout/nav-group.tsx:182
-#: ../../../lib/web/src/components/layout/nav-group.tsx:187
+#: ../../../lib/web/src/components/layout/nav-group.tsx:202
+#: ../../../lib/web/src/components/layout/nav-group.tsx:207
 msgid "Open actions"
 msgstr "ක්‍රියා විවෘත කරන්න"
 
-#: src/features/chess/index.tsx:408
+#: src/features/chess/index.tsx:410
 msgid "Open chat panel"
 msgstr "චැට් පැනලය විවෘත කරන්න"
 
-#: src/features/chess/index.tsx:416
+#: src/features/chess/index.tsx:418
 msgid "Open game actions"
 msgstr "ක්‍රීඩා ක්‍රියා විවෘත කරන්න"
 
@@ -1056,7 +1068,7 @@ msgstr "සාපේක්ෂ (5m, 3h, 2d)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "පැය 24 තුළ සාපේක්ෂ, නැතහොත් නිරපේක්ෂ"
 
-#: src/features/chess/index.tsx:442
+#: src/features/chess/index.tsx:444
 msgid "Rematch"
 msgstr "නැවත ක්‍රීඩාව"
 
@@ -1092,16 +1104,16 @@ msgstr "reset"
 msgid "Reset all settings to default values"
 msgstr "සියලු සැකසුම් පෙරනිමි අගයන් වෙත reset කරන්න"
 
-#: src/features/chess/index.tsx:433
-#: src/features/chess/index.tsx:560
+#: src/features/chess/index.tsx:435
+#: src/features/chess/index.tsx:562
 msgid "Resign"
 msgstr "ඉල්ලා අස්වන්න"
 
-#: src/features/chess/index.tsx:551
+#: src/features/chess/index.tsx:553
 msgid "Resign game?"
 msgstr "ක්‍රීඩාවෙන් ඉල්ලා අස්වන්නද?"
 
-#: src/features/chess/index.tsx:557
+#: src/features/chess/index.tsx:559
 msgid "Resigning..."
 msgstr "ඉල්ලා අස්වෙමින්..."
 
@@ -1335,6 +1347,10 @@ msgstr "theme"
 msgid "Theme Settings"
 msgstr "theme සැකසුම්"
 
+#: src/features/chess/index.tsx:575
+msgid "This permanently deletes the game and its chat. This cannot be undone."
+msgstr "මෙය ක්‍රීඩාව සහ එහි කතාබස් ස්ථිරවම මකා දමයි. මෙම ක්‍රියාව අහෝසි කළ නොහැක."
+
 #: ../../../lib/web/src/lib/preference-utils.ts:62
 msgid "Thursday"
 msgstr "බ්‍රහස්පතින්දා"
@@ -1348,10 +1364,10 @@ msgstr "තීරු මාරු කරන්න"
 msgid "Toggle right panel"
 msgstr "දකුණු පැනලය මාරු කරන්න"
 
-#: ../../../lib/web/src/components/layout/nav-group.tsx:351
-#: ../../../lib/web/src/components/layout/nav-group.tsx:358
-#: ../../../lib/web/src/components/layout/nav-group.tsx:481
-#: ../../../lib/web/src/components/layout/nav-group.tsx:488
+#: ../../../lib/web/src/components/layout/nav-group.tsx:373
+#: ../../../lib/web/src/components/layout/nav-group.tsx:380
+#: ../../../lib/web/src/components/layout/nav-group.tsx:503
+#: ../../../lib/web/src/components/layout/nav-group.tsx:510
 msgid "Toggle section"
 msgstr "කොටස ටොගල් කරන්න"
 
@@ -1502,7 +1518,7 @@ msgid "Wednesday"
 msgstr "බදාදා"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:399
+#: src/features/chess/index.tsx:401
 msgid "White"
 msgstr "සුදු"
 
