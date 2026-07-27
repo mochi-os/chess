@@ -63,6 +63,17 @@ def chess_ensure_commit_hook():
 	mochi.db.commit.hook("chess_commit_hook")
 
 def database_upgrade(version):
+	if version == 3:
+		# Monotonic revision, bumped by every state change and carried on
+		# every outbound event. Local writes compare-and-swap on the value
+		# they read; inbound writes apply only when they carry a higher one.
+		# Existing rows start at 0 on both peers, so they stay in step.
+		found = False
+		for column in mochi.db.table("games"):
+			if column["name"] == "revision":
+				found = True
+		if not found:
+			mochi.db.execute("alter table games add column revision integer not null default 0")
 	if version == 2:
 		# Drop the pre-2026-07 broadcast tables left in the app data DB when
 		# broadcast state moved to the per-app system DB - inert, but stale
@@ -85,6 +96,7 @@ def database_create():
 		pgn text not null default '',
 		draw_offer text,
 		key text not null,
+		revision integer not null default 0,
 		updated integer not null,
 		created integer not null
 	)""")
@@ -114,6 +126,52 @@ def get_opponent(game, user_id):
 	if game["identity"] == user_id:
 		return game["opponent"]
 	return game["identity"]
+
+# Concurrency control.
+#
+# Nothing serialises HTTP actions for a (user, app): core's per-worker
+# guarantee (protocol2_worker.go) covers inbound P2P frames only, and
+# db_app's lock guards schema creation, not handler execution. So two
+# HTTP actions, or an HTTP action and an inbound event, can all read the
+# same games row and write over each other.
+#
+# Every state change therefore bumps a monotonic revision. Local writes
+# compare-and-swap on the value they read; inbound writes apply only when
+# they carry a higher one. Monotonic ordering is what makes a rejected
+# inbound event safe to discard - core acks a handler that simply returns
+# (protocol2_worker.go run/handle), so the sender never retries, and a
+# drop would be permanent. Because the revision only ever moves forward,
+# a rejected event is by definition one whose state we have already
+# reached or passed, so nothing is lost.
+
+def game_write(game, columns, values, now):
+	"""Apply a local state change, guarding on the revision we read.
+
+	Returns the new revision, or 0 when another writer got there first -
+	in which case the caller must abandon the change entirely, emitting
+	no message, no websocket payload and no P2P event."""
+	revision = game["revision"] + 1
+	sql = "update games set " + columns + ", revision=?, updated=? where id=? and revision=?"
+	params = values + [revision, now, game["id"], game["revision"]]
+	if mochi.db.execute(sql, *params) == 0:
+		return 0
+	return revision
+
+def game_apply(e, game, columns, values, now):
+	"""Apply an inbound state change if it is newer than the row we hold.
+
+	The sender's post-write revision orders the change. A peer predating
+	the field sends none, and falls back to our own read value plus one,
+	which makes the write behave exactly like the local compare-and-swap.
+	Returns False when the row already sits at or past this state."""
+	revision = e.content("revision")
+	if revision != None and revision != "" and mochi.text.valid(str(revision), "integer"):
+		revision = int(revision)
+	else:
+		revision = game["revision"] + 1
+	sql = "update games set " + columns + ", revision=?, updated=? where id=? and revision<?"
+	params = values + [revision, now, game["id"], revision]
+	return mochi.db.execute(sql, *params) > 0
 
 # Load game by ID from action input, validate ID and player access
 def load_game(a):
@@ -366,11 +424,9 @@ def action_move(a):
 	# requests validate the same turn and the later write wins blind.
 	# status is in the predicate because a resignation arriving in that
 	# window changes the row without touching the FEN.
-	changed = mochi.db.execute(
-		"update games set fen=?, pgn=?, status=?, winner=?, draw_offer=null, updated=? where id=? and fen=? and status=?",
-		fen, pgn or "", new_status, new_winner, now, game["id"], game["fen"], game["status"]
-	)
-	if changed == 0:
+	revision = game_write(game, "fen=?, pgn=?, status=?, winner=?, draw_offer=null",
+		[fen, pgn or "", new_status, new_winner], now)
+	if revision == 0:
 		a.error.label(409, "errors.game_state_changed")
 		return
 
@@ -393,9 +449,9 @@ def action_move(a):
 			"game": game["id"], "message": id, "created": now, "name": a.user.identity.name,
 			"body": san, "from": move_from, "to": move_to, "promotion": promotion,
 			"fen": fen, "pgn": pgn or "", "status": new_status, "winner": new_winner or "",
-			# The position this move was played from, read from our own row
-			# rather than taken from the client, so the receiver can reject a
-			# move that doesn't follow from the board it currently holds.
+			"revision": revision,
+			# Retained for peers that predate the revision field: they still
+			# reject a move that doesn't follow from the board they hold.
 			"parent": game["fen"]
 		}
 	)
@@ -419,7 +475,10 @@ def action_resign(a):
 	winner = other
 
 	now = mochi.time.now()
-	mochi.db.execute("update games set status='resigned', winner=?, updated=? where id=?", winner, now, game["id"])
+	revision = game_write(game, "status='resigned', winner=?", [winner], now)
+	if revision == 0:
+		a.error.label(409, "errors.game_state_changed")
+		return
 
 	# Insert system message
 	id = mochi.uid()
@@ -434,7 +493,7 @@ def action_resign(a):
 
 	mochi.message.send(
 		{"from": a.user.identity.id, "to": other, "service": "chess", "event": "resign"},
-		{"game": game["id"], "created": now, "body": msg, "winner": winner}
+		{"game": game["id"], "created": now, "body": msg, "winner": winner, "revision": revision}
 	)
 
 	return {
@@ -458,7 +517,10 @@ def action_draw_offer(a):
 	other = get_opponent(game, a.user.identity.id)
 
 	now = mochi.time.now()
-	mochi.db.execute("update games set draw_offer=?, updated=? where id=?", a.user.identity.id, now, game["id"])
+	revision = game_write(game, "draw_offer=?", [a.user.identity.id], now)
+	if revision == 0:
+		a.error.label(409, "errors.game_state_changed")
+		return
 
 	# Insert system message
 	id = mochi.uid()
@@ -471,7 +533,7 @@ def action_draw_offer(a):
 
 	mochi.message.send(
 		{"from": a.user.identity.id, "to": other, "service": "chess", "event": "draw_offer"},
-		{"game": game["id"], "created": now, "body": msg, "draw_offer": a.user.identity.id}
+		{"game": game["id"], "created": now, "body": msg, "draw_offer": a.user.identity.id, "revision": revision}
 	)
 
 	return {
@@ -495,7 +557,12 @@ def action_draw_accept(a):
 	other = get_opponent(game, a.user.identity.id)
 
 	now = mochi.time.now()
-	mochi.db.execute("update games set status='draw', draw_offer=null, updated=? where id=?", now, game["id"])
+	# A concurrent decline bumps the revision, so its accept loses the CAS
+	# here rather than both emitting a contradictory system message.
+	revision = game_write(game, "status='draw', draw_offer=null", [], now)
+	if revision == 0:
+		a.error.label(409, "errors.game_state_changed")
+		return
 
 	# Insert system message
 	id = mochi.uid()
@@ -508,7 +575,7 @@ def action_draw_accept(a):
 
 	mochi.message.send(
 		{"from": a.user.identity.id, "to": other, "service": "chess", "event": "draw_accept"},
-		{"game": game["id"], "created": now, "body": msg}
+		{"game": game["id"], "created": now, "body": msg, "revision": revision}
 	)
 
 	return {
@@ -532,7 +599,10 @@ def action_draw_decline(a):
 	other = get_opponent(game, a.user.identity.id)
 
 	now = mochi.time.now()
-	mochi.db.execute("update games set draw_offer=null, updated=? where id=?", now, game["id"])
+	revision = game_write(game, "draw_offer=null", [], now)
+	if revision == 0:
+		a.error.label(409, "errors.game_state_changed")
+		return
 
 	# Insert system message
 	id = mochi.uid()
@@ -545,7 +615,7 @@ def action_draw_decline(a):
 
 	mochi.message.send(
 		{"from": a.user.identity.id, "to": other, "service": "chess", "event": "draw_decline"},
-		{"game": game["id"], "created": now, "body": msg}
+		{"game": game["id"], "created": now, "body": msg, "revision": revision}
 	)
 
 	return {
@@ -610,6 +680,13 @@ def event_new(e):
 	if e.header("to") not in [identity, opponent]:
 		return
 
+	# ...and that the sender is too. The friend check above only proves the
+	# sender is OUR friend, not that they are playing: without this a friend
+	# could plant a game between us and a third party, who would then satisfy
+	# every later is_player check on this host.
+	if e.header("from") not in [identity, opponent]:
+		return
+
 	result = mochi.db.execute(
 		"insert or ignore into games ( id, identity, identity_name, opponent, opponent_name, white, key, updated, created ) values ( ?, ?, ?, ?, ?, ?, ?, ?, ? )",
 		game_id, identity, identity_name, opponent, opponent_name, white, mochi.random.alphanumeric(16), mochi.time.now(), created
@@ -650,18 +727,16 @@ def event_move(e):
 	if winner and winner not in players:
 		winner = None
 
-	# Apply only if our board is still the one this move was played from.
-	# Core dedups inbound frames by id, but that cache is in memory and
-	# does not survive a restart, so a retry after a lost ack can arrive
-	# looking new and rewind the board (and clear a pending draw offer).
-	# Peers older than this field send no parent, so fall back to the
-	# unconditional write until both sides carry it.
-	parent = e.content("parent")
-	if parent and game["fen"] != parent:
-		return
-
+	# Apply atomically, ordered by the sender's revision. The earlier
+	# read-then-write shape lost to a concurrent local action: this handler
+	# accepted a board, an HTTP move advanced the row, and the unconditional
+	# write then erased it. Core dedups inbound frames by id, but that cache
+	# is in memory and does not survive a restart, so a retry after a lost
+	# ack can also arrive looking new.
 	now = mochi.time.now()
-	mochi.db.execute("update games set fen=?, pgn=?, status=?, winner=?, draw_offer=null, updated=? where id=?", fen, pgn, status, winner, now, game["id"])
+	if not game_apply(e, game, "fen=?, pgn=?, status=?, winner=?, draw_offer=null",
+			[fen, pgn, status, winner], now):
+		return
 
 	id = e.content("message")
 	if not mochi.text.valid(str(id), "id"):
@@ -736,7 +811,8 @@ def event_resign(e):
 		winner = game["opponent"] if sender == game["identity"] else game["identity"]
 
 	now = mochi.time.now()
-	mochi.db.execute("update games set status='resigned', winner=?, updated=? where id=?", winner, now, game["id"])
+	if not game_apply(e, game, "status='resigned', winner=?", [winner], now):
+		return
 
 	id = mochi.uid()
 	mochi.db.execute("insert into messages ( id, game, member, name, body, type, event, created ) values ( ?, ?, ?, ?, ?, 'system', 'resign', ? )", id, game["id"], sender, sender_name, body, now)
@@ -773,7 +849,8 @@ def event_draw_offer(e):
 	if game["updated"] and incoming <= game["updated"]:
 		return
 
-	mochi.db.execute("update games set draw_offer=?, updated=? where id=?", sender, incoming, game["id"])
+	if not game_apply(e, game, "draw_offer=?", [sender], incoming):
+		return
 
 	id = mochi.uid()
 	mochi.db.execute("insert into messages ( id, game, member, name, body, type, event, created ) values ( ?, ?, ?, ?, ?, 'system', 'draw_offer', ? )", id, game["id"], sender, sender_name, body, now)
@@ -797,7 +874,8 @@ def event_draw_accept(e):
 	sender_name = game["identity_name"] if sender == game["identity"] else game["opponent_name"]
 
 	now = mochi.time.now()
-	mochi.db.execute("update games set status='draw', draw_offer=null, updated=? where id=?", now, game["id"])
+	if not game_apply(e, game, "status='draw', draw_offer=null", [], now):
+		return
 
 	id = mochi.uid()
 	mochi.db.execute("insert into messages ( id, game, member, name, body, type, event, created ) values ( ?, ?, ?, ?, ?, 'system', 'draw_accept', ? )", id, game["id"], sender, sender_name, body, now)
@@ -821,7 +899,8 @@ def event_draw_decline(e):
 	sender_name = game["identity_name"] if sender == game["identity"] else game["opponent_name"]
 
 	now = mochi.time.now()
-	mochi.db.execute("update games set draw_offer=null, updated=? where id=?", now, game["id"])
+	if not game_apply(e, game, "draw_offer=null", [], now):
+		return
 
 	id = mochi.uid()
 	mochi.db.execute("insert into messages ( id, game, member, name, body, type, event, created ) values ( ?, ?, ?, ?, ?, 'system', 'draw_decline', ? )", id, game["id"], sender, sender_name, body, now)
