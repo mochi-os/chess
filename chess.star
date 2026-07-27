@@ -214,6 +214,21 @@ def game_players(game):
 	"""Entities entitled to write this game's state."""
 	return [game["identity"], game["opponent"]]
 
+def event_created(e, now):
+	"""Peer-supplied message timestamp, clamped to our clock.
+
+	A stamp far from now would pin the message out of order forever and
+	distort the created-keyed pagination cursor, so anything more than a
+	day behind or five minutes ahead is replaced with our own time.
+	Returns None when the field is absent or malformed."""
+	created = e.content("created")
+	if not mochi.text.valid(str(created), "integer"):
+		return None
+	created = int(created)
+	if created < now - 86400 or created > now + 300:
+		return now
+	return created
+
 def game_terminal(status):
 	return 1 if status in GAME_TERMINAL else 0
 
@@ -427,6 +442,13 @@ def valid_fen(fen):
 	if not fen or len(fen) > 200:
 		return False
 	parts = fen.split(" ")
+	# All six FEN fields, not just the board. The turn check in action_move
+	# reads parts[1] and chess.js load() throws on an incomplete FEN, so a
+	# board-only string that passed here crash-looped the opponent's view.
+	if len(parts) != 6:
+		return False
+	if parts[1] not in ["w", "b"]:
+		return False
 	rows = parts[0].split("/")
 	if len(rows) != 8:
 		return False
@@ -923,8 +945,8 @@ def event_new(e):
 	if not mochi.text.valid(white, "entity"):
 		return
 
-	created = e.content("created")
-	if not mochi.text.valid(str(created), "integer"):
+	created = event_created(e, mochi.time.now())
+	if created == None:
 		return
 
 	# Verify the recipient is one of the two players - a friend must not be able
@@ -994,8 +1016,8 @@ def event_move(e):
 	if not mochi.text.valid(str(id), "id"):
 		id = mochi.uid()
 
-	created = e.content("created")
-	if not mochi.text.valid(str(created), "integer"):
+	created = event_created(e, now)
+	if created == None:
 		created = now
 
 	name = e.content("name") or "Opponent"
@@ -1023,8 +1045,8 @@ def event_message(e):
 	if not mochi.text.valid(str(id), "id"):
 		return
 
-	created = e.content("created")
-	if not mochi.text.valid(str(created), "integer"):
+	created = event_created(e, mochi.time.now())
+	if created == None:
 		return
 
 	body = e.content("body")
