@@ -124,10 +124,11 @@ const handleWebsocketPayload = (
     )
   }
 
-  // System events now carry the full applied game state, because the snapshot
-  // that produced them may have repaired a board move this client never saw.
-  // Merge whatever is present so the board can't lag behind the row.
-  if (msgType === 'system' && payload.fen) {
+  // Any non-move payload carrying a board is a complete applied snapshot -
+  // a system event whose snapshot repaired a move this client never saw, or a
+  // 'state' payload from reconciliation. Merge on the presence of the board
+  // rather than on which event produced it.
+  if (msgType !== 'move' && payload.fen) {
     queryClient.setQueryData<GameViewResponse>(
       gameKeys.detail(gameId),
       (current) => {
@@ -176,6 +177,11 @@ const handleWebsocketPayload = (
   }
 
   // Append message to messages cache for all types (message, move, system)
+  // A reconciliation snapshot is a cache signal, not something that happened
+  // in the game: it repairs state this client missed and has no message of its
+  // own. Appending one would put an empty system entry in the chat.
+  if (msgType === 'state') return
+
   const incomingMessage = createMessageFromPayload(gameId, payload, unknownSenderLabel)
 
   queryClient.setQueryData<InfiniteData<GetMessagesResponse>>(

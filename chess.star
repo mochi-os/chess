@@ -205,6 +205,15 @@ def get_opponent(game, user_id):
 GAME_COLUMNS = ["fen", "pgn", "status", "winner", "draw_offer"]
 GAME_TERMINAL = ["checkmate", "stalemate", "draw", "resigned"]
 
+# Columns a websocket payload may carry. Everything this game holds is
+# visible to both players, so the public set is the whole snapshot -
+# unlike words, which must hold back racks and the bag.
+GAME_PUBLIC = GAME_COLUMNS
+
+def game_players(game):
+	"""Entities entitled to write this game's state."""
+	return [game["identity"], game["opponent"]]
+
 def game_terminal(status):
 	return 1 if status in GAME_TERMINAL else 0
 
@@ -265,7 +274,7 @@ def game_write(game, changes, writer, now):
 	state["snapshot"] = 1
 	return state
 
-def game_apply(e, game, legacy, now, reconcile=True):
+def game_apply(e, game, legacy, now, sync=False):
 	"""Apply an inbound change if it outranks the row we hold.
 
 	Peers on this version send a complete snapshot and the full tuple.
@@ -297,7 +306,16 @@ def game_apply(e, game, legacy, now, reconcile=True):
 		# decides every same-revision tie, so a peer naming someone else could
 		# steer them all.
 		writer = e.content("writer")
-		if writer != e.header("from"):
+		if sync:
+			# A relayed snapshot is forwarded by whichever peer held the
+			# winning state, which is not necessarily the peer that wrote it -
+			# that is the whole point of reconciliation. Bind the writer to the
+			# game's players rather than to the relay, and never rewrite it:
+			# the writer element decides conflicts, so changing it in transit
+			# would change who wins.
+			if writer not in game_players(game):
+				return None
+		elif writer != e.header("from"):
 			return None
 		event = e.content("event")
 		if not event or not mochi.text.valid(str(event), "id"):
@@ -328,7 +346,7 @@ def game_apply(e, game, legacy, now, reconcile=True):
 		# forever - core acks a handler that returns cleanly, so nothing else
 		# tells them. Send our winning snapshot back. reconcile is False on
 		# the sync path itself so this cannot ping-pong.
-		if reconcile:
+		if not sync:
 			game_reconcile(e, game)
 		return None
 	return state
@@ -362,9 +380,19 @@ def event_sync(e):
 	sender = e.header("from")
 	if not (sender == game["identity"] or sender == game["opponent"]):
 		return
-	# reconcile=False: if OUR state dominates theirs we simply drop it rather
-	# than answering, which is what terminates the exchange.
-	game_apply(e, game, {}, mochi.time.now(), False)
+	# sync=True: if OUR state dominates theirs we drop it rather than
+	# answering, which is what terminates the exchange.
+	state = game_apply(e, game, {}, mochi.time.now(), True)
+	if state == None:
+		return
+	# A repaired row that no open client hears about breaks the invariant that
+	# browser state eventually equals the canonical row: without this the peer
+	# converges in the database while its browser still shows the state it was
+	# repaired out of. type "state" carries no message - it is a cache signal.
+	payload = {"type": "state"}
+	for key in GAME_PUBLIC:
+		payload[key] = state[key]
+	mochi.websocket.write(game["key"], payload)
 
 # Load game by ID from action input, validate ID and player access
 def load_game(a):
