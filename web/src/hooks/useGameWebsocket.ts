@@ -167,6 +167,17 @@ const handleWebsocketPayload = (
       void queryClient.invalidateQueries({
         queryKey: gameKeys.moveHistory(gameId),
       })
+      // The merge above is for responsiveness only; a move payload is a
+      // complete snapshot like any other, and the merge cannot clear falsy
+      // fields (an emptied winner survives `payload.x || current.x`) or
+      // update the list, which otherwise shows "active" after a remote
+      // checkmate. Authoritative state comes from the refetch. Own echoes
+      // skip it: the mutation's onSuccess already invalidated everything.
+      void queryClient.invalidateQueries({
+        queryKey: gameKeys.detail(gameId),
+        exact: true,
+      })
+      void queryClient.invalidateQueries({ queryKey: gameKeys.all(), exact: true })
     }
   }
 
