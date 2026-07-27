@@ -320,6 +320,13 @@ def game_apply(e, game, legacy, now, sync=False):
 		event = e.content("event")
 		if not event or not mochi.text.valid(str(event), "id"):
 			return None
+	elif sync:
+		# A sync frame is a protocol control message with exactly one accepted
+		# shape. Peers predating the feature never send one, so there is no
+		# compatibility case - and the legacy branch would write an empty
+		# writer, which game_reconcile refuses to relay, permanently disabling
+		# this row's ability to repair itself.
+		return None
 	else:
 		state = {}
 		for key, value in legacy.items():
@@ -379,6 +386,10 @@ def event_sync(e):
 		return
 	sender = e.header("from")
 	if not (sender == game["identity"] or sender == game["opponent"]):
+		return
+	# One accepted shape, no fallback: anything without a complete snapshot is
+	# not a sync frame and must change nothing at all.
+	if e.content("snapshot") != 1:
 		return
 	# sync=True: if OUR state dominates theirs we drop it rather than
 	# answering, which is what terminates the exchange.
