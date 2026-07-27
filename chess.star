@@ -160,11 +160,17 @@ def get_opponent(game, user_id):
 # Ordering is therefore the tuple (terminal, revision, writer, event),
 # compared lexicographically:
 #
-#   terminal  1 when the status ends the game, else 0. Terminal states
-#             are absorbing, so a resignation is never silently undone by
-#             a concurrent move - the one outcome a player would read as
-#             a bug rather than a race.
-#   revision  the logical counter.
+#   revision  the logical counter, and it leads. An earlier version put
+#             terminal first, which made EVERY terminal state outrank every
+#             non-terminal one at any counter: a player resigning from a
+#             stale revision-4 view then rewound peers at revision 30 to
+#             revision-4 boards, racks and scores. Causality first.
+#   terminal  1 when the status ends the game, else 0. Second, so it decides
+#             only genuine same-counter conflicts - a resignation racing a
+#             move at the same revision survives on both peers - without
+#             letting an ancient terminal defeat newer state. A resignation
+#             made against a state that no longer exists is discarded, and
+#             the player reissues it once caught up.
 #   writer    the entity that produced the state. Breaks ties between
 #             peers at the same counter, identically on both sides.
 #   event     a per-write uid. Only reachable if one writer produced two
@@ -197,6 +203,25 @@ def game_state(game, changes):
 	for key, value in changes.items():
 		state[key] = "" if value == None else value
 	return state
+
+def game_snapshot_valid(game, state):
+	"""Validate a complete inbound snapshot before it can replace our row.
+
+	Snapshot mode reads the columns straight off the event, so the checks
+	each handler runs on its own fields do not apply to it. Without this a
+	peer could set an arbitrary status or winner through any event type."""
+	if not valid_fen(state["fen"]):
+		return False
+	if len(state["pgn"]) > 10000:
+		return False
+	if state["status"] not in ["active", "checkmate", "stalemate", "draw", "resigned"]:
+		return False
+	players = [game["identity"], game["opponent"]]
+	if state["winner"] and state["winner"] not in players:
+		return False
+	if state["draw_offer"] and state["draw_offer"] not in players:
+		return False
+	return True
 
 def game_write(game, changes, writer, now):
 	"""Apply a local change, guarding on the exact tuple we read.
@@ -236,7 +261,14 @@ def game_apply(e, game, legacy, now):
 		state = {}
 		for column in GAME_COLUMNS:
 			value = e.content(column)
-			state[column] = "" if value == None else value
+			# A field absent from a snapshot is a truncated snapshot, not an
+			# empty value: coercing it to "" would let a partial event clear
+			# state the sender never meant to change.
+			if value == None:
+				return None
+			state[column] = value
+		if not game_snapshot_valid(game, state):
+			return None
 		revision = e.content("revision")
 		if not mochi.text.valid(str(revision), "integer"):
 			return None
@@ -260,9 +292,9 @@ def game_apply(e, game, legacy, now):
 		params.append(value)
 	sql = ("update games set " + ", ".join(sets) +
 		", revision=?, writer=?, event=?, updated=? where id=?" +
-		" and (case when status in ('checkmate','stalemate','draw','resigned') then 1 else 0 end, revision, writer, event) < (?, ?, ?, ?)")
+		" and (revision, case when status in ('checkmate','stalemate','draw','resigned') then 1 else 0 end, writer, event) < (?, ?, ?, ?)")
 	params.extend([revision, writer, event, now, game["id"],
-		game_terminal(state["status"]), revision, writer, event])
+		revision, game_terminal(state["status"]), writer, event])
 	if mochi.db.execute(sql, *params) == 0:
 		return None
 	return state
@@ -925,7 +957,8 @@ def event_resign(e):
 		winner = game["opponent"] if sender == game["identity"] else game["identity"]
 
 	now = mochi.time.now()
-	if game_apply(e, game, {"status": "resigned", "winner": winner}, now) == None:
+	state = game_apply(e, game, {"status": "resigned", "winner": winner}, now)
+	if state == None:
 		return
 
 	id = mochi.uid()
@@ -933,7 +966,14 @@ def event_resign(e):
 
 	# Kept on direct websocket.write: type='system' is multi-semantic;
 	# see chess_commit_hook for the rationale.
-	mochi.websocket.write(game["key"], {"type": "system", "event": "resign", "name": sender_name, "created": now, "body": body, "winner": winner or ""})
+	ws_data = {"type": "system", "event": "resign", "name": sender_name, "created": now, "body": body, "winner": winner or ""}
+	# A snapshot may have repaired more than this event's own subject - a
+	# draw offer can carry a board move the peer never received - so send the
+	# applied state, not just the fields this event is about. Otherwise an
+	# open client keeps the stale board until it refetches.
+	for key, value in state.items():
+		ws_data[key] = value
+	mochi.websocket.write(game["key"], ws_data)
 	notify("activity", "", mochi.app.label("notifications.title.game"), mochi.app.label("notifications.body.opponent_resigned"), "/chess/" + game["id"], event_id="resign:" + game["id"])
 
 # Received a draw offer event
@@ -961,7 +1001,8 @@ def event_draw_offer(e):
 	if not mochi.text.valid(incoming, "integer"):
 		incoming = str(now)
 
-	if game_apply(e, game, {"draw_offer": sender}, now) == None:
+	state = game_apply(e, game, {"draw_offer": sender}, now)
+	if state == None:
 		return
 
 	id = mochi.uid()
@@ -969,7 +1010,14 @@ def event_draw_offer(e):
 
 	# Kept on direct websocket.write: type='system' is multi-semantic;
 	# see chess_commit_hook for the rationale.
-	mochi.websocket.write(game["key"], {"type": "system", "event": "draw_offer", "name": sender_name, "created": now, "body": body, "draw_offer": sender})
+	ws_data = {"type": "system", "event": "draw_offer", "name": sender_name, "created": now, "body": body, "draw_offer": sender}
+	# A snapshot may have repaired more than this event's own subject - a
+	# draw offer can carry a board move the peer never received - so send the
+	# applied state, not just the fields this event is about. Otherwise an
+	# open client keeps the stale board until it refetches.
+	for key, value in state.items():
+		ws_data[key] = value
+	mochi.websocket.write(game["key"], ws_data)
 	notify("activity", "", mochi.app.label("notifications.title.chess"), mochi.app.label("notifications.body.draw_offered"), "/chess/" + game["id"], event_id="draw_offer:" + game["id"] + ":" + str(incoming))
 
 # Received a draw accept event
@@ -986,7 +1034,8 @@ def event_draw_accept(e):
 	sender_name = game["identity_name"] if sender == game["identity"] else game["opponent_name"]
 
 	now = mochi.time.now()
-	if game_apply(e, game, {"status": "draw", "draw_offer": None}, now) == None:
+	state = game_apply(e, game, {"status": "draw", "draw_offer": None}, now)
+	if state == None:
 		return
 
 	id = mochi.uid()
@@ -994,7 +1043,14 @@ def event_draw_accept(e):
 
 	# Kept on direct websocket.write: type='system' is multi-semantic;
 	# see chess_commit_hook for the rationale.
-	mochi.websocket.write(game["key"], {"type": "system", "event": "draw_accept", "name": sender_name, "created": now, "body": body})
+	ws_data = {"type": "system", "event": "draw_accept", "name": sender_name, "created": now, "body": body}
+	# A snapshot may have repaired more than this event's own subject - a
+	# draw offer can carry a board move the peer never received - so send the
+	# applied state, not just the fields this event is about. Otherwise an
+	# open client keeps the stale board until it refetches.
+	for key, value in state.items():
+		ws_data[key] = value
+	mochi.websocket.write(game["key"], ws_data)
 	notify("activity", "", mochi.app.label("notifications.title.chess"), mochi.app.label("notifications.body.draw_agreed"), "/chess/" + game["id"], event_id="draw_accept:" + game["id"])
 
 # Received a draw decline event
@@ -1011,7 +1067,8 @@ def event_draw_decline(e):
 	sender_name = game["identity_name"] if sender == game["identity"] else game["opponent_name"]
 
 	now = mochi.time.now()
-	if game_apply(e, game, {"draw_offer": None}, now) == None:
+	state = game_apply(e, game, {"draw_offer": None}, now)
+	if state == None:
 		return
 
 	id = mochi.uid()
@@ -1019,6 +1076,13 @@ def event_draw_decline(e):
 
 	# Kept on direct websocket.write: type='system' is multi-semantic;
 	# see chess_commit_hook for the rationale.
-	mochi.websocket.write(game["key"], {"type": "system", "event": "draw_decline", "name": sender_name, "created": now, "body": body, "draw_offer": ""})
+	ws_data = {"type": "system", "event": "draw_decline", "name": sender_name, "created": now, "body": body, "draw_offer": ""}
+	# A snapshot may have repaired more than this event's own subject - a
+	# draw offer can carry a board move the peer never received - so send the
+	# applied state, not just the fields this event is about. Otherwise an
+	# open client keeps the stale board until it refetches.
+	for key, value in state.items():
+		ws_data[key] = value
+	mochi.websocket.write(game["key"], ws_data)
 	notify("activity", "", mochi.app.label("notifications.title.chess"), mochi.app.label("notifications.body.draw_declined"), "/chess/" + game["id"], event_id="draw_decline:" + game["id"] + ":" + sender)
 

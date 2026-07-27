@@ -124,6 +124,30 @@ const handleWebsocketPayload = (
     )
   }
 
+  // System events now carry the full applied game state, because the snapshot
+  // that produced them may have repaired a board move this client never saw.
+  // Merge whatever is present so the board can't lag behind the row.
+  if (msgType === 'system' && payload.fen) {
+    queryClient.setQueryData<GameViewResponse>(
+      gameKeys.detail(gameId),
+      (current) => {
+        if (!current) return current
+        return {
+          ...current,
+          game: {
+            ...current.game,
+            fen: payload.fen as string,
+            pgn: (payload.pgn as string) ?? current.game.pgn,
+            status:
+              (payload.status as GameViewResponse['game']['status']) ||
+              current.game.status,
+            winner: (payload.winner as string) || current.game.winner,
+          },
+        }
+      }
+    )
+  }
+
   // Handle move — update game detail cache with new FEN/status
   if (msgType === 'move') {
     queryClient.setQueryData<GameViewResponse>(
