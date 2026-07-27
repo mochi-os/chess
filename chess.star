@@ -359,10 +359,20 @@ def action_move(a):
 
 	chess_ensure_commit_hook()
 	now = mochi.time.now()
-	mochi.db.execute(
-		"update games set fen=?, pgn=?, status=?, winner=?, draw_offer=null, updated=? where id=?",
-		fen, pgn or "", new_status, new_winner, now, game["id"]
+	# Compare-and-swap against the position we validated the turn against.
+	# Nothing serialises HTTP actions for a (user, app) - core's per-worker
+	# guarantee covers inbound P2P frames only - so a double submit, or the
+	# opponent's move landing in the same instant, otherwise lets both
+	# requests validate the same turn and the later write wins blind.
+	# status is in the predicate because a resignation arriving in that
+	# window changes the row without touching the FEN.
+	changed = mochi.db.execute(
+		"update games set fen=?, pgn=?, status=?, winner=?, draw_offer=null, updated=? where id=? and fen=? and status=?",
+		fen, pgn or "", new_status, new_winner, now, game["id"], game["fen"], game["status"]
 	)
+	if changed == 0:
+		a.error.label(409, "errors.game_state_changed")
+		return
 
 	# Insert move message
 	id = mochi.uid()
@@ -382,7 +392,11 @@ def action_move(a):
 		{
 			"game": game["id"], "message": id, "created": now, "name": a.user.identity.name,
 			"body": san, "from": move_from, "to": move_to, "promotion": promotion,
-			"fen": fen, "pgn": pgn or "", "status": new_status, "winner": new_winner or ""
+			"fen": fen, "pgn": pgn or "", "status": new_status, "winner": new_winner or "",
+			# The position this move was played from, read from our own row
+			# rather than taken from the client, so the receiver can reject a
+			# move that doesn't follow from the board it currently holds.
+			"parent": game["fen"]
 		}
 	)
 
@@ -635,6 +649,16 @@ def event_move(e):
 	players = [game["identity"], game["opponent"]]
 	if winner and winner not in players:
 		winner = None
+
+	# Apply only if our board is still the one this move was played from.
+	# Core dedups inbound frames by id, but that cache is in memory and
+	# does not survive a restart, so a retry after a lost ack can arrive
+	# looking new and rewind the board (and clear a pending draw offer).
+	# Peers older than this field send no parent, so fall back to the
+	# unconditional write until both sides carry it.
+	parent = e.content("parent")
+	if parent and game["fen"] != parent:
+		return
 
 	now = mochi.time.now()
 	mochi.db.execute("update games set fen=?, pgn=?, status=?, winner=?, draw_offer=null, updated=? where id=?", fen, pgn, status, winner, now, game["id"])

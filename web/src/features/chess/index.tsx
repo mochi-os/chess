@@ -186,7 +186,11 @@ export function ChessGame() {
   })
 
   // Move
-  const moveMutation = useMoveMutation()
+  const moveMutation = useMoveMutation({
+    onError: (error) => {
+      toast.error(getErrorMessage(error, t`Failed to make move`))
+    },
+  })
 
   // Resign
   const resignMutation = useResignMutation({

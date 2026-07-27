@@ -197,7 +197,7 @@ msgstr "发生意外错误"
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "确定要退出登录吗?你需要重新登录才能访问账户。"
 
-#: src/features/chess/index.tsx:554
+#: src/features/chess/index.tsx:560
 msgid "Are you sure you want to resign? {opponentName} will win the game."
 msgstr "确定要认输吗?{opponentName} 将赢得比赛。"
 
@@ -228,7 +228,7 @@ msgid "bishop"
 msgstr "象"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:401
+#: src/features/chess/index.tsx:405
 msgid "Black"
 msgstr "黑色"
 
@@ -267,14 +267,14 @@ msgstr "该通知的分类"
 msgid "Change notification category"
 msgstr "更改通知分类"
 
-#: src/features/chess/index.tsx:494
-#: src/features/chess/index.tsx:526
+#: src/features/chess/index.tsx:498
+#: src/features/chess/index.tsx:531
 msgid "Chat"
 msgstr "聊天"
 
 #: src/features/chess/index.tsx:101
-#: src/features/chess/index.tsx:329
-#: src/features/chess/index.tsx:341
+#: src/features/chess/index.tsx:333
+#: src/features/chess/index.tsx:345
 msgid "Chess"
 msgstr "国际象棋"
 
@@ -468,15 +468,15 @@ msgstr "默认"
 msgid "Default AI account"
 msgstr "默认 AI 账户"
 
-#: src/features/chess/index.tsx:583
+#: src/features/chess/index.tsx:589
 msgid "Delete"
 msgstr "删除"
 
-#: src/features/chess/index.tsx:447
+#: src/features/chess/index.tsx:451
 msgid "Delete game"
 msgstr "删除游戏"
 
-#: src/features/chess/index.tsx:574
+#: src/features/chess/index.tsx:580
 msgid "Delete game?"
 msgstr "删除对局?"
 
@@ -484,7 +484,7 @@ msgstr "删除对局?"
 msgid "Delete your account on the old server"
 msgstr "删除旧服务器上的账户"
 
-#: src/features/chess/index.tsx:580
+#: src/features/chess/index.tsx:586
 msgid "Deleting..."
 msgstr "删除中..."
 
@@ -537,7 +537,7 @@ msgstr "下载失败"
 msgid "Draw agreed"
 msgstr "同意和棋"
 
-#: src/features/chess/index.tsx:460
+#: src/features/chess/index.tsx:464
 msgid "Draw offered — waiting for {opponentName}"
 msgstr "已提议和棋 — 等待 {opponentName}"
 
@@ -576,7 +576,7 @@ msgstr "展开侧边栏"
 msgid "Extra large"
 msgstr "特大"
 
-#: src/features/chess/index.tsx:209
+#: src/features/chess/index.tsx:213
 msgid "Failed to accept draw"
 msgstr "接受和棋失败"
 
@@ -588,19 +588,23 @@ msgstr "添加账户失败"
 msgid "Failed to create game"
 msgstr "创建游戏失败"
 
-#: src/features/chess/index.tsx:224
+#: src/features/chess/index.tsx:228
 msgid "Failed to create rematch"
 msgstr "创建再赛失败"
 
-#: src/features/chess/index.tsx:214
+#: src/features/chess/index.tsx:218
 msgid "Failed to decline draw"
 msgstr "拒绝和棋失败"
 
-#: src/features/chess/index.tsx:235
+#: src/features/chess/index.tsx:240
 msgid "Failed to delete game"
 msgstr "删除游戏失败"
 
-#: src/features/chess/index.tsx:204
+#: src/features/chess/index.tsx:191
+msgid "Failed to make move"
+msgstr "走子失败"
+
+#: src/features/chess/index.tsx:208
 msgid "Failed to offer draw"
 msgstr "提议和棋失败"
 
@@ -608,12 +612,12 @@ msgstr "提议和棋失败"
 msgid "Failed to remove account"
 msgstr "移除账户失败"
 
-#: src/features/chess/index.tsx:197
+#: src/features/chess/index.tsx:201
 msgid "Failed to resign"
 msgstr "认输失败"
 
-#: src/features/chess/index.tsx:510
-#: src/features/chess/index.tsx:542
+#: src/features/chess/index.tsx:515
+#: src/features/chess/index.tsx:548
 msgid "Failed to send"
 msgstr "发送失败"
 
@@ -662,7 +666,7 @@ msgstr "完整布局"
 msgid "Game created"
 msgstr "已创建游戏"
 
-#: src/features/chess/index.tsx:231
+#: src/features/chess/index.tsx:236
 msgid "Game deleted"
 msgstr "已删除游戏"
 
@@ -923,7 +927,7 @@ msgstr "未设置"
 msgid "Notifications"
 msgstr "通知"
 
-#: src/features/chess/index.tsx:431
+#: src/features/chess/index.tsx:435
 msgid "Offer draw"
 msgstr "提议和棋"
 
@@ -941,11 +945,11 @@ msgstr "打开账户操作"
 msgid "Open actions"
 msgstr "打开操作"
 
-#: src/features/chess/index.tsx:410
+#: src/features/chess/index.tsx:414
 msgid "Open chat panel"
 msgstr "打开聊天面板"
 
-#: src/features/chess/index.tsx:418
+#: src/features/chess/index.tsx:422
 msgid "Open game actions"
 msgstr "打开游戏操作"
 
@@ -1068,7 +1072,7 @@ msgstr "相对时间(5分钟、3小时、2天)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "24 小时内显示相对时间,否则显示绝对时间"
 
-#: src/features/chess/index.tsx:444
+#: src/features/chess/index.tsx:448
 msgid "Rematch"
 msgstr "再来一局"
 
@@ -1104,16 +1108,16 @@ msgstr "重置"
 msgid "Reset all settings to default values"
 msgstr "将所有设置重置为默认值"
 
-#: src/features/chess/index.tsx:435
-#: src/features/chess/index.tsx:562
+#: src/features/chess/index.tsx:439
+#: src/features/chess/index.tsx:568
 msgid "Resign"
 msgstr "认输"
 
-#: src/features/chess/index.tsx:553
+#: src/features/chess/index.tsx:559
 msgid "Resign game?"
 msgstr "认输?"
 
-#: src/features/chess/index.tsx:559
+#: src/features/chess/index.tsx:565
 msgid "Resigning..."
 msgstr "正在认输..."
 
@@ -1347,7 +1351,7 @@ msgstr "主题"
 msgid "Theme Settings"
 msgstr "主题设置"
 
-#: src/features/chess/index.tsx:575
+#: src/features/chess/index.tsx:581
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "此操作将永久删除对局及其聊天记录，且无法撤销。"
 
@@ -1450,7 +1454,7 @@ msgstr "未授权访问"
 msgid "United States"
 msgstr "美国"
 
-#: src/hooks/useGameWebsocket.ts:169
+#: src/hooks/useGameWebsocket.ts:196
 msgid "Unknown"
 msgstr "未知"
 
@@ -1488,7 +1492,7 @@ msgstr "验证"
 msgid "Verify email address"
 msgstr "验证邮箱地址"
 
-#: ../../../lib/web/src/components/attachment-gallery.tsx:74
+#: ../../../lib/web/src/components/attachment-gallery.tsx:79
 msgid "Video thumbnail"
 msgstr "视频缩略图"
 
@@ -1518,7 +1522,7 @@ msgid "Wednesday"
 msgstr "星期三"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:401
+#: src/features/chess/index.tsx:405
 msgid "White"
 msgstr "白"
 

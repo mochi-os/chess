@@ -221,7 +221,7 @@ export const useMoveMutation = (
   options?: UseMutationOptions<MoveResponse, Error, MoveVariables, unknown>
 ) => {
   const queryClient = useQueryClient()
-  const { onSuccess, ...restOptions } = options ?? {}
+  const { onSuccess, onError, ...restOptions } = options ?? {}
   return useMutation({
     mutationFn: ({ gameId, ...payload }) => {
       expectEcho(gameId)
@@ -240,6 +240,22 @@ export const useMoveMutation = (
       })
       queryClient.invalidateQueries({ queryKey: gameKeys.all(), exact: true })
       onSuccess?.(data, variables, context, mutation)
+    },
+    onError: (error, variables, context, mutation) => {
+      // The board is advanced locally before the request resolves, so a
+      // rejected move leaves the client showing a position the server never
+      // took. That matters most for the 409 the server returns when the
+      // position moved on under us (double submit, or the opponent's move
+      // landing first): refetch so the board snaps back to server truth
+      // instead of silently disagreeing with it.
+      queryClient.invalidateQueries({
+        queryKey: gameKeys.detail(variables.gameId),
+        exact: true,
+      })
+      queryClient.invalidateQueries({
+        queryKey: gameKeys.moveHistory(variables.gameId),
+      })
+      onError?.(error, variables, context, mutation)
     },
     ...restOptions,
   })

@@ -197,7 +197,7 @@ msgstr "Váratlan hiba történt"
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "Biztosan kijelentkezik? A fiók eléréséhez újra be kell jelentkeznie."
 
-#: src/features/chess/index.tsx:554
+#: src/features/chess/index.tsx:560
 msgid "Are you sure you want to resign? {opponentName} will win the game."
 msgstr "Biztosan feladja? {opponentName} fog nyerni."
 
@@ -228,7 +228,7 @@ msgid "bishop"
 msgstr "futó"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:401
+#: src/features/chess/index.tsx:405
 msgid "Black"
 msgstr "Fekete"
 
@@ -267,14 +267,14 @@ msgstr "Az értesítés kategóriája"
 msgid "Change notification category"
 msgstr "Értesítési kategória módosítása"
 
-#: src/features/chess/index.tsx:494
-#: src/features/chess/index.tsx:526
+#: src/features/chess/index.tsx:498
+#: src/features/chess/index.tsx:531
 msgid "Chat"
 msgstr "Chat"
 
 #: src/features/chess/index.tsx:101
-#: src/features/chess/index.tsx:329
-#: src/features/chess/index.tsx:341
+#: src/features/chess/index.tsx:333
+#: src/features/chess/index.tsx:345
 msgid "Chess"
 msgstr "Sakk"
 
@@ -468,15 +468,15 @@ msgstr "Alapértelmezett"
 msgid "Default AI account"
 msgstr "Alapértelmezett MI-fiók"
 
-#: src/features/chess/index.tsx:583
+#: src/features/chess/index.tsx:589
 msgid "Delete"
 msgstr "Törlés"
 
-#: src/features/chess/index.tsx:447
+#: src/features/chess/index.tsx:451
 msgid "Delete game"
 msgstr "Játék törlése"
 
-#: src/features/chess/index.tsx:574
+#: src/features/chess/index.tsx:580
 msgid "Delete game?"
 msgstr "Törli a játékot?"
 
@@ -484,7 +484,7 @@ msgstr "Törli a játékot?"
 msgid "Delete your account on the old server"
 msgstr "Törölje fiókját a régi szerveren"
 
-#: src/features/chess/index.tsx:580
+#: src/features/chess/index.tsx:586
 msgid "Deleting..."
 msgstr "Törlés..."
 
@@ -537,7 +537,7 @@ msgstr "A letöltés sikertelen"
 msgid "Draw agreed"
 msgstr "Döntetlen elfogadva"
 
-#: src/features/chess/index.tsx:460
+#: src/features/chess/index.tsx:464
 msgid "Draw offered — waiting for {opponentName}"
 msgstr "Döntetlent ajánlott — várakozás {opponentName} válaszára"
 
@@ -576,7 +576,7 @@ msgstr "Oldalsáv kibontása"
 msgid "Extra large"
 msgstr "Extra nagy"
 
-#: src/features/chess/index.tsx:209
+#: src/features/chess/index.tsx:213
 msgid "Failed to accept draw"
 msgstr "Nem sikerült elfogadni a döntetlent"
 
@@ -588,19 +588,23 @@ msgstr "Nem sikerült hozzáadni a fiókot"
 msgid "Failed to create game"
 msgstr "Nem sikerült létrehozni a játékot"
 
-#: src/features/chess/index.tsx:224
+#: src/features/chess/index.tsx:228
 msgid "Failed to create rematch"
 msgstr "Nem sikerült létrehozni a visszavágót"
 
-#: src/features/chess/index.tsx:214
+#: src/features/chess/index.tsx:218
 msgid "Failed to decline draw"
 msgstr "Nem sikerült elutasítani a döntetlent"
 
-#: src/features/chess/index.tsx:235
+#: src/features/chess/index.tsx:240
 msgid "Failed to delete game"
 msgstr "Nem sikerült törölni a játékot"
 
-#: src/features/chess/index.tsx:204
+#: src/features/chess/index.tsx:191
+msgid "Failed to make move"
+msgstr "Nem sikerült lépést tenni"
+
+#: src/features/chess/index.tsx:208
 msgid "Failed to offer draw"
 msgstr "Nem sikerült döntetlent felajánlani"
 
@@ -608,12 +612,12 @@ msgstr "Nem sikerült döntetlent felajánlani"
 msgid "Failed to remove account"
 msgstr "Nem sikerült eltávolítani a fiókot"
 
-#: src/features/chess/index.tsx:197
+#: src/features/chess/index.tsx:201
 msgid "Failed to resign"
 msgstr "Nem sikerült feladni"
 
-#: src/features/chess/index.tsx:510
-#: src/features/chess/index.tsx:542
+#: src/features/chess/index.tsx:515
+#: src/features/chess/index.tsx:548
 msgid "Failed to send"
 msgstr "Nem sikerült elküldeni"
 
@@ -662,7 +666,7 @@ msgstr "Teljes elrendezés"
 msgid "Game created"
 msgstr "Játék létrehozva"
 
-#: src/features/chess/index.tsx:231
+#: src/features/chess/index.tsx:236
 msgid "Game deleted"
 msgstr "Játék törölve"
 
@@ -923,7 +927,7 @@ msgstr "Nincs beállítva"
 msgid "Notifications"
 msgstr "Értesítések"
 
-#: src/features/chess/index.tsx:431
+#: src/features/chess/index.tsx:435
 msgid "Offer draw"
 msgstr "Döntetlen felajánlása"
 
@@ -941,11 +945,11 @@ msgstr "Fiókműveletek megnyitása"
 msgid "Open actions"
 msgstr "Műveletek megnyitása"
 
-#: src/features/chess/index.tsx:410
+#: src/features/chess/index.tsx:414
 msgid "Open chat panel"
 msgstr "Csevegőpanel megnyitása"
 
-#: src/features/chess/index.tsx:418
+#: src/features/chess/index.tsx:422
 msgid "Open game actions"
 msgstr "Játékműveletek megnyitása"
 
@@ -1068,7 +1072,7 @@ msgstr "Relatív (5p, 3ó, 2n)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "24 órán belül relatív, egyébként abszolút"
 
-#: src/features/chess/index.tsx:444
+#: src/features/chess/index.tsx:448
 msgid "Rematch"
 msgstr "Visszavágó"
 
@@ -1104,16 +1108,16 @@ msgstr "Visszaállítás"
 msgid "Reset all settings to default values"
 msgstr "Minden beállítás visszaállítása alapértelmezett értékekre"
 
-#: src/features/chess/index.tsx:435
-#: src/features/chess/index.tsx:562
+#: src/features/chess/index.tsx:439
+#: src/features/chess/index.tsx:568
 msgid "Resign"
 msgstr "Feladás"
 
-#: src/features/chess/index.tsx:553
+#: src/features/chess/index.tsx:559
 msgid "Resign game?"
 msgstr "Feladja a játékot?"
 
-#: src/features/chess/index.tsx:559
+#: src/features/chess/index.tsx:565
 msgid "Resigning..."
 msgstr "Feladás..."
 
@@ -1347,7 +1351,7 @@ msgstr "Téma"
 msgid "Theme Settings"
 msgstr "Témabeállítások"
 
-#: src/features/chess/index.tsx:575
+#: src/features/chess/index.tsx:581
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Ez véglegesen törli a játékot és a hozzá tartozó csevegést. Ez a művelet nem vonható vissza."
 
@@ -1450,7 +1454,7 @@ msgstr "Engedély nélküli hozzáférés"
 msgid "United States"
 msgstr "Egyesült Államok"
 
-#: src/hooks/useGameWebsocket.ts:169
+#: src/hooks/useGameWebsocket.ts:196
 msgid "Unknown"
 msgstr "Ismeretlen"
 
@@ -1488,7 +1492,7 @@ msgstr "Ellenőrzés"
 msgid "Verify email address"
 msgstr "E-mail-cím ellenőrzése"
 
-#: ../../../lib/web/src/components/attachment-gallery.tsx:74
+#: ../../../lib/web/src/components/attachment-gallery.tsx:79
 msgid "Video thumbnail"
 msgstr "Videó indexképe"
 
@@ -1518,7 +1522,7 @@ msgid "Wednesday"
 msgstr "Szerda"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:401
+#: src/features/chess/index.tsx:405
 msgid "White"
 msgstr "Fehér"
 
