@@ -185,6 +185,23 @@ def get_opponent(game, user_id):
 # any handler that returns cleanly (protocol2_worker.go), so nothing
 # retries it.
 
+#
+# Protocol invariants. These are the properties the code above is meant to
+# hold; anything added here should be tested against them, not just against a
+# final database row.
+#
+#   1. Every applied event carries one complete, validated state.
+#   2. Every replica deterministically retains the maximum version.
+#   3. A rejected sender eventually learns the dominating version (event_sync).
+#   4. Browser state eventually equals its local canonical row.
+#   5. History divergence is permitted and is NOT a bug.
+#
+# On (5): the games row is canonical. The messages table is an activity feed,
+# not an authoritative ledger of moves and events - under concurrent writes
+# each peer keeps its own losing action, so two peers can legitimately show
+# different system messages for the same game. Do not write code that
+# reconstructs game state from message history; it cannot.
+
 GAME_COLUMNS = ["fen", "pgn", "status", "winner", "draw_offer"]
 GAME_TERMINAL = ["checkmate", "stalemate", "draw", "resigned"]
 
@@ -248,7 +265,7 @@ def game_write(game, changes, writer, now):
 	state["snapshot"] = 1
 	return state
 
-def game_apply(e, game, legacy, now):
+def game_apply(e, game, legacy, now, reconcile=True):
 	"""Apply an inbound change if it outranks the row we hold.
 
 	Peers on this version send a complete snapshot and the full tuple.
@@ -273,8 +290,18 @@ def game_apply(e, game, legacy, now):
 		if not mochi.text.valid(str(revision), "integer"):
 			return None
 		revision = int(revision)
-		writer = e.content("writer") or ""
-		event = e.content("event") or ""
+		if revision < 0:
+			return None
+		# Ordering metadata, not game state, but the whole design rests on it
+		# being well formed. writer must be the authenticated sender: it
+		# decides every same-revision tie, so a peer naming someone else could
+		# steer them all.
+		writer = e.content("writer")
+		if writer != e.header("from"):
+			return None
+		event = e.content("event")
+		if not event or not mochi.text.valid(str(event), "id"):
+			return None
 	else:
 		state = {}
 		for key, value in legacy.items():
@@ -296,8 +323,48 @@ def game_apply(e, game, legacy, now):
 	params.extend([revision, writer, event, now, game["id"],
 		revision, game_terminal(state["status"]), writer, event])
 	if mochi.db.execute(sql, *params) == 0:
+		# Our state dominates. Rejecting is only safe if the sender eventually
+		# learns why, otherwise a peer that acted on a stale view sits on it
+		# forever - core acks a handler that returns cleanly, so nothing else
+		# tells them. Send our winning snapshot back. reconcile is False on
+		# the sync path itself so this cannot ping-pong.
+		if reconcile:
+			game_reconcile(e, game)
 		return None
 	return state
+
+def game_reconcile(e, game):
+	"""Send our dominating state back to a peer whose event we rejected."""
+	current = mochi.db.row("select * from games where id=?", game["id"])
+	if not current:
+		return
+	state = game_state(current, {})
+	state["revision"] = current["revision"]
+	state["writer"] = current["writer"] or ""
+	state["event"] = current["event"] or ""
+	state["snapshot"] = 1
+	state["game"] = current["id"]
+	# Only a peer that already wrote the state we hold can be named as its
+	# writer, so an empty writer means there is nothing authoritative to
+	# reconcile with yet.
+	if not state["writer"]:
+		return
+	mochi.message.send(
+		{"from": e.header("to"), "to": e.header("from"), "service": "chess", "event": "sync"},
+		state
+	)
+
+def event_sync(e):
+	"""Receive a peer's dominating state after they rejected one of ours."""
+	game = mochi.db.row("select * from games where id=?", e.content("game"))
+	if not game:
+		return
+	sender = e.header("from")
+	if not (sender == game["identity"] or sender == game["opponent"]):
+		return
+	# reconcile=False: if OUR state dominates theirs we simply drop it rather
+	# than answering, which is what terminates the exchange.
+	game_apply(e, game, {}, mochi.time.now(), False)
 
 # Load game by ID from action input, validate ID and player access
 def load_game(a):
