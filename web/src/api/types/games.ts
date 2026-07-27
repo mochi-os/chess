@@ -5,7 +5,6 @@
 
 export interface Game {
   id: string
-  fingerprint?: string
   identity: string
   identity_name: string
   opponent: string
@@ -13,10 +12,11 @@ export interface Game {
   white: string
   status: 'active' | 'checkmate' | 'stalemate' | 'draw' | 'resigned'
   winner: string | null
+  // Only on the detail response; list rows never carry it.
+  key?: string
   draw_offer: string | null
   fen: string
   pgn: string
-  key: string
   updated: number
   created: number
 }

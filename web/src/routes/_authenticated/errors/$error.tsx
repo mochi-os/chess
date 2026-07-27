@@ -5,11 +5,6 @@
 
 import { createFileRoute } from '@tanstack/react-router'
 import {
-  ConfigDrawer,
-  Header,
-  ProfileDropdown,
-  Search,
-  ThemeSwitch,
   ForbiddenError,
   GeneralError,
   MaintenanceError,
@@ -34,18 +29,8 @@ function RouteComponent() {
   const ErrorComponent = errorMap[error] || NotFoundError
 
   return (
-    <>
-      <Header fixed className='border-b'>
-        <Search />
-        <div className='ms-auto flex items-center space-x-4'>
-          <ThemeSwitch />
-          <ConfigDrawer />
-          <ProfileDropdown />
-        </div>
-      </Header>
-      <div className='flex-1 [&>div]:h-full'>
-        <ErrorComponent />
-      </div>
-    </>
+    <div className='flex-1 [&>div]:h-full'>
+      <ErrorComponent />
+    </div>
   )
 }

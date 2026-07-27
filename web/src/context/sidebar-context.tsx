@@ -18,8 +18,7 @@ import type { WebsocketConnectionStatus } from '@/lib/websocket-manager'
 
 type SidebarContextValue = {
   gameId: string | null
-  gameName: string | null
-  setGame: (id: string | null, name?: string) => void
+  setGame: (id: string | null) => void
   newGameDialogOpen: boolean
   openNewGameDialog: () => void
   closeNewGameDialog: () => void
@@ -35,15 +34,13 @@ const SidebarContext = createContext<SidebarContextValue | null>(null)
 
 export function SidebarProvider({ children }: { children: ReactNode }) {
   const [gameId, setGameId] = useState<string | null>(null)
-  const [gameName, setGameName] = useState<string | null>(null)
   const [newGameDialogOpen, setNewGameDialogOpen] = useState(false)
   const [websocketStatus, setWsStatus] =
     useState<WebsocketConnectionStatus>('idle')
   const [websocketRetries, setWebsocketRetries] = useState(0)
 
-  const setGame = useCallback((id: string | null, name?: string) => {
+  const setGame = useCallback((id: string | null) => {
     setGameId(id)
-    setGameName(name ?? null)
   }, [])
 
   const openNewGameDialog = useCallback(() => {
@@ -71,7 +68,6 @@ export function SidebarProvider({ children }: { children: ReactNode }) {
     <SidebarContext.Provider
       value={{
         gameId,
-        gameName,
         setGame,
         newGameDialogOpen,
         openNewGameDialog,

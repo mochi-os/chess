@@ -37,7 +37,6 @@ import { useGameWebsocket } from '@/hooks/useGameWebsocket'
 import { getOpponentName, type Game } from '@/api/games'
 import {
   useInfiniteMessagesQuery,
-  useMoveHistoryQuery,
   useGamesQuery,
   useSendMessageMutation,
   useGameDetailQuery,
@@ -54,8 +53,6 @@ import { ChessBoard } from './components/chess-board'
 import { DrawOfferBanner } from './components/draw-offer-banner'
 import { ChatMessageList } from './components/chat-message-list'
 import { ChatInput } from './components/chat-input'
-
-const EMPTY_MOVE_HISTORY: readonly string[] = []
 
 // Plain function (not a hook) so it can be called from inside conditional JSX
 // without violating the rules of hooks. The `t` tag is passed in from the
@@ -135,7 +132,7 @@ export function ChessGame() {
   const selectedGame = useMemo(
     () =>
       games.find(
-        (g) => g.id === selectedGameId || g.fingerprint === selectedGameId
+        (g) => g.id === selectedGameId
       ) ?? null,
     [games, selectedGameId]
   )
@@ -154,9 +151,17 @@ export function ChessGame() {
   // Chess state from game detail FEN
   const chess = useMemo(() => {
     if (!game?.fen) return null
-    const c = new Chess()
-    c.load(game.fen)
-    return c
+    // A stored FEN can predate the server's six-field validation, or come
+    // from a pre-fix peer; chess.js load() throws on one, and a throw here
+    // crash-looped the whole view. A null chess renders the corrupt-position
+    // state instead, leaving resign and delete reachable.
+    try {
+      const c = new Chess()
+      c.load(game.fen)
+      return c
+    } catch {
+      return null
+    }
   }, [game?.fen])
 
   const myColor = game && myIdentity ? (game.white === myIdentity ? 'w' : 'b') : 'w'
@@ -175,8 +180,6 @@ export function ChessGame() {
       return true
     })
   }, [messagesQuery.data?.pages])
-  const moveHistoryQuery = useMoveHistoryQuery(selectedGame?.id)
-  const moveHistory = moveHistoryQuery.data ?? EMPTY_MOVE_HISTORY
 
   // Send message
   const sendMessageMutation = useSendMessageMutation({
@@ -244,7 +247,10 @@ export function ChessGame() {
   // WebSocket
   const { status, retries } = useGameWebsocket(
     selectedGame?.id,
-    selectedGame?.key
+    // From the detail row: the list never carries key, so passing
+    // selectedGame?.key was always undefined and made the websocket manager
+    // refetch /view just to learn it.
+    game?.key
   )
   useEffect(() => {
     setWebsocketStatus(status, retries)
@@ -254,11 +260,18 @@ export function ChessGame() {
     (from: string, to: string, promotion?: string) => {
       if (!game || !selectedGame) return
 
-      // Use a fresh chess instance to validate the move
-      const c = new Chess()
-      c.load(game.fen)
-      const move = c.move({ from, to, promotion })
-      if (!move) return
+      // Use a fresh chess instance to validate the move. chess.js v1 throws
+      // on a corrupt FEN and on an illegal move rather than returning null,
+      // which made the old `if (!move) return` dead code.
+      let c: Chess
+      let move: ReturnType<Chess['move']>
+      try {
+        c = new Chess()
+        c.load(game.fen)
+        move = c.move({ from, to, promotion })
+      } catch {
+        return
+      }
 
       let moveStatus = ''
       let winner = ''
@@ -478,15 +491,22 @@ export function ChessGame() {
                   />
                 </div>
                 <div className="flex-1 min-h-0 mt-3" style={{ containerType: 'size' }}>
-                  <ChessBoard
-                    fen={game.fen}
-                    moveHistory={moveHistory}
-                    myColor={myColor}
-                    isMyTurn={isMyTurn}
-                    gameStatus={game.status}
-                    onMove={handleMove}
-                    lastMove={lastMove}
-                  />
+                  {chess ? (
+                    <ChessBoard
+                      fen={game.fen}
+                      myColor={myColor}
+                      isMyTurn={isMyTurn}
+                      gameStatus={game.status}
+                      onMove={handleMove}
+                      lastMove={lastMove}
+                    />
+                  ) : (
+                    // The stored FEN would not load (see the chess useMemo).
+                    // The board is unrenderable but the rest of the view -
+                    // chat, resign, delete - stays functional, so the game
+                    // can still be ended and removed.
+                    <GeneralError minimal />
+                  )}
                 </div>
               </>
             ) : null}

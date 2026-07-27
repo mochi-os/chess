@@ -3,7 +3,6 @@
 // This file is part of Mochi, licensed under the GNU AGPL v3 with the
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
 
-import { Chess } from 'chess.js'
 import {
   CAPTURED_PIECE_ORDER,
   type CapturedPieceType,
@@ -19,14 +18,12 @@ export interface CapturedPiecesSummary {
   capturedByBlack: CapturedPieceCount[]
 }
 
-function createEmptyCaptureCounts(): Record<CapturedPieceType, number> {
-  return {
-    p: 0,
-    n: 0,
-    b: 0,
-    r: 0,
-    q: 0,
-  }
+const STARTING_COUNTS: Record<CapturedPieceType, number> = {
+  p: 8,
+  n: 2,
+  b: 2,
+  r: 2,
+  q: 1,
 }
 
 function toCapturedPieceList(
@@ -37,51 +34,27 @@ function toCapturedPieceList(
   )
 }
 
-function isCapturedPieceType(type: string): type is CapturedPieceType {
-  return CAPTURED_PIECE_ORDER.includes(type as CapturedPieceType)
-}
-
-export function getCapturedPiecesSummary(
-  moveHistory: readonly string[]
-): CapturedPiecesSummary {
-  if (moveHistory.length === 0) {
-    return {
-      capturedByWhite: [],
-      capturedByBlack: [],
-    }
+// Derives captures by counting the pieces still on the board, straight from
+// the position itself. The previous version replayed SAN from the message
+// history, which the protocol explicitly treats as an activity feed rather
+// than a state ledger - it can diverge from the board, and the replay then
+// silently showed nothing. Counting the FEN is always available and never
+// divergent; its one imprecision is promotion, where a promoted piece makes
+// the pawn look captured and offsets its own kind, which is the standard
+// limit of deriving captures from a position alone.
+export function getCapturedPiecesSummary(fen: string): CapturedPiecesSummary {
+  const board = fen.split(' ')[0] ?? ''
+  const white: Record<CapturedPieceType, number> = { ...STARTING_COUNTS }
+  const black: Record<CapturedPieceType, number> = { ...STARTING_COUNTS }
+  for (const ch of board) {
+    const lower = ch.toLowerCase() as CapturedPieceType
+    if (!CAPTURED_PIECE_ORDER.includes(lower)) continue
+    const present = ch === lower ? black : white
+    if (present[lower] > 0) present[lower] -= 1
   }
-
-  const chess = new Chess()
-  const capturedByWhiteCounts = createEmptyCaptureCounts()
-  const capturedByBlackCounts = createEmptyCaptureCounts()
-
-  for (const san of moveHistory) {
-    const normalizedSan = san.trim()
-    if (!normalizedSan) {
-      continue
-    }
-
-    let move
-    try {
-      move = chess.move(normalizedSan)
-    } catch {
-      break
-    }
-
-    if (!move?.captured || !isCapturedPieceType(move.captured)) {
-      continue
-    }
-
-    if (move.color === 'w') {
-      capturedByWhiteCounts[move.captured] += 1
-      continue
-    }
-
-    capturedByBlackCounts[move.captured] += 1
-  }
-
   return {
-    capturedByWhite: toCapturedPieceList(capturedByWhiteCounts),
-    capturedByBlack: toCapturedPieceList(capturedByBlackCounts),
+    // Pieces missing from black's side were captured by white, and vice versa.
+    capturedByWhite: toCapturedPieceList(black),
+    capturedByBlack: toCapturedPieceList(white),
   }
 }

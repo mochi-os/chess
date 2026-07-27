@@ -259,7 +259,7 @@ export const useGameWebsocket = (
     return () => {
       unsubscribe()
     }
-  }, [gameId, gameKey, manager, queryClient])
+  }, [gameId, gameKey, manager, queryClient, unknownSenderLabel])
 
   const forceReconnect = useCallback(() => {
     if (gameId && manager) {

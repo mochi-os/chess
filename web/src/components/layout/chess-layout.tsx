@@ -22,21 +22,26 @@ import { getOpponentName, type Game } from '@/api/games'
 
 const opponentIconCache = new Map<string, React.FC>()
 
-function opponentIcon(opponentId: string): React.FC {
-  let Icon = opponentIconCache.get(opponentId)
+function opponentIcon(gameId: string, opponentId: string): React.FC {
+  // Served by this app's own asset proxy, never by a direct /people/ fetch:
+  // inside the shell iframe a cross-app request goes out anonymous, and for a
+  // remote opponent there is no local /people/ entity at all - the proxy
+  // resolves them over P2P.
+  const cacheKey = `${gameId}:${opponentId}`
+  let Icon = opponentIconCache.get(cacheKey)
   if (!Icon) {
     Icon = function OpponentIcon() {
       return (
         <EntityAvatar
-          src={`/people/${opponentId}/-/avatar`}
-          styleUrl={`/people/${opponentId}/-/style`}
+          src={`/chess/${gameId}/-/user/${opponentId}/asset/avatar`}
+          styleUrl={`/chess/${gameId}/-/user/${opponentId}/asset/style`}
           size="xs"
         />
       )
     }
     // eslint-disable-next-line lingui/no-unlocalized-strings -- React displayName is dev-tooling only, not user-facing
     Icon.displayName = `OpponentIcon(${opponentId})`
-    opponentIconCache.set(opponentId, Icon)
+    opponentIconCache.set(cacheKey, Icon)
   }
   return Icon
 }
@@ -81,13 +86,7 @@ function ChessLayoutInner() {
 
   useEffect(() => {
     if (urlGameId) {
-      const game = games.find(
-        (g) => g.id === urlGameId || g.fingerprint === urlGameId
-      )
-      const name = game && myIdentity
-        ? getOpponentName(game, myIdentity)
-        : undefined
-      setGame(urlGameId, name)
+      setGame(urlGameId)
     } else {
       setGame(null)
     }
@@ -111,8 +110,8 @@ function ChessLayoutInner() {
         title: t`Active games`,
         items: activeGames.map((game) => ({
           title: getName(game),
-          url: `/${game.fingerprint ?? game.id}`,
-          icon: opponentIcon(getOpponentId(game)),
+          url: `/${game.id}`,
+          icon: opponentIcon(game.id, getOpponentId(game)),
         })),
       })
     }
@@ -121,9 +120,12 @@ function ChessLayoutInner() {
       groups.push({
         title: t`Completed`,
         items: completedGames.map((game) => ({
-          title: `${getName(game)} (${game.status})`,
-          url: `/${game.fingerprint ?? game.id}`,
-          icon: opponentIcon(getOpponentId(game)),
+          // Styled like words' completed entries rather than printing the raw
+          // untranslated status enum after the name.
+          title: getName(game),
+          url: `/${game.id}`,
+          icon: opponentIcon(game.id, getOpponentId(game)),
+          className: 'text-muted-foreground',
         })),
       })
     }
@@ -141,7 +143,7 @@ function ChessLayoutInner() {
     })
 
     return { navGroups: groups }
-  }, [games, myIdentity, openNewGameDialog])
+  }, [games, myIdentity, openNewGameDialog, t])
 
   return (
     <AuthenticatedLayout

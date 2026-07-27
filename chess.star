@@ -131,6 +131,49 @@ def database_create():
 	)""")
 	mochi.db.execute("create index if not exists messages_game_created on messages( game, created )")
 
+def stream_asset(a, entity_id, service, asset):
+	if not entity_id:
+		a.error.label(404, "errors.asset_unavailable", asset=asset)
+		return None
+	s = mochi.remote.stream(entity_id, service, asset, {})
+	if not s:
+		a.error.label(404, "errors.asset_unavailable", asset=asset)
+		return None
+	header = s.read()
+	if not header or header.get("status") != "200":
+		a.error.label(404, "errors.asset_not_set", asset=asset)
+		return None
+	a.header("Cache-Control", "private, max-age=300")
+	if "data" in header:
+		return {"data": header["data"]}
+	a.header("Content-Type", header.get("content_type", "application/octet-stream"))
+	a.write.stream(s)
+	return None
+
+_PERSON_ASSETS = ("avatar", "banner", "favicon", "style", "information")
+
+def action_user_asset(a):
+	asset = a.input("asset")
+	if asset not in _PERSON_ASSETS:
+		a.error.label(404, "errors.unknown_asset")
+		return
+	# Public route - only a player in this game may resolve its players' assets.
+	# Requires a real authenticated caller: an anonymous request to a public
+	# action runs as the entity owner, so without the a.user test the ambient
+	# owner would satisfy the player check for their own games.
+	user_id = a.user.identity.id if a.user and a.user.identity else None
+	game = mochi.db.row("select * from games where id=?", a.input("game"))
+	if not user_id or not game or (user_id != game["identity"] and user_id != game["opponent"]):
+		a.error.label(403, "errors.not_a_player_in_this_game")
+		return
+	# Bind the requested identity to this game, so the route can only resolve
+	# its own players rather than any entity the caller names.
+	target = a.input("user") or ""
+	if target != game["identity"] and target != game["opponent"]:
+		a.error.label(404, "errors.unknown_asset")
+		return
+	return stream_asset(a, target, "people", asset)
+
 def action_new(a):
 	friends = mochi.service.call("friends", "list", a.user.identity.id) or []
 	return {
