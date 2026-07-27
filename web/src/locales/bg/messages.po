@@ -18,6 +18,11 @@ msgstr ""
 msgid "Please check your internet connection and try again."
 msgstr "Проверете интернет връзката си и опитайте отново."
 
+#. placeholder {0}: selectedValues.size
+#: ../../../lib/web/src/components/data-table/faceted-filter.tsx:66
+msgid "{0, plural, one {# selected} other {# selected}}"
+msgstr "{0, plural, one {# избран} other {# избрани}}"
+
 #. placeholder {0}: pieces .map(({ type, count }) => getPieceLabel(type, count)) .join(', ')
 #: src/features/chess/components/captured-pieces-strip.tsx:89
 msgid "{colorName} captured {0}"
@@ -51,6 +56,10 @@ msgstr "{count, plural, one {# топ} other {# топа}}"
 msgid "{count} pieces"
 msgstr "{count} фигури"
 
+#: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:173
+msgid "{entityLabel} name"
+msgstr "Име на {entityLabel}"
+
 #: src/features/chess/components/chat-message-list.tsx:195
 msgid "{name} declined the draw"
 msgstr "{name} отказа ремито"
@@ -66,6 +75,22 @@ msgstr "{name} се предаде"
 #: src/features/chess/components/draw-offer-banner.tsx:30
 msgid "{opponentName} offered a draw"
 msgstr "{opponentName} предложи равенство"
+
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:210
+msgid "{selectedCount, plural, one {{entityName} selected} other {{manyName} selected}}"
+msgstr "{selectedCount, plural, one {{entityName} е избран} other {{manyName} са избрани}}"
+
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:52
+msgid "{selectedCount, plural, one {# {entityName} selected. Bulk actions toolbar is available.} other {# {manyName} selected. Bulk actions toolbar is available.}}"
+msgstr "{selectedCount, plural, one {# {entityName} е избран. Лентата за групови действия е налична.} other {# {manyName} са избрани. Лентата за групови действия е налична.}}"
+
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:202
+msgid "{selectedCount, plural, one {# selected} other {# selected}}"
+msgstr "{selectedCount, plural, one {# избрани} other {# избрани}}"
+
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:149
+msgid "{selectedCount, plural, one {Bulk actions for # selected {entityName}} other {Bulk actions for # selected {manyName}}}"
+msgstr "{selectedCount, plural, one {Групови действия за # избран {entityName}} other {Групови действия за # избрани {manyName}}}"
 
 #: src/features/chess/components/chat-message-list.tsx:224
 msgid "{subject} played <0>{san}</0>"
@@ -217,9 +242,9 @@ msgstr "Код от authenticator"
 msgid "Back"
 msgstr "Назад"
 
-#: ../../../lib/web/src/features/errors/forbidden.tsx:26
-#: ../../../lib/web/src/features/errors/not-found-error.tsx:26
-#: ../../../lib/web/src/features/errors/unauthorized-error.tsx:26
+#: ../../../lib/web/src/features/errors/forbidden.tsx:28
+#: ../../../lib/web/src/features/errors/not-found-error.tsx:28
+#: ../../../lib/web/src/features/errors/unauthorized-error.tsx:28
 msgid "Back to home"
 msgstr "Назад към началото"
 
@@ -252,7 +277,7 @@ msgstr "Усили интереса"
 #: ../../../lib/web/src/features/access/access-dialog.tsx:328
 #: ../../../lib/web/src/features/access/access-list.tsx:263
 #: ../../../lib/web/src/features/accounts/account-add.tsx:188
-#: ../../../lib/web/src/features/accounts/account-verify.tsx:89
+#: ../../../lib/web/src/features/accounts/account-verify.tsx:91
 #: src/features/chess/components/new-game.tsx:145
 #: src/features/chess/components/promotion-dialog.tsx:108
 msgid "Cancel"
@@ -328,28 +353,29 @@ msgstr "Изчисти"
 msgid "Clear all"
 msgstr "Изчисти всички"
 
-#: ../../../lib/web/src/components/data-table/faceted-filter.tsx:140
+#: ../../../lib/web/src/components/data-table/faceted-filter.tsx:144
 msgid "Clear filters"
 msgstr "Изчисти филтрите"
 
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:167
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:171
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:177
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:181
 msgid "Clear selection"
 msgstr "Изчисти избраното"
 
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:168
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:178
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:185
 msgid "Clear selection (Escape)"
 msgstr "Изчисти избраното (Escape)"
 
 #: ../../../lib/web/src/components/ui/dialog.tsx:78
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:354
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:357
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:358
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:361
 #: ../../../lib/web/src/components/ui/sheet.tsx:79
 msgid "Close"
 msgstr "Затвори"
 
-#: ../../../lib/web/src/components/layout/app-sidebar.tsx:107
-#: ../../../lib/web/src/components/layout/app-sidebar.tsx:112
+#: ../../../lib/web/src/components/layout/app-sidebar.tsx:108
+#: ../../../lib/web/src/components/layout/app-sidebar.tsx:113
 msgid "Close navigation"
 msgstr "Затвори навигацията"
 
@@ -440,6 +466,7 @@ msgid "Custom"
 msgstr "Персонализирано"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:218
+#: ../../../lib/web/src/components/theme-switch.tsx:52
 #: ../../../lib/web/src/lib/preference-utils.ts:20
 msgid "Dark"
 msgstr "Тъмно"
@@ -524,8 +551,8 @@ msgstr "Отхвърли"
 msgid "Displays the mobile sidebar."
 msgstr "Показва мобилната странична лента."
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:338
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:348
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:342
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:352
 msgid "Download"
 msgstr "Изтегляне"
 
@@ -600,6 +627,14 @@ msgstr "Неуспешно отхвърляне на реми"
 msgid "Failed to delete game"
 msgstr "Неуспешно изтриване на игра"
 
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:263
+msgid "Failed to load image"
+msgstr "Изображението не можа да се зареди"
+
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:263
+msgid "Failed to load video"
+msgstr "Видеото не можа да се зареди"
+
 #: src/features/chess/index.tsx:191
 msgid "Failed to make move"
 msgstr "Неуспешен ход"
@@ -670,29 +705,29 @@ msgstr "Играта е създадена"
 msgid "Game deleted"
 msgstr "Играта е изтрита"
 
-#: ../../../lib/web/src/features/errors/forbidden.tsx:24
-#: ../../../lib/web/src/features/errors/not-found-error.tsx:24
-#: ../../../lib/web/src/features/errors/unauthorized-error.tsx:24
+#: ../../../lib/web/src/features/errors/forbidden.tsx:26
+#: ../../../lib/web/src/features/errors/not-found-error.tsx:26
+#: ../../../lib/web/src/features/errors/unauthorized-error.tsx:26
 msgid "Go back"
 msgstr "Назад"
 
-#: ../../../lib/web/src/components/data-table/pagination.tsx:78
+#: ../../../lib/web/src/components/data-table/pagination.tsx:82
 msgid "Go to first page"
 msgstr "Към първа страница"
 
-#: ../../../lib/web/src/components/data-table/pagination.tsx:124
+#: ../../../lib/web/src/components/data-table/pagination.tsx:128
 msgid "Go to last page"
 msgstr "Към последна страница"
 
-#: ../../../lib/web/src/components/data-table/pagination.tsx:115
+#: ../../../lib/web/src/components/data-table/pagination.tsx:119
 msgid "Go to next page"
 msgstr "Към следваща страница"
 
-#: ../../../lib/web/src/components/data-table/pagination.tsx:102
+#: ../../../lib/web/src/components/data-table/pagination.tsx:106
 msgid "Go to page {pageNumber}"
 msgstr "Към страница {pageNumber}"
 
-#: ../../../lib/web/src/components/data-table/pagination.tsx:87
+#: ../../../lib/web/src/components/data-table/pagination.tsx:91
 msgid "Go to previous page"
 msgstr "Към предишна страница"
 
@@ -719,6 +754,11 @@ msgstr "Начало"
 msgid "Hot"
 msgstr "Горещо"
 
+#. placeholder {0}: currentMedia.name
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:247
+msgid "Image viewer: {0}"
+msgstr "Преглед на изображения: {0}"
+
 #: ../../../lib/web/src/lib/preference-utils.ts:86
 msgid "Imperial"
 msgstr "Имперски"
@@ -734,6 +774,10 @@ msgstr "Интереси"
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:245
 msgid "Invalid verification code"
 msgstr "Невалиден код за потвърждение"
+
+#: ../../../lib/web/src/features/errors/not-found-error.tsx:18
+msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
+msgstr "Изглежда, че страницата, която търсите, <0/>не съществува или е премахната."
 
 #: src/features/chess/lib/use-chess-piece-name.ts:17
 msgid "king"
@@ -762,6 +806,7 @@ msgid "Left to Right"
 msgstr "От ляво на дясно"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:213
+#: ../../../lib/web/src/components/theme-switch.tsx:45
 #: ../../../lib/web/src/lib/preference-utils.ts:19
 msgid "Light"
 msgstr "Светъл"
@@ -776,8 +821,8 @@ msgstr "Зареждане на съдържанието…"
 
 #: ../../../lib/web/src/components/ui/load-more.tsx:35
 #: ../../../lib/web/src/features/document/document-page.tsx:90
-msgid "Loading…"
-msgstr "Зареждане…"
+msgid "Loading..."
+msgstr "Зареждане..."
 
 #: ../../../lib/web/src/components/layout/nav-user.tsx:101
 #: ../../../lib/web/src/components/layout/nav-user.tsx:167
@@ -801,8 +846,8 @@ msgstr "Успешен изход"
 msgid "Logging out…"
 msgstr "Излизане…"
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:92
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:99
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:93
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:100
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:224
 msgid "Mark all as read"
 msgstr "Маркирай всички като прочетени"
@@ -843,8 +888,8 @@ msgstr "Ново"
 msgid "New game"
 msgstr "Нова игра"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:388
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:393
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:392
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:397
 msgid "Next image"
 msgstr "Следващо изображение"
 
@@ -885,7 +930,7 @@ msgid "No profile"
 msgstr "Няма профил"
 
 #: ../../../lib/web/src/components/command-menu.tsx:55
-#: ../../../lib/web/src/components/data-table/faceted-filter.tsx:90
+#: ../../../lib/web/src/components/data-table/faceted-filter.tsx:94
 msgid "No results found."
 msgstr "Не са намерени резултати."
 
@@ -926,6 +971,11 @@ msgstr "Не е зададен"
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:261
 msgid "Notifications"
 msgstr "Известия"
+
+#. placeholder {0}: unread.length
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:86
+msgid "Notifications: {0}"
+msgstr "Известия: {0}"
 
 #: src/features/chess/index.tsx:435
 msgid "Offer draw"
@@ -976,6 +1026,11 @@ msgstr "Друго"
 msgid "Owner"
 msgstr "Собственик"
 
+#: ../../../lib/web/src/components/data-table/pagination.tsx:43
+#: ../../../lib/web/src/components/data-table/pagination.tsx:71
+msgid "Page {currentPage} of {totalPages}"
+msgstr "Страница {currentPage} от {totalPages}"
+
 #: ../../../lib/web/src/components/step-up-dialog.tsx:334
 msgid "Passkey"
 msgstr "Ключ за достъп"
@@ -997,6 +1052,10 @@ msgstr "пешка"
 msgid "Please check your internet connection and try again."
 msgstr "Проверете интернет връзката си и опитайте отново."
 
+#: ../../../lib/web/src/features/errors/unauthorized-error.tsx:18
+msgid "Please log in with the appropriate credentials <0/> to access this resource."
+msgstr "Моля, влезте с подходящите данни за вход, <0/> за да получите достъп до този ресурс."
+
 #: src/features/chess/components/new-game.tsx:67
 msgid "Please select a friend"
 msgstr "Моля, изберете приятел"
@@ -1009,8 +1068,8 @@ msgstr "Опитайте отново."
 msgid "Please wait a moment and try again."
 msgstr "Моля, изчакайте малко и опитайте отново."
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:373
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:378
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:377
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:382
 msgid "Previous image"
 msgstr "Предишно изображение"
 
@@ -1086,6 +1145,11 @@ msgstr "Премахни"
 msgid "Remove access rule"
 msgstr "Премахни правило за достъп"
 
+#. placeholder {0}: formatSubject(subject, data.name)
+#: ../../../lib/web/src/features/access/access-list.tsx:259
+msgid "Remove access rule for \"{0}\"?"
+msgstr "Да се премахне ли правилото за достъп за „{0}“?"
+
 #: ../../../lib/web/src/features/access/access-list.tsx:257
 msgid "Remove access?"
 msgstr "Премахни достъпа?"
@@ -1129,7 +1193,7 @@ msgstr "Отдясно наляво"
 msgid "rook"
 msgstr "топ"
 
-#: ../../../lib/web/src/components/data-table/pagination.tsx:63
+#: ../../../lib/web/src/components/data-table/pagination.tsx:65
 msgid "Rows per page"
 msgstr "Редове на страница"
 
@@ -1212,7 +1276,16 @@ msgstr "Избор на посока на сайта"
 msgid "Select theme preference"
 msgstr "Избор на предпочитание за тема"
 
-#: ../../../lib/web/src/features/accounts/account-verify.tsx:98
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:216
+msgid "selected"
+msgstr "избрани"
+
+#. placeholder {0}: getSelectedName()
+#: ../../../lib/web/src/features/access/access-dialog.tsx:309
+msgid "Selected: <0>{0}</0>"
+msgstr "Избрано: <0>{0}</0>"
+
+#: ../../../lib/web/src/features/accounts/account-verify.tsx:100
 msgid "Send again"
 msgstr "Изпрати отново"
 
@@ -1312,6 +1385,7 @@ msgid "Sunday"
 msgstr "Неделя"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:208
+#: ../../../lib/web/src/components/theme-switch.tsx:59
 #: ../../../lib/web/src/lib/preference-utils.ts:21
 #: ../../../lib/web/src/lib/preference-utils.ts:144
 msgid "System"
@@ -1343,6 +1417,10 @@ msgstr "Този код е неправилен или е изтекъл."
 msgid "The requested content could not be found."
 msgstr "Заявеното съдържание не беше намерено."
 
+#: ../../../lib/web/src/features/errors/maintenance-error.tsx:15
+msgid "The site is not available at the moment."
+msgstr "Сайтът не е достъпен в момента."
+
 #: ../../../lib/web/src/components/config-drawer.tsx:194
 msgid "Theme"
 msgstr "Тема"
@@ -1351,6 +1429,10 @@ msgstr "Тема"
 msgid "Theme Settings"
 msgstr "Настройки на темата"
 
+#: ../../../lib/web/src/components/coming-soon.tsx:14
+msgid "This page has not been created yet."
+msgstr "Тази страница още не е създадена."
+
 #: src/features/chess/index.tsx:581
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Това ще изтрие завинаги играта и нейния чат. Това действие не може да бъде отменено."
@@ -1358,6 +1440,10 @@ msgstr "Това ще изтрие завинаги играта и нейния
 #: ../../../lib/web/src/lib/preference-utils.ts:62
 msgid "Thursday"
 msgstr "Четвъртък"
+
+#: ../../../lib/web/src/components/travelling-picker.tsx:220
+msgid "To"
+msgstr "До"
 
 #: ../../../lib/web/src/components/data-table/view-options.tsx:37
 msgid "Toggle columns"
@@ -1454,7 +1540,7 @@ msgstr "Неоторизиран достъп"
 msgid "United States"
 msgstr "Съединени щати"
 
-#: src/hooks/useGameWebsocket.ts:196
+#: src/hooks/useGameWebsocket.ts:233
 msgid "Unknown"
 msgstr "Неизвестно"
 
@@ -1470,7 +1556,7 @@ msgstr "Използвайте своя ключ за достъп"
 msgid "User"
 msgstr "Потребител"
 
-#: ../../../lib/web/src/features/accounts/account-verify.tsx:71
+#: ../../../lib/web/src/features/accounts/account-verify.tsx:73
 msgid "Verification code"
 msgstr "Код за потвърждение"
 
@@ -1484,7 +1570,7 @@ msgstr "Потвърждението не успя"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:388
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:172
-#: ../../../lib/web/src/features/accounts/account-verify.tsx:109
+#: ../../../lib/web/src/features/accounts/account-verify.tsx:111
 msgid "Verify"
 msgstr "Потвърди"
 
@@ -1496,6 +1582,11 @@ msgstr "Потвърди имейл адреса"
 msgid "Video thumbnail"
 msgstr "Миниатюра на видео"
 
+#. placeholder {0}: currentMedia.name
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:246
+msgid "Video viewer: {0}"
+msgstr "Преглед на видео: {0}"
+
 #: ../../../lib/web/src/components/data-table/view-options.tsx:33
 msgid "View"
 msgstr "Преглед"
@@ -1504,10 +1595,15 @@ msgstr "Преглед"
 msgid "View all"
 msgstr "Виж всички"
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:105
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:113
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:106
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:114
 msgid "View all notifications"
 msgstr "Виж всички известия"
+
+#. placeholder {0}: account.identifier
+#: ../../../lib/web/src/features/accounts/account-verify.tsx:63
+msgid "We sent a verification code to <0>{0}</0>. Enter the code below to verify your email address."
+msgstr "Изпратихме код за потвърждение на <0>{0}</0>. Въведете кода по-долу, за да потвърдите имейл адреса си."
 
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:16
 msgid "We'll be back online shortly."
@@ -1540,6 +1636,10 @@ msgstr "Вие"
 #: ../../../lib/web/src/features/errors/general-error.tsx:61
 msgid "You do not have access to this section."
 msgstr "Нямате достъп до този раздел."
+
+#: ../../../lib/web/src/features/errors/forbidden.tsx:18
+msgid "You don't have necessary permission <0/>to view this resource."
+msgstr "Нямате необходимото разрешение, <0/>за да видите този ресурс."
 
 #: ../../../lib/web/src/components/restore-banner.tsx:91
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."

@@ -18,6 +18,11 @@ msgstr ""
 msgid "Please check your internet connection and try again."
 msgstr "သင့်အင်တာနက်ချိတ်ဆက်မှုကို စစ်ဆေးပြီး ထပ်မံကြိုးစားပါ။"
 
+#. placeholder {0}: selectedValues.size
+#: ../../../lib/web/src/components/data-table/faceted-filter.tsx:66
+msgid "{0, plural, one {# selected} other {# selected}}"
+msgstr "{0, plural, other {# ရွေးထား}}"
+
 #. placeholder {0}: pieces .map(({ type, count }) => getPieceLabel(type, count)) .join(', ')
 #: src/features/chess/components/captured-pieces-strip.tsx:89
 msgid "{colorName} captured {0}"
@@ -51,6 +56,10 @@ msgstr "{count, plural, other {ရထား #}}"
 msgid "{count} pieces"
 msgstr "ပစ္စည်း {count} ခု"
 
+#: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:173
+msgid "{entityLabel} name"
+msgstr "{entityLabel} အမည်"
+
 #: src/features/chess/components/chat-message-list.tsx:195
 msgid "{name} declined the draw"
 msgstr "{name} သရေကျရန် ငြင်းဆိုသည်"
@@ -66,6 +75,22 @@ msgstr "{name} အရှုံးပေးလိုက်သည်"
 #: src/features/chess/components/draw-offer-banner.tsx:30
 msgid "{opponentName} offered a draw"
 msgstr "{opponentName} က သရေ ပေးခဲ့သည်"
+
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:210
+msgid "{selectedCount, plural, one {{entityName} selected} other {{manyName} selected}}"
+msgstr "{selectedCount, plural, other {{manyName} ရွေးထားသည်}}"
+
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:52
+msgid "{selectedCount, plural, one {# {entityName} selected. Bulk actions toolbar is available.} other {# {manyName} selected. Bulk actions toolbar is available.}}"
+msgstr "{selectedCount, plural, other {# {manyName} ရွေးထားသည်။ အစုလိုက်လုပ်ဆောင်ချက် ကိရိယာဘား ရနိုင်သည်။}}"
+
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:202
+msgid "{selectedCount, plural, one {# selected} other {# selected}}"
+msgstr "{selectedCount, plural, other {# ခု ရွေးထားသည်}}"
+
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:149
+msgid "{selectedCount, plural, one {Bulk actions for # selected {entityName}} other {Bulk actions for # selected {manyName}}}"
+msgstr "{selectedCount, plural, other {ရွေးချယ်ထားသော {manyName} # ခုအတွက် အစုလိုက်လုပ်ဆောင်ချက်များ}}"
 
 #: src/features/chess/components/chat-message-list.tsx:224
 msgid "{subject} played <0>{san}</0>"
@@ -217,9 +242,9 @@ msgstr "Authenticator ကုဒ်"
 msgid "Back"
 msgstr "နောက်သို့"
 
-#: ../../../lib/web/src/features/errors/forbidden.tsx:26
-#: ../../../lib/web/src/features/errors/not-found-error.tsx:26
-#: ../../../lib/web/src/features/errors/unauthorized-error.tsx:26
+#: ../../../lib/web/src/features/errors/forbidden.tsx:28
+#: ../../../lib/web/src/features/errors/not-found-error.tsx:28
+#: ../../../lib/web/src/features/errors/unauthorized-error.tsx:28
 msgid "Back to home"
 msgstr "ပင်မစာမျက်နှာ သို့ပြန်သွားရန်"
 
@@ -252,7 +277,7 @@ msgstr "စိတ်ဝင်စားမှု မြှင့်တင်မ�
 #: ../../../lib/web/src/features/access/access-dialog.tsx:328
 #: ../../../lib/web/src/features/access/access-list.tsx:263
 #: ../../../lib/web/src/features/accounts/account-add.tsx:188
-#: ../../../lib/web/src/features/accounts/account-verify.tsx:89
+#: ../../../lib/web/src/features/accounts/account-verify.tsx:91
 #: src/features/chess/components/new-game.tsx:145
 #: src/features/chess/components/promotion-dialog.tsx:108
 msgid "Cancel"
@@ -328,28 +353,29 @@ msgstr "ရှင်းမည်"
 msgid "Clear all"
 msgstr "အားလုံး ရှင်းမည်"
 
-#: ../../../lib/web/src/components/data-table/faceted-filter.tsx:140
+#: ../../../lib/web/src/components/data-table/faceted-filter.tsx:144
 msgid "Clear filters"
 msgstr "filter များ ရှင်းမည်"
 
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:167
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:171
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:177
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:181
 msgid "Clear selection"
 msgstr "ရွေးချယ်မှု ရှင်းမည်"
 
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:168
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:178
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:185
 msgid "Clear selection (Escape)"
 msgstr "ရွေးချယ်မှု ရှင်းမည် (Escape)"
 
 #: ../../../lib/web/src/components/ui/dialog.tsx:78
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:354
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:357
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:358
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:361
 #: ../../../lib/web/src/components/ui/sheet.tsx:79
 msgid "Close"
 msgstr "ပိတ်မည်"
 
-#: ../../../lib/web/src/components/layout/app-sidebar.tsx:107
-#: ../../../lib/web/src/components/layout/app-sidebar.tsx:112
+#: ../../../lib/web/src/components/layout/app-sidebar.tsx:108
+#: ../../../lib/web/src/components/layout/app-sidebar.tsx:113
 msgid "Close navigation"
 msgstr "navigation ပိတ်မည်"
 
@@ -440,6 +466,7 @@ msgid "Custom"
 msgstr "စိတ်ကြိုက်"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:218
+#: ../../../lib/web/src/components/theme-switch.tsx:52
 #: ../../../lib/web/src/lib/preference-utils.ts:20
 msgid "Dark"
 msgstr "အမှောင်"
@@ -524,8 +551,8 @@ msgstr "ပယ်မည်"
 msgid "Displays the mobile sidebar."
 msgstr "မိုဘိုင်း ဘေးဘားကို ပြသသည်။"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:338
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:348
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:342
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:352
 msgid "Download"
 msgstr "ဒေါင်းလုဒ်"
 
@@ -600,6 +627,14 @@ msgstr "သရေ ငြင်းပယ်၍ မရပါ"
 msgid "Failed to delete game"
 msgstr "ဂိမ်း ဖျက်၍ မရပါ"
 
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:263
+msgid "Failed to load image"
+msgstr "ပုံကို ဖွင့်၍မရပါ"
+
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:263
+msgid "Failed to load video"
+msgstr "ဗီဒီယိုကို ဖွင့်၍မရပါ"
+
 #: src/features/chess/index.tsx:191
 msgid "Failed to make move"
 msgstr "ရွှေ့ခြင်း လုပ်၍ မရပါ"
@@ -670,29 +705,29 @@ msgstr "ဂိမ်း ဖန်တီးပြီးပါပြီ"
 msgid "Game deleted"
 msgstr "ဂိမ်း ဖျက်ပြီးပါပြီ"
 
-#: ../../../lib/web/src/features/errors/forbidden.tsx:24
-#: ../../../lib/web/src/features/errors/not-found-error.tsx:24
-#: ../../../lib/web/src/features/errors/unauthorized-error.tsx:24
+#: ../../../lib/web/src/features/errors/forbidden.tsx:26
+#: ../../../lib/web/src/features/errors/not-found-error.tsx:26
+#: ../../../lib/web/src/features/errors/unauthorized-error.tsx:26
 msgid "Go back"
 msgstr "ပြန်သွားပါ"
 
-#: ../../../lib/web/src/components/data-table/pagination.tsx:78
+#: ../../../lib/web/src/components/data-table/pagination.tsx:82
 msgid "Go to first page"
 msgstr "ပထမစာမျက်နှာသို့"
 
-#: ../../../lib/web/src/components/data-table/pagination.tsx:124
+#: ../../../lib/web/src/components/data-table/pagination.tsx:128
 msgid "Go to last page"
 msgstr "နောက်ဆုံးစာမျက်နှာသို့"
 
-#: ../../../lib/web/src/components/data-table/pagination.tsx:115
+#: ../../../lib/web/src/components/data-table/pagination.tsx:119
 msgid "Go to next page"
 msgstr "နောက်စာမျက်နှာသို့"
 
-#: ../../../lib/web/src/components/data-table/pagination.tsx:102
+#: ../../../lib/web/src/components/data-table/pagination.tsx:106
 msgid "Go to page {pageNumber}"
 msgstr "စာမျက်နှာ {pageNumber} သို့သွားပါ"
 
-#: ../../../lib/web/src/components/data-table/pagination.tsx:87
+#: ../../../lib/web/src/components/data-table/pagination.tsx:91
 msgid "Go to previous page"
 msgstr "ယခင်စာမျက်နှာသို့"
 
@@ -719,6 +754,11 @@ msgstr "ပင်မ"
 msgid "Hot"
 msgstr "လူကြိုက်များ"
 
+#. placeholder {0}: currentMedia.name
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:247
+msgid "Image viewer: {0}"
+msgstr "ပုံကြည့်ရှုစနစ်- {0}"
+
 #: ../../../lib/web/src/lib/preference-utils.ts:86
 msgid "Imperial"
 msgstr "Imperial"
@@ -734,6 +774,10 @@ msgstr "စိတ်ဝင်စားမှုများ"
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:245
 msgid "Invalid verification code"
 msgstr "မမှန်ကန်သော အတည်ပြု ကုဒ်"
+
+#: ../../../lib/web/src/features/errors/not-found-error.tsx:18
+msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
+msgstr "သင်ရှာဖွေနေသော စာမျက်နှာသည် <0/>မရှိတော့ပါ သို့မဟုတ် ဖယ်ရှားခံရပုံရသည်။"
 
 #: src/features/chess/lib/use-chess-piece-name.ts:17
 msgid "king"
@@ -762,6 +806,7 @@ msgid "Left to Right"
 msgstr "ဘယ်မှ ညာသို့"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:213
+#: ../../../lib/web/src/components/theme-switch.tsx:45
 #: ../../../lib/web/src/lib/preference-utils.ts:19
 msgid "Light"
 msgstr "အလင်း"
@@ -776,8 +821,8 @@ msgstr "အကြောင်းအရာ ဖွင့်နေသည်…"
 
 #: ../../../lib/web/src/components/ui/load-more.tsx:35
 #: ../../../lib/web/src/features/document/document-page.tsx:90
-msgid "Loading…"
-msgstr "တင်နေသည်…"
+msgid "Loading..."
+msgstr "တင်နေသည်..."
 
 #: ../../../lib/web/src/components/layout/nav-user.tsx:101
 #: ../../../lib/web/src/components/layout/nav-user.tsx:167
@@ -801,8 +846,8 @@ msgstr "အောင်မြင်စွာ ထွက်ပြီးပါပ�
 msgid "Logging out…"
 msgstr "ထွက်နေသည်…"
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:92
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:99
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:93
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:100
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:224
 msgid "Mark all as read"
 msgstr "အားလုံးကို ဖတ်ပြီးအဖြစ် မှတ်"
@@ -843,8 +888,8 @@ msgstr "အသစ်"
 msgid "New game"
 msgstr "ဂိမ်းအသစ်"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:388
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:393
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:392
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:397
 msgid "Next image"
 msgstr "နောက်ပုံ"
 
@@ -885,7 +930,7 @@ msgid "No profile"
 msgstr "ပရိုဖိုင် မရှိ"
 
 #: ../../../lib/web/src/components/command-menu.tsx:55
-#: ../../../lib/web/src/components/data-table/faceted-filter.tsx:90
+#: ../../../lib/web/src/components/data-table/faceted-filter.tsx:94
 msgid "No results found."
 msgstr "ရလဒ်များ မတွေ့ပါ။"
 
@@ -926,6 +971,11 @@ msgstr "မသတ်မှတ်ထားပါ"
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:261
 msgid "Notifications"
 msgstr "အသိပေးချက်များ"
+
+#. placeholder {0}: unread.length
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:86
+msgid "Notifications: {0}"
+msgstr "အကြောင်းကြားချက်များ- {0}"
 
 #: src/features/chess/index.tsx:435
 msgid "Offer draw"
@@ -976,6 +1026,11 @@ msgstr "အခြား"
 msgid "Owner"
 msgstr "ပိုင်ရှင်"
 
+#: ../../../lib/web/src/components/data-table/pagination.tsx:43
+#: ../../../lib/web/src/components/data-table/pagination.tsx:71
+msgid "Page {currentPage} of {totalPages}"
+msgstr "စာမျက်နှာ {currentPage} / {totalPages}"
+
 #: ../../../lib/web/src/components/step-up-dialog.tsx:334
 msgid "Passkey"
 msgstr "Passkey"
@@ -997,6 +1052,10 @@ msgstr "စစ်သား"
 msgid "Please check your internet connection and try again."
 msgstr "သင့်အင်တာနက်ချိတ်ဆက်မှုကို စစ်ဆေးပြီး ထပ်မံကြိုးစားပါ။"
 
+#: ../../../lib/web/src/features/errors/unauthorized-error.tsx:18
+msgid "Please log in with the appropriate credentials <0/> to access this resource."
+msgstr "ဤအရင်းအမြစ်ကို ဝင်ရောက်ရန် <0/> သင့်လျော်သော အထောက်အထားများဖြင့် ဝင်ရောက်ပါ။"
+
 #: src/features/chess/components/new-game.tsx:67
 msgid "Please select a friend"
 msgstr "သူငယ်ချင်းတစ်ဦး ရွေးချယ်ပါ"
@@ -1009,8 +1068,8 @@ msgstr "ကျေးဇူးပြု၍ ထပ်ကြိုးစားပ�
 msgid "Please wait a moment and try again."
 msgstr "ကျေးဇူးပြု၍ ခဏစောင့်ပြီး ထပ်စမ်းကြည့်ပါ။"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:373
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:378
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:377
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:382
 msgid "Previous image"
 msgstr "ယခင်ပုံ"
 
@@ -1086,6 +1145,11 @@ msgstr "ဖယ်ရှား"
 msgid "Remove access rule"
 msgstr "ဝင်ရောက်ခွင့် စည်းမျဉ်း ဖယ်ရှား"
 
+#. placeholder {0}: formatSubject(subject, data.name)
+#: ../../../lib/web/src/features/access/access-list.tsx:259
+msgid "Remove access rule for \"{0}\"?"
+msgstr "\"{0}\" အတွက် ဝင်ရောက်ခွင့်စည်းမျဉ်းကို ဖယ်ရှားမလား။"
+
 #: ../../../lib/web/src/features/access/access-list.tsx:257
 msgid "Remove access?"
 msgstr "ဝင်ရောက်ခွင့် ဖယ်ရှားမလား?"
@@ -1129,7 +1193,7 @@ msgstr "ညာမှ ဘယ်သို့"
 msgid "rook"
 msgstr "ရထား"
 
-#: ../../../lib/web/src/components/data-table/pagination.tsx:63
+#: ../../../lib/web/src/components/data-table/pagination.tsx:65
 msgid "Rows per page"
 msgstr "စာမျက်နှာတစ်ခုစီ၏ အတန်းများ"
 
@@ -1212,7 +1276,16 @@ msgstr "ဆိုက်ဦးတည်ရာကို ရွေးပါ"
 msgid "Select theme preference"
 msgstr "အပြင်အဆင် ဦးစားပေးကို ရွေးပါ"
 
-#: ../../../lib/web/src/features/accounts/account-verify.tsx:98
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:216
+msgid "selected"
+msgstr "ရွေးချယ်ထားသည်"
+
+#. placeholder {0}: getSelectedName()
+#: ../../../lib/web/src/features/access/access-dialog.tsx:309
+msgid "Selected: <0>{0}</0>"
+msgstr "ရွေးထား: <0>{0}</0>"
+
+#: ../../../lib/web/src/features/accounts/account-verify.tsx:100
 msgid "Send again"
 msgstr "ထပ်ပို့ပါ"
 
@@ -1312,6 +1385,7 @@ msgid "Sunday"
 msgstr "တနင်္ဂနွေ"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:208
+#: ../../../lib/web/src/components/theme-switch.tsx:59
 #: ../../../lib/web/src/lib/preference-utils.ts:21
 #: ../../../lib/web/src/lib/preference-utils.ts:144
 msgid "System"
@@ -1343,6 +1417,10 @@ msgstr "ထိုကုဒ်မှားနေသည် သို့မဟု�
 msgid "The requested content could not be found."
 msgstr "တောင်းဆိုထားသော အကြောင်းအရာကို ရှာမတွေ့ပါ။"
 
+#: ../../../lib/web/src/features/errors/maintenance-error.tsx:15
+msgid "The site is not available at the moment."
+msgstr "ဤဆိုက်ကို ယခုအချိန်တွင် အသုံးပြု၍မရပါ။"
+
 #: ../../../lib/web/src/components/config-drawer.tsx:194
 msgid "Theme"
 msgstr "အပြင်အဆင်"
@@ -1351,6 +1429,10 @@ msgstr "အပြင်အဆင်"
 msgid "Theme Settings"
 msgstr "အပြင်အဆင် ဆက်တင်များ"
 
+#: ../../../lib/web/src/components/coming-soon.tsx:14
+msgid "This page has not been created yet."
+msgstr "ဤစာမျက်နှာကို မဖန်တီးရသေးပါ။"
+
 #: src/features/chess/index.tsx:581
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "ဤလုပ်ဆောင်ချက်သည် ဂိမ်းနှင့် ၎င်း၏ ချတ်ကို အပြီးအပိုင် ဖျက်ပစ်မည်ဖြစ်သည်။ ဤလုပ်ဆောင်ချက်ကို ပြန်ပြောင်း၍မရပါ။"
@@ -1358,6 +1440,10 @@ msgstr "ဤလုပ်ဆောင်ချက်သည် ဂိမ်းန�
 #: ../../../lib/web/src/lib/preference-utils.ts:62
 msgid "Thursday"
 msgstr "ကြာသပတေး"
+
+#: ../../../lib/web/src/components/travelling-picker.tsx:220
+msgid "To"
+msgstr "သို့"
 
 #: ../../../lib/web/src/components/data-table/view-options.tsx:37
 msgid "Toggle columns"
@@ -1454,7 +1540,7 @@ msgstr "ခွင့်ပြုမထားသော ဝင်ရောက်�
 msgid "United States"
 msgstr "United States"
 
-#: src/hooks/useGameWebsocket.ts:196
+#: src/hooks/useGameWebsocket.ts:233
 msgid "Unknown"
 msgstr "မသိရသော"
 
@@ -1470,7 +1556,7 @@ msgstr "သင့်ပတ်စ်ကီးကို သုံးပါ"
 msgid "User"
 msgstr "သုံးစွဲသူ"
 
-#: ../../../lib/web/src/features/accounts/account-verify.tsx:71
+#: ../../../lib/web/src/features/accounts/account-verify.tsx:73
 msgid "Verification code"
 msgstr "အတည်ပြု ကုဒ်"
 
@@ -1484,7 +1570,7 @@ msgstr "အတည်ပြုခြင်း မအောင်မြင်ပ�
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:388
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:172
-#: ../../../lib/web/src/features/accounts/account-verify.tsx:109
+#: ../../../lib/web/src/features/accounts/account-verify.tsx:111
 msgid "Verify"
 msgstr "အတည်ပြုမည်"
 
@@ -1496,6 +1582,11 @@ msgstr "အီးမေးလ် လိပ်စာ အတည်ပြုမည�
 msgid "Video thumbnail"
 msgstr "ဗီဒီယို thumbnail"
 
+#. placeholder {0}: currentMedia.name
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:246
+msgid "Video viewer: {0}"
+msgstr "ဗီဒီယိုကြည့်ရှုစနစ်- {0}"
+
 #: ../../../lib/web/src/components/data-table/view-options.tsx:33
 msgid "View"
 msgstr "ကြည့်ရှုမည်"
@@ -1504,10 +1595,15 @@ msgstr "ကြည့်ရှုမည်"
 msgid "View all"
 msgstr "အားလုံး ကြည့်ရှုမည်"
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:105
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:113
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:106
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:114
 msgid "View all notifications"
 msgstr "အသိပေးချက်များ အားလုံး ကြည့်ရှုမည်"
+
+#. placeholder {0}: account.identifier
+#: ../../../lib/web/src/features/accounts/account-verify.tsx:63
+msgid "We sent a verification code to <0>{0}</0>. Enter the code below to verify your email address."
+msgstr "<0>{0}</0> သို့ အတည်ပြုကုဒ် ပို့လိုက်ပါပြီ။ သင့်အီးမေးလ်လိပ်စာကို အတည်ပြုရန် အောက်တွင် ကုဒ်ထည့်ပါ။"
 
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:16
 msgid "We'll be back online shortly."
@@ -1540,6 +1636,10 @@ msgstr "သင်"
 #: ../../../lib/web/src/features/errors/general-error.tsx:61
 msgid "You do not have access to this section."
 msgstr "ဤအပိုင်းသို့ သင့်တွင် ဝင်ရောက်ခွင့်မရှိပါ။"
+
+#: ../../../lib/web/src/features/errors/forbidden.tsx:18
+msgid "You don't have necessary permission <0/>to view this resource."
+msgstr "ဤအရင်းအမြစ်ကို ကြည့်ရှုရန် <0/>လိုအပ်သော ခွင့်ပြုချက် သင့်တွင်မရှိပါ။"
 
 #: ../../../lib/web/src/components/restore-banner.tsx:91
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."

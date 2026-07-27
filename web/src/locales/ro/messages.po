@@ -18,6 +18,11 @@ msgstr ""
 msgid "Please check your internet connection and try again."
 msgstr "Verifică conexiunea la internet și încearcă din nou."
 
+#. placeholder {0}: selectedValues.size
+#: ../../../lib/web/src/components/data-table/faceted-filter.tsx:66
+msgid "{0, plural, one {# selected} other {# selected}}"
+msgstr "{0, plural, one {# selectat} few {# selectate} other {# selectate}}"
+
 #. placeholder {0}: pieces .map(({ type, count }) => getPieceLabel(type, count)) .join(', ')
 #: src/features/chess/components/captured-pieces-strip.tsx:89
 msgid "{colorName} captured {0}"
@@ -51,6 +56,10 @@ msgstr "{count, plural, one {# tură} few {# ture} other {# de ture}}"
 msgid "{count} pieces"
 msgstr "{count} piese"
 
+#: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:173
+msgid "{entityLabel} name"
+msgstr "Numele {entityLabel}"
+
 #: src/features/chess/components/chat-message-list.tsx:195
 msgid "{name} declined the draw"
 msgstr "{name} a refuzat remiza"
@@ -66,6 +75,22 @@ msgstr "{name} a abandonat"
 #: src/features/chess/components/draw-offer-banner.tsx:30
 msgid "{opponentName} offered a draw"
 msgstr "{opponentName} a oferit egalitate"
+
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:210
+msgid "{selectedCount, plural, one {{entityName} selected} other {{manyName} selected}}"
+msgstr "{selectedCount, plural, one {{entityName} selectat} few {{manyName} selectate} other {{manyName} selectate}}"
+
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:52
+msgid "{selectedCount, plural, one {# {entityName} selected. Bulk actions toolbar is available.} other {# {manyName} selected. Bulk actions toolbar is available.}}"
+msgstr "{selectedCount, plural, one {# {entityName} selectat. Bara de acțiuni în masă este disponibilă.} few {# {manyName} selectate. Bara de acțiuni în masă este disponibilă.} other {# de {manyName} selectate. Bara de acțiuni în masă este disponibilă.}}"
+
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:202
+msgid "{selectedCount, plural, one {# selected} other {# selected}}"
+msgstr "{selectedCount, plural, one {# selectate} few {# selectate} other {# selectate}}"
+
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:149
+msgid "{selectedCount, plural, one {Bulk actions for # selected {entityName}} other {Bulk actions for # selected {manyName}}}"
+msgstr "{selectedCount, plural, one {Acțiuni în masă pentru # {entityName} selectat} few {Acțiuni în masă pentru # {manyName} selectate} other {Acțiuni în masă pentru # de {manyName} selectate}}"
 
 #: src/features/chess/components/chat-message-list.tsx:224
 msgid "{subject} played <0>{san}</0>"
@@ -217,9 +242,9 @@ msgstr "Cod de autentificare"
 msgid "Back"
 msgstr "Înapoi"
 
-#: ../../../lib/web/src/features/errors/forbidden.tsx:26
-#: ../../../lib/web/src/features/errors/not-found-error.tsx:26
-#: ../../../lib/web/src/features/errors/unauthorized-error.tsx:26
+#: ../../../lib/web/src/features/errors/forbidden.tsx:28
+#: ../../../lib/web/src/features/errors/not-found-error.tsx:28
+#: ../../../lib/web/src/features/errors/unauthorized-error.tsx:28
 msgid "Back to home"
 msgstr "Înapoi la pornire"
 
@@ -252,7 +277,7 @@ msgstr "Promovează interesul"
 #: ../../../lib/web/src/features/access/access-dialog.tsx:328
 #: ../../../lib/web/src/features/access/access-list.tsx:263
 #: ../../../lib/web/src/features/accounts/account-add.tsx:188
-#: ../../../lib/web/src/features/accounts/account-verify.tsx:89
+#: ../../../lib/web/src/features/accounts/account-verify.tsx:91
 #: src/features/chess/components/new-game.tsx:145
 #: src/features/chess/components/promotion-dialog.tsx:108
 msgid "Cancel"
@@ -328,28 +353,29 @@ msgstr "Golește"
 msgid "Clear all"
 msgstr "Golește tot"
 
-#: ../../../lib/web/src/components/data-table/faceted-filter.tsx:140
+#: ../../../lib/web/src/components/data-table/faceted-filter.tsx:144
 msgid "Clear filters"
 msgstr "Golește filtrele"
 
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:167
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:171
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:177
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:181
 msgid "Clear selection"
 msgstr "Golește selecția"
 
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:168
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:178
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:185
 msgid "Clear selection (Escape)"
 msgstr "Golește selecția (Escape)"
 
 #: ../../../lib/web/src/components/ui/dialog.tsx:78
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:354
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:357
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:358
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:361
 #: ../../../lib/web/src/components/ui/sheet.tsx:79
 msgid "Close"
 msgstr "Închide"
 
-#: ../../../lib/web/src/components/layout/app-sidebar.tsx:107
-#: ../../../lib/web/src/components/layout/app-sidebar.tsx:112
+#: ../../../lib/web/src/components/layout/app-sidebar.tsx:108
+#: ../../../lib/web/src/components/layout/app-sidebar.tsx:113
 msgid "Close navigation"
 msgstr "Închide navigarea"
 
@@ -440,6 +466,7 @@ msgid "Custom"
 msgstr "Personalizat"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:218
+#: ../../../lib/web/src/components/theme-switch.tsx:52
 #: ../../../lib/web/src/lib/preference-utils.ts:20
 msgid "Dark"
 msgstr "Întunecat"
@@ -524,8 +551,8 @@ msgstr "Renunță"
 msgid "Displays the mobile sidebar."
 msgstr "Afișează bara laterală mobilă."
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:338
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:348
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:342
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:352
 msgid "Download"
 msgstr "Descarcă"
 
@@ -600,6 +627,14 @@ msgstr "Refuzul remizei a eșuat"
 msgid "Failed to delete game"
 msgstr "Ștergerea jocului a eșuat"
 
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:263
+msgid "Failed to load image"
+msgstr "Imaginea nu a putut fi încărcată"
+
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:263
+msgid "Failed to load video"
+msgstr "Videoclipul nu a putut fi încărcat"
+
 #: src/features/chess/index.tsx:191
 msgid "Failed to make move"
 msgstr "Efectuarea mutării a eșuat"
@@ -670,29 +705,29 @@ msgstr "Joc creat"
 msgid "Game deleted"
 msgstr "Joc șters"
 
-#: ../../../lib/web/src/features/errors/forbidden.tsx:24
-#: ../../../lib/web/src/features/errors/not-found-error.tsx:24
-#: ../../../lib/web/src/features/errors/unauthorized-error.tsx:24
+#: ../../../lib/web/src/features/errors/forbidden.tsx:26
+#: ../../../lib/web/src/features/errors/not-found-error.tsx:26
+#: ../../../lib/web/src/features/errors/unauthorized-error.tsx:26
 msgid "Go back"
 msgstr "Înapoi"
 
-#: ../../../lib/web/src/components/data-table/pagination.tsx:78
+#: ../../../lib/web/src/components/data-table/pagination.tsx:82
 msgid "Go to first page"
 msgstr "Mergi la prima pagină"
 
-#: ../../../lib/web/src/components/data-table/pagination.tsx:124
+#: ../../../lib/web/src/components/data-table/pagination.tsx:128
 msgid "Go to last page"
 msgstr "Mergi la ultima pagină"
 
-#: ../../../lib/web/src/components/data-table/pagination.tsx:115
+#: ../../../lib/web/src/components/data-table/pagination.tsx:119
 msgid "Go to next page"
 msgstr "Mergi la pagina următoare"
 
-#: ../../../lib/web/src/components/data-table/pagination.tsx:102
+#: ../../../lib/web/src/components/data-table/pagination.tsx:106
 msgid "Go to page {pageNumber}"
 msgstr "Mergi la pagina {pageNumber}"
 
-#: ../../../lib/web/src/components/data-table/pagination.tsx:87
+#: ../../../lib/web/src/components/data-table/pagination.tsx:91
 msgid "Go to previous page"
 msgstr "Mergi la pagina anterioară"
 
@@ -719,6 +754,11 @@ msgstr "Acasă"
 msgid "Hot"
 msgstr "Popular"
 
+#. placeholder {0}: currentMedia.name
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:247
+msgid "Image viewer: {0}"
+msgstr "Vizualizator de imagini: {0}"
+
 #: ../../../lib/web/src/lib/preference-utils.ts:86
 msgid "Imperial"
 msgstr "Imperial"
@@ -734,6 +774,10 @@ msgstr "Interese"
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:245
 msgid "Invalid verification code"
 msgstr "Cod de verificare invalid"
+
+#: ../../../lib/web/src/features/errors/not-found-error.tsx:18
+msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
+msgstr "Se pare că pagina pe care o căutați <0/>nu există sau a fost eliminată."
 
 #: src/features/chess/lib/use-chess-piece-name.ts:17
 msgid "king"
@@ -762,6 +806,7 @@ msgid "Left to Right"
 msgstr "De la stânga la dreapta"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:213
+#: ../../../lib/web/src/components/theme-switch.tsx:45
 #: ../../../lib/web/src/lib/preference-utils.ts:19
 msgid "Light"
 msgstr "Luminos"
@@ -776,8 +821,8 @@ msgstr "Se încarcă conținutul…"
 
 #: ../../../lib/web/src/components/ui/load-more.tsx:35
 #: ../../../lib/web/src/features/document/document-page.tsx:90
-msgid "Loading…"
-msgstr "Se încarcă…"
+msgid "Loading..."
+msgstr "Se încarcă..."
 
 #: ../../../lib/web/src/components/layout/nav-user.tsx:101
 #: ../../../lib/web/src/components/layout/nav-user.tsx:167
@@ -801,8 +846,8 @@ msgstr "Deconectare reușită"
 msgid "Logging out…"
 msgstr "Se deconectează…"
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:92
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:99
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:93
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:100
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:224
 msgid "Mark all as read"
 msgstr "Marchează totul ca citit"
@@ -843,8 +888,8 @@ msgstr "Nou"
 msgid "New game"
 msgstr "Joc nou"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:388
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:393
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:392
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:397
 msgid "Next image"
 msgstr "Imaginea următoare"
 
@@ -885,7 +930,7 @@ msgid "No profile"
 msgstr "Niciun profil"
 
 #: ../../../lib/web/src/components/command-menu.tsx:55
-#: ../../../lib/web/src/components/data-table/faceted-filter.tsx:90
+#: ../../../lib/web/src/components/data-table/faceted-filter.tsx:94
 msgid "No results found."
 msgstr "Nu s-au găsit rezultate."
 
@@ -926,6 +971,11 @@ msgstr "Nesetat"
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:261
 msgid "Notifications"
 msgstr "Notificări"
+
+#. placeholder {0}: unread.length
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:86
+msgid "Notifications: {0}"
+msgstr "Notificări: {0}"
 
 #: src/features/chess/index.tsx:435
 msgid "Offer draw"
@@ -976,6 +1026,11 @@ msgstr "Altele"
 msgid "Owner"
 msgstr "Proprietar"
 
+#: ../../../lib/web/src/components/data-table/pagination.tsx:43
+#: ../../../lib/web/src/components/data-table/pagination.tsx:71
+msgid "Page {currentPage} of {totalPages}"
+msgstr "Pagina {currentPage} din {totalPages}"
+
 #: ../../../lib/web/src/components/step-up-dialog.tsx:334
 msgid "Passkey"
 msgstr "Cheie de acces"
@@ -997,6 +1052,10 @@ msgstr "pion"
 msgid "Please check your internet connection and try again."
 msgstr "Verifică conexiunea la internet și încearcă din nou."
 
+#: ../../../lib/web/src/features/errors/unauthorized-error.tsx:18
+msgid "Please log in with the appropriate credentials <0/> to access this resource."
+msgstr "Conectați-vă cu acreditările corespunzătoare <0/> pentru a accesa această resursă."
+
 #: src/features/chess/components/new-game.tsx:67
 msgid "Please select a friend"
 msgstr "Selectează un prieten"
@@ -1009,8 +1068,8 @@ msgstr "Încearcă din nou."
 msgid "Please wait a moment and try again."
 msgstr "Așteptați un moment și încercați din nou."
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:373
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:378
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:377
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:382
 msgid "Previous image"
 msgstr "Imaginea anterioară"
 
@@ -1086,6 +1145,11 @@ msgstr "Elimină"
 msgid "Remove access rule"
 msgstr "Elimină regula de acces"
 
+#. placeholder {0}: formatSubject(subject, data.name)
+#: ../../../lib/web/src/features/access/access-list.tsx:259
+msgid "Remove access rule for \"{0}\"?"
+msgstr "Eliminați regula de acces pentru „{0}”?"
+
 #: ../../../lib/web/src/features/access/access-list.tsx:257
 msgid "Remove access?"
 msgstr "Elimini accesul?"
@@ -1129,7 +1193,7 @@ msgstr "De la dreapta la stânga"
 msgid "rook"
 msgstr "tură"
 
-#: ../../../lib/web/src/components/data-table/pagination.tsx:63
+#: ../../../lib/web/src/components/data-table/pagination.tsx:65
 msgid "Rows per page"
 msgstr "Rânduri pe pagină"
 
@@ -1212,7 +1276,16 @@ msgstr "Selectează direcția site-ului"
 msgid "Select theme preference"
 msgstr "Selectează preferința de temă"
 
-#: ../../../lib/web/src/features/accounts/account-verify.tsx:98
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:216
+msgid "selected"
+msgstr "selectate"
+
+#. placeholder {0}: getSelectedName()
+#: ../../../lib/web/src/features/access/access-dialog.tsx:309
+msgid "Selected: <0>{0}</0>"
+msgstr "Selectat: <0>{0}</0>"
+
+#: ../../../lib/web/src/features/accounts/account-verify.tsx:100
 msgid "Send again"
 msgstr "Trimite din nou"
 
@@ -1312,6 +1385,7 @@ msgid "Sunday"
 msgstr "Duminică"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:208
+#: ../../../lib/web/src/components/theme-switch.tsx:59
 #: ../../../lib/web/src/lib/preference-utils.ts:21
 #: ../../../lib/web/src/lib/preference-utils.ts:144
 msgid "System"
@@ -1343,6 +1417,10 @@ msgstr "Acel cod este incorect sau a expirat."
 msgid "The requested content could not be found."
 msgstr "Conținutul solicitat nu a putut fi găsit."
 
+#: ../../../lib/web/src/features/errors/maintenance-error.tsx:15
+msgid "The site is not available at the moment."
+msgstr "Site-ul nu este disponibil momentan."
+
 #: ../../../lib/web/src/components/config-drawer.tsx:194
 msgid "Theme"
 msgstr "Temă"
@@ -1351,6 +1429,10 @@ msgstr "Temă"
 msgid "Theme Settings"
 msgstr "Setări temă"
 
+#: ../../../lib/web/src/components/coming-soon.tsx:14
+msgid "This page has not been created yet."
+msgstr "Această pagină nu a fost creată încă."
+
 #: src/features/chess/index.tsx:581
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Aceasta va șterge definitiv jocul și discuția asociată. Această acțiune nu poate fi anulată."
@@ -1358,6 +1440,10 @@ msgstr "Aceasta va șterge definitiv jocul și discuția asociată. Această ac�
 #: ../../../lib/web/src/lib/preference-utils.ts:62
 msgid "Thursday"
 msgstr "Joi"
+
+#: ../../../lib/web/src/components/travelling-picker.tsx:220
+msgid "To"
+msgstr "Spre"
 
 #: ../../../lib/web/src/components/data-table/view-options.tsx:37
 msgid "Toggle columns"
@@ -1454,7 +1540,7 @@ msgstr "Acces neautorizat"
 msgid "United States"
 msgstr "Statele Unite"
 
-#: src/hooks/useGameWebsocket.ts:196
+#: src/hooks/useGameWebsocket.ts:233
 msgid "Unknown"
 msgstr "Necunoscut"
 
@@ -1470,7 +1556,7 @@ msgstr "Folosește cheia de acces"
 msgid "User"
 msgstr "Utilizator"
 
-#: ../../../lib/web/src/features/accounts/account-verify.tsx:71
+#: ../../../lib/web/src/features/accounts/account-verify.tsx:73
 msgid "Verification code"
 msgstr "Cod de verificare"
 
@@ -1484,7 +1570,7 @@ msgstr "Verificarea a eșuat"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:388
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:172
-#: ../../../lib/web/src/features/accounts/account-verify.tsx:109
+#: ../../../lib/web/src/features/accounts/account-verify.tsx:111
 msgid "Verify"
 msgstr "Verifică"
 
@@ -1496,6 +1582,11 @@ msgstr "Verifică adresa de email"
 msgid "Video thumbnail"
 msgstr "Miniatură video"
 
+#. placeholder {0}: currentMedia.name
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:246
+msgid "Video viewer: {0}"
+msgstr "Vizualizator video: {0}"
+
 #: ../../../lib/web/src/components/data-table/view-options.tsx:33
 msgid "View"
 msgstr "Vizualizează"
@@ -1504,10 +1595,15 @@ msgstr "Vizualizează"
 msgid "View all"
 msgstr "Vizualizează tot"
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:105
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:113
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:106
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:114
 msgid "View all notifications"
 msgstr "Vizualizează toate notificările"
+
+#. placeholder {0}: account.identifier
+#: ../../../lib/web/src/features/accounts/account-verify.tsx:63
+msgid "We sent a verification code to <0>{0}</0>. Enter the code below to verify your email address."
+msgstr "Am trimis un cod de verificare la <0>{0}</0>. Introduceți codul mai jos pentru a verifica adresa de e-mail."
 
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:16
 msgid "We'll be back online shortly."
@@ -1540,6 +1636,10 @@ msgstr "Tu"
 #: ../../../lib/web/src/features/errors/general-error.tsx:61
 msgid "You do not have access to this section."
 msgstr "Nu aveți acces la această secțiune."
+
+#: ../../../lib/web/src/features/errors/forbidden.tsx:18
+msgid "You don't have necessary permission <0/>to view this resource."
+msgstr "Nu aveți permisiunea necesară <0/>pentru a vizualiza această resursă."
 
 #: ../../../lib/web/src/components/restore-banner.tsx:91
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."

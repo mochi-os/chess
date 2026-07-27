@@ -18,6 +18,11 @@ msgstr ""
 msgid "Please check your internet connection and try again."
 msgstr "Thoir sùil air a' cheangal eadar-lìn agad agus feuch ris a-rithist."
 
+#. placeholder {0}: selectedValues.size
+#: ../../../lib/web/src/components/data-table/faceted-filter.tsx:66
+msgid "{0, plural, one {# selected} other {# selected}}"
+msgstr "{0, plural, one {# air a thaghadh} two {# air an taghadh} few {# air an taghadh} other {# air an taghadh}}"
+
 #. placeholder {0}: pieces .map(({ type, count }) => getPieceLabel(type, count)) .join(', ')
 #: src/features/chess/components/captured-pieces-strip.tsx:89
 msgid "{colorName} captured {0}"
@@ -51,6 +56,10 @@ msgstr "{count, plural, one {# rùc} two {# rùc} few {# rùcan} other {# rùcan
 msgid "{count} pieces"
 msgstr "{count} pìosan"
 
+#: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:173
+msgid "{entityLabel} name"
+msgstr "Ainm {entityLabel}"
+
 #: src/features/chess/components/chat-message-list.tsx:195
 msgid "{name} declined the draw"
 msgstr "Dhiùlt {name} an geall-cothrom"
@@ -66,6 +75,22 @@ msgstr "Ghèill {name}"
 #: src/features/chess/components/draw-offer-banner.tsx:30
 msgid "{opponentName} offered a draw"
 msgstr "Thairg {opponentName} co-ionann"
+
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:210
+msgid "{selectedCount, plural, one {{entityName} selected} other {{manyName} selected}}"
+msgstr "{selectedCount, plural, one {{entityName} air a thaghadh} two {{manyName} air an taghadh} few {{manyName} air an taghadh} other {{manyName} air an taghadh}}"
+
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:52
+msgid "{selectedCount, plural, one {# {entityName} selected. Bulk actions toolbar is available.} other {# {manyName} selected. Bulk actions toolbar is available.}}"
+msgstr "{selectedCount, plural, one {# {entityName} air a thaghadh. Tha bàr-inneal nan gnìomhan mòr-chuid ri fhaighinn.} two {# {manyName} air an taghadh. Tha bàr-inneal nan gnìomhan mòr-chuid ri fhaighinn.} few {# {manyName} air an taghadh. Tha bàr-inneal nan gnìomhan mòr-chuid ri fhaighinn.} other {# {manyName} air an taghadh. Tha bàr-inneal nan gnìomhan mòr-chuid ri fhaighinn.}}"
+
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:202
+msgid "{selectedCount, plural, one {# selected} other {# selected}}"
+msgstr "{selectedCount, plural, one {# air an taghadh} two {# air an taghadh} few {# air an taghadh} other {# air an taghadh}}"
+
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:149
+msgid "{selectedCount, plural, one {Bulk actions for # selected {entityName}} other {Bulk actions for # selected {manyName}}}"
+msgstr "{selectedCount, plural, one {Gnìomhan mòr-chuid airson # {entityName} a thaghadh} two {Gnìomhan mòr-chuid airson # {manyName} a thaghadh} few {Gnìomhan mòr-chuid airson # {manyName} a thaghadh} other {Gnìomhan mòr-chuid airson # {manyName} a thaghadh}}"
 
 #: src/features/chess/components/chat-message-list.tsx:224
 msgid "{subject} played <0>{san}</0>"
@@ -217,9 +242,9 @@ msgstr "Còd dearbhachaidh"
 msgid "Back"
 msgstr "Air ais"
 
-#: ../../../lib/web/src/features/errors/forbidden.tsx:26
-#: ../../../lib/web/src/features/errors/not-found-error.tsx:26
-#: ../../../lib/web/src/features/errors/unauthorized-error.tsx:26
+#: ../../../lib/web/src/features/errors/forbidden.tsx:28
+#: ../../../lib/web/src/features/errors/not-found-error.tsx:28
+#: ../../../lib/web/src/features/errors/unauthorized-error.tsx:28
 msgid "Back to home"
 msgstr "Air ais dhan dachaigh"
 
@@ -252,7 +277,7 @@ msgstr "Brosnaich ùidh"
 #: ../../../lib/web/src/features/access/access-dialog.tsx:328
 #: ../../../lib/web/src/features/access/access-list.tsx:263
 #: ../../../lib/web/src/features/accounts/account-add.tsx:188
-#: ../../../lib/web/src/features/accounts/account-verify.tsx:89
+#: ../../../lib/web/src/features/accounts/account-verify.tsx:91
 #: src/features/chess/components/new-game.tsx:145
 #: src/features/chess/components/promotion-dialog.tsx:108
 msgid "Cancel"
@@ -328,28 +353,29 @@ msgstr "Falamhaich"
 msgid "Clear all"
 msgstr "Falamhaich a h-uile"
 
-#: ../../../lib/web/src/components/data-table/faceted-filter.tsx:140
+#: ../../../lib/web/src/components/data-table/faceted-filter.tsx:144
 msgid "Clear filters"
 msgstr "Falamhaich criathragan"
 
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:167
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:171
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:177
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:181
 msgid "Clear selection"
 msgstr "Falamhaich an taghadh"
 
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:168
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:178
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:185
 msgid "Clear selection (Escape)"
 msgstr "Falamhaich an taghadh (Escape)"
 
 #: ../../../lib/web/src/components/ui/dialog.tsx:78
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:354
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:357
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:358
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:361
 #: ../../../lib/web/src/components/ui/sheet.tsx:79
 msgid "Close"
 msgstr "Dùin"
 
-#: ../../../lib/web/src/components/layout/app-sidebar.tsx:107
-#: ../../../lib/web/src/components/layout/app-sidebar.tsx:112
+#: ../../../lib/web/src/components/layout/app-sidebar.tsx:108
+#: ../../../lib/web/src/components/layout/app-sidebar.tsx:113
 msgid "Close navigation"
 msgstr "Dùin an t-seòladaireachd"
 
@@ -440,6 +466,7 @@ msgid "Custom"
 msgstr "Gnàthaichte"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:218
+#: ../../../lib/web/src/components/theme-switch.tsx:52
 #: ../../../lib/web/src/lib/preference-utils.ts:20
 msgid "Dark"
 msgstr "Dorcha"
@@ -524,8 +551,8 @@ msgstr "Leig seachad"
 msgid "Displays the mobile sidebar."
 msgstr "Seallaidh am bàr-thaobh fòn-làimhe."
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:338
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:348
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:342
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:352
 msgid "Download"
 msgstr "Luchdaich a-nuas"
 
@@ -600,6 +627,14 @@ msgstr "Cha do ghabh ri diùltadh tarraing"
 msgid "Failed to delete game"
 msgstr "Cha b' urrainn geama a sguabadh às"
 
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:263
+msgid "Failed to load image"
+msgstr "Dh'fhàillig luchdachadh an deilbh"
+
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:263
+msgid "Failed to load video"
+msgstr "Dh'fhàillig luchdachadh a' video"
+
 #: src/features/chess/index.tsx:191
 msgid "Failed to make move"
 msgstr "Cha b' urrainn an gluasad a dhèanamh"
@@ -670,29 +705,29 @@ msgstr "Chaidh an geama a chruthachadh"
 msgid "Game deleted"
 msgstr "Chaidh an geama a sguabadh às"
 
-#: ../../../lib/web/src/features/errors/forbidden.tsx:24
-#: ../../../lib/web/src/features/errors/not-found-error.tsx:24
-#: ../../../lib/web/src/features/errors/unauthorized-error.tsx:24
+#: ../../../lib/web/src/features/errors/forbidden.tsx:26
+#: ../../../lib/web/src/features/errors/not-found-error.tsx:26
+#: ../../../lib/web/src/features/errors/unauthorized-error.tsx:26
 msgid "Go back"
 msgstr "Air ais"
 
-#: ../../../lib/web/src/components/data-table/pagination.tsx:78
+#: ../../../lib/web/src/components/data-table/pagination.tsx:82
 msgid "Go to first page"
 msgstr "Rach dhan chiad duilleag"
 
-#: ../../../lib/web/src/components/data-table/pagination.tsx:124
+#: ../../../lib/web/src/components/data-table/pagination.tsx:128
 msgid "Go to last page"
 msgstr "Rach dhan duilleag mu dheireadh"
 
-#: ../../../lib/web/src/components/data-table/pagination.tsx:115
+#: ../../../lib/web/src/components/data-table/pagination.tsx:119
 msgid "Go to next page"
 msgstr "Rach dhan ath dhuilleag"
 
-#: ../../../lib/web/src/components/data-table/pagination.tsx:102
+#: ../../../lib/web/src/components/data-table/pagination.tsx:106
 msgid "Go to page {pageNumber}"
 msgstr "Rach gu duilleag {pageNumber}"
 
-#: ../../../lib/web/src/components/data-table/pagination.tsx:87
+#: ../../../lib/web/src/components/data-table/pagination.tsx:91
 msgid "Go to previous page"
 msgstr "Rach dhan duilleag roimhe"
 
@@ -719,6 +754,11 @@ msgstr "Dachaigh"
 msgid "Hot"
 msgstr "Teth"
 
+#. placeholder {0}: currentMedia.name
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:247
+msgid "Image viewer: {0}"
+msgstr "Sealladair dhealbhan: {0}"
+
 #: ../../../lib/web/src/lib/preference-utils.ts:86
 msgid "Imperial"
 msgstr "Ìmpireach"
@@ -734,6 +774,10 @@ msgstr "Ùidhean"
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:245
 msgid "Invalid verification code"
 msgstr "Còd dearbhaidh mì-dhligheach"
+
+#: ../../../lib/web/src/features/errors/not-found-error.tsx:18
+msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
+msgstr "Tha coltas nach eil an duilleag a tha thu a' sireadh <0/>ann no gun deach a toirt air falbh."
 
 #: src/features/chess/lib/use-chess-piece-name.ts:17
 msgid "king"
@@ -762,6 +806,7 @@ msgid "Left to Right"
 msgstr "Clì gu Deas"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:213
+#: ../../../lib/web/src/components/theme-switch.tsx:45
 #: ../../../lib/web/src/lib/preference-utils.ts:19
 msgid "Light"
 msgstr "Soilleir"
@@ -776,8 +821,8 @@ msgstr "A’ luchdadh susbaint…"
 
 #: ../../../lib/web/src/components/ui/load-more.tsx:35
 #: ../../../lib/web/src/features/document/document-page.tsx:90
-msgid "Loading…"
-msgstr "A' luchdadh…"
+msgid "Loading..."
+msgstr "A' luchdadh..."
 
 #: ../../../lib/web/src/components/layout/nav-user.tsx:101
 #: ../../../lib/web/src/components/layout/nav-user.tsx:167
@@ -801,8 +846,8 @@ msgstr "Chaidh clàradh a-mach gu soirbheachail"
 msgid "Logging out…"
 msgstr "A' clàradh a-mach…"
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:92
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:99
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:93
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:100
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:224
 msgid "Mark all as read"
 msgstr "Comharraich gach nì mar leughte"
@@ -843,8 +888,8 @@ msgstr "Ùr"
 msgid "New game"
 msgstr "Geama ùr"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:388
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:393
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:392
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:397
 msgid "Next image"
 msgstr "An ath dhealbh"
 
@@ -885,7 +930,7 @@ msgid "No profile"
 msgstr "Gun phròifil"
 
 #: ../../../lib/web/src/components/command-menu.tsx:55
-#: ../../../lib/web/src/components/data-table/faceted-filter.tsx:90
+#: ../../../lib/web/src/components/data-table/faceted-filter.tsx:94
 msgid "No results found."
 msgstr "Cha deach toraidhean a lorg."
 
@@ -926,6 +971,11 @@ msgstr "Cha deach a shuidheachadh"
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:261
 msgid "Notifications"
 msgstr "Brathan"
+
+#. placeholder {0}: unread.length
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:86
+msgid "Notifications: {0}"
+msgstr "Brathan: {0}"
 
 #: src/features/chess/index.tsx:435
 msgid "Offer draw"
@@ -976,6 +1026,11 @@ msgstr "Eile"
 msgid "Owner"
 msgstr "Sealbhadair"
 
+#: ../../../lib/web/src/components/data-table/pagination.tsx:43
+#: ../../../lib/web/src/components/data-table/pagination.tsx:71
+msgid "Page {currentPage} of {totalPages}"
+msgstr "Duilleag {currentPage} à {totalPages}"
+
 #: ../../../lib/web/src/components/step-up-dialog.tsx:334
 msgid "Passkey"
 msgstr "Pasgair"
@@ -997,6 +1052,10 @@ msgstr "saighdear-coise"
 msgid "Please check your internet connection and try again."
 msgstr "Thoir sùil air a' cheangal eadar-lìn agad agus feuch ris a-rithist."
 
+#: ../../../lib/web/src/features/errors/unauthorized-error.tsx:18
+msgid "Please log in with the appropriate credentials <0/> to access this resource."
+msgstr "Clàraich a-steach le teisteanas iomchaidh <0/> gus an goireas seo inntrigeadh."
+
 #: src/features/chess/components/new-game.tsx:67
 msgid "Please select a friend"
 msgstr "Tagh caraid"
@@ -1009,8 +1068,8 @@ msgstr "Feuch ris a-rithist."
 msgid "Please wait a moment and try again."
 msgstr "Fuirich greiseag is feuch ris a-rithist."
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:373
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:378
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:377
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:382
 msgid "Previous image"
 msgstr "An dealbh roimhe"
 
@@ -1086,6 +1145,11 @@ msgstr "Thoir air falbh"
 msgid "Remove access rule"
 msgstr "Thoir an riaghailt cothraim air falbh"
 
+#. placeholder {0}: formatSubject(subject, data.name)
+#: ../../../lib/web/src/features/access/access-list.tsx:259
+msgid "Remove access rule for \"{0}\"?"
+msgstr "A bheil thu airson riaghailt inntrigidh \"{0}\" a thoirt air falbh?"
+
 #: ../../../lib/web/src/features/access/access-list.tsx:257
 msgid "Remove access?"
 msgstr "Thoir an cothrom air falbh?"
@@ -1129,7 +1193,7 @@ msgstr "Deas gu Clì"
 msgid "rook"
 msgstr "rùc"
 
-#: ../../../lib/web/src/components/data-table/pagination.tsx:63
+#: ../../../lib/web/src/components/data-table/pagination.tsx:65
 msgid "Rows per page"
 msgstr "Sreathan gach duilleag"
 
@@ -1212,7 +1276,16 @@ msgstr "Tagh comhair na làraich"
 msgid "Select theme preference"
 msgstr "Tagh roghainn an ùrlair"
 
-#: ../../../lib/web/src/features/accounts/account-verify.tsx:98
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:216
+msgid "selected"
+msgstr "air an taghadh"
+
+#. placeholder {0}: getSelectedName()
+#: ../../../lib/web/src/features/access/access-dialog.tsx:309
+msgid "Selected: <0>{0}</0>"
+msgstr "Air a thaghadh: <0>{0}</0>"
+
+#: ../../../lib/web/src/features/accounts/account-verify.tsx:100
 msgid "Send again"
 msgstr "Cuir a-rithist"
 
@@ -1312,6 +1385,7 @@ msgid "Sunday"
 msgstr "Didòmhnaich"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:208
+#: ../../../lib/web/src/components/theme-switch.tsx:59
 #: ../../../lib/web/src/lib/preference-utils.ts:21
 #: ../../../lib/web/src/lib/preference-utils.ts:144
 msgid "System"
@@ -1343,6 +1417,10 @@ msgstr "Tha an còd sin ceàrr no air a dhol à bann."
 msgid "The requested content could not be found."
 msgstr "Cha b' urrainn dhuinn an t-susbaint a chaidh iarraidh a lorg."
 
+#: ../../../lib/web/src/features/errors/maintenance-error.tsx:15
+msgid "The site is not available at the moment."
+msgstr "Chan eil an làrach ri fhaighinn an-dràsta."
+
 #: ../../../lib/web/src/components/config-drawer.tsx:194
 msgid "Theme"
 msgstr "Ùrlar"
@@ -1351,6 +1429,10 @@ msgstr "Ùrlar"
 msgid "Theme Settings"
 msgstr "Roghainnean an ùrlair"
 
+#: ../../../lib/web/src/components/coming-soon.tsx:14
+msgid "This page has not been created yet."
+msgstr "Cha deach an duilleag seo a chruthachadh fhathast."
+
 #: src/features/chess/index.tsx:581
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Sguabaidh seo às an geama agus an cabadaich aige gu buan. Chan urrainn seo a neo-dhèanamh."
@@ -1358,6 +1440,10 @@ msgstr "Sguabaidh seo às an geama agus an cabadaich aige gu buan. Chan urrainn 
 #: ../../../lib/web/src/lib/preference-utils.ts:62
 msgid "Thursday"
 msgstr "Diardaoin"
+
+#: ../../../lib/web/src/components/travelling-picker.tsx:220
+msgid "To"
+msgstr "Gu"
 
 #: ../../../lib/web/src/components/data-table/view-options.tsx:37
 msgid "Toggle columns"
@@ -1454,7 +1540,7 @@ msgstr "Inntrigeadh gun chead"
 msgid "United States"
 msgstr "Stàitean Aonaichte"
 
-#: src/hooks/useGameWebsocket.ts:196
+#: src/hooks/useGameWebsocket.ts:233
 msgid "Unknown"
 msgstr "Neo-aithnichte"
 
@@ -1470,7 +1556,7 @@ msgstr "Cleachd an iuchair-inntrigidh agad"
 msgid "User"
 msgstr "Cleachdaiche"
 
-#: ../../../lib/web/src/features/accounts/account-verify.tsx:71
+#: ../../../lib/web/src/features/accounts/account-verify.tsx:73
 msgid "Verification code"
 msgstr "Còd dearbhaidh"
 
@@ -1484,7 +1570,7 @@ msgstr "Dh'fhàillig an dearbhadh"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:388
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:172
-#: ../../../lib/web/src/features/accounts/account-verify.tsx:109
+#: ../../../lib/web/src/features/accounts/account-verify.tsx:111
 msgid "Verify"
 msgstr "Dearbh"
 
@@ -1496,6 +1582,11 @@ msgstr "Dearbh seòladh puist-d"
 msgid "Video thumbnail"
 msgstr "Dealbhag video"
 
+#. placeholder {0}: currentMedia.name
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:246
+msgid "Video viewer: {0}"
+msgstr "Sealladair video: {0}"
+
 #: ../../../lib/web/src/components/data-table/view-options.tsx:33
 msgid "View"
 msgstr "Seall"
@@ -1504,10 +1595,15 @@ msgstr "Seall"
 msgid "View all"
 msgstr "Seall a h-uile"
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:105
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:113
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:106
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:114
 msgid "View all notifications"
 msgstr "Seall a h-uile brath"
+
+#. placeholder {0}: account.identifier
+#: ../../../lib/web/src/features/accounts/account-verify.tsx:63
+msgid "We sent a verification code to <0>{0}</0>. Enter the code below to verify your email address."
+msgstr "Chuir sinn còd dearbhaidh gu <0>{0}</0>. Cuir a-steach an còd gu h-ìosal gus an seòladh puist-d agad a dhearbhadh."
 
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:16
 msgid "We'll be back online shortly."
@@ -1540,6 +1636,10 @@ msgstr "Thusa"
 #: ../../../lib/web/src/features/errors/general-error.tsx:61
 msgid "You do not have access to this section."
 msgstr "Chan eil cead-inntrigidh agad dhan earrann seo."
+
+#: ../../../lib/web/src/features/errors/forbidden.tsx:18
+msgid "You don't have necessary permission <0/>to view this resource."
+msgstr "Chan eil an cead riatanach agad <0/>gus an goireas seo fhaicinn."
 
 #: ../../../lib/web/src/components/restore-banner.tsx:91
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."

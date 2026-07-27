@@ -18,6 +18,11 @@ msgstr ""
 msgid "Please check your internet connection and try again."
 msgstr "Vui lòng kiểm tra kết nối internet và thử lại."
 
+#. placeholder {0}: selectedValues.size
+#: ../../../lib/web/src/components/data-table/faceted-filter.tsx:66
+msgid "{0, plural, one {# selected} other {# selected}}"
+msgstr "{0, plural, one {# đã chọn} other {# đã chọn}}"
+
 #. placeholder {0}: pieces .map(({ type, count }) => getPieceLabel(type, count)) .join(', ')
 #: src/features/chess/components/captured-pieces-strip.tsx:89
 msgid "{colorName} captured {0}"
@@ -51,6 +56,10 @@ msgstr "{count, plural, other {# xe}}"
 msgid "{count} pieces"
 msgstr "{count} quân"
 
+#: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:173
+msgid "{entityLabel} name"
+msgstr "Tên {entityLabel}"
+
 #: src/features/chess/components/chat-message-list.tsx:195
 msgid "{name} declined the draw"
 msgstr "{name} đã từ chối hòa"
@@ -66,6 +75,22 @@ msgstr "{name} đã xin thua"
 #: src/features/chess/components/draw-offer-banner.tsx:30
 msgid "{opponentName} offered a draw"
 msgstr "{opponentName} đã đề nghị hòa"
+
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:210
+msgid "{selectedCount, plural, one {{entityName} selected} other {{manyName} selected}}"
+msgstr "{selectedCount, plural, one {Đã chọn {entityName}} other {Đã chọn {manyName}}}"
+
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:52
+msgid "{selectedCount, plural, one {# {entityName} selected. Bulk actions toolbar is available.} other {# {manyName} selected. Bulk actions toolbar is available.}}"
+msgstr "{selectedCount, plural, one {Đã chọn # {entityName}. Thanh công cụ thao tác hàng loạt khả dụng.} other {Đã chọn # {manyName}. Thanh công cụ thao tác hàng loạt khả dụng.}}"
+
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:202
+msgid "{selectedCount, plural, one {# selected} other {# selected}}"
+msgstr "{selectedCount, plural, one {# đã chọn} other {# đã chọn}}"
+
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:149
+msgid "{selectedCount, plural, one {Bulk actions for # selected {entityName}} other {Bulk actions for # selected {manyName}}}"
+msgstr "{selectedCount, plural, one {Thao tác hàng loạt cho # {entityName} đã chọn} other {Thao tác hàng loạt cho # {manyName} đã chọn}}"
 
 #: src/features/chess/components/chat-message-list.tsx:224
 msgid "{subject} played <0>{san}</0>"
@@ -217,9 +242,9 @@ msgstr "Mã xác thực"
 msgid "Back"
 msgstr "Quay lại"
 
-#: ../../../lib/web/src/features/errors/forbidden.tsx:26
-#: ../../../lib/web/src/features/errors/not-found-error.tsx:26
-#: ../../../lib/web/src/features/errors/unauthorized-error.tsx:26
+#: ../../../lib/web/src/features/errors/forbidden.tsx:28
+#: ../../../lib/web/src/features/errors/not-found-error.tsx:28
+#: ../../../lib/web/src/features/errors/unauthorized-error.tsx:28
 msgid "Back to home"
 msgstr "Về trang chủ"
 
@@ -252,7 +277,7 @@ msgstr "Đẩy mạnh sở thích"
 #: ../../../lib/web/src/features/access/access-dialog.tsx:328
 #: ../../../lib/web/src/features/access/access-list.tsx:263
 #: ../../../lib/web/src/features/accounts/account-add.tsx:188
-#: ../../../lib/web/src/features/accounts/account-verify.tsx:89
+#: ../../../lib/web/src/features/accounts/account-verify.tsx:91
 #: src/features/chess/components/new-game.tsx:145
 #: src/features/chess/components/promotion-dialog.tsx:108
 msgid "Cancel"
@@ -328,28 +353,29 @@ msgstr "Xóa"
 msgid "Clear all"
 msgstr "Xóa tất cả"
 
-#: ../../../lib/web/src/components/data-table/faceted-filter.tsx:140
+#: ../../../lib/web/src/components/data-table/faceted-filter.tsx:144
 msgid "Clear filters"
 msgstr "Xóa bộ lọc"
 
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:167
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:171
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:177
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:181
 msgid "Clear selection"
 msgstr "Bỏ chọn"
 
-#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:168
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:178
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:185
 msgid "Clear selection (Escape)"
 msgstr "Bỏ chọn (Escape)"
 
 #: ../../../lib/web/src/components/ui/dialog.tsx:78
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:354
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:357
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:358
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:361
 #: ../../../lib/web/src/components/ui/sheet.tsx:79
 msgid "Close"
 msgstr "Đóng"
 
-#: ../../../lib/web/src/components/layout/app-sidebar.tsx:107
-#: ../../../lib/web/src/components/layout/app-sidebar.tsx:112
+#: ../../../lib/web/src/components/layout/app-sidebar.tsx:108
+#: ../../../lib/web/src/components/layout/app-sidebar.tsx:113
 msgid "Close navigation"
 msgstr "Đóng điều hướng"
 
@@ -440,6 +466,7 @@ msgid "Custom"
 msgstr "Tùy chỉnh"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:218
+#: ../../../lib/web/src/components/theme-switch.tsx:52
 #: ../../../lib/web/src/lib/preference-utils.ts:20
 msgid "Dark"
 msgstr "Tối"
@@ -524,8 +551,8 @@ msgstr "Bỏ qua"
 msgid "Displays the mobile sidebar."
 msgstr "Hiển thị thanh bên di động."
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:338
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:348
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:342
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:352
 msgid "Download"
 msgstr "Tải xuống"
 
@@ -600,6 +627,14 @@ msgstr "Không từ chối hoà được"
 msgid "Failed to delete game"
 msgstr "Không xoá trò chơi được"
 
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:263
+msgid "Failed to load image"
+msgstr "Không tải được hình ảnh"
+
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:263
+msgid "Failed to load video"
+msgstr "Không tải được video"
+
 #: src/features/chess/index.tsx:191
 msgid "Failed to make move"
 msgstr "Không thực hiện nước đi được"
@@ -670,29 +705,29 @@ msgstr "Đã tạo trò chơi"
 msgid "Game deleted"
 msgstr "Đã xoá trò chơi"
 
-#: ../../../lib/web/src/features/errors/forbidden.tsx:24
-#: ../../../lib/web/src/features/errors/not-found-error.tsx:24
-#: ../../../lib/web/src/features/errors/unauthorized-error.tsx:24
+#: ../../../lib/web/src/features/errors/forbidden.tsx:26
+#: ../../../lib/web/src/features/errors/not-found-error.tsx:26
+#: ../../../lib/web/src/features/errors/unauthorized-error.tsx:26
 msgid "Go back"
 msgstr "Quay lại"
 
-#: ../../../lib/web/src/components/data-table/pagination.tsx:78
+#: ../../../lib/web/src/components/data-table/pagination.tsx:82
 msgid "Go to first page"
 msgstr "Đến trang đầu"
 
-#: ../../../lib/web/src/components/data-table/pagination.tsx:124
+#: ../../../lib/web/src/components/data-table/pagination.tsx:128
 msgid "Go to last page"
 msgstr "Đến trang cuối"
 
-#: ../../../lib/web/src/components/data-table/pagination.tsx:115
+#: ../../../lib/web/src/components/data-table/pagination.tsx:119
 msgid "Go to next page"
 msgstr "Đến trang tiếp"
 
-#: ../../../lib/web/src/components/data-table/pagination.tsx:102
+#: ../../../lib/web/src/components/data-table/pagination.tsx:106
 msgid "Go to page {pageNumber}"
 msgstr "Đến trang {pageNumber}"
 
-#: ../../../lib/web/src/components/data-table/pagination.tsx:87
+#: ../../../lib/web/src/components/data-table/pagination.tsx:91
 msgid "Go to previous page"
 msgstr "Đến trang trước"
 
@@ -719,6 +754,11 @@ msgstr "Trang chủ"
 msgid "Hot"
 msgstr "Nóng"
 
+#. placeholder {0}: currentMedia.name
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:247
+msgid "Image viewer: {0}"
+msgstr "Trình xem ảnh: {0}"
+
 #: ../../../lib/web/src/lib/preference-utils.ts:86
 msgid "Imperial"
 msgstr "Hệ Anh"
@@ -734,6 +774,10 @@ msgstr "Sở thích"
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:245
 msgid "Invalid verification code"
 msgstr "Mã xác minh không hợp lệ"
+
+#: ../../../lib/web/src/features/errors/not-found-error.tsx:18
+msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
+msgstr "Có vẻ như trang bạn đang tìm <0/>không tồn tại hoặc đã bị xóa."
 
 #: src/features/chess/lib/use-chess-piece-name.ts:17
 msgid "king"
@@ -762,6 +806,7 @@ msgid "Left to Right"
 msgstr "Trái sang phải"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:213
+#: ../../../lib/web/src/components/theme-switch.tsx:45
 #: ../../../lib/web/src/lib/preference-utils.ts:19
 msgid "Light"
 msgstr "Sáng"
@@ -776,8 +821,8 @@ msgstr "Đang tải nội dung…"
 
 #: ../../../lib/web/src/components/ui/load-more.tsx:35
 #: ../../../lib/web/src/features/document/document-page.tsx:90
-msgid "Loading…"
-msgstr "Đang tải…"
+msgid "Loading..."
+msgstr "Đang tải..."
 
 #: ../../../lib/web/src/components/layout/nav-user.tsx:101
 #: ../../../lib/web/src/components/layout/nav-user.tsx:167
@@ -801,8 +846,8 @@ msgstr "Đăng xuất thành công"
 msgid "Logging out…"
 msgstr "Đang đăng xuất…"
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:92
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:99
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:93
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:100
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:224
 msgid "Mark all as read"
 msgstr "Đánh dấu tất cả là đã đọc"
@@ -843,8 +888,8 @@ msgstr "Mới"
 msgid "New game"
 msgstr "Trò chơi mới"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:388
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:393
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:392
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:397
 msgid "Next image"
 msgstr "Hình tiếp theo"
 
@@ -885,7 +930,7 @@ msgid "No profile"
 msgstr "Không có hồ sơ"
 
 #: ../../../lib/web/src/components/command-menu.tsx:55
-#: ../../../lib/web/src/components/data-table/faceted-filter.tsx:90
+#: ../../../lib/web/src/components/data-table/faceted-filter.tsx:94
 msgid "No results found."
 msgstr "Không tìm thấy kết quả nào."
 
@@ -926,6 +971,11 @@ msgstr "Chưa đặt"
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:261
 msgid "Notifications"
 msgstr "Thông báo"
+
+#. placeholder {0}: unread.length
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:86
+msgid "Notifications: {0}"
+msgstr "Thông báo: {0}"
 
 #: src/features/chess/index.tsx:435
 msgid "Offer draw"
@@ -976,6 +1026,11 @@ msgstr "Khác"
 msgid "Owner"
 msgstr "Chủ sở hữu"
 
+#: ../../../lib/web/src/components/data-table/pagination.tsx:43
+#: ../../../lib/web/src/components/data-table/pagination.tsx:71
+msgid "Page {currentPage} of {totalPages}"
+msgstr "Trang {currentPage} trên {totalPages}"
+
 #: ../../../lib/web/src/components/step-up-dialog.tsx:334
 msgid "Passkey"
 msgstr "Mã khóa"
@@ -997,6 +1052,10 @@ msgstr "tốt"
 msgid "Please check your internet connection and try again."
 msgstr "Vui lòng kiểm tra kết nối internet và thử lại."
 
+#: ../../../lib/web/src/features/errors/unauthorized-error.tsx:18
+msgid "Please log in with the appropriate credentials <0/> to access this resource."
+msgstr "Vui lòng đăng nhập bằng thông tin đăng nhập phù hợp <0/> để truy cập tài nguyên này."
+
 #: src/features/chess/components/new-game.tsx:67
 msgid "Please select a friend"
 msgstr "Vui lòng chọn bạn"
@@ -1009,8 +1068,8 @@ msgstr "Vui lòng thử lại."
 msgid "Please wait a moment and try again."
 msgstr "Vui lòng đợi một lát rồi thử lại."
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:373
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:378
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:377
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:382
 msgid "Previous image"
 msgstr "Hình trước"
 
@@ -1086,6 +1145,11 @@ msgstr "Xoá"
 msgid "Remove access rule"
 msgstr "Xoá quy tắc truy cập"
 
+#. placeholder {0}: formatSubject(subject, data.name)
+#: ../../../lib/web/src/features/access/access-list.tsx:259
+msgid "Remove access rule for \"{0}\"?"
+msgstr "Xóa quy tắc truy cập cho \"{0}\"?"
+
 #: ../../../lib/web/src/features/access/access-list.tsx:257
 msgid "Remove access?"
 msgstr "Xoá quyền truy cập?"
@@ -1129,7 +1193,7 @@ msgstr "Phải sang trái"
 msgid "rook"
 msgstr "xe"
 
-#: ../../../lib/web/src/components/data-table/pagination.tsx:63
+#: ../../../lib/web/src/components/data-table/pagination.tsx:65
 msgid "Rows per page"
 msgstr "Số hàng mỗi trang"
 
@@ -1212,7 +1276,16 @@ msgstr "Chọn hướng trang web"
 msgid "Select theme preference"
 msgstr "Chọn tùy chọn giao diện"
 
-#: ../../../lib/web/src/features/accounts/account-verify.tsx:98
+#: ../../../lib/web/src/components/data-table/bulk-actions.tsx:216
+msgid "selected"
+msgstr "đã chọn"
+
+#. placeholder {0}: getSelectedName()
+#: ../../../lib/web/src/features/access/access-dialog.tsx:309
+msgid "Selected: <0>{0}</0>"
+msgstr "Đã chọn: <0>{0}</0>"
+
+#: ../../../lib/web/src/features/accounts/account-verify.tsx:100
 msgid "Send again"
 msgstr "Gửi lại"
 
@@ -1312,6 +1385,7 @@ msgid "Sunday"
 msgstr "Chủ nhật"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:208
+#: ../../../lib/web/src/components/theme-switch.tsx:59
 #: ../../../lib/web/src/lib/preference-utils.ts:21
 #: ../../../lib/web/src/lib/preference-utils.ts:144
 msgid "System"
@@ -1343,6 +1417,10 @@ msgstr "Mã đó không đúng hoặc đã hết hạn."
 msgid "The requested content could not be found."
 msgstr "Không tìm thấy nội dung được yêu cầu."
 
+#: ../../../lib/web/src/features/errors/maintenance-error.tsx:15
+msgid "The site is not available at the moment."
+msgstr "Trang web hiện không khả dụng."
+
 #: ../../../lib/web/src/components/config-drawer.tsx:194
 msgid "Theme"
 msgstr "Giao diện"
@@ -1351,6 +1429,10 @@ msgstr "Giao diện"
 msgid "Theme Settings"
 msgstr "Cài đặt giao diện"
 
+#: ../../../lib/web/src/components/coming-soon.tsx:14
+msgid "This page has not been created yet."
+msgstr "Trang này chưa được tạo."
+
 #: src/features/chess/index.tsx:581
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Thao tác này sẽ xóa vĩnh viễn trận đấu và cuộc trò chuyện của nó. Không thể hoàn tác thao tác này."
@@ -1358,6 +1440,10 @@ msgstr "Thao tác này sẽ xóa vĩnh viễn trận đấu và cuộc trò chuy
 #: ../../../lib/web/src/lib/preference-utils.ts:62
 msgid "Thursday"
 msgstr "Thứ năm"
+
+#: ../../../lib/web/src/components/travelling-picker.tsx:220
+msgid "To"
+msgstr "Đến"
 
 #: ../../../lib/web/src/components/data-table/view-options.tsx:37
 msgid "Toggle columns"
@@ -1454,7 +1540,7 @@ msgstr "Truy cập không được phép"
 msgid "United States"
 msgstr "Hoa Kỳ"
 
-#: src/hooks/useGameWebsocket.ts:196
+#: src/hooks/useGameWebsocket.ts:233
 msgid "Unknown"
 msgstr "Không rõ"
 
@@ -1470,7 +1556,7 @@ msgstr "Dùng mã khóa của bạn"
 msgid "User"
 msgstr "Người dùng"
 
-#: ../../../lib/web/src/features/accounts/account-verify.tsx:71
+#: ../../../lib/web/src/features/accounts/account-verify.tsx:73
 msgid "Verification code"
 msgstr "Mã xác minh"
 
@@ -1484,7 +1570,7 @@ msgstr "Xác minh thất bại"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:388
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:172
-#: ../../../lib/web/src/features/accounts/account-verify.tsx:109
+#: ../../../lib/web/src/features/accounts/account-verify.tsx:111
 msgid "Verify"
 msgstr "Xác minh"
 
@@ -1496,6 +1582,11 @@ msgstr "Xác minh địa chỉ email"
 msgid "Video thumbnail"
 msgstr "Hình thu nhỏ video"
 
+#. placeholder {0}: currentMedia.name
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:246
+msgid "Video viewer: {0}"
+msgstr "Trình xem video: {0}"
+
 #: ../../../lib/web/src/components/data-table/view-options.tsx:33
 msgid "View"
 msgstr "Xem"
@@ -1504,10 +1595,15 @@ msgstr "Xem"
 msgid "View all"
 msgstr "Xem tất cả"
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:105
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:113
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:106
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:114
 msgid "View all notifications"
 msgstr "Xem tất cả thông báo"
+
+#. placeholder {0}: account.identifier
+#: ../../../lib/web/src/features/accounts/account-verify.tsx:63
+msgid "We sent a verification code to <0>{0}</0>. Enter the code below to verify your email address."
+msgstr "Chúng tôi đã gửi mã xác minh đến <0>{0}</0>. Nhập mã bên dưới để xác minh địa chỉ email của bạn."
 
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:16
 msgid "We'll be back online shortly."
@@ -1540,6 +1636,10 @@ msgstr "Bạn"
 #: ../../../lib/web/src/features/errors/general-error.tsx:61
 msgid "You do not have access to this section."
 msgstr "Bạn không có quyền truy cập vào phần này."
+
+#: ../../../lib/web/src/features/errors/forbidden.tsx:18
+msgid "You don't have necessary permission <0/>to view this resource."
+msgstr "Bạn không có quyền cần thiết <0/>để xem tài nguyên này."
 
 #: ../../../lib/web/src/components/restore-banner.tsx:91
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
