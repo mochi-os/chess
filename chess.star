@@ -590,7 +590,7 @@ def action_view(a):
 	if not game:
 		return
 
-	mochi.service.call("notifications", "clear/object", "chess", game["id"])
+	mochi.service.call("notifications", "clear/object", game["id"])
 
 	return {
 		"data": {"game": game, "identity": a.user.identity.id}
