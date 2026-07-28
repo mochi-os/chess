@@ -386,6 +386,12 @@ def game_apply(e, game, legacy, now, sync=False):
 		# this row's ability to repair itself.
 		return None
 	else:
+		# Legacy delta path: a peer that predates snapshots. Logged so the
+		# retirement decision is evidence rather than a guessed date - when
+		# this line stops appearing across the fleet, every peer is
+		# upgraded and this branch can go, at which point gameplay events
+		# can require complete snapshots exactly as sync already does.
+		mochi.log.debug("legacy delta event from %s (no snapshot)" % e.header("from"))
 		state = {}
 		for key, value in legacy.items():
 			state[key] = "" if value == None else value
