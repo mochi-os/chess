@@ -124,7 +124,7 @@ msgstr "Aksés ditolak"
 msgid "Access Forbidden"
 msgstr "Aksés Dilarang"
 
-#: ../../../lib/web/src/features/access/access-list.tsx:192
+#: ../../../lib/web/src/features/access/access-list.tsx:197
 msgid "Access level"
 msgstr "Tingkat aksés"
 
@@ -144,10 +144,11 @@ msgstr "Tipe akun"
 msgid "Account verified"
 msgstr "Akun diverifikasi"
 
-#: src/components/layout/chess-layout.tsx:111
+#: src/components/layout/chess-layout.tsx:110
 msgid "Active games"
 msgstr "Kaulinan Aktif"
 
+#: ../../../lib/web/src/features/access/access-dialog.tsx:332
 #: ../../../lib/web/src/features/accounts/account-add.tsx:196
 msgid "Add"
 msgstr "Tambah"
@@ -198,6 +199,10 @@ msgstr "Tambah ka béwara nu aya"
 msgid "Add view"
 msgstr "Tambah view"
 
+#: ../../../lib/web/src/features/access/access-dialog.tsx:332
+msgid "Adding..."
+msgstr "Nambahan..."
+
 #: ../../../lib/web/src/components/config-drawer.tsx:71
 msgid "Adjust the appearance and layout to suit your preferences."
 msgstr "Atur tampilan jeung tata letak luyu jeung karep anjeun."
@@ -218,11 +223,15 @@ msgstr "Aya kasalahan"
 msgid "An unexpected error occurred"
 msgstr "Aya kasalahan anu teu disangka-sangka"
 
+#: ../../../lib/web/src/features/access/access-list.tsx:45
+msgid "Anyone"
+msgstr "Saha waé"
+
 #: ../../../lib/web/src/components/sign-out-dialog.tsx:27
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "Anjeun yakin hayang log out? Anjeun kudu log in deui pikeun ngaksés akun anjeun."
 
-#: src/features/chess/index.tsx:560
+#: src/features/chess/index.tsx:580
 msgid "Are you sure you want to resign? {opponentName} will win the game."
 msgstr "Anjeun yakin hayang nyerah? {opponentName} bakal meunang kaulinan."
 
@@ -233,6 +242,10 @@ msgstr "Asc"
 #: ../../../lib/web/src/components/ui/sort-direction-button.tsx:27
 msgid "Ascending"
 msgstr "Naek"
+
+#: ../../../lib/web/src/features/access/access-list.tsx:46
+msgid "Authenticated users"
+msgstr ""
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:315
 msgid "Authenticator code"
@@ -253,13 +266,13 @@ msgid "bishop"
 msgstr "bishop"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:405
+#: src/features/chess/index.tsx:418
 msgid "Black"
 msgstr "Hideung"
 
 #. placeholder {0}: pieceName(piece.type)
 #. placeholder {0}: pieceName(type)
-#: src/features/chess/components/chess-board.tsx:307
+#: src/features/chess/components/chess-board.tsx:305
 #: src/features/chess/components/chess-piece-icon.tsx:309
 msgid "Black {0}"
 msgstr "Hideung {0}"
@@ -275,7 +288,7 @@ msgstr "Tingkatkeun minat"
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:248
 #: ../../../lib/web/src/components/ui/editable-field-row.tsx:132
 #: ../../../lib/web/src/features/access/access-dialog.tsx:328
-#: ../../../lib/web/src/features/access/access-list.tsx:263
+#: ../../../lib/web/src/features/access/access-list.tsx:268
 #: ../../../lib/web/src/features/accounts/account-add.tsx:188
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:91
 #: src/features/chess/components/new-game.tsx:145
@@ -292,22 +305,26 @@ msgstr "Katégori pikeun béwara ieu"
 msgid "Change notification category"
 msgstr "Robah katégori béwara"
 
-#: src/features/chess/index.tsx:498
-#: src/features/chess/index.tsx:531
+#: src/features/chess/index.tsx:518
+#: src/features/chess/index.tsx:551
 msgid "Chat"
 msgstr "Chat"
 
-#: src/features/chess/index.tsx:101
-#: src/features/chess/index.tsx:333
-#: src/features/chess/index.tsx:345
+#: ../../../lib/web/src/components/notifications-dropdown.tsx:198
+msgid "Check \"All\" to see your past notifications."
+msgstr ""
+
+#: src/features/chess/index.tsx:98
+#: src/features/chess/index.tsx:346
+#: src/features/chess/index.tsx:358
 msgid "Chess"
 msgstr "Catur"
 
-#: src/features/chess/components/chess-board.tsx:262
+#: src/features/chess/components/chess-board.tsx:260
 msgid "Chess board. Use arrow keys to navigate, Enter or Space to select."
 msgstr "Papan catur. Maké tombol panah pikeun navigasi, Enter atawa Spasi pikeun milih."
 
-#: src/features/chess/components/chess-board.tsx:261
+#: src/features/chess/components/chess-board.tsx:259
 msgid "Chess board. Your turn. Use arrow keys to navigate, Enter or Space to select."
 msgstr "Papan catur. Giliran anjeun. Maké tombol panah pikeun navigasi, Enter atawa Spasi pikeun milih."
 
@@ -412,7 +429,7 @@ msgstr "Geura Datang!"
 msgid "Compact"
 msgstr "Kompak"
 
-#: src/components/layout/chess-layout.tsx:122
+#: src/components/layout/chess-layout.tsx:121
 msgid "Completed"
 msgstr "Réngsé"
 
@@ -495,15 +512,15 @@ msgstr "Standar"
 msgid "Default AI account"
 msgstr "Akun AI standar"
 
-#: src/features/chess/index.tsx:589
+#: src/features/chess/index.tsx:609
 msgid "Delete"
 msgstr "Hapus"
 
-#: src/features/chess/index.tsx:451
+#: src/features/chess/index.tsx:464
 msgid "Delete game"
 msgstr "Hapus kaulinan"
 
-#: src/features/chess/index.tsx:580
+#: src/features/chess/index.tsx:600
 msgid "Delete game?"
 msgstr "Hapus kaulinan?"
 
@@ -511,7 +528,7 @@ msgstr "Hapus kaulinan?"
 msgid "Delete your account on the old server"
 msgstr "Hapus akun anjeun dina server lami"
 
-#: src/features/chess/index.tsx:586
+#: src/features/chess/index.tsx:606
 msgid "Deleting..."
 msgstr "Ngahapus..."
 
@@ -542,6 +559,10 @@ msgstr "Deteksi ti browser web"
 msgid "Direction"
 msgstr "Arah"
 
+#: ../../../lib/web/src/components/person-picker.tsx:214
+msgid "Directory"
+msgstr ""
+
 #: ../../../lib/web/src/components/restore-banner.tsx:79
 #: ../../../lib/web/src/components/restore-banner.tsx:85
 msgid "Dismiss"
@@ -564,7 +585,7 @@ msgstr "Gagal ngunduh"
 msgid "Draw agreed"
 msgstr "Seri disatujuan"
 
-#: src/features/chess/index.tsx:464
+#: src/features/chess/index.tsx:477
 msgid "Draw offered — waiting for {opponentName}"
 msgstr "Tawaran seri — ngantosan {opponentName}"
 
@@ -603,7 +624,7 @@ msgstr "Lugar sidebar"
 msgid "Extra large"
 msgstr "Gedé pisan"
 
-#: src/features/chess/index.tsx:213
+#: src/features/chess/index.tsx:216
 msgid "Failed to accept draw"
 msgstr "Gagal narima seri"
 
@@ -615,15 +636,15 @@ msgstr "Gagal nambahkeun akun"
 msgid "Failed to create game"
 msgstr "Gagal nyieun kaulinan"
 
-#: src/features/chess/index.tsx:228
+#: src/features/chess/index.tsx:231
 msgid "Failed to create rematch"
 msgstr "Gagal nyieun rematch"
 
-#: src/features/chess/index.tsx:218
+#: src/features/chess/index.tsx:221
 msgid "Failed to decline draw"
 msgstr "Gagal nampik seri"
 
-#: src/features/chess/index.tsx:240
+#: src/features/chess/index.tsx:243
 msgid "Failed to delete game"
 msgstr "Gagal mupus kaulinan"
 
@@ -635,11 +656,11 @@ msgstr "Gagal ngamuat gambar"
 msgid "Failed to load video"
 msgstr "Gagal ngamuat video"
 
-#: src/features/chess/index.tsx:191
+#: src/features/chess/index.tsx:194
 msgid "Failed to make move"
 msgstr "Gagal ngalakukeun léngkah"
 
-#: src/features/chess/index.tsx:208
+#: src/features/chess/index.tsx:211
 msgid "Failed to offer draw"
 msgstr "Gagal nawarkeun seri"
 
@@ -647,12 +668,12 @@ msgstr "Gagal nawarkeun seri"
 msgid "Failed to remove account"
 msgstr "Gagal mupus akun"
 
-#: src/features/chess/index.tsx:201
+#: src/features/chess/index.tsx:204
 msgid "Failed to resign"
 msgstr "Gagal eureun"
 
-#: src/features/chess/index.tsx:515
-#: src/features/chess/index.tsx:548
+#: src/features/chess/index.tsx:535
+#: src/features/chess/index.tsx:568
 msgid "Failed to send"
 msgstr "Gagal ngirim"
 
@@ -680,6 +701,10 @@ msgstr "Ngambang"
 msgid "Friday"
 msgstr "Jumaah"
 
+#: ../../../lib/web/src/components/person-picker.tsx:207
+msgid "Friends"
+msgstr "Babaturan"
+
 #: ../../../lib/web/src/components/travelling-picker.tsx:153
 msgid "From"
 msgstr "Ti"
@@ -701,7 +726,7 @@ msgstr "Tata letak lengkep"
 msgid "Game created"
 msgstr "Kaulinan dijieun"
 
-#: src/features/chess/index.tsx:236
+#: src/features/chess/index.tsx:239
 msgid "Game deleted"
 msgstr "Kaulinan dihapus"
 
@@ -734,6 +759,11 @@ msgstr "Ka kaca saméméhna"
 #: ../../../lib/web/src/features/access/access-dialog.tsx:162
 msgid "Group"
 msgstr "Grup"
+
+#. placeholder {0}: name || subject.slice(1)
+#: ../../../lib/web/src/features/access/access-list.tsx:68
+msgid "Group: {0}"
+msgstr ""
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:70
 msgid "Hide"
@@ -804,6 +834,10 @@ msgstr "Diajar deui"
 #: ../../../lib/web/src/components/config-drawer.tsx:354
 msgid "Left to Right"
 msgstr "Kénca ka Katuhu"
+
+#: ../../../lib/web/src/components/post-tags.tsx:72
+msgid "Letters, numbers, spaces, and hyphens only"
+msgstr ""
 
 #: ../../../lib/web/src/components/config-drawer.tsx:213
 #: ../../../lib/web/src/components/theme-switch.tsx:45
@@ -881,7 +915,7 @@ msgstr "Kasalahan jaringan"
 msgid "New"
 msgstr "Anyar"
 
-#: src/components/layout/chess-layout.tsx:136
+#: src/components/layout/chess-layout.tsx:138
 #: src/features/chess/components/game-empty-state.tsx:27
 #: src/features/chess/components/game-empty-state.tsx:43
 #: src/features/chess/components/new-game.tsx:96
@@ -893,7 +927,7 @@ msgstr "Game anyar"
 msgid "Next image"
 msgstr "Gambar salajengna"
 
-#: ../../../lib/web/src/features/access/access-list.tsx:160
+#: ../../../lib/web/src/features/access/access-list.tsx:165
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "Euweuh aturan aksés. Tambahan aturan pikeun ngatur saha nu bisa ngakses sumber ieu."
 
@@ -920,6 +954,10 @@ msgstr "Teu aya grup"
 #: src/features/chess/components/chat-message-list.tsx:158
 msgid "No messages yet"
 msgstr "Tacan aya pesen"
+
+#: ../../../lib/web/src/components/notifications-dropdown.tsx:193
+msgid "No notifications yet"
+msgstr ""
 
 #: ../../../lib/web/src/components/place-picker.tsx:132
 msgid "No places found"
@@ -977,7 +1015,7 @@ msgstr "Bewara"
 msgid "Notifications: {0}"
 msgstr "Wawaran: {0}"
 
-#: src/features/chess/index.tsx:435
+#: src/features/chess/index.tsx:448
 msgid "Offer draw"
 msgstr "Tawarkeun seri"
 
@@ -995,13 +1033,17 @@ msgstr "Buka aksi akun"
 msgid "Open actions"
 msgstr "Buka aksi"
 
-#: src/features/chess/index.tsx:414
+#: src/features/chess/index.tsx:427
 msgid "Open chat panel"
 msgstr "Buka panel obrolan"
 
-#: src/features/chess/index.tsx:422
+#: src/features/chess/index.tsx:435
 msgid "Open game actions"
 msgstr "Buka aksi game"
+
+#: ../../../lib/web/src/components/layout/mochi-menu.tsx:133
+msgid "Open menu"
+msgstr "Buka menu"
 
 #: ../../../lib/web/src/components/layout/top-bar.tsx:63
 #: ../../../lib/web/src/components/layout/top-bar.tsx:68
@@ -1022,7 +1064,7 @@ msgstr "Buka setélan tema"
 msgid "Other"
 msgstr "Séjén"
 
-#: ../../../lib/web/src/features/access/access-list.tsx:217
+#: ../../../lib/web/src/features/access/access-list.tsx:222
 msgid "Owner"
 msgstr "Nu boga"
 
@@ -1083,6 +1125,10 @@ msgstr "Privasi"
 msgid "Profile"
 msgstr "Profil"
 
+#: ../../../lib/web/src/components/person-picker.tsx:200
+msgid "Project members"
+msgstr ""
+
 #. placeholder {0}: pieceName(piece)
 #: src/features/chess/components/promotion-dialog.tsx:81
 #: src/features/chess/components/promotion-dialog.tsx:99
@@ -1131,26 +1177,26 @@ msgstr "Rélatif (5m, 3j, 2p)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "Rélatif dina 24 jam, salian éta absolut"
 
-#: src/features/chess/index.tsx:448
+#: src/features/chess/index.tsx:461
 msgid "Rematch"
 msgstr "Tanding deui"
 
-#: ../../../lib/web/src/features/access/access-list.tsx:265
+#: ../../../lib/web/src/features/access/access-list.tsx:270
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:180
 msgid "Remove"
 msgstr "Pupus"
 
-#: ../../../lib/web/src/features/access/access-list.tsx:247
-#: ../../../lib/web/src/features/access/access-list.tsx:253
+#: ../../../lib/web/src/features/access/access-list.tsx:252
+#: ../../../lib/web/src/features/access/access-list.tsx:258
 msgid "Remove access rule"
 msgstr "Cabut aturan aksés"
 
 #. placeholder {0}: formatSubject(subject, data.name)
-#: ../../../lib/web/src/features/access/access-list.tsx:259
+#: ../../../lib/web/src/features/access/access-list.tsx:264
 msgid "Remove access rule for \"{0}\"?"
 msgstr "Piceun aturan aksés pikeun \"{0}\"?"
 
-#: ../../../lib/web/src/features/access/access-list.tsx:257
+#: ../../../lib/web/src/features/access/access-list.tsx:262
 msgid "Remove access?"
 msgstr "Cabut aksés?"
 
@@ -1172,16 +1218,16 @@ msgstr "Reset"
 msgid "Reset all settings to default values"
 msgstr "Setel ulang sakabéh setélan ka nilai baku"
 
-#: src/features/chess/index.tsx:439
-#: src/features/chess/index.tsx:568
+#: src/features/chess/index.tsx:452
+#: src/features/chess/index.tsx:588
 msgid "Resign"
 msgstr "Resign"
 
-#: src/features/chess/index.tsx:559
+#: src/features/chess/index.tsx:579
 msgid "Resign game?"
 msgstr "Resign game?"
 
-#: src/features/chess/index.tsx:565
+#: src/features/chess/index.tsx:585
 msgid "Resigning..."
 msgstr "Resign..."
 
@@ -1376,7 +1422,7 @@ msgstr "Mimitian kaulinan"
 msgid "Stay tuned though!"
 msgstr "Tapi tetep nyimak!"
 
-#: ../../../lib/web/src/features/access/access-list.tsx:191
+#: ../../../lib/web/src/features/access/access-list.tsx:196
 msgid "Subject"
 msgstr "Subjek"
 
@@ -1394,6 +1440,14 @@ msgstr "Sistem"
 #: ../../../lib/web/src/components/tag-input.tsx:94
 msgid "Tag"
 msgstr "Tag"
+
+#: ../../../lib/web/src/components/post-tags.tsx:76
+msgid "Tag already exists"
+msgstr "Tag tos aya"
+
+#: ../../../lib/web/src/components/post-tags.tsx:68
+msgid "Tag must be 50 characters or less"
+msgstr ""
 
 #: ../../../lib/web/src/components/post-tags.tsx:101
 #: ../../../lib/web/src/components/post-tags.tsx:115
@@ -1433,7 +1487,7 @@ msgstr "Setélan Téma"
 msgid "This page has not been created yet."
 msgstr "Kaca ieu can dijieun."
 
-#: src/features/chess/index.tsx:581
+#: src/features/chess/index.tsx:601
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Ieu bakal ngahapus kaulinan sareng obrolanana sacara permanén. Tindakan ieu teu tiasa dibatalkeun."
 
@@ -1552,6 +1606,7 @@ msgstr "Tacan diverifikasi"
 msgid "Use your passkey"
 msgstr "Anggo konci akses anjeun"
 
+#: ../../../lib/web/src/components/layout/mochi-menu.tsx:86
 #: ../../../lib/web/src/features/access/access-dialog.tsx:158
 msgid "User"
 msgstr "Pamaké"
@@ -1609,6 +1664,10 @@ msgstr "Kami ngirim kode verifikasi ka <0>{0}</0>. Lebetkeun kode di handap pike
 msgid "We'll be back online shortly."
 msgstr "Kami bakal balik online sakedap deui."
 
+#: ../../../lib/web/src/components/notifications-dropdown.tsx:197
+msgid "We'll notify you when something important happens."
+msgstr ""
+
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:13
 msgid "Website is under maintenance!"
 msgstr "Situs keur dipigawé!"
@@ -1618,13 +1677,13 @@ msgid "Wednesday"
 msgstr "Rebo"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:405
+#: src/features/chess/index.tsx:418
 msgid "White"
 msgstr "Bodas"
 
 #. placeholder {0}: pieceName(piece.type)
 #. placeholder {0}: pieceName(type)
-#: src/features/chess/components/chess-board.tsx:307
+#: src/features/chess/components/chess-board.tsx:305
 #: src/features/chess/components/chess-piece-icon.tsx:309
 msgid "White {0}"
 msgstr "Bodas {0}"
@@ -1640,6 +1699,10 @@ msgstr "Anjeun teu gaduh aksés kana bagian ieu."
 #: ../../../lib/web/src/features/errors/forbidden.tsx:18
 msgid "You don't have necessary permission <0/>to view this resource."
 msgstr "Anjeun teu gaduh idin anu diperyogikeun <0/>pikeun ningali sumber ieu."
+
+#: ../../../lib/web/src/components/notifications-dropdown.tsx:193
+msgid "You're all caught up!"
+msgstr ""
 
 #: ../../../lib/web/src/components/restore-banner.tsx:91
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."

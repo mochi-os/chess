@@ -124,7 +124,7 @@ msgstr "Άρνηση πρόσβασης"
 msgid "Access Forbidden"
 msgstr "Απαγορευμένη πρόσβαση"
 
-#: ../../../lib/web/src/features/access/access-list.tsx:192
+#: ../../../lib/web/src/features/access/access-list.tsx:197
 msgid "Access level"
 msgstr "Επίπεδο πρόσβασης"
 
@@ -144,10 +144,11 @@ msgstr "Τύπος λογαριασμού"
 msgid "Account verified"
 msgstr "Ο λογαριασμός επαληθεύτηκε"
 
-#: src/components/layout/chess-layout.tsx:111
+#: src/components/layout/chess-layout.tsx:110
 msgid "Active games"
 msgstr "Ενεργά παιχνίδια"
 
+#: ../../../lib/web/src/features/access/access-dialog.tsx:332
 #: ../../../lib/web/src/features/accounts/account-add.tsx:196
 msgid "Add"
 msgstr "Προσθήκη"
@@ -198,6 +199,10 @@ msgstr "Προσθήκη σε υπάρχουσες ειδοποιήσεις"
 msgid "Add view"
 msgstr "Προσθήκη προβολής"
 
+#: ../../../lib/web/src/features/access/access-dialog.tsx:332
+msgid "Adding..."
+msgstr "Προσθήκη..."
+
 #: ../../../lib/web/src/components/config-drawer.tsx:71
 msgid "Adjust the appearance and layout to suit your preferences."
 msgstr "Προσαρμόστε την εμφάνιση και τη διάταξη σύμφωνα με τις προτιμήσεις σας."
@@ -218,11 +223,15 @@ msgstr "Παρουσιάστηκε σφάλμα"
 msgid "An unexpected error occurred"
 msgstr "Παρουσιάστηκε απροσδόκητο σφάλμα"
 
+#: ../../../lib/web/src/features/access/access-list.tsx:45
+msgid "Anyone"
+msgstr "Οποιοσδήποτε"
+
 #: ../../../lib/web/src/components/sign-out-dialog.tsx:27
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "Είστε βέβαιοι ότι θέλετε να αποσυνδεθείτε; Θα πρέπει να συνδεθείτε ξανά για να αποκτήσετε πρόσβαση στον λογαριασμό σας."
 
-#: src/features/chess/index.tsx:560
+#: src/features/chess/index.tsx:580
 msgid "Are you sure you want to resign? {opponentName} will win the game."
 msgstr "Είστε σίγουροι ότι θέλετε να παραιτηθείτε; Ο/Η {opponentName} θα κερδίσει την παρτίδα."
 
@@ -233,6 +242,10 @@ msgstr "Αύξουσα"
 #: ../../../lib/web/src/components/ui/sort-direction-button.tsx:27
 msgid "Ascending"
 msgstr "Αύξουσα"
+
+#: ../../../lib/web/src/features/access/access-list.tsx:46
+msgid "Authenticated users"
+msgstr ""
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:315
 msgid "Authenticator code"
@@ -253,13 +266,13 @@ msgid "bishop"
 msgstr "αξιωματικός"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:405
+#: src/features/chess/index.tsx:418
 msgid "Black"
 msgstr "Μαύρο"
 
 #. placeholder {0}: pieceName(piece.type)
 #. placeholder {0}: pieceName(type)
-#: src/features/chess/components/chess-board.tsx:307
+#: src/features/chess/components/chess-board.tsx:305
 #: src/features/chess/components/chess-piece-icon.tsx:309
 msgid "Black {0}"
 msgstr "Μαύρο {0}"
@@ -275,7 +288,7 @@ msgstr "Ενίσχυση ενδιαφέροντος"
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:248
 #: ../../../lib/web/src/components/ui/editable-field-row.tsx:132
 #: ../../../lib/web/src/features/access/access-dialog.tsx:328
-#: ../../../lib/web/src/features/access/access-list.tsx:263
+#: ../../../lib/web/src/features/access/access-list.tsx:268
 #: ../../../lib/web/src/features/accounts/account-add.tsx:188
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:91
 #: src/features/chess/components/new-game.tsx:145
@@ -292,22 +305,26 @@ msgstr "Κατηγορία για αυτήν την ειδοποίηση"
 msgid "Change notification category"
 msgstr "Αλλαγή κατηγορίας ειδοποίησης"
 
-#: src/features/chess/index.tsx:498
-#: src/features/chess/index.tsx:531
+#: src/features/chess/index.tsx:518
+#: src/features/chess/index.tsx:551
 msgid "Chat"
 msgstr "Συνομιλία"
 
-#: src/features/chess/index.tsx:101
-#: src/features/chess/index.tsx:333
-#: src/features/chess/index.tsx:345
+#: ../../../lib/web/src/components/notifications-dropdown.tsx:198
+msgid "Check \"All\" to see your past notifications."
+msgstr ""
+
+#: src/features/chess/index.tsx:98
+#: src/features/chess/index.tsx:346
+#: src/features/chess/index.tsx:358
 msgid "Chess"
 msgstr "Σκάκι"
 
-#: src/features/chess/components/chess-board.tsx:262
+#: src/features/chess/components/chess-board.tsx:260
 msgid "Chess board. Use arrow keys to navigate, Enter or Space to select."
 msgstr "Σκακιέρα. Χρησιμοποιήστε τα βελάκια για πλοήγηση, Enter ή Space για επιλογή."
 
-#: src/features/chess/components/chess-board.tsx:261
+#: src/features/chess/components/chess-board.tsx:259
 msgid "Chess board. Your turn. Use arrow keys to navigate, Enter or Space to select."
 msgstr "Σκακιέρα. Σειρά σας. Χρησιμοποιήστε τα βελάκια για πλοήγηση, Enter ή Space για επιλογή."
 
@@ -412,7 +429,7 @@ msgstr "Έρχεται σύντομα!"
 msgid "Compact"
 msgstr "Συμπαγές"
 
-#: src/components/layout/chess-layout.tsx:122
+#: src/components/layout/chess-layout.tsx:121
 msgid "Completed"
 msgstr "Ολοκληρώθηκε"
 
@@ -495,15 +512,15 @@ msgstr "Προεπιλογή"
 msgid "Default AI account"
 msgstr "Προεπιλεγμένος λογαριασμός AI"
 
-#: src/features/chess/index.tsx:589
+#: src/features/chess/index.tsx:609
 msgid "Delete"
 msgstr "Διαγραφή"
 
-#: src/features/chess/index.tsx:451
+#: src/features/chess/index.tsx:464
 msgid "Delete game"
 msgstr "Διαγραφή παιχνιδιού"
 
-#: src/features/chess/index.tsx:580
+#: src/features/chess/index.tsx:600
 msgid "Delete game?"
 msgstr "Διαγραφή παιχνιδιού;"
 
@@ -511,7 +528,7 @@ msgstr "Διαγραφή παιχνιδιού;"
 msgid "Delete your account on the old server"
 msgstr "Διαγράψτε τον λογαριασμό σας στον παλιό διακομιστή"
 
-#: src/features/chess/index.tsx:586
+#: src/features/chess/index.tsx:606
 msgid "Deleting..."
 msgstr "Διαγραφή..."
 
@@ -542,6 +559,10 @@ msgstr "Εντοπισμός από το πρόγραμμα περιήγησης
 msgid "Direction"
 msgstr "Κατεύθυνση"
 
+#: ../../../lib/web/src/components/person-picker.tsx:214
+msgid "Directory"
+msgstr ""
+
 #: ../../../lib/web/src/components/restore-banner.tsx:79
 #: ../../../lib/web/src/components/restore-banner.tsx:85
 msgid "Dismiss"
@@ -564,7 +585,7 @@ msgstr "Η λήψη απέτυχε"
 msgid "Draw agreed"
 msgstr "Συμφωνήθηκε ισοπαλία"
 
-#: src/features/chess/index.tsx:464
+#: src/features/chess/index.tsx:477
 msgid "Draw offered — waiting for {opponentName}"
 msgstr "Προσφέρθηκε ισοπαλία — αναμονή για {opponentName}"
 
@@ -603,7 +624,7 @@ msgstr "Επέκταση πλευρικής μπάρας"
 msgid "Extra large"
 msgstr "Πολύ μεγάλο"
 
-#: src/features/chess/index.tsx:213
+#: src/features/chess/index.tsx:216
 msgid "Failed to accept draw"
 msgstr "Αποτυχία αποδοχής ισοπαλίας"
 
@@ -615,15 +636,15 @@ msgstr "Αποτυχία προσθήκης λογαριασμού"
 msgid "Failed to create game"
 msgstr "Αποτυχία δημιουργίας παιχνιδιού"
 
-#: src/features/chess/index.tsx:228
+#: src/features/chess/index.tsx:231
 msgid "Failed to create rematch"
 msgstr "Αποτυχία δημιουργίας ρεβάνς"
 
-#: src/features/chess/index.tsx:218
+#: src/features/chess/index.tsx:221
 msgid "Failed to decline draw"
 msgstr "Αποτυχία απόρριψης ισοπαλίας"
 
-#: src/features/chess/index.tsx:240
+#: src/features/chess/index.tsx:243
 msgid "Failed to delete game"
 msgstr "Αποτυχία διαγραφής παιχνιδιού"
 
@@ -635,11 +656,11 @@ msgstr "Αποτυχία φόρτωσης εικόνας"
 msgid "Failed to load video"
 msgstr "Αποτυχία φόρτωσης βίντεο"
 
-#: src/features/chess/index.tsx:191
+#: src/features/chess/index.tsx:194
 msgid "Failed to make move"
 msgstr "Αποτυχία εκτέλεσης κίνησης"
 
-#: src/features/chess/index.tsx:208
+#: src/features/chess/index.tsx:211
 msgid "Failed to offer draw"
 msgstr "Αποτυχία προσφοράς ισοπαλίας"
 
@@ -647,12 +668,12 @@ msgstr "Αποτυχία προσφοράς ισοπαλίας"
 msgid "Failed to remove account"
 msgstr "Αποτυχία αφαίρεσης λογαριασμού"
 
-#: src/features/chess/index.tsx:201
+#: src/features/chess/index.tsx:204
 msgid "Failed to resign"
 msgstr "Αποτυχία παραίτησης"
 
-#: src/features/chess/index.tsx:515
-#: src/features/chess/index.tsx:548
+#: src/features/chess/index.tsx:535
+#: src/features/chess/index.tsx:568
 msgid "Failed to send"
 msgstr "Αποτυχία αποστολής"
 
@@ -680,6 +701,10 @@ msgstr "Αιωρούμενο"
 msgid "Friday"
 msgstr "Παρασκευή"
 
+#: ../../../lib/web/src/components/person-picker.tsx:207
+msgid "Friends"
+msgstr "Φίλοι"
+
 #: ../../../lib/web/src/components/travelling-picker.tsx:153
 msgid "From"
 msgstr "Από"
@@ -701,7 +726,7 @@ msgstr "Πλήρης διάταξη"
 msgid "Game created"
 msgstr "Το παιχνίδι δημιουργήθηκε"
 
-#: src/features/chess/index.tsx:236
+#: src/features/chess/index.tsx:239
 msgid "Game deleted"
 msgstr "Το παιχνίδι διαγράφηκε"
 
@@ -734,6 +759,11 @@ msgstr "Μετάβαση στην προηγούμενη σελίδα"
 #: ../../../lib/web/src/features/access/access-dialog.tsx:162
 msgid "Group"
 msgstr "Ομάδα"
+
+#. placeholder {0}: name || subject.slice(1)
+#: ../../../lib/web/src/features/access/access-list.tsx:68
+msgid "Group: {0}"
+msgstr ""
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:70
 msgid "Hide"
@@ -804,6 +834,10 @@ msgstr "Μάθετε περισσότερα"
 #: ../../../lib/web/src/components/config-drawer.tsx:354
 msgid "Left to Right"
 msgstr "Από αριστερά προς τα δεξιά"
+
+#: ../../../lib/web/src/components/post-tags.tsx:72
+msgid "Letters, numbers, spaces, and hyphens only"
+msgstr ""
 
 #: ../../../lib/web/src/components/config-drawer.tsx:213
 #: ../../../lib/web/src/components/theme-switch.tsx:45
@@ -881,7 +915,7 @@ msgstr "Σφάλμα δικτύου"
 msgid "New"
 msgstr "Νέο"
 
-#: src/components/layout/chess-layout.tsx:136
+#: src/components/layout/chess-layout.tsx:138
 #: src/features/chess/components/game-empty-state.tsx:27
 #: src/features/chess/components/game-empty-state.tsx:43
 #: src/features/chess/components/new-game.tsx:96
@@ -893,7 +927,7 @@ msgstr "Νέο παιχνίδι"
 msgid "Next image"
 msgstr "Επόμενη εικόνα"
 
-#: ../../../lib/web/src/features/access/access-list.tsx:160
+#: ../../../lib/web/src/features/access/access-list.tsx:165
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "Δεν έχουν διαμορφωθεί κανόνες πρόσβασης. Προσθέστε κανόνες για να ελέγξετε ποιος μπορεί να έχει πρόσβαση σε αυτόν τον πόρο."
 
@@ -920,6 +954,10 @@ msgstr "Δεν υπάρχουν διαθέσιμες ομάδες"
 #: src/features/chess/components/chat-message-list.tsx:158
 msgid "No messages yet"
 msgstr "Δεν υπάρχουν ακόμη μηνύματα"
+
+#: ../../../lib/web/src/components/notifications-dropdown.tsx:193
+msgid "No notifications yet"
+msgstr ""
 
 #: ../../../lib/web/src/components/place-picker.tsx:132
 msgid "No places found"
@@ -977,7 +1015,7 @@ msgstr "Ειδοποιήσεις"
 msgid "Notifications: {0}"
 msgstr "Ειδοποιήσεις: {0}"
 
-#: src/features/chess/index.tsx:435
+#: src/features/chess/index.tsx:448
 msgid "Offer draw"
 msgstr "Πρόταση ισοπαλίας"
 
@@ -995,13 +1033,17 @@ msgstr "Άνοιγμα ενεργειών λογαριασμού"
 msgid "Open actions"
 msgstr "Άνοιγμα ενεργειών"
 
-#: src/features/chess/index.tsx:414
+#: src/features/chess/index.tsx:427
 msgid "Open chat panel"
 msgstr "Άνοιγμα πίνακα συνομιλίας"
 
-#: src/features/chess/index.tsx:422
+#: src/features/chess/index.tsx:435
 msgid "Open game actions"
 msgstr "Άνοιγμα ενεργειών παιχνιδιού"
+
+#: ../../../lib/web/src/components/layout/mochi-menu.tsx:133
+msgid "Open menu"
+msgstr "Άνοιγμα μενού"
 
 #: ../../../lib/web/src/components/layout/top-bar.tsx:63
 #: ../../../lib/web/src/components/layout/top-bar.tsx:68
@@ -1022,7 +1064,7 @@ msgstr "Άνοιγμα ρυθμίσεων θέματος"
 msgid "Other"
 msgstr "Άλλο"
 
-#: ../../../lib/web/src/features/access/access-list.tsx:217
+#: ../../../lib/web/src/features/access/access-list.tsx:222
 msgid "Owner"
 msgstr "Ιδιοκτήτης"
 
@@ -1083,6 +1125,10 @@ msgstr "Ιδιωτικότητα"
 msgid "Profile"
 msgstr "Προφίλ"
 
+#: ../../../lib/web/src/components/person-picker.tsx:200
+msgid "Project members"
+msgstr ""
+
 #. placeholder {0}: pieceName(piece)
 #: src/features/chess/components/promotion-dialog.tsx:81
 #: src/features/chess/components/promotion-dialog.tsx:99
@@ -1131,26 +1177,26 @@ msgstr "Σχετικό (5m, 3h, 2d)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "Σχετικό εντός 24 ωρών, αλλιώς απόλυτο"
 
-#: src/features/chess/index.tsx:448
+#: src/features/chess/index.tsx:461
 msgid "Rematch"
 msgstr "Ρεβάνς"
 
-#: ../../../lib/web/src/features/access/access-list.tsx:265
+#: ../../../lib/web/src/features/access/access-list.tsx:270
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:180
 msgid "Remove"
 msgstr "Αφαίρεση"
 
-#: ../../../lib/web/src/features/access/access-list.tsx:247
-#: ../../../lib/web/src/features/access/access-list.tsx:253
+#: ../../../lib/web/src/features/access/access-list.tsx:252
+#: ../../../lib/web/src/features/access/access-list.tsx:258
 msgid "Remove access rule"
 msgstr "Αφαίρεση κανόνα πρόσβασης"
 
 #. placeholder {0}: formatSubject(subject, data.name)
-#: ../../../lib/web/src/features/access/access-list.tsx:259
+#: ../../../lib/web/src/features/access/access-list.tsx:264
 msgid "Remove access rule for \"{0}\"?"
 msgstr "Κατάργηση κανόνα πρόσβασης για «{0}»;"
 
-#: ../../../lib/web/src/features/access/access-list.tsx:257
+#: ../../../lib/web/src/features/access/access-list.tsx:262
 msgid "Remove access?"
 msgstr "Αφαίρεση πρόσβασης;"
 
@@ -1172,16 +1218,16 @@ msgstr "Επαναφορά"
 msgid "Reset all settings to default values"
 msgstr "Επαναφορά όλων των ρυθμίσεων σε προεπιλεγμένες τιμές"
 
-#: src/features/chess/index.tsx:439
-#: src/features/chess/index.tsx:568
+#: src/features/chess/index.tsx:452
+#: src/features/chess/index.tsx:588
 msgid "Resign"
 msgstr "Παραίτηση"
 
-#: src/features/chess/index.tsx:559
+#: src/features/chess/index.tsx:579
 msgid "Resign game?"
 msgstr "Παραίτηση από το παιχνίδι;"
 
-#: src/features/chess/index.tsx:565
+#: src/features/chess/index.tsx:585
 msgid "Resigning..."
 msgstr "Παραίτηση..."
 
@@ -1376,7 +1422,7 @@ msgstr "Έναρξη παιχνιδιού"
 msgid "Stay tuned though!"
 msgstr "Μείνετε όμως συντονισμένοι!"
 
-#: ../../../lib/web/src/features/access/access-list.tsx:191
+#: ../../../lib/web/src/features/access/access-list.tsx:196
 msgid "Subject"
 msgstr "Θέμα"
 
@@ -1394,6 +1440,14 @@ msgstr "Σύστημα"
 #: ../../../lib/web/src/components/tag-input.tsx:94
 msgid "Tag"
 msgstr "Ετικέτα"
+
+#: ../../../lib/web/src/components/post-tags.tsx:76
+msgid "Tag already exists"
+msgstr "Η ετικέτα υπάρχει ήδη"
+
+#: ../../../lib/web/src/components/post-tags.tsx:68
+msgid "Tag must be 50 characters or less"
+msgstr ""
 
 #: ../../../lib/web/src/components/post-tags.tsx:101
 #: ../../../lib/web/src/components/post-tags.tsx:115
@@ -1433,7 +1487,7 @@ msgstr "Ρυθμίσεις θέματος"
 msgid "This page has not been created yet."
 msgstr "Αυτή η σελίδα δεν έχει δημιουργηθεί ακόμη."
 
-#: src/features/chess/index.tsx:581
+#: src/features/chess/index.tsx:601
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Αυτό θα διαγράψει οριστικά το παιχνίδι και τη συνομιλία του. Αυτή η ενέργεια δεν μπορεί να αναιρεθεί."
 
@@ -1552,6 +1606,7 @@ msgstr "Μη επαληθευμένο"
 msgid "Use your passkey"
 msgstr "Χρησιμοποιήστε το κλειδί πρόσβασής σας"
 
+#: ../../../lib/web/src/components/layout/mochi-menu.tsx:86
 #: ../../../lib/web/src/features/access/access-dialog.tsx:158
 msgid "User"
 msgstr "Χρήστης"
@@ -1609,6 +1664,10 @@ msgstr "Στείλαμε έναν κωδικό επαλήθευσης στο <0>
 msgid "We'll be back online shortly."
 msgstr "Θα είμαστε ξανά online σύντομα."
 
+#: ../../../lib/web/src/components/notifications-dropdown.tsx:197
+msgid "We'll notify you when something important happens."
+msgstr ""
+
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:13
 msgid "Website is under maintenance!"
 msgstr "Ο ιστότοπος βρίσκεται υπό συντήρηση!"
@@ -1618,13 +1677,13 @@ msgid "Wednesday"
 msgstr "Τετάρτη"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:405
+#: src/features/chess/index.tsx:418
 msgid "White"
 msgstr "Λευκό"
 
 #. placeholder {0}: pieceName(piece.type)
 #. placeholder {0}: pieceName(type)
-#: src/features/chess/components/chess-board.tsx:307
+#: src/features/chess/components/chess-board.tsx:305
 #: src/features/chess/components/chess-piece-icon.tsx:309
 msgid "White {0}"
 msgstr "Λευκό {0}"
@@ -1640,6 +1699,10 @@ msgstr "Δεν έχετε πρόσβαση σε αυτήν την ενότητα
 #: ../../../lib/web/src/features/errors/forbidden.tsx:18
 msgid "You don't have necessary permission <0/>to view this resource."
 msgstr "Δεν έχετε την απαραίτητη άδεια <0/>για να δείτε αυτόν τον πόρο."
+
+#: ../../../lib/web/src/components/notifications-dropdown.tsx:193
+msgid "You're all caught up!"
+msgstr ""
 
 #: ../../../lib/web/src/components/restore-banner.tsx:91
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."

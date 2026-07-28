@@ -124,7 +124,7 @@ msgstr "पहुँच अस्वीकृत"
 msgid "Access Forbidden"
 msgstr "पहुँच निषेधित"
 
-#: ../../../lib/web/src/features/access/access-list.tsx:192
+#: ../../../lib/web/src/features/access/access-list.tsx:197
 msgid "Access level"
 msgstr "पहुँच स्तर"
 
@@ -144,10 +144,11 @@ msgstr "खाता प्रकार"
 msgid "Account verified"
 msgstr "खाता प्रमाणीकरण गरियो"
 
-#: src/components/layout/chess-layout.tsx:111
+#: src/components/layout/chess-layout.tsx:110
 msgid "Active games"
 msgstr "सक्रिय खेलहरू"
 
+#: ../../../lib/web/src/features/access/access-dialog.tsx:332
 #: ../../../lib/web/src/features/accounts/account-add.tsx:196
 msgid "Add"
 msgstr "थप्नुहोस्"
@@ -198,6 +199,10 @@ msgstr "अवस्थित सूचनाहरूमा थप्नुह�
 msgid "Add view"
 msgstr "दृश्य थप्नुहोस्"
 
+#: ../../../lib/web/src/features/access/access-dialog.tsx:332
+msgid "Adding..."
+msgstr "थप्दै..."
+
 #: ../../../lib/web/src/components/config-drawer.tsx:71
 msgid "Adjust the appearance and layout to suit your preferences."
 msgstr "तपाईंको प्राथमिकताअनुसार रूप र लेआउट समायोजन गर्नुहोस्।"
@@ -218,11 +223,15 @@ msgstr "त्रुटि भयो"
 msgid "An unexpected error occurred"
 msgstr "अनपेक्षित त्रुटि भयो"
 
+#: ../../../lib/web/src/features/access/access-list.tsx:45
+msgid "Anyone"
+msgstr "जोसुकै"
+
 #: ../../../lib/web/src/components/sign-out-dialog.tsx:27
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "के तपाईं लग आउट गर्न निश्चित हुनुहुन्छ? तपाईंको खाता पहुँच गर्न पुनः लग इन गर्नुपर्नेछ।"
 
-#: src/features/chess/index.tsx:560
+#: src/features/chess/index.tsx:580
 msgid "Are you sure you want to resign? {opponentName} will win the game."
 msgstr "के तपाईं हार स्वीकार गर्न निश्चित हुनुहुन्छ? {opponentName} ले खेल जित्नेछ।"
 
@@ -233,6 +242,10 @@ msgstr "बढ्दो"
 #: ../../../lib/web/src/components/ui/sort-direction-button.tsx:27
 msgid "Ascending"
 msgstr "बढ्दो क्रम"
+
+#: ../../../lib/web/src/features/access/access-list.tsx:46
+msgid "Authenticated users"
+msgstr ""
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:315
 msgid "Authenticator code"
@@ -253,13 +266,13 @@ msgid "bishop"
 msgstr "ऊँट"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:405
+#: src/features/chess/index.tsx:418
 msgid "Black"
 msgstr "कालो"
 
 #. placeholder {0}: pieceName(piece.type)
 #. placeholder {0}: pieceName(type)
-#: src/features/chess/components/chess-board.tsx:307
+#: src/features/chess/components/chess-board.tsx:305
 #: src/features/chess/components/chess-piece-icon.tsx:309
 msgid "Black {0}"
 msgstr "कालो {0}"
@@ -275,7 +288,7 @@ msgstr "रुचि बढाउनुहोस्"
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:248
 #: ../../../lib/web/src/components/ui/editable-field-row.tsx:132
 #: ../../../lib/web/src/features/access/access-dialog.tsx:328
-#: ../../../lib/web/src/features/access/access-list.tsx:263
+#: ../../../lib/web/src/features/access/access-list.tsx:268
 #: ../../../lib/web/src/features/accounts/account-add.tsx:188
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:91
 #: src/features/chess/components/new-game.tsx:145
@@ -292,22 +305,26 @@ msgstr "यस सूचनाका लागि श्रेणी"
 msgid "Change notification category"
 msgstr "सूचना श्रेणी परिवर्तन गर्नुहोस्"
 
-#: src/features/chess/index.tsx:498
-#: src/features/chess/index.tsx:531
+#: src/features/chess/index.tsx:518
+#: src/features/chess/index.tsx:551
 msgid "Chat"
 msgstr "च्याट"
 
-#: src/features/chess/index.tsx:101
-#: src/features/chess/index.tsx:333
-#: src/features/chess/index.tsx:345
+#: ../../../lib/web/src/components/notifications-dropdown.tsx:198
+msgid "Check \"All\" to see your past notifications."
+msgstr ""
+
+#: src/features/chess/index.tsx:98
+#: src/features/chess/index.tsx:346
+#: src/features/chess/index.tsx:358
 msgid "Chess"
 msgstr "चेस"
 
-#: src/features/chess/components/chess-board.tsx:262
+#: src/features/chess/components/chess-board.tsx:260
 msgid "Chess board. Use arrow keys to navigate, Enter or Space to select."
 msgstr "चेस बोर्ड। नेभिगेट गर्न तीर कुञ्जीहरू, चयन गर्न Enter वा Space प्रयोग गर्नुहोस्।"
 
-#: src/features/chess/components/chess-board.tsx:261
+#: src/features/chess/components/chess-board.tsx:259
 msgid "Chess board. Your turn. Use arrow keys to navigate, Enter or Space to select."
 msgstr "चेस बोर्ड। तपाईंको पालो। नेभिगेट गर्न तीर कुञ्जीहरू, चयन गर्न Enter वा Space प्रयोग गर्नुहोस्।"
 
@@ -412,7 +429,7 @@ msgstr "चाँडै आउँदै!"
 msgid "Compact"
 msgstr "कम्प्याक्ट"
 
-#: src/components/layout/chess-layout.tsx:122
+#: src/components/layout/chess-layout.tsx:121
 msgid "Completed"
 msgstr "पूरा भयो"
 
@@ -495,15 +512,15 @@ msgstr "पूर्वनिर्धारित"
 msgid "Default AI account"
 msgstr "पूर्वनिर्धारित AI खाता"
 
-#: src/features/chess/index.tsx:589
+#: src/features/chess/index.tsx:609
 msgid "Delete"
 msgstr "मेटाउनुहोस्"
 
-#: src/features/chess/index.tsx:451
+#: src/features/chess/index.tsx:464
 msgid "Delete game"
 msgstr "खेल मेटाउनुहोस्"
 
-#: src/features/chess/index.tsx:580
+#: src/features/chess/index.tsx:600
 msgid "Delete game?"
 msgstr "खेल मेटाउने?"
 
@@ -511,7 +528,7 @@ msgstr "खेल मेटाउने?"
 msgid "Delete your account on the old server"
 msgstr "पुरानो सर्भरमा आफ्नो खाता मेटाउनुहोस्"
 
-#: src/features/chess/index.tsx:586
+#: src/features/chess/index.tsx:606
 msgid "Deleting..."
 msgstr "मेटाउँदै..."
 
@@ -542,6 +559,10 @@ msgstr "वेब ब्राउजरबाट पत्ता लगाउन
 msgid "Direction"
 msgstr "दिशा"
 
+#: ../../../lib/web/src/components/person-picker.tsx:214
+msgid "Directory"
+msgstr ""
+
 #: ../../../lib/web/src/components/restore-banner.tsx:79
 #: ../../../lib/web/src/components/restore-banner.tsx:85
 msgid "Dismiss"
@@ -564,7 +585,7 @@ msgstr "डाउनलोड असफल भयो"
 msgid "Draw agreed"
 msgstr "बराबरी सहमति भयो"
 
-#: src/features/chess/index.tsx:464
+#: src/features/chess/index.tsx:477
 msgid "Draw offered — waiting for {opponentName}"
 msgstr "बराबरीको प्रस्ताव — {opponentName} को प्रतीक्षा गर्दै"
 
@@ -603,7 +624,7 @@ msgstr "साइडबार विस्तार गर्नुहोस्"
 msgid "Extra large"
 msgstr "अतिरिक्त ठूलो"
 
-#: src/features/chess/index.tsx:213
+#: src/features/chess/index.tsx:216
 msgid "Failed to accept draw"
 msgstr "ड्र स्वीकार गर्न असफल"
 
@@ -615,15 +636,15 @@ msgstr "खाता थप्न असफल"
 msgid "Failed to create game"
 msgstr "खेल सिर्जना गर्न असफल"
 
-#: src/features/chess/index.tsx:228
+#: src/features/chess/index.tsx:231
 msgid "Failed to create rematch"
 msgstr "रिम्याच सिर्जना गर्न असफल"
 
-#: src/features/chess/index.tsx:218
+#: src/features/chess/index.tsx:221
 msgid "Failed to decline draw"
 msgstr "ड्र अस्वीकार गर्न असफल"
 
-#: src/features/chess/index.tsx:240
+#: src/features/chess/index.tsx:243
 msgid "Failed to delete game"
 msgstr "खेल मेटाउन असफल"
 
@@ -635,11 +656,11 @@ msgstr "छवि लोड गर्न असफल"
 msgid "Failed to load video"
 msgstr "भिडियो लोड गर्न असफल"
 
-#: src/features/chess/index.tsx:191
+#: src/features/chess/index.tsx:194
 msgid "Failed to make move"
 msgstr "चाल चल्न असफल"
 
-#: src/features/chess/index.tsx:208
+#: src/features/chess/index.tsx:211
 msgid "Failed to offer draw"
 msgstr "ड्र प्रस्ताव गर्न असफल"
 
@@ -647,12 +668,12 @@ msgstr "ड्र प्रस्ताव गर्न असफल"
 msgid "Failed to remove account"
 msgstr "खाता हटाउन असफल"
 
-#: src/features/chess/index.tsx:201
+#: src/features/chess/index.tsx:204
 msgid "Failed to resign"
 msgstr "राजीनामा दिन असफल"
 
-#: src/features/chess/index.tsx:515
-#: src/features/chess/index.tsx:548
+#: src/features/chess/index.tsx:535
+#: src/features/chess/index.tsx:568
 msgid "Failed to send"
 msgstr "पठाउन असफल"
 
@@ -680,6 +701,10 @@ msgstr "फ्लोटिङ"
 msgid "Friday"
 msgstr "शुक्रबार"
 
+#: ../../../lib/web/src/components/person-picker.tsx:207
+msgid "Friends"
+msgstr "साथीहरू"
+
 #: ../../../lib/web/src/components/travelling-picker.tsx:153
 msgid "From"
 msgstr "बाट"
@@ -701,7 +726,7 @@ msgstr "पूर्ण लेआउट"
 msgid "Game created"
 msgstr "खेल सिर्जना भयो"
 
-#: src/features/chess/index.tsx:236
+#: src/features/chess/index.tsx:239
 msgid "Game deleted"
 msgstr "खेल मेटाइयो"
 
@@ -734,6 +759,11 @@ msgstr "अघिल्लो पृष्ठमा जानुहोस्"
 #: ../../../lib/web/src/features/access/access-dialog.tsx:162
 msgid "Group"
 msgstr "समूह"
+
+#. placeholder {0}: name || subject.slice(1)
+#: ../../../lib/web/src/features/access/access-list.tsx:68
+msgid "Group: {0}"
+msgstr ""
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:70
 msgid "Hide"
@@ -804,6 +834,10 @@ msgstr "थप जान्नुहोस्"
 #: ../../../lib/web/src/components/config-drawer.tsx:354
 msgid "Left to Right"
 msgstr "बायाँबाट दायाँ"
+
+#: ../../../lib/web/src/components/post-tags.tsx:72
+msgid "Letters, numbers, spaces, and hyphens only"
+msgstr ""
 
 #: ../../../lib/web/src/components/config-drawer.tsx:213
 #: ../../../lib/web/src/components/theme-switch.tsx:45
@@ -881,7 +915,7 @@ msgstr "नेटवर्क त्रुटि"
 msgid "New"
 msgstr "नयाँ"
 
-#: src/components/layout/chess-layout.tsx:136
+#: src/components/layout/chess-layout.tsx:138
 #: src/features/chess/components/game-empty-state.tsx:27
 #: src/features/chess/components/game-empty-state.tsx:43
 #: src/features/chess/components/new-game.tsx:96
@@ -893,7 +927,7 @@ msgstr "नयाँ खेल"
 msgid "Next image"
 msgstr "अर्को तस्बिर"
 
-#: ../../../lib/web/src/features/access/access-list.tsx:160
+#: ../../../lib/web/src/features/access/access-list.tsx:165
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "कुनै पहुँच नियम कन्फिगर गरिएको छैन। यो स्रोतमा को पहुँच गर्न सक्छ नियन्त्रण गर्न नियमहरू थप्नुहोस्।"
 
@@ -920,6 +954,10 @@ msgstr "कुनै समूह उपलब्ध छैन"
 #: src/features/chess/components/chat-message-list.tsx:158
 msgid "No messages yet"
 msgstr "अहिलेसम्म कुनै सन्देश छैन"
+
+#: ../../../lib/web/src/components/notifications-dropdown.tsx:193
+msgid "No notifications yet"
+msgstr ""
 
 #: ../../../lib/web/src/components/place-picker.tsx:132
 msgid "No places found"
@@ -977,7 +1015,7 @@ msgstr "सूचनाहरू"
 msgid "Notifications: {0}"
 msgstr "सूचनाहरू: {0}"
 
-#: src/features/chess/index.tsx:435
+#: src/features/chess/index.tsx:448
 msgid "Offer draw"
 msgstr "ड्र प्रस्ताव गर्नुहोस्"
 
@@ -995,13 +1033,17 @@ msgstr "खाता कार्यहरू खोल्नुहोस्"
 msgid "Open actions"
 msgstr "कार्यहरू खोल्नुहोस्"
 
-#: src/features/chess/index.tsx:414
+#: src/features/chess/index.tsx:427
 msgid "Open chat panel"
 msgstr "च्याट प्यानल खोल्नुहोस्"
 
-#: src/features/chess/index.tsx:422
+#: src/features/chess/index.tsx:435
 msgid "Open game actions"
 msgstr "खेल कार्यहरू खोल्नुहोस्"
+
+#: ../../../lib/web/src/components/layout/mochi-menu.tsx:133
+msgid "Open menu"
+msgstr "मेनु खोल्नुहोस्"
 
 #: ../../../lib/web/src/components/layout/top-bar.tsx:63
 #: ../../../lib/web/src/components/layout/top-bar.tsx:68
@@ -1022,7 +1064,7 @@ msgstr "थिम सेटिङ खोल्नुहोस्"
 msgid "Other"
 msgstr "अन्य"
 
-#: ../../../lib/web/src/features/access/access-list.tsx:217
+#: ../../../lib/web/src/features/access/access-list.tsx:222
 msgid "Owner"
 msgstr "मालिक"
 
@@ -1083,6 +1125,10 @@ msgstr "गोपनीयता"
 msgid "Profile"
 msgstr "प्रोफाइल"
 
+#: ../../../lib/web/src/components/person-picker.tsx:200
+msgid "Project members"
+msgstr ""
+
 #. placeholder {0}: pieceName(piece)
 #: src/features/chess/components/promotion-dialog.tsx:81
 #: src/features/chess/components/promotion-dialog.tsx:99
@@ -1131,26 +1177,26 @@ msgstr "सापेक्ष (5m, 3h, 2d)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "२४ घण्टाभित्र सापेक्ष, अन्यथा निरपेक्ष"
 
-#: src/features/chess/index.tsx:448
+#: src/features/chess/index.tsx:461
 msgid "Rematch"
 msgstr "पुन: खेल"
 
-#: ../../../lib/web/src/features/access/access-list.tsx:265
+#: ../../../lib/web/src/features/access/access-list.tsx:270
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:180
 msgid "Remove"
 msgstr "हटाउनुहोस्"
 
-#: ../../../lib/web/src/features/access/access-list.tsx:247
-#: ../../../lib/web/src/features/access/access-list.tsx:253
+#: ../../../lib/web/src/features/access/access-list.tsx:252
+#: ../../../lib/web/src/features/access/access-list.tsx:258
 msgid "Remove access rule"
 msgstr "पहुँच नियम हटाउनुहोस्"
 
 #. placeholder {0}: formatSubject(subject, data.name)
-#: ../../../lib/web/src/features/access/access-list.tsx:259
+#: ../../../lib/web/src/features/access/access-list.tsx:264
 msgid "Remove access rule for \"{0}\"?"
 msgstr "\"{0}\" का लागि पहुँच नियम हटाउने?"
 
-#: ../../../lib/web/src/features/access/access-list.tsx:257
+#: ../../../lib/web/src/features/access/access-list.tsx:262
 msgid "Remove access?"
 msgstr "पहुँच हटाउने?"
 
@@ -1172,16 +1218,16 @@ msgstr "रिसेट गर्नुहोस्"
 msgid "Reset all settings to default values"
 msgstr "सबै सेटिङहरू पूर्वनिर्धारित मानमा रिसेट गर्नुहोस्"
 
-#: src/features/chess/index.tsx:439
-#: src/features/chess/index.tsx:568
+#: src/features/chess/index.tsx:452
+#: src/features/chess/index.tsx:588
 msgid "Resign"
 msgstr "हार स्वीकार्नुहोस्"
 
-#: src/features/chess/index.tsx:559
+#: src/features/chess/index.tsx:579
 msgid "Resign game?"
 msgstr "खेल छोड्ने?"
 
-#: src/features/chess/index.tsx:565
+#: src/features/chess/index.tsx:585
 msgid "Resigning..."
 msgstr "हार स्वीकार्दै..."
 
@@ -1376,7 +1422,7 @@ msgstr "खेल सुरु गर्नुहोस्"
 msgid "Stay tuned though!"
 msgstr "तर सम्पर्कमा रहनुहोस्!"
 
-#: ../../../lib/web/src/features/access/access-list.tsx:191
+#: ../../../lib/web/src/features/access/access-list.tsx:196
 msgid "Subject"
 msgstr "विषय"
 
@@ -1394,6 +1440,14 @@ msgstr "प्रणाली"
 #: ../../../lib/web/src/components/tag-input.tsx:94
 msgid "Tag"
 msgstr "ट्याग"
+
+#: ../../../lib/web/src/components/post-tags.tsx:76
+msgid "Tag already exists"
+msgstr "ट्याग पहिले नै अवस्थित छ"
+
+#: ../../../lib/web/src/components/post-tags.tsx:68
+msgid "Tag must be 50 characters or less"
+msgstr ""
 
 #: ../../../lib/web/src/components/post-tags.tsx:101
 #: ../../../lib/web/src/components/post-tags.tsx:115
@@ -1433,7 +1487,7 @@ msgstr "थिम सेटिङहरू"
 msgid "This page has not been created yet."
 msgstr "यो पृष्ठ अझै सिर्जना गरिएको छैन।"
 
-#: src/features/chess/index.tsx:581
+#: src/features/chess/index.tsx:601
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "यसले खेल र यसको च्याटलाई स्थायी रूपमा मेटाउनेछ। यो कार्य फिर्ता गर्न सकिँदैन।"
 
@@ -1552,6 +1606,7 @@ msgstr "अप्रमाणित"
 msgid "Use your passkey"
 msgstr "आफ्नो पासकी प्रयोग गर्नुहोस्"
 
+#: ../../../lib/web/src/components/layout/mochi-menu.tsx:86
 #: ../../../lib/web/src/features/access/access-dialog.tsx:158
 msgid "User"
 msgstr "प्रयोगकर्ता"
@@ -1609,6 +1664,10 @@ msgstr "हामीले <0>{0}</0> मा प्रमाणीकरण क�
 msgid "We'll be back online shortly."
 msgstr "हामी छिट्टै फेरि अनलाइन हुनेछौँ।"
 
+#: ../../../lib/web/src/components/notifications-dropdown.tsx:197
+msgid "We'll notify you when something important happens."
+msgstr ""
+
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:13
 msgid "Website is under maintenance!"
 msgstr "वेबसाइट मर्मतसम्भारमा छ!"
@@ -1618,13 +1677,13 @@ msgid "Wednesday"
 msgstr "बुधबार"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:405
+#: src/features/chess/index.tsx:418
 msgid "White"
 msgstr "सेतो"
 
 #. placeholder {0}: pieceName(piece.type)
 #. placeholder {0}: pieceName(type)
-#: src/features/chess/components/chess-board.tsx:307
+#: src/features/chess/components/chess-board.tsx:305
 #: src/features/chess/components/chess-piece-icon.tsx:309
 msgid "White {0}"
 msgstr "सेतो {0}"
@@ -1640,6 +1699,10 @@ msgstr "तपाईंसँग यो खण्डमा पहुँच छ�
 #: ../../../lib/web/src/features/errors/forbidden.tsx:18
 msgid "You don't have necessary permission <0/>to view this resource."
 msgstr "यो स्रोत हेर्न <0/>तपाईंसँग आवश्यक अनुमति छैन।"
+
+#: ../../../lib/web/src/components/notifications-dropdown.tsx:193
+msgid "You're all caught up!"
+msgstr ""
 
 #: ../../../lib/web/src/components/restore-banner.tsx:91
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."

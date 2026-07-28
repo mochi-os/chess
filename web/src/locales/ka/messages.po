@@ -124,7 +124,7 @@ msgstr "წვდომა უარყოფილია"
 msgid "Access Forbidden"
 msgstr "წვდომა აკრძალულია"
 
-#: ../../../lib/web/src/features/access/access-list.tsx:192
+#: ../../../lib/web/src/features/access/access-list.tsx:197
 msgid "Access level"
 msgstr "წვდომის დონე"
 
@@ -144,10 +144,11 @@ msgstr "ანგარიშის ტიპი"
 msgid "Account verified"
 msgstr "ანგარიში დადასტურებულია"
 
-#: src/components/layout/chess-layout.tsx:111
+#: src/components/layout/chess-layout.tsx:110
 msgid "Active games"
 msgstr "აქტიური თამაშები"
 
+#: ../../../lib/web/src/features/access/access-dialog.tsx:332
 #: ../../../lib/web/src/features/accounts/account-add.tsx:196
 msgid "Add"
 msgstr "დამატება"
@@ -198,6 +199,10 @@ msgstr "არსებულ შეტყობინებებში და�
 msgid "Add view"
 msgstr "ხედის დამატება"
 
+#: ../../../lib/web/src/features/access/access-dialog.tsx:332
+msgid "Adding..."
+msgstr "დამატება..."
+
 #: ../../../lib/web/src/components/config-drawer.tsx:71
 msgid "Adjust the appearance and layout to suit your preferences."
 msgstr "მოარგეთ გარემო და განლაგება თქვენს უპირატესობებს."
@@ -218,11 +223,15 @@ msgstr "მოხდა შეცდომა"
 msgid "An unexpected error occurred"
 msgstr "მოხდა მოულოდნელი შეცდომა"
 
+#: ../../../lib/web/src/features/access/access-list.tsx:45
+msgid "Anyone"
+msgstr "ნებისმიერი"
+
 #: ../../../lib/web/src/components/sign-out-dialog.tsx:27
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "დარწმუნებული ხართ, რომ გსურთ გასვლა? ანგარიშზე წვდომისთვის ხელახლა შესვლა მოგიწევთ."
 
-#: src/features/chess/index.tsx:560
+#: src/features/chess/index.tsx:580
 msgid "Are you sure you want to resign? {opponentName} will win the game."
 msgstr "დარწმუნებული ხართ, რომ გსურთ დათმობა? {opponentName} მოიგებს თამაშს."
 
@@ -233,6 +242,10 @@ msgstr "ზრდადი"
 #: ../../../lib/web/src/components/ui/sort-direction-button.tsx:27
 msgid "Ascending"
 msgstr "ზრდადობით"
+
+#: ../../../lib/web/src/features/access/access-list.tsx:46
+msgid "Authenticated users"
+msgstr ""
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:315
 msgid "Authenticator code"
@@ -253,13 +266,13 @@ msgid "bishop"
 msgstr "დაბანილი"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:405
+#: src/features/chess/index.tsx:418
 msgid "Black"
 msgstr "შავი"
 
 #. placeholder {0}: pieceName(piece.type)
 #. placeholder {0}: pieceName(type)
-#: src/features/chess/components/chess-board.tsx:307
+#: src/features/chess/components/chess-board.tsx:305
 #: src/features/chess/components/chess-piece-icon.tsx:309
 msgid "Black {0}"
 msgstr "შავი {0}"
@@ -275,7 +288,7 @@ msgstr "ინტერესის გაძლიერება"
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:248
 #: ../../../lib/web/src/components/ui/editable-field-row.tsx:132
 #: ../../../lib/web/src/features/access/access-dialog.tsx:328
-#: ../../../lib/web/src/features/access/access-list.tsx:263
+#: ../../../lib/web/src/features/access/access-list.tsx:268
 #: ../../../lib/web/src/features/accounts/account-add.tsx:188
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:91
 #: src/features/chess/components/new-game.tsx:145
@@ -292,22 +305,26 @@ msgstr "ამ შეტყობინების კატეგორია"
 msgid "Change notification category"
 msgstr "შეტყობინების კატეგორიის შეცვლა"
 
-#: src/features/chess/index.tsx:498
-#: src/features/chess/index.tsx:531
+#: src/features/chess/index.tsx:518
+#: src/features/chess/index.tsx:551
 msgid "Chat"
 msgstr "ჩატი"
 
-#: src/features/chess/index.tsx:101
-#: src/features/chess/index.tsx:333
-#: src/features/chess/index.tsx:345
+#: ../../../lib/web/src/components/notifications-dropdown.tsx:198
+msgid "Check \"All\" to see your past notifications."
+msgstr ""
+
+#: src/features/chess/index.tsx:98
+#: src/features/chess/index.tsx:346
+#: src/features/chess/index.tsx:358
 msgid "Chess"
 msgstr "ჭადრაკი"
 
-#: src/features/chess/components/chess-board.tsx:262
+#: src/features/chess/components/chess-board.tsx:260
 msgid "Chess board. Use arrow keys to navigate, Enter or Space to select."
 msgstr "ჭადრაკის დაფა. გამოიყენეთ ისრები ნავიგაციისთვის, Enter ან Space ასარჩევად."
 
-#: src/features/chess/components/chess-board.tsx:261
+#: src/features/chess/components/chess-board.tsx:259
 msgid "Chess board. Your turn. Use arrow keys to navigate, Enter or Space to select."
 msgstr "ჭადრაკის დაფა. თქვენი სვლაა. გამოიყენეთ ისრები ნავიგაციისთვის, Enter ან Space ასარჩევად."
 
@@ -412,7 +429,7 @@ msgstr "მალე!"
 msgid "Compact"
 msgstr "კომპაქტური"
 
-#: src/components/layout/chess-layout.tsx:122
+#: src/components/layout/chess-layout.tsx:121
 msgid "Completed"
 msgstr "დასრულდა"
 
@@ -495,15 +512,15 @@ msgstr "ნაგულისხმევი"
 msgid "Default AI account"
 msgstr "ნაგულისხმევი AI ანგარიში"
 
-#: src/features/chess/index.tsx:589
+#: src/features/chess/index.tsx:609
 msgid "Delete"
 msgstr "წაშლა"
 
-#: src/features/chess/index.tsx:451
+#: src/features/chess/index.tsx:464
 msgid "Delete game"
 msgstr "თამაშის წაშლა"
 
-#: src/features/chess/index.tsx:580
+#: src/features/chess/index.tsx:600
 msgid "Delete game?"
 msgstr "თამაშის წაშლა?"
 
@@ -511,7 +528,7 @@ msgstr "თამაშის წაშლა?"
 msgid "Delete your account on the old server"
 msgstr "წაშალეთ თქვენი ანგარიში ძველ სერვერზე"
 
-#: src/features/chess/index.tsx:586
+#: src/features/chess/index.tsx:606
 msgid "Deleting..."
 msgstr "იშლება..."
 
@@ -542,6 +559,10 @@ msgstr "ვებ ბრაუზერიდან აღმოჩენა"
 msgid "Direction"
 msgstr "მიმართულება"
 
+#: ../../../lib/web/src/components/person-picker.tsx:214
+msgid "Directory"
+msgstr ""
+
 #: ../../../lib/web/src/components/restore-banner.tsx:79
 #: ../../../lib/web/src/components/restore-banner.tsx:85
 msgid "Dismiss"
@@ -564,7 +585,7 @@ msgstr "ჩამოტვირთვა ვერ მოხერხდა"
 msgid "Draw agreed"
 msgstr "ფრე შეთანხმდა"
 
-#: src/features/chess/index.tsx:464
+#: src/features/chess/index.tsx:477
 msgid "Draw offered — waiting for {opponentName}"
 msgstr "შემოთავაზებულია ფრე — ველოდები {opponentName}-ს"
 
@@ -603,7 +624,7 @@ msgstr "გვერდითი პანელის გაშლა"
 msgid "Extra large"
 msgstr "ძალიან დიდი"
 
-#: src/features/chess/index.tsx:213
+#: src/features/chess/index.tsx:216
 msgid "Failed to accept draw"
 msgstr "ფრეს მიღება ვერ მოხერხდა"
 
@@ -615,15 +636,15 @@ msgstr "ანგარიშის დამატება ვერ მოხ
 msgid "Failed to create game"
 msgstr "თამაშის შექმნა ვერ მოხერხდა"
 
-#: src/features/chess/index.tsx:228
+#: src/features/chess/index.tsx:231
 msgid "Failed to create rematch"
 msgstr "რევანშის შექმნა ვერ მოხერხდა"
 
-#: src/features/chess/index.tsx:218
+#: src/features/chess/index.tsx:221
 msgid "Failed to decline draw"
 msgstr "ფრეზე უარის თქმა ვერ მოხერხდა"
 
-#: src/features/chess/index.tsx:240
+#: src/features/chess/index.tsx:243
 msgid "Failed to delete game"
 msgstr "თამაშის წაშლა ვერ მოხერხდა"
 
@@ -635,11 +656,11 @@ msgstr "სურათის ჩატვირთვა ვერ მოხე
 msgid "Failed to load video"
 msgstr "ვიდეოს ჩატვირთვა ვერ მოხერხდა"
 
-#: src/features/chess/index.tsx:191
+#: src/features/chess/index.tsx:194
 msgid "Failed to make move"
 msgstr "სვლის გაკეთება ვერ მოხერხდა"
 
-#: src/features/chess/index.tsx:208
+#: src/features/chess/index.tsx:211
 msgid "Failed to offer draw"
 msgstr "ფრეს შეთავაზება ვერ მოხერხდა"
 
@@ -647,12 +668,12 @@ msgstr "ფრეს შეთავაზება ვერ მოხერხ
 msgid "Failed to remove account"
 msgstr "ანგარიშის წაშლა ვერ მოხერხდა"
 
-#: src/features/chess/index.tsx:201
+#: src/features/chess/index.tsx:204
 msgid "Failed to resign"
 msgstr "თანამდებობიდან გადადგომა ვერ მოხერხდა"
 
-#: src/features/chess/index.tsx:515
-#: src/features/chess/index.tsx:548
+#: src/features/chess/index.tsx:535
+#: src/features/chess/index.tsx:568
 msgid "Failed to send"
 msgstr "გაგზავნა ვერ მოხერხდა"
 
@@ -680,6 +701,10 @@ msgstr "მცურავი"
 msgid "Friday"
 msgstr "პარასკევი"
 
+#: ../../../lib/web/src/components/person-picker.tsx:207
+msgid "Friends"
+msgstr "მეგობრები"
+
 #: ../../../lib/web/src/components/travelling-picker.tsx:153
 msgid "From"
 msgstr "ვისგან"
@@ -701,7 +726,7 @@ msgstr "სრული განლაგება"
 msgid "Game created"
 msgstr "თამაში შეიქმნა"
 
-#: src/features/chess/index.tsx:236
+#: src/features/chess/index.tsx:239
 msgid "Game deleted"
 msgstr "თამაში წაიშალა"
 
@@ -734,6 +759,11 @@ msgstr "წინა გვერდზე გადასვლა"
 #: ../../../lib/web/src/features/access/access-dialog.tsx:162
 msgid "Group"
 msgstr "ჯგუფი"
+
+#. placeholder {0}: name || subject.slice(1)
+#: ../../../lib/web/src/features/access/access-list.tsx:68
+msgid "Group: {0}"
+msgstr ""
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:70
 msgid "Hide"
@@ -804,6 +834,10 @@ msgstr "შეიტყვეთ მეტი"
 #: ../../../lib/web/src/components/config-drawer.tsx:354
 msgid "Left to Right"
 msgstr "მარცხნიდან მარჯვნივ"
+
+#: ../../../lib/web/src/components/post-tags.tsx:72
+msgid "Letters, numbers, spaces, and hyphens only"
+msgstr ""
 
 #: ../../../lib/web/src/components/config-drawer.tsx:213
 #: ../../../lib/web/src/components/theme-switch.tsx:45
@@ -881,7 +915,7 @@ msgstr "ქსელის შეცდომა"
 msgid "New"
 msgstr "ახალი"
 
-#: src/components/layout/chess-layout.tsx:136
+#: src/components/layout/chess-layout.tsx:138
 #: src/features/chess/components/game-empty-state.tsx:27
 #: src/features/chess/components/game-empty-state.tsx:43
 #: src/features/chess/components/new-game.tsx:96
@@ -893,7 +927,7 @@ msgstr "ახალი თამაში"
 msgid "Next image"
 msgstr "შემდეგი სურათი"
 
-#: ../../../lib/web/src/features/access/access-list.tsx:160
+#: ../../../lib/web/src/features/access/access-list.tsx:165
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "წვდომის წესები არ არის კონფიგურირებული. დაამატეთ წესები იმის მართვისთვის, თუ ვის აქვს წვდომა ამ რესურსზე."
 
@@ -920,6 +954,10 @@ msgstr "ხელმისაწვდომი ჯგუფები არ ა
 #: src/features/chess/components/chat-message-list.tsx:158
 msgid "No messages yet"
 msgstr "შეტყობინებები ჯერ არ არის"
+
+#: ../../../lib/web/src/components/notifications-dropdown.tsx:193
+msgid "No notifications yet"
+msgstr ""
 
 #: ../../../lib/web/src/components/place-picker.tsx:132
 msgid "No places found"
@@ -977,7 +1015,7 @@ msgstr "შეტყობინებები"
 msgid "Notifications: {0}"
 msgstr "შეტყობინებები: {0}"
 
-#: src/features/chess/index.tsx:435
+#: src/features/chess/index.tsx:448
 msgid "Offer draw"
 msgstr "ფრის შეთავაზება"
 
@@ -995,13 +1033,17 @@ msgstr "ანგარიშის მოქმედებების გა�
 msgid "Open actions"
 msgstr "მოქმედებების გახსნა"
 
-#: src/features/chess/index.tsx:414
+#: src/features/chess/index.tsx:427
 msgid "Open chat panel"
 msgstr "ჩატის პანელის გახსნა"
 
-#: src/features/chess/index.tsx:422
+#: src/features/chess/index.tsx:435
 msgid "Open game actions"
 msgstr "თამაშის მოქმედებების გახსნა"
+
+#: ../../../lib/web/src/components/layout/mochi-menu.tsx:133
+msgid "Open menu"
+msgstr "მენიუს გახსნა"
 
 #: ../../../lib/web/src/components/layout/top-bar.tsx:63
 #: ../../../lib/web/src/components/layout/top-bar.tsx:68
@@ -1022,7 +1064,7 @@ msgstr "თემის პარამეტრების გახსნა"
 msgid "Other"
 msgstr "სხვა"
 
-#: ../../../lib/web/src/features/access/access-list.tsx:217
+#: ../../../lib/web/src/features/access/access-list.tsx:222
 msgid "Owner"
 msgstr "მფლობელი"
 
@@ -1083,6 +1125,10 @@ msgstr "კონფიდენციალურობა"
 msgid "Profile"
 msgstr "პროფილი"
 
+#: ../../../lib/web/src/components/person-picker.tsx:200
+msgid "Project members"
+msgstr ""
+
 #. placeholder {0}: pieceName(piece)
 #: src/features/chess/components/promotion-dialog.tsx:81
 #: src/features/chess/components/promotion-dialog.tsx:99
@@ -1131,26 +1177,26 @@ msgstr "ფარდობითი (5წ, 3ს, 2დ)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "ფარდობითი 24 საათში, წინააღმდეგ შემთხვევაში აბსოლუტური"
 
-#: src/features/chess/index.tsx:448
+#: src/features/chess/index.tsx:461
 msgid "Rematch"
 msgstr "რევანში"
 
-#: ../../../lib/web/src/features/access/access-list.tsx:265
+#: ../../../lib/web/src/features/access/access-list.tsx:270
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:180
 msgid "Remove"
 msgstr "წაშლა"
 
-#: ../../../lib/web/src/features/access/access-list.tsx:247
-#: ../../../lib/web/src/features/access/access-list.tsx:253
+#: ../../../lib/web/src/features/access/access-list.tsx:252
+#: ../../../lib/web/src/features/access/access-list.tsx:258
 msgid "Remove access rule"
 msgstr "წვდომის წესის წაშლა"
 
 #. placeholder {0}: formatSubject(subject, data.name)
-#: ../../../lib/web/src/features/access/access-list.tsx:259
+#: ../../../lib/web/src/features/access/access-list.tsx:264
 msgid "Remove access rule for \"{0}\"?"
 msgstr "წავშალოთ წვდომის წესი „{0}“-ისთვის?"
 
-#: ../../../lib/web/src/features/access/access-list.tsx:257
+#: ../../../lib/web/src/features/access/access-list.tsx:262
 msgid "Remove access?"
 msgstr "წვდომის წაშლა?"
 
@@ -1172,16 +1218,16 @@ msgstr "გადაყენება"
 msgid "Reset all settings to default values"
 msgstr "ყველა პარამეტრის გადაყენება ნაგულისხმევ მნიშვნელობებზე"
 
-#: src/features/chess/index.tsx:439
-#: src/features/chess/index.tsx:568
+#: src/features/chess/index.tsx:452
+#: src/features/chess/index.tsx:588
 msgid "Resign"
 msgstr "ჩაბარება"
 
-#: src/features/chess/index.tsx:559
+#: src/features/chess/index.tsx:579
 msgid "Resign game?"
 msgstr "თამაშის ჩაბარება?"
 
-#: src/features/chess/index.tsx:565
+#: src/features/chess/index.tsx:585
 msgid "Resigning..."
 msgstr "ჩაბარება..."
 
@@ -1376,7 +1422,7 @@ msgstr "თამაშის დაწყება"
 msgid "Stay tuned though!"
 msgstr "თუმცა იყავით ფხიზლად!"
 
-#: ../../../lib/web/src/features/access/access-list.tsx:191
+#: ../../../lib/web/src/features/access/access-list.tsx:196
 msgid "Subject"
 msgstr "თემა"
 
@@ -1394,6 +1440,14 @@ msgstr "სისტემა"
 #: ../../../lib/web/src/components/tag-input.tsx:94
 msgid "Tag"
 msgstr "ტეგი"
+
+#: ../../../lib/web/src/components/post-tags.tsx:76
+msgid "Tag already exists"
+msgstr "ტეგი უკვე არსებობს"
+
+#: ../../../lib/web/src/components/post-tags.tsx:68
+msgid "Tag must be 50 characters or less"
+msgstr ""
 
 #: ../../../lib/web/src/components/post-tags.tsx:101
 #: ../../../lib/web/src/components/post-tags.tsx:115
@@ -1433,7 +1487,7 @@ msgstr "თემის პარამეტრები"
 msgid "This page has not been created yet."
 msgstr "ეს გვერდი ჯერ არ შექმნილა."
 
-#: src/features/chess/index.tsx:581
+#: src/features/chess/index.tsx:601
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "ეს სამუდამოდ წაშლის თამაშსა და მის ჩატს. ამ მოქმედების გაუქმება შეუძლებელია."
 
@@ -1552,6 +1606,7 @@ msgstr "უსათაურო ლისტინგი"
 msgid "Use your passkey"
 msgstr "გამოიყენეთ თქვენი passkey"
 
+#: ../../../lib/web/src/components/layout/mochi-menu.tsx:86
 #: ../../../lib/web/src/features/access/access-dialog.tsx:158
 msgid "User"
 msgstr "მომხმარებელი"
@@ -1609,6 +1664,10 @@ msgstr "გავაგზავნეთ დამადასტურებ�
 msgid "We'll be back online shortly."
 msgstr "ვერ ვიპოვეთ აპები თქვენთვის. ეს მოულოდნელია."
 
+#: ../../../lib/web/src/components/notifications-dropdown.tsx:197
+msgid "We'll notify you when something important happens."
+msgstr ""
+
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:13
 msgid "Website is under maintenance!"
 msgstr "ვებსაიტი ტექმომსახურებაშია!"
@@ -1618,13 +1677,13 @@ msgid "Wednesday"
 msgstr "ვებსაიტი ტექმომსახურებაშია!"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:405
+#: src/features/chess/index.tsx:418
 msgid "White"
 msgstr "როდესაც სხვა ვიკები ამ ვიკს რეპლიცირებენ, ისინი აქ გამოჩნდებიან."
 
 #. placeholder {0}: pieceName(piece.type)
 #. placeholder {0}: pieceName(type)
-#: src/features/chess/components/chess-board.tsx:307
+#: src/features/chess/components/chess-board.tsx:305
 #: src/features/chess/components/chess-piece-icon.tsx:309
 msgid "White {0}"
 msgstr "თეთრი {0}"
@@ -1640,6 +1699,10 @@ msgstr "ამ განყოფილებაზე წვდომა არ
 #: ../../../lib/web/src/features/errors/forbidden.tsx:18
 msgid "You don't have necessary permission <0/>to view this resource."
 msgstr "თქვენ არ გაქვთ საჭირო ნებართვა <0/>ამ რესურსის სანახავად."
+
+#: ../../../lib/web/src/components/notifications-dropdown.tsx:193
+msgid "You're all caught up!"
+msgstr ""
 
 #: ../../../lib/web/src/components/restore-banner.tsx:91
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."

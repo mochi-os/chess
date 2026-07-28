@@ -124,7 +124,7 @@ msgstr "צוטריט אָפּגעזאָגט"
 msgid "Access Forbidden"
 msgstr "צוטריט פֿאַרבאָטן"
 
-#: ../../../lib/web/src/features/access/access-list.tsx:192
+#: ../../../lib/web/src/features/access/access-list.tsx:197
 msgid "Access level"
 msgstr "צוטריט שטאַפּל"
 
@@ -144,10 +144,11 @@ msgstr "קאָנטע סאָרט"
 msgid "Account verified"
 msgstr "קאָנטע באַשטעטיקט"
 
-#: src/components/layout/chess-layout.tsx:111
+#: src/components/layout/chess-layout.tsx:110
 msgid "Active games"
 msgstr "אַקטיווע שפּילן"
 
+#: ../../../lib/web/src/features/access/access-dialog.tsx:332
 #: ../../../lib/web/src/features/accounts/account-add.tsx:196
 msgid "Add"
 msgstr "צולייגן"
@@ -198,6 +199,10 @@ msgstr "צולייגן צו עקזיסטירנדיקע נאָטיפֿיקאַצ�
 msgid "Add view"
 msgstr "צולייגן ווי"
 
+#: ../../../lib/web/src/features/access/access-dialog.tsx:332
+msgid "Adding..."
+msgstr "צולייגן..."
+
 #: ../../../lib/web/src/components/config-drawer.tsx:71
 msgid "Adjust the appearance and layout to suit your preferences."
 msgstr "פּאַסט אָן דעם אויסזען און לייאַוט צו אײַער געשמאַק."
@@ -218,11 +223,15 @@ msgstr "אַ פֿעלער איז פֿאָרגעקומען"
 msgid "An unexpected error occurred"
 msgstr "אַן אומדערוואַרטעטער פֿעלער איז פֿאָרגעקומען"
 
+#: ../../../lib/web/src/features/access/access-list.tsx:45
+msgid "Anyone"
+msgstr "עמעצער"
+
 #: ../../../lib/web/src/components/sign-out-dialog.tsx:27
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "זענט איר זיכער איר ווילט אַרויסלאָגן? איר וועט דאַרפֿן ווידער אַרײַנלאָגן צו צוטריט אײַער קאָנטע."
 
-#: src/features/chess/index.tsx:560
+#: src/features/chess/index.tsx:580
 msgid "Are you sure you want to resign? {opponentName} will win the game."
 msgstr "זענט איר זיכער איר ווילט רעזיגנירן? {opponentName} וועט געווינען די שפּיל."
 
@@ -233,6 +242,10 @@ msgstr "אַויסשטײַגן"
 #: ../../../lib/web/src/components/ui/sort-direction-button.tsx:27
 msgid "Ascending"
 msgstr "אַרויפֿגייענדיק"
+
+#: ../../../lib/web/src/features/access/access-list.tsx:46
+msgid "Authenticated users"
+msgstr ""
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:315
 msgid "Authenticator code"
@@ -253,13 +266,13 @@ msgid "bishop"
 msgstr "לויפֿער"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:405
+#: src/features/chess/index.tsx:418
 msgid "Black"
 msgstr "שוואַרץ"
 
 #. placeholder {0}: pieceName(piece.type)
 #. placeholder {0}: pieceName(type)
-#: src/features/chess/components/chess-board.tsx:307
+#: src/features/chess/components/chess-board.tsx:305
 #: src/features/chess/components/chess-piece-icon.tsx:309
 msgid "Black {0}"
 msgstr "שוואַרץ {0}"
@@ -275,7 +288,7 @@ msgstr "פֿאַרשטאַרקן אינטערעס"
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:248
 #: ../../../lib/web/src/components/ui/editable-field-row.tsx:132
 #: ../../../lib/web/src/features/access/access-dialog.tsx:328
-#: ../../../lib/web/src/features/access/access-list.tsx:263
+#: ../../../lib/web/src/features/access/access-list.tsx:268
 #: ../../../lib/web/src/features/accounts/account-add.tsx:188
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:91
 #: src/features/chess/components/new-game.tsx:145
@@ -292,22 +305,26 @@ msgstr "קאַטעגאָריע פֿאַר דעם נאָטיפֿיקאַציע"
 msgid "Change notification category"
 msgstr "ענדערן נאָטיפֿיקאַציע קאַטעגאָריע"
 
-#: src/features/chess/index.tsx:498
-#: src/features/chess/index.tsx:531
+#: src/features/chess/index.tsx:518
+#: src/features/chess/index.tsx:551
 msgid "Chat"
 msgstr "שמועס"
 
-#: src/features/chess/index.tsx:101
-#: src/features/chess/index.tsx:333
-#: src/features/chess/index.tsx:345
+#: ../../../lib/web/src/components/notifications-dropdown.tsx:198
+msgid "Check \"All\" to see your past notifications."
+msgstr ""
+
+#: src/features/chess/index.tsx:98
+#: src/features/chess/index.tsx:346
+#: src/features/chess/index.tsx:358
 msgid "Chess"
 msgstr "שאָך"
 
-#: src/features/chess/components/chess-board.tsx:262
+#: src/features/chess/components/chess-board.tsx:260
 msgid "Chess board. Use arrow keys to navigate, Enter or Space to select."
 msgstr "שאָך ברעט. נוצט פֿײַל קלאַווישן צו נאַוויגירן, Enter אָדער Space צו אויסקלײַבן."
 
-#: src/features/chess/components/chess-board.tsx:261
+#: src/features/chess/components/chess-board.tsx:259
 msgid "Chess board. Your turn. Use arrow keys to navigate, Enter or Space to select."
 msgstr "שאָך ברעט. אײַער גאַנג. נוצט פֿײַל קלאַווישן צו נאַוויגירן, Enter אָדער Space צו אויסקלײַבן."
 
@@ -412,7 +429,7 @@ msgstr "קומט באַלד!"
 msgid "Compact"
 msgstr "קאָמפּאַקט"
 
-#: src/components/layout/chess-layout.tsx:122
+#: src/components/layout/chess-layout.tsx:121
 msgid "Completed"
 msgstr "פֿאַרענדיקט"
 
@@ -495,15 +512,15 @@ msgstr "פֿאַרשטאַנדלעך"
 msgid "Default AI account"
 msgstr "פֿאַרשטאַנדלעך AI קאָנטע"
 
-#: src/features/chess/index.tsx:589
+#: src/features/chess/index.tsx:609
 msgid "Delete"
 msgstr "אויסמעקן"
 
-#: src/features/chess/index.tsx:451
+#: src/features/chess/index.tsx:464
 msgid "Delete game"
 msgstr "אויסמעקן שפּיל"
 
-#: src/features/chess/index.tsx:580
+#: src/features/chess/index.tsx:600
 msgid "Delete game?"
 msgstr "אויסמעקן דעם שפּיל?"
 
@@ -511,7 +528,7 @@ msgstr "אויסמעקן דעם שפּיל?"
 msgid "Delete your account on the old server"
 msgstr "לעש אויס דיין קאנטע אויפן אלטן סערווער"
 
-#: src/features/chess/index.tsx:586
+#: src/features/chess/index.tsx:606
 msgid "Deleting..."
 msgstr "אויסמעקן..."
 
@@ -542,6 +559,10 @@ msgstr "אויסקלײַבן פֿון וועב בראָוזער"
 msgid "Direction"
 msgstr "ריכטונג"
 
+#: ../../../lib/web/src/components/person-picker.tsx:214
+msgid "Directory"
+msgstr ""
+
 #: ../../../lib/web/src/components/restore-banner.tsx:79
 #: ../../../lib/web/src/components/restore-banner.tsx:85
 msgid "Dismiss"
@@ -564,7 +585,7 @@ msgstr "אַראָפּלאָדן דורכגעפֿאַלן"
 msgid "Draw agreed"
 msgstr "מסכים געווען אויף אַ גלײַך"
 
-#: src/features/chess/index.tsx:464
+#: src/features/chess/index.tsx:477
 msgid "Draw offered — waiting for {opponentName}"
 msgstr "תּיקו פֿאָרגעלייגט — וואַרט אויף {opponentName}"
 
@@ -603,7 +624,7 @@ msgstr "פֿאַרברייטערן זײַטלאַסט"
 msgid "Extra large"
 msgstr "עקסטרא גרויס"
 
-#: src/features/chess/index.tsx:213
+#: src/features/chess/index.tsx:216
 msgid "Failed to accept draw"
 msgstr "ניט געלונגען אָנצונעמען תּיקו"
 
@@ -615,15 +636,15 @@ msgstr "ניט געלונגען צוצוגעבן קאָנטע"
 msgid "Failed to create game"
 msgstr "ניט געלונגען צו שאַפֿן שפּיל"
 
-#: src/features/chess/index.tsx:228
+#: src/features/chess/index.tsx:231
 msgid "Failed to create rematch"
 msgstr "ניט געלונגען צו שאַפֿן רעמאַטש"
 
-#: src/features/chess/index.tsx:218
+#: src/features/chess/index.tsx:221
 msgid "Failed to decline draw"
 msgstr "ניט געלונגען צו אָפּזאָגן תּיקו"
 
-#: src/features/chess/index.tsx:240
+#: src/features/chess/index.tsx:243
 msgid "Failed to delete game"
 msgstr "ניט געלונגען צו מעקן שפּיל"
 
@@ -635,11 +656,11 @@ msgstr "נישט געקאָנט לאָדן דאָס בילד"
 msgid "Failed to load video"
 msgstr "נישט געקאָנט לאָדן דעם ווידעאָ"
 
-#: src/features/chess/index.tsx:191
+#: src/features/chess/index.tsx:194
 msgid "Failed to make move"
 msgstr "ניט געלונגען צו טאָן גאַנג"
 
-#: src/features/chess/index.tsx:208
+#: src/features/chess/index.tsx:211
 msgid "Failed to offer draw"
 msgstr "ניט געלונגען פֿאָרצולייגן תּיקו"
 
@@ -647,12 +668,12 @@ msgstr "ניט געלונגען פֿאָרצולייגן תּיקו"
 msgid "Failed to remove account"
 msgstr "ניט געלונגען צו אַראָפּנעמען קאָנטע"
 
-#: src/features/chess/index.tsx:201
+#: src/features/chess/index.tsx:204
 msgid "Failed to resign"
 msgstr "ניט געלונגען צו רעזיגנירן"
 
-#: src/features/chess/index.tsx:515
-#: src/features/chess/index.tsx:548
+#: src/features/chess/index.tsx:535
+#: src/features/chess/index.tsx:568
 msgid "Failed to send"
 msgstr "ניט געלונגען צו שיקן"
 
@@ -680,6 +701,10 @@ msgstr "שווימענדיק"
 msgid "Friday"
 msgstr "פֿרײַטיק"
 
+#: ../../../lib/web/src/components/person-picker.tsx:207
+msgid "Friends"
+msgstr "חברים"
+
 #: ../../../lib/web/src/components/travelling-picker.tsx:153
 msgid "From"
 msgstr "פֿון"
@@ -701,7 +726,7 @@ msgstr "פֿולער אויסשטעל"
 msgid "Game created"
 msgstr "שפּיל געשאַפֿן"
 
-#: src/features/chess/index.tsx:236
+#: src/features/chess/index.tsx:239
 msgid "Game deleted"
 msgstr "שפּיל אויסגעמעקט"
 
@@ -734,6 +759,11 @@ msgstr "גיין צום פֿריִערדיקן בלאַט"
 #: ../../../lib/web/src/features/access/access-dialog.tsx:162
 msgid "Group"
 msgstr "גרופּע"
+
+#. placeholder {0}: name || subject.slice(1)
+#: ../../../lib/web/src/features/access/access-list.tsx:68
+msgid "Group: {0}"
+msgstr ""
 
 #: ../../../lib/web/src/components/data-table/column-header.tsx:70
 msgid "Hide"
@@ -804,6 +834,10 @@ msgstr "לערן מער"
 #: ../../../lib/web/src/components/config-drawer.tsx:354
 msgid "Left to Right"
 msgstr "פֿון לינקס צו רעכטס"
+
+#: ../../../lib/web/src/components/post-tags.tsx:72
+msgid "Letters, numbers, spaces, and hyphens only"
+msgstr ""
 
 #: ../../../lib/web/src/components/config-drawer.tsx:213
 #: ../../../lib/web/src/components/theme-switch.tsx:45
@@ -881,7 +915,7 @@ msgstr "נעץ פֿעלער"
 msgid "New"
 msgstr "נײַ"
 
-#: src/components/layout/chess-layout.tsx:136
+#: src/components/layout/chess-layout.tsx:138
 #: src/features/chess/components/game-empty-state.tsx:27
 #: src/features/chess/components/game-empty-state.tsx:43
 #: src/features/chess/components/new-game.tsx:96
@@ -893,7 +927,7 @@ msgstr "נײַ שפּיל"
 msgid "Next image"
 msgstr "ווײַטערדיק בילד"
 
-#: ../../../lib/web/src/features/access/access-list.tsx:160
+#: ../../../lib/web/src/features/access/access-list.tsx:165
 msgid "No access rules configured. Add rules to control who can access this resource."
 msgstr "קיין צוטריט כּללים קאָנפֿיגורירט. צולייג כּללים צו קאָנטראָלירן ווער קען האָבן צוטריט צו דעם רעסורס."
 
@@ -920,6 +954,10 @@ msgstr "קיין גרופּעס פֿאַראַן"
 #: src/features/chess/components/chat-message-list.tsx:158
 msgid "No messages yet"
 msgstr "נאָך קיין מעלדונגען"
+
+#: ../../../lib/web/src/components/notifications-dropdown.tsx:193
+msgid "No notifications yet"
+msgstr ""
 
 #: ../../../lib/web/src/components/place-picker.tsx:132
 msgid "No places found"
@@ -977,7 +1015,7 @@ msgstr "מעלדונגען"
 msgid "Notifications: {0}"
 msgstr "מעלדונגען: {0}"
 
-#: src/features/chess/index.tsx:435
+#: src/features/chess/index.tsx:448
 msgid "Offer draw"
 msgstr "פֿאָרשלאָג גלײַך"
 
@@ -995,13 +1033,17 @@ msgstr "עפֿן קאָנטע אַקציעס"
 msgid "Open actions"
 msgstr "עפֿענען אַקציעס"
 
-#: src/features/chess/index.tsx:414
+#: src/features/chess/index.tsx:427
 msgid "Open chat panel"
 msgstr "עפֿן שמועס פּאַנעל"
 
-#: src/features/chess/index.tsx:422
+#: src/features/chess/index.tsx:435
 msgid "Open game actions"
 msgstr "עפֿן שפּיל אַקציעס"
+
+#: ../../../lib/web/src/components/layout/mochi-menu.tsx:133
+msgid "Open menu"
+msgstr "עפֿן מעניו"
 
 #: ../../../lib/web/src/components/layout/top-bar.tsx:63
 #: ../../../lib/web/src/components/layout/top-bar.tsx:68
@@ -1022,7 +1064,7 @@ msgstr "עפֿן טעמע אײַנשטעלונגען"
 msgid "Other"
 msgstr "אַנדער"
 
-#: ../../../lib/web/src/features/access/access-list.tsx:217
+#: ../../../lib/web/src/features/access/access-list.tsx:222
 msgid "Owner"
 msgstr "אייגנטימער"
 
@@ -1083,6 +1125,10 @@ msgstr "פּריוואַטקײַט"
 msgid "Profile"
 msgstr "פּראָפֿיל"
 
+#: ../../../lib/web/src/components/person-picker.tsx:200
+msgid "Project members"
+msgstr ""
+
 #. placeholder {0}: pieceName(piece)
 #: src/features/chess/components/promotion-dialog.tsx:81
 #: src/features/chess/components/promotion-dialog.tsx:99
@@ -1131,26 +1177,26 @@ msgstr "רעלאַטיוו (5m, 3h, 2d)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "רעלאַטיוו אין 24 שעה, אַנדערש אַבסאָלוט"
 
-#: src/features/chess/index.tsx:448
+#: src/features/chess/index.tsx:461
 msgid "Rematch"
 msgstr "ווידערמאַטש"
 
-#: ../../../lib/web/src/features/access/access-list.tsx:265
+#: ../../../lib/web/src/features/access/access-list.tsx:270
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:180
 msgid "Remove"
 msgstr "אַראָפּנעמען"
 
-#: ../../../lib/web/src/features/access/access-list.tsx:247
-#: ../../../lib/web/src/features/access/access-list.tsx:253
+#: ../../../lib/web/src/features/access/access-list.tsx:252
+#: ../../../lib/web/src/features/access/access-list.tsx:258
 msgid "Remove access rule"
 msgstr "אַראָפּנעמען צוטריט כּלל"
 
 #. placeholder {0}: formatSubject(subject, data.name)
-#: ../../../lib/web/src/features/access/access-list.tsx:259
+#: ../../../lib/web/src/features/access/access-list.tsx:264
 msgid "Remove access rule for \"{0}\"?"
 msgstr "אַראָפּנעמען די צוטריט־כּלל פֿאַר \"{0}\"?"
 
-#: ../../../lib/web/src/features/access/access-list.tsx:257
+#: ../../../lib/web/src/features/access/access-list.tsx:262
 msgid "Remove access?"
 msgstr "אַראָפּנעמען צוטריט?"
 
@@ -1172,16 +1218,16 @@ msgstr "צוריקזעצן"
 msgid "Reset all settings to default values"
 msgstr "צוריקזעצן אַלע אײַנשטעלונגען צו פֿאַרשטעלונג ווערטן"
 
-#: src/features/chess/index.tsx:439
-#: src/features/chess/index.tsx:568
+#: src/features/chess/index.tsx:452
+#: src/features/chess/index.tsx:588
 msgid "Resign"
 msgstr "רעזיגנירן"
 
-#: src/features/chess/index.tsx:559
+#: src/features/chess/index.tsx:579
 msgid "Resign game?"
 msgstr "רעזיגנירן שפּיל?"
 
-#: src/features/chess/index.tsx:565
+#: src/features/chess/index.tsx:585
 msgid "Resigning..."
 msgstr "רעזיגנירן..."
 
@@ -1376,7 +1422,7 @@ msgstr "הייב אָן שפּיל"
 msgid "Stay tuned though!"
 msgstr "אָבער בלײַב צוגעבונדן!"
 
-#: ../../../lib/web/src/features/access/access-list.tsx:191
+#: ../../../lib/web/src/features/access/access-list.tsx:196
 msgid "Subject"
 msgstr "טעמע"
 
@@ -1394,6 +1440,14 @@ msgstr "סיסטעם"
 #: ../../../lib/web/src/components/tag-input.tsx:94
 msgid "Tag"
 msgstr "טאַג"
+
+#: ../../../lib/web/src/components/post-tags.tsx:76
+msgid "Tag already exists"
+msgstr "טאַג עקזיסטירט שוין"
+
+#: ../../../lib/web/src/components/post-tags.tsx:68
+msgid "Tag must be 50 characters or less"
+msgstr ""
 
 #: ../../../lib/web/src/components/post-tags.tsx:101
 #: ../../../lib/web/src/components/post-tags.tsx:115
@@ -1433,7 +1487,7 @@ msgstr "טעמע־אײַנשטעלונגען"
 msgid "This page has not been created yet."
 msgstr "די דאָזיקע זײַט איז נאָך נישט געשאַפֿן געוואָרן."
 
-#: src/features/chess/index.tsx:581
+#: src/features/chess/index.tsx:601
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "דאָס וועט אויף שטענדיק אויסמעקן דעם שפּיל און זײַן טשאַט. מע קען דעם ניט מבֿטל מאַכן."
 
@@ -1552,6 +1606,7 @@ msgstr "אומפֿאַריפֿיצירט"
 msgid "Use your passkey"
 msgstr "ניצט אײַער passkey"
 
+#: ../../../lib/web/src/components/layout/mochi-menu.tsx:86
 #: ../../../lib/web/src/features/access/access-dialog.tsx:158
 msgid "User"
 msgstr "באַניצער"
@@ -1609,6 +1664,10 @@ msgstr "מיר האָבן געשיקט אַ באַשטעטיקונג־קאָד �
 msgid "We'll be back online shortly."
 msgstr "מיר וועלן זײַן צוריק אָנלײַן באַלד."
 
+#: ../../../lib/web/src/components/notifications-dropdown.tsx:197
+msgid "We'll notify you when something important happens."
+msgstr ""
+
 #: ../../../lib/web/src/features/errors/maintenance-error.tsx:13
 msgid "Website is under maintenance!"
 msgstr "וועבזײַטל איז אונטער פֿאַרריכטונג!"
@@ -1618,13 +1677,13 @@ msgid "Wednesday"
 msgstr "מיטוואָך"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:405
+#: src/features/chess/index.tsx:418
 msgid "White"
 msgstr "ווײַס"
 
 #. placeholder {0}: pieceName(piece.type)
 #. placeholder {0}: pieceName(type)
-#: src/features/chess/components/chess-board.tsx:307
+#: src/features/chess/components/chess-board.tsx:305
 #: src/features/chess/components/chess-piece-icon.tsx:309
 msgid "White {0}"
 msgstr "ווײַס {0}"
@@ -1640,6 +1699,10 @@ msgstr "איר האָט נישט קיין צוטריט צו דעם אָפּטי�
 #: ../../../lib/web/src/features/errors/forbidden.tsx:18
 msgid "You don't have necessary permission <0/>to view this resource."
 msgstr "איר האָט נישט די נײטיקע דערלױבעניש <0/>צו זען דעם רעסורס."
+
+#: ../../../lib/web/src/components/notifications-dropdown.tsx:193
+msgid "You're all caught up!"
+msgstr ""
 
 #: ../../../lib/web/src/components/restore-banner.tsx:91
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."

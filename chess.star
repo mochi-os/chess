@@ -366,74 +366,53 @@ def game_write(game, changes, writer, now):
 	state["snapshot"] = 1
 	return state
 
-def game_apply(e, game, legacy, now, sync=False):
+def game_apply(e, game, now, sync=False):
 	"""Apply an inbound change if it outranks the row we hold.
 
-	Peers on this version send a complete snapshot and the full tuple.
-	A peer predating it sends neither, so the caller's `legacy` dict of
-	partial changes is applied under a tuple of (terminal, our revision
-	+ 1, "", "") - atomic against local writers exactly as before, but
-	still a delta, so state can lag a legacy sender until both sides are
-	upgraded."""
-	if e.content("snapshot"):
-		state = {}
-		for column in GAME_COLUMNS:
-			value = e.content(column)
-			# A field absent from a snapshot is a truncated snapshot, not an
-			# empty value: coercing it to "" would let a partial event clear
-			# state the sender never meant to change.
-			if value == None:
-				return None
-			state[column] = value
-		if not game_snapshot_valid(game, state):
-			return None
-		revision = e.content("revision")
-		if not mochi.text.valid(str(revision), "integer"):
-			return None
-		revision = int(revision)
-		if revision < 0:
-			return None
-		# Ordering metadata, not game state, but the whole design rests on it
-		# being well formed. writer must be the authenticated sender: it
-		# decides every same-revision tie, so a peer naming someone else could
-		# steer them all.
-		writer = e.content("writer")
-		if sync:
-			# A relayed snapshot is forwarded by whichever peer held the
-			# winning state, which is not necessarily the peer that wrote it -
-			# that is the whole point of reconciliation. Bind the writer to the
-			# game's players rather than to the relay, and never rewrite it:
-			# the writer element decides conflicts, so changing it in transit
-			# would change who wins.
-			if writer not in game_players(game):
-				return None
-		elif writer != e.header("from"):
-			return None
-		event = e.content("event")
-		if not event or not mochi.text.valid(str(event), "id"):
-			return None
-	elif sync:
-		# A sync frame is a protocol control message with exactly one accepted
-		# shape. Peers predating the feature never send one, so there is no
-		# compatibility case - and the legacy branch would write an empty
-		# writer, which game_reconcile refuses to relay, permanently disabling
-		# this row's ability to repair itself.
+	Every event carries a complete snapshot and a full version tuple; there
+	is no partial form. The pre-snapshot delta path this replaces synthesised
+	a tuple with an empty writer, which game_reconcile cannot relay, so a row
+	it touched could never be repaired - and it was the only route into the
+	games row that skipped validation. An event without a snapshot is now
+	simply not one of ours."""
+	if not e.content("snapshot"):
 		return None
-	else:
-		# Legacy delta path: a peer that predates snapshots. Logged so the
-		# retirement decision is evidence rather than a guessed date - when
-		# this line stops appearing across the fleet, every peer is
-		# upgraded and this branch can go, at which point gameplay events
-		# can require complete snapshots exactly as sync already does.
-		mochi.log.debug("legacy delta event from %s (no snapshot)" % e.header("from"))
-		state = {}
-		for key, value in legacy.items():
-			state[key] = "" if value == None else value
-		if "status" not in state:
-			state["status"] = game["status"]
-		revision = game["revision"] + 1
-		writer = ""
-		event = ""
+	state = {}
+	for column in GAME_COLUMNS:
+		value = e.content(column)
+		# A field absent from a snapshot is a truncated snapshot, not an
+		# empty value: coercing it to "" would let a partial event clear
+		# state the sender never meant to change.
+		if value == None:
+			return None
+		state[column] = value
+	if not game_snapshot_valid(game, state):
+		return None
+	revision = e.content("revision")
+	if not mochi.text.valid(str(revision), "integer"):
+		return None
+	revision = int(revision)
+	if revision < 0:
+		return None
+	# Ordering metadata, not game state, but the whole design rests on it
+	# being well formed.
+	writer = e.content("writer")
+	if sync:
+		# A relayed snapshot is forwarded by whichever peer held the winning
+		# state, which is not necessarily the peer that wrote it - that is the
+		# whole point of reconciliation. Bind the writer to the game's players
+		# rather than to the relay, and never rewrite it: the writer element
+		# decides conflicts, so changing it in transit would change who wins.
+		if writer not in game_players(game):
+			return None
+	elif writer != e.header("from"):
+		# On a direct event the writer must be the authenticated sender: it
+		# decides every same-revision tie, so a peer naming someone else
+		# could steer them all.
+		return None
+	event = e.content("event")
+	if not event or not mochi.text.valid(str(event), "id"):
+		return None
 
 	sets = []
 	params = []
@@ -449,8 +428,8 @@ def game_apply(e, game, legacy, now, sync=False):
 		# Our state dominates. Rejecting is only safe if the sender eventually
 		# learns why, otherwise a peer that acted on a stale view sits on it
 		# forever - core acks a handler that returns cleanly, so nothing else
-		# tells them. Send our winning snapshot back. reconcile is False on
-		# the sync path itself so this cannot ping-pong.
+		# tells them. Send our winning snapshot back. sync is True on the
+		# reply path itself so this cannot ping-pong.
 		if not sync:
 			game_reconcile(e, game)
 		return None
@@ -491,7 +470,7 @@ def event_sync(e):
 		return
 	# sync=True: if OUR state dominates theirs we drop it rather than
 	# answering, which is what terminates the exchange.
-	state = game_apply(e, game, {}, mochi.time.now(), True)
+	state = game_apply(e, game, mochi.time.now(), True)
 	if state == None:
 		return
 	# A repaired row that no open client hears about breaks the invariant that
@@ -1108,8 +1087,7 @@ def event_move(e):
 	# is in memory and does not survive a restart, so a retry after a lost
 	# ack can also arrive looking new.
 	now = mochi.time.now()
-	if game_apply(e, game, {"fen": fen, "pgn": pgn, "status": status,
-			"winner": winner, "draw_offer": None}, now) == None:
+	if game_apply(e, game, now) == None:
 		return
 
 	id = e.content("message")
@@ -1185,7 +1163,7 @@ def event_resign(e):
 		winner = game["opponent"] if sender == game["identity"] else game["identity"]
 
 	now = mochi.time.now()
-	state = game_apply(e, game, {"status": "resigned", "winner": winner}, now)
+	state = game_apply(e, game, now)
 	if state == None:
 		return
 
@@ -1229,7 +1207,7 @@ def event_draw_offer(e):
 	if not mochi.text.valid(incoming, "integer"):
 		incoming = str(now)
 
-	state = game_apply(e, game, {"draw_offer": sender}, now)
+	state = game_apply(e, game, now)
 	if state == None:
 		return
 
@@ -1262,7 +1240,7 @@ def event_draw_accept(e):
 	sender_name = game["identity_name"] if sender == game["identity"] else game["opponent_name"]
 
 	now = mochi.time.now()
-	state = game_apply(e, game, {"status": "draw", "draw_offer": None}, now)
+	state = game_apply(e, game, now)
 	if state == None:
 		return
 
@@ -1295,7 +1273,7 @@ def event_draw_decline(e):
 	sender_name = game["identity_name"] if sender == game["identity"] else game["opponent_name"]
 
 	now = mochi.time.now()
-	state = game_apply(e, game, {"draw_offer": None}, now)
+	state = game_apply(e, game, now)
 	if state == None:
 		return
 
