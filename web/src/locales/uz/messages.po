@@ -23,6 +23,11 @@ msgstr "Internet aloqangizni tekshiring va qayta urinib ko‘ring."
 msgid "{0, plural, one {# selected} other {# selected}}"
 msgstr "{0, plural, one {# tanlangan} other {# tanlangan}}"
 
+#. placeholder {0}: item.label
+#: ../../../lib/web/src/components/config-drawer.tsx:160
+msgid "{0} option preview"
+msgstr ""
+
 #. placeholder {0}: pieces .map(({ type, count }) => getPieceLabel(type, count)) .join(', ')
 #: src/features/chess/components/captured-pieces-strip.tsx:89
 msgid "{colorName} captured {0}"
@@ -56,9 +61,13 @@ msgstr "{count, plural, one {# tura} other {# turalar}}"
 msgid "{count} pieces"
 msgstr "{count} parchalar"
 
-#: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:173
+#: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:174
 msgid "{entityLabel} name"
 msgstr "{entityLabel} nomi"
+
+#: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:99
+msgid "{entityLabel} name is required"
+msgstr ""
 
 #: src/features/chess/components/chat-message-list.tsx:195
 msgid "{name} declined the draw"
@@ -99,6 +108,10 @@ msgstr "{subject} <0>{san}</0> oʻynadi"
 #: src/features/chess/components/chat-message-list.tsx:222
 msgid "{subject} took <0>{san}</0>"
 msgstr "{subject} <0>{san}</0> ni oldi"
+
+#: ../../../lib/web/src/components/layout/mochi-menu.tsx:132
+msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
+msgstr ""
 
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
@@ -178,11 +191,12 @@ msgstr "Doʻstlar qoʻshish"
 msgid "Add friends in the People app to start playing"
 msgstr "Oʻyinni boshlash uchun People ilovasida doʻstlar qoʻshing"
 
-#: ../../../lib/web/src/features/accounts/account-picker.tsx:101
+#: ../../../lib/web/src/features/accounts/account-picker.tsx:102
 msgid "Add new account"
 msgstr "Yangi hisob qoʻshish"
 
 #: ../../../lib/web/src/components/post-tags.tsx:137
+#: ../../../lib/web/src/components/tag-input.tsx:40
 msgid "Add tag..."
 msgstr "Teg qoʻshish..."
 
@@ -203,7 +217,7 @@ msgstr "Koʻrinish qoʻshish"
 msgid "Adding..."
 msgstr "Qoʻshilmoqda..."
 
-#: ../../../lib/web/src/components/config-drawer.tsx:71
+#: ../../../lib/web/src/components/config-drawer.tsx:72
 msgid "Adjust the appearance and layout to suit your preferences."
 msgstr "Tashqi koʻrinish va tartibni xohishingizga moslang."
 
@@ -215,6 +229,11 @@ msgstr "AI"
 msgid "All"
 msgstr "Hammasi"
 
+#. placeholder {0}: entityLabel.toLowerCase()
+#: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:85
+msgid "Allow anyone to search for {0}"
+msgstr ""
+
 #: ../../../lib/web/src/lib/api-response-interceptors.ts:159
 msgid "An error occurred"
 msgstr "Xatolik yuz berdi"
@@ -223,9 +242,18 @@ msgstr "Xatolik yuz berdi"
 msgid "An unexpected error occurred"
 msgstr "Kutilmagan xatolik yuz berdi"
 
+#: ../../../lib/web/src/features/accounts/types.ts:16
+msgid "Android push"
+msgstr ""
+
 #: ../../../lib/web/src/features/access/access-list.tsx:45
+#: ../../../lib/web/src/features/access/types.ts:42
 msgid "Anyone"
 msgstr "Har kim"
+
+#: ../../../lib/web/src/features/access/types.ts:41
+msgid "Anyone who is logged in"
+msgstr ""
 
 #: ../../../lib/web/src/components/sign-out-dialog.tsx:27
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
@@ -244,6 +272,7 @@ msgid "Ascending"
 msgstr "Oʻsish boʻyicha"
 
 #: ../../../lib/web/src/features/access/access-list.tsx:46
+#: ../../../lib/web/src/features/access/types.ts:41
 msgid "Authenticated users"
 msgstr "Autentifikatsiyadan o'tgan foydalanuvchilar"
 
@@ -251,7 +280,15 @@ msgstr "Autentifikatsiyadan o'tgan foydalanuvchilar"
 msgid "Authenticator code"
 msgstr "Autentifikator kodi"
 
-#: ../../../lib/web/src/components/place-picker.tsx:155
+#: ../../../lib/web/src/components/entity-avatar.tsx:99
+msgid "Avatar"
+msgstr "Avatar"
+
+#: ../../../lib/web/src/components/entity-avatar.tsx:99
+msgid "Avatar for {name}"
+msgstr ""
+
+#: ../../../lib/web/src/components/place-picker.tsx:156
 msgid "Back"
 msgstr "Orqaga"
 
@@ -260,6 +297,10 @@ msgstr "Orqaga"
 #: ../../../lib/web/src/features/errors/unauthorized-error.tsx:28
 msgid "Back to home"
 msgstr "Bosh sahifaga qaytish"
+
+#: ../../../lib/web/src/components/entity-banner.tsx:17
+msgid "Banner"
+msgstr ""
 
 #: src/features/chess/lib/use-chess-piece-name.ts:20
 msgid "bishop"
@@ -282,10 +323,14 @@ msgstr "Qora {0}"
 msgid "Boost interest"
 msgstr "Qiziqishni kuchaytirish"
 
+#: ../../../lib/web/src/features/accounts/types.ts:13
+msgid "Browser notifications"
+msgstr "Brauzer bildirishnomalari"
+
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx:67
 #: ../../../lib/web/src/components/step-up-dialog.tsx:363
 #: ../../../lib/web/src/components/travelling-picker.tsx:308
-#: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:248
+#: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:249
 #: ../../../lib/web/src/components/ui/editable-field-row.tsx:132
 #: ../../../lib/web/src/features/access/access-dialog.tsx:328
 #: ../../../lib/web/src/features/access/access-list.tsx:268
@@ -332,19 +377,19 @@ msgstr "Shaxmat doskasi. Sizning yurishingiz. Harakatlanish uchun strelka tugmal
 msgid "Choose a game from the sidebar or start a new one."
 msgstr "Yon paneldan oʻyin tanlang yoki yangisini boshlang."
 
-#: ../../../lib/web/src/components/config-drawer.tsx:328
+#: ../../../lib/web/src/components/config-drawer.tsx:329
 msgid "Choose between default expanded, compact icon-only, or full layout mode"
 msgstr "Standart yoyilgan, ixcham faqat ikonka yoki toʻliq tartib rejimi orasidan tanlang"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:270
+#: ../../../lib/web/src/components/config-drawer.tsx:271
 msgid "Choose between inset, floating, or standard sidebar layout"
 msgstr "Inset, suzuvchi yoki standart yon panel tartibi orasidan tanlang"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:371
+#: ../../../lib/web/src/components/config-drawer.tsx:372
 msgid "Choose between left-to-right or right-to-left site direction"
 msgstr "Chapdan oʻngga yoki oʻngdan chapga sayt yoʻnalishi orasidan tanlang"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:226
+#: ../../../lib/web/src/components/config-drawer.tsx:227
 msgid "Choose between system preference, light mode, or dark mode"
 msgstr "Tizim sozlamasi, yorugʻ yoki qorongʻi rejim orasidan tanlang"
 
@@ -357,8 +402,8 @@ msgstr "Tilni tanlang"
 msgid "Choose opponent"
 msgstr "Raqib tanlang"
 
-#: ../../../lib/web/src/components/colour-picker.tsx:269
-#: ../../../lib/web/src/components/colour-picker.tsx:350
+#: ../../../lib/web/src/components/colour-picker.tsx:270
+#: ../../../lib/web/src/components/colour-picker.tsx:351
 #: ../../../lib/web/src/components/travelling-picker.tsx:164
 #: ../../../lib/web/src/components/travelling-picker.tsx:170
 #: ../../../lib/web/src/components/travelling-picker.tsx:231
@@ -366,13 +411,17 @@ msgstr "Raqib tanlang"
 msgid "Clear"
 msgstr "Tozalash"
 
-#: ../../../lib/web/src/components/filter-bar.tsx:73
+#: ../../../lib/web/src/components/filter-bar.tsx:74
 msgid "Clear all"
 msgstr "Hammasini tozalash"
 
 #: ../../../lib/web/src/components/data-table/faceted-filter.tsx:144
 msgid "Clear filters"
 msgstr "Filtrlarni tozalash"
+
+#: ../../../lib/web/src/components/search-input.tsx:26
+msgid "Clear search"
+msgstr "Qidiruvni tozalash"
 
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:177
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:181
@@ -424,7 +473,11 @@ msgstr "Qulay"
 msgid "Coming Soon!"
 msgstr "Tez orada!"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:315
+#: ../../../lib/web/src/components/ui/command.tsx:34
+msgid "Command Palette"
+msgstr ""
+
+#: ../../../lib/web/src/components/config-drawer.tsx:316
 #: ../../../lib/web/src/lib/preference-utils.ts:95
 msgid "Compact"
 msgstr "Ixcham"
@@ -433,10 +486,26 @@ msgstr "Ixcham"
 msgid "Completed"
 msgstr "Yakunlandi"
 
-#: ../../../lib/web/src/components/place-picker.tsx:159
+#: ../../../lib/web/src/components/place-picker.tsx:160
 #: ../../../lib/web/src/components/travelling-picker.tsx:316
 msgid "Confirm"
 msgstr "Tasdiqlash"
+
+#: ../../../lib/web/src/lib/chat-ui.ts:18
+msgid "Connected"
+msgstr "Ulangan"
+
+#: ../../../lib/web/src/features/accounts/account-manager.tsx:191
+msgid "Connected accounts"
+msgstr "Ulangan hisoblar"
+
+#: ../../../lib/web/src/lib/chat-ui.ts:21
+msgid "Connecting..."
+msgstr "Ulanmoqda..."
+
+#: ../../../lib/web/src/lib/handle-server-error.ts:18
+msgid "Content not found."
+msgstr "Kontent topilmadi."
 
 #: ../../../lib/web/src/lib/query-client.ts:81
 msgid "Content not modified"
@@ -454,7 +523,15 @@ msgstr "Davom etish"
 msgid "Continue with {label}"
 msgstr "{label} bilan davom etish"
 
-#: ../../../lib/web/src/components/ui/copy-button.tsx:63
+#: ../../../lib/web/src/lib/toast-utils.ts:42
+msgid "Copied"
+msgstr "Nusxalandi"
+
+#: ../../../lib/web/src/components/ui/copy-button.tsx:25
+msgid "Copied to clipboard"
+msgstr "Buferga nusxalandi"
+
+#: ../../../lib/web/src/components/ui/copy-button.tsx:64
 msgid "Copy"
 msgstr "Nusxalash"
 
@@ -474,15 +551,25 @@ msgstr "Qayta autentifikatsiyani boshlab bo'lmadi. Iltimos, qaytadan urinib ko'r
 msgid "Couldn't verify with that account. Please try again."
 msgstr "Ushbu hisob bilan tasdiqlab bo‘lmadi. Iltimos, qayta urinib ko‘ring."
 
+#. placeholder {0}: entityLabel.toLowerCase()
+#: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:144
+msgid "Create {0}"
+msgstr ""
+
+#: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:258
 #: src/features/chess/components/new-game.tsx:153
 msgid "Creating..."
 msgstr "Yaratilmoqda..."
 
-#: ../../../lib/web/src/components/colour-picker.tsx:260
+#: ../../../lib/web/src/components/map-view.tsx:208
+msgid "Current location"
+msgstr "Joriy joylashuv"
+
+#: ../../../lib/web/src/components/colour-picker.tsx:261
 msgid "Custom"
 msgstr "Maxsus"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:218
+#: ../../../lib/web/src/components/config-drawer.tsx:219
 #: ../../../lib/web/src/components/theme-switch.tsx:52
 #: ../../../lib/web/src/lib/preference-utils.ts:20
 msgid "Dark"
@@ -504,7 +591,7 @@ msgstr "Maʼlumotlar ziddiyati"
 msgid "Decline"
 msgstr "Rad etish"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:310
+#: ../../../lib/web/src/components/config-drawer.tsx:311
 msgid "Default"
 msgstr "Standart"
 
@@ -540,6 +627,10 @@ msgstr "Pasayuvchi"
 msgid "Descending"
 msgstr "Kamayish boʻyicha"
 
+#: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:83
+msgid "Description"
+msgstr "Tavsif"
+
 #: ../../../lib/web/src/components/layout/right-panel.tsx:148
 msgid "Details Panel"
 msgstr "Tafsilotlar paneli"
@@ -555,13 +646,18 @@ msgstr "Tafsilotlar paneli"
 msgid "Detect from web browser"
 msgstr "Veb-brauzerdan aniqlash"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:340
+#: ../../../lib/web/src/components/config-drawer.tsx:341
 msgid "Direction"
 msgstr "Yoʻnalish"
 
 #: ../../../lib/web/src/components/person-picker.tsx:214
 msgid "Directory"
 msgstr "Katalog"
+
+#: ../../../lib/web/src/lib/chat-ui.ts:25
+#: ../../../lib/web/src/lib/chat-ui.ts:29
+msgid "Disconnected"
+msgstr "Uzilgan"
 
 #: ../../../lib/web/src/components/restore-banner.tsx:79
 #: ../../../lib/web/src/components/restore-banner.tsx:85
@@ -597,6 +693,10 @@ msgstr "Disleksiyaga moslashtirilgan"
 msgid "Edit {label}"
 msgstr "{label}ni tahrirlash"
 
+#: ../../../lib/web/src/features/accounts/types.ts:15
+msgid "Email"
+msgstr ""
+
 #: ../../../lib/web/src/components/step-up-dialog.tsx:289
 msgid "Email code"
 msgstr "Email kodi"
@@ -620,6 +720,10 @@ msgstr "Yoyish"
 msgid "Expand sidebar"
 msgstr "Yon panelni kengaytirish"
 
+#: ../../../lib/web/src/features/accounts/types.ts:22
+msgid "External URL"
+msgstr "Tashqi URL"
+
 #: ../../../lib/web/src/lib/preference-utils.ts:136
 msgid "Extra large"
 msgstr "Juda katta"
@@ -631,6 +735,15 @@ msgstr "Durangni qabul qilib boʻlmadi"
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:225
 msgid "Failed to add account"
 msgstr "Hisob qoʻshib boʻlmadi"
+
+#: ../../../lib/web/src/components/tag-input.tsx:39
+msgid "Failed to add tag"
+msgstr "Yorliq qoʻshib boʻlmadi"
+
+#: ../../../lib/web/src/components/ui/copy-button.tsx:26
+#: ../../../lib/web/src/lib/toast-utils.ts:44
+msgid "Failed to copy"
+msgstr "Nusxalab boʻlmadi"
 
 #: src/features/chess/components/new-game.tsx:52
 msgid "Failed to create game"
@@ -647,6 +760,10 @@ msgstr "Durangni rad etib boʻlmadi"
 #: src/features/chess/index.tsx:243
 msgid "Failed to delete game"
 msgstr "Oʻyinni oʻchirib boʻlmadi"
+
+#: ../../../lib/web/src/hooks/use-load-more.ts:74
+msgid "Failed to load"
+msgstr "Yuklab boʻlmadi"
 
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:263
 msgid "Failed to load image"
@@ -685,6 +802,10 @@ msgstr "Tasdiqlash kodini yuborib boʻlmadi"
 msgid "Failed to update category"
 msgstr "Toifani yangilab boʻlmadi"
 
+#: ../../../lib/web/src/components/data-table/toolbar.tsx:30
+msgid "Filter..."
+msgstr "Filtr..."
+
 #: ../../../lib/web/src/components/restore-banner.tsx:88
 msgid "Finish moving your account"
 msgstr "Hisobni ko'chirishni yakunlang"
@@ -693,7 +814,7 @@ msgstr "Hisobni ko'chirishni yakunlang"
 msgid "Flat"
 msgstr "Tekis"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:257
+#: ../../../lib/web/src/components/config-drawer.tsx:258
 msgid "Floating"
 msgstr "Suzuvchi"
 
@@ -718,7 +839,7 @@ msgstr "Kimdan"
 msgid "From theme"
 msgstr "Mavzudan"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:320
+#: ../../../lib/web/src/components/config-drawer.tsx:321
 msgid "Full layout"
 msgstr "Toʻliq tartib"
 
@@ -793,13 +914,29 @@ msgstr "Rasm ko'ruvchi: {0}"
 msgid "Imperial"
 msgstr "Imperial"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:252
+#: ../../../lib/web/src/features/access/types.ts:42
+msgid "Including anonymous users"
+msgstr ""
+
+#: ../../../lib/web/src/components/faceless-avatar.tsx:69
+msgid "Initials avatar"
+msgstr ""
+
+#: ../../../lib/web/src/components/faceless-avatar.tsx:69
+msgid "Initials avatar for {name}"
+msgstr ""
+
+#: ../../../lib/web/src/components/config-drawer.tsx:253
 msgid "Inset"
 msgstr "Ichkari"
 
 #: ../../../lib/web/src/components/ui/sort-selector.tsx:42
 msgid "Interests"
 msgstr "Qiziqishlar"
+
+#: ../../../lib/web/src/components/tag-input.tsx:38
+msgid "Invalid tag: letters, numbers, spaces, hyphens, and slashes only (max 50 chars)"
+msgstr ""
 
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:245
 msgid "Invalid verification code"
@@ -808,6 +945,10 @@ msgstr "Notoʻgʻri tasdiqlash kodi"
 #: ../../../lib/web/src/features/errors/not-found-error.tsx:18
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
 msgstr "Siz qidirayotgan sahifa <0/>mavjud emas yoki o'chirilgan ko'rinadi."
+
+#: ../../../lib/web/src/lib/locale-format.ts:62
+msgid "Just now"
+msgstr "Hozirgina"
 
 #: src/features/chess/lib/use-chess-piece-name.ts:17
 msgid "king"
@@ -822,7 +963,7 @@ msgstr "ot"
 msgid "Large"
 msgstr "Katta"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:286
+#: ../../../lib/web/src/components/config-drawer.tsx:287
 msgid "Layout"
 msgstr "Tartib"
 
@@ -831,7 +972,7 @@ msgstr "Tartib"
 msgid "Learn more"
 msgstr "Batafsil"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:354
+#: ../../../lib/web/src/components/config-drawer.tsx:355
 msgid "Left to Right"
 msgstr "Chapdan oʻngga"
 
@@ -839,7 +980,7 @@ msgstr "Chapdan oʻngga"
 msgid "Letters, numbers, spaces, and hyphens only"
 msgstr "Faqat harflar, raqamlar, bo'sh joylar va defislar"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:213
+#: ../../../lib/web/src/components/config-drawer.tsx:214
 #: ../../../lib/web/src/components/theme-switch.tsx:45
 #: ../../../lib/web/src/lib/preference-utils.ts:19
 msgid "Light"
@@ -880,11 +1021,19 @@ msgstr "Muvaffaqiyatli chiqildi"
 msgid "Logging out…"
 msgstr "Chiqilmoqda…"
 
+#: ../../../lib/web/src/features/accounts/account-manager.tsx:192
+msgid "Manage your connected accounts for notifications and services."
+msgstr ""
+
 #: ../../../lib/web/src/components/layout/notification-menu.tsx:93
 #: ../../../lib/web/src/components/layout/notification-menu.tsx:100
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:224
 msgid "Mark all as read"
 msgstr "Hammasini oʻqilgan deb belgilash"
+
+#: ../../../lib/web/src/features/accounts/types.ts:17
+msgid "MCP server"
+msgstr ""
 
 #: ../../../lib/web/src/lib/preference-utils.ts:107
 msgid "Medium"
@@ -902,9 +1051,21 @@ msgstr "Xabar"
 msgid "Metric"
 msgstr "Metrik"
 
+#: ../../../lib/web/src/features/accounts/types.ts:23
+msgid "Mochi web"
+msgstr ""
+
 #: ../../../lib/web/src/lib/preference-utils.ts:59
 msgid "Monday"
 msgstr "Dushanba"
+
+#: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:102
+msgid "Name cannot contain angle brackets, backslash, semicolon, quotes or backticks"
+msgstr ""
+
+#: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:100
+msgid "Name must be 1000 characters or less"
+msgstr "Nom 1000 ta belgidan oshmasligi kerak"
 
 #: ../../../lib/web/src/features/errors/general-error.tsx:53
 #: ../../../lib/web/src/lib/api-response-interceptors.ts:303
@@ -959,13 +1120,22 @@ msgstr "Hozircha xabarlar yoʻq"
 msgid "No notifications yet"
 msgstr "Hozircha bildirishnoma yo'q"
 
-#: ../../../lib/web/src/components/place-picker.tsx:132
+#: ../../../lib/web/src/components/person-picker.tsx:84
+msgid "No people found"
+msgstr "Odamlar topilmadi"
+
+#: ../../../lib/web/src/components/place-picker.tsx:133
 msgid "No places found"
 msgstr "Joylar topilmadi"
 
 #: ../../../lib/web/src/components/profile-dropdown.tsx:58
 msgid "No profile"
 msgstr "Profil yoʻq"
+
+#: ../../../lib/web/src/components/search-entity-dialog.tsx:82
+#: ../../../lib/web/src/components/search-entity-page.tsx:73
+msgid "No results found"
+msgstr "Natija topilmadi"
 
 #: ../../../lib/web/src/components/command-menu.tsx:55
 #: ../../../lib/web/src/components/data-table/faceted-filter.tsx:94
@@ -984,6 +1154,7 @@ msgstr "Hozircha mavzu yozuvi yoʻq — keyingi bildirishnomadan keyin qayta uri
 msgid "No users found"
 msgstr "Foydalanuvchilar topilmadi"
 
+#: ../../../lib/web/src/components/colour-picker.tsx:345
 #: ../../../lib/web/src/components/person-picker.tsx:350
 #: ../../../lib/web/src/lib/preference-utils.ts:105
 #: ../../../lib/web/src/lib/preference-utils.ts:125
@@ -1018,6 +1189,10 @@ msgstr "Bildirishnomalar: {0}"
 #: src/features/chess/index.tsx:448
 msgid "Offer draw"
 msgstr "Durang taklif qilish"
+
+#: ../../../lib/web/src/components/filter-bar.tsx:35
+msgid "On"
+msgstr "Yoniq"
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx:16
 msgid "Oops! Page Not Found!"
@@ -1055,8 +1230,8 @@ msgstr "Navigatsiyani ochish"
 msgid "Open navigation menu"
 msgstr "Navigatsiya menyusini ochish"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:57
-#: ../../../lib/web/src/components/config-drawer.tsx:65
+#: ../../../lib/web/src/components/config-drawer.tsx:58
+#: ../../../lib/web/src/components/config-drawer.tsx:66
 msgid "Open theme settings"
 msgstr "Mavzu sozlamalarini ochish"
 
@@ -1088,6 +1263,10 @@ msgstr "Passkey’lar"
 #: src/features/chess/lib/use-chess-piece-name.ts:22
 msgid "pawn"
 msgstr "piyoda"
+
+#: ../../../lib/web/src/components/date-picker.tsx:20
+msgid "Pick a date"
+msgstr "Sanani tanlang"
 
 #: ../../../lib/web/src/features/errors/general-error.tsx:54
 #: ../../../lib/web/src/lib/api-response-interceptors.ts:304
@@ -1139,6 +1318,10 @@ msgstr "{0} ga koʻtarish"
 msgid "Promote to:"
 msgstr "Bunga koʻtarish:"
 
+#: ../../../lib/web/src/features/accounts/types.ts:21
+msgid "Push notification"
+msgstr ""
+
 #: src/features/chess/lib/use-chess-piece-name.ts:18
 msgid "queen"
 msgstr "qirolicha (farzin)"
@@ -1155,10 +1338,14 @@ msgstr "Bu serverdagi hisoblaringizni qayta ulang"
 msgid "Re-register your passkeys on this server"
 msgstr "Ushbu serverda kirish kalitlaringizni qayta ro'yxatdan o'tkazing"
 
-#: ../../../lib/web/src/components/search-entity-dialog.tsx:216
-#: ../../../lib/web/src/components/search-entity-page.tsx:242
+#: ../../../lib/web/src/components/search-entity-dialog.tsx:217
+#: ../../../lib/web/src/components/search-entity-page.tsx:243
 msgid "Recommended"
 msgstr "Tavsiya etiladi"
+
+#: ../../../lib/web/src/lib/chat-ui.ts:21
+msgid "Reconnecting ({retries})..."
+msgstr ""
 
 #: ../../../lib/web/src/components/layout/authenticated-layout.tsx:133
 msgid "Redirecting to login."
@@ -1186,6 +1373,12 @@ msgstr "Qayta oʻyin"
 msgid "Remove"
 msgstr "Olib tashlash"
 
+#. placeholder {0}: filter.label
+#: ../../../lib/web/src/components/filter-bar.tsx:56
+#: ../../../lib/web/src/components/filter-bar.tsx:62
+msgid "Remove {0} filter"
+msgstr "{0} filtrini olib tashlash"
+
 #: ../../../lib/web/src/features/access/access-list.tsx:252
 #: ../../../lib/web/src/features/access/access-list.tsx:258
 msgid "Remove access rule"
@@ -1209,12 +1402,17 @@ msgstr "Qiziqishni olib tashlash"
 msgid "Resend email"
 msgstr "Xatni qayta yuborish"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:86
-#: ../../../lib/web/src/components/data-table/toolbar.tsx:81
+#: ../../../lib/web/src/components/config-drawer.tsx:87
+#: ../../../lib/web/src/components/data-table/toolbar.tsx:82
 msgid "Reset"
 msgstr "Tiklash"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:84
+#: ../../../lib/web/src/components/config-drawer.tsx:122
+#: ../../../lib/web/src/components/config-drawer.tsx:127
+msgid "Reset {title}"
+msgstr ""
+
+#: ../../../lib/web/src/components/config-drawer.tsx:85
 msgid "Reset all settings to default values"
 msgstr "Barcha sozlamalarni standart qiymatlarga qaytarish"
 
@@ -1231,7 +1429,7 @@ msgstr "Oʻyindan voz kechilsinmi?"
 msgid "Resigning..."
 msgstr "Taslim boʻlinmoqda..."
 
-#: ../../../lib/web/src/components/config-drawer.tsx:361
+#: ../../../lib/web/src/components/config-drawer.tsx:362
 msgid "Right to Left"
 msgstr "Oʻngdan chapga"
 
@@ -1252,9 +1450,23 @@ msgstr "Shanba"
 msgid "Save"
 msgstr "Saqlash"
 
-#: ../../../lib/web/src/components/place-picker.tsx:85
+#: ../../../lib/web/src/components/filter-bar.tsx:32
+#: ../../../lib/web/src/components/header-search.tsx:22
+#: ../../../lib/web/src/components/search.tsx:18
+msgid "Search"
+msgstr "Qidirish"
+
+#: ../../../lib/web/src/components/ui/command.tsx:35
+msgid "Search for a command to run..."
+msgstr ""
+
+#: ../../../lib/web/src/components/place-picker.tsx:86
 msgid "Search for a place"
 msgstr "Joy qidirish"
+
+#: ../../../lib/web/src/components/place-picker.tsx:50
+msgid "Search for a place..."
+msgstr ""
 
 #: ../../../lib/web/src/components/travelling-picker.tsx:250
 msgid "Search for destination..."
@@ -1273,14 +1485,21 @@ msgid "Search users"
 msgstr "Foydalanuvchilarni qidirish"
 
 #: ../../../lib/web/src/components/person-picker.tsx:324
+#: ../../../lib/web/src/components/search-entity-dialog.tsx:81
+#: ../../../lib/web/src/components/search-entity-page.tsx:72
 msgid "Search..."
 msgstr "Qidirish..."
 
-#: ../../../lib/web/src/components/search-entity-dialog.tsx:174
-#: ../../../lib/web/src/components/search-entity-page.tsx:200
+#: ../../../lib/web/src/components/search-entity-dialog.tsx:175
+#: ../../../lib/web/src/components/search-entity-page.tsx:201
 #: ../../../lib/web/src/features/access/access-dialog.tsx:202
 msgid "Searching..."
 msgstr "Qidirilmoqda..."
+
+#. placeholder {0}: item.label.toLowerCase()
+#: ../../../lib/web/src/components/config-drawer.tsx:149
+msgid "Select {0}"
+msgstr ""
 
 #: src/features/chess/components/new-game.tsx:130
 msgid "Select a friend..."
@@ -1298,6 +1517,10 @@ msgstr "Kirish berish uchun foydalanuvchi, guruh yoki boshqa qoidani tanlang."
 msgid "Select access rule"
 msgstr "Kirish qoidasini tanlash"
 
+#: ../../../lib/web/src/features/accounts/account-picker.tsx:34
+msgid "Select account"
+msgstr ""
+
 #: ../../../lib/web/src/features/accounts/account-add.tsx:129
 msgid "Select account type"
 msgstr "Hisob turini tanlash"
@@ -1306,19 +1529,27 @@ msgstr "Hisob turini tanlash"
 msgid "Select group"
 msgstr "Guruhni tanlang"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:304
+#: ../../../lib/web/src/components/config-drawer.tsx:305
 msgid "Select layout style"
 msgstr "Joylashuv uslubini tanlang"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:246
+#: ../../../lib/web/src/components/place-picker.tsx:49
+msgid "Select location"
+msgstr "Joylashuvni tanlang"
+
+#: ../../../lib/web/src/components/person-picker.tsx:83
+msgid "Select person..."
+msgstr ""
+
+#: ../../../lib/web/src/components/config-drawer.tsx:247
 msgid "Select sidebar style"
 msgstr "Yon panel uslubini tanlang"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:348
+#: ../../../lib/web/src/components/config-drawer.tsx:349
 msgid "Select site direction"
 msgstr "Sayt yoʻnalishini tanlang"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:202
+#: ../../../lib/web/src/components/config-drawer.tsx:203
 msgid "Select theme preference"
 msgstr "Mavzu sozlamasini tanlang"
 
@@ -1382,8 +1613,8 @@ msgstr "Parolni koʻrsatish"
 msgid "Showing {totalShown} of {total}"
 msgstr "{total} dan {totalShown} koʻrsatilmoqda"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:238
-#: ../../../lib/web/src/components/config-drawer.tsx:262
+#: ../../../lib/web/src/components/config-drawer.tsx:239
+#: ../../../lib/web/src/components/config-drawer.tsx:263
 #: ../../../lib/web/src/components/ui/sidebar.tsx:237
 msgid "Sidebar"
 msgstr "Yon panel"
@@ -1426,18 +1657,23 @@ msgstr "Lekin kuzatishda davom eting!"
 msgid "Subject"
 msgstr "Mavzu"
 
+#: ../../../lib/web/src/components/search-entity-dialog.tsx:83
+#: ../../../lib/web/src/components/search-entity-page.tsx:74
+msgid "Subscribe"
+msgstr "Obuna boʻlish"
+
 #: ../../../lib/web/src/lib/preference-utils.ts:65
 msgid "Sunday"
 msgstr "Yakshanba"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:208
+#: ../../../lib/web/src/components/config-drawer.tsx:209
 #: ../../../lib/web/src/components/theme-switch.tsx:59
 #: ../../../lib/web/src/lib/preference-utils.ts:21
 #: ../../../lib/web/src/lib/preference-utils.ts:144
 msgid "System"
 msgstr "Tizim"
 
-#: ../../../lib/web/src/components/tag-input.tsx:94
+#: ../../../lib/web/src/components/tag-input.tsx:95
 msgid "Tag"
 msgstr "Teg"
 
@@ -1475,11 +1711,11 @@ msgstr "Soʻralgan kontent topilmadi."
 msgid "The site is not available at the moment."
 msgstr "Sayt hozircha mavjud emas."
 
-#: ../../../lib/web/src/components/config-drawer.tsx:194
+#: ../../../lib/web/src/components/config-drawer.tsx:195
 msgid "Theme"
 msgstr "Mavzu"
 
-#: ../../../lib/web/src/components/config-drawer.tsx:69
+#: ../../../lib/web/src/components/config-drawer.tsx:70
 msgid "Theme Settings"
 msgstr "Mavzu sozlamalari"
 
@@ -1542,8 +1778,8 @@ msgstr "Yuqori"
 msgid "Travelling"
 msgstr "Sayohatda"
 
-#: ../../../lib/web/src/components/search-entity-dialog.tsx:190
-#: ../../../lib/web/src/components/search-entity-page.tsx:216
+#: ../../../lib/web/src/components/search-entity-dialog.tsx:191
+#: ../../../lib/web/src/components/search-entity-page.tsx:217
 msgid "Try adjusting your search terms"
 msgstr "Qidiruv soʻzlaringizni sozlashga harakat qiling"
 
@@ -1590,10 +1826,16 @@ msgstr "Tayinlanmagan"
 msgid "Unauthorized Access"
 msgstr "Ruxsatsiz kirish"
 
+#: ../../../lib/web/src/lib/request.ts:133
+#: ../../../lib/web/src/lib/request.ts:206
+msgid "Unexpected API error"
+msgstr "Kutilmagan API xatosi"
+
 #: ../../../lib/web/src/lib/preference-utils.ts:87
 msgid "United States"
 msgstr "Amerika Qoʻshma Shtatlari"
 
+#: ../../../lib/web/src/features/accounts/types.ts:29
 #: src/hooks/useGameWebsocket.ts:233
 msgid "Unknown"
 msgstr "Nomaʼlum"
@@ -1655,6 +1897,10 @@ msgstr "Hammasini koʻrish"
 msgid "View all notifications"
 msgstr "Barcha bildirishnomalarni koʻrish"
 
+#: ../../../lib/web/src/components/filter-bar.tsx:35
+msgid "Watched"
+msgstr "Kuzatilgan"
+
 #. placeholder {0}: account.identifier
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:63
 msgid "We sent a verification code to <0>{0}</0>. Enter the code below to verify your email address."
@@ -1699,6 +1945,10 @@ msgstr "Bu boʻlimga kirish huquqingiz yoʻq."
 #: ../../../lib/web/src/features/errors/forbidden.tsx:18
 msgid "You don't have necessary permission <0/>to view this resource."
 msgstr "Sizda ushbu resursni ko'rish uchun <0/>zarur ruxsat yo'q."
+
+#: ../../../lib/web/src/lib/show-submitted-data.tsx:9
+msgid "You submitted the following values:"
+msgstr ""
 
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:193
 msgid "You're all caught up!"
