@@ -5,6 +5,40 @@
 
 # Mochi Chess app
 
+# Trust model.
+#
+# This is a game between accepted participants, not between adversaries.
+# The rules engine is chess.js in the frontend, and the server takes
+# its word for the state a move produces: it validates SHAPE - field
+# present, right form, status in the known set, winner an actual player -
+# and never legality. It does not replay the move to confirm it was
+# legal.
+#
+# A participant who modifies their own client can therefore submit a state
+# the rules would not have produced. That is accepted, not overlooked:
+# making the server authoritative would mean a second rules engine in
+# Starlark, which is not worth it for this audience. Reviews should not
+# report it as a defect.
+#
+# What the server DOES enforce, and what changes here must preserve:
+#
+#   Participation  Only an accepted participant can reach a game. Creation
+#                  is gated on friendship, and event_new requires both the
+#                  recipient AND the sender to be listed players, so a
+#                  friend cannot plant a game between other people.
+#   Provenance     Inbound state is bound to a player of this game: a
+#                  relayed snapshot's writer must be one, and a direct
+#                  event's writer must be its authenticated sender.
+#   Convergence    Ordering, deduplication and repair - see the concurrency
+#                  block below. A tampering participant can corrupt their
+#                  own game; they cannot desynchronise anyone else's.
+#   Shape          Every stored field is validated, so a malformed or
+#                  hostile value cannot crash a peer's client or wedge
+#                  their game.
+#
+# The boundary is participation, not honesty.
+
+
 def notify(topic, object="", title="", body="", url="", event_id=""):
 	mochi.service.call("notifications", "send", topic, object, title, body, url, mochi.app.label("notifications.topic." + topic.replace("/", ".")), "", "", None, event_id)
 
