@@ -45,7 +45,7 @@ export const gamesApi = {
       )
       .then((res) => unwrapData<GameViewResponse>(res)),
 
-  messages: (gameId: string, params?: { before?: number; limit?: number }) =>
+  messages: (gameId: string, params?: { before?: string; limit?: number }) =>
     client
       .get<GetMessagesResponse | { data: GetMessagesResponse }>(
         endpoints.game.messages(gameId),

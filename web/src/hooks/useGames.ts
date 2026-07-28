@@ -90,7 +90,7 @@ export const useInfiniteMessagesQuery = (
     enabled?: boolean
   }
 ) =>
-  useInfiniteQueryWithError<GetMessagesResponse, Error, InfiniteData<GetMessagesResponse>, ReturnType<typeof gameKeys.messages>, number | undefined>({
+  useInfiniteQueryWithError<GetMessagesResponse, Error, InfiniteData<GetMessagesResponse>, ReturnType<typeof gameKeys.messages>, string | undefined>({
     queryKey: gameKeys.messages(gameId ?? 'unknown'),
     enabled: Boolean(gameId) && (options?.enabled ?? true),
     initialPageParam: undefined,
@@ -119,7 +119,7 @@ export const useInfiniteMessagesQuery = (
 
 const fetchMoveHistory = async (gameId: string): Promise<string[]> => {
   const pages: GetMessagesResponse[] = []
-  let before: number | undefined
+  let before: string | undefined
 
   for (let pageCount = 0; pageCount < MAX_MOVE_HISTORY_PAGES; pageCount++) {
     const page = await gamesApi.messages(gameId, {

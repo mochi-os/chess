@@ -53,7 +53,9 @@ export interface GetGamesResponse {
 export interface GetMessagesResponse {
   messages: GameMessage[]
   hasMore?: boolean
-  nextCursor?: number
+  // Opaque "<created>:<id>" - created alone is not unique, so a
+  // created-only cursor dropped rows sharing the page boundary's second.
+  nextCursor?: string
 }
 
 export interface CreateGameResponse {

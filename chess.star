@@ -629,15 +629,32 @@ def action_messages(a):
 	if limit_str and mochi.text.valid(limit_str, "natural"):
 		limit = min(int(limit_str), 100)
 
-	before = None
+	# Cursor is "<created>:<id>". created alone is not unique - messages
+	# sharing a second are common on a fast exchange - so a created-only
+	# cursor silently dropped every row that shared the page boundary's
+	# timestamp. The id breaks the tie and makes the order total.
+	#
+	# A bare number is still accepted: that is what an older client sends,
+	# and it keeps the old behaviour for it rather than erroring.
+	before_created = None
+	before_id = ""
 	before_str = a.input("before")
-	if before_str and mochi.text.valid(before_str, "integer"):
-		before = int(before_str)
+	if before_str:
+		parts = str(before_str).split(":")
+		if mochi.text.valid(parts[0], "integer"):
+			before_created = int(parts[0])
+		if len(parts) > 1:
+			before_id = parts[1]
 
-	if before:
-		messages = mochi.db.rows("select * from messages where game=? and created<? order by created desc limit ?", game["id"], before, limit + 1)
+	# `!= None`, not truthiness: a created of 0 is a legitimate cursor and
+	# the old falsy test read it as "no cursor" and restarted from the top.
+	if before_created != None:
+		if before_id:
+			messages = mochi.db.rows("select * from messages where game=? and (created<? or (created=? and id<?)) order by created desc, id desc limit ?", game["id"], before_created, before_created, before_id, limit + 1)
+		else:
+			messages = mochi.db.rows("select * from messages where game=? and created<? order by created desc, id desc limit ?", game["id"], before_created, limit + 1)
 	else:
-		messages = mochi.db.rows("select * from messages where game=? order by created desc limit ?", game["id"], limit + 1)
+		messages = mochi.db.rows("select * from messages where game=? order by created desc, id desc limit ?", game["id"], limit + 1)
 
 	has_more = len(messages) > limit
 	if has_more:
@@ -647,7 +664,7 @@ def action_messages(a):
 
 	next_cursor = None
 	if has_more and len(messages) > 0:
-		next_cursor = messages[0]["created"]
+		next_cursor = str(messages[0]["created"]) + ":" + str(messages[0]["id"])
 
 	return {
 		"data": {
