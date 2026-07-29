@@ -81,7 +81,7 @@ msgstr "{name} dábàá ìfòyebánilọ́pọ̀"
 msgid "{name} resigned"
 msgstr "{name} jọwọ́ ara rẹ̀"
 
-#: src/features/chess/components/draw-offer-banner.tsx:30
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:29
 msgid "{opponentName} offered a draw"
 msgstr "{opponentName} fún ní ìdábọ̀"
 
@@ -113,6 +113,11 @@ msgstr "{subject} mú <0>{san}</0>"
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {Ṣí àkójọ àṣàyàn (# ìfitónilétí tí a kò kà)} other {Ṣí àkójọ àṣàyàn (# ìfitónilétí tí a kò kà)}}"
 
+#. placeholder {0}: countDeepChildren(object.id)
+#: ../../../lib/web/src/components/entity/entity-board-card.tsx:421
+msgid "+{0} nested"
+msgstr ""
+
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
 msgstr "Wákàtí 12"
@@ -125,7 +130,7 @@ msgstr "Wákàtí 24"
 msgid "Absolute (date and time)"
 msgstr "Pípé (ọjọ́ àti àkókò)"
 
-#: src/features/chess/components/draw-offer-banner.tsx:46
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:45
 msgid "Accept"
 msgstr "Gbà"
 
@@ -161,6 +166,7 @@ msgstr "A ti fọwọ́sí àkáǹtì"
 msgid "Active games"
 msgstr "Àwọn Eré Tó Ń Lọ"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:717
 #: ../../../lib/web/src/features/access/access-dialog.tsx:332
 #: ../../../lib/web/src/features/accounts/account-add.tsx:196
 msgid "Add"
@@ -183,6 +189,10 @@ msgstr "Fi àkáǹtì kún"
 msgid "Add an account to receive notifications and use services."
 msgstr "Fi àkáǹtì kún láti gba àwọn ìfitónilétí àti láti lo àwọn iṣẹ́."
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:687
+msgid "Add checklist item"
+msgstr ""
+
 #: src/features/chess/components/new-game.tsx:121
 msgid "Add friends"
 msgstr "Fi àwọn ọ̀rẹ́ kún"
@@ -190,6 +200,10 @@ msgstr "Fi àwọn ọ̀rẹ́ kún"
 #: src/features/chess/components/new-game.tsx:114
 msgid "Add friends in the People app to start playing"
 msgstr "Fi àwọn ọ̀rẹ́ kún nínú app People láti bẹ̀rẹ̀ eré"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:705
+msgid "Add item..."
+msgstr ""
 
 #: ../../../lib/web/src/features/accounts/account-picker.tsx:102
 msgid "Add new account"
@@ -341,12 +355,12 @@ msgstr "Àwọn ìfitónilétí browser"
 msgid "Cancel"
 msgstr "Fagilé"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:143
+#: ../../../lib/web/src/components/notification-category-button.tsx:146
 msgid "Category for this notification"
 msgstr "Ẹ̀ka fún ìfitónilétí yìí"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:124
-#: ../../../lib/web/src/components/notification-category-button.tsx:135
+#: ../../../lib/web/src/components/notification-category-button.tsx:127
+#: ../../../lib/web/src/components/notification-category-button.tsx:138
 msgid "Change notification category"
 msgstr "Yí ẹ̀ka ìfitónilétí padà"
 
@@ -373,7 +387,7 @@ msgstr "Pátákó chess. Lo àwọn bọ́tìnì ọfà láti rìn, Enter tàbí
 msgid "Chess board. Your turn. Use arrow keys to navigate, Enter or Space to select."
 msgstr "Pátákó chess. Àkókò rẹ. Lo àwọn bọ́tìnì ọfà láti rìn, Enter tàbí Space láti yan."
 
-#: src/features/chess/components/game-empty-state.tsx:23
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:30
 msgid "Choose a game from the sidebar or start a new one."
 msgstr "Yan eré kan láti sidebar tàbí bẹ̀rẹ̀ ọ̀kan tuntun."
 
@@ -587,7 +601,7 @@ msgstr "Ọ̀nà òkùnkùn"
 msgid "Data conflict"
 msgstr "Ìtakora dátà"
 
-#: src/features/chess/components/draw-offer-banner.tsx:39
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:41
 msgid "Decline"
 msgstr "Kọ̀"
 
@@ -653,6 +667,14 @@ msgstr "Ìtọ́sọ́nà"
 #: ../../../lib/web/src/components/person-picker.tsx:214
 msgid "Directory"
 msgstr "Àtòjọ"
+
+#: ../../../lib/web/src/components/comment-composer.tsx:300
+msgid "Discard"
+msgstr ""
+
+#: ../../../lib/web/src/components/comment-composer.tsx:298
+msgid "Discard draft?"
+msgstr ""
 
 #: ../../../lib/web/src/lib/chat-ui.ts:25
 #: ../../../lib/web/src/lib/chat-ui.ts:29
@@ -798,7 +820,7 @@ msgstr "Kò lè firanṣẹ́"
 msgid "Failed to send verification code"
 msgstr "Kò lè firanṣẹ́ kóòdù ìjẹ́rìí"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:111
+#: ../../../lib/web/src/components/notification-category-button.tsx:114
 msgid "Failed to update category"
 msgstr "Kò lè mú ẹ̀ka dòde"
 
@@ -934,6 +956,10 @@ msgstr "Inú"
 msgid "Interests"
 msgstr "Àwọn ìfẹ́"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:550
+msgid "Invalid date"
+msgstr ""
+
 #: ../../../lib/web/src/components/tag-input.tsx:38
 msgid "Invalid tag: letters, numbers, spaces, hyphens, and slashes only (max 50 chars)"
 msgstr "Àmì àìtọ́: lẹ́tà, nọ́ńbà, àyè, ìlà àsopọ̀ àti ìlà ìyà nìkan (àsẹ́kù lẹ́tà 50)"
@@ -1043,7 +1069,7 @@ msgstr "Àárín"
 msgid "Menu"
 msgstr "Ìtòlẹ́sẹẹsẹ"
 
-#: src/features/chess/components/chat-input.tsx:31
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:35
 msgid "Message"
 msgstr "Ìránṣẹ́"
 
@@ -1076,9 +1102,9 @@ msgstr "Àṣìṣe nẹ́tíwọ́kì"
 msgid "New"
 msgstr "Tuntun"
 
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:34
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:46
 #: src/components/layout/chess-layout.tsx:138
-#: src/features/chess/components/game-empty-state.tsx:27
-#: src/features/chess/components/game-empty-state.tsx:43
 #: src/features/chess/components/new-game.tsx:96
 msgid "New game"
 msgstr "Eré tuntun"
@@ -1104,7 +1130,7 @@ msgstr "A kò rí ọ̀rẹ́ kankan"
 msgid "No friends yet"
 msgstr "Kò sí ọ̀rẹ́ síbẹ̀"
 
-#: src/features/chess/components/game-empty-state.tsx:38
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:43
 msgid "No games yet"
 msgstr "Kò sí eré síbẹ̀"
 
@@ -1120,6 +1146,7 @@ msgstr "Kò sí ìránṣẹ́ síbẹ̀"
 msgid "No notifications yet"
 msgstr "Kò sí ìfitónilétí síbẹ̀"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:336
 #: ../../../lib/web/src/components/person-picker.tsx:84
 msgid "No people found"
 msgstr "A kò rí ènìyàn kankan"
@@ -1146,7 +1173,7 @@ msgstr "A kò rí àbájáde kankan."
 msgid "No time zone found."
 msgstr "A kò rí àgbègbè àkókò kankan."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:147
+#: ../../../lib/web/src/components/notification-category-button.tsx:150
 msgid "No topic record yet — try again after the next notification."
 msgstr "Kò sí àkọsílẹ̀ kókó síbẹ̀ — gbìyànjú lẹ́ẹ̀kan síi lẹ́yìn ìfìtọ́nisí tó kàn."
 
@@ -1268,6 +1295,7 @@ msgstr "ọmọ ogun"
 msgid "Pick a date"
 msgstr "Yan ọjọ́"
 
+#: ../../../lib/web/src/components/comment-composer.tsx:95
 #: ../../../lib/web/src/features/errors/general-error.tsx:54
 #: ../../../lib/web/src/lib/api-response-interceptors.ts:304
 msgid "Please check your internet connection and try again."
@@ -1368,6 +1396,7 @@ msgstr "Pẹ̀lú ìbáṣepọ̀ nínú wákàtí 24, bí ó ṣíkù absolute"
 msgid "Rematch"
 msgstr "Tún bá"
 
+#: ../../../lib/web/src/components/comment-composer.tsx:232
 #: ../../../lib/web/src/features/access/access-list.tsx:270
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:180
 msgid "Remove"
@@ -1397,6 +1426,10 @@ msgstr "Yọ àyè kúrò?"
 #: ../../../lib/web/src/components/post-tags.tsx:232
 msgid "Remove interest"
 msgstr "Yọ ìfẹ́ kúrò"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:671
+msgid "Remove item"
+msgstr ""
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:367
 msgid "Resend email"
@@ -1428,6 +1461,10 @@ msgstr "Fi eré sílẹ̀?"
 #: src/features/chess/index.tsx:585
 msgid "Resigning..."
 msgstr "Ń fi sílẹ̀..."
+
+#: ../../../lib/web/src/components/comment-composer.tsx:249
+msgid "Retry"
+msgstr ""
 
 #: ../../../lib/web/src/components/config-drawer.tsx:362
 msgid "Right to Left"
@@ -1505,7 +1542,7 @@ msgstr "Yan {0}"
 msgid "Select a friend..."
 msgstr "Yan ọ̀rẹ́ kan..."
 
-#: src/features/chess/components/game-empty-state.tsx:22
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:29
 msgid "Select a game"
 msgstr "Yan eré kan"
 
@@ -1553,6 +1590,11 @@ msgstr "Yan ìtọ́sọ́nà síìtì"
 msgid "Select theme preference"
 msgstr "Yan àfẹ́nilọ́kàn theme"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:252
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:335
+msgid "Select..."
+msgstr ""
+
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:216
 msgid "selected"
 msgstr "tí a yàn"
@@ -1570,8 +1612,8 @@ msgstr "Fi ránṣẹ́ lẹ́ẹ̀kan sí i"
 msgid "Send email"
 msgstr "Fi ímeèlì ránṣẹ́"
 
-#: src/features/chess/components/chat-input.tsx:47
-#: src/features/chess/components/chat-input.tsx:56
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:52
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:61
 msgid "Send message"
 msgstr "Fi ìránṣẹ́ ránṣẹ́"
 
@@ -1797,7 +1839,7 @@ msgstr "Ọjọ́ Ìṣẹ́gun"
 msgid "Type a command or search..."
 msgstr "Tẹ àṣẹ tàbí wá..."
 
-#: src/features/chess/components/chat-input.tsx:34
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:39
 msgid "Type a message..."
 msgstr "Tẹ ìránṣẹ́..."
 
@@ -1818,7 +1860,7 @@ msgstr "Kò lè sopọ̀ mọ́ sáfà jíjìnnà"
 msgid "Unable to redirect to login. Please try again."
 msgstr "A kò lè darí sí ojú-ìwé wíwọlé. Jọ̀wọ́ gbìyànjú lẹ́ẹ̀kan sí i."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:155
+#: ../../../lib/web/src/components/notification-category-button.tsx:158
 msgid "Unassigned"
 msgstr "Aláìyàn"
 
@@ -1957,3 +1999,15 @@ msgstr "O ti rí gbogbo rẹ̀!"
 #: ../../../lib/web/src/components/restore-banner.tsx:91
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "A gbe akonti rẹ wá ibi lati {source}. Titi iwọ o fi pa rẹ nibẹ, awọn ifiranṣẹ ati awọn iwifunni le de olupin mejeeji, diẹ ninu akoonu rẹ tẹsiwaju lati sin lati olupin atijọ, ati awọn olutẹle le gba iṣẹju diẹ lati wa ọ nibi."
+
+#: ../../../lib/web/src/components/comment-composer.tsx:291
+msgid "Your attachments will be lost."
+msgstr ""
+
+#: ../../../lib/web/src/components/comment-composer.tsx:289
+msgid "Your text and attachments will be lost."
+msgstr ""
+
+#: ../../../lib/web/src/components/comment-composer.tsx:292
+msgid "Your text will be lost."
+msgstr ""

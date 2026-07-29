@@ -81,7 +81,7 @@ msgstr "{name} tilbød remis"
 msgid "{name} resigned"
 msgstr "{name} ga opp"
 
-#: src/features/chess/components/draw-offer-banner.tsx:30
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:29
 msgid "{opponentName} offered a draw"
 msgstr "{opponentName} tilbød remis"
 
@@ -113,6 +113,11 @@ msgstr "{subject} slo <0>{san}</0>"
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {Åpne meny (# ulest varsel)} other {Åpne meny (# uleste varsler)}}"
 
+#. placeholder {0}: countDeepChildren(object.id)
+#: ../../../lib/web/src/components/entity/entity-board-card.tsx:421
+msgid "+{0} nested"
+msgstr ""
+
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
 msgstr "12 timer"
@@ -125,7 +130,7 @@ msgstr "24 timer"
 msgid "Absolute (date and time)"
 msgstr "Absolutt (dato og klokkeslett)"
 
-#: src/features/chess/components/draw-offer-banner.tsx:46
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:45
 msgid "Accept"
 msgstr "Godta"
 
@@ -161,6 +166,7 @@ msgstr "Konto bekreftet"
 msgid "Active games"
 msgstr "Aktive spill"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:717
 #: ../../../lib/web/src/features/access/access-dialog.tsx:332
 #: ../../../lib/web/src/features/accounts/account-add.tsx:196
 msgid "Add"
@@ -183,6 +189,10 @@ msgstr "Legg til konto"
 msgid "Add an account to receive notifications and use services."
 msgstr "Legg til en konto for å motta varsler og bruke tjenester."
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:687
+msgid "Add checklist item"
+msgstr ""
+
 #: src/features/chess/components/new-game.tsx:121
 msgid "Add friends"
 msgstr "Legg til venner"
@@ -190,6 +200,10 @@ msgstr "Legg til venner"
 #: src/features/chess/components/new-game.tsx:114
 msgid "Add friends in the People app to start playing"
 msgstr "Legg til venner i Personer-appen for å begynne å spille"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:705
+msgid "Add item..."
+msgstr ""
 
 #: ../../../lib/web/src/features/accounts/account-picker.tsx:102
 msgid "Add new account"
@@ -341,12 +355,12 @@ msgstr "Nettleservarsler"
 msgid "Cancel"
 msgstr "Avbryt"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:143
+#: ../../../lib/web/src/components/notification-category-button.tsx:146
 msgid "Category for this notification"
 msgstr "Kategori for dette varselet"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:124
-#: ../../../lib/web/src/components/notification-category-button.tsx:135
+#: ../../../lib/web/src/components/notification-category-button.tsx:127
+#: ../../../lib/web/src/components/notification-category-button.tsx:138
 msgid "Change notification category"
 msgstr "Endre varselkategori"
 
@@ -373,7 +387,7 @@ msgstr "Sjakkbrett. Bruk piltastene for å navigere, Enter eller mellomrom for �
 msgid "Chess board. Your turn. Use arrow keys to navigate, Enter or Space to select."
 msgstr "Sjakkbrett. Din tur. Bruk piltastene for å navigere, Enter eller mellomrom for å velge."
 
-#: src/features/chess/components/game-empty-state.tsx:23
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:30
 msgid "Choose a game from the sidebar or start a new one."
 msgstr "Velg et spill fra sidefeltet eller start et nytt."
 
@@ -587,7 +601,7 @@ msgstr "Mørkt utseende"
 msgid "Data conflict"
 msgstr "Datakonflikt"
 
-#: src/features/chess/components/draw-offer-banner.tsx:39
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:41
 msgid "Decline"
 msgstr "Avslå"
 
@@ -653,6 +667,14 @@ msgstr "Retning"
 #: ../../../lib/web/src/components/person-picker.tsx:214
 msgid "Directory"
 msgstr "Katalog"
+
+#: ../../../lib/web/src/components/comment-composer.tsx:300
+msgid "Discard"
+msgstr ""
+
+#: ../../../lib/web/src/components/comment-composer.tsx:298
+msgid "Discard draft?"
+msgstr ""
 
 #: ../../../lib/web/src/lib/chat-ui.ts:25
 #: ../../../lib/web/src/lib/chat-ui.ts:29
@@ -798,7 +820,7 @@ msgstr "Kunne ikke sende"
 msgid "Failed to send verification code"
 msgstr "Kunne ikke sende bekreftelseskode"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:111
+#: ../../../lib/web/src/components/notification-category-button.tsx:114
 msgid "Failed to update category"
 msgstr "Kunne ikke oppdatere kategori"
 
@@ -934,6 +956,10 @@ msgstr "Innfelt"
 msgid "Interests"
 msgstr "Interesser"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:550
+msgid "Invalid date"
+msgstr ""
+
 #: ../../../lib/web/src/components/tag-input.tsx:38
 msgid "Invalid tag: letters, numbers, spaces, hyphens, and slashes only (max 50 chars)"
 msgstr "Ugyldig etikett: kun bokstaver, tall, mellomrom, bindestreker og skråstreker (maks. 50 tegn)"
@@ -1043,7 +1069,7 @@ msgstr "Middels"
 msgid "Menu"
 msgstr "Meny"
 
-#: src/features/chess/components/chat-input.tsx:31
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:35
 msgid "Message"
 msgstr "Melding"
 
@@ -1076,9 +1102,9 @@ msgstr "Nettverksfeil"
 msgid "New"
 msgstr "Ny"
 
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:34
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:46
 #: src/components/layout/chess-layout.tsx:138
-#: src/features/chess/components/game-empty-state.tsx:27
-#: src/features/chess/components/game-empty-state.tsx:43
 #: src/features/chess/components/new-game.tsx:96
 msgid "New game"
 msgstr "Nytt spill"
@@ -1104,7 +1130,7 @@ msgstr "Ingen venner funnet"
 msgid "No friends yet"
 msgstr "Ingen venner ennå"
 
-#: src/features/chess/components/game-empty-state.tsx:38
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:43
 msgid "No games yet"
 msgstr "Ingen spill ennå"
 
@@ -1120,6 +1146,7 @@ msgstr "Ingen meldinger ennå"
 msgid "No notifications yet"
 msgstr "Ingen varsler ennå"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:336
 #: ../../../lib/web/src/components/person-picker.tsx:84
 msgid "No people found"
 msgstr "Ingen personer funnet"
@@ -1146,7 +1173,7 @@ msgstr "Ingen resultater funnet."
 msgid "No time zone found."
 msgstr "Ingen tidssone funnet."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:147
+#: ../../../lib/web/src/components/notification-category-button.tsx:150
 msgid "No topic record yet — try again after the next notification."
 msgstr "Ingen emnepost ennå – prøv igjen etter neste varsel."
 
@@ -1268,6 +1295,7 @@ msgstr "bonde"
 msgid "Pick a date"
 msgstr "Velg en dato"
 
+#: ../../../lib/web/src/components/comment-composer.tsx:95
 #: ../../../lib/web/src/features/errors/general-error.tsx:54
 #: ../../../lib/web/src/lib/api-response-interceptors.ts:304
 msgid "Please check your internet connection and try again."
@@ -1368,6 +1396,7 @@ msgstr "Relativ innen 24 timer, ellers absolutt"
 msgid "Rematch"
 msgstr "Omkamp"
 
+#: ../../../lib/web/src/components/comment-composer.tsx:232
 #: ../../../lib/web/src/features/access/access-list.tsx:270
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:180
 msgid "Remove"
@@ -1397,6 +1426,10 @@ msgstr "Fjerne tilgang?"
 #: ../../../lib/web/src/components/post-tags.tsx:232
 msgid "Remove interest"
 msgstr "Fjern interesse"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:671
+msgid "Remove item"
+msgstr ""
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:367
 msgid "Resend email"
@@ -1428,6 +1461,10 @@ msgstr "Gi opp partiet?"
 #: src/features/chess/index.tsx:585
 msgid "Resigning..."
 msgstr "Gir opp …"
+
+#: ../../../lib/web/src/components/comment-composer.tsx:249
+msgid "Retry"
+msgstr ""
 
 #: ../../../lib/web/src/components/config-drawer.tsx:362
 msgid "Right to Left"
@@ -1505,7 +1542,7 @@ msgstr "Velg {0}"
 msgid "Select a friend..."
 msgstr "Velg en venn ..."
 
-#: src/features/chess/components/game-empty-state.tsx:22
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:29
 msgid "Select a game"
 msgstr "Velg et spill"
 
@@ -1553,6 +1590,11 @@ msgstr "Velg nettstedsretning"
 msgid "Select theme preference"
 msgstr "Velg temapreferanse"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:252
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:335
+msgid "Select..."
+msgstr ""
+
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:216
 msgid "selected"
 msgstr "valgt"
@@ -1570,8 +1612,8 @@ msgstr "Send på nytt"
 msgid "Send email"
 msgstr "Send e-post"
 
-#: src/features/chess/components/chat-input.tsx:47
-#: src/features/chess/components/chat-input.tsx:56
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:52
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:61
 msgid "Send message"
 msgstr "Send melding"
 
@@ -1797,7 +1839,7 @@ msgstr "Tirsdag"
 msgid "Type a command or search..."
 msgstr "Skriv en kommando eller søk ..."
 
-#: src/features/chess/components/chat-input.tsx:34
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:39
 msgid "Type a message..."
 msgstr "Skriv en melding ..."
 
@@ -1818,7 +1860,7 @@ msgstr "Kan ikke koble til den eksterne tjeneren"
 msgid "Unable to redirect to login. Please try again."
 msgstr "Kan ikke omdirigere til innlogging. Prøv igjen."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:155
+#: ../../../lib/web/src/components/notification-category-button.tsx:158
 msgid "Unassigned"
 msgstr "Ikke tilordnet"
 
@@ -1957,3 +1999,15 @@ msgstr "Du er ajour!"
 #: ../../../lib/web/src/components/restore-banner.tsx:91
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Kontoen din ble flyttet hit fra {source}. Inntil du sletter den der, kan meldinger og varsler nå begge serverne, noe av innholdet ditt fortsetter å bli levert fra den gamle serveren, og følgerne dine kan trenge noen minutter på å finne deg her."
+
+#: ../../../lib/web/src/components/comment-composer.tsx:291
+msgid "Your attachments will be lost."
+msgstr ""
+
+#: ../../../lib/web/src/components/comment-composer.tsx:289
+msgid "Your text and attachments will be lost."
+msgstr ""
+
+#: ../../../lib/web/src/components/comment-composer.tsx:292
+msgid "Your text will be lost."
+msgstr ""

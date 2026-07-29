@@ -81,7 +81,7 @@ msgstr "{name}-ը ոչ-ոքի առաջարկեց"
 msgid "{name} resigned"
 msgstr "{name}-ը հանձնվեց"
 
-#: src/features/chess/components/draw-offer-banner.tsx:30
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:29
 msgid "{opponentName} offered a draw"
 msgstr "{opponentName}-ը առաջարկեց ոչ-ոքի"
 
@@ -113,6 +113,11 @@ msgstr "{subject}-ը վերցրեց <0>{san}</0>"
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {Բացել ընտրացանկը (# չկարդացված ծանուցում)} other {Բացել ընտրացանկը (# չկարդացված ծանուցում)}}"
 
+#. placeholder {0}: countDeepChildren(object.id)
+#: ../../../lib/web/src/components/entity/entity-board-card.tsx:421
+msgid "+{0} nested"
+msgstr ""
+
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
 msgstr "12 ժամ"
@@ -125,7 +130,7 @@ msgstr "24 ժամ"
 msgid "Absolute (date and time)"
 msgstr "Բացարձակ (ամսաթիվ և ժամ)"
 
-#: src/features/chess/components/draw-offer-banner.tsx:46
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:45
 msgid "Accept"
 msgstr "Ընդունել"
 
@@ -161,6 +166,7 @@ msgstr "Հաշիվներ"
 msgid "Active games"
 msgstr "Ակտիվ ցուցակներ"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:717
 #: ../../../lib/web/src/features/access/access-dialog.tsx:332
 #: ../../../lib/web/src/features/accounts/account-add.tsx:196
 msgid "Add"
@@ -183,6 +189,10 @@ msgstr "Ավելացնել հաշիվ ծանուցումներ ստանալու 
 msgid "Add an account to receive notifications and use services."
 msgstr "Ավելացնել հավելված լրացուցիչ անվտանգության համար"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:687
+msgid "Add checklist item"
+msgstr ""
+
 #: src/features/chess/components/new-game.tsx:121
 msgid "Add friends"
 msgstr "Ավելացրեք ընկերներ People հավելվածում խաղալ սկսելու համար"
@@ -190,6 +200,10 @@ msgstr "Ավելացրեք ընկերներ People հավելվածում խաղ
 #: src/features/chess/components/new-game.tsx:114
 msgid "Add friends in the People app to start playing"
 msgstr "Ավելացրեք ընկերներ կապ հաստատելու համար"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:705
+msgid "Add item..."
+msgstr ""
 
 #: ../../../lib/web/src/features/accounts/account-picker.tsx:102
 msgid "Add new account"
@@ -341,12 +355,12 @@ msgstr "Build ֆայլ (.zip)"
 msgid "Cancel"
 msgstr "Չեղարկել մեկնաբանությունը"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:143
+#: ../../../lib/web/src/components/notification-category-button.tsx:146
 msgid "Category for this notification"
 msgstr "Կատեգորիան թարմացված է"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:124
-#: ../../../lib/web/src/components/notification-category-button.tsx:135
+#: ../../../lib/web/src/components/notification-category-button.tsx:127
+#: ../../../lib/web/src/components/notification-category-button.tsx:138
 msgid "Change notification category"
 msgstr "Փոփոխություններ"
 
@@ -373,7 +387,7 @@ msgstr "Շախմատի տախտակ։ Ձեր հերթն է։ Օգտագործե�
 msgid "Chess board. Your turn. Use arrow keys to navigate, Enter or Space to select."
 msgstr "Ընտրեք զրույց կողագոտուց կամ սկսեք նորը։"
 
-#: src/features/chess/components/game-empty-state.tsx:23
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:30
 msgid "Choose a game from the sidebar or start a new one."
 msgstr "Ընտրեք խաղ կողագոտուց կամ սկսեք նորը։"
 
@@ -587,7 +601,7 @@ msgstr "Վահանակ"
 msgid "Data conflict"
 msgstr "Տվյալների կոնֆլիկտ"
 
-#: src/features/chess/components/draw-offer-banner.tsx:39
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:41
 msgid "Decline"
 msgstr "Մերժել"
 
@@ -653,6 +667,14 @@ msgstr "Ուղղություն"
 #: ../../../lib/web/src/components/person-picker.tsx:214
 msgid "Directory"
 msgstr "Տեղեկագիրք"
+
+#: ../../../lib/web/src/components/comment-composer.tsx:300
+msgid "Discard"
+msgstr ""
+
+#: ../../../lib/web/src/components/comment-composer.tsx:298
+msgid "Discard draft?"
+msgstr ""
 
 #: ../../../lib/web/src/lib/chat-ui.ts:25
 #: ../../../lib/web/src/lib/chat-ui.ts:29
@@ -798,7 +820,7 @@ msgstr "Չհաջողվեց ուղարկել"
 msgid "Failed to send verification code"
 msgstr "Չհաջողվեց ուղարկել հաստատման կոդը"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:111
+#: ../../../lib/web/src/components/notification-category-button.tsx:114
 msgid "Failed to update category"
 msgstr "Չհաջողվեց թարմացնել կատեգորիան"
 
@@ -934,6 +956,10 @@ msgstr "Տեղադրել տեղական"
 msgid "Interests"
 msgstr "Անվավեր նույնականացման կոդ"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:550
+msgid "Invalid date"
+msgstr ""
+
 #: ../../../lib/web/src/components/tag-input.tsx:38
 msgid "Invalid tag: letters, numbers, spaces, hyphens, and slashes only (max 50 chars)"
 msgstr "Անվավեր պիտակ՝ միայն տառեր, թվեր, բացատներ, գծիկներ և շեղագծեր (առավելագույնը 50 նիշ)"
@@ -1043,7 +1069,7 @@ msgstr "Միջին"
 msgid "Menu"
 msgstr "Միաձուլման հարցումներ"
 
-#: src/features/chess/components/chat-input.tsx:31
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:35
 msgid "Message"
 msgstr "Հաղորդագրեք ձեր ընկերներին, անհատապես կամ խմբերով, peer-to-peer և կոդավորված։"
 
@@ -1076,9 +1102,9 @@ msgstr "Ցանցի սխալ"
 msgid "New"
 msgstr "Նոր"
 
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:34
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:46
 #: src/components/layout/chess-layout.tsx:138
-#: src/features/chess/components/game-empty-state.tsx:27
-#: src/features/chess/components/game-empty-state.tsx:43
 #: src/features/chess/components/new-game.tsx:96
 msgid "New game"
 msgstr "Նոր խաղ"
@@ -1104,7 +1130,7 @@ msgstr "Ընկերներ չեն գտնվել"
 msgid "No friends yet"
 msgstr "Դեռ ընկերներ չկան"
 
-#: src/features/chess/components/game-empty-state.tsx:38
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:43
 msgid "No games yet"
 msgstr "Դեռ խաղեր չկան"
 
@@ -1120,6 +1146,7 @@ msgstr "Դեռ հաղորդագրություններ չկան"
 msgid "No notifications yet"
 msgstr "Դեռ ծանուցումներ չկան"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:336
 #: ../../../lib/web/src/components/person-picker.tsx:84
 msgid "No people found"
 msgstr "Մարդիկ չեն գտնվել"
@@ -1146,7 +1173,7 @@ msgstr "Արդյունքներ չեն գտնվել։"
 msgid "No time zone found."
 msgstr "Ժամային գոտի չի գտնվել։"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:147
+#: ../../../lib/web/src/components/notification-category-button.tsx:150
 msgid "No topic record yet — try again after the next notification."
 msgstr "Դեռ թեմայի գրառում չկա — փորձեք նորից հաջորդ ծանուցումից հետո։"
 
@@ -1268,6 +1295,7 @@ msgstr "զինվոր"
 msgid "Pick a date"
 msgstr "Ընտրեք ամսաթիվ"
 
+#: ../../../lib/web/src/components/comment-composer.tsx:95
 #: ../../../lib/web/src/features/errors/general-error.tsx:54
 #: ../../../lib/web/src/lib/api-response-interceptors.ts:304
 msgid "Please check your internet connection and try again."
@@ -1368,6 +1396,7 @@ msgstr "Հարաբերական 24 ժամվա ընթացքում, այլապես�
 msgid "Rematch"
 msgstr "Վերախաղ"
 
+#: ../../../lib/web/src/components/comment-composer.tsx:232
 #: ../../../lib/web/src/features/access/access-list.tsx:270
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:180
 msgid "Remove"
@@ -1397,6 +1426,10 @@ msgstr "Հեռացնե՞լ մուտքը։"
 #: ../../../lib/web/src/components/post-tags.tsx:232
 msgid "Remove interest"
 msgstr "Հեռացնել հետաքրքրությունը"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:671
+msgid "Remove item"
+msgstr ""
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:367
 msgid "Resend email"
@@ -1428,6 +1461,10 @@ msgstr "Հանձնվե՞լ խաղում։"
 #: src/features/chess/index.tsx:585
 msgid "Resigning..."
 msgstr "Հանձնվում..."
+
+#: ../../../lib/web/src/components/comment-composer.tsx:249
+msgid "Retry"
+msgstr ""
 
 #: ../../../lib/web/src/components/config-drawer.tsx:362
 msgid "Right to Left"
@@ -1505,7 +1542,7 @@ msgstr "Ընտրել {0}"
 msgid "Select a friend..."
 msgstr "Ընտրել ընկեր..."
 
-#: src/features/chess/components/game-empty-state.tsx:22
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:29
 msgid "Select a game"
 msgstr "Ընտրել խաղ"
 
@@ -1553,6 +1590,11 @@ msgstr "Ընտրել կայքի ուղղությունը"
 msgid "Select theme preference"
 msgstr "Ընտրել թեմայի նախընտրությունը"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:252
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:335
+msgid "Select..."
+msgstr ""
+
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:216
 msgid "selected"
 msgstr "ընտրված"
@@ -1570,8 +1612,8 @@ msgstr "Ուղարկել կրկին"
 msgid "Send email"
 msgstr "Ուղարկել էլ. փոստ"
 
-#: src/features/chess/components/chat-input.tsx:47
-#: src/features/chess/components/chat-input.tsx:56
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:52
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:61
 msgid "Send message"
 msgstr "Ուղարկել հաղորդագրությունը"
 
@@ -1797,7 +1839,7 @@ msgstr "Երեքշաբթի"
 msgid "Type a command or search..."
 msgstr "Մուտքագրեք հրաման կամ որոնեք..."
 
-#: src/features/chess/components/chat-input.tsx:34
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:39
 msgid "Type a message..."
 msgstr "Մուտքագրեք հաղորդագրություն..."
 
@@ -1818,7 +1860,7 @@ msgstr "Հնարավոր չէ միանալ հեռավոր սերվերին"
 msgid "Unable to redirect to login. Please try again."
 msgstr "Հնարավոր չէ վերահղել մուտք: Խնդրում ենք կրկին փորձել:"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:155
+#: ../../../lib/web/src/components/notification-category-button.tsx:158
 msgid "Unassigned"
 msgstr "Չվերագրված"
 
@@ -1957,3 +1999,15 @@ msgstr "Դուք ամեն ինչ տեսել եք։"
 #: ../../../lib/web/src/components/restore-banner.tsx:91
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Ձեր հաշիվը տեղափոխվել է այստեղ {source}-ից: Մինչ այն ջնջեք այնտեղ, հաղորդագրություններն ու ծանուցումները կարող են հասնել երկու սերվերներին, ձեր որոշ բովանդակություն դեռ մատուցվում է հին սերվերից, և հետևորդները կարող են մի քանի րոպե պահանջել ձեզ գտնելու համար:"
+
+#: ../../../lib/web/src/components/comment-composer.tsx:291
+msgid "Your attachments will be lost."
+msgstr ""
+
+#: ../../../lib/web/src/components/comment-composer.tsx:289
+msgid "Your text and attachments will be lost."
+msgstr ""
+
+#: ../../../lib/web/src/components/comment-composer.tsx:292
+msgid "Your text will be lost."
+msgstr ""

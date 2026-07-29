@@ -81,7 +81,7 @@ msgstr "{name} ya ba da shawarar canjaras"
 msgid "{name} resigned"
 msgstr "{name} ya ja da"
 
-#: src/features/chess/components/draw-offer-banner.tsx:30
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:29
 msgid "{opponentName} offered a draw"
 msgstr "{opponentName} ya ba da kunnen doki"
 
@@ -113,6 +113,11 @@ msgstr "{subject} ya ɗauki <0>{san}</0>"
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {Buɗe menu (# sanarwar da ba a karanta ba)} other {Buɗe menu (# sanarwar da ba a karanta ba)}}"
 
+#. placeholder {0}: countDeepChildren(object.id)
+#: ../../../lib/web/src/components/entity/entity-board-card.tsx:421
+msgid "+{0} nested"
+msgstr ""
+
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
 msgstr "Awa 12"
@@ -125,7 +130,7 @@ msgstr "Awa 24"
 msgid "Absolute (date and time)"
 msgstr "Cikakke (kwanan wata da lokaci)"
 
-#: src/features/chess/components/draw-offer-banner.tsx:46
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:45
 msgid "Accept"
 msgstr "Yarda"
 
@@ -161,6 +166,7 @@ msgstr "An tabbatar da asusu"
 msgid "Active games"
 msgstr "Wasannin da ke kan ci gaba"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:717
 #: ../../../lib/web/src/features/access/access-dialog.tsx:332
 #: ../../../lib/web/src/features/accounts/account-add.tsx:196
 msgid "Add"
@@ -183,6 +189,10 @@ msgstr "Ƙara asusu"
 msgid "Add an account to receive notifications and use services."
 msgstr "Ƙara asusu don karɓar sanarwa da amfani da ayyuka."
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:687
+msgid "Add checklist item"
+msgstr ""
+
 #: src/features/chess/components/new-game.tsx:121
 msgid "Add friends"
 msgstr "Ƙara abokai"
@@ -190,6 +200,10 @@ msgstr "Ƙara abokai"
 #: src/features/chess/components/new-game.tsx:114
 msgid "Add friends in the People app to start playing"
 msgstr "Ƙara abokai a app ɗin People don fara wasa"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:705
+msgid "Add item..."
+msgstr ""
 
 #: ../../../lib/web/src/features/accounts/account-picker.tsx:102
 msgid "Add new account"
@@ -341,12 +355,12 @@ msgstr "Sanarwar browser"
 msgid "Cancel"
 msgstr "Soke"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:143
+#: ../../../lib/web/src/components/notification-category-button.tsx:146
 msgid "Category for this notification"
 msgstr "Rukuni don wannan sanarwa"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:124
-#: ../../../lib/web/src/components/notification-category-button.tsx:135
+#: ../../../lib/web/src/components/notification-category-button.tsx:127
+#: ../../../lib/web/src/components/notification-category-button.tsx:138
 msgid "Change notification category"
 msgstr "Sauya rukunin sanarwa"
 
@@ -373,7 +387,7 @@ msgstr "Allon chess. Yi amfani da maɓallan kibiya don kewayawa, Enter ko Space 
 msgid "Chess board. Your turn. Use arrow keys to navigate, Enter or Space to select."
 msgstr "Allon chess. Lokacinka. Yi amfani da maɓallan kibiya don kewayawa, Enter ko Space don zaɓi."
 
-#: src/features/chess/components/game-empty-state.tsx:23
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:30
 msgid "Choose a game from the sidebar or start a new one."
 msgstr "Zaɓi wasa daga sidebar ko fara sabo."
 
@@ -587,7 +601,7 @@ msgstr "Dark mode"
 msgid "Data conflict"
 msgstr "Rikicin bayanai"
 
-#: src/features/chess/components/draw-offer-banner.tsx:39
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:41
 msgid "Decline"
 msgstr "Ƙi"
 
@@ -653,6 +667,14 @@ msgstr "Hanya"
 #: ../../../lib/web/src/components/person-picker.tsx:214
 msgid "Directory"
 msgstr "Jerin suna"
+
+#: ../../../lib/web/src/components/comment-composer.tsx:300
+msgid "Discard"
+msgstr ""
+
+#: ../../../lib/web/src/components/comment-composer.tsx:298
+msgid "Discard draft?"
+msgstr ""
 
 #: ../../../lib/web/src/lib/chat-ui.ts:25
 #: ../../../lib/web/src/lib/chat-ui.ts:29
@@ -798,7 +820,7 @@ msgstr "An gaza aikawa"
 msgid "Failed to send verification code"
 msgstr "An gaza aika verification code"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:111
+#: ../../../lib/web/src/components/notification-category-button.tsx:114
 msgid "Failed to update category"
 msgstr "An gaza sabunta category"
 
@@ -934,6 +956,10 @@ msgstr "Inset"
 msgid "Interests"
 msgstr "Interests"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:550
+msgid "Invalid date"
+msgstr ""
+
 #: ../../../lib/web/src/components/tag-input.tsx:38
 msgid "Invalid tag: letters, numbers, spaces, hyphens, and slashes only (max 50 chars)"
 msgstr "Tambarin da bai dace ba: haruffa, lambobi, sarari, gajerun layi da sara kawai (matsakaici haruffa 50)"
@@ -1043,7 +1069,7 @@ msgstr "Matsakaici"
 msgid "Menu"
 msgstr "Menu"
 
-#: src/features/chess/components/chat-input.tsx:31
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:35
 msgid "Message"
 msgstr "Saƙo"
 
@@ -1076,9 +1102,9 @@ msgstr "Kuskuren hanyar sadarwa"
 msgid "New"
 msgstr "Sabon"
 
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:34
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:46
 #: src/components/layout/chess-layout.tsx:138
-#: src/features/chess/components/game-empty-state.tsx:27
-#: src/features/chess/components/game-empty-state.tsx:43
 #: src/features/chess/components/new-game.tsx:96
 msgid "New game"
 msgstr "Sabon wasa"
@@ -1104,7 +1130,7 @@ msgstr "Babu abokai da aka samu"
 msgid "No friends yet"
 msgstr "Babu abokai tukuna"
 
-#: src/features/chess/components/game-empty-state.tsx:38
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:43
 msgid "No games yet"
 msgstr "Babu wasanni tukuna"
 
@@ -1120,6 +1146,7 @@ msgstr "Babu saƙonni tukuna"
 msgid "No notifications yet"
 msgstr "Babu sanarwa tukuna"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:336
 #: ../../../lib/web/src/components/person-picker.tsx:84
 msgid "No people found"
 msgstr "Babu mutane da aka samu"
@@ -1146,7 +1173,7 @@ msgstr "Ba a sami sakamako ba."
 msgid "No time zone found."
 msgstr "Ba a sami time zone ba."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:147
+#: ../../../lib/web/src/components/notification-category-button.tsx:150
 msgid "No topic record yet — try again after the next notification."
 msgstr "Babu rikodin topic tukuna — sake gwadawa bayan sanarwa ta gaba."
 
@@ -1268,6 +1295,7 @@ msgstr "soja"
 msgid "Pick a date"
 msgstr "Zaɓi kwanan wata"
 
+#: ../../../lib/web/src/components/comment-composer.tsx:95
 #: ../../../lib/web/src/features/errors/general-error.tsx:54
 #: ../../../lib/web/src/lib/api-response-interceptors.ts:304
 msgid "Please check your internet connection and try again."
@@ -1368,6 +1396,7 @@ msgstr "Relative cikin sa'o'i 24, in ba haka ba absolute"
 msgid "Rematch"
 msgstr "Sake wasa"
 
+#: ../../../lib/web/src/components/comment-composer.tsx:232
 #: ../../../lib/web/src/features/access/access-list.tsx:270
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:180
 msgid "Remove"
@@ -1397,6 +1426,10 @@ msgstr "A cire damar shiga?"
 #: ../../../lib/web/src/components/post-tags.tsx:232
 msgid "Remove interest"
 msgstr "Cire sha'awa"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:671
+msgid "Remove item"
+msgstr ""
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:367
 msgid "Resend email"
@@ -1428,6 +1461,10 @@ msgstr "A yi murabus daga wasa?"
 #: src/features/chess/index.tsx:585
 msgid "Resigning..."
 msgstr "Ana murabus..."
+
+#: ../../../lib/web/src/components/comment-composer.tsx:249
+msgid "Retry"
+msgstr ""
 
 #: ../../../lib/web/src/components/config-drawer.tsx:362
 msgid "Right to Left"
@@ -1505,7 +1542,7 @@ msgstr "Zaɓi {0}"
 msgid "Select a friend..."
 msgstr "Zaɓi aboki..."
 
-#: src/features/chess/components/game-empty-state.tsx:22
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:29
 msgid "Select a game"
 msgstr "Zaɓi wasa"
 
@@ -1553,6 +1590,11 @@ msgstr "Zaɓi alkiblar shafin"
 msgid "Select theme preference"
 msgstr "Zaɓi zaɓin theme"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:252
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:335
+msgid "Select..."
+msgstr ""
+
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:216
 msgid "selected"
 msgstr "an zaɓa"
@@ -1570,8 +1612,8 @@ msgstr "Aika kuma"
 msgid "Send email"
 msgstr "Aika email"
 
-#: src/features/chess/components/chat-input.tsx:47
-#: src/features/chess/components/chat-input.tsx:56
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:52
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:61
 msgid "Send message"
 msgstr "Aika saƙo"
 
@@ -1797,7 +1839,7 @@ msgstr "Talata"
 msgid "Type a command or search..."
 msgstr "Buga umarni ko bincika..."
 
-#: src/features/chess/components/chat-input.tsx:34
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:39
 msgid "Type a message..."
 msgstr "Buga saƙo..."
 
@@ -1818,7 +1860,7 @@ msgstr "An kasa haɗawa da saba mai nesa"
 msgid "Unable to redirect to login. Please try again."
 msgstr "Ba a iya tura zuwa login. Da fatan sake gwadawa."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:155
+#: ../../../lib/web/src/components/notification-category-button.tsx:158
 msgid "Unassigned"
 msgstr "Ba a sanya wa kowa"
 
@@ -1957,3 +1999,15 @@ msgstr "Ka ga komai!"
 #: ../../../lib/web/src/components/restore-banner.tsx:91
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "An ƙauri asusunka zuwa nan daga {source}. Sai ka goge shi a can, saƙonni da sanarwa na iya kai ga uwar garken biyu, wasu abubuwan ka suna ci gaba da samarwa daga tsohon uwar garken, kuma mabiyanka na iya ɗaukar 'yan mintoci don su same ka nan."
+
+#: ../../../lib/web/src/components/comment-composer.tsx:291
+msgid "Your attachments will be lost."
+msgstr ""
+
+#: ../../../lib/web/src/components/comment-composer.tsx:289
+msgid "Your text and attachments will be lost."
+msgstr ""
+
+#: ../../../lib/web/src/components/comment-composer.tsx:292
+msgid "Your text will be lost."
+msgstr ""

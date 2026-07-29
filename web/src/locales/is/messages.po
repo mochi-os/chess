@@ -81,7 +81,7 @@ msgstr "{name} bauð jafntefli"
 msgid "{name} resigned"
 msgstr "{name} gafst upp"
 
-#: src/features/chess/components/draw-offer-banner.tsx:30
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:29
 msgid "{opponentName} offered a draw"
 msgstr "{opponentName} bauð jafntefli"
 
@@ -113,6 +113,11 @@ msgstr "{subject} drap <0>{san}</0>"
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {Opna valmynd (# ólesin tilkynning)} other {Opna valmynd (# ólesnar tilkynningar)}}"
 
+#. placeholder {0}: countDeepChildren(object.id)
+#: ../../../lib/web/src/components/entity/entity-board-card.tsx:421
+msgid "+{0} nested"
+msgstr ""
+
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
 msgstr "12 klukkustundir"
@@ -125,7 +130,7 @@ msgstr "24 klukkustundir"
 msgid "Absolute (date and time)"
 msgstr "Algilt (dagsetning og tími)"
 
-#: src/features/chess/components/draw-offer-banner.tsx:46
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:45
 msgid "Accept"
 msgstr "Samþykkja"
 
@@ -161,6 +166,7 @@ msgstr "Reikningur staðfestur"
 msgid "Active games"
 msgstr "Virkir leikir"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:717
 #: ../../../lib/web/src/features/access/access-dialog.tsx:332
 #: ../../../lib/web/src/features/accounts/account-add.tsx:196
 msgid "Add"
@@ -183,6 +189,10 @@ msgstr "Bæta við reikningi"
 msgid "Add an account to receive notifications and use services."
 msgstr "Bæta við reikningi til að fá tilkynningar og nota þjónustur."
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:687
+msgid "Add checklist item"
+msgstr ""
+
 #: src/features/chess/components/new-game.tsx:121
 msgid "Add friends"
 msgstr "Bæta við vinum"
@@ -190,6 +200,10 @@ msgstr "Bæta við vinum"
 #: src/features/chess/components/new-game.tsx:114
 msgid "Add friends in the People app to start playing"
 msgstr "Bættu við vinum í Fólk-forritinu til að byrja að spila"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:705
+msgid "Add item..."
+msgstr ""
 
 #: ../../../lib/web/src/features/accounts/account-picker.tsx:102
 msgid "Add new account"
@@ -341,12 +355,12 @@ msgstr "Tilkynningar vafra"
 msgid "Cancel"
 msgstr "Hætta við"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:143
+#: ../../../lib/web/src/components/notification-category-button.tsx:146
 msgid "Category for this notification"
 msgstr "Flokkur fyrir þessa tilkynningu"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:124
-#: ../../../lib/web/src/components/notification-category-button.tsx:135
+#: ../../../lib/web/src/components/notification-category-button.tsx:127
+#: ../../../lib/web/src/components/notification-category-button.tsx:138
 msgid "Change notification category"
 msgstr "Breyta flokki tilkynningar"
 
@@ -373,7 +387,7 @@ msgstr "Skákborð. Notaðu örvalykla til að flakka, Enter eða bilslá til a�
 msgid "Chess board. Your turn. Use arrow keys to navigate, Enter or Space to select."
 msgstr "Skákborð. Þú átt leik. Notaðu örvalykla til að flakka, Enter eða bilslá til að velja."
 
-#: src/features/chess/components/game-empty-state.tsx:23
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:30
 msgid "Choose a game from the sidebar or start a new one."
 msgstr "Veldu leik úr hliðarstikunni eða byrjaðu nýjan."
 
@@ -587,7 +601,7 @@ msgstr "Dökkur hamur"
 msgid "Data conflict"
 msgstr "Gagnaárekstur"
 
-#: src/features/chess/components/draw-offer-banner.tsx:39
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:41
 msgid "Decline"
 msgstr "Hafna"
 
@@ -653,6 +667,14 @@ msgstr "Stefna"
 #: ../../../lib/web/src/components/person-picker.tsx:214
 msgid "Directory"
 msgstr "Skrá"
+
+#: ../../../lib/web/src/components/comment-composer.tsx:300
+msgid "Discard"
+msgstr ""
+
+#: ../../../lib/web/src/components/comment-composer.tsx:298
+msgid "Discard draft?"
+msgstr ""
 
 #: ../../../lib/web/src/lib/chat-ui.ts:25
 #: ../../../lib/web/src/lib/chat-ui.ts:29
@@ -798,7 +820,7 @@ msgstr "Tókst ekki að senda"
 msgid "Failed to send verification code"
 msgstr "Tókst ekki að senda staðfestingarkóða"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:111
+#: ../../../lib/web/src/components/notification-category-button.tsx:114
 msgid "Failed to update category"
 msgstr "Tókst ekki að uppfæra flokk"
 
@@ -934,6 +956,10 @@ msgstr "Innfellt"
 msgid "Interests"
 msgstr "Áhugaefni"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:550
+msgid "Invalid date"
+msgstr ""
+
 #: ../../../lib/web/src/components/tag-input.tsx:38
 msgid "Invalid tag: letters, numbers, spaces, hyphens, and slashes only (max 50 chars)"
 msgstr "Ógilt merki: aðeins bókstafir, tölur, bil, bandstrik og skástrik (að hámarki 50 stafir)"
@@ -1043,7 +1069,7 @@ msgstr "Miðlungs"
 msgid "Menu"
 msgstr "Valmynd"
 
-#: src/features/chess/components/chat-input.tsx:31
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:35
 msgid "Message"
 msgstr "Skilaboð"
 
@@ -1076,9 +1102,9 @@ msgstr "Netvilla"
 msgid "New"
 msgstr "Nýtt"
 
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:34
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:46
 #: src/components/layout/chess-layout.tsx:138
-#: src/features/chess/components/game-empty-state.tsx:27
-#: src/features/chess/components/game-empty-state.tsx:43
 #: src/features/chess/components/new-game.tsx:96
 msgid "New game"
 msgstr "Nýr leikur"
@@ -1104,7 +1130,7 @@ msgstr "Engir vinir fundust"
 msgid "No friends yet"
 msgstr "Engir vinir ennþá"
 
-#: src/features/chess/components/game-empty-state.tsx:38
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:43
 msgid "No games yet"
 msgstr "Engir leikir ennþá"
 
@@ -1120,6 +1146,7 @@ msgstr "Engin skilaboð ennþá"
 msgid "No notifications yet"
 msgstr "Engar tilkynningar enn"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:336
 #: ../../../lib/web/src/components/person-picker.tsx:84
 msgid "No people found"
 msgstr "Engir notendur fundust"
@@ -1146,7 +1173,7 @@ msgstr "Engar niðurstöður fundust."
 msgid "No time zone found."
 msgstr "Ekkert tímabelti fannst."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:147
+#: ../../../lib/web/src/components/notification-category-button.tsx:150
 msgid "No topic record yet — try again after the next notification."
 msgstr "Engin færsla um efni ennþá — reyndu aftur eftir næstu tilkynningu."
 
@@ -1268,6 +1295,7 @@ msgstr "peð"
 msgid "Pick a date"
 msgstr "Veldu dagsetningu"
 
+#: ../../../lib/web/src/components/comment-composer.tsx:95
 #: ../../../lib/web/src/features/errors/general-error.tsx:54
 #: ../../../lib/web/src/lib/api-response-interceptors.ts:304
 msgid "Please check your internet connection and try again."
@@ -1368,6 +1396,7 @@ msgstr "Afstætt innan 24 klst, annars algjört"
 msgid "Rematch"
 msgstr "Endurleikur"
 
+#: ../../../lib/web/src/components/comment-composer.tsx:232
 #: ../../../lib/web/src/features/access/access-list.tsx:270
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:180
 msgid "Remove"
@@ -1397,6 +1426,10 @@ msgstr "Fjarlægja aðgang?"
 #: ../../../lib/web/src/components/post-tags.tsx:232
 msgid "Remove interest"
 msgstr "Fjarlægja áhuga"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:671
+msgid "Remove item"
+msgstr ""
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:367
 msgid "Resend email"
@@ -1428,6 +1461,10 @@ msgstr "Gefast upp í leik?"
 #: src/features/chess/index.tsx:585
 msgid "Resigning..."
 msgstr "Gefst upp..."
+
+#: ../../../lib/web/src/components/comment-composer.tsx:249
+msgid "Retry"
+msgstr ""
 
 #: ../../../lib/web/src/components/config-drawer.tsx:362
 msgid "Right to Left"
@@ -1505,7 +1542,7 @@ msgstr "Velja {0}"
 msgid "Select a friend..."
 msgstr "Veldu vin..."
 
-#: src/features/chess/components/game-empty-state.tsx:22
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:29
 msgid "Select a game"
 msgstr "Veldu leik"
 
@@ -1553,6 +1590,11 @@ msgstr "Veldu stefnu vefsvæðis"
 msgid "Select theme preference"
 msgstr "Veldu þemastillingu"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:252
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:335
+msgid "Select..."
+msgstr ""
+
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:216
 msgid "selected"
 msgstr "valin"
@@ -1570,8 +1612,8 @@ msgstr "Senda aftur"
 msgid "Send email"
 msgstr "Senda tölvupóst"
 
-#: src/features/chess/components/chat-input.tsx:47
-#: src/features/chess/components/chat-input.tsx:56
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:52
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:61
 msgid "Send message"
 msgstr "Senda skilaboð"
 
@@ -1797,7 +1839,7 @@ msgstr "Þriðjudagur"
 msgid "Type a command or search..."
 msgstr "Skrifaðu skipun eða leitaðu..."
 
-#: src/features/chess/components/chat-input.tsx:34
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:39
 msgid "Type a message..."
 msgstr "Skrifaðu skilaboð..."
 
@@ -1818,7 +1860,7 @@ msgstr "Ekki tókst að tengjast fjarþjóni"
 msgid "Unable to redirect to login. Please try again."
 msgstr "Ekki tókst að endurbeina á innskráningu. Reyndu aftur."
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:155
+#: ../../../lib/web/src/components/notification-category-button.tsx:158
 msgid "Unassigned"
 msgstr "Ekki úthlutað"
 
@@ -1957,3 +1999,15 @@ msgstr "Þú hefur séð allt!"
 #: ../../../lib/web/src/components/restore-banner.tsx:91
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Reikningurinn þinn var fluttur hingað frá {source}. Þar til þú eyðir honum þar, geta skilaboð og tilkynningar náð til beggja þjóna, hluti af efni þínu heldur áfram að vera þjónað af gamla þjóninum og fylgjendur gætu þurft nokkrar mínútur að finna þig hér."
+
+#: ../../../lib/web/src/components/comment-composer.tsx:291
+msgid "Your attachments will be lost."
+msgstr ""
+
+#: ../../../lib/web/src/components/comment-composer.tsx:289
+msgid "Your text and attachments will be lost."
+msgstr ""
+
+#: ../../../lib/web/src/components/comment-composer.tsx:292
+msgid "Your text will be lost."
+msgstr ""
