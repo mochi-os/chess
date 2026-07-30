@@ -181,7 +181,13 @@ def stream_asset(a, entity_id, service, asset):
 	if "data" in header:
 		return {"data": header["data"]}
 	a.header("Content-Type", header.get("content_type", "application/octet-stream"))
-	a.write.stream(s)
+	# Bytes to relay per slot, matching what the people app accepts on upload.
+	# Without a cap, a peer answering for a person can stream indefinitely through
+	# this route, which is public. Only the three binary slots reach here - style
+	# and information returned above as data - so an unrecognised slot falls back
+	# to the largest of them rather than breaking a route that would otherwise work.
+	caps = {"avatar": 2 * 1024 * 1024, "banner": 10 * 1024 * 1024, "favicon": 64 * 1024}
+	a.write.stream(s, maximum=caps.get(asset, 10 * 1024 * 1024))
 	return None
 
 _PERSON_ASSETS = ("avatar", "banner", "favicon", "style", "information")
