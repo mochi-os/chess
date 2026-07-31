@@ -81,7 +81,7 @@ msgstr "{name}-მა ფრე შესთავაზა"
 msgid "{name} resigned"
 msgstr "{name}-მა დანებდა"
 
-#: src/features/chess/components/draw-offer-banner.tsx:30
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:29
 msgid "{opponentName} offered a draw"
 msgstr "{opponentName}-მა ფრე შემოგთავაზათ"
 
@@ -101,10 +101,6 @@ msgstr "{selectedCount, plural, other {# არჩეული}}"
 msgid "{selectedCount, plural, one {Bulk actions for # selected {entityName}} other {Bulk actions for # selected {manyName}}}"
 msgstr "{selectedCount, plural, other {მასობრივი მოქმედებები # არჩეული {manyName}-სთვის}}"
 
-#: ../../../lib/web/src/components/ui/upload-progress.tsx:52
-msgid "{sentLabel} of {totalLabel}"
-msgstr "{sentLabel} / {totalLabel}"
-
 #: src/features/chess/components/chat-message-list.tsx:224
 msgid "{subject} played <0>{san}</0>"
 msgstr "{subject}-მა ითამაშა <0>{san}</0>"
@@ -116,6 +112,11 @@ msgstr "{subject}-მა ითამაშა <0>{san}</0>"
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx:132
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, other {მენიუს გახსნა (# წაუკითხავი შეტყობინება)}}"
+
+#. placeholder {0}: countDeepChildren(object.id)
+#: ../../../lib/web/src/components/entity/entity-board-card.tsx:421
+msgid "+{0} nested"
+msgstr ""
 
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
@@ -129,7 +130,7 @@ msgstr "24 საათი"
 msgid "Absolute (date and time)"
 msgstr "აბსოლუტური (თარიღი და დრო)"
 
-#: src/features/chess/components/draw-offer-banner.tsx:46
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:45
 msgid "Accept"
 msgstr "მიღება"
 
@@ -165,6 +166,7 @@ msgstr "ანგარიში დადასტურებულია"
 msgid "Active games"
 msgstr "აქტიური თამაშები"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:717
 #: ../../../lib/web/src/features/access/access-dialog.tsx:332
 #: ../../../lib/web/src/features/accounts/account-add.tsx:196
 msgid "Add"
@@ -187,6 +189,10 @@ msgstr "ანგარიშის დამატება"
 msgid "Add an account to receive notifications and use services."
 msgstr "დაამატეთ ანგარიში შეტყობინებების მისაღებად და სერვისების გამოსაყენებლად."
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:687
+msgid "Add checklist item"
+msgstr ""
+
 #: src/features/chess/components/new-game.tsx:121
 msgid "Add friends"
 msgstr "მეგობრების დამატება"
@@ -194,6 +200,10 @@ msgstr "მეგობრების დამატება"
 #: src/features/chess/components/new-game.tsx:114
 msgid "Add friends in the People app to start playing"
 msgstr "დაამატეთ მეგობრები People აპში სათამაშოდ დასაწყებად"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:705
+msgid "Add item..."
+msgstr ""
 
 #: ../../../lib/web/src/features/accounts/account-picker.tsx:102
 msgid "Add new account"
@@ -377,7 +387,7 @@ msgstr "ჭადრაკის დაფა. გამოიყენეთ �
 msgid "Chess board. Your turn. Use arrow keys to navigate, Enter or Space to select."
 msgstr "ჭადრაკის დაფა. თქვენი სვლაა. გამოიყენეთ ისრები ნავიგაციისთვის, Enter ან Space ასარჩევად."
 
-#: src/features/chess/components/game-empty-state.tsx:23
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:38
 msgid "Choose a game from the sidebar or start a new one."
 msgstr "აირჩიეთ თამაში გვერდითა პანელიდან ან დაიწყეთ ახალი."
 
@@ -591,7 +601,7 @@ msgstr "ბნელი რეჟიმი"
 msgid "Data conflict"
 msgstr "მონაცემთა კონფლიქტი"
 
-#: src/features/chess/components/draw-offer-banner.tsx:39
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:41
 msgid "Decline"
 msgstr "უარის თქმა"
 
@@ -660,11 +670,11 @@ msgstr "კატალოგი"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:300
 msgid "Discard"
-msgstr "გაუქმება"
+msgstr ""
 
 #: ../../../lib/web/src/components/comment-composer.tsx:298
 msgid "Discard draft?"
-msgstr "გავაუქმოთ მონახაზი?"
+msgstr ""
 
 #: ../../../lib/web/src/lib/chat-ui.ts:25
 #: ../../../lib/web/src/lib/chat-ui.ts:29
@@ -946,6 +956,10 @@ msgstr "ჩაკიდებული"
 msgid "Interests"
 msgstr "ინტერესები"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:550
+msgid "Invalid date"
+msgstr ""
+
 #: ../../../lib/web/src/components/tag-input.tsx:38
 msgid "Invalid tag: letters, numbers, spaces, hyphens, and slashes only (max 50 chars)"
 msgstr "არასწორი ტეგი: მხოლოდ ასოები, ციფრები, ჰარეები, დეფისები და ხაზები (მაქსიმუმ 50 სიმბოლო)"
@@ -1055,7 +1069,7 @@ msgstr "საშუალო"
 msgid "Menu"
 msgstr "მენიუ"
 
-#: src/features/chess/components/chat-input.tsx:31
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:35
 msgid "Message"
 msgstr "შეტყობინება"
 
@@ -1088,9 +1102,9 @@ msgstr "ქსელის შეცდომა"
 msgid "New"
 msgstr "ახალი"
 
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:42
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:54
 #: src/components/layout/chess-layout.tsx:138
-#: src/features/chess/components/game-empty-state.tsx:27
-#: src/features/chess/components/game-empty-state.tsx:43
 #: src/features/chess/components/new-game.tsx:96
 msgid "New game"
 msgstr "ახალი თამაში"
@@ -1116,7 +1130,7 @@ msgstr "მეგობრები ვერ მოიძებნა"
 msgid "No friends yet"
 msgstr "მეგობრები ჯერ არ არის"
 
-#: src/features/chess/components/game-empty-state.tsx:38
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:51
 msgid "No games yet"
 msgstr "თამაშები ჯერ არ არის"
 
@@ -1132,6 +1146,7 @@ msgstr "შეტყობინებები ჯერ არ არის"
 msgid "No notifications yet"
 msgstr "ჯერ არ არის შეტყობინებები"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:336
 #: ../../../lib/web/src/components/person-picker.tsx:84
 msgid "No people found"
 msgstr "ხალხი ვერ მოიძებნა"
@@ -1312,10 +1327,6 @@ msgstr "წინა სურათი"
 msgid "Privacy"
 msgstr "კონფიდენციალურობა"
 
-#: ../../../lib/web/src/components/ui/upload-progress.tsx:50
-msgid "Processing…"
-msgstr "მუშავდება…"
-
 #: ../../../lib/web/src/components/layout/nav-user.tsx:137
 #: ../../../lib/web/src/components/profile-dropdown.tsx:114
 msgid "Profile"
@@ -1416,6 +1427,10 @@ msgstr "წვდომის წაშლა?"
 msgid "Remove interest"
 msgstr "ინტერესის წაშლა"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:671
+msgid "Remove item"
+msgstr ""
+
 #: ../../../lib/web/src/components/step-up-dialog.tsx:367
 msgid "Resend email"
 msgstr "ელფოსტის ხელახლა გაგზავნა"
@@ -1449,7 +1464,7 @@ msgstr "ჩაბარება..."
 
 #: ../../../lib/web/src/components/comment-composer.tsx:249
 msgid "Retry"
-msgstr "ხელახლა ცდა"
+msgstr ""
 
 #: ../../../lib/web/src/components/config-drawer.tsx:362
 msgid "Right to Left"
@@ -1527,7 +1542,7 @@ msgstr "აირჩიეთ {0}"
 msgid "Select a friend..."
 msgstr "მეგობრის არჩევა..."
 
-#: src/features/chess/components/game-empty-state.tsx:22
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:37
 msgid "Select a game"
 msgstr "თამაშის არჩევა"
 
@@ -1575,6 +1590,11 @@ msgstr "აირჩიეთ საიტის მიმართულებ�
 msgid "Select theme preference"
 msgstr "აირჩიეთ თემის პრიორიტეტი"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:252
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:335
+msgid "Select..."
+msgstr ""
+
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:216
 msgid "selected"
 msgstr "არჩეული"
@@ -1592,8 +1612,8 @@ msgstr "თავიდან გაგზავნა"
 msgid "Send email"
 msgstr "ელფოსტის გაგზავნა"
 
-#: src/features/chess/components/chat-input.tsx:47
-#: src/features/chess/components/chat-input.tsx:56
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:52
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:61
 msgid "Send message"
 msgstr "შეტყობინების გაგზავნა"
 
@@ -1819,9 +1839,9 @@ msgstr "სცადეთ სხვა ძიების ტერმინე
 msgid "Type a command or search..."
 msgstr "აკრიფეთ ბრძანება ან მოძებნეთ..."
 
-#: src/features/chess/components/chat-input.tsx:34
-msgid "Type a message..."
-msgstr "ჩაწერეთ ბრძანება ან მოძებნეთ..."
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:39
+msgid "Type a message…"
+msgstr "ჩაწერეთ ბრძანება ან მოძებნეთ…"
 
 #: ../../../lib/web/src/features/access/access-dialog.tsx:191
 msgid "Type to search users"
@@ -1865,10 +1885,6 @@ msgstr "ერთეულები"
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:135
 msgid "Unverified"
 msgstr "უსათაურო ლისტინგი"
-
-#: ../../../lib/web/src/components/ui/upload-progress.tsx:34
-msgid "Upload progress"
-msgstr "ატვირთვის მიმდინარეობა"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:338
 msgid "Use your passkey"
@@ -1986,12 +2002,12 @@ msgstr "თქვენი ანგარიში გადმოტანი�
 
 #: ../../../lib/web/src/components/comment-composer.tsx:291
 msgid "Your attachments will be lost."
-msgstr "თქვენი დანართები დაიკარგება."
+msgstr ""
 
 #: ../../../lib/web/src/components/comment-composer.tsx:289
 msgid "Your text and attachments will be lost."
-msgstr "თქვენი ტექსტი და დანართები დაიკარგება."
+msgstr ""
 
 #: ../../../lib/web/src/components/comment-composer.tsx:292
 msgid "Your text will be lost."
-msgstr "შენი ტექსტი დაიკარგება."
+msgstr ""

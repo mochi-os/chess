@@ -81,7 +81,7 @@ msgstr "{name} je ponudio remi"
 msgid "{name} resigned"
 msgstr "{name} je predao"
 
-#: src/features/chess/components/draw-offer-banner.tsx:30
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:29
 msgid "{opponentName} offered a draw"
 msgstr "{opponentName} je ponudio neriješeno"
 
@@ -101,10 +101,6 @@ msgstr "{selectedCount, plural, one {# odabrano} few {# odabrano} other {# odabr
 msgid "{selectedCount, plural, one {Bulk actions for # selected {entityName}} other {Bulk actions for # selected {manyName}}}"
 msgstr "{selectedCount, plural, one {Skupne radnje za # odabrani {entityName}} few {Skupne radnje za # odabrana {manyName}} other {Skupne radnje za # odabranih {manyName}}}"
 
-#: ../../../lib/web/src/components/ui/upload-progress.tsx:52
-msgid "{sentLabel} of {totalLabel}"
-msgstr "{sentLabel} od {totalLabel}"
-
 #: src/features/chess/components/chat-message-list.tsx:224
 msgid "{subject} played <0>{san}</0>"
 msgstr "{subject} odigrao <0>{san}</0>"
@@ -116,6 +112,11 @@ msgstr "{subject} uzeo <0>{san}</0>"
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx:132
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {Otvori izbornik (# nepročitana obavijest)} few {Otvori izbornik (# nepročitane obavijesti)} other {Otvori izbornik (# nepročitanih obavijesti)}}"
+
+#. placeholder {0}: countDeepChildren(object.id)
+#: ../../../lib/web/src/components/entity/entity-board-card.tsx:421
+msgid "+{0} nested"
+msgstr ""
 
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
@@ -129,7 +130,7 @@ msgstr "24 sata"
 msgid "Absolute (date and time)"
 msgstr "Apsolutno (datum i vrijeme)"
 
-#: src/features/chess/components/draw-offer-banner.tsx:46
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:45
 msgid "Accept"
 msgstr "Prihvati"
 
@@ -165,6 +166,7 @@ msgstr "Račun verificiran"
 msgid "Active games"
 msgstr "Aktivne igre"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:717
 #: ../../../lib/web/src/features/access/access-dialog.tsx:332
 #: ../../../lib/web/src/features/accounts/account-add.tsx:196
 msgid "Add"
@@ -187,6 +189,10 @@ msgstr "Dodaj račun"
 msgid "Add an account to receive notifications and use services."
 msgstr "Dodajte račun za primanje obavijesti i korištenje servisa."
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:687
+msgid "Add checklist item"
+msgstr ""
+
 #: src/features/chess/components/new-game.tsx:121
 msgid "Add friends"
 msgstr "Dodaj prijatelje"
@@ -194,6 +200,10 @@ msgstr "Dodaj prijatelje"
 #: src/features/chess/components/new-game.tsx:114
 msgid "Add friends in the People app to start playing"
 msgstr "Dodajte prijatelje u aplikaciji Ljudi za početak igranja"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:705
+msgid "Add item..."
+msgstr ""
 
 #: ../../../lib/web/src/features/accounts/account-picker.tsx:102
 msgid "Add new account"
@@ -377,7 +387,7 @@ msgstr "Šahovska ploča. Koristite tipke sa strelicama za navigaciju, Enter ili
 msgid "Chess board. Your turn. Use arrow keys to navigate, Enter or Space to select."
 msgstr "Šahovska ploča. Vaš red. Koristite tipke sa strelicama za navigaciju, Enter ili Space za odabir."
 
-#: src/features/chess/components/game-empty-state.tsx:23
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:38
 msgid "Choose a game from the sidebar or start a new one."
 msgstr "Odaberite igru iz bočne trake ili započnite novu."
 
@@ -591,7 +601,7 @@ msgstr "Tamni način rada"
 msgid "Data conflict"
 msgstr "Sukob podataka"
 
-#: src/features/chess/components/draw-offer-banner.tsx:39
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:41
 msgid "Decline"
 msgstr "Odbij"
 
@@ -660,11 +670,11 @@ msgstr "Imenik"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:300
 msgid "Discard"
-msgstr "Odbaci"
+msgstr ""
 
 #: ../../../lib/web/src/components/comment-composer.tsx:298
 msgid "Discard draft?"
-msgstr "Odbaciti skicu?"
+msgstr ""
 
 #: ../../../lib/web/src/lib/chat-ui.ts:25
 #: ../../../lib/web/src/lib/chat-ui.ts:29
@@ -946,6 +956,10 @@ msgstr "Uvučeno"
 msgid "Interests"
 msgstr "Interesi"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:550
+msgid "Invalid date"
+msgstr ""
+
 #: ../../../lib/web/src/components/tag-input.tsx:38
 msgid "Invalid tag: letters, numbers, spaces, hyphens, and slashes only (max 50 chars)"
 msgstr "Nevaljana oznaka: samo slova, brojevi, razmaci, crtice i kose crte (najviše 50 znakova)"
@@ -1055,7 +1069,7 @@ msgstr "Srednje"
 msgid "Menu"
 msgstr "Izbornik"
 
-#: src/features/chess/components/chat-input.tsx:31
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:35
 msgid "Message"
 msgstr "Poruka"
 
@@ -1088,9 +1102,9 @@ msgstr "Pogreška mreže"
 msgid "New"
 msgstr "Novo"
 
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:42
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:54
 #: src/components/layout/chess-layout.tsx:138
-#: src/features/chess/components/game-empty-state.tsx:27
-#: src/features/chess/components/game-empty-state.tsx:43
 #: src/features/chess/components/new-game.tsx:96
 msgid "New game"
 msgstr "Nova igra"
@@ -1116,7 +1130,7 @@ msgstr "Nije pronađen nijedan prijatelj"
 msgid "No friends yet"
 msgstr "Još nema prijatelja"
 
-#: src/features/chess/components/game-empty-state.tsx:38
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:51
 msgid "No games yet"
 msgstr "Još nema igara"
 
@@ -1132,6 +1146,7 @@ msgstr "Još nema poruka"
 msgid "No notifications yet"
 msgstr "Još nema obavijesti"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:336
 #: ../../../lib/web/src/components/person-picker.tsx:84
 msgid "No people found"
 msgstr "Nije pronađen nijedan korisnik"
@@ -1312,10 +1327,6 @@ msgstr "Prethodna slika"
 msgid "Privacy"
 msgstr "Privatnost"
 
-#: ../../../lib/web/src/components/ui/upload-progress.tsx:50
-msgid "Processing…"
-msgstr "Obrada…"
-
 #: ../../../lib/web/src/components/layout/nav-user.tsx:137
 #: ../../../lib/web/src/components/profile-dropdown.tsx:114
 msgid "Profile"
@@ -1416,6 +1427,10 @@ msgstr "Ukloniti pristup?"
 msgid "Remove interest"
 msgstr "Ukloni interes"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:671
+msgid "Remove item"
+msgstr ""
+
 #: ../../../lib/web/src/components/step-up-dialog.tsx:367
 msgid "Resend email"
 msgstr "Ponovno pošalji e-poštu"
@@ -1449,7 +1464,7 @@ msgstr "Predaja..."
 
 #: ../../../lib/web/src/components/comment-composer.tsx:249
 msgid "Retry"
-msgstr "Pokušaj ponovno"
+msgstr ""
 
 #: ../../../lib/web/src/components/config-drawer.tsx:362
 msgid "Right to Left"
@@ -1527,7 +1542,7 @@ msgstr "Odaberi {0}"
 msgid "Select a friend..."
 msgstr "Odaberite prijatelja..."
 
-#: src/features/chess/components/game-empty-state.tsx:22
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:37
 msgid "Select a game"
 msgstr "Odaberite igru"
 
@@ -1575,6 +1590,11 @@ msgstr "Odaberi smjer stranice"
 msgid "Select theme preference"
 msgstr "Odaberi preferenciju teme"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:252
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:335
+msgid "Select..."
+msgstr ""
+
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:216
 msgid "selected"
 msgstr "odabrano"
@@ -1592,8 +1612,8 @@ msgstr "Pošalji ponovno"
 msgid "Send email"
 msgstr "Pošalji e-poštu"
 
-#: src/features/chess/components/chat-input.tsx:47
-#: src/features/chess/components/chat-input.tsx:56
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:52
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:61
 msgid "Send message"
 msgstr "Pošalji poruku"
 
@@ -1819,9 +1839,9 @@ msgstr "Utorak"
 msgid "Type a command or search..."
 msgstr "Upišite naredbu ili pretragu..."
 
-#: src/features/chess/components/chat-input.tsx:34
-msgid "Type a message..."
-msgstr "Upišite poruku..."
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:39
+msgid "Type a message…"
+msgstr "Upišite poruku…"
 
 #: ../../../lib/web/src/features/access/access-dialog.tsx:191
 msgid "Type to search users"
@@ -1865,10 +1885,6 @@ msgstr "Nepoznato"
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:135
 msgid "Unverified"
 msgstr "Neprovjereno"
-
-#: ../../../lib/web/src/components/ui/upload-progress.tsx:34
-msgid "Upload progress"
-msgstr "Napredak prijenosa"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:338
 msgid "Use your passkey"
@@ -1986,12 +2002,12 @@ msgstr "Vaš račun je premješten ovdje s {source}. Dok ga tamo ne izbrišete, 
 
 #: ../../../lib/web/src/components/comment-composer.tsx:291
 msgid "Your attachments will be lost."
-msgstr "Vaši će privici biti izgubljeni."
+msgstr ""
 
 #: ../../../lib/web/src/components/comment-composer.tsx:289
 msgid "Your text and attachments will be lost."
-msgstr "Vaš tekst i privici bit će izgubljeni."
+msgstr ""
 
 #: ../../../lib/web/src/components/comment-composer.tsx:292
 msgid "Your text will be lost."
-msgstr "Tekst će biti izgubljen."
+msgstr ""

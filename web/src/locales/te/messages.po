@@ -81,7 +81,7 @@ msgstr "{name} డ్రా ప్రతిపాదించారు"
 msgid "{name} resigned"
 msgstr "{name} ఓటమిని అంగీకరించారు"
 
-#: src/features/chess/components/draw-offer-banner.tsx:30
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:29
 msgid "{opponentName} offered a draw"
 msgstr "{opponentName} డ్రా అందించారు"
 
@@ -101,10 +101,6 @@ msgstr "{selectedCount, plural, one {# ఎంచుకోబడింది} oth
 msgid "{selectedCount, plural, one {Bulk actions for # selected {entityName}} other {Bulk actions for # selected {manyName}}}"
 msgstr "{selectedCount, plural, one {# ఎంచుకున్న {entityName} కోసం బల్క్ చర్యలు} other {# ఎంచుకున్న {manyName} కోసం బల్క్ చర్యలు}}"
 
-#: ../../../lib/web/src/components/ui/upload-progress.tsx:52
-msgid "{sentLabel} of {totalLabel}"
-msgstr "{totalLabel}లో {sentLabel}"
-
 #: src/features/chess/components/chat-message-list.tsx:224
 msgid "{subject} played <0>{san}</0>"
 msgstr "{subject} <0>{san}</0> ఆడారు"
@@ -116,6 +112,11 @@ msgstr "{subject} <0>{san}</0>ను తీసుకున్నారు"
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx:132
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {మెనూ తెరవండి (# చదవని నోటిఫికేషన్)} other {మెనూ తెరవండి (# చదవని నోటిఫికేషన్‌లు)}}"
+
+#. placeholder {0}: countDeepChildren(object.id)
+#: ../../../lib/web/src/components/entity/entity-board-card.tsx:421
+msgid "+{0} nested"
+msgstr ""
 
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
@@ -129,7 +130,7 @@ msgstr "24 గంటలు"
 msgid "Absolute (date and time)"
 msgstr "సంపూర్ణ (తేదీ మరియు సమయం)"
 
-#: src/features/chess/components/draw-offer-banner.tsx:46
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:45
 msgid "Accept"
 msgstr "అంగీకరించండి"
 
@@ -165,6 +166,7 @@ msgstr "ఖాతా ధృవీకరించబడింది"
 msgid "Active games"
 msgstr "క్రియాశీల ఆటలు"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:717
 #: ../../../lib/web/src/features/access/access-dialog.tsx:332
 #: ../../../lib/web/src/features/accounts/account-add.tsx:196
 msgid "Add"
@@ -187,6 +189,10 @@ msgstr "ఖాతాను జోడించండి"
 msgid "Add an account to receive notifications and use services."
 msgstr "నోటిఫికేషన్‌లను అందుకోవడానికి మరియు సేవలను ఉపయోగించడానికి ఖాతాను జోడించండి."
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:687
+msgid "Add checklist item"
+msgstr ""
+
 #: src/features/chess/components/new-game.tsx:121
 msgid "Add friends"
 msgstr "స్నేహితులను జోడించండి"
@@ -194,6 +200,10 @@ msgstr "స్నేహితులను జోడించండి"
 #: src/features/chess/components/new-game.tsx:114
 msgid "Add friends in the People app to start playing"
 msgstr "ఆడటం ప్రారంభించడానికి People యాప్‌లో స్నేహితులను జోడించండి"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:705
+msgid "Add item..."
+msgstr ""
 
 #: ../../../lib/web/src/features/accounts/account-picker.tsx:102
 msgid "Add new account"
@@ -377,7 +387,7 @@ msgstr "చెస్ బోర్డ్. నావిగేట్ చేయడ�
 msgid "Chess board. Your turn. Use arrow keys to navigate, Enter or Space to select."
 msgstr "చెస్ బోర్డ్. మీ వంతు. నావిగేట్ చేయడానికి బాణం కీలు, ఎంచుకోవడానికి Enter లేదా Space ఉపయోగించండి."
 
-#: src/features/chess/components/game-empty-state.tsx:23
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:38
 msgid "Choose a game from the sidebar or start a new one."
 msgstr "సైడ్‌బార్ నుండి ఆటను ఎంచుకోండి లేదా కొత్తదాన్ని ప్రారంభించండి."
 
@@ -591,7 +601,7 @@ msgstr "డార్క్ మోడ్"
 msgid "Data conflict"
 msgstr "డేటా వైరుధ్యం"
 
-#: src/features/chess/components/draw-offer-banner.tsx:39
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:41
 msgid "Decline"
 msgstr "తిరస్కరించండి"
 
@@ -660,11 +670,11 @@ msgstr "డైరెక్టరీ"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:300
 msgid "Discard"
-msgstr "విస్మరించు"
+msgstr ""
 
 #: ../../../lib/web/src/components/comment-composer.tsx:298
 msgid "Discard draft?"
-msgstr "డ్రాఫ్ట్‌ను విస్మరించాలా?"
+msgstr ""
 
 #: ../../../lib/web/src/lib/chat-ui.ts:25
 #: ../../../lib/web/src/lib/chat-ui.ts:29
@@ -946,6 +956,10 @@ msgstr "ఇన్‌సెట్"
 msgid "Interests"
 msgstr "ఆసక్తులు"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:550
+msgid "Invalid date"
+msgstr ""
+
 #: ../../../lib/web/src/components/tag-input.tsx:38
 msgid "Invalid tag: letters, numbers, spaces, hyphens, and slashes only (max 50 chars)"
 msgstr "చెల్లని ట్యాగ్: అక్షరాలు, సంఖ్యలు, ఖాళీలు, హైఫన్‌లు, స్లాష్‌లు మాత్రమే (గరిష్ఠంగా 50 అక్షరాలు)"
@@ -1055,7 +1069,7 @@ msgstr "మధ్యస్థం"
 msgid "Menu"
 msgstr "మెను"
 
-#: src/features/chess/components/chat-input.tsx:31
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:35
 msgid "Message"
 msgstr "సందేశం"
 
@@ -1088,9 +1102,9 @@ msgstr "నెట్‌వర్క్ లోపం"
 msgid "New"
 msgstr "కొత్తది"
 
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:42
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:54
 #: src/components/layout/chess-layout.tsx:138
-#: src/features/chess/components/game-empty-state.tsx:27
-#: src/features/chess/components/game-empty-state.tsx:43
 #: src/features/chess/components/new-game.tsx:96
 msgid "New game"
 msgstr "కొత్త గేమ్"
@@ -1116,7 +1130,7 @@ msgstr "స్నేహితులు ఎవరూ కనుగొనబడల�
 msgid "No friends yet"
 msgstr "ఇంకా స్నేహితులు లేరు"
 
-#: src/features/chess/components/game-empty-state.tsx:38
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:51
 msgid "No games yet"
 msgstr "ఇంకా గేమ్‌లు లేవు"
 
@@ -1132,6 +1146,7 @@ msgstr "ఇంకా సందేశాలు లేవు"
 msgid "No notifications yet"
 msgstr "ఇంకా నోటిఫికేషన్‌లు లేవు"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:336
 #: ../../../lib/web/src/components/person-picker.tsx:84
 msgid "No people found"
 msgstr "ఎవరూ కనుగొనబడలేదు"
@@ -1312,10 +1327,6 @@ msgstr "మునుపటి చిత్రం"
 msgid "Privacy"
 msgstr "గోప్యత"
 
-#: ../../../lib/web/src/components/ui/upload-progress.tsx:50
-msgid "Processing…"
-msgstr "ప్రాసెస్ అవుతోంది…"
-
 #: ../../../lib/web/src/components/layout/nav-user.tsx:137
 #: ../../../lib/web/src/components/profile-dropdown.tsx:114
 msgid "Profile"
@@ -1416,6 +1427,10 @@ msgstr "యాక్సెస్‌ను తొలగించాలా?"
 msgid "Remove interest"
 msgstr "ఆసక్తిని తొలగించండి"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:671
+msgid "Remove item"
+msgstr ""
+
 #: ../../../lib/web/src/components/step-up-dialog.tsx:367
 msgid "Resend email"
 msgstr "ఇమెయిల్‌ను మళ్లీ పంపండి"
@@ -1449,7 +1464,7 @@ msgstr "రిజైన్ చేస్తోంది..."
 
 #: ../../../lib/web/src/components/comment-composer.tsx:249
 msgid "Retry"
-msgstr "మళ్లీ ప్రయత్నించండి"
+msgstr ""
 
 #: ../../../lib/web/src/components/config-drawer.tsx:362
 msgid "Right to Left"
@@ -1527,7 +1542,7 @@ msgstr "{0} ఎంచుకోండి"
 msgid "Select a friend..."
 msgstr "ఒక ఫ్రెండ్‌ను ఎంచుకోండి..."
 
-#: src/features/chess/components/game-empty-state.tsx:22
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:37
 msgid "Select a game"
 msgstr "ఒక ఆటను ఎంచుకోండి"
 
@@ -1575,6 +1590,11 @@ msgstr "సైట్ దిశను ఎంచుకోండి"
 msgid "Select theme preference"
 msgstr "థీమ్ ప్రాధాన్యతను ఎంచుకోండి"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:252
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:335
+msgid "Select..."
+msgstr ""
+
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:216
 msgid "selected"
 msgstr "ఎంచుకోబడింది"
@@ -1592,8 +1612,8 @@ msgstr "మళ్ళీ పంపండి"
 msgid "Send email"
 msgstr "ఇమెయిల్ పంపండి"
 
-#: src/features/chess/components/chat-input.tsx:47
-#: src/features/chess/components/chat-input.tsx:56
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:52
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:61
 msgid "Send message"
 msgstr "సందేశాన్ని పంపండి"
 
@@ -1819,9 +1839,9 @@ msgstr "మంగళవారం"
 msgid "Type a command or search..."
 msgstr "ఒక కమాండ్‌ను టైప్ చేయండి లేదా శోధించండి..."
 
-#: src/features/chess/components/chat-input.tsx:34
-msgid "Type a message..."
-msgstr "ఒక సందేశాన్ని టైప్ చేయండి..."
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:39
+msgid "Type a message…"
+msgstr "ఒక సందేశాన్ని టైప్ చేయండి…"
 
 #: ../../../lib/web/src/features/access/access-dialog.tsx:191
 msgid "Type to search users"
@@ -1865,10 +1885,6 @@ msgstr "తెలియదు"
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:135
 msgid "Unverified"
 msgstr "ధృవీకరించబడలేదు"
-
-#: ../../../lib/web/src/components/ui/upload-progress.tsx:34
-msgid "Upload progress"
-msgstr "అప్‌లోడ్ పురోగతి"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:338
 msgid "Use your passkey"
@@ -1986,12 +2002,12 @@ msgstr "మీ ఖాతా {source} నుండి ఇక్కడికి �
 
 #: ../../../lib/web/src/components/comment-composer.tsx:291
 msgid "Your attachments will be lost."
-msgstr "మీ జోడింపులు పోతాయి."
+msgstr ""
 
 #: ../../../lib/web/src/components/comment-composer.tsx:289
 msgid "Your text and attachments will be lost."
-msgstr "మీ వచనం మరియు జోడింపులు పోతాయి."
+msgstr ""
 
 #: ../../../lib/web/src/components/comment-composer.tsx:292
 msgid "Your text will be lost."
-msgstr "మీ వచనం పోతుంది."
+msgstr ""

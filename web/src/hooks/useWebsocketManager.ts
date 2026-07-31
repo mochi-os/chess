@@ -3,10 +3,4 @@
 // This file is part of Mochi, licensed under the GNU AGPL v3 with the
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
 
-import { useContext } from 'react'
-import { WebsocketContext } from '@/context/websocket-context'
-
-export const useWebsocketManager = () => {
-  return useContext(WebsocketContext)
-}
-
+export { useGameWebsocketManager as useWebsocketManager } from '@mochi/web'

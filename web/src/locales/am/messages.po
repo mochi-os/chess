@@ -81,7 +81,7 @@ msgstr "{name} አቻ ጨዋታ አቀረበ"
 msgid "{name} resigned"
 msgstr "{name} እጅ ሰጠ"
 
-#: src/features/chess/components/draw-offer-banner.tsx:30
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:29
 msgid "{opponentName} offered a draw"
 msgstr "{opponentName} አቻ አቅርቧል"
 
@@ -101,10 +101,6 @@ msgstr "{selectedCount, plural, one {# ተመርጠዋል} other {# ተመርጠ
 msgid "{selectedCount, plural, one {Bulk actions for # selected {entityName}} other {Bulk actions for # selected {manyName}}}"
 msgstr "{selectedCount, plural, one {ለ# የተመረጠ {entityName} የጅምላ እርምጃዎች} other {ለ# የተመረጡ {manyName} የጅምላ እርምጃዎች}}"
 
-#: ../../../lib/web/src/components/ui/upload-progress.tsx:52
-msgid "{sentLabel} of {totalLabel}"
-msgstr "{sentLabel} ከ {totalLabel}"
-
 #: src/features/chess/components/chat-message-list.tsx:224
 msgid "{subject} played <0>{san}</0>"
 msgstr "{subject} <0>{san}</0> ተጫውቷል"
@@ -116,6 +112,11 @@ msgstr "{subject} <0>{san}</0>ን ያዘ"
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx:132
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {ምናሌን ክፈት (# ያልተነበበ ማሳወቂያ)} other {ምናሌን ክፈት (# ያልተነበቡ ማሳወቂያዎች)}}"
+
+#. placeholder {0}: countDeepChildren(object.id)
+#: ../../../lib/web/src/components/entity/entity-board-card.tsx:421
+msgid "+{0} nested"
+msgstr ""
 
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
@@ -129,7 +130,7 @@ msgstr "24 ሰዓት"
 msgid "Absolute (date and time)"
 msgstr "ፍጹም (ቀንና ሰዓት)"
 
-#: src/features/chess/components/draw-offer-banner.tsx:46
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:45
 msgid "Accept"
 msgstr "ተቀበል"
 
@@ -165,6 +166,7 @@ msgstr "መለያ ተረጋግጧል"
 msgid "Active games"
 msgstr "ንቁ ጨዋታዎች"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:717
 #: ../../../lib/web/src/features/access/access-dialog.tsx:332
 #: ../../../lib/web/src/features/accounts/account-add.tsx:196
 msgid "Add"
@@ -187,6 +189,10 @@ msgstr "መለያ ጨምር"
 msgid "Add an account to receive notifications and use services."
 msgstr "ማሳወቂያዎችን ለመቀበልና አገልግሎቶችን ለመጠቀም መለያ ጨምር።"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:687
+msgid "Add checklist item"
+msgstr ""
+
 #: src/features/chess/components/new-game.tsx:121
 msgid "Add friends"
 msgstr "ጓደኞችን ጨምር"
@@ -194,6 +200,10 @@ msgstr "ጓደኞችን ጨምር"
 #: src/features/chess/components/new-game.tsx:114
 msgid "Add friends in the People app to start playing"
 msgstr "መጫወት ለመጀመር በሰዎች መተግበሪያ ላይ ጓደኞችን ጨምር"
+
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:705
+msgid "Add item..."
+msgstr ""
 
 #: ../../../lib/web/src/features/accounts/account-picker.tsx:102
 msgid "Add new account"
@@ -377,7 +387,7 @@ msgstr "የቼዝ ሰሌዳ። ለመጓዝ የቀስት ቁልፎችን፣ ለ�
 msgid "Chess board. Your turn. Use arrow keys to navigate, Enter or Space to select."
 msgstr "የቼዝ ሰሌዳ። የእርስዎ ተራ። ለመጓዝ የቀስት ቁልፎችን፣ ለመምረጥ Enter ወይም Space ይጠቀሙ።"
 
-#: src/features/chess/components/game-empty-state.tsx:23
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:38
 msgid "Choose a game from the sidebar or start a new one."
 msgstr "ከጎን አሞሌ ጨዋታ ምረጥ ወይም አዲስ ጀምር።"
 
@@ -591,7 +601,7 @@ msgstr "ጨለማ ሁነታ"
 msgid "Data conflict"
 msgstr "የውሂብ ግጭት"
 
-#: src/features/chess/components/draw-offer-banner.tsx:39
+#: ../../../lib/web/src/components/game/game-draw-offer-banner.tsx:41
 msgid "Decline"
 msgstr "አትቀበል"
 
@@ -660,11 +670,11 @@ msgstr "ማውጫ"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:300
 msgid "Discard"
-msgstr "ጣል"
+msgstr ""
 
 #: ../../../lib/web/src/components/comment-composer.tsx:298
 msgid "Discard draft?"
-msgstr "ረቂቁን ይጣል?"
+msgstr ""
 
 #: ../../../lib/web/src/lib/chat-ui.ts:25
 #: ../../../lib/web/src/lib/chat-ui.ts:29
@@ -946,6 +956,10 @@ msgstr "ውስጠኛ"
 msgid "Interests"
 msgstr "ፍላጎቶች"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:550
+msgid "Invalid date"
+msgstr ""
+
 #: ../../../lib/web/src/components/tag-input.tsx:38
 msgid "Invalid tag: letters, numbers, spaces, hyphens, and slashes only (max 50 chars)"
 msgstr "ልክ ያልሆነ መለያ፦ ፊደላት፣ ቁጥሮች፣ ክፍተቶች፣ ሰረዞችና ስላሾች ብቻ (ቢበዛ 50 ቁምፊ)"
@@ -1055,7 +1069,7 @@ msgstr "መካከለኛ"
 msgid "Menu"
 msgstr "ምናሌ"
 
-#: src/features/chess/components/chat-input.tsx:31
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:35
 msgid "Message"
 msgstr "መልዕክት"
 
@@ -1088,9 +1102,9 @@ msgstr "የአውታረ መረብ ስህተት"
 msgid "New"
 msgstr "አዲስ"
 
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:42
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:54
 #: src/components/layout/chess-layout.tsx:138
-#: src/features/chess/components/game-empty-state.tsx:27
-#: src/features/chess/components/game-empty-state.tsx:43
 #: src/features/chess/components/new-game.tsx:96
 msgid "New game"
 msgstr "አዲስ ጨዋታ"
@@ -1116,7 +1130,7 @@ msgstr "ምንም ጓደኞች አልተገኙም"
 msgid "No friends yet"
 msgstr "እስካሁን ጓደኞች የሉም"
 
-#: src/features/chess/components/game-empty-state.tsx:38
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:51
 msgid "No games yet"
 msgstr "እስካሁን ጨዋታዎች የሉም"
 
@@ -1132,6 +1146,7 @@ msgstr "እስካሁን መልዕክቶች የሉም"
 msgid "No notifications yet"
 msgstr "እስካሁን ማሳወቂያ የለም"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:336
 #: ../../../lib/web/src/components/person-picker.tsx:84
 msgid "No people found"
 msgstr "ምንም ሰዎች አልተገኙም"
@@ -1312,10 +1327,6 @@ msgstr "ቀዳሚ ምስል"
 msgid "Privacy"
 msgstr "ግላዊነት"
 
-#: ../../../lib/web/src/components/ui/upload-progress.tsx:50
-msgid "Processing…"
-msgstr "በሂደት ላይ…"
-
 #: ../../../lib/web/src/components/layout/nav-user.tsx:137
 #: ../../../lib/web/src/components/profile-dropdown.tsx:114
 msgid "Profile"
@@ -1416,6 +1427,10 @@ msgstr "ድረሳ ይወገድ?"
 msgid "Remove interest"
 msgstr "ፍላጎት አስወግድ"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:671
+msgid "Remove item"
+msgstr ""
+
 #: ../../../lib/web/src/components/step-up-dialog.tsx:367
 msgid "Resend email"
 msgstr "ኢሜይል እንደገና ላክ"
@@ -1449,7 +1464,7 @@ msgstr "በመልቀቅ ላይ..."
 
 #: ../../../lib/web/src/components/comment-composer.tsx:249
 msgid "Retry"
-msgstr "እንደገና ሞክር"
+msgstr ""
 
 #: ../../../lib/web/src/components/config-drawer.tsx:362
 msgid "Right to Left"
@@ -1527,7 +1542,7 @@ msgstr "{0} ይምረጡ"
 msgid "Select a friend..."
 msgstr "ጓደኛ ይምረጡ..."
 
-#: src/features/chess/components/game-empty-state.tsx:22
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:37
 msgid "Select a game"
 msgstr "ጨዋታ ይምረጡ"
 
@@ -1575,6 +1590,11 @@ msgstr "የጣቢያ አቅጣጫ ይምረጡ"
 msgid "Select theme preference"
 msgstr "የገጽታ ምርጫ ይምረጡ"
 
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:252
+#: ../../../lib/web/src/components/entity/entity-field-editor.tsx:335
+msgid "Select..."
+msgstr ""
+
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:216
 msgid "selected"
 msgstr "ተመርጠዋል"
@@ -1592,8 +1612,8 @@ msgstr "እንደገና ላክ"
 msgid "Send email"
 msgstr "ኢሜይል ላክ"
 
-#: src/features/chess/components/chat-input.tsx:47
-#: src/features/chess/components/chat-input.tsx:56
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:52
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:61
 msgid "Send message"
 msgstr "መልዕክት ይላኩ"
 
@@ -1819,9 +1839,9 @@ msgstr "ማክሰኞ"
 msgid "Type a command or search..."
 msgstr "ትዕዛዝ ይተይቡ ወይም ይፈልጉ..."
 
-#: src/features/chess/components/chat-input.tsx:34
-msgid "Type a message..."
-msgstr "መልዕክት ይተይቡ..."
+#: ../../../lib/web/src/components/game/game-chat-input.tsx:39
+msgid "Type a message…"
+msgstr "መልዕክት ይተይቡ…"
 
 #: ../../../lib/web/src/features/access/access-dialog.tsx:191
 msgid "Type to search users"
@@ -1865,10 +1885,6 @@ msgstr "ያልታወቀ"
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:135
 msgid "Unverified"
 msgstr "ያልተረጋገጠ"
-
-#: ../../../lib/web/src/components/ui/upload-progress.tsx:34
-msgid "Upload progress"
-msgstr "የመስቀል ሂደት"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:338
 msgid "Use your passkey"
@@ -1986,12 +2002,12 @@ msgstr "መለያህ ከ{source} ወደዚህ ተዛውሯል። እዚያ እ�
 
 #: ../../../lib/web/src/components/comment-composer.tsx:291
 msgid "Your attachments will be lost."
-msgstr "አባሪዎችህ ይጠፋሉ።"
+msgstr ""
 
 #: ../../../lib/web/src/components/comment-composer.tsx:289
 msgid "Your text and attachments will be lost."
-msgstr "ጽሑፍህ እና አባሪዎችህ ይጠፋሉ።"
+msgstr ""
 
 #: ../../../lib/web/src/components/comment-composer.tsx:292
 msgid "Your text will be lost."
-msgstr "ጽሑፍዎ ይጠፋል።"
+msgstr ""
