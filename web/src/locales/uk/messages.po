@@ -101,6 +101,10 @@ msgstr "{selectedCount, plural, one {# вибрано} few {# вибрано} ma
 msgid "{selectedCount, plural, one {Bulk actions for # selected {entityName}} other {Bulk actions for # selected {manyName}}}"
 msgstr "{selectedCount, plural, one {Масові дії для # вибраного {entityName}} few {Масові дії для # вибраних {manyName}} many {Масові дії для # вибраних {manyName}} other {Масові дії для # вибраного {manyName}}}"
 
+#: ../../../lib/web/src/components/ui/upload-progress.tsx:52
+msgid "{sentLabel} of {totalLabel}"
+msgstr "{sentLabel} з {totalLabel}"
+
 #: src/features/chess/components/chat-message-list.tsx:224
 msgid "{subject} played <0>{san}</0>"
 msgstr "{subject} зіграв <0>{san}</0>"
@@ -116,7 +120,7 @@ msgstr "{unreadCount, plural, one {Відкрити меню (# непрочит
 #. placeholder {0}: countDeepChildren(object.id)
 #: ../../../lib/web/src/components/entity/entity-board-card.tsx:421
 msgid "+{0} nested"
-msgstr ""
+msgstr "+{0} вкладених"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
@@ -191,7 +195,7 @@ msgstr "Додайте обліковий запис, щоб отримуват�
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:687
 msgid "Add checklist item"
-msgstr ""
+msgstr "Додати пункт списку"
 
 #: src/features/chess/components/new-game.tsx:121
 msgid "Add friends"
@@ -203,7 +207,7 @@ msgstr "Додайте друзів у застосунку People, щоб по�
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:705
 msgid "Add item..."
-msgstr ""
+msgstr "Додати елемент..."
 
 #: ../../../lib/web/src/features/accounts/account-picker.tsx:102
 msgid "Add new account"
@@ -625,7 +629,7 @@ msgstr "Видалити гру"
 msgid "Delete game?"
 msgstr "Видалити гру?"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:99
+#: ../../../lib/web/src/components/restore-banner.tsx:115
 msgid "Delete your account on the old server"
 msgstr "Видаліть свій обліковий запис на старому сервері"
 
@@ -670,19 +674,19 @@ msgstr "Каталог"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:300
 msgid "Discard"
-msgstr ""
+msgstr "Відхилити"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:298
 msgid "Discard draft?"
-msgstr ""
+msgstr "Відхилити чернетку?"
 
 #: ../../../lib/web/src/lib/chat-ui.ts:25
 #: ../../../lib/web/src/lib/chat-ui.ts:29
 msgid "Disconnected"
 msgstr "Відключено"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:79
-#: ../../../lib/web/src/components/restore-banner.tsx:85
+#: ../../../lib/web/src/components/restore-banner.tsx:94
+#: ../../../lib/web/src/components/restore-banner.tsx:100
 msgid "Dismiss"
 msgstr "Закрити"
 
@@ -828,7 +832,7 @@ msgstr "Не вдалося оновити категорію"
 msgid "Filter..."
 msgstr "Фільтр..."
 
-#: ../../../lib/web/src/components/restore-banner.tsx:88
+#: ../../../lib/web/src/components/restore-banner.tsx:103
 msgid "Finish moving your account"
 msgstr "Завершіть переміщення облікового запису"
 
@@ -958,7 +962,7 @@ msgstr "Інтереси"
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:550
 msgid "Invalid date"
-msgstr ""
+msgstr "Недійсна дата"
 
 #: ../../../lib/web/src/components/tag-input.tsx:38
 msgid "Invalid tag: letters, numbers, spaces, hyphens, and slashes only (max 50 chars)"
@@ -1283,7 +1287,7 @@ msgstr "Ключ доступу"
 msgid "Passkey verification failed. Please try again."
 msgstr "Не вдалося перевірити ключ доступу. Спробуйте ще раз."
 
-#: ../../../lib/web/src/components/restore-banner.tsx:135
+#: ../../../lib/web/src/components/restore-banner.tsx:152
 msgid "Passkeys"
 msgstr "Ключі доступу"
 
@@ -1327,6 +1331,10 @@ msgstr "Попереднє зображення"
 msgid "Privacy"
 msgstr "Приватність"
 
+#: ../../../lib/web/src/components/ui/upload-progress.tsx:50
+msgid "Processing…"
+msgstr "Обробка…"
+
 #: ../../../lib/web/src/components/layout/nav-user.tsx:137
 #: ../../../lib/web/src/components/profile-dropdown.tsx:114
 msgid "Profile"
@@ -1358,11 +1366,11 @@ msgstr "ферзь"
 msgid "Raised"
 msgstr "Піднятий"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:107
+#: ../../../lib/web/src/components/restore-banner.tsx:124
 msgid "Re-link your accounts on this server"
 msgstr "Повторно прив'яжіть облікові записи на цьому сервері"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:129
+#: ../../../lib/web/src/components/restore-banner.tsx:146
 msgid "Re-register your passkeys on this server"
 msgstr "Зареєструйте свої ключі доступу на цьому сервері знову"
 
@@ -1429,7 +1437,7 @@ msgstr "Видалити інтерес"
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:671
 msgid "Remove item"
-msgstr ""
+msgstr "Видалити елемент"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:367
 msgid "Resend email"
@@ -1464,7 +1472,7 @@ msgstr "Здача..."
 
 #: ../../../lib/web/src/components/comment-composer.tsx:249
 msgid "Retry"
-msgstr ""
+msgstr "Повторити"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:362
 msgid "Right to Left"
@@ -1593,7 +1601,7 @@ msgstr "Виберіть тему"
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:252
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:335
 msgid "Select..."
-msgstr ""
+msgstr "Виберіть..."
 
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:216
 msgid "selected"
@@ -1886,6 +1894,10 @@ msgstr "Невідомо"
 msgid "Unverified"
 msgstr "Не перевірено"
 
+#: ../../../lib/web/src/components/ui/upload-progress.tsx:34
+msgid "Upload progress"
+msgstr "Хід завантаження"
+
 #: ../../../lib/web/src/components/step-up-dialog.tsx:338
 msgid "Use your passkey"
 msgstr "Скористайтеся ключем доступу"
@@ -1996,18 +2008,18 @@ msgstr "Ви надіслали такі значення:"
 msgid "You're all caught up!"
 msgstr "Ви все переглянули!"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:91
+#: ../../../lib/web/src/components/restore-banner.tsx:106
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Ваш обліковий запис переміщено сюди з {source}. Поки ви не видалите його там, повідомлення та сповіщення можуть надходити на обидва сервери, частина вашого вмісту продовжить надаватися зі старого сервера, а підписникам може знадобитися кілька хвилин, щоб знайти вас тут."
 
 #: ../../../lib/web/src/components/comment-composer.tsx:291
 msgid "Your attachments will be lost."
-msgstr ""
+msgstr "Ваші вкладення буде втрачено."
 
 #: ../../../lib/web/src/components/comment-composer.tsx:289
 msgid "Your text and attachments will be lost."
-msgstr ""
+msgstr "Ваш текст і вкладення буде втрачено."
 
 #: ../../../lib/web/src/components/comment-composer.tsx:292
 msgid "Your text will be lost."
-msgstr ""
+msgstr "Ваш текст буде втрачено."

@@ -101,6 +101,10 @@ msgstr "{selectedCount, plural, other {# ခု ရွေးထားသည်}}
 msgid "{selectedCount, plural, one {Bulk actions for # selected {entityName}} other {Bulk actions for # selected {manyName}}}"
 msgstr "{selectedCount, plural, other {ရွေးချယ်ထားသော {manyName} # ခုအတွက် အစုလိုက်လုပ်ဆောင်ချက်များ}}"
 
+#: ../../../lib/web/src/components/ui/upload-progress.tsx:52
+msgid "{sentLabel} of {totalLabel}"
+msgstr "{totalLabel} အနက် {sentLabel}"
+
 #: src/features/chess/components/chat-message-list.tsx:224
 msgid "{subject} played <0>{san}</0>"
 msgstr "{subject} က <0>{san}</0> ကို ကစားခဲ့သည်"
@@ -116,7 +120,7 @@ msgstr "{unreadCount, plural, other {မီနူးဖွင့်ရန် (�
 #. placeholder {0}: countDeepChildren(object.id)
 #: ../../../lib/web/src/components/entity/entity-board-card.tsx:421
 msgid "+{0} nested"
-msgstr ""
+msgstr "+{0} ခု အထပ်လိုက်"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
@@ -191,7 +195,7 @@ msgstr "အကြောင်းကြားချက်များ ရရှ�
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:687
 msgid "Add checklist item"
-msgstr ""
+msgstr "checklist အရာ ထည့်မည်"
 
 #: src/features/chess/components/new-game.tsx:121
 msgid "Add friends"
@@ -203,7 +207,7 @@ msgstr "ကစားစတင်ရန် People app တွင် သူငယ�
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:705
 msgid "Add item..."
-msgstr ""
+msgstr "အရာ ထည့်ရန်..."
 
 #: ../../../lib/web/src/features/accounts/account-picker.tsx:102
 msgid "Add new account"
@@ -625,7 +629,7 @@ msgstr "ဂိမ်း ဖျက်မည်"
 msgid "Delete game?"
 msgstr "ဂိမ်းကို ဖျက်မလား?"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:99
+#: ../../../lib/web/src/components/restore-banner.tsx:115
 msgid "Delete your account on the old server"
 msgstr "ဟောင်းသောဆာဗာမှ သင်၏အကောင့်ကို ဖျက်ပါ"
 
@@ -670,19 +674,19 @@ msgstr "လမ်းညွှန်"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:300
 msgid "Discard"
-msgstr ""
+msgstr "ဖျက်ပစ်ရန်"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:298
 msgid "Discard draft?"
-msgstr ""
+msgstr "မူကြမ်းကို ဖျက်ပစ်မလား။"
 
 #: ../../../lib/web/src/lib/chat-ui.ts:25
 #: ../../../lib/web/src/lib/chat-ui.ts:29
 msgid "Disconnected"
 msgstr "ချိတ်ဆက်မှု ပြတ်တောက်ပြီး"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:79
-#: ../../../lib/web/src/components/restore-banner.tsx:85
+#: ../../../lib/web/src/components/restore-banner.tsx:94
+#: ../../../lib/web/src/components/restore-banner.tsx:100
 msgid "Dismiss"
 msgstr "ပယ်မည်"
 
@@ -828,7 +832,7 @@ msgstr "အမျိုးအစား ပြင်ဆင်၍ မရပါ"
 msgid "Filter..."
 msgstr "စစ်ထုတ်..."
 
-#: ../../../lib/web/src/components/restore-banner.tsx:88
+#: ../../../lib/web/src/components/restore-banner.tsx:103
 msgid "Finish moving your account"
 msgstr "အကောင့်ရွှေ့ပြောင်းခြင်း ပြီးဆုံးပါ"
 
@@ -958,7 +962,7 @@ msgstr "စိတ်ဝင်စားမှုများ"
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:550
 msgid "Invalid date"
-msgstr ""
+msgstr "မမှန်ကန်သော ရက်စွဲ"
 
 #: ../../../lib/web/src/components/tag-input.tsx:38
 msgid "Invalid tag: letters, numbers, spaces, hyphens, and slashes only (max 50 chars)"
@@ -1283,7 +1287,7 @@ msgstr "Passkey"
 msgid "Passkey verification failed. Please try again."
 msgstr "ပတ်စ်ကီးအတည်ပြုခြင်း မအောင်မြင်ပါ။ ကျေးဇူးပြု၍ ထပ်စမ်းကြည့်ပါ။"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:135
+#: ../../../lib/web/src/components/restore-banner.tsx:152
 msgid "Passkeys"
 msgstr "Passkey များ"
 
@@ -1327,6 +1331,10 @@ msgstr "ယခင်ပုံ"
 msgid "Privacy"
 msgstr "ကိုယ်ရေးကိုယ်တာ"
 
+#: ../../../lib/web/src/components/ui/upload-progress.tsx:50
+msgid "Processing…"
+msgstr "လုပ်ဆောင်နေသည်…"
+
 #: ../../../lib/web/src/components/layout/nav-user.tsx:137
 #: ../../../lib/web/src/components/profile-dropdown.tsx:114
 msgid "Profile"
@@ -1358,11 +1366,11 @@ msgstr "မိဖုရား"
 msgid "Raised"
 msgstr "ဖော့တက်"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:107
+#: ../../../lib/web/src/components/restore-banner.tsx:124
 msgid "Re-link your accounts on this server"
 msgstr "ဤဆာဗာပေါ်တွင် သင်၏အကောင့်များကို ပြန်လည်ချိတ်ဆက်ပါ"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:129
+#: ../../../lib/web/src/components/restore-banner.tsx:146
 msgid "Re-register your passkeys on this server"
 msgstr "ဤဆာဗာတွင် သင်၏ passkey များကို ပြန်လည်မှတ်ပုံတင်ပါ"
 
@@ -1429,7 +1437,7 @@ msgstr "စိတ်ဝင်စားမှု ဖယ်ရှား"
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:671
 msgid "Remove item"
-msgstr ""
+msgstr "item ဖယ်ရှား"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:367
 msgid "Resend email"
@@ -1464,7 +1472,7 @@ msgstr "ရှုံးကြောင်းပြောနေသည်..."
 
 #: ../../../lib/web/src/components/comment-composer.tsx:249
 msgid "Retry"
-msgstr ""
+msgstr "ထပ်စမ်းကြည့်ပါ"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:362
 msgid "Right to Left"
@@ -1593,7 +1601,7 @@ msgstr "အပြင်အဆင် ဦးစားပေးကို ရွေ�
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:252
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:335
 msgid "Select..."
-msgstr ""
+msgstr "ရွေးပါ..."
 
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:216
 msgid "selected"
@@ -1886,6 +1894,10 @@ msgstr "မသိရသော"
 msgid "Unverified"
 msgstr "အတည်ပြုမထား"
 
+#: ../../../lib/web/src/components/ui/upload-progress.tsx:34
+msgid "Upload progress"
+msgstr "အပ်လုဒ်တိုးတက်မှု"
+
 #: ../../../lib/web/src/components/step-up-dialog.tsx:338
 msgid "Use your passkey"
 msgstr "သင့်ပတ်စ်ကီးကို သုံးပါ"
@@ -1996,18 +2008,18 @@ msgstr "အောက်ပါတန်ဖိုးများကို တင�
 msgid "You're all caught up!"
 msgstr "အားလုံးကြည့်ပြီးပါပြီ။"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:91
+#: ../../../lib/web/src/components/restore-banner.tsx:106
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "သင်၏အကောင့်ကို {source} မှ ဤနေရာသို့ ရွှေ့ပြောင်းခဲ့သည်။ သင်ကာကိုဖျက်မသည်အထိ၊ မက်ဆေ့ချ်များနှင့် အကြောင်းကြားချက်များ ဆာဗာနှစ်ခုလုံးသို့ ရောက်နိုင်သည်၊ သင်၏အချို့သောအကြောင်းအရာများကို ဟောင်းသောဆာဗာမှ ဆက်လက်ပေးဆောင်နေမည်ဖြစ်ပြီး ကြည့်ရှုသူများ သင်ကိုဤနေရာတွင် ရှာဖွေရန် မိနစ်အနည်းငယ် ကြာနိုင်သည်။"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:291
 msgid "Your attachments will be lost."
-msgstr ""
+msgstr "သင့်ပူးတွဲဖိုင်များ ပျောက်ဆုံးသွားပါမည်။"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:289
 msgid "Your text and attachments will be lost."
-msgstr ""
+msgstr "သင့်စာသားနှင့် ပူးတွဲဖိုင်များ ပျောက်ဆုံးသွားပါမည်။"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:292
 msgid "Your text will be lost."
-msgstr ""
+msgstr "သင်၏ စာသား ပျောက်ဆုံးသွားပါမည်။"

@@ -101,6 +101,10 @@ msgstr "{selectedCount, plural, one {# אויסגעקליבן} other {# אויס
 msgid "{selectedCount, plural, one {Bulk actions for # selected {entityName}} other {Bulk actions for # selected {manyName}}}"
 msgstr "{selectedCount, plural, one {מאַסן־אַקציעס פֿאַר # אויסגעקליבענעם {entityName}} other {מאַסן־אַקציעס פֿאַר # אויסגעקליבענע {manyName}}}"
 
+#: ../../../lib/web/src/components/ui/upload-progress.tsx:52
+msgid "{sentLabel} of {totalLabel}"
+msgstr "{sentLabel} פֿון {totalLabel}"
+
 #: src/features/chess/components/chat-message-list.tsx:224
 msgid "{subject} played <0>{san}</0>"
 msgstr "{subject} האָט געשפּילט <0>{san}</0>"
@@ -116,7 +120,7 @@ msgstr "{unreadCount, plural, one {עפֿנט מעניו (# אומגעלײענט
 #. placeholder {0}: countDeepChildren(object.id)
 #: ../../../lib/web/src/components/entity/entity-board-card.tsx:421
 msgid "+{0} nested"
-msgstr ""
+msgstr "+{0} אײַנגענעסטלט"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
@@ -191,7 +195,7 @@ msgstr "צולייגן אַ קאָנטע צו באַקומען נאָטיפֿי�
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:687
 msgid "Add checklist item"
-msgstr ""
+msgstr "צולייגן טשעקליסטע פּונקט"
 
 #: src/features/chess/components/new-game.tsx:121
 msgid "Add friends"
@@ -203,7 +207,7 @@ msgstr "צולייגט פֿרײַנד אין דער מענטשן אַפּ צו �
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:705
 msgid "Add item..."
-msgstr ""
+msgstr "צולייגן פּונקט..."
 
 #: ../../../lib/web/src/features/accounts/account-picker.tsx:102
 msgid "Add new account"
@@ -625,7 +629,7 @@ msgstr "אויסמעקן שפּיל"
 msgid "Delete game?"
 msgstr "אויסמעקן דעם שפּיל?"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:99
+#: ../../../lib/web/src/components/restore-banner.tsx:115
 msgid "Delete your account on the old server"
 msgstr "לעש אויס דיין קאנטע אויפן אלטן סערווער"
 
@@ -670,19 +674,19 @@ msgstr "פֿאַרצײכעניש"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:300
 msgid "Discard"
-msgstr ""
+msgstr "אַװעקװאַרפֿן"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:298
 msgid "Discard draft?"
-msgstr ""
+msgstr "אַװעקװאַרפֿן דעם פּראָיעקט?"
 
 #: ../../../lib/web/src/lib/chat-ui.ts:25
 #: ../../../lib/web/src/lib/chat-ui.ts:29
 msgid "Disconnected"
 msgstr "אפגעשניטן"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:79
-#: ../../../lib/web/src/components/restore-banner.tsx:85
+#: ../../../lib/web/src/components/restore-banner.tsx:94
+#: ../../../lib/web/src/components/restore-banner.tsx:100
 msgid "Dismiss"
 msgstr "אַראָפּזאָגן"
 
@@ -828,7 +832,7 @@ msgstr "ניט געלונגען צו דערהײַנטיקן קאַטעגאָרי
 msgid "Filter..."
 msgstr "פֿילטער..."
 
-#: ../../../lib/web/src/components/restore-banner.tsx:88
+#: ../../../lib/web/src/components/restore-banner.tsx:103
 msgid "Finish moving your account"
 msgstr "פארטיק מאכן דעם אריבערטראג פון דיין קאנטע"
 
@@ -958,7 +962,7 @@ msgstr "אינטערעסן"
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:550
 msgid "Invalid date"
-msgstr ""
+msgstr "ניט גילטיקע דאַטע"
 
 #: ../../../lib/web/src/components/tag-input.tsx:38
 msgid "Invalid tag: letters, numbers, spaces, hyphens, and slashes only (max 50 chars)"
@@ -1283,7 +1287,7 @@ msgstr "פּאַסקיי"
 msgid "Passkey verification failed. Please try again."
 msgstr "די passkey פֿאַריפֿיצירונג איז דורכגעפֿאַלן. ביטע פּרוביר ווידער."
 
-#: ../../../lib/web/src/components/restore-banner.tsx:135
+#: ../../../lib/web/src/components/restore-banner.tsx:152
 msgid "Passkeys"
 msgstr "פּאַסקייס"
 
@@ -1327,6 +1331,10 @@ msgstr "פֿריִערדיק בילד"
 msgid "Privacy"
 msgstr "פּריוואַטקײַט"
 
+#: ../../../lib/web/src/components/ui/upload-progress.tsx:50
+msgid "Processing…"
+msgstr "פּראָצעסירונג…"
+
 #: ../../../lib/web/src/components/layout/nav-user.tsx:137
 #: ../../../lib/web/src/components/profile-dropdown.tsx:114
 msgid "Profile"
@@ -1358,11 +1366,11 @@ msgstr "מלכּה"
 msgid "Raised"
 msgstr "אויפֿגעהויבן"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:107
+#: ../../../lib/web/src/components/restore-banner.tsx:124
 msgid "Re-link your accounts on this server"
 msgstr "פארבינד ווידער דיינע קאנטעס אויף דעם סערווער"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:129
+#: ../../../lib/web/src/components/restore-banner.tsx:146
 msgid "Re-register your passkeys on this server"
 msgstr "רעגיסטרירט איבער אייערע צוטריט שליסלען אויף דעם סערווער"
 
@@ -1429,7 +1437,7 @@ msgstr "אַראָפּנעמען אינטערעס"
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:671
 msgid "Remove item"
-msgstr ""
+msgstr "אַראָפּנעמען עלעמענט"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:367
 msgid "Resend email"
@@ -1464,7 +1472,7 @@ msgstr "רעזיגנירן..."
 
 #: ../../../lib/web/src/components/comment-composer.tsx:249
 msgid "Retry"
-msgstr ""
+msgstr "פּרוּווט נאָך אַ מאָל"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:362
 msgid "Right to Left"
@@ -1593,7 +1601,7 @@ msgstr "קלײַב טעמע־פּרעפֿערענץ"
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:252
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:335
 msgid "Select..."
-msgstr ""
+msgstr "קלײַב..."
 
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:216
 msgid "selected"
@@ -1886,6 +1894,10 @@ msgstr "אומבאַקאַנט"
 msgid "Unverified"
 msgstr "אומפֿאַריפֿיצירט"
 
+#: ../../../lib/web/src/components/ui/upload-progress.tsx:34
+msgid "Upload progress"
+msgstr "אַרויפֿלאָד פּראָגרעס"
+
 #: ../../../lib/web/src/components/step-up-dialog.tsx:338
 msgid "Use your passkey"
 msgstr "ניצט אײַער passkey"
@@ -1996,18 +2008,18 @@ msgstr "איר האָט אײַנגעגעבן די פֿאָלגנדיקע װער�
 msgid "You're all caught up!"
 msgstr "איר האָט אַלץ געזען!"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:91
+#: ../../../lib/web/src/components/restore-banner.tsx:106
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "דיין קאנטע איז אהערגעברענגט ווארן פון {source}. ביז דו לעשסט עס דארט, קענען מעסאזשן און הודעות דערגרייכן ביידע סערווערס, עטלעכע פון דיין אינהאלט ווערט ווייטאר פארזאמלט פונם אלטן סערווער, און פאלגערס קענען נעמען עטלעכע מינוטן צו דיך דא געפינען."
 
 #: ../../../lib/web/src/components/comment-composer.tsx:291
 msgid "Your attachments will be lost."
-msgstr ""
+msgstr "דײַנע צוגעלייגטע טעקעס וועלן פֿאַרלוירן גיין."
 
 #: ../../../lib/web/src/components/comment-composer.tsx:289
 msgid "Your text and attachments will be lost."
-msgstr ""
+msgstr "דײַן טעקסט און צוגעלייגטע טעקעס וועלן פֿאַרלוירן גיין."
 
 #: ../../../lib/web/src/components/comment-composer.tsx:292
 msgid "Your text will be lost."
-msgstr ""
+msgstr "אײַער טעקסט װעט פֿאַרלוירן װערן."

@@ -101,6 +101,10 @@ msgstr "{selectedCount, plural, other {# არჩეული}}"
 msgid "{selectedCount, plural, one {Bulk actions for # selected {entityName}} other {Bulk actions for # selected {manyName}}}"
 msgstr "{selectedCount, plural, other {მასობრივი მოქმედებები # არჩეული {manyName}-სთვის}}"
 
+#: ../../../lib/web/src/components/ui/upload-progress.tsx:52
+msgid "{sentLabel} of {totalLabel}"
+msgstr "{sentLabel} / {totalLabel}"
+
 #: src/features/chess/components/chat-message-list.tsx:224
 msgid "{subject} played <0>{san}</0>"
 msgstr "{subject}-მა ითამაშა <0>{san}</0>"
@@ -116,7 +120,7 @@ msgstr "{unreadCount, plural, other {მენიუს გახსნა (# �
 #. placeholder {0}: countDeepChildren(object.id)
 #: ../../../lib/web/src/components/entity/entity-board-card.tsx:421
 msgid "+{0} nested"
-msgstr ""
+msgstr "+{0} ჩადგმული"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
@@ -191,7 +195,7 @@ msgstr "დაამატეთ ანგარიში შეტყობი�
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:687
 msgid "Add checklist item"
-msgstr ""
+msgstr "ჩამონათვალის ერთეულის დამატება"
 
 #: src/features/chess/components/new-game.tsx:121
 msgid "Add friends"
@@ -203,7 +207,7 @@ msgstr "დაამატეთ მეგობრები People აპში
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:705
 msgid "Add item..."
-msgstr ""
+msgstr "ერთეულის დამატება..."
 
 #: ../../../lib/web/src/features/accounts/account-picker.tsx:102
 msgid "Add new account"
@@ -625,7 +629,7 @@ msgstr "თამაშის წაშლა"
 msgid "Delete game?"
 msgstr "თამაშის წაშლა?"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:99
+#: ../../../lib/web/src/components/restore-banner.tsx:115
 msgid "Delete your account on the old server"
 msgstr "წაშალეთ თქვენი ანგარიში ძველ სერვერზე"
 
@@ -670,19 +674,19 @@ msgstr "კატალოგი"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:300
 msgid "Discard"
-msgstr ""
+msgstr "გაუქმება"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:298
 msgid "Discard draft?"
-msgstr ""
+msgstr "გავაუქმოთ მონახაზი?"
 
 #: ../../../lib/web/src/lib/chat-ui.ts:25
 #: ../../../lib/web/src/lib/chat-ui.ts:29
 msgid "Disconnected"
 msgstr "გათიშულია"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:79
-#: ../../../lib/web/src/components/restore-banner.tsx:85
+#: ../../../lib/web/src/components/restore-banner.tsx:94
+#: ../../../lib/web/src/components/restore-banner.tsx:100
 msgid "Dismiss"
 msgstr "უარყოფა"
 
@@ -828,7 +832,7 @@ msgstr "კატეგორიის განახლება ვერ მ
 msgid "Filter..."
 msgstr "გაფილტვრა..."
 
-#: ../../../lib/web/src/components/restore-banner.tsx:88
+#: ../../../lib/web/src/components/restore-banner.tsx:103
 msgid "Finish moving your account"
 msgstr "დაასრულეთ ანგარიშის გადატანა"
 
@@ -958,7 +962,7 @@ msgstr "ინტერესები"
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:550
 msgid "Invalid date"
-msgstr ""
+msgstr "არასწორი თარიღი"
 
 #: ../../../lib/web/src/components/tag-input.tsx:38
 msgid "Invalid tag: letters, numbers, spaces, hyphens, and slashes only (max 50 chars)"
@@ -1283,7 +1287,7 @@ msgstr "წვდომის გასაღები"
 msgid "Passkey verification failed. Please try again."
 msgstr "passkey-ის გადამოწმება ვერ მოხერხდა. გთხოვთ, სცადოთ ხელახლა."
 
-#: ../../../lib/web/src/components/restore-banner.tsx:135
+#: ../../../lib/web/src/components/restore-banner.tsx:152
 msgid "Passkeys"
 msgstr "Passkey-ები"
 
@@ -1327,6 +1331,10 @@ msgstr "წინა სურათი"
 msgid "Privacy"
 msgstr "კონფიდენციალურობა"
 
+#: ../../../lib/web/src/components/ui/upload-progress.tsx:50
+msgid "Processing…"
+msgstr "მუშავდება…"
+
 #: ../../../lib/web/src/components/layout/nav-user.tsx:137
 #: ../../../lib/web/src/components/profile-dropdown.tsx:114
 msgid "Profile"
@@ -1358,11 +1366,11 @@ msgstr "პერიოდში"
 msgid "Raised"
 msgstr "აწეული"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:107
+#: ../../../lib/web/src/components/restore-banner.tsx:124
 msgid "Re-link your accounts on this server"
 msgstr "ხელახლა დააკავშირეთ თქვენი ანგარიშები ამ სერვერზე"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:129
+#: ../../../lib/web/src/components/restore-banner.tsx:146
 msgid "Re-register your passkeys on this server"
 msgstr "ხელახლა დაარეგისტრირეთ თქვენი წვდომის გასაღებები ამ სერვერზე"
 
@@ -1429,7 +1437,7 @@ msgstr "ინტერესის წაშლა"
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:671
 msgid "Remove item"
-msgstr ""
+msgstr "ნივთის წაშლა"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:367
 msgid "Resend email"
@@ -1464,7 +1472,7 @@ msgstr "ჩაბარება..."
 
 #: ../../../lib/web/src/components/comment-composer.tsx:249
 msgid "Retry"
-msgstr ""
+msgstr "ხელახლა ცდა"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:362
 msgid "Right to Left"
@@ -1593,7 +1601,7 @@ msgstr "აირჩიეთ თემის პრიორიტეტი"
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:252
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:335
 msgid "Select..."
-msgstr ""
+msgstr "აირჩიეთ..."
 
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:216
 msgid "selected"
@@ -1886,6 +1894,10 @@ msgstr "ერთეულები"
 msgid "Unverified"
 msgstr "უსათაურო ლისტინგი"
 
+#: ../../../lib/web/src/components/ui/upload-progress.tsx:34
+msgid "Upload progress"
+msgstr "ატვირთვის მიმდინარეობა"
+
 #: ../../../lib/web/src/components/step-up-dialog.tsx:338
 msgid "Use your passkey"
 msgstr "გამოიყენეთ თქვენი passkey"
@@ -1996,18 +2008,18 @@ msgstr "თქვენ გაგზავნეთ შემდეგი მნ
 msgid "You're all caught up!"
 msgstr "ყველაფერი ნანახია!"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:91
+#: ../../../lib/web/src/components/restore-banner.tsx:106
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "თქვენი ანგარიში გადმოტანილია {source}-დან. სანამ იქ წაშლით, შეტყობინებები და ნოტიფიკაციები შეიძლება ორივე სერვერს მიაღწიოს, თქვენი კონტენტის ნაწილი კვლავ ძველი სერვერიდან ხელმისაწვდომია, ხოლო მიმდევრებს შეიძლება რამდენიმე წუთი დასჭირდეთ თქვენი პოვნისთვის."
 
 #: ../../../lib/web/src/components/comment-composer.tsx:291
 msgid "Your attachments will be lost."
-msgstr ""
+msgstr "თქვენი დანართები დაიკარგება."
 
 #: ../../../lib/web/src/components/comment-composer.tsx:289
 msgid "Your text and attachments will be lost."
-msgstr ""
+msgstr "თქვენი ტექსტი და დანართები დაიკარგება."
 
 #: ../../../lib/web/src/components/comment-composer.tsx:292
 msgid "Your text will be lost."
-msgstr ""
+msgstr "შენი ტექსტი დაიკარგება."

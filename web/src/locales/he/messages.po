@@ -101,6 +101,10 @@ msgstr "{selectedCount, plural, one {# נבחרו} two {# נבחרו} many {# נ
 msgid "{selectedCount, plural, one {Bulk actions for # selected {entityName}} other {Bulk actions for # selected {manyName}}}"
 msgstr "{selectedCount, plural, one {פעולות קבוצתיות עבור {entityName} אחד שנבחר} two {פעולות קבוצתיות עבור שני {manyName} שנבחרו} many {פעולות קבוצתיות עבור # {manyName} שנבחרו} other {פעולות קבוצתיות עבור # {manyName} שנבחרו}}"
 
+#: ../../../lib/web/src/components/ui/upload-progress.tsx:52
+msgid "{sentLabel} of {totalLabel}"
+msgstr "{sentLabel} מתוך {totalLabel}"
+
 #: src/features/chess/components/chat-message-list.tsx:224
 msgid "{subject} played <0>{san}</0>"
 msgstr "{subject} שיחק <0>{san}</0>"
@@ -116,7 +120,7 @@ msgstr "{unreadCount, plural, one {פתיחת התפריט (התראה אחת ש
 #. placeholder {0}: countDeepChildren(object.id)
 #: ../../../lib/web/src/components/entity/entity-board-card.tsx:421
 msgid "+{0} nested"
-msgstr ""
+msgstr "+{0} מקוננים"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
@@ -191,7 +195,7 @@ msgstr "הוסף חשבון כדי לקבל התראות ולהשתמש בשיר
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:687
 msgid "Add checklist item"
-msgstr ""
+msgstr "הוסף פריט לרשימת משימות"
 
 #: src/features/chess/components/new-game.tsx:121
 msgid "Add friends"
@@ -203,7 +207,7 @@ msgstr "הוסף חברים באפליקציית האנשים כדי להתחי�
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:705
 msgid "Add item..."
-msgstr ""
+msgstr "הוסף פריט..."
 
 #: ../../../lib/web/src/features/accounts/account-picker.tsx:102
 msgid "Add new account"
@@ -625,7 +629,7 @@ msgstr "מחק משחק"
 msgid "Delete game?"
 msgstr "למחוק את המשחק?"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:99
+#: ../../../lib/web/src/components/restore-banner.tsx:115
 msgid "Delete your account on the old server"
 msgstr "מחק את חשבונך בשרת הישן"
 
@@ -670,19 +674,19 @@ msgstr "מדריך"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:300
 msgid "Discard"
-msgstr ""
+msgstr "מחיקה"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:298
 msgid "Discard draft?"
-msgstr ""
+msgstr "למחוק את הטיוטה?"
 
 #: ../../../lib/web/src/lib/chat-ui.ts:25
 #: ../../../lib/web/src/lib/chat-ui.ts:29
 msgid "Disconnected"
 msgstr "מנותק"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:79
-#: ../../../lib/web/src/components/restore-banner.tsx:85
+#: ../../../lib/web/src/components/restore-banner.tsx:94
+#: ../../../lib/web/src/components/restore-banner.tsx:100
 msgid "Dismiss"
 msgstr "סגור"
 
@@ -828,7 +832,7 @@ msgstr "עדכון הקטגוריה נכשל"
 msgid "Filter..."
 msgstr "סינון..."
 
-#: ../../../lib/web/src/components/restore-banner.tsx:88
+#: ../../../lib/web/src/components/restore-banner.tsx:103
 msgid "Finish moving your account"
 msgstr "סיים את העברת החשבון"
 
@@ -958,7 +962,7 @@ msgstr "תחומי עניין"
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:550
 msgid "Invalid date"
-msgstr ""
+msgstr "תאריך לא תקין"
 
 #: ../../../lib/web/src/components/tag-input.tsx:38
 msgid "Invalid tag: letters, numbers, spaces, hyphens, and slashes only (max 50 chars)"
@@ -1283,7 +1287,7 @@ msgstr "מפתח גישה"
 msgid "Passkey verification failed. Please try again."
 msgstr "אימות מפתח הגישה נכשל. נסה שוב."
 
-#: ../../../lib/web/src/components/restore-banner.tsx:135
+#: ../../../lib/web/src/components/restore-banner.tsx:152
 msgid "Passkeys"
 msgstr "מפתחות גישה"
 
@@ -1327,6 +1331,10 @@ msgstr "התמונה הקודמת"
 msgid "Privacy"
 msgstr "פרטיות"
 
+#: ../../../lib/web/src/components/ui/upload-progress.tsx:50
+msgid "Processing…"
+msgstr "מעבד…"
+
 #: ../../../lib/web/src/components/layout/nav-user.tsx:137
 #: ../../../lib/web/src/components/profile-dropdown.tsx:114
 msgid "Profile"
@@ -1358,11 +1366,11 @@ msgstr "מלכה"
 msgid "Raised"
 msgstr "מורם"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:107
+#: ../../../lib/web/src/components/restore-banner.tsx:124
 msgid "Re-link your accounts on this server"
 msgstr "קשר מחדש את חשבונותיך בשרת זה"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:129
+#: ../../../lib/web/src/components/restore-banner.tsx:146
 msgid "Re-register your passkeys on this server"
 msgstr "רשמו מחדש את מפתחות הגישה שלכם בשרת הזה"
 
@@ -1429,7 +1437,7 @@ msgstr "הסר עניין"
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:671
 msgid "Remove item"
-msgstr ""
+msgstr "הסר פריט"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:367
 msgid "Resend email"
@@ -1464,7 +1472,7 @@ msgstr "פורש..."
 
 #: ../../../lib/web/src/components/comment-composer.tsx:249
 msgid "Retry"
-msgstr ""
+msgstr "נסה שוב"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:362
 msgid "Right to Left"
@@ -1593,7 +1601,7 @@ msgstr "בחר העדפת ערכת נושא"
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:252
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:335
 msgid "Select..."
-msgstr ""
+msgstr "בחר..."
 
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:216
 msgid "selected"
@@ -1886,6 +1894,10 @@ msgstr "לא ידוע"
 msgid "Unverified"
 msgstr "לא מאומת"
 
+#: ../../../lib/web/src/components/ui/upload-progress.tsx:34
+msgid "Upload progress"
+msgstr "התקדמות ההעלאה"
+
 #: ../../../lib/web/src/components/step-up-dialog.tsx:338
 msgid "Use your passkey"
 msgstr "השתמש במפתח הגישה שלך"
@@ -1996,18 +2008,18 @@ msgstr "שלחת את הערכים הבאים:"
 msgid "You're all caught up!"
 msgstr "ראית הכול!"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:91
+#: ../../../lib/web/src/components/restore-banner.tsx:106
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "חשבונך הועבר לכאן מ-{source}. עד שתמחק אותו שם, הודעות והתראות עשויות להגיע לשני השרתים, חלק מהתוכן שלך ממשיך להיות מוגש מהשרת הישן, ועוקבים עשויים לקחת מספר דקות למצוא אותך כאן."
 
 #: ../../../lib/web/src/components/comment-composer.tsx:291
 msgid "Your attachments will be lost."
-msgstr ""
+msgstr "הקבצים המצורפים שלך יאבדו."
 
 #: ../../../lib/web/src/components/comment-composer.tsx:289
 msgid "Your text and attachments will be lost."
-msgstr ""
+msgstr "הטקסט והקבצים המצורפים שלך יאבדו."
 
 #: ../../../lib/web/src/components/comment-composer.tsx:292
 msgid "Your text will be lost."
-msgstr ""
+msgstr "הטקסט שלכם יאבד."

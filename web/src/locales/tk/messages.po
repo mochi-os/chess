@@ -101,6 +101,10 @@ msgstr "{selectedCount, plural, one {# saýlanan} other {# saýlanan}}"
 msgid "{selectedCount, plural, one {Bulk actions for # selected {entityName}} other {Bulk actions for # selected {manyName}}}"
 msgstr "{selectedCount, plural, one {# saýlanan {entityName} üçin köpçülikleýin amallar} other {# saýlanan {manyName} üçin köpçülikleýin amallar}}"
 
+#: ../../../lib/web/src/components/ui/upload-progress.tsx:52
+msgid "{sentLabel} of {totalLabel}"
+msgstr "{totalLabel}-den {sentLabel}"
+
 #: src/features/chess/components/chat-message-list.tsx:224
 msgid "{subject} played <0>{san}</0>"
 msgstr "{subject} <0>{san}</0> oýnady"
@@ -116,7 +120,7 @@ msgstr "{unreadCount, plural, one {Menýuny aç (# okalmadyk bildiriş)} other {
 #. placeholder {0}: countDeepChildren(object.id)
 #: ../../../lib/web/src/components/entity/entity-board-card.tsx:421
 msgid "+{0} nested"
-msgstr ""
+msgstr "+{0} içki"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
@@ -191,7 +195,7 @@ msgstr "Bildirişleri almak we hyzmatlary ulanmak üçin hasap goşuň."
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:687
 msgid "Add checklist item"
-msgstr ""
+msgstr "Kontrol sanawynyň elementi goşmak"
 
 #: src/features/chess/components/new-game.tsx:121
 msgid "Add friends"
@@ -203,7 +207,7 @@ msgstr "Oýun başlamak üçin People programmasynda dostlar goşuň"
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:705
 msgid "Add item..."
-msgstr ""
+msgstr "Element goşuň..."
 
 #: ../../../lib/web/src/features/accounts/account-picker.tsx:102
 msgid "Add new account"
@@ -625,7 +629,7 @@ msgstr "Oýun pozmak"
 msgid "Delete game?"
 msgstr "Oýun pozulsynmy?"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:99
+#: ../../../lib/web/src/components/restore-banner.tsx:115
 msgid "Delete your account on the old server"
 msgstr "Köne serwerdäki hasabyňyzy pozy"
 
@@ -670,19 +674,19 @@ msgstr "Katalog"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:300
 msgid "Discard"
-msgstr ""
+msgstr "Taşla"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:298
 msgid "Discard draft?"
-msgstr ""
+msgstr "Taslamany taşlamaly?"
 
 #: ../../../lib/web/src/lib/chat-ui.ts:25
 #: ../../../lib/web/src/lib/chat-ui.ts:29
 msgid "Disconnected"
 msgstr "Aýryldy"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:79
-#: ../../../lib/web/src/components/restore-banner.tsx:85
+#: ../../../lib/web/src/components/restore-banner.tsx:94
+#: ../../../lib/web/src/components/restore-banner.tsx:100
 msgid "Dismiss"
 msgstr "Goýbermek"
 
@@ -828,7 +832,7 @@ msgstr "Kategoriýa täzelenmedi"
 msgid "Filter..."
 msgstr "Süz..."
 
-#: ../../../lib/web/src/components/restore-banner.tsx:88
+#: ../../../lib/web/src/components/restore-banner.tsx:103
 msgid "Finish moving your account"
 msgstr "Hasabyňyzy göçürip gutaryň"
 
@@ -958,7 +962,7 @@ msgstr "Gyzyklanmalar"
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:550
 msgid "Invalid date"
-msgstr ""
+msgstr "Nädogry sene"
 
 #: ../../../lib/web/src/components/tag-input.tsx:38
 msgid "Invalid tag: letters, numbers, spaces, hyphens, and slashes only (max 50 chars)"
@@ -1283,7 +1287,7 @@ msgstr "Geçiş açary"
 msgid "Passkey verification failed. Please try again."
 msgstr "Giriş açary bilen tassyklamak şowsuz boldy. Täzeden synanyşyň."
 
-#: ../../../lib/web/src/components/restore-banner.tsx:135
+#: ../../../lib/web/src/components/restore-banner.tsx:152
 msgid "Passkeys"
 msgstr "Giriş açarlary"
 
@@ -1327,6 +1331,10 @@ msgstr "Öňki surat"
 msgid "Privacy"
 msgstr "Gizlinlik"
 
+#: ../../../lib/web/src/components/ui/upload-progress.tsx:50
+msgid "Processing…"
+msgstr "Işlenýär…"
+
 #: ../../../lib/web/src/components/layout/nav-user.tsx:137
 #: ../../../lib/web/src/components/profile-dropdown.tsx:114
 msgid "Profile"
@@ -1358,11 +1366,11 @@ msgstr "şa zenan"
 msgid "Raised"
 msgstr "Galdyrylan"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:107
+#: ../../../lib/web/src/components/restore-banner.tsx:124
 msgid "Re-link your accounts on this server"
 msgstr "Bu serwerde hasaplaryňyzy täzeden baglanyşdyryň"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:129
+#: ../../../lib/web/src/components/restore-banner.tsx:146
 msgid "Re-register your passkeys on this server"
 msgstr "Bu serwerde giriş açarlaryňyzy gaýtadan hasaba alyň"
 
@@ -1429,7 +1437,7 @@ msgstr "Gyzyklanmany aýyr"
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:671
 msgid "Remove item"
-msgstr ""
+msgstr "Elementi aýyr"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:367
 msgid "Resend email"
@@ -1464,7 +1472,7 @@ msgstr "Resign edilýär..."
 
 #: ../../../lib/web/src/components/comment-composer.tsx:249
 msgid "Retry"
-msgstr ""
+msgstr "Gaýtadan synanyş"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:362
 msgid "Right to Left"
@@ -1593,7 +1601,7 @@ msgstr "Tema saýlawyňy saýla"
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:252
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:335
 msgid "Select..."
-msgstr ""
+msgstr "Saýla..."
 
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:216
 msgid "selected"
@@ -1886,6 +1894,10 @@ msgstr "Näbelli"
 msgid "Unverified"
 msgstr "Tassyklanmadyk"
 
+#: ../../../lib/web/src/components/ui/upload-progress.tsx:34
+msgid "Upload progress"
+msgstr "Ýükleme ýagdaýy"
+
 #: ../../../lib/web/src/components/step-up-dialog.tsx:338
 msgid "Use your passkey"
 msgstr "Giriş açaryňyzy ulanyň"
@@ -1996,18 +2008,18 @@ msgstr "Siz şu bahalary iberdiňiz:"
 msgid "You're all caught up!"
 msgstr "Siz hemmesini gördüňiz!"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:91
+#: ../../../lib/web/src/components/restore-banner.tsx:106
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Hasabyňyz {source} serwерinden bu ýere geçirildi. Şol ýerden pozýançaňyz, habarlar we duýduryşlar iki serwere hem ýetip biler, käbir mazmunyňyz köne serweriň üsti bilen berler, yzarlaýanlar sizi bu ýerde tapmak üçin birnäçe minut gerek bolup biler."
 
 #: ../../../lib/web/src/components/comment-composer.tsx:291
 msgid "Your attachments will be lost."
-msgstr ""
+msgstr "Goşundylaryňyz ýitiriler."
 
 #: ../../../lib/web/src/components/comment-composer.tsx:289
 msgid "Your text and attachments will be lost."
-msgstr ""
+msgstr "Tekstiňiz we goşundylaryňyz ýitiriler."
 
 #: ../../../lib/web/src/components/comment-composer.tsx:292
 msgid "Your text will be lost."
-msgstr ""
+msgstr "Tekstiňiz ýitiriler."

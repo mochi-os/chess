@@ -101,6 +101,10 @@ msgstr "{selectedCount, plural, one {# തിരഞ്ഞെടുത്തു} 
 msgid "{selectedCount, plural, one {Bulk actions for # selected {entityName}} other {Bulk actions for # selected {manyName}}}"
 msgstr "{selectedCount, plural, one {# തിരഞ്ഞെടുത്ത {entityName} എന്നതിനുള്ള ബൾക്ക് പ്രവർത്തനങ്ങൾ} other {# തിരഞ്ഞെടുത്ത {manyName} എന്നതിനുള്ള ബൾക്ക് പ്രവർത്തനങ്ങൾ}}"
 
+#: ../../../lib/web/src/components/ui/upload-progress.tsx:52
+msgid "{sentLabel} of {totalLabel}"
+msgstr "{totalLabel}-ൽ {sentLabel}"
+
 #: src/features/chess/components/chat-message-list.tsx:224
 msgid "{subject} played <0>{san}</0>"
 msgstr "{subject} <0>{san}</0> കളിച്ചു"
@@ -116,7 +120,7 @@ msgstr "{unreadCount, plural, one {മെനു തുറക്കുക (# വ�
 #. placeholder {0}: countDeepChildren(object.id)
 #: ../../../lib/web/src/components/entity/entity-board-card.tsx:421
 msgid "+{0} nested"
-msgstr ""
+msgstr "+{0} നെസ്റ്റഡ്"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
@@ -191,7 +195,7 @@ msgstr "അറിയിപ്പുകൾ സ്വീകരിക്കാന�
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:687
 msgid "Add checklist item"
-msgstr ""
+msgstr "ചെക്ക്‌ലിസ്റ്റ് ഇനം ചേർക്കുക"
 
 #: src/features/chess/components/new-game.tsx:121
 msgid "Add friends"
@@ -203,7 +207,7 @@ msgstr "കളി തുടങ്ങാൻ People ആപ്പിൽ സുഹ�
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:705
 msgid "Add item..."
-msgstr ""
+msgstr "ഇനം ചേർക്കുക..."
 
 #: ../../../lib/web/src/features/accounts/account-picker.tsx:102
 msgid "Add new account"
@@ -625,7 +629,7 @@ msgstr "ഗെയിം ഇല്ലാതാക്കുക"
 msgid "Delete game?"
 msgstr "ഗെയിം ഇല്ലാതാക്കണോ?"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:99
+#: ../../../lib/web/src/components/restore-banner.tsx:115
 msgid "Delete your account on the old server"
 msgstr "പഴയ സെർവറിൽ നിങ്ങളുടെ അക്കൗണ്ട് ഇല്ലാതാക്കുക"
 
@@ -670,19 +674,19 @@ msgstr "ഡയറക്ടറി"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:300
 msgid "Discard"
-msgstr ""
+msgstr "ഉപേക്ഷിക്കുക"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:298
 msgid "Discard draft?"
-msgstr ""
+msgstr "ഡ്രാഫ്റ്റ് ഉപേക്ഷിക്കണോ?"
 
 #: ../../../lib/web/src/lib/chat-ui.ts:25
 #: ../../../lib/web/src/lib/chat-ui.ts:29
 msgid "Disconnected"
 msgstr "വിച്ഛേദിച്ചു"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:79
-#: ../../../lib/web/src/components/restore-banner.tsx:85
+#: ../../../lib/web/src/components/restore-banner.tsx:94
+#: ../../../lib/web/src/components/restore-banner.tsx:100
 msgid "Dismiss"
 msgstr "ഒഴിവാക്കുക"
 
@@ -828,7 +832,7 @@ msgstr "വിഭാഗം പുതുക്കുന്നതിൽ പരാ�
 msgid "Filter..."
 msgstr "ഫിൽട്ടർ..."
 
-#: ../../../lib/web/src/components/restore-banner.tsx:88
+#: ../../../lib/web/src/components/restore-banner.tsx:103
 msgid "Finish moving your account"
 msgstr "നിങ്ങളുടെ അക്കൗണ്ട് മാറ്റൽ പൂർത്തിയാക്കുക"
 
@@ -958,7 +962,7 @@ msgstr "താൽപ്പര്യങ്ങൾ"
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:550
 msgid "Invalid date"
-msgstr ""
+msgstr "അസാധുവായ തീയതി"
 
 #: ../../../lib/web/src/components/tag-input.tsx:38
 msgid "Invalid tag: letters, numbers, spaces, hyphens, and slashes only (max 50 chars)"
@@ -1283,7 +1287,7 @@ msgstr "പാസ്കീ"
 msgid "Passkey verification failed. Please try again."
 msgstr "പാസ്‌കീ പരിശോധന പരാജയപ്പെട്ടു. ദയവായി വീണ്ടും ശ്രമിക്കുക."
 
-#: ../../../lib/web/src/components/restore-banner.tsx:135
+#: ../../../lib/web/src/components/restore-banner.tsx:152
 msgid "Passkeys"
 msgstr "പാസ്കീകൾ"
 
@@ -1327,6 +1331,10 @@ msgstr "മുമ്പത്തെ ഫോട്ടോ"
 msgid "Privacy"
 msgstr "സ്വകാര്യതാ നയം"
 
+#: ../../../lib/web/src/components/ui/upload-progress.tsx:50
+msgid "Processing…"
+msgstr "പ്രോസസ്സ് ചെയ്യുന്നു…"
+
 #: ../../../lib/web/src/components/layout/nav-user.tsx:137
 #: ../../../lib/web/src/components/profile-dropdown.tsx:114
 msgid "Profile"
@@ -1358,11 +1366,11 @@ msgstr "മന്ത്രി"
 msgid "Raised"
 msgstr "ഉയർന്നത്"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:107
+#: ../../../lib/web/src/components/restore-banner.tsx:124
 msgid "Re-link your accounts on this server"
 msgstr "ഈ സെർവറിൽ നിങ്ങളുടെ അക്കൗണ്ടുകൾ വീണ്ടും ലിങ്ക് ചെയ്യുക"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:129
+#: ../../../lib/web/src/components/restore-banner.tsx:146
 msgid "Re-register your passkeys on this server"
 msgstr "ഈ സെർവറിൽ നിങ്ങളുടെ പാസ്‌കീകൾ വീണ്ടും രജിസ്റ്റർ ചെയ്യുക"
 
@@ -1429,7 +1437,7 @@ msgstr "item നീക്കം ചെയ്യുക"
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:671
 msgid "Remove item"
-msgstr ""
+msgstr "ലിസ്റ്റിങ് നീക്കം ചെയ്യുക"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:367
 msgid "Resend email"
@@ -1464,7 +1472,7 @@ msgstr "റെസല്യൂഷൻ"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:249
 msgid "Retry"
-msgstr ""
+msgstr "വീണ്ടും ശ്രമിക്കുക"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:362
 msgid "Right to Left"
@@ -1593,7 +1601,7 @@ msgstr "തീം മുൻഗണന തിരഞ്ഞെടുക്കുക"
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:252
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:335
 msgid "Select..."
-msgstr ""
+msgstr "തിരഞ്ഞെടുക്കുക..."
 
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:216
 msgid "selected"
@@ -1886,6 +1894,10 @@ msgstr "അജ്ഞാതം"
 msgid "Unverified"
 msgstr "സ്ഥിരീകരിച്ചിട്ടില്ല"
 
+#: ../../../lib/web/src/components/ui/upload-progress.tsx:34
+msgid "Upload progress"
+msgstr "അപ്‌ലോഡ് പുരോഗതി"
+
 #: ../../../lib/web/src/components/step-up-dialog.tsx:338
 msgid "Use your passkey"
 msgstr "നിങ്ങളുടെ പാസ്‌കീ ഉപയോഗിക്കുക"
@@ -1996,18 +2008,18 @@ msgstr "നിങ്ങൾ ഇനിപ്പറയുന്ന മൂല്യ�
 msgid "You're all caught up!"
 msgstr "നിങ്ങൾ എല്ലാം കണ്ടു!"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:91
+#: ../../../lib/web/src/components/restore-banner.tsx:106
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "നിങ്ങളുടെ അക്കൗണ്ട് {source} ൽ നിന്ന് ഇവിടേക്ക് മാറ്റി. അവിടെ ഇല്ലാതാക്കുന്നതുവരെ, സന്ദേശങ്ങളും അറിയിപ്പുകളും രണ്ട് സെർവറുകളിലും എത്തിയേക്കാം, നിങ്ങളുടെ ചില ഉള്ളടക്കം പഴയ സെർവറിൽ നിന്ന് വിതരണം ചെയ്യപ്പെടും, ഫോളോവർമാർ ഇവിടെ നിങ്ങളെ കണ്ടെത്താൻ ഏതാനും മിനിറ്റ് എടുക്കാം."
 
 #: ../../../lib/web/src/components/comment-composer.tsx:291
 msgid "Your attachments will be lost."
-msgstr ""
+msgstr "നിങ്ങളുടെ അറ്റാച്ചുമെന്റുകൾ നഷ്ടപ്പെടും."
 
 #: ../../../lib/web/src/components/comment-composer.tsx:289
 msgid "Your text and attachments will be lost."
-msgstr ""
+msgstr "നിങ്ങളുടെ ടെക്സ്റ്റും അറ്റാച്ചുമെന്റുകളും നഷ്ടപ്പെടും."
 
 #: ../../../lib/web/src/components/comment-composer.tsx:292
 msgid "Your text will be lost."
-msgstr ""
+msgstr "നിങ്ങളുടെ ടെക്സ്റ്റ് നഷ്ടപ്പെടും."

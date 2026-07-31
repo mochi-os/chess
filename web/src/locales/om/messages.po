@@ -101,6 +101,10 @@ msgstr "{selectedCount, plural, one {# filatame} other {# filatame}}"
 msgid "{selectedCount, plural, one {Bulk actions for # selected {entityName}} other {Bulk actions for # selected {manyName}}}"
 msgstr "{selectedCount, plural, one {Gochawwan waliigalaa {entityName} # filatameef} other {Gochawwan waliigalaa {manyName} # filatamaniif}}"
 
+#: ../../../lib/web/src/components/ui/upload-progress.tsx:52
+msgid "{sentLabel} of {totalLabel}"
+msgstr "{sentLabel} / {totalLabel}"
+
 #: src/features/chess/components/chat-message-list.tsx:224
 msgid "{subject} played <0>{san}</0>"
 msgstr "{subject} <0>{san}</0> taphate"
@@ -116,7 +120,7 @@ msgstr "{unreadCount, plural, one {Baafata bani (# beeksisa hin dubbifamne)} oth
 #. placeholder {0}: countDeepChildren(object.id)
 #: ../../../lib/web/src/components/entity/entity-board-card.tsx:421
 msgid "+{0} nested"
-msgstr ""
+msgstr "+{0} keessatti"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
@@ -191,7 +195,7 @@ msgstr "Akkaawuntii dabali beeksisa fi tajaajila fayyadamuuf."
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:687
 msgid "Add checklist item"
-msgstr ""
+msgstr "Tarree shakkii dabali"
 
 #: src/features/chess/components/new-game.tsx:121
 msgid "Add friends"
@@ -203,7 +207,7 @@ msgstr "Tapha eegaluuf appii Namootaa keessatti michoota dabali"
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:705
 msgid "Add item..."
-msgstr ""
+msgstr "Wanta dabali..."
 
 #: ../../../lib/web/src/features/accounts/account-picker.tsx:102
 msgid "Add new account"
@@ -625,7 +629,7 @@ msgstr "Tapha haqi"
 msgid "Delete game?"
 msgstr "Taphicha haqi?"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:99
+#: ../../../lib/web/src/components/restore-banner.tsx:115
 msgid "Delete your account on the old server"
 msgstr "Akkaawuntii kee sarvaraa durii irraa haqi"
 
@@ -670,19 +674,19 @@ msgstr "Galmee"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:300
 msgid "Discard"
-msgstr ""
+msgstr "Gati"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:298
 msgid "Discard draft?"
-msgstr ""
+msgstr "Wixinee gatuu?"
 
 #: ../../../lib/web/src/lib/chat-ui.ts:25
 #: ../../../lib/web/src/lib/chat-ui.ts:29
 msgid "Disconnected"
 msgstr "Hidhaan citeera"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:79
-#: ../../../lib/web/src/components/restore-banner.tsx:85
+#: ../../../lib/web/src/components/restore-banner.tsx:94
+#: ../../../lib/web/src/components/restore-banner.tsx:100
 msgid "Dismiss"
 msgstr "Dhiisi"
 
@@ -828,7 +832,7 @@ msgstr "Ramaddii toattaachuu hin dandeenye"
 msgid "Filter..."
 msgstr "Gingilchaa..."
 
-#: ../../../lib/web/src/components/restore-banner.tsx:88
+#: ../../../lib/web/src/components/restore-banner.tsx:103
 msgid "Finish moving your account"
 msgstr "Akkaawuntii kee jijjiiruu fixadhu"
 
@@ -958,7 +962,7 @@ msgstr "Fedhota"
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:550
 msgid "Invalid date"
-msgstr ""
+msgstr "Guyyaa sirrii hin taane"
 
 #: ../../../lib/web/src/components/tag-input.tsx:38
 msgid "Invalid tag: letters, numbers, spaces, hyphens, and slashes only (max 50 chars)"
@@ -1283,7 +1287,7 @@ msgstr "Passkey"
 msgid "Passkey verification failed. Please try again."
 msgstr "Mirkaneessi passkey hin milkoofne. Maaloo irra deebiʼii yaali."
 
-#: ../../../lib/web/src/components/restore-banner.tsx:135
+#: ../../../lib/web/src/components/restore-banner.tsx:152
 msgid "Passkeys"
 msgstr "Passkey-wwan"
 
@@ -1327,6 +1331,10 @@ msgstr "Suuraa duraa"
 msgid "Privacy"
 msgstr "Iccitii"
 
+#: ../../../lib/web/src/components/ui/upload-progress.tsx:50
+msgid "Processing…"
+msgstr "Adeemsifamaa jira…"
+
 #: ../../../lib/web/src/components/layout/nav-user.tsx:137
 #: ../../../lib/web/src/components/profile-dropdown.tsx:114
 msgid "Profile"
@@ -1358,11 +1366,11 @@ msgstr "kuwiinii"
 msgid "Raised"
 msgstr "Ol kaafame"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:107
+#: ../../../lib/web/src/components/restore-banner.tsx:124
 msgid "Re-link your accounts on this server"
 msgstr "Akkaawuntiiwan kee sarvarri kana irratti irra deebi'ii walitti hidhi"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:129
+#: ../../../lib/web/src/components/restore-banner.tsx:146
 msgid "Re-register your passkeys on this server"
 msgstr "Furtuuwwan seensaa kee sajoo kana irratti irra deebi'ii galmeessi"
 
@@ -1429,7 +1437,7 @@ msgstr "Dantaa haqi"
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:671
 msgid "Remove item"
-msgstr ""
+msgstr "Meeshaa haqi"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:367
 msgid "Resend email"
@@ -1464,7 +1472,7 @@ msgstr "Keessaa ba'aa jira..."
 
 #: ../../../lib/web/src/components/comment-composer.tsx:249
 msgid "Retry"
-msgstr ""
+msgstr "Irra deebi'ii yaali"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:362
 msgid "Right to Left"
@@ -1593,7 +1601,7 @@ msgstr "Filannoo akeeka filadhu"
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:252
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:335
 msgid "Select..."
-msgstr ""
+msgstr "Filadhu..."
 
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:216
 msgid "selected"
@@ -1886,6 +1894,10 @@ msgstr "Hin beekamu"
 msgid "Unverified"
 msgstr "Hin mirkanaa'amne"
 
+#: ../../../lib/web/src/components/ui/upload-progress.tsx:34
+msgid "Upload progress"
+msgstr "Adeemsa fe'umsaa"
+
 #: ../../../lib/web/src/components/step-up-dialog.tsx:338
 msgid "Use your passkey"
 msgstr "Passkey kee fayyadami"
@@ -1996,18 +2008,18 @@ msgstr "Gatiiwwan armaan gadii galchiteetta:"
 msgid "You're all caught up!"
 msgstr "Hunda ilaalteetta!"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:91
+#: ../../../lib/web/src/components/restore-banner.tsx:106
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Akkaawuntiin kee {source} irraa as fidame. Achitti haqtee hanga fixtutti, ergaawwan fi beeksisawwan sarvara lamaaniyyuu ga'uu danda'u, qabeenyi kee tokko tokko sarvaraa durii irraa tajaajilamu itti fufa, fi hordoftonni si argachuu dhaaf daqiiqaawwan muraasa fudhachuu danda'u."
 
 #: ../../../lib/web/src/components/comment-composer.tsx:291
 msgid "Your attachments will be lost."
-msgstr ""
+msgstr "Miiltoowwan kee ni badu."
 
 #: ../../../lib/web/src/components/comment-composer.tsx:289
 msgid "Your text and attachments will be lost."
-msgstr ""
+msgstr "Barreeffamnii fi miiltoowwan kee ni badu."
 
 #: ../../../lib/web/src/components/comment-composer.tsx:292
 msgid "Your text will be lost."
-msgstr ""
+msgstr "Barreeffamni kee ni bada."

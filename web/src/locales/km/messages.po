@@ -101,6 +101,10 @@ msgstr "{selectedCount, plural, other {# បានជ្រើសរើស}}"
 msgid "{selectedCount, plural, one {Bulk actions for # selected {entityName}} other {Bulk actions for # selected {manyName}}}"
 msgstr "{selectedCount, plural, other {សកម្មភាពជាបណ្តុំសម្រាប់ {manyName} # ដែលបានជ្រើសរើស}}"
 
+#: ../../../lib/web/src/components/ui/upload-progress.tsx:52
+msgid "{sentLabel} of {totalLabel}"
+msgstr "{sentLabel} នៃ {totalLabel}"
+
 #: src/features/chess/components/chat-message-list.tsx:224
 msgid "{subject} played <0>{san}</0>"
 msgstr "{subject} បានលេង <0>{san}</0>"
@@ -116,7 +120,7 @@ msgstr "{unreadCount, plural, other {បើកម៉ឺនុយ (ការជ�
 #. placeholder {0}: countDeepChildren(object.id)
 #: ../../../lib/web/src/components/entity/entity-board-card.tsx:421
 msgid "+{0} nested"
-msgstr ""
+msgstr "+{0} ជាន់គ្នា"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
@@ -191,7 +195,7 @@ msgstr "បន្ថែមគណនីដើម្បីទទួលបានក
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:687
 msgid "Add checklist item"
-msgstr ""
+msgstr "បន្ថែមធាតុបញ្ជី"
 
 #: src/features/chess/components/new-game.tsx:121
 msgid "Add friends"
@@ -203,7 +207,7 @@ msgstr "បន្ថែមមិត្តភក្តិក្នុងកម្
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:705
 msgid "Add item..."
-msgstr ""
+msgstr "បន្ថែមធាតុ..."
 
 #: ../../../lib/web/src/features/accounts/account-picker.tsx:102
 msgid "Add new account"
@@ -625,7 +629,7 @@ msgstr "លុបហ្គេម"
 msgid "Delete game?"
 msgstr "លុបហ្គេម?"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:99
+#: ../../../lib/web/src/components/restore-banner.tsx:115
 msgid "Delete your account on the old server"
 msgstr "លុបគណនីរបស់អ្នកនៅម៉ាស៊ីនមេចាស់"
 
@@ -670,19 +674,19 @@ msgstr "ថត"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:300
 msgid "Discard"
-msgstr ""
+msgstr "បោះបង់"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:298
 msgid "Discard draft?"
-msgstr ""
+msgstr "បោះបង់សេចក្ដីព្រាងឬ?"
 
 #: ../../../lib/web/src/lib/chat-ui.ts:25
 #: ../../../lib/web/src/lib/chat-ui.ts:29
 msgid "Disconnected"
 msgstr "បានផ្ដាច់"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:79
-#: ../../../lib/web/src/components/restore-banner.tsx:85
+#: ../../../lib/web/src/components/restore-banner.tsx:94
+#: ../../../lib/web/src/components/restore-banner.tsx:100
 msgid "Dismiss"
 msgstr "បិទ"
 
@@ -828,7 +832,7 @@ msgstr "បរាជ័យក្នុងការធ្វើបច្ចុប
 msgid "Filter..."
 msgstr "តម្រង..."
 
-#: ../../../lib/web/src/components/restore-banner.tsx:88
+#: ../../../lib/web/src/components/restore-banner.tsx:103
 msgid "Finish moving your account"
 msgstr "បញ្ចប់ការផ្លាស់ប្តូរគណនីរបស់អ្នក"
 
@@ -958,7 +962,7 @@ msgstr "ចំណាប់អារម្មណ៍"
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:550
 msgid "Invalid date"
-msgstr ""
+msgstr "កាលបរិច្ឆេទមិនត្រឹមត្រូវ"
 
 #: ../../../lib/web/src/components/tag-input.tsx:38
 msgid "Invalid tag: letters, numbers, spaces, hyphens, and slashes only (max 50 chars)"
@@ -1283,7 +1287,7 @@ msgstr "សោសម្ងាត់"
 msgid "Passkey verification failed. Please try again."
 msgstr "ការផ្ទៀងផ្ទាត់ passkey បានបរាជ័យ។ សូមព្យាយាមម្ដងទៀត។"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:135
+#: ../../../lib/web/src/components/restore-banner.tsx:152
 msgid "Passkeys"
 msgstr "កូនសោចូល"
 
@@ -1327,6 +1331,10 @@ msgstr "រូបភាពមុន"
 msgid "Privacy"
 msgstr "ឯកជនភាព"
 
+#: ../../../lib/web/src/components/ui/upload-progress.tsx:50
+msgid "Processing…"
+msgstr "កំពុងដំណើរការ…"
+
 #: ../../../lib/web/src/components/layout/nav-user.tsx:137
 #: ../../../lib/web/src/components/profile-dropdown.tsx:114
 msgid "Profile"
@@ -1358,11 +1366,11 @@ msgstr "queen"
 msgid "Raised"
 msgstr "លើកឡើង"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:107
+#: ../../../lib/web/src/components/restore-banner.tsx:124
 msgid "Re-link your accounts on this server"
 msgstr "ភ្ជាប់គណនីរបស់អ្នកឡើងវិញនៅម៉ាស៊ីនមេនេះ"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:129
+#: ../../../lib/web/src/components/restore-banner.tsx:146
 msgid "Re-register your passkeys on this server"
 msgstr "ចុះឈ្មោះកូនសោចូលរបស់អ្នកឡើងវិញនៅលើម៉ាស៊ីនមេនេះ"
 
@@ -1429,7 +1437,7 @@ msgstr "យកចំណាប់អារម្មណ៍ចេញ"
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:671
 msgid "Remove item"
-msgstr ""
+msgstr "យកធាតុចេញ"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:367
 msgid "Resend email"
@@ -1464,7 +1472,7 @@ msgstr "កំពុងចុះចាញ់..."
 
 #: ../../../lib/web/src/components/comment-composer.tsx:249
 msgid "Retry"
-msgstr ""
+msgstr "ព្យាយាមម្ដងទៀត"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:362
 msgid "Right to Left"
@@ -1593,7 +1601,7 @@ msgstr "ជ្រើសរើសចំណូលចិត្តរូបរាង
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:252
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:335
 msgid "Select..."
-msgstr ""
+msgstr "ជ្រើសរើស..."
 
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:216
 msgid "selected"
@@ -1886,6 +1894,10 @@ msgstr "មិនស្គាល់"
 msgid "Unverified"
 msgstr "មិនបានផ្ទៀងផ្ទាត់"
 
+#: ../../../lib/web/src/components/ui/upload-progress.tsx:34
+msgid "Upload progress"
+msgstr "វឌ្ឍនភាពនៃការផ្ទុកឡើង"
+
 #: ../../../lib/web/src/components/step-up-dialog.tsx:338
 msgid "Use your passkey"
 msgstr "ប្រើ passkey របស់អ្នក"
@@ -1996,18 +2008,18 @@ msgstr "អ្នកបានដាក់ស្នើតម្លៃខាងក
 msgid "You're all caught up!"
 msgstr "អ្នកបានមើលទាំងអស់ហើយ!"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:91
+#: ../../../lib/web/src/components/restore-banner.tsx:106
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "គណនីរបស់អ្នកត្រូវបានផ្លាស់ប្តូរមកទីនេះពី {source}។ រហូតដល់អ្នកលុបវានៅទីនោះ សារ និងការជូនដំណឹងអាចទៅដល់ម៉ាស៊ីនមេទាំងពីរ មាតិកាមួយចំនួនរបស់អ្នកនៅតែត្រូវបានបម្រើពីម៉ាស៊ីនមេចាស់ ហើយអ្នកតាមដានអាចចំណាយពេលប៉ុន្មាននាទីដើម្បីរកអ្នកនៅទីនេះ។"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:291
 msgid "Your attachments will be lost."
-msgstr ""
+msgstr "ឯកសារភ្ជាប់របស់អ្នកនឹងបាត់បង់។"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:289
 msgid "Your text and attachments will be lost."
-msgstr ""
+msgstr "អត្ថបទ និងឯកសារភ្ជាប់របស់អ្នកនឹងបាត់បង់។"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:292
 msgid "Your text will be lost."
-msgstr ""
+msgstr "អត្ថបទរបស់អ្នកនឹងបាត់បង់។"

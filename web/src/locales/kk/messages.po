@@ -101,6 +101,10 @@ msgstr "{selectedCount, plural, one {# таңдалды} other {# таңдалд
 msgid "{selectedCount, plural, one {Bulk actions for # selected {entityName}} other {Bulk actions for # selected {manyName}}}"
 msgstr "{selectedCount, plural, one {# таңдалған {entityName} үшін топтық әрекеттер} other {# таңдалған {manyName} үшін топтық әрекеттер}}"
 
+#: ../../../lib/web/src/components/ui/upload-progress.tsx:52
+msgid "{sentLabel} of {totalLabel}"
+msgstr "{totalLabel} ішінен {sentLabel}"
+
 #: src/features/chess/components/chat-message-list.tsx:224
 msgid "{subject} played <0>{san}</0>"
 msgstr "{subject} <0>{san}</0> ойнады"
@@ -116,7 +120,7 @@ msgstr "{unreadCount, plural, one {Мәзірді ашу (# оқылмаған �
 #. placeholder {0}: countDeepChildren(object.id)
 #: ../../../lib/web/src/components/entity/entity-board-card.tsx:421
 msgid "+{0} nested"
-msgstr ""
+msgstr "+{0} кірістірілген"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
@@ -191,7 +195,7 @@ msgstr "Хабарландырулар алу және қызметтерді п
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:687
 msgid "Add checklist item"
-msgstr ""
+msgstr "Тапсырмалар тізімінің тармағын қосу"
 
 #: src/features/chess/components/new-game.tsx:121
 msgid "Add friends"
@@ -203,7 +207,7 @@ msgstr "Ойынды бастау үшін People қолданбасында д�
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:705
 msgid "Add item..."
-msgstr ""
+msgstr "Тармақ қосу..."
 
 #: ../../../lib/web/src/features/accounts/account-picker.tsx:102
 msgid "Add new account"
@@ -625,7 +629,7 @@ msgstr "Ойынды жою"
 msgid "Delete game?"
 msgstr "Ойын жойылсын ба?"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:99
+#: ../../../lib/web/src/components/restore-banner.tsx:115
 msgid "Delete your account on the old server"
 msgstr "Ескі серверден тіркелгіңізді жойыңыз"
 
@@ -670,19 +674,19 @@ msgstr "Каталог"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:300
 msgid "Discard"
-msgstr ""
+msgstr "Алып тастау"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:298
 msgid "Discard draft?"
-msgstr ""
+msgstr "Жобаны алып тастау керек пе?"
 
 #: ../../../lib/web/src/lib/chat-ui.ts:25
 #: ../../../lib/web/src/lib/chat-ui.ts:29
 msgid "Disconnected"
 msgstr "Ажыратылды"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:79
-#: ../../../lib/web/src/components/restore-banner.tsx:85
+#: ../../../lib/web/src/components/restore-banner.tsx:94
+#: ../../../lib/web/src/components/restore-banner.tsx:100
 msgid "Dismiss"
 msgstr "Жабу"
 
@@ -828,7 +832,7 @@ msgstr "Санатты жаңарту сәтсіз аяқталды"
 msgid "Filter..."
 msgstr "Сүзу..."
 
-#: ../../../lib/web/src/components/restore-banner.tsx:88
+#: ../../../lib/web/src/components/restore-banner.tsx:103
 msgid "Finish moving your account"
 msgstr "Тіркелгіні ауыстыруды аяқтаңыз"
 
@@ -958,7 +962,7 @@ msgstr "Қызығушылықтар"
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:550
 msgid "Invalid date"
-msgstr ""
+msgstr "Жарамсыз күн"
 
 #: ../../../lib/web/src/components/tag-input.tsx:38
 msgid "Invalid tag: letters, numbers, spaces, hyphens, and slashes only (max 50 chars)"
@@ -1283,7 +1287,7 @@ msgstr "Кіру кілті"
 msgid "Passkey verification failed. Please try again."
 msgstr "Passkey тексеруі сәтсіз аяқталды. Қайталап көріңіз."
 
-#: ../../../lib/web/src/components/restore-banner.tsx:135
+#: ../../../lib/web/src/components/restore-banner.tsx:152
 msgid "Passkeys"
 msgstr "Passkey-лер"
 
@@ -1327,6 +1331,10 @@ msgstr "Алдыңғы сурет"
 msgid "Privacy"
 msgstr "Құпиялылық"
 
+#: ../../../lib/web/src/components/ui/upload-progress.tsx:50
+msgid "Processing…"
+msgstr "Өңделуде…"
+
 #: ../../../lib/web/src/components/layout/nav-user.tsx:137
 #: ../../../lib/web/src/components/profile-dropdown.tsx:114
 msgid "Profile"
@@ -1358,11 +1366,11 @@ msgstr "ханшайым"
 msgid "Raised"
 msgstr "Көтерілген"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:107
+#: ../../../lib/web/src/components/restore-banner.tsx:124
 msgid "Re-link your accounts on this server"
 msgstr "Осы серверде тіркелгілеріңізді қайта байланыстырыңыз"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:129
+#: ../../../lib/web/src/components/restore-banner.tsx:146
 msgid "Re-register your passkeys on this server"
 msgstr "Бұл серверде кіру кілттерін қайта тіркеңіз"
 
@@ -1429,7 +1437,7 @@ msgstr "Қызығушылықты жою"
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:671
 msgid "Remove item"
-msgstr ""
+msgstr "Элементті жою"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:367
 msgid "Resend email"
@@ -1464,7 +1472,7 @@ msgstr "Бас тарту..."
 
 #: ../../../lib/web/src/components/comment-composer.tsx:249
 msgid "Retry"
-msgstr ""
+msgstr "Қайталап көру"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:362
 msgid "Right to Left"
@@ -1593,7 +1601,7 @@ msgstr "Тақырып теңшелімін таңдау"
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:252
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:335
 msgid "Select..."
-msgstr ""
+msgstr "Таңдау..."
 
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:216
 msgid "selected"
@@ -1886,6 +1894,10 @@ msgstr "Белгісіз"
 msgid "Unverified"
 msgstr "Тексерілмеген"
 
+#: ../../../lib/web/src/components/ui/upload-progress.tsx:34
+msgid "Upload progress"
+msgstr "Жүктеп салу барысы"
+
 #: ../../../lib/web/src/components/step-up-dialog.tsx:338
 msgid "Use your passkey"
 msgstr "Passkey пайдаланыңыз"
@@ -1996,18 +2008,18 @@ msgstr "Сіз келесі мәндерді жібердіңіз:"
 msgid "You're all caught up!"
 msgstr "Барлығын көрдіңіз!"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:91
+#: ../../../lib/web/src/components/restore-banner.tsx:106
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Тіркелгіңіз {source} жерінен осында ауыстырылды. Сіз оны сол жерден жоймайынша, хабарлар мен хабарландырулар екі серверге де жетуі мүмкін, кейбір мазмұныңыз ескі серверден берілуін жалғастырады, ал жазылушылар сізді осында табу үшін бірнеше минут кетуі мүмкін."
 
 #: ../../../lib/web/src/components/comment-composer.tsx:291
 msgid "Your attachments will be lost."
-msgstr ""
+msgstr "Тіркемелеріңіз жоғалады."
 
 #: ../../../lib/web/src/components/comment-composer.tsx:289
 msgid "Your text and attachments will be lost."
-msgstr ""
+msgstr "Мәтініңіз бен тіркемелеріңіз жоғалады."
 
 #: ../../../lib/web/src/components/comment-composer.tsx:292
 msgid "Your text will be lost."
-msgstr ""
+msgstr "Мәтініңіз жоғалады."

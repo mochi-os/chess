@@ -101,6 +101,10 @@ msgstr "{selectedCount, plural, one {# নির্বাচিত} other {# ন
 msgid "{selectedCount, plural, one {Bulk actions for # selected {entityName}} other {Bulk actions for # selected {manyName}}}"
 msgstr "{selectedCount, plural, one {# নির্বাচিত {entityName} এর জন্য বাল্ক ক্রিয়া} other {# নির্বাচিত {manyName} এর জন্য বাল্ক ক্রিয়া}}"
 
+#: ../../../lib/web/src/components/ui/upload-progress.tsx:52
+msgid "{sentLabel} of {totalLabel}"
+msgstr "{totalLabel}-এর মধ্যে {sentLabel}"
+
 #: src/features/chess/components/chat-message-list.tsx:224
 msgid "{subject} played <0>{san}</0>"
 msgstr "{subject} <0>{san}</0> খেলেছে"
@@ -116,7 +120,7 @@ msgstr "{unreadCount, plural, one {মেনু খুলুন (# অপঠি�
 #. placeholder {0}: countDeepChildren(object.id)
 #: ../../../lib/web/src/components/entity/entity-board-card.tsx:421
 msgid "+{0} nested"
-msgstr ""
+msgstr "+{0} নেস্টেড"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
@@ -191,7 +195,7 @@ msgstr "নোটিফিকেশন পেতে এবং পরিষেব
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:687
 msgid "Add checklist item"
-msgstr ""
+msgstr "চেকলিস্ট আইটেম যোগ করুন"
 
 #: src/features/chess/components/new-game.tsx:121
 msgid "Add friends"
@@ -203,7 +207,7 @@ msgstr "খেলা শুরু করতে People অ্যাপে বন�
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:705
 msgid "Add item..."
-msgstr ""
+msgstr "আইটেম যোগ করুন..."
 
 #: ../../../lib/web/src/features/accounts/account-picker.tsx:102
 msgid "Add new account"
@@ -625,7 +629,7 @@ msgstr "গেম মুছুন"
 msgid "Delete game?"
 msgstr "গেম মুছবেন?"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:99
+#: ../../../lib/web/src/components/restore-banner.tsx:115
 msgid "Delete your account on the old server"
 msgstr "পুরানো সার্ভারে আপনার অ্যাকাউন্ট মুছুন"
 
@@ -670,19 +674,19 @@ msgstr "ডিরেক্টরি"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:300
 msgid "Discard"
-msgstr ""
+msgstr "বাতিল করুন"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:298
 msgid "Discard draft?"
-msgstr ""
+msgstr "খসড়া বাতিল করবেন?"
 
 #: ../../../lib/web/src/lib/chat-ui.ts:25
 #: ../../../lib/web/src/lib/chat-ui.ts:29
 msgid "Disconnected"
 msgstr "সংযোগ বিচ্ছিন্ন"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:79
-#: ../../../lib/web/src/components/restore-banner.tsx:85
+#: ../../../lib/web/src/components/restore-banner.tsx:94
+#: ../../../lib/web/src/components/restore-banner.tsx:100
 msgid "Dismiss"
 msgstr "বাতিল করুন"
 
@@ -828,7 +832,7 @@ msgstr "ক্যাটাগরি আপডেট করতে ব্যর্
 msgid "Filter..."
 msgstr "ফিল্টার..."
 
-#: ../../../lib/web/src/components/restore-banner.tsx:88
+#: ../../../lib/web/src/components/restore-banner.tsx:103
 msgid "Finish moving your account"
 msgstr "আপনার অ্যাকাউন্ট স্থানান্তর সম্পন্ন করুন"
 
@@ -958,7 +962,7 @@ msgstr "আগ্রহসমূহ"
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:550
 msgid "Invalid date"
-msgstr ""
+msgstr "অবৈধ তারিখ"
 
 #: ../../../lib/web/src/components/tag-input.tsx:38
 msgid "Invalid tag: letters, numbers, spaces, hyphens, and slashes only (max 50 chars)"
@@ -1283,7 +1287,7 @@ msgstr "পাসকি"
 msgid "Passkey verification failed. Please try again."
 msgstr "পাসকি যাচাই ব্যর্থ হয়েছে। অনুগ্রহ করে আবার চেষ্টা করুন।"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:135
+#: ../../../lib/web/src/components/restore-banner.tsx:152
 msgid "Passkeys"
 msgstr "পাসকি"
 
@@ -1327,6 +1331,10 @@ msgstr "পূর্ববর্তী ছবি"
 msgid "Privacy"
 msgstr "গোপনীয়তা"
 
+#: ../../../lib/web/src/components/ui/upload-progress.tsx:50
+msgid "Processing…"
+msgstr "প্রক্রিয়াকরণ চলছে…"
+
 #: ../../../lib/web/src/components/layout/nav-user.tsx:137
 #: ../../../lib/web/src/components/profile-dropdown.tsx:114
 msgid "Profile"
@@ -1358,11 +1366,11 @@ msgstr "মন্ত্রী"
 msgid "Raised"
 msgstr "উঁচু"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:107
+#: ../../../lib/web/src/components/restore-banner.tsx:124
 msgid "Re-link your accounts on this server"
 msgstr "এই সার্ভারে আপনার অ্যাকাউন্টগুলি পুনরায় লিঙ্ক করুন"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:129
+#: ../../../lib/web/src/components/restore-banner.tsx:146
 msgid "Re-register your passkeys on this server"
 msgstr "এই সার্ভারে আপনার পাসকি পুনরায় নিবন্ধন করুন"
 
@@ -1429,7 +1437,7 @@ msgstr "আগ্রহ সরান"
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:671
 msgid "Remove item"
-msgstr ""
+msgstr "আইটেম সরান"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:367
 msgid "Resend email"
@@ -1464,7 +1472,7 @@ msgstr "পদত্যাগ করা হচ্ছে..."
 
 #: ../../../lib/web/src/components/comment-composer.tsx:249
 msgid "Retry"
-msgstr ""
+msgstr "আবার চেষ্টা করুন"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:362
 msgid "Right to Left"
@@ -1593,7 +1601,7 @@ msgstr "থিম পছন্দ নির্বাচন করুন"
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:252
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:335
 msgid "Select..."
-msgstr ""
+msgstr "নির্বাচন করুন..."
 
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:216
 msgid "selected"
@@ -1886,6 +1894,10 @@ msgstr "অজানা"
 msgid "Unverified"
 msgstr "যাচাই করা হয়নি"
 
+#: ../../../lib/web/src/components/ui/upload-progress.tsx:34
+msgid "Upload progress"
+msgstr "আপলোডের অগ্রগতি"
+
 #: ../../../lib/web/src/components/step-up-dialog.tsx:338
 msgid "Use your passkey"
 msgstr "আপনার পাসকি ব্যবহার করুন"
@@ -1996,18 +2008,18 @@ msgstr "আপনি নিম্নলিখিত মান জমা দি�
 msgid "You're all caught up!"
 msgstr "আপনি সব দেখে ফেলেছেন!"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:91
+#: ../../../lib/web/src/components/restore-banner.tsx:106
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "আপনার অ্যাকাউন্ট {source} থেকে এখানে স্থানান্তরিত হয়েছে। আপনি সেখানে এটি মুছে না দেওয়া পর্যন্ত, বার্তা ও বিজ্ঞপ্তি উভয় সার্ভারে পৌঁছাতে পারে, আপনার কিছু বিষয়বস্তু পুরানো সার্ভার থেকে পরিবেশিত হতে পারে, এবং অনুসরণকারীদের আপনাকে এখানে খুঁজে পেতে কয়েক মিনিট লাগতে পারে।"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:291
 msgid "Your attachments will be lost."
-msgstr ""
+msgstr "আপনার সংযুক্তিগুলি হারিয়ে যাবে।"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:289
 msgid "Your text and attachments will be lost."
-msgstr ""
+msgstr "আপনার লেখা ও সংযুক্তিগুলি হারিয়ে যাবে।"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:292
 msgid "Your text will be lost."
-msgstr ""
+msgstr "আপনার লেখা হারিয়ে যাবে।"

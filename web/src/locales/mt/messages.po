@@ -101,6 +101,10 @@ msgstr "{selectedCount, plural, one {# magħżula} few {# magħżula} many {# ma
 msgid "{selectedCount, plural, one {Bulk actions for # selected {entityName}} other {Bulk actions for # selected {manyName}}}"
 msgstr "{selectedCount, plural, one {Azzjonijiet bl-ingrossa għal # {entityName} magħżul} few {Azzjonijiet bl-ingrossa għal # {manyName} magħżula} many {Azzjonijiet bl-ingrossa għal # {manyName} magħżula} other {Azzjonijiet bl-ingrossa għal # {manyName} magħżula}}"
 
+#: ../../../lib/web/src/components/ui/upload-progress.tsx:52
+msgid "{sentLabel} of {totalLabel}"
+msgstr "{sentLabel} minn {totalLabel}"
+
 #: src/features/chess/components/chat-message-list.tsx:224
 msgid "{subject} played <0>{san}</0>"
 msgstr "{subject} laqat <0>{san}</0>"
@@ -116,7 +120,7 @@ msgstr "{unreadCount, plural, one {Iftaħ il-menu (# notifika mhux moqrija)} few
 #. placeholder {0}: countDeepChildren(object.id)
 #: ../../../lib/web/src/components/entity/entity-board-card.tsx:421
 msgid "+{0} nested"
-msgstr ""
+msgstr "+{0} imdaħħla"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
@@ -191,7 +195,7 @@ msgstr "Żid kont biex tirċievi notifiki u tuża servizzi."
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:687
 msgid "Add checklist item"
-msgstr ""
+msgstr "Żid item għall-checklist"
 
 #: src/features/chess/components/new-game.tsx:121
 msgid "Add friends"
@@ -203,7 +207,7 @@ msgstr "Żid ħbieb fl-app People biex tibda tilgħab"
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:705
 msgid "Add item..."
-msgstr ""
+msgstr "Żid item..."
 
 #: ../../../lib/web/src/features/accounts/account-picker.tsx:102
 msgid "Add new account"
@@ -625,7 +629,7 @@ msgstr "Ħassar logħba"
 msgid "Delete game?"
 msgstr "Ħassar il-logħba?"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:99
+#: ../../../lib/web/src/components/restore-banner.tsx:115
 msgid "Delete your account on the old server"
 msgstr "Ħassar il-kont tiegħek fuq is-server il-qadim"
 
@@ -670,19 +674,19 @@ msgstr "Direttorju"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:300
 msgid "Discard"
-msgstr ""
+msgstr "Armi"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:298
 msgid "Discard draft?"
-msgstr ""
+msgstr "Tarmi l-abbozz?"
 
 #: ../../../lib/web/src/lib/chat-ui.ts:25
 #: ../../../lib/web/src/lib/chat-ui.ts:29
 msgid "Disconnected"
 msgstr "Skonness"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:79
-#: ../../../lib/web/src/components/restore-banner.tsx:85
+#: ../../../lib/web/src/components/restore-banner.tsx:94
+#: ../../../lib/web/src/components/restore-banner.tsx:100
 msgid "Dismiss"
 msgstr "Warrab"
 
@@ -828,7 +832,7 @@ msgstr "Ma rnexxiex tiġi aġġornata l-kategorija"
 msgid "Filter..."
 msgstr "Iffiltra..."
 
-#: ../../../lib/web/src/components/restore-banner.tsx:88
+#: ../../../lib/web/src/components/restore-banner.tsx:103
 msgid "Finish moving your account"
 msgstr "Lesti t-trasferiment tal-kont tiegħek"
 
@@ -958,7 +962,7 @@ msgstr "Interessi"
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:550
 msgid "Invalid date"
-msgstr ""
+msgstr "Data invalida"
 
 #: ../../../lib/web/src/components/tag-input.tsx:38
 msgid "Invalid tag: letters, numbers, spaces, hyphens, and slashes only (max 50 chars)"
@@ -1283,7 +1287,7 @@ msgstr "Passkey"
 msgid "Passkey verification failed. Please try again."
 msgstr "Il-verifika tal-passkey falliet. Jekk jogħġbok erġa' pprova."
 
-#: ../../../lib/web/src/components/restore-banner.tsx:135
+#: ../../../lib/web/src/components/restore-banner.tsx:152
 msgid "Passkeys"
 msgstr "Ċwievet tal-aċċess"
 
@@ -1327,6 +1331,10 @@ msgstr "Stampa preċedenti"
 msgid "Privacy"
 msgstr "Privatezza"
 
+#: ../../../lib/web/src/components/ui/upload-progress.tsx:50
+msgid "Processing…"
+msgstr "Qed jiġi pproċessat…"
+
 #: ../../../lib/web/src/components/layout/nav-user.tsx:137
 #: ../../../lib/web/src/components/profile-dropdown.tsx:114
 msgid "Profile"
@@ -1358,11 +1366,11 @@ msgstr "queen"
 msgid "Raised"
 msgstr "Imqajjem"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:107
+#: ../../../lib/web/src/components/restore-banner.tsx:124
 msgid "Re-link your accounts on this server"
 msgstr "Erġa' għaqqad il-kontijiet tiegħek fuq dan is-server"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:129
+#: ../../../lib/web/src/components/restore-banner.tsx:146
 msgid "Re-register your passkeys on this server"
 msgstr "Erġa' rreġistra ċ-ċwievet tal-aċċess tiegħek fuq dan is-server"
 
@@ -1429,7 +1437,7 @@ msgstr "Neħħi interess"
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:671
 msgid "Remove item"
-msgstr ""
+msgstr "Neħħi oġġett"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:367
 msgid "Resend email"
@@ -1464,7 +1472,7 @@ msgstr "Qed jirriżenja..."
 
 #: ../../../lib/web/src/components/comment-composer.tsx:249
 msgid "Retry"
-msgstr ""
+msgstr "Erġa' pprova"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:362
 msgid "Right to Left"
@@ -1593,7 +1601,7 @@ msgstr "Agħżel preferenza tat-tema"
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:252
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:335
 msgid "Select..."
-msgstr ""
+msgstr "Agħżel..."
 
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:216
 msgid "selected"
@@ -1886,6 +1894,10 @@ msgstr "Mhux magħruf"
 msgid "Unverified"
 msgstr "Mhux ivverifikat"
 
+#: ../../../lib/web/src/components/ui/upload-progress.tsx:34
+msgid "Upload progress"
+msgstr "Il-progress tat-tlugħ"
+
 #: ../../../lib/web/src/components/step-up-dialog.tsx:338
 msgid "Use your passkey"
 msgstr "Uża l-passkey tiegħek"
@@ -1996,18 +2008,18 @@ msgstr "Bgħatt il-valuri li ġejjin:"
 msgid "You're all caught up!"
 msgstr "Rajt kollox!"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:91
+#: ../../../lib/web/src/components/restore-banner.tsx:106
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Il-kont tiegħek ġie miċċaqqlaq hawn minn {source}. Sakemm tħassru hemm, il-messaġġi u n-notifiki jistgħu jaslu fuq iż-żewġ servers, xi kontenut tiegħek jibqa' jingħata mis-server il-qadim, u s-segwaċi jistgħu jieħdu ftit minuti biex isibuk hawn."
 
 #: ../../../lib/web/src/components/comment-composer.tsx:291
 msgid "Your attachments will be lost."
-msgstr ""
+msgstr "L-annessi tiegħek se jintilfu."
 
 #: ../../../lib/web/src/components/comment-composer.tsx:289
 msgid "Your text and attachments will be lost."
-msgstr ""
+msgstr "It-test u l-annessi tiegħek se jintilfu."
 
 #: ../../../lib/web/src/components/comment-composer.tsx:292
 msgid "Your text will be lost."
-msgstr ""
+msgstr "It-test tiegħek se jintilef."

@@ -101,6 +101,10 @@ msgstr "{selectedCount, plural, other {# ເລືອກແລ້ວ}}"
 msgid "{selectedCount, plural, one {Bulk actions for # selected {entityName}} other {Bulk actions for # selected {manyName}}}"
 msgstr "{selectedCount, plural, other {ການດຳເນີນການເປັນກຸ່ມສຳລັບ {manyName} # ທີ່ເລືອກ}}"
 
+#: ../../../lib/web/src/components/ui/upload-progress.tsx:52
+msgid "{sentLabel} of {totalLabel}"
+msgstr "{sentLabel} ຈາກ {totalLabel}"
+
 #: src/features/chess/components/chat-message-list.tsx:224
 msgid "{subject} played <0>{san}</0>"
 msgstr "{subject} ຫຼິ້ນ <0>{san}</0>"
@@ -116,7 +120,7 @@ msgstr "{unreadCount, plural, other {ເປີດເມນູ (ການແຈ�
 #. placeholder {0}: countDeepChildren(object.id)
 #: ../../../lib/web/src/components/entity/entity-board-card.tsx:421
 msgid "+{0} nested"
-msgstr ""
+msgstr "+{0} ຊ້ອນກັນ"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
@@ -191,7 +195,7 @@ msgstr "ເພີ່ມບັນຊີເພື່ອຮັບການແຈ້
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:687
 msgid "Add checklist item"
-msgstr ""
+msgstr "ເພີ່ມລາຍການກວດສອບ"
 
 #: src/features/chess/components/new-game.tsx:121
 msgid "Add friends"
@@ -203,7 +207,7 @@ msgstr "ເພີ່ມເພື່ອນໃນແອັບ People ເພື່�
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:705
 msgid "Add item..."
-msgstr ""
+msgstr "ເພີ່ມລາຍການ..."
 
 #: ../../../lib/web/src/features/accounts/account-picker.tsx:102
 msgid "Add new account"
@@ -625,7 +629,7 @@ msgstr "ລົບເກມ"
 msgid "Delete game?"
 msgstr "ລົບເກມ?"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:99
+#: ../../../lib/web/src/components/restore-banner.tsx:115
 msgid "Delete your account on the old server"
 msgstr "ລຶບບັນຊີຂອງທ່ານໃນເຊີຟເວີເກົ່າ"
 
@@ -670,19 +674,19 @@ msgstr "ໄດເລກທໍຣີ"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:300
 msgid "Discard"
-msgstr ""
+msgstr "ຍົກເລີກ"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:298
 msgid "Discard draft?"
-msgstr ""
+msgstr "ຍົກເລີກສະບັບຮ່າງບໍ?"
 
 #: ../../../lib/web/src/lib/chat-ui.ts:25
 #: ../../../lib/web/src/lib/chat-ui.ts:29
 msgid "Disconnected"
 msgstr "ຕັດການເຊື່ອມຕໍ່ແລ້ວ"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:79
-#: ../../../lib/web/src/components/restore-banner.tsx:85
+#: ../../../lib/web/src/components/restore-banner.tsx:94
+#: ../../../lib/web/src/components/restore-banner.tsx:100
 msgid "Dismiss"
 msgstr "ປິດ"
 
@@ -828,7 +832,7 @@ msgstr "ອັບເດດໝວດໝູ່ລົ້ມເຫຼວ"
 msgid "Filter..."
 msgstr "ກັ່ນຕອງ..."
 
-#: ../../../lib/web/src/components/restore-banner.tsx:88
+#: ../../../lib/web/src/components/restore-banner.tsx:103
 msgid "Finish moving your account"
 msgstr "ສຳເລັດການຍ້າຍບັນຊີ"
 
@@ -958,7 +962,7 @@ msgstr "ຄວາມສົນໃຈ"
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:550
 msgid "Invalid date"
-msgstr ""
+msgstr "ວັນທີ່ບໍ່ຖືກຕ້ອງ"
 
 #: ../../../lib/web/src/components/tag-input.tsx:38
 msgid "Invalid tag: letters, numbers, spaces, hyphens, and slashes only (max 50 chars)"
@@ -1283,7 +1287,7 @@ msgstr "Passkey"
 msgid "Passkey verification failed. Please try again."
 msgstr "ການຢືນຢັນ passkey ລົ້ມເຫລວ. ກະລຸນາລອງອີກຄັ້ງ."
 
-#: ../../../lib/web/src/components/restore-banner.tsx:135
+#: ../../../lib/web/src/components/restore-banner.tsx:152
 msgid "Passkeys"
 msgstr "ກະແຈຜ່ານ"
 
@@ -1327,6 +1331,10 @@ msgstr "ຮູບກ່ອນໜ້າ"
 msgid "Privacy"
 msgstr "ຄວາມເປັນສ່ວນຕົວ"
 
+#: ../../../lib/web/src/components/ui/upload-progress.tsx:50
+msgid "Processing…"
+msgstr "ກຳລັງປະມວນຜົນ…"
+
 #: ../../../lib/web/src/components/layout/nav-user.tsx:137
 #: ../../../lib/web/src/components/profile-dropdown.tsx:114
 msgid "Profile"
@@ -1358,11 +1366,11 @@ msgstr "queen"
 msgid "Raised"
 msgstr "ຍົກສູງ"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:107
+#: ../../../lib/web/src/components/restore-banner.tsx:124
 msgid "Re-link your accounts on this server"
 msgstr "ເຊື່ອມໂຍງບັນຊີຂອງທ່ານຄືນໃໝ່ໃນເຊີຟເວີນີ້"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:129
+#: ../../../lib/web/src/components/restore-banner.tsx:146
 msgid "Re-register your passkeys on this server"
 msgstr "ລົງທະບຽນກະແຈຜ່ານຂອງທ່ານຄືນໃໝ່ໃນເຄື່ອງແມ່ຂ່າຍນີ້"
 
@@ -1429,7 +1437,7 @@ msgstr "ລຶບຄວາມສົນໃຈ"
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:671
 msgid "Remove item"
-msgstr ""
+msgstr "ລຶບລາຍການ"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:367
 msgid "Resend email"
@@ -1464,7 +1472,7 @@ msgstr "ກຳລັງຍອມແພ້..."
 
 #: ../../../lib/web/src/components/comment-composer.tsx:249
 msgid "Retry"
-msgstr ""
+msgstr "ລອງໃໝ່"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:362
 msgid "Right to Left"
@@ -1593,7 +1601,7 @@ msgstr "ເລືອກຄວາມຕ້ອງການຮູບແບບ"
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:252
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:335
 msgid "Select..."
-msgstr ""
+msgstr "ເລືອກ..."
 
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:216
 msgid "selected"
@@ -1886,6 +1894,10 @@ msgstr "ບໍ່ຮູ້ຈັກ"
 msgid "Unverified"
 msgstr "ບໍ່ໄດ້ຢືນຢັນ"
 
+#: ../../../lib/web/src/components/ui/upload-progress.tsx:34
+msgid "Upload progress"
+msgstr "ຄວາມຄືບໜ້າການອັບໂຫລດ"
+
 #: ../../../lib/web/src/components/step-up-dialog.tsx:338
 msgid "Use your passkey"
 msgstr "ໃຊ້ passkey ຂອງທ່ານ"
@@ -1996,18 +2008,18 @@ msgstr "ທ່ານໄດ້ສົ່ງຄ່າຕໍ່ໄປນີ້:"
 msgid "You're all caught up!"
 msgstr "ທ່ານເບິ່ງໝົດແລ້ວ!"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:91
+#: ../../../lib/web/src/components/restore-banner.tsx:106
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "ບັນຊີຂອງທ່ານໄດ້ຍ້າຍມາທີ່ນີ້ຈາກ {source}. ຈົນກວ່າທ່ານຈະລຶບມັນທີ່ນັ້ນ, ຂໍ້ຄວາມ ແລະ ການແຈ້ງເຕືອນອາດຈະໄປຮອດທັງສອງເຊີຟເວີ, ບາງເນື້ອຫາຂອງທ່ານຍັງຄົງໃຫ້ບໍລິການຈາກເຊີຟເວີເກົ່າ, ແລະ ຜູ້ຕິດຕາມອາດຈະໃຊ້ເວລາສອງສາມນາທີເພື່ອຊອກຫາທ່ານທີ່ນີ້."
 
 #: ../../../lib/web/src/components/comment-composer.tsx:291
 msgid "Your attachments will be lost."
-msgstr ""
+msgstr "ໄຟລ໌ແນບຂອງທ່ານຈະສູນຫາຍ."
 
 #: ../../../lib/web/src/components/comment-composer.tsx:289
 msgid "Your text and attachments will be lost."
-msgstr ""
+msgstr "ຂໍ້ຄວາມ ແລະໄຟລ໌ແນບຂອງທ່ານຈະສູນຫາຍ."
 
 #: ../../../lib/web/src/components/comment-composer.tsx:292
 msgid "Your text will be lost."
-msgstr ""
+msgstr "ຂໍ້ຄວາມຂອງເຈົ້າຈະຫາຍໄປ."

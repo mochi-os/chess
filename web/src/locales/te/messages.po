@@ -101,6 +101,10 @@ msgstr "{selectedCount, plural, one {# ఎంచుకోబడింది} oth
 msgid "{selectedCount, plural, one {Bulk actions for # selected {entityName}} other {Bulk actions for # selected {manyName}}}"
 msgstr "{selectedCount, plural, one {# ఎంచుకున్న {entityName} కోసం బల్క్ చర్యలు} other {# ఎంచుకున్న {manyName} కోసం బల్క్ చర్యలు}}"
 
+#: ../../../lib/web/src/components/ui/upload-progress.tsx:52
+msgid "{sentLabel} of {totalLabel}"
+msgstr "{totalLabel}లో {sentLabel}"
+
 #: src/features/chess/components/chat-message-list.tsx:224
 msgid "{subject} played <0>{san}</0>"
 msgstr "{subject} <0>{san}</0> ఆడారు"
@@ -116,7 +120,7 @@ msgstr "{unreadCount, plural, one {మెనూ తెరవండి (# చద�
 #. placeholder {0}: countDeepChildren(object.id)
 #: ../../../lib/web/src/components/entity/entity-board-card.tsx:421
 msgid "+{0} nested"
-msgstr ""
+msgstr "+{0} నెస్టెడ్"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
@@ -191,7 +195,7 @@ msgstr "నోటిఫికేషన్‌లను అందుకోవడ�
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:687
 msgid "Add checklist item"
-msgstr ""
+msgstr "చెక్‌లిస్ట్ ఐటెమ్‌ను జోడించండి"
 
 #: src/features/chess/components/new-game.tsx:121
 msgid "Add friends"
@@ -203,7 +207,7 @@ msgstr "ఆడటం ప్రారంభించడానికి People య
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:705
 msgid "Add item..."
-msgstr ""
+msgstr "ఐటెమ్‌ను జోడించండి..."
 
 #: ../../../lib/web/src/features/accounts/account-picker.tsx:102
 msgid "Add new account"
@@ -625,7 +629,7 @@ msgstr "ఆటను తొలగించండి"
 msgid "Delete game?"
 msgstr "గేమ్‌ను తొలగించాలా?"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:99
+#: ../../../lib/web/src/components/restore-banner.tsx:115
 msgid "Delete your account on the old server"
 msgstr "పాత సర్వర్‌లో మీ ఖాతాను తొలగించండి"
 
@@ -670,19 +674,19 @@ msgstr "డైరెక్టరీ"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:300
 msgid "Discard"
-msgstr ""
+msgstr "విస్మరించు"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:298
 msgid "Discard draft?"
-msgstr ""
+msgstr "డ్రాఫ్ట్‌ను విస్మరించాలా?"
 
 #: ../../../lib/web/src/lib/chat-ui.ts:25
 #: ../../../lib/web/src/lib/chat-ui.ts:29
 msgid "Disconnected"
 msgstr "డిస్‌కనెక్ట్ అయింది"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:79
-#: ../../../lib/web/src/components/restore-banner.tsx:85
+#: ../../../lib/web/src/components/restore-banner.tsx:94
+#: ../../../lib/web/src/components/restore-banner.tsx:100
 msgid "Dismiss"
 msgstr "విస్మరించండి"
 
@@ -828,7 +832,7 @@ msgstr "విభాగాన్ని నవీకరించడంలో వ�
 msgid "Filter..."
 msgstr "ఫిల్టర్..."
 
-#: ../../../lib/web/src/components/restore-banner.tsx:88
+#: ../../../lib/web/src/components/restore-banner.tsx:103
 msgid "Finish moving your account"
 msgstr "మీ ఖాతా తరలింపు పూర్తి చేయండి"
 
@@ -958,7 +962,7 @@ msgstr "ఆసక్తులు"
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:550
 msgid "Invalid date"
-msgstr ""
+msgstr "చెల్లని తేదీ"
 
 #: ../../../lib/web/src/components/tag-input.tsx:38
 msgid "Invalid tag: letters, numbers, spaces, hyphens, and slashes only (max 50 chars)"
@@ -1283,7 +1287,7 @@ msgstr "పాస్‌కీ"
 msgid "Passkey verification failed. Please try again."
 msgstr "పాస్‌కీ ధృవీకరణ విఫలమైంది. దయచేసి మళ్లీ ప్రయత్నించండి."
 
-#: ../../../lib/web/src/components/restore-banner.tsx:135
+#: ../../../lib/web/src/components/restore-banner.tsx:152
 msgid "Passkeys"
 msgstr "పాస్‌కీలు"
 
@@ -1327,6 +1331,10 @@ msgstr "మునుపటి చిత్రం"
 msgid "Privacy"
 msgstr "గోప్యత"
 
+#: ../../../lib/web/src/components/ui/upload-progress.tsx:50
+msgid "Processing…"
+msgstr "ప్రాసెస్ అవుతోంది…"
+
 #: ../../../lib/web/src/components/layout/nav-user.tsx:137
 #: ../../../lib/web/src/components/profile-dropdown.tsx:114
 msgid "Profile"
@@ -1358,11 +1366,11 @@ msgstr "మంత్రి"
 msgid "Raised"
 msgstr "ఎత్తైనది"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:107
+#: ../../../lib/web/src/components/restore-banner.tsx:124
 msgid "Re-link your accounts on this server"
 msgstr "ఈ సర్వర్‌లో మీ ఖాతాలను మళ్ళీ లింక్ చేయండి"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:129
+#: ../../../lib/web/src/components/restore-banner.tsx:146
 msgid "Re-register your passkeys on this server"
 msgstr "ఈ సర్వర్‌లో మీ పాస్‌కీలను మళ్లీ నమోదు చేయండి"
 
@@ -1429,7 +1437,7 @@ msgstr "ఆసక్తిని తొలగించండి"
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:671
 msgid "Remove item"
-msgstr ""
+msgstr "ఐటెంను తొలగించండి"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:367
 msgid "Resend email"
@@ -1464,7 +1472,7 @@ msgstr "రిజైన్ చేస్తోంది..."
 
 #: ../../../lib/web/src/components/comment-composer.tsx:249
 msgid "Retry"
-msgstr ""
+msgstr "మళ్లీ ప్రయత్నించండి"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:362
 msgid "Right to Left"
@@ -1593,7 +1601,7 @@ msgstr "థీమ్ ప్రాధాన్యతను ఎంచుకోం�
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:252
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:335
 msgid "Select..."
-msgstr ""
+msgstr "ఎంచుకోండి..."
 
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:216
 msgid "selected"
@@ -1886,6 +1894,10 @@ msgstr "తెలియదు"
 msgid "Unverified"
 msgstr "ధృవీకరించబడలేదు"
 
+#: ../../../lib/web/src/components/ui/upload-progress.tsx:34
+msgid "Upload progress"
+msgstr "అప్‌లోడ్ పురోగతి"
+
 #: ../../../lib/web/src/components/step-up-dialog.tsx:338
 msgid "Use your passkey"
 msgstr "మీ పాస్‌కీని ఉపయోగించండి"
@@ -1996,18 +2008,18 @@ msgstr "మీరు కింది విలువలను సమర్పి
 msgid "You're all caught up!"
 msgstr "మీరు అన్నీ చూశారు!"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:91
+#: ../../../lib/web/src/components/restore-banner.tsx:106
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "మీ ఖాతా {source} నుండి ఇక్కడికి తరలించబడింది. మీరు అక్కడ దాన్ని తొలగించే వరకు, సందేశాలు మరియు నోటిఫికేషన్లు రెండు సర్వర్లకు చేరవచ్చు, మీ కొంత కంటెంట్ పాత సర్వర్ నుండి అందించబడుతూ ఉంటుంది, మరియు ఫాలోవర్లు మిమ్మల్ని ఇక్కడ కనుగొనడానికి కొన్ని నిమిషాలు పట్టవచ్చు."
 
 #: ../../../lib/web/src/components/comment-composer.tsx:291
 msgid "Your attachments will be lost."
-msgstr ""
+msgstr "మీ జోడింపులు పోతాయి."
 
 #: ../../../lib/web/src/components/comment-composer.tsx:289
 msgid "Your text and attachments will be lost."
-msgstr ""
+msgstr "మీ వచనం మరియు జోడింపులు పోతాయి."
 
 #: ../../../lib/web/src/components/comment-composer.tsx:292
 msgid "Your text will be lost."
-msgstr ""
+msgstr "మీ వచనం పోతుంది."

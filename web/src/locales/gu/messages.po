@@ -101,6 +101,10 @@ msgstr "{selectedCount, plural, one {# પસંદ કરેલ} other {# પ�
 msgid "{selectedCount, plural, one {Bulk actions for # selected {entityName}} other {Bulk actions for # selected {manyName}}}"
 msgstr "{selectedCount, plural, one {# પસંદ કરેલ {entityName} માટે બલ્ક ક્રિયાઓ} other {# પસંદ કરેલ {manyName} માટે બલ્ક ક્રિયાઓ}}"
 
+#: ../../../lib/web/src/components/ui/upload-progress.tsx:52
+msgid "{sentLabel} of {totalLabel}"
+msgstr "{totalLabel}માંથી {sentLabel}"
+
 #: src/features/chess/components/chat-message-list.tsx:224
 msgid "{subject} played <0>{san}</0>"
 msgstr "{subject}એ <0>{san}</0> રમ્યું"
@@ -116,7 +120,7 @@ msgstr "{unreadCount, plural, one {મેનૂ ખોલો (# વણવાં�
 #. placeholder {0}: countDeepChildren(object.id)
 #: ../../../lib/web/src/components/entity/entity-board-card.tsx:421
 msgid "+{0} nested"
-msgstr ""
+msgstr "+{0} નેસ્ટેડ"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
@@ -191,7 +195,7 @@ msgstr "સૂચનાઓ મેળવવા અને સેવાઓનો �
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:687
 msgid "Add checklist item"
-msgstr ""
+msgstr "ચેકલિસ્ટ આઇટમ ઉમેરો"
 
 #: src/features/chess/components/new-game.tsx:121
 msgid "Add friends"
@@ -203,7 +207,7 @@ msgstr "રમવાનું શરૂ કરવા People એપ્લિક�
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:705
 msgid "Add item..."
-msgstr ""
+msgstr "આઇટમ ઉમેરો..."
 
 #: ../../../lib/web/src/features/accounts/account-picker.tsx:102
 msgid "Add new account"
@@ -625,7 +629,7 @@ msgstr "રમત કાઢી નાખો"
 msgid "Delete game?"
 msgstr "ગેમ કાઢી નાખવી છે?"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:99
+#: ../../../lib/web/src/components/restore-banner.tsx:115
 msgid "Delete your account on the old server"
 msgstr "જૂના સર્વર પર તમારું ખાતું કાઢી નાખો"
 
@@ -670,19 +674,19 @@ msgstr "નિર્દેશિકા"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:300
 msgid "Discard"
-msgstr ""
+msgstr "રદ કરો"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:298
 msgid "Discard draft?"
-msgstr ""
+msgstr "ડ્રાફ્ટ રદ કરવો?"
 
 #: ../../../lib/web/src/lib/chat-ui.ts:25
 #: ../../../lib/web/src/lib/chat-ui.ts:29
 msgid "Disconnected"
 msgstr "ડિસ્કનેક્ટેડ"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:79
-#: ../../../lib/web/src/components/restore-banner.tsx:85
+#: ../../../lib/web/src/components/restore-banner.tsx:94
+#: ../../../lib/web/src/components/restore-banner.tsx:100
 msgid "Dismiss"
 msgstr "રદ કરો"
 
@@ -828,7 +832,7 @@ msgstr "કેટેગરી અપડેટ કરવામાં નિષ્
 msgid "Filter..."
 msgstr "ફિલ્ટર..."
 
-#: ../../../lib/web/src/components/restore-banner.tsx:88
+#: ../../../lib/web/src/components/restore-banner.tsx:103
 msgid "Finish moving your account"
 msgstr "તમારું ખાતું ખસેડવાનું પૂર્ણ કરો"
 
@@ -958,7 +962,7 @@ msgstr "રુચિઓ"
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:550
 msgid "Invalid date"
-msgstr ""
+msgstr "અમાન્ય તારીખ"
 
 #: ../../../lib/web/src/components/tag-input.tsx:38
 msgid "Invalid tag: letters, numbers, spaces, hyphens, and slashes only (max 50 chars)"
@@ -1283,7 +1287,7 @@ msgstr "પાસકી"
 msgid "Passkey verification failed. Please try again."
 msgstr "પાસકી ચકાસણી નિષ્ફળ ગઈ. કૃપા કરીને ફરી પ્રયાસ કરો."
 
-#: ../../../lib/web/src/components/restore-banner.tsx:135
+#: ../../../lib/web/src/components/restore-banner.tsx:152
 msgid "Passkeys"
 msgstr "પાસકીઝ"
 
@@ -1327,6 +1331,10 @@ msgstr "પાછળની છબી"
 msgid "Privacy"
 msgstr "ગોપનીયતા"
 
+#: ../../../lib/web/src/components/ui/upload-progress.tsx:50
+msgid "Processing…"
+msgstr "પ્રક્રિયા થઈ રહી છે…"
+
 #: ../../../lib/web/src/components/layout/nav-user.tsx:137
 #: ../../../lib/web/src/components/profile-dropdown.tsx:114
 msgid "Profile"
@@ -1358,11 +1366,11 @@ msgstr "વજીર"
 msgid "Raised"
 msgstr "ઊંચું"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:107
+#: ../../../lib/web/src/components/restore-banner.tsx:124
 msgid "Re-link your accounts on this server"
 msgstr "આ સર્વર પર તમારા ખાતાઓ ફરીથી જોડો"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:129
+#: ../../../lib/web/src/components/restore-banner.tsx:146
 msgid "Re-register your passkeys on this server"
 msgstr "આ સર્વર પર તમારી પાસકી ફરીથી નોંધણી કરો"
 
@@ -1429,7 +1437,7 @@ msgstr "રસ દૂર કરો"
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:671
 msgid "Remove item"
-msgstr ""
+msgstr "આઇટમ દૂર કરો"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:367
 msgid "Resend email"
@@ -1464,7 +1472,7 @@ msgstr "રિઝાઇન કરી રહ્યું છે..."
 
 #: ../../../lib/web/src/components/comment-composer.tsx:249
 msgid "Retry"
-msgstr ""
+msgstr "ફરી પ્રયાસ કરો"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:362
 msgid "Right to Left"
@@ -1593,7 +1601,7 @@ msgstr "થીમ પસંદગી પસંદ કરો"
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:252
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:335
 msgid "Select..."
-msgstr ""
+msgstr "પસંદ કરો..."
 
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:216
 msgid "selected"
@@ -1886,6 +1894,10 @@ msgstr "અજાણ્યું"
 msgid "Unverified"
 msgstr "અપ્રમાણિત"
 
+#: ../../../lib/web/src/components/ui/upload-progress.tsx:34
+msgid "Upload progress"
+msgstr "અપલોડ પ્રગતિ"
+
 #: ../../../lib/web/src/components/step-up-dialog.tsx:338
 msgid "Use your passkey"
 msgstr "તમારી પાસકીનો ઉપયોગ કરો"
@@ -1996,18 +2008,18 @@ msgstr "તમે નીચેના મૂલ્યો સબમિટ કર�
 msgid "You're all caught up!"
 msgstr "તમે બધું જોઈ લીધું!"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:91
+#: ../../../lib/web/src/components/restore-banner.tsx:106
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "તમારું ખાતું {source} પરથી અહીં ખસેડવામાં આવ્યું. જ્યાં સુધી તમે ત્યાં તેને કાઢી ન નાખો, સંદેશા અને સૂચનાઓ બંને સર્વર સુધી પહોંચી શકે, કેટલીક સામગ્રી જૂના સર્વરથી પ્રદાન કરાતી રહે, અને ફૉલોઅર્સ ને તમને અહીં શોધવામાં થોડી મિનિટ લાગી શકે."
 
 #: ../../../lib/web/src/components/comment-composer.tsx:291
 msgid "Your attachments will be lost."
-msgstr ""
+msgstr "તમારા જોડાણો ખોવાઈ જશે."
 
 #: ../../../lib/web/src/components/comment-composer.tsx:289
 msgid "Your text and attachments will be lost."
-msgstr ""
+msgstr "તમારું લખાણ અને જોડાણો ખોવાઈ જશે."
 
 #: ../../../lib/web/src/components/comment-composer.tsx:292
 msgid "Your text will be lost."
-msgstr ""
+msgstr "તમારું લખાણ ખોવાઈ જશે."

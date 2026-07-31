@@ -101,6 +101,10 @@ msgstr "{selectedCount, plural, one {# منتخب} other {# منتخب}}"
 msgid "{selectedCount, plural, one {Bulk actions for # selected {entityName}} other {Bulk actions for # selected {manyName}}}"
 msgstr "{selectedCount, plural, one {# منتخب {entityName} کے لیے بلک کارروائیاں} other {# منتخب {manyName} کے لیے بلک کارروائیاں}}"
 
+#: ../../../lib/web/src/components/ui/upload-progress.tsx:52
+msgid "{sentLabel} of {totalLabel}"
+msgstr "{totalLabel} میں سے {sentLabel}"
+
 #: src/features/chess/components/chat-message-list.tsx:224
 msgid "{subject} played <0>{san}</0>"
 msgstr "{subject} نے <0>{san}</0> کھیلا"
@@ -116,7 +120,7 @@ msgstr "{unreadCount, plural, one {مینو کھولیں (# غیر پڑھی اط
 #. placeholder {0}: countDeepChildren(object.id)
 #: ../../../lib/web/src/components/entity/entity-board-card.tsx:421
 msgid "+{0} nested"
-msgstr ""
+msgstr "+{0} نیسٹڈ"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
@@ -191,7 +195,7 @@ msgstr "نوٹیفکیشنز وصول کرنے اور سروسز استعمال 
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:687
 msgid "Add checklist item"
-msgstr ""
+msgstr "چیک لسٹ آئٹم شامل کریں"
 
 #: src/features/chess/components/new-game.tsx:121
 msgid "Add friends"
@@ -203,7 +207,7 @@ msgstr "کھیلنا شروع کرنے کے لیے People ایپ میں دوست
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:705
 msgid "Add item..."
-msgstr ""
+msgstr "آئٹم شامل کریں..."
 
 #: ../../../lib/web/src/features/accounts/account-picker.tsx:102
 msgid "Add new account"
@@ -625,7 +629,7 @@ msgstr "گیم حذف کریں"
 msgid "Delete game?"
 msgstr "گیم حذف کریں؟"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:99
+#: ../../../lib/web/src/components/restore-banner.tsx:115
 msgid "Delete your account on the old server"
 msgstr "پرانے سرور پر اپنا اکاؤنٹ حذف کریں"
 
@@ -670,19 +674,19 @@ msgstr "ڈائریکٹری"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:300
 msgid "Discard"
-msgstr ""
+msgstr "رد کریں"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:298
 msgid "Discard draft?"
-msgstr ""
+msgstr "مسودہ رد کریں؟"
 
 #: ../../../lib/web/src/lib/chat-ui.ts:25
 #: ../../../lib/web/src/lib/chat-ui.ts:29
 msgid "Disconnected"
 msgstr "منقطع"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:79
-#: ../../../lib/web/src/components/restore-banner.tsx:85
+#: ../../../lib/web/src/components/restore-banner.tsx:94
+#: ../../../lib/web/src/components/restore-banner.tsx:100
 msgid "Dismiss"
 msgstr "برخاست کریں"
 
@@ -828,7 +832,7 @@ msgstr "زمرہ اپڈیٹ کرنے میں ناکامی"
 msgid "Filter..."
 msgstr "فلٹر..."
 
-#: ../../../lib/web/src/components/restore-banner.tsx:88
+#: ../../../lib/web/src/components/restore-banner.tsx:103
 msgid "Finish moving your account"
 msgstr "اپنا اکاؤنٹ منتقل کرنا مکمل کریں"
 
@@ -958,7 +962,7 @@ msgstr "دلچسپیاں"
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:550
 msgid "Invalid date"
-msgstr ""
+msgstr "غلط تاریخ"
 
 #: ../../../lib/web/src/components/tag-input.tsx:38
 msgid "Invalid tag: letters, numbers, spaces, hyphens, and slashes only (max 50 chars)"
@@ -1283,7 +1287,7 @@ msgstr "passkey"
 msgid "Passkey verification failed. Please try again."
 msgstr "پاس کی کی تصدیق ناکام ہو گئی۔ براہ کرم دوبارہ کوشش کریں۔"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:135
+#: ../../../lib/web/src/components/restore-banner.tsx:152
 msgid "Passkeys"
 msgstr "passkeys"
 
@@ -1327,6 +1331,10 @@ msgstr "پچھلی تصویر"
 msgid "Privacy"
 msgstr "پرائیویسی"
 
+#: ../../../lib/web/src/components/ui/upload-progress.tsx:50
+msgid "Processing…"
+msgstr "پروسیس ہو رہا ہے…"
+
 #: ../../../lib/web/src/components/layout/nav-user.tsx:137
 #: ../../../lib/web/src/components/profile-dropdown.tsx:114
 msgid "Profile"
@@ -1358,11 +1366,11 @@ msgstr "وزیر"
 msgid "Raised"
 msgstr "ابھرا ہوا"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:107
+#: ../../../lib/web/src/components/restore-banner.tsx:124
 msgid "Re-link your accounts on this server"
 msgstr "اس سرور پر اپنے اکاؤنٹس دوبارہ لنک کریں"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:129
+#: ../../../lib/web/src/components/restore-banner.tsx:146
 msgid "Re-register your passkeys on this server"
 msgstr "اس سرور پر اپنی پاس کیز دوبارہ رجسٹر کریں"
 
@@ -1429,7 +1437,7 @@ msgstr "دلچسپی ہٹائیں"
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:671
 msgid "Remove item"
-msgstr ""
+msgstr "item ہٹائیں"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:367
 msgid "Resend email"
@@ -1464,7 +1472,7 @@ msgstr "resign ہو رہا ہے..."
 
 #: ../../../lib/web/src/components/comment-composer.tsx:249
 msgid "Retry"
-msgstr ""
+msgstr "دوبارہ کوشش کریں"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:362
 msgid "Right to Left"
@@ -1593,7 +1601,7 @@ msgstr "تھیم کی ترجیح منتخب کریں"
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:252
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:335
 msgid "Select..."
-msgstr ""
+msgstr "منتخب کریں..."
 
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:216
 msgid "selected"
@@ -1886,6 +1894,10 @@ msgstr "نامعلوم"
 msgid "Unverified"
 msgstr "غیر تصدیق شدہ"
 
+#: ../../../lib/web/src/components/ui/upload-progress.tsx:34
+msgid "Upload progress"
+msgstr "اپ لوڈ کی پیش رفت"
+
 #: ../../../lib/web/src/components/step-up-dialog.tsx:338
 msgid "Use your passkey"
 msgstr "اپنی پاس کی استعمال کریں"
@@ -1996,18 +2008,18 @@ msgstr "آپ نے درج ذیل اقدار جمع کیں:"
 msgid "You're all caught up!"
 msgstr "آپ نے سب دیکھ لیا!"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:91
+#: ../../../lib/web/src/components/restore-banner.tsx:106
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "آپ کا اکاؤنٹ {source} سے یہاں منتقل کر دیا گیا ہے۔ جب تک آپ اسے وہاں سے حذف نہیں کرتے، پیغامات اور اطلاعات دونوں سرورز تک پہنچ سکتی ہیں، آپ کے کچھ مواد پرانے سرور سے فراہم ہوتے رہیں گے، اور فالوورز کو آپ کو یہاں تلاش کرنے میں چند منٹ لگ سکتے ہیں۔"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:291
 msgid "Your attachments will be lost."
-msgstr ""
+msgstr "آپ کے منسلکات ضائع ہو جائیں گے۔"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:289
 msgid "Your text and attachments will be lost."
-msgstr ""
+msgstr "آپ کا متن اور منسلکات ضائع ہو جائیں گے۔"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:292
 msgid "Your text will be lost."
-msgstr ""
+msgstr "آپ کا متن ضائع ہو جائے گا۔"

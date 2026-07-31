@@ -101,6 +101,10 @@ msgstr "{selectedCount, plural, one {# ਚੁਣੇ ਗਏ} other {# ਚੁਣ�
 msgid "{selectedCount, plural, one {Bulk actions for # selected {entityName}} other {Bulk actions for # selected {manyName}}}"
 msgstr "{selectedCount, plural, one {# ਚੁਣੇ {entityName} ਲਈ ਬਲਕ ਕਾਰਵਾਈਆਂ} other {# ਚੁਣੇ {manyName} ਲਈ ਬਲਕ ਕਾਰਵਾਈਆਂ}}"
 
+#: ../../../lib/web/src/components/ui/upload-progress.tsx:52
+msgid "{sentLabel} of {totalLabel}"
+msgstr "{totalLabel} ਵਿੱਚੋਂ {sentLabel}"
+
 #: src/features/chess/components/chat-message-list.tsx:224
 msgid "{subject} played <0>{san}</0>"
 msgstr "{subject} ਨੇ <0>{san}</0> ਖੇਡਿਆ"
@@ -116,7 +120,7 @@ msgstr "{unreadCount, plural, one {ਮੀਨੂ ਖੋਲ੍ਹੋ (# ਅਣਪ�
 #. placeholder {0}: countDeepChildren(object.id)
 #: ../../../lib/web/src/components/entity/entity-board-card.tsx:421
 msgid "+{0} nested"
-msgstr ""
+msgstr "+{0} ਨੇਸਟਡ"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
@@ -191,7 +195,7 @@ msgstr "ਨੋਟੀਫਿਕੇਸ਼ਨਾਂ ਪ੍ਰਾਪਤ ਕਰਨ ਅ
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:687
 msgid "Add checklist item"
-msgstr ""
+msgstr "ਚੈੱਕਲਿਸਟ ਆਈਟਮ ਜੋੜੋ"
 
 #: src/features/chess/components/new-game.tsx:121
 msgid "Add friends"
@@ -203,7 +207,7 @@ msgstr "ਖੇਡਣਾ ਸ਼ੁਰੂ ਕਰਨ ਲਈ People ਐਪ ਵਿੱ
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:705
 msgid "Add item..."
-msgstr ""
+msgstr "ਆਈਟਮ ਜੋੜੋ..."
 
 #: ../../../lib/web/src/features/accounts/account-picker.tsx:102
 msgid "Add new account"
@@ -625,7 +629,7 @@ msgstr "ਖੇਡ ਮਿਟਾਓ"
 msgid "Delete game?"
 msgstr "ਗੇਮ ਮਿਟਾਈਏ?"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:99
+#: ../../../lib/web/src/components/restore-banner.tsx:115
 msgid "Delete your account on the old server"
 msgstr "ਪੁਰਾਣੇ ਸਰਵਰ 'ਤੇ ਆਪਣਾ ਖਾਤਾ ਮਿਟਾਓ"
 
@@ -670,19 +674,19 @@ msgstr "ਡਾਇਰੈਕਟਰੀ"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:300
 msgid "Discard"
-msgstr ""
+msgstr "ਰੱਦ ਕਰੋ"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:298
 msgid "Discard draft?"
-msgstr ""
+msgstr "ਡਰਾਫਟ ਰੱਦ ਕਰਨਾ ਹੈ?"
 
 #: ../../../lib/web/src/lib/chat-ui.ts:25
 #: ../../../lib/web/src/lib/chat-ui.ts:29
 msgid "Disconnected"
 msgstr "ਡਿਸਕਨੈਕਟ ਹੋ ਗਿਆ"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:79
-#: ../../../lib/web/src/components/restore-banner.tsx:85
+#: ../../../lib/web/src/components/restore-banner.tsx:94
+#: ../../../lib/web/src/components/restore-banner.tsx:100
 msgid "Dismiss"
 msgstr "ਖਾਰਜ ਕਰੋ"
 
@@ -828,7 +832,7 @@ msgstr "ਸ਼੍ਰੇਣੀ ਅੱਪਡੇਟ ਕਰਨ ਵਿੱਚ ਅਸ�
 msgid "Filter..."
 msgstr "ਫਿਲਟਰ..."
 
-#: ../../../lib/web/src/components/restore-banner.tsx:88
+#: ../../../lib/web/src/components/restore-banner.tsx:103
 msgid "Finish moving your account"
 msgstr "ਆਪਣਾ ਖਾਤਾ ਬਦਲਣਾ ਪੂਰਾ ਕਰੋ"
 
@@ -958,7 +962,7 @@ msgstr "ਦਿਲਚਸਪੀਆਂ"
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:550
 msgid "Invalid date"
-msgstr ""
+msgstr "ਅਯੋਗ ਮਿਤੀ"
 
 #: ../../../lib/web/src/components/tag-input.tsx:38
 msgid "Invalid tag: letters, numbers, spaces, hyphens, and slashes only (max 50 chars)"
@@ -1283,7 +1287,7 @@ msgstr "ਪਾਸਕੀ"
 msgid "Passkey verification failed. Please try again."
 msgstr "ਪਾਸਕੀ ਤਸਦੀਕ ਅਸਫਲ ਰਹੀ। ਕਿਰਪਾ ਕਰਕੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:135
+#: ../../../lib/web/src/components/restore-banner.tsx:152
 msgid "Passkeys"
 msgstr "ਪਾਸਕੀਆਂ"
 
@@ -1327,6 +1331,10 @@ msgstr "ਪਿਛਲੀ ਤਸਵੀਰ"
 msgid "Privacy"
 msgstr "ਪ੍ਰਾਈਵੇਸੀ"
 
+#: ../../../lib/web/src/components/ui/upload-progress.tsx:50
+msgid "Processing…"
+msgstr "ਪ੍ਰਕਿਰਿਆ ਜਾਰੀ ਹੈ…"
+
 #: ../../../lib/web/src/components/layout/nav-user.tsx:137
 #: ../../../lib/web/src/components/profile-dropdown.tsx:114
 msgid "Profile"
@@ -1358,11 +1366,11 @@ msgstr "ਵਜ਼ੀਰ"
 msgid "Raised"
 msgstr "ਉੱਚਾ"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:107
+#: ../../../lib/web/src/components/restore-banner.tsx:124
 msgid "Re-link your accounts on this server"
 msgstr "ਇਸ ਸਰਵਰ 'ਤੇ ਆਪਣੇ ਖਾਤੇ ਮੁੜ-ਲਿੰਕ ਕਰੋ"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:129
+#: ../../../lib/web/src/components/restore-banner.tsx:146
 msgid "Re-register your passkeys on this server"
 msgstr "ਇਸ ਸਰਵਰ 'ਤੇ ਆਪਣੀਆਂ ਪਾਸਕੀਆਂ ਮੁੜ-ਰਜਿਸਟਰ ਕਰੋ"
 
@@ -1429,7 +1437,7 @@ msgstr "ਦਿਲਚਸਪੀ ਹਟਾਓ"
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:671
 msgid "Remove item"
-msgstr ""
+msgstr "ਆਈਟਮ ਹਟਾਓ"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:367
 msgid "Resend email"
@@ -1464,7 +1472,7 @@ msgstr "ਅਸਤੀਫ਼ਾ ਦੇ ਰਿਹਾ ਹੈ..."
 
 #: ../../../lib/web/src/components/comment-composer.tsx:249
 msgid "Retry"
-msgstr ""
+msgstr "ਮੁੜ ਕੋਸ਼ਿਸ਼ ਕਰੋ"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:362
 msgid "Right to Left"
@@ -1593,7 +1601,7 @@ msgstr "theme ਪਸੰਦ ਚੁਣੋ"
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:252
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:335
 msgid "Select..."
-msgstr ""
+msgstr "ਚੁਣੋ..."
 
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:216
 msgid "selected"
@@ -1886,6 +1894,10 @@ msgstr "ਅਣਜਾਣ"
 msgid "Unverified"
 msgstr "ਅਪ੍ਰਮਾਣਿਤ"
 
+#: ../../../lib/web/src/components/ui/upload-progress.tsx:34
+msgid "Upload progress"
+msgstr "ਅੱਪਲੋਡ ਪ੍ਰਗਤੀ"
+
 #: ../../../lib/web/src/components/step-up-dialog.tsx:338
 msgid "Use your passkey"
 msgstr "ਆਪਣੀ ਪਾਸਕੀ ਵਰਤੋ"
@@ -1996,18 +2008,18 @@ msgstr "ਤੁਸੀਂ ਹੇਠ ਲਿਖੇ ਮੁੱਲ ਭੇਜੇ:"
 msgid "You're all caught up!"
 msgstr "ਤੁਸੀਂ ਸਭ ਕੁਝ ਵੇਖ ਲਿਆ!"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:91
+#: ../../../lib/web/src/components/restore-banner.tsx:106
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "ਤੁਹਾਡਾ ਖਾਤਾ {source} ਤੋਂ ਇੱਥੇ ਲਿਆਂਦਾ ਗਿਆ। ਜਦੋਂ ਤੱਕ ਤੁਸੀਂ ਉੱਥੇ ਇਸਨੂੰ ਮਿਟਾ ਨਹੀਂ ਲੈਂਦੇ, ਸੁਨੇਹੇ ਅਤੇ ਸੂਚਨਾਵਾਂ ਦੋਵੇਂ ਸਰਵਰਾਂ ਤੱਕ ਪਹੁੰਚ ਸਕਦੀਆਂ ਹਨ, ਕੁਝ ਸਮੱਗਰੀ ਪੁਰਾਣੇ ਸਰਵਰ ਤੋਂ ਪਰੋਸੀ ਜਾਂਦੀ ਰਹੇਗੀ, ਅਤੇ ਫ਼ੋਲੋਅਰਾਂ ਨੂੰ ਤੁਹਾਨੂੰ ਇੱਥੇ ਲੱਭਣ ਵਿੱਚ ਕੁਝ ਮਿੰਟ ਲੱਗ ਸਕਦੇ ਹਨ।"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:291
 msgid "Your attachments will be lost."
-msgstr ""
+msgstr "ਤੁਹਾਡੇ ਅਟੈਚਮੈਂਟ ਗੁੰਮ ਹੋ ਜਾਣਗੇ।"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:289
 msgid "Your text and attachments will be lost."
-msgstr ""
+msgstr "ਤੁਹਾਡਾ ਟੈਕਸਟ ਅਤੇ ਅਟੈਚਮੈਂਟ ਗੁੰਮ ਹੋ ਜਾਣਗੇ।"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:292
 msgid "Your text will be lost."
-msgstr ""
+msgstr "ਤੁਹਾਡਾ ਟੈਕਸਟ ਗੁੰਮ ਹੋ ਜਾਵੇਗਾ।"

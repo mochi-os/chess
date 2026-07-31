@@ -101,6 +101,10 @@ msgstr "{selectedCount, plural, one {# roghnaithe} two {# roghnaithe} few {# rog
 msgid "{selectedCount, plural, one {Bulk actions for # selected {entityName}} other {Bulk actions for # selected {manyName}}}"
 msgstr "{selectedCount, plural, one {Gníomhartha ollmhóra le haghaidh # {entityName} roghnaithe} two {Gníomhartha ollmhóra le haghaidh # {manyName} roghnaithe} few {Gníomhartha ollmhóra le haghaidh # {manyName} roghnaithe} many {Gníomhartha ollmhóra le haghaidh # {manyName} roghnaithe} other {Gníomhartha ollmhóra le haghaidh # {manyName} roghnaithe}}"
 
+#: ../../../lib/web/src/components/ui/upload-progress.tsx:52
+msgid "{sentLabel} of {totalLabel}"
+msgstr "{sentLabel} as {totalLabel}"
+
 #: src/features/chess/components/chat-message-list.tsx:224
 msgid "{subject} played <0>{san}</0>"
 msgstr "Sheinn {subject} <0>{san}</0>"
@@ -116,7 +120,7 @@ msgstr "{unreadCount, plural, one {Oscail an roghchlár (# fhógra gan léamh)} 
 #. placeholder {0}: countDeepChildren(object.id)
 #: ../../../lib/web/src/components/entity/entity-board-card.tsx:421
 msgid "+{0} nested"
-msgstr ""
+msgstr "+{0} neadaithe"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:42
 msgid "12 hours"
@@ -191,7 +195,7 @@ msgstr "Cuir cuntas leis chun fógraí a fháil agus seirbhísí a úsáid."
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:687
 msgid "Add checklist item"
-msgstr ""
+msgstr "Cuir mír seicliosta leis"
 
 #: src/features/chess/components/new-game.tsx:121
 msgid "Add friends"
@@ -203,7 +207,7 @@ msgstr "Cuir cairde leis san aip Daoine chun tosú ag imirt"
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:705
 msgid "Add item..."
-msgstr ""
+msgstr "Cuir mír leis..."
 
 #: ../../../lib/web/src/features/accounts/account-picker.tsx:102
 msgid "Add new account"
@@ -625,7 +629,7 @@ msgstr "Scrios cluiche"
 msgid "Delete game?"
 msgstr "Scrios an cluiche?"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:99
+#: ../../../lib/web/src/components/restore-banner.tsx:115
 msgid "Delete your account on the old server"
 msgstr "Scrios do chuntas ar an sean-fhreastalaí"
 
@@ -670,19 +674,19 @@ msgstr "Eolaire"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:300
 msgid "Discard"
-msgstr ""
+msgstr "Cuir i leataobh"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:298
 msgid "Discard draft?"
-msgstr ""
+msgstr "An gcuirfear an dréacht i leataobh?"
 
 #: ../../../lib/web/src/lib/chat-ui.ts:25
 #: ../../../lib/web/src/lib/chat-ui.ts:29
 msgid "Disconnected"
 msgstr "Dícheangailte"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:79
-#: ../../../lib/web/src/components/restore-banner.tsx:85
+#: ../../../lib/web/src/components/restore-banner.tsx:94
+#: ../../../lib/web/src/components/restore-banner.tsx:100
 msgid "Dismiss"
 msgstr "Dífhostaigh"
 
@@ -828,7 +832,7 @@ msgstr "Theip ar nuashonrú catagóire"
 msgid "Filter..."
 msgstr "Scag..."
 
-#: ../../../lib/web/src/components/restore-banner.tsx:88
+#: ../../../lib/web/src/components/restore-banner.tsx:103
 msgid "Finish moving your account"
 msgstr "Críochnaigh aistriú do chuntas"
 
@@ -958,7 +962,7 @@ msgstr "Suimeanna"
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:550
 msgid "Invalid date"
-msgstr ""
+msgstr "Dáta neamhbhailí"
 
 #: ../../../lib/web/src/components/tag-input.tsx:38
 msgid "Invalid tag: letters, numbers, spaces, hyphens, and slashes only (max 50 chars)"
@@ -1283,7 +1287,7 @@ msgstr "Pasluiche"
 msgid "Passkey verification failed. Please try again."
 msgstr "Theip ar fhíorú na heochrach rochtana. Bain triail eile as."
 
-#: ../../../lib/web/src/components/restore-banner.tsx:135
+#: ../../../lib/web/src/components/restore-banner.tsx:152
 msgid "Passkeys"
 msgstr "Pasluichí"
 
@@ -1327,6 +1331,10 @@ msgstr "Íomhá roimhe seo"
 msgid "Privacy"
 msgstr "Príobháideacht"
 
+#: ../../../lib/web/src/components/ui/upload-progress.tsx:50
+msgid "Processing…"
+msgstr "Á phróiseáil…"
+
 #: ../../../lib/web/src/components/layout/nav-user.tsx:137
 #: ../../../lib/web/src/components/profile-dropdown.tsx:114
 msgid "Profile"
@@ -1358,11 +1366,11 @@ msgstr "banríon"
 msgid "Raised"
 msgstr "Ardaithe"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:107
+#: ../../../lib/web/src/components/restore-banner.tsx:124
 msgid "Re-link your accounts on this server"
 msgstr "Athnasc do chuntais ar an bhfreastalaí seo"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:129
+#: ../../../lib/web/src/components/restore-banner.tsx:146
 msgid "Re-register your passkeys on this server"
 msgstr "Athchláraigh do heochracha rochtana ar an bhfreastalaí seo"
 
@@ -1429,7 +1437,7 @@ msgstr "Bain spéis"
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:671
 msgid "Remove item"
-msgstr ""
+msgstr "Bain mír"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:367
 msgid "Resend email"
@@ -1464,7 +1472,7 @@ msgstr "Ag éirí as..."
 
 #: ../../../lib/web/src/components/comment-composer.tsx:249
 msgid "Retry"
-msgstr ""
+msgstr "Bain triail eile as"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:362
 msgid "Right to Left"
@@ -1593,7 +1601,7 @@ msgstr "Roghnaigh sainrogha téama"
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:252
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:335
 msgid "Select..."
-msgstr ""
+msgstr "Roghnaigh..."
 
 #: ../../../lib/web/src/components/data-table/bulk-actions.tsx:216
 msgid "selected"
@@ -1886,6 +1894,10 @@ msgstr "Anaithnid"
 msgid "Unverified"
 msgstr "Neamhfhíoraithe"
 
+#: ../../../lib/web/src/components/ui/upload-progress.tsx:34
+msgid "Upload progress"
+msgstr "Dul chun cinn an uaslódála"
+
 #: ../../../lib/web/src/components/step-up-dialog.tsx:338
 msgid "Use your passkey"
 msgstr "Úsáid d'eochair rochtana"
@@ -1996,18 +2008,18 @@ msgstr "Chuir tú na luachanna seo a leanas isteach:"
 msgid "You're all caught up!"
 msgstr "Tá gach rud feicthe agat!"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:91
+#: ../../../lib/web/src/components/restore-banner.tsx:106
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Aistríodh do chuntas anseo ó {source}. Go dtí go scriosann tú é ansin, d'fhéadfadh teachtaireachtaí agus fógraí an dá fhreastalaí a bhaint amach, leanann roinnt de d'ábhar á sheirbheáil ón sean-fhreastalaí, agus d'fhéadfadh sé cúpla nóiméad a thógáil ar do lucht leanúna tú a aimsiú anseo."
 
 #: ../../../lib/web/src/components/comment-composer.tsx:291
 msgid "Your attachments will be lost."
-msgstr ""
+msgstr "Caillfear do cheangaltáin."
 
 #: ../../../lib/web/src/components/comment-composer.tsx:289
 msgid "Your text and attachments will be lost."
-msgstr ""
+msgstr "Caillfear do théacs agus do cheangaltáin."
 
 #: ../../../lib/web/src/components/comment-composer.tsx:292
 msgid "Your text will be lost."
-msgstr ""
+msgstr "Caillfear do théacs."
