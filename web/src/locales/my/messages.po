@@ -113,7 +113,7 @@ msgstr "{subject} က <0>{san}</0> ကို ကစားခဲ့သည်"
 msgid "{subject} took <0>{san}</0>"
 msgstr "{subject} က <0>{san}</0> ကို ယူခဲ့သည်"
 
-#: ../../../lib/web/src/components/layout/mochi-menu.tsx:148
+#: ../../../lib/web/src/components/layout/mochi-menu.tsx:165
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, other {မီနူးဖွင့်ရန် (မဖတ်ရသေးသော အကြောင်းကြားချက် # ခု)}}"
 
@@ -158,7 +158,7 @@ msgstr "အကောင့် ထည့်ပြီး"
 msgid "Account removed"
 msgstr "အကောင့် ဖယ်ရှားပြီး"
 
-#: ../../../lib/web/src/features/accounts/account-add.tsx:126
+#: ../../../lib/web/src/features/accounts/account-add.tsx:139
 msgid "Account type"
 msgstr "အကောင့်အမျိုးအစား"
 
@@ -172,11 +172,11 @@ msgstr "လက်ရှိ Games"
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:717
 #: ../../../lib/web/src/features/access/access-dialog.tsx:332
-#: ../../../lib/web/src/features/accounts/account-add.tsx:196
+#: ../../../lib/web/src/features/accounts/account-add.tsx:209
 msgid "Add"
 msgstr "ထည့်မည်"
 
-#: ../../../lib/web/src/features/accounts/account-add.tsx:120
+#: ../../../lib/web/src/features/accounts/account-add.tsx:133
 msgid "Add a new account"
 msgstr "အကောင့်အသစ် ထည့်မည်"
 
@@ -184,7 +184,7 @@ msgstr "အကောင့်အသစ် ထည့်မည်"
 msgid "Add access"
 msgstr "ဝင်ရောက်ခွင့် ထည့်မည်"
 
-#: ../../../lib/web/src/features/accounts/account-add.tsx:119
+#: ../../../lib/web/src/features/accounts/account-add.tsx:132
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:288
 msgid "Add account"
 msgstr "အကောင့် ထည့်မည်"
@@ -222,7 +222,7 @@ msgstr "tag ထည့်ရန်..."
 msgid "Add team/app"
 msgstr "အဖွဲ့/app ထည့်မည်"
 
-#: ../../../lib/web/src/features/accounts/account-add.tsx:162
+#: ../../../lib/web/src/features/accounts/account-add.tsx:175
 msgid "Add to existing notifications"
 msgstr "ရှိပြီးသား အကြောင်းကြားချက်များတွင် ထည့်မည်"
 
@@ -298,6 +298,10 @@ msgstr "အတည်ပြုပြီး အသုံးပြုသူမျ�
 msgid "Authenticator code"
 msgstr "Authenticator ကုဒ်"
 
+#: ../../../lib/web/src/components/entity/keyboard-shortcuts-help.tsx:51
+msgid "Available keyboard shortcuts"
+msgstr "ရရှိနိုင်သော ကီးဘုတ်ဖြတ်လမ်းများ"
+
 #: ../../../lib/web/src/components/entity-avatar.tsx:99
 msgid "Avatar"
 msgstr "အသွင်ပုံ"
@@ -336,8 +340,8 @@ msgstr "အနက်"
 msgid "Black {0}"
 msgstr "အနက် {0}"
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:156
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:166
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:237
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:247
 msgid "Blocked navigation to untrusted link"
 msgstr "မယုံကြည်ရသော လင့်ခ်သို့ သွားရောက်ခြင်းကို ပိတ်ဆို့ထားသည်"
 
@@ -357,19 +361,19 @@ msgstr "Browser အကြောင်းကြားချက်များ"
 #: ../../../lib/web/src/components/ui/editable-field-row.tsx:132
 #: ../../../lib/web/src/features/access/access-dialog.tsx:328
 #: ../../../lib/web/src/features/access/access-list.tsx:268
-#: ../../../lib/web/src/features/accounts/account-add.tsx:188
+#: ../../../lib/web/src/features/accounts/account-add.tsx:201
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:91
 #: src/features/chess/components/new-game.tsx:145
 #: src/features/chess/components/promotion-dialog.tsx:108
 msgid "Cancel"
 msgstr "မလုပ်တော့ပါ"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:146
+#: ../../../lib/web/src/components/notification-category-button.tsx:102
 msgid "Category for this notification"
 msgstr "ဤအကြောင်းကြားချက်အတွက် အမျိုးအစား"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:127
-#: ../../../lib/web/src/components/notification-category-button.tsx:138
+#: ../../../lib/web/src/components/notification-category-button.tsx:83
+#: ../../../lib/web/src/components/notification-category-button.tsx:94
 msgid "Change notification category"
 msgstr "အကြောင်းကြားချက် အမျိုးအစား ပြောင်းမည်"
 
@@ -396,7 +400,7 @@ msgstr "ဆက်စ်ဘုတ်။ မြှားခလုတ်မျာ�
 msgid "Chess board. Your turn. Use arrow keys to navigate, Enter or Space to select."
 msgstr "ဆက်စ်ဘုတ်။ သင့်အလှည့်ဖြစ်သည်။ မြှားခလုတ်များဖြင့် ရွှေ့သွားပါ၊ Enter သို့မဟုတ် Space ဖြင့် ရွေးချယ်ပါ။"
 
-#: ../../../lib/web/src/components/game/game-empty-state.tsx:38
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:37
 msgid "Choose a game from the sidebar or start a new one."
 msgstr "ဘေးဘားမှ ဂိမ်းတစ်ခုကို ရွေးချယ်ပါ သို့မဟုတ် အသစ်တစ်ခု စတင်ပါ။"
 
@@ -425,8 +429,8 @@ msgstr "ဘာသာစကား ရွေးချယ်ပါ"
 msgid "Choose opponent"
 msgstr "ပြိုင်ဘက် ရွေးချယ်ပါ"
 
-#: ../../../lib/web/src/components/colour-picker.tsx:270
-#: ../../../lib/web/src/components/colour-picker.tsx:351
+#: ../../../lib/web/src/components/colour-picker.tsx:274
+#: ../../../lib/web/src/components/colour-picker.tsx:355
 #: ../../../lib/web/src/components/travelling-picker.tsx:164
 #: ../../../lib/web/src/components/travelling-picker.tsx:170
 #: ../../../lib/web/src/components/travelling-picker.tsx:231
@@ -472,6 +476,10 @@ msgstr "navigation ပိတ်မည်"
 #: ../../../lib/web/src/components/layout/right-panel.tsx:268
 msgid "Close panel"
 msgstr "ပန်နယ်ပိတ်ပါ"
+
+#: ../../../lib/web/src/components/entity/keyboard-shortcuts-help.tsx:32
+msgid "Close panel / cancel"
+msgstr "panel ပိတ်မည် / မလုပ်တော့ပါ"
 
 #: ../../../lib/web/src/components/header-search.tsx:54
 msgid "Close search"
@@ -562,6 +570,10 @@ msgstr "ကူးမည်"
 msgid "Could not load this document. Please try again later."
 msgstr "ဤစာရွက်စာတမ်းကို ဖွင့်၍ မရပါ။ နောက်မှ ထပ်စမ်းကြည့်ပါ။"
 
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:121
+msgid "Couldn't load notifications"
+msgstr "အကြောင်းကြားချက်များ ဖွင့်၍မရပါ"
+
 #: ../../../lib/web/src/components/step-up-dialog.tsx:184
 msgid "Couldn't send the code. Please try again."
 msgstr "ကုဒ်ကို ပို့၍မရပါ။ ကျေးဇူးပြု၍ ထပ်စမ်းကြည့်ပါ။"
@@ -579,16 +591,20 @@ msgstr "ထိုအကောင့်ဖြင့် အတည်ပြု၍�
 msgid "Create {0}"
 msgstr "{0} ဖန်တီးရန်"
 
+#: ../../../lib/web/src/components/entity/keyboard-shortcuts-help.tsx:25
+msgid "Create new item"
+msgstr "အရာအသစ် ဖန်တီးမည်"
+
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:258
 #: src/features/chess/components/new-game.tsx:153
 msgid "Creating..."
 msgstr "ဖန်တီးနေသည်..."
 
-#: ../../../lib/web/src/components/map-view.tsx:208
+#: ../../../lib/web/src/components/map-view.tsx:217
 msgid "Current location"
 msgstr "လက်ရှိတည်နေရာ"
 
-#: ../../../lib/web/src/components/colour-picker.tsx:261
+#: ../../../lib/web/src/components/colour-picker.tsx:265
 msgid "Custom"
 msgstr "စိတ်ကြိုက်"
 
@@ -598,9 +614,6 @@ msgstr "စိတ်ကြိုက်"
 msgid "Dark"
 msgstr "အမှောင်"
 
-#: ../../../lib/web/src/components/layout/nav-user.tsx:91
-#: ../../../lib/web/src/components/layout/nav-user.tsx:154
-#: ../../../lib/web/src/components/layout/nav-user.tsx:205
 #: ../../../lib/web/src/components/profile-dropdown.tsx:87
 #: ../../../lib/web/src/components/profile-dropdown.tsx:123
 msgid "Dark mode"
@@ -618,7 +631,7 @@ msgstr "ငြင်းပယ်မည်"
 msgid "Default"
 msgstr "မူရင်း"
 
-#: ../../../lib/web/src/features/accounts/account-add.tsx:172
+#: ../../../lib/web/src/features/accounts/account-add.tsx:185
 msgid "Default AI account"
 msgstr "မူရင်း AI အကောင့်"
 
@@ -677,11 +690,11 @@ msgstr "ဦးတည်ရာ"
 msgid "Directory"
 msgstr "လမ်းညွှန်"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:300
+#: ../../../lib/web/src/components/comment-composer.tsx:304
 msgid "Discard"
 msgstr "ဖျက်ပစ်ရန်"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:298
+#: ../../../lib/web/src/components/comment-composer.tsx:302
 msgid "Discard draft?"
 msgstr "မူကြမ်းကို ဖျက်ပစ်မလား။"
 
@@ -723,6 +736,10 @@ msgstr "စာဖတ်ရခက်သူများအတွက်ရိုး
 #: ../../../lib/web/src/components/ui/editable-field-row.tsx:154
 msgid "Edit {label}"
 msgstr "{label} ကို တည်းဖြတ်ပါ"
+
+#: ../../../lib/web/src/components/entity/keyboard-shortcuts-help.tsx:31
+msgid "Edit selected card"
+msgstr "ရွေးချယ်ထားသော ကတ် တည်းဖြတ်"
 
 #: ../../../lib/web/src/features/accounts/types.ts:15
 msgid "Email"
@@ -780,6 +797,10 @@ msgstr "ကူးယူ၍ မရပါ"
 msgid "Failed to create game"
 msgstr "ဂိမ်း ဖန်တီး၍ မရပါ"
 
+#: ../../../lib/web/src/components/options-menu.tsx:99
+msgid "Failed to create link"
+msgstr "လင့် ဖန်တီး၍ မရပါ"
+
 #: src/features/chess/index.tsx:231
 msgid "Failed to create rematch"
 msgstr "ပြန်ပြိုင်ပွဲ ဖန်တီး၍ မရပါ"
@@ -792,9 +813,17 @@ msgstr "သရေ ငြင်းပယ်၍ မရပါ"
 msgid "Failed to delete game"
 msgstr "ဂိမ်း ဖျက်၍ မရပါ"
 
+#: ../../../lib/web/src/components/options-menu.tsx:123
+msgid "Failed to get RSS token"
+msgstr "RSS တိုကင် ရယူ၍ မရပါ"
+
 #: ../../../lib/web/src/hooks/use-load-more.ts:74
 msgid "Failed to load"
 msgstr "တင်၍ မရပါ"
+
+#: ../../../lib/web/src/components/audit-timeline.tsx:72
+msgid "Failed to load history"
+msgstr "မှတ်တမ်း တင်၍ မရပါ"
 
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:263
 msgid "Failed to load image"
@@ -820,6 +849,10 @@ msgstr "အကောင့် ဖယ်ရှား၍ မရပါ"
 msgid "Failed to resign"
 msgstr "ရှုံးရန် ထုတ်ပြန်၍ မရပါ"
 
+#: ../../../lib/web/src/components/options-menu.tsx:133
+msgid "Failed to revoke RSS access"
+msgstr "RSS အသုံးပြုခွင့် ရုပ်သိမ်း၍ မရပါ"
+
 #: src/features/chess/index.tsx:535
 #: src/features/chess/index.tsx:568
 msgid "Failed to send"
@@ -828,10 +861,6 @@ msgstr "ပို့၍ မရပါ"
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:257
 msgid "Failed to send verification code"
 msgstr "အတည်ပြုကုဒ် ပို့၍ မရပါ"
-
-#: ../../../lib/web/src/components/notification-category-button.tsx:114
-msgid "Failed to update category"
-msgstr "အမျိုးအစား ပြင်ဆင်၍ မရပါ"
 
 #: ../../../lib/web/src/components/data-table/toolbar.tsx:30
 msgid "Filter..."
@@ -925,8 +954,12 @@ msgstr "ဝှက်"
 msgid "Hide password"
 msgstr "စကားဝှက်ကို ဖျောက်ရန်"
 
+#: ../../../lib/web/src/components/audit-timeline.tsx:64
+msgid "History"
+msgstr "မှတ်တမ်း"
+
 #: ../../../lib/web/src/components/layout/app-sidebar.tsx:90
-#: ../../../lib/web/src/components/layout/mochi-menu.tsx:175
+#: ../../../lib/web/src/components/layout/mochi-menu.tsx:192
 #: ../../../lib/web/src/components/layout/top-bar.tsx:71
 #: ../../../lib/web/src/components/layout/top-bar.tsx:100
 msgid "Home"
@@ -985,6 +1018,10 @@ msgstr "သင်ရှာဖွေနေသော စာမျက်နှာ�
 msgid "Just now"
 msgstr "အခုပဲ"
 
+#: ../../../lib/web/src/components/entity/keyboard-shortcuts-help.tsx:48
+msgid "Keyboard shortcuts"
+msgstr "ကီးဘုတ် ဖြတ်လမ်းများ"
+
 #: src/features/chess/lib/use-chess-piece-name.ts:17
 msgid "king"
 msgstr "ရှင်ဘုရင်"
@@ -1021,6 +1058,10 @@ msgstr "စာလုံး၊ ဂဏန်း၊ ကွက်လပ်နှင�
 msgid "Light"
 msgstr "အလင်း"
 
+#: ../../../lib/web/src/components/options-menu.tsx:190
+msgid "Link"
+msgstr "လင့်ခ်"
+
 #: ../../../lib/web/src/components/ui/load-more.tsx:35
 msgid "Load more"
 msgstr "ထပ်တင်"
@@ -1034,9 +1075,6 @@ msgstr "အကြောင်းအရာ ဖွင့်နေသည်…"
 msgid "Loading..."
 msgstr "တင်နေသည်..."
 
-#: ../../../lib/web/src/components/layout/nav-user.tsx:101
-#: ../../../lib/web/src/components/layout/nav-user.tsx:167
-#: ../../../lib/web/src/components/layout/nav-user.tsx:215
 #: ../../../lib/web/src/components/profile-dropdown.tsx:69
 #: ../../../lib/web/src/components/profile-dropdown.tsx:98
 #: ../../../lib/web/src/components/sign-out-dialog.tsx:26
@@ -1060,8 +1098,8 @@ msgstr "ထွက်နေသည်…"
 msgid "Manage your connected accounts for notifications and services."
 msgstr "အကြောင်းကြားချက်များနှင့် ဝန်ဆောင်မှုများအတွက် ချိတ်ဆက်ထားသော အကောင့်များကို စီမံပါ။"
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:118
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:125
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:202
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:209
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:224
 msgid "Mark all as read"
 msgstr "အားလုံးကို ဖတ်ပြီးအဖြစ် မှတ်"
@@ -1074,7 +1112,7 @@ msgstr "MCP ဆာဗာ"
 msgid "Medium"
 msgstr "အလယ်အလတ်"
 
-#: ../../../lib/web/src/components/layout/mochi-menu.tsx:190
+#: ../../../lib/web/src/components/layout/mochi-menu.tsx:207
 msgid "Menu"
 msgstr "မီနူး"
 
@@ -1090,9 +1128,18 @@ msgstr "မက်ထရစ်"
 msgid "Mochi web"
 msgstr "Mochi ဝဘ်"
 
+#: ../../../lib/web/src/components/options-menu.tsx:164
+msgid "Moderation"
+msgstr ""
+
 #: ../../../lib/web/src/lib/preference-utils.ts:59
 msgid "Monday"
 msgstr "တနင်္လာ"
+
+#: ../../../lib/web/src/components/options-menu.tsx:145
+#: ../../../lib/web/src/components/options-menu.tsx:152
+msgid "More options"
+msgstr "နောက်ထပ် ရွေးချယ်စရာများ"
 
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:102
 msgid "Name cannot contain angle brackets, backslash, semicolon, quotes or backticks"
@@ -1111,8 +1158,8 @@ msgstr "ကွန်ရက် အမှား"
 msgid "New"
 msgstr "အသစ်"
 
-#: ../../../lib/web/src/components/game/game-empty-state.tsx:42
-#: ../../../lib/web/src/components/game/game-empty-state.tsx:54
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:41
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:53
 #: src/components/layout/chess-layout.tsx:138
 #: src/features/chess/components/new-game.tsx:96
 msgid "New game"
@@ -1139,7 +1186,7 @@ msgstr "သူငယ်ချင်းများ မတွေ့ပါ"
 msgid "No friends yet"
 msgstr "သူငယ်ချင်းများ မရှိသေးပါ"
 
-#: ../../../lib/web/src/components/game/game-empty-state.tsx:51
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:50
 msgid "No games yet"
 msgstr "ဂိမ်းများ မရှိသေးပါ"
 
@@ -1182,15 +1229,19 @@ msgstr "ရလဒ်များ မတွေ့ပါ။"
 msgid "No time zone found."
 msgstr "အချိန်ဇုန် မတွေ့ပါ။"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:150
+#: ../../../lib/web/src/components/notification-category-button.tsx:106
 msgid "No topic record yet — try again after the next notification."
 msgstr "topic မှတ်တမ်း မရှိသေးပါ — နောက်အသိပေးချက်ပြီးနောက် ထပ်စမ်းကြည့်ပါ။"
+
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:132
+msgid "No unread notifications"
+msgstr "ဖတ်မပြီးသေးသော အသိပေးချက်များ မရှိ"
 
 #: ../../../lib/web/src/features/access/access-dialog.tsx:206
 msgid "No users found"
 msgstr "သုံးစွဲသူများ မတွေ့ပါ"
 
-#: ../../../lib/web/src/components/colour-picker.tsx:345
+#: ../../../lib/web/src/components/colour-picker.tsx:349
 #: ../../../lib/web/src/components/person-picker.tsx:350
 #: ../../../lib/web/src/lib/preference-utils.ts:105
 #: ../../../lib/web/src/lib/preference-utils.ts:125
@@ -1218,7 +1269,7 @@ msgid "Notifications"
 msgstr "အသိပေးချက်များ"
 
 #. placeholder {0}: unread.length
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:111
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:195
 msgid "Notifications: {0}"
 msgstr "အကြောင်းကြားချက်များ- {0}"
 
@@ -1252,7 +1303,7 @@ msgstr "ချတ် panel ကို ဖွင့်"
 msgid "Open game actions"
 msgstr "ဂိမ်း လုပ်ဆောင်ချက်များကို ဖွင့်"
 
-#: ../../../lib/web/src/components/layout/mochi-menu.tsx:149
+#: ../../../lib/web/src/components/layout/mochi-menu.tsx:166
 msgid "Open menu"
 msgstr "မီနူးကို ဖွင့်"
 
@@ -1265,6 +1316,10 @@ msgstr "navigation ကို ဖွင့်"
 #: ../../../lib/web/src/components/layout/top-nav.tsx:44
 msgid "Open navigation menu"
 msgstr "navigation menu ကို ဖွင့်"
+
+#: ../../../lib/web/src/components/entity/keyboard-shortcuts-help.tsx:30
+msgid "Open selected card"
+msgstr "ရွေးချယ်ထားသော card ကို ဖွင့်"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:58
 #: ../../../lib/web/src/components/config-drawer.tsx:66
@@ -1304,7 +1359,7 @@ msgstr "စစ်သား"
 msgid "Pick a date"
 msgstr "ရက်စွဲရွေးပါ"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:95
+#: ../../../lib/web/src/components/comment-composer.tsx:99
 #: ../../../lib/web/src/features/errors/general-error.tsx:54
 #: ../../../lib/web/src/lib/api-response-interceptors.ts:323
 msgid "Please check your internet connection and try again."
@@ -1326,6 +1381,14 @@ msgstr "ကျေးဇူးပြု၍ ထပ်ကြိုးစားပ�
 msgid "Please wait a moment and try again."
 msgstr "ကျေးဇူးပြု၍ ခဏစောင့်ပြီး ထပ်စမ်းကြည့်ပါ။"
 
+#: ../../../lib/web/src/components/options-menu.tsx:175
+msgid "Posts"
+msgstr "ပို့စ်များ"
+
+#: ../../../lib/web/src/components/options-menu.tsx:178
+msgid "Posts and comments"
+msgstr "ပို့စ်နှင့် comment များ"
+
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:377
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:382
 msgid "Previous image"
@@ -1340,7 +1403,6 @@ msgstr "ကိုယ်ရေးကိုယ်တာ"
 msgid "Processing…"
 msgstr "လုပ်ဆောင်နေသည်…"
 
-#: ../../../lib/web/src/components/layout/nav-user.tsx:137
 #: ../../../lib/web/src/components/profile-dropdown.tsx:114
 msgid "Profile"
 msgstr "ပရိုဖိုင်"
@@ -1379,7 +1441,7 @@ msgstr "ဤဆာဗာပေါ်တွင် သင်၏အကောင့�
 msgid "Re-register your passkeys on this server"
 msgstr "ဤဆာဗာတွင် သင်၏ passkey များကို ပြန်လည်မှတ်ပုံတင်ပါ"
 
-#: ../../../lib/web/src/components/search-entity-dialog.tsx:217
+#: ../../../lib/web/src/components/search-entity-dialog.tsx:220
 #: ../../../lib/web/src/components/search-entity-page.tsx:243
 msgid "Recommended"
 msgstr "အကြံပြုထား"
@@ -1388,7 +1450,7 @@ msgstr "အကြံပြုထား"
 msgid "Reconnecting ({retries})..."
 msgstr "ပြန်လည်ချိတ်ဆက်နေသည် ({retries})..."
 
-#: ../../../lib/web/src/components/layout/authenticated-layout.tsx:133
+#: ../../../lib/web/src/components/layout/authenticated-layout.tsx:136
 msgid "Redirecting to login."
 msgstr "Login သို့ redirect လုပ်နေသည်။"
 
@@ -1409,7 +1471,7 @@ msgstr "၂၄ နာရီအတွင်း ဆက်စပ်၊ ပြင်
 msgid "Rematch"
 msgstr "ပြန်ကစား"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:232
+#: ../../../lib/web/src/components/comment-composer.tsx:236
 #: ../../../lib/web/src/features/access/access-list.tsx:270
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:180
 msgid "Remove"
@@ -1475,9 +1537,13 @@ msgstr "ဂိမ်း ရှုံးကြောင်းပြောမလ�
 msgid "Resigning..."
 msgstr "ရှုံးကြောင်းပြောနေသည်..."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:249
+#: ../../../lib/web/src/components/comment-composer.tsx:253
 msgid "Retry"
 msgstr "ထပ်စမ်းကြည့်ပါ"
+
+#: ../../../lib/web/src/components/options-menu.tsx:181
+msgid "Revoke access"
+msgstr "အသုံးပြုခွင့် ရုပ်သိမ်းရန်"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:362
 msgid "Right to Left"
@@ -1490,6 +1556,18 @@ msgstr "ရထား"
 #: ../../../lib/web/src/components/data-table/pagination.tsx:65
 msgid "Rows per page"
 msgstr "စာမျက်နှာတစ်ခုစီ၏ အတန်းများ"
+
+#: ../../../lib/web/src/components/options-menu.tsx:131
+msgid "RSS access revoked"
+msgstr "RSS အသုံးပြုခွင့် ရုပ်သိမ်းပြီး"
+
+#: ../../../lib/web/src/components/options-menu.tsx:171
+msgid "RSS feed"
+msgstr "RSS ဖိဒ်"
+
+#: ../../../lib/web/src/components/options-menu.tsx:121
+msgid "RSS URL copied to clipboard"
+msgstr "RSS URL ကို clipboard သို့ ကူးယူပြီးပါပြီ"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:64
 msgid "Saturday"
@@ -1540,7 +1618,7 @@ msgstr "သုံးစွဲသူများ ရှာဖွေ"
 msgid "Search..."
 msgstr "ရှာဖွေ..."
 
-#: ../../../lib/web/src/components/search-entity-dialog.tsx:175
+#: ../../../lib/web/src/components/search-entity-dialog.tsx:178
 #: ../../../lib/web/src/components/search-entity-page.tsx:201
 #: ../../../lib/web/src/features/access/access-dialog.tsx:202
 msgid "Searching..."
@@ -1555,7 +1633,7 @@ msgstr "{0} ရွေးပါ"
 msgid "Select a friend..."
 msgstr "သူငယ်ချင်းတစ်ဦးကို ရွေးချယ်ပါ..."
 
-#: ../../../lib/web/src/components/game/game-empty-state.tsx:37
+#: ../../../lib/web/src/components/game/game-empty-state.tsx:36
 msgid "Select a game"
 msgstr "ဂိမ်းတစ်ခုကို ရွေးချယ်ပါ"
 
@@ -1571,7 +1649,7 @@ msgstr "ဝင်ရောက်ခွင့် စည်းမျဉ်း ရ�
 msgid "Select account"
 msgstr "အကောင့်ရွေးပါ"
 
-#: ../../../lib/web/src/features/accounts/account-add.tsx:129
+#: ../../../lib/web/src/features/accounts/account-add.tsx:142
 msgid "Select account type"
 msgstr "အကောင့်အမျိုးအစား ရွေးချယ်"
 
@@ -1587,9 +1665,17 @@ msgstr "အပြင်အဆင်ပုံစံကို ရွေးပါ"
 msgid "Select location"
 msgstr "တည်နေရာကို ရွေးပါ"
 
+#: ../../../lib/web/src/components/entity/keyboard-shortcuts-help.tsx:28
+msgid "Select next card"
+msgstr "နောက်ကတ်ကို ရွေးပါ"
+
 #: ../../../lib/web/src/components/person-picker.tsx:83
 msgid "Select person..."
 msgstr "လူရွေးပါ..."
+
+#: ../../../lib/web/src/components/entity/keyboard-shortcuts-help.tsx:29
+msgid "Select previous card"
+msgstr "ယခင်ကတ်ကို ရွေးပါ"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:247
 msgid "Select sidebar style"
@@ -1652,17 +1738,19 @@ msgstr "စက်ရှင်သက်တမ်း ကုန်သွားပ�
 msgid "Set origin and destination"
 msgstr "မူရင်းနှင့် ဦးတည်ရာ သတ်မှတ်မည်"
 
-#: ../../../lib/web/src/components/layout/mochi-menu.tsx:109
-#: ../../../lib/web/src/components/layout/mochi-menu.tsx:115
-#: ../../../lib/web/src/components/layout/nav-user.tsx:84
-#: ../../../lib/web/src/components/layout/nav-user.tsx:148
-#: ../../../lib/web/src/components/layout/nav-user.tsx:198
+#: ../../../lib/web/src/components/layout/mochi-menu.tsx:126
+#: ../../../lib/web/src/components/layout/mochi-menu.tsx:132
+#: ../../../lib/web/src/components/options-menu.tsx:196
 msgid "Settings"
 msgstr "ဆက်တင်များ"
 
 #: ../../../lib/web/src/components/password-input.tsx:27
 msgid "Show password"
 msgstr "စကားဝှက်ကို ပြရန်"
+
+#: ../../../lib/web/src/components/entity/keyboard-shortcuts-help.tsx:33
+msgid "Show this help"
+msgstr "ဤ အကူအညီကို ပြမည်"
 
 #: ../../../lib/web/src/components/ui/load-more.tsx:39
 msgid "Showing {totalShown} of {total}"
@@ -1674,12 +1762,12 @@ msgstr "{total} ထဲမှ {totalShown} ကို ပြသနေသည်"
 msgid "Sidebar"
 msgstr "ဘေးဘား"
 
-#: ../../../lib/web/src/components/layout/mochi-menu.tsx:121
-#: ../../../lib/web/src/components/layout/mochi-menu.tsx:127
+#: ../../../lib/web/src/components/layout/mochi-menu.tsx:138
+#: ../../../lib/web/src/components/layout/mochi-menu.tsx:144
 msgid "Sign out"
 msgstr "ထွက်ရန်"
 
-#: ../../../lib/web/src/components/layout/authenticated-layout.tsx:131
+#: ../../../lib/web/src/components/layout/authenticated-layout.tsx:134
 msgid "Signing out..."
 msgstr "ထွက်နေသည်..."
 
@@ -1691,6 +1779,10 @@ msgstr "Main သို့ ကျော်မည်"
 #: ../../../lib/web/src/lib/preference-utils.ts:133
 msgid "Small"
 msgstr "သေး"
+
+#: ../../../lib/web/src/components/options-menu.tsx:158
+msgid "Sources"
+msgstr "မူရင်းများ"
 
 #: ../../../lib/web/src/lib/preference-utils.ts:97
 msgid "Spacious"
@@ -1721,6 +1813,11 @@ msgstr "Subscribe လုပ်မည်"
 msgid "Sunday"
 msgstr "တနင်္ဂနွေ"
 
+#: ../../../lib/web/src/components/entity/keyboard-shortcuts-help.tsx:27
+msgid "Switch to view 1-9"
+msgstr "ကြည့်ရှုခြင်း 1-9 သို့ ပြောင်းမည်"
+
+#: ../../../lib/web/src/components/audit-timeline.tsx:111
 #: ../../../lib/web/src/components/config-drawer.tsx:209
 #: ../../../lib/web/src/components/theme-switch.tsx:59
 #: ../../../lib/web/src/lib/preference-utils.ts:21
@@ -1761,10 +1858,6 @@ msgstr "ထိုကုဒ်မှားနေသည် သို့မဟု�
 #: ../../../lib/web/src/features/errors/general-error.tsx:68
 msgid "The requested content could not be found."
 msgstr "တောင်းဆိုထားသော အကြောင်းအရာကို ရှာမတွေ့ပါ။"
-
-#: ../../../lib/web/src/lib/api-response-interceptors.ts:152
-#~ msgid "The server returned a web page instead of data, which usually means the address was wrong."
-#~ msgstr ""
 
 #: ../../../lib/web/src/lib/api-response-interceptors.ts:152
 msgid "The server returned a web page instead of data."
@@ -1829,6 +1922,10 @@ msgstr "ဘေးဘား ဖွင့်/ပိတ်"
 msgid "Toggle theme"
 msgstr "အပြင်အဆင် ဖွင့်/ပိတ်"
 
+#: ../../../lib/web/src/components/entity/keyboard-shortcuts-help.tsx:26
+msgid "Toggle view options"
+msgstr "ကြည့်ရှုရွေးချယ်စရာ ဖွင့်/ပိတ်"
+
 #: ../../../lib/web/src/features/errors/general-error.tsx:74
 msgid "Too many requests"
 msgstr "တောင်းဆိုမှု များလွန်းနေသည်"
@@ -1841,7 +1938,7 @@ msgstr "ထိပ်"
 msgid "Travelling"
 msgstr "ခရီးသွားနေသည်"
 
-#: ../../../lib/web/src/components/search-entity-dialog.tsx:191
+#: ../../../lib/web/src/components/search-entity-dialog.tsx:194
 #: ../../../lib/web/src/components/search-entity-page.tsx:217
 msgid "Try adjusting your search terms"
 msgstr "သင်၏ ရှာဖွေစကားလုံးများကို ပြင်ဆင်ကြည့်ပါ"
@@ -1876,12 +1973,12 @@ msgstr "ရှာရန် ရိုက်ပါ..."
 msgid "Unable to connect to remote server"
 msgstr "အဝေးထိန်းဆာဗာသို့ ချိတ်ဆက်၍မရပါ"
 
-#: ../../../lib/web/src/lib/auth-manager.ts:85
-#: ../../../lib/web/src/lib/auth-manager.ts:97
+#: ../../../lib/web/src/lib/auth-manager.ts:92
+#: ../../../lib/web/src/lib/auth-manager.ts:104
 msgid "Unable to redirect to login. Please try again."
 msgstr "Login သို့ redirect လုပ်၍ မရပါ။ ထပ်ကြိုးစားပါ။"
 
-#: ../../../lib/web/src/components/notification-category-button.tsx:158
+#: ../../../lib/web/src/components/notification-category-button.tsx:114
 msgid "Unassigned"
 msgstr "မသတ်မှတ်ထား"
 
@@ -1903,6 +2000,10 @@ msgstr "United States"
 msgid "Unknown"
 msgstr "မသိရသော"
 
+#: ../../../lib/web/src/components/options-menu.tsx:211
+msgid "Unsubscribe"
+msgstr "Subscribe ဖြုတ်မည်"
+
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:135
 msgid "Unverified"
 msgstr "အတည်ပြုမထား"
@@ -1915,7 +2016,7 @@ msgstr "အပ်လုဒ်တိုးတက်မှု"
 msgid "Use your passkey"
 msgstr "သင့်ပတ်စ်ကီးကို သုံးပါ"
 
-#: ../../../lib/web/src/components/layout/mochi-menu.tsx:102
+#: ../../../lib/web/src/components/layout/mochi-menu.tsx:119
 #: ../../../lib/web/src/features/access/access-dialog.tsx:158
 msgid "User"
 msgstr "သုံးစွဲသူ"
@@ -1959,8 +2060,8 @@ msgstr "ကြည့်ရှုမည်"
 msgid "View all"
 msgstr "အားလုံး ကြည့်ရှုမည်"
 
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:131
-#: ../../../lib/web/src/components/layout/notification-menu.tsx:139
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:215
+#: ../../../lib/web/src/components/layout/notification-menu.tsx:223
 msgid "View all notifications"
 msgstr "အသိပေးချက်များ အားလုံး ကြည့်ရှုမည်"
 
@@ -2013,10 +2114,6 @@ msgstr "ဤအပိုင်းသို့ သင့်တွင် ဝင်�
 msgid "You don't have necessary permission <0/>to view this resource."
 msgstr "ဤအရင်းအမြစ်ကို ကြည့်ရှုရန် <0/>လိုအပ်သော ခွင့်ပြုချက် သင့်တွင်မရှိပါ။"
 
-#: ../../../lib/web/src/lib/show-submitted-data.tsx:9
-msgid "You submitted the following values:"
-msgstr "အောက်ပါတန်ဖိုးများကို တင်သွင်းခဲ့သည်-"
-
 #: ../../../lib/web/src/components/notifications-dropdown.tsx:193
 msgid "You're all caught up!"
 msgstr "အားလုံးကြည့်ပြီးပါပြီ။"
@@ -2025,14 +2122,14 @@ msgstr "အားလုံးကြည့်ပြီးပါပြီ။"
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "သင်၏အကောင့်ကို {source} မှ ဤနေရာသို့ ရွှေ့ပြောင်းခဲ့သည်။ သင်ကာကိုဖျက်မသည်အထိ၊ မက်ဆေ့ချ်များနှင့် အကြောင်းကြားချက်များ ဆာဗာနှစ်ခုလုံးသို့ ရောက်နိုင်သည်၊ သင်၏အချို့သောအကြောင်းအရာများကို ဟောင်းသောဆာဗာမှ ဆက်လက်ပေးဆောင်နေမည်ဖြစ်ပြီး ကြည့်ရှုသူများ သင်ကိုဤနေရာတွင် ရှာဖွေရန် မိနစ်အနည်းငယ် ကြာနိုင်သည်။"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:291
+#: ../../../lib/web/src/components/comment-composer.tsx:295
 msgid "Your attachments will be lost."
 msgstr "သင့်ပူးတွဲဖိုင်များ ပျောက်ဆုံးသွားပါမည်။"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:289
+#: ../../../lib/web/src/components/comment-composer.tsx:293
 msgid "Your text and attachments will be lost."
 msgstr "သင့်စာသားနှင့် ပူးတွဲဖိုင်များ ပျောက်ဆုံးသွားပါမည်။"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:292
+#: ../../../lib/web/src/components/comment-composer.tsx:296
 msgid "Your text will be lost."
 msgstr "သင်၏ စာသား ပျောက်ဆုံးသွားပါမည်။"
