@@ -312,6 +312,29 @@ def event_created(e, now):
 		return now
 	return created
 
+def event_name(value):
+	"""Peer-supplied display name, held to core's name rules.
+
+	Rejects angle brackets and line breaks and caps at 1000 characters, so a
+	peer cannot store an unbounded string or smuggle markup into the label
+	shown beside their moves."""
+	value = str(value or "")
+	if not value or not mochi.text.valid(value, "name"):
+		return "Opponent"
+	return value
+
+def event_body(value, maximum, fallback):
+	"""Peer-supplied display text, held to the bound the local path uses.
+
+	Clamped rather than rejected. The board in the same event is validated
+	separately and is the real state; dropping an otherwise-good move over a
+	bad label would leave us behind the sender with no way to catch up, which
+	is a worse outcome than showing a fallback for one move."""
+	value = str(value or "")
+	if not value or len(value) > maximum:
+		return fallback
+	return value
+
 def game_terminal(status):
 	return 1 if status in GAME_TERMINAL else 0
 
@@ -1104,7 +1127,10 @@ def event_move(e):
 	if created == None:
 		created = now
 
-	name = e.content("name") or "Opponent"
+	name = event_name(e.content("name"))
+	# action_move caps san at 10; without the same cap here a peer could store
+	# a megabyte in the messages row and push it into a notification body.
+	san = event_body(san, 10, "?")
 
 	chess_ensure_commit_hook()
 	mochi.db.execute("insert or ignore into messages ( id, game, member, name, body, type, created ) values ( ?, ?, ?, ?, ?, 'move', ? )", id, game["id"], sender, name, san, created)
@@ -1139,7 +1165,7 @@ def event_message(e):
 	if len(str(body)) > 10000:
 		return
 
-	name = e.content("name") or "Opponent"
+	name = event_name(e.content("name"))
 
 	chess_ensure_commit_hook()
 	mochi.db.execute("insert or ignore into messages ( id, game, member, name, body, type, created ) values ( ?, ?, ?, ?, ?, 'message', ? )", id, game["id"], sender, name, body, created)
@@ -1160,7 +1186,7 @@ def event_resign(e):
 		return
 
 	winner = e.content("winner")
-	body = e.content("body") or mochi.app.label("notifications.body.opponent_resigned")
+	body = event_body(e.content("body"), 10000, mochi.app.label("notifications.body.opponent_resigned"))
 	sender_name = game["identity_name"] if sender == game["identity"] else game["opponent_name"]
 
 	# Derive winner: the other player (not the one who resigned)
@@ -1198,7 +1224,7 @@ def event_draw_offer(e):
 	if sender != game["identity"] and sender != game["opponent"]:
 		return
 
-	body = e.content("body") or mochi.app.label("notifications.body.draw_offered")
+	body = event_body(e.content("body"), 10000, mochi.app.label("notifications.body.draw_offered"))
 	sender_name = game["identity_name"] if sender == game["identity"] else game["opponent_name"]
 
 	# Ordering is the version tuple, not the wall clock. The gate that used
@@ -1242,7 +1268,7 @@ def event_draw_accept(e):
 	if sender != game["identity"] and sender != game["opponent"]:
 		return
 
-	body = e.content("body") or mochi.app.label("notifications.body.draw_agreed")
+	body = event_body(e.content("body"), 10000, mochi.app.label("notifications.body.draw_agreed"))
 	sender_name = game["identity_name"] if sender == game["identity"] else game["opponent_name"]
 
 	now = mochi.time.now()
@@ -1275,7 +1301,7 @@ def event_draw_decline(e):
 	if sender != game["identity"] and sender != game["opponent"]:
 		return
 
-	body = e.content("body") or mochi.app.label("notifications.body.draw_declined")
+	body = event_body(e.content("body"), 10000, mochi.app.label("notifications.body.draw_declined"))
 	sender_name = game["identity_name"] if sender == game["identity"] else game["opponent_name"]
 
 	now = mochi.time.now()
