@@ -173,10 +173,7 @@ const handleWebsocketPayload = (
     // marker could swallow the echo of another window's successful one. One
     // redundant refetch per own move is the price of not coupling
     // correctness to HTTP/websocket ordering.
-    void queryClient.invalidateQueries({
-      queryKey: gameKeys.moveHistory(gameId),
-    })
-    void queryClient.invalidateQueries({
+    void    void queryClient.invalidateQueries({
       queryKey: gameKeys.detail(gameId),
       exact: true,
     })

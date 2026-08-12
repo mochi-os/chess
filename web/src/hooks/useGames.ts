@@ -34,7 +34,6 @@ export const gameKeys = {
   all: () => ['games'] as const,
   detail: (gameId: string) => ['games', gameId] as const,
   messages: (gameId: string) => ['games', gameId, 'messages'] as const,
-  moveHistory: (gameId: string) => ['games', gameId, 'move-history'] as const,
   newGame: () => ['games', 'new'] as const,
 }
 
@@ -81,8 +80,6 @@ export const useGamesQuery = (
   })
 
 const DEFAULT_PAGE_SIZE = 30
-const MOVE_HISTORY_PAGE_SIZE = 100
-const MAX_MOVE_HISTORY_PAGES = 20
 
 export const useInfiniteMessagesQuery = (
   gameId?: string,
@@ -117,57 +114,6 @@ export const useInfiniteMessagesQuery = (
     },
   })
 
-const fetchMoveHistory = async (gameId: string): Promise<string[]> => {
-  const pages: GetMessagesResponse[] = []
-  let before: string | undefined
-
-  for (let pageCount = 0; pageCount < MAX_MOVE_HISTORY_PAGES; pageCount++) {
-    const page = await gamesApi.messages(gameId, {
-      before,
-      limit: MOVE_HISTORY_PAGE_SIZE,
-    })
-
-    pages.push(page)
-
-    if (!page.hasMore || page.nextCursor === undefined || page.nextCursor === before) {
-      break
-    }
-
-    before = page.nextCursor
-  }
-
-  return [...pages]
-    .reverse()
-    .flatMap((page) => page.messages)
-    .filter((message) => message.type === 'move')
-    .map((message) => message.body.trim())
-    .filter((body) => body.length > 0)
-}
-
-export const useMoveHistoryQuery = (
-  gameId?: string,
-  options?: Omit<
-    UseQueryOptions<
-      string[],
-      Error,
-      string[],
-      ReturnType<typeof gameKeys.moveHistory>
-    >,
-    'queryKey' | 'queryFn'
-  >
-) =>
-  useQueryWithError({
-    queryKey: gameKeys.moveHistory(gameId ?? 'unknown'),
-    enabled: Boolean(gameId) && (options?.enabled ?? true),
-    staleTime: Infinity,
-    queryFn: () => {
-      if (!gameId) {
-        throw new Error("Game ID is required")
-      }
-      return fetchMoveHistory(gameId)
-    },
-    ...options,
-  })
 
 interface SendMessageVariables extends SendMessageRequest {
   gameId: string
@@ -217,9 +163,6 @@ export const useMoveMutation = (
         queryKey: gameKeys.detail(variables.gameId),
         exact: true,
       })
-      queryClient.invalidateQueries({
-        queryKey: gameKeys.moveHistory(variables.gameId),
-      })
       queryClient.invalidateQueries({ queryKey: gameKeys.all(), exact: true })
       onSuccess?.(data, variables, context, mutation)
     },
@@ -233,9 +176,6 @@ export const useMoveMutation = (
       queryClient.invalidateQueries({
         queryKey: gameKeys.detail(variables.gameId),
         exact: true,
-      })
-      queryClient.invalidateQueries({
-        queryKey: gameKeys.moveHistory(variables.gameId),
       })
       onError?.(error, variables, context, mutation)
     },
