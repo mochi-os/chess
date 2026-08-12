@@ -14,19 +14,19 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. js-lingui-explicit-id
-#: ../../../lib/web/src/lib/error-normalizer.ts:236
+#: ../../../lib/web/src/lib/error-normalizer.ts:244
 msgid "Please check your internet connection and try again."
 msgstr "Интернет байланышыңызды текшерип, кайра аракет кылыңыз."
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:302
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:306
 msgid " or "
 msgstr " же "
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:228
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:229
 msgid "(edited)"
 msgstr "(өзгөртүлгөн)"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:212
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:213
 msgid "(expand)"
 msgstr "(жайып көрсөтүү)"
 
@@ -101,15 +101,15 @@ msgstr "{entityLabel} аты"
 msgid "{entityLabel} name is required"
 msgstr "{entityLabel} аталышы талап кылынат"
 
-#: src/features/chess/components/chat-message-list.tsx:195
+#: src/features/chess/components/chat-message-list.tsx:46
 msgid "{name} declined the draw"
 msgstr "{name} тең оюндан баш тартты"
 
-#: src/features/chess/components/chat-message-list.tsx:191
+#: src/features/chess/components/chat-message-list.tsx:44
 msgid "{name} offered a draw"
 msgstr "{name} тең оюн сунуштады"
 
-#: src/features/chess/components/chat-message-list.tsx:189
+#: src/features/chess/components/chat-message-list.tsx:43
 msgid "{name} resigned"
 msgstr "{name} баш тартты"
 
@@ -133,15 +133,16 @@ msgstr "{selectedCount, plural, one {# тандалды} other {# тандалд
 msgid "{selectedCount, plural, one {Bulk actions for # selected {entityName}} other {Bulk actions for # selected {manyName}}}"
 msgstr "{selectedCount, plural, one {# тандалган {entityName} үчүн жапырт аракеттер} other {# тандалган {manyName} үчүн жапырт аракеттер}}"
 
+#: ../../../lib/web/src/components/attachment-composer.tsx:252
 #: ../../../lib/web/src/components/ui/upload-progress.tsx:52
 msgid "{sentLabel} of {totalLabel}"
 msgstr "{totalLabel} ичинен {sentLabel}"
 
-#: src/features/chess/components/chat-message-list.tsx:224
+#: src/features/chess/components/chat-message-list.tsx:57
 msgid "{subject} played <0>{san}</0>"
 msgstr "{subject} ойноду <0>{san}</0>"
 
-#: src/features/chess/components/chat-message-list.tsx:222
+#: src/features/chess/components/chat-message-list.tsx:53
 msgid "{subject} took <0>{san}</0>"
 msgstr "{subject} алды <0>{san}</0>"
 
@@ -158,11 +159,11 @@ msgstr "{unreadCount, plural, one {Менюну ачуу (# окулбаган �
 msgid "+{0} nested"
 msgstr "+{0} ичине киргизилген"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:209
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:210
 msgid "+{totalDescendants} more replies"
 msgstr "+{totalDescendants} дагы жооп"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:208
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:209
 msgid "1 reply"
 msgstr "1 жооп"
 
@@ -210,7 +211,7 @@ msgstr "Аккаунт түрү"
 msgid "Account verified"
 msgstr "Аккаунт текшерилди"
 
-#: src/components/layout/chess-layout.tsx:110
+#: src/components/layout/chess-layout.tsx:58
 msgid "Active games"
 msgstr "Активдүү оюндар"
 
@@ -220,7 +221,7 @@ msgstr "Активдүү оюндар"
 msgid "Add"
 msgstr "Кошуу"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:360
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:365
 msgid "Add a comment..."
 msgstr "Комментарий кошуу..."
 
@@ -348,8 +349,12 @@ msgstr "Каалаган адам"
 msgid "Anyone who is logged in"
 msgstr "Кирген ар ким"
 
+#: ../../../lib/web/src/components/options-menu.tsx:249
+msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
+msgstr ""
+
 #. placeholder {0}: deleteTarget?.name
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:271
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:313
 msgid "Are you sure you want to delete \"{0}\"?"
 msgstr "\"{0}\" жок кылууну каалайсызбы?"
 
@@ -357,7 +362,7 @@ msgstr "\"{0}\" жок кылууну каалайсызбы?"
 msgid "Are you sure you want to delete the \"{name}\" column? This cannot be undone."
 msgstr "\"{name}\" тилкесин жок кылууну каалайсызбы? Бул аракетти артка кайтаруу мүмкүн эмес."
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:485
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:491
 msgid "Are you sure you want to delete this comment? This will also delete all replies."
 msgstr "Бул комментарийди жок кылууну каалайсызбы? Бардык жооптор да жок кылынат."
 
@@ -377,13 +382,13 @@ msgstr "Өсүү"
 msgid "Ascending"
 msgstr "Өсүү тартибинде"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:398
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:403
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:408
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:413
 msgid "Attach comment files"
 msgstr "Комментарий файлдарын тиркөө"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:439
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:444
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:445
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:450
 msgid "Attach reply files"
 msgstr "Жооп файлдарын тиркөө"
 
@@ -392,7 +397,7 @@ msgstr "Жооп файлдарын тиркөө"
 msgid "Authenticated users"
 msgstr "Аутентификацияланган колдонуучулар"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:315
+#: ../../../lib/web/src/components/step-up-dialog.tsx:329
 msgid "Authenticator code"
 msgstr "Authenticator коду"
 
@@ -470,11 +475,11 @@ msgid "Browser notifications"
 msgstr "Браузер эскертүүлөрү"
 
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:628
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:249
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:250
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:169
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:186
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx:67
-#: ../../../lib/web/src/components/step-up-dialog.tsx:363
+#: ../../../lib/web/src/components/step-up-dialog.tsx:377
 #: ../../../lib/web/src/components/travelling-picker.tsx:308
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:249
 #: ../../../lib/web/src/components/ui/editable-field-row.tsx:132
@@ -487,13 +492,13 @@ msgstr "Браузер эскертүүлөрү"
 msgid "Cancel"
 msgstr "Жокко чыгаруу"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:415
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:420
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:425
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:430
 msgid "Cancel comment"
 msgstr "Комментарийди жокко чыгаруу"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:455
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:460
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:461
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:466
 msgid "Cancel reply"
 msgstr "Жоопту жокко чыгаруу"
 
@@ -597,8 +602,8 @@ msgstr "Тандоону тазалоо"
 msgid "Clear selection (Escape)"
 msgstr "Тандоону тазалоо (Escape)"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:485
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:490
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:506
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:511
 #: ../../../lib/web/src/components/ui/dialog.tsx:78
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:358
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:361
@@ -667,8 +672,8 @@ msgstr "Жакында!"
 msgid "Command Palette"
 msgstr "Буйруктар палитрасы"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:330
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:337
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:331
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:338
 msgid "Comment actions"
 msgstr "Комментарий аракеттери"
 
@@ -677,7 +682,7 @@ msgstr "Комментарий аракеттери"
 msgid "Compact"
 msgstr "Компакттык"
 
-#: src/components/layout/chess-layout.tsx:121
+#: src/components/layout/chess-layout.tsx:59
 msgid "Completed"
 msgstr "Аяктады"
 
@@ -722,7 +727,7 @@ msgstr "Контексттик маалымат жана деталдар."
 msgid "Continue"
 msgstr "Улантуу"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:352
+#: ../../../lib/web/src/components/step-up-dialog.tsx:366
 msgid "Continue with {label}"
 msgstr "{label} менен улантуу"
 
@@ -746,22 +751,22 @@ msgstr "Бул документти жүктөө мүмкүн болбоду. К
 msgid "Couldn't load notifications"
 msgstr "Билдирүүлөрдү жүктөө мүмкүн болгон жок"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:184
+#: ../../../lib/web/src/components/step-up-dialog.tsx:193
 msgid "Couldn't send the code. Please try again."
 msgstr "Кодду жөнөтүү мүмкүн болгон жок. Кайра аракет кылыңыз."
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:136
+#: ../../../lib/web/src/components/step-up-dialog.tsx:145
 msgid "Couldn't start re-authentication. Please try again."
 msgstr "Кайра аутентификацияны баштоо мүмкүн болгон жок. Кайра аракет кылыңыз."
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:221
+#: ../../../lib/web/src/components/step-up-dialog.tsx:235
 msgid "Couldn't verify with that account. Please try again."
 msgstr "Бул каттоо эсеби менен текшерүү мүмкүн болбоду. Кайра аракет кылыңыз."
 
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:564
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:703
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:475
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:647
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:496
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:665
 #: ../../../lib/web/src/components/entity/entity-tree-view.tsx:672
 msgid "Create"
 msgstr "Түзүү"
@@ -780,7 +785,7 @@ msgstr "Жаңы нерсе түзүү"
 msgid "Created"
 msgstr "Түзүлдү"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:647
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:665
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:258
 #: src/features/chess/components/new-game.tsx:153
 msgid "Creating..."
@@ -831,18 +836,18 @@ msgstr "Демейки иргөө"
 
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:583
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:644
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:318
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:361
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:486
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:173
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:178
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:227
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:272
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:319
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:362
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:492
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:198
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:203
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:252
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:314
 #: src/features/chess/index.tsx:609
 msgid "Delete"
 msgstr "Жок кылуу"
 
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:270
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:312
 msgid "Delete attachment"
 msgstr "Тиркемени жок кылуу"
 
@@ -850,7 +855,7 @@ msgstr "Тиркемени жок кылуу"
 msgid "Delete column"
 msgstr "Тилкени жок кылуу"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:484
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:490
 msgid "Delete comment"
 msgstr "Комментарийди жок кылуу"
 
@@ -923,11 +928,11 @@ msgstr "Багыт"
 msgid "Directory"
 msgstr "Каталог"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:304
+#: ../../../lib/web/src/components/comment-composer.tsx:300
 msgid "Discard"
 msgstr "Жокко чыгаруу"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:302
+#: ../../../lib/web/src/components/comment-composer.tsx:298
 msgid "Discard draft?"
 msgstr "Долбоорду жокко чыгарасызбы?"
 
@@ -950,7 +955,7 @@ msgstr "Мобилдик каптал тилкесин көрсөтөт."
 msgid "Done"
 msgstr "Бүттү"
 
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:214
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:239
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:342
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:352
 msgid "Download"
@@ -960,7 +965,7 @@ msgstr "Жүктөп алуу"
 msgid "Download failed"
 msgstr "Жүктөп алуу ишке ашкан жок"
 
-#: src/features/chess/components/chat-message-list.tsx:193
+#: src/features/chess/components/chat-message-list.tsx:45
 msgid "Draw agreed"
 msgstr "Тең оюнга макул болушту"
 
@@ -976,8 +981,8 @@ msgstr "Кайталоолор"
 msgid "Dyslexia-friendly"
 msgstr "Дислексияга ыңгайлуу"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:307
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:352
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:308
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:353
 msgid "Edit"
 msgstr "Түзөтүү"
 
@@ -1015,15 +1020,15 @@ msgstr "Көрүнүштү түзөтүү"
 msgid "Email"
 msgstr "Электрондук почта"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:289
+#: ../../../lib/web/src/components/step-up-dialog.tsx:303
 msgid "Email code"
 msgstr "Электрондук почта коду"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:299
+#: ../../../lib/web/src/components/step-up-dialog.tsx:313
 msgid "Enter the code from your email"
 msgstr "Электрондук почтаңыздагы кодду киргизиңиз"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:324
+#: ../../../lib/web/src/components/step-up-dialog.tsx:338
 msgid "Enter your authenticator code"
 msgstr "Authenticator кодун киргизиңиз"
 
@@ -1068,7 +1073,7 @@ msgid "Failed to create game"
 msgstr "Оюн түзүү ишке ашкан жок"
 
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx:137
-#: ../../../lib/web/src/components/options-menu.tsx:99
+#: ../../../lib/web/src/components/options-menu.tsx:101
 msgid "Failed to create link"
 msgstr "Шилтеме түзүү ишке ашкан жок"
 
@@ -1080,11 +1085,11 @@ msgstr "Кайра матч түзүү ишке ашкан жок"
 msgid "Failed to decline draw"
 msgstr "Теңтайлаштан баш тартуу ишке ашкан жок"
 
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:110
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:130
 msgid "Failed to delete attachment"
 msgstr "Тиркемени өчүрүү ишке ашкан жок"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:207
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:212
 msgid "Failed to delete comment"
 msgstr "Комментарийди өчүрүү ишке ашкан жок"
 
@@ -1096,7 +1101,7 @@ msgstr "Оюнду өчүрүү ишке ашкан жок"
 msgid "Failed to delete link"
 msgstr "Шилтемени өчүрүү ишке ашкан жок"
 
-#: ../../../lib/web/src/components/options-menu.tsx:123
+#: ../../../lib/web/src/components/options-menu.tsx:125
 msgid "Failed to get RSS token"
 msgstr "RSS токенин алуу ишке ашкан жок"
 
@@ -1124,7 +1129,7 @@ msgstr "Кадам жасоо ишке ашкан жок"
 msgid "Failed to offer draw"
 msgstr "Теңтайлаш сунуштоо ишке ашкан жок"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:170
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:175
 msgid "Failed to post comment"
 msgstr "Комментарий жазуу ишке ашкан жок"
 
@@ -1136,7 +1141,7 @@ msgstr "Эсепти алып салуу ишке ашкан жок"
 msgid "Failed to resign"
 msgstr "Багынуу ишке ашкан жок"
 
-#: ../../../lib/web/src/components/options-menu.tsx:133
+#: ../../../lib/web/src/components/options-menu.tsx:136
 msgid "Failed to revoke RSS access"
 msgstr "RSS мүмкүнчүлүгүн кайтарып алуу ишке ашкан жок"
 
@@ -1149,17 +1154,17 @@ msgstr "Жөнөтүү ишке ашкан жок"
 msgid "Failed to send verification code"
 msgstr "Текшерүү кодун жөнөтүү ишке ашкан жок"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:190
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:195
 msgid "Failed to update comment"
 msgstr "Комментарийди жаңылоо ишке ашкан жок"
 
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:95
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:114
 msgid "Failed to upload attachment"
 msgstr "Тиркемени жүктөө ишке ашкан жок"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:567
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:133
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:150
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:594
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:155
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:175
 msgid "Files"
 msgstr "Файлдар"
 
@@ -1372,7 +1377,7 @@ msgstr "Тек тамгалар, сандар, боштуктар жана де�
 msgid "Light"
 msgstr "Жарык"
 
-#: ../../../lib/web/src/components/options-menu.tsx:190
+#: ../../../lib/web/src/components/options-menu.tsx:193
 msgid "Link"
 msgstr "Шилтеме"
 
@@ -1466,7 +1471,7 @@ msgstr "Эң аз узундугу"
 msgid "Mochi web"
 msgstr "Mochi веб"
 
-#: ../../../lib/web/src/components/options-menu.tsx:164
+#: ../../../lib/web/src/components/options-menu.tsx:167
 msgid "Moderation"
 msgstr ""
 
@@ -1474,8 +1479,8 @@ msgstr ""
 msgid "Monday"
 msgstr "Дүйшөмбү"
 
-#: ../../../lib/web/src/components/options-menu.tsx:145
-#: ../../../lib/web/src/components/options-menu.tsx:152
+#: ../../../lib/web/src/components/options-menu.tsx:148
+#: ../../../lib/web/src/components/options-menu.tsx:155
 msgid "More options"
 msgstr "Кошумча параметрлер"
 
@@ -1500,14 +1505,14 @@ msgstr "Аты 1000 символдон ашпашы керек"
 msgid "Network error"
 msgstr "Тармак катасы"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:460
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:481
 #: ../../../lib/web/src/components/ui/sort-selector.tsx:43
 msgid "New"
 msgstr "Жаңы"
 
 #: ../../../lib/web/src/components/game/game-empty-state.tsx:41
 #: ../../../lib/web/src/components/game/game-empty-state.tsx:53
-#: src/components/layout/chess-layout.tsx:138
+#: src/components/layout/chess-layout.tsx:60
 #: src/features/chess/components/new-game.tsx:96
 msgid "New game"
 msgstr "Жаңы оюн"
@@ -1517,7 +1522,7 @@ msgstr "Жаңы оюн"
 msgid "Next image"
 msgstr "Кийинки сүрөт"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:533
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:560
 msgid "No {parentClassNames} to add to"
 msgstr "{parentClassNames} кошуу үчүн жок"
 
@@ -1529,7 +1534,7 @@ msgstr "Кирүү эрежелери жок. Бул ресурска ким к�
 msgid "No activity yet"
 msgstr "Активдүүлүк азырынча жок"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:450
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:460
 msgid "No comments yet"
 msgstr "Комментарийлер азырынча жок"
 
@@ -1553,7 +1558,7 @@ msgstr "Оюндар азырынча жок"
 msgid "No groups available"
 msgstr "Топтор жеткиликсиз"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:500
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:527
 msgid "No item types can be created yet. Create the required parent items first."
 msgstr "Азырынча эч кандай нерсе түрлөрүн түзүүгө болбойт. Адегенде керектүү ата-эне нерселерди түзүңүз."
 
@@ -1561,7 +1566,7 @@ msgstr "Азырынча эч кандай нерсе түрлөрүн түзү�
 msgid "No matching objects"
 msgstr "Дал келген объекттер жок"
 
-#: src/features/chess/components/chat-message-list.tsx:158
+#: src/features/chess/components/chat-message-list.tsx:41
 msgid "No messages yet"
 msgstr "Билдирүүлөр азырынча жок"
 
@@ -1582,6 +1587,7 @@ msgstr "Жерлер табылган жок"
 msgid "No profile"
 msgstr "Профиль жок"
 
+#: ../../../lib/web/src/components/inline-entity-search.tsx:74
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:82
 #: ../../../lib/web/src/components/search-entity-page.tsx:73
 msgid "No results found"
@@ -1619,9 +1625,9 @@ msgid "No views"
 msgstr "Көрүүлөр жок"
 
 #: ../../../lib/web/src/components/colour-picker.tsx:349
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:516
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:519
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:523
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:543
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:546
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:550
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:365
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:388
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:391
@@ -1761,15 +1767,15 @@ msgstr "Ээси"
 msgid "Page {currentPage} of {totalPages}"
 msgstr "{totalPages} беттин {currentPage} бети"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:508
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:535
 msgid "Parent"
 msgstr "Ата-эне"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:334
+#: ../../../lib/web/src/components/step-up-dialog.tsx:348
 msgid "Passkey"
 msgstr "Мүмкүндүк ачкычы"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:209
+#: ../../../lib/web/src/components/step-up-dialog.tsx:218
 msgid "Passkey verification failed. Please try again."
 msgstr "Passkey текшерүүсү ишке ашкан жок. Кайра аракет кылыңыз."
 
@@ -1789,7 +1795,7 @@ msgstr "пешка"
 msgid "Pick a date"
 msgstr "Күндү тандаңыз"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:99
+#: ../../../lib/web/src/components/comment-composer.tsx:84
 #: ../../../lib/web/src/features/errors/general-error.tsx:54
 #: ../../../lib/web/src/lib/api-response-interceptors.ts:323
 msgid "Please check your internet connection and try again."
@@ -1811,11 +1817,11 @@ msgstr "Кайра аракет кылыңыз."
 msgid "Please wait a moment and try again."
 msgstr "Бир аз күтүп, кайра аракет кылыңыз."
 
-#: ../../../lib/web/src/components/options-menu.tsx:175
+#: ../../../lib/web/src/components/options-menu.tsx:178
 msgid "Posts"
 msgstr "Посттор"
 
-#: ../../../lib/web/src/components/options-menu.tsx:178
+#: ../../../lib/web/src/components/options-menu.tsx:181
 msgid "Posts and comments"
 msgstr "Посттор жана комментарийлер"
 
@@ -1905,9 +1911,9 @@ msgstr "24 саат ичинде салыштырмалуу, антпесе аб
 msgid "Rematch"
 msgstr "Кайра оюн"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:236
+#: ../../../lib/web/src/components/attachment-composer.tsx:289
+#: ../../../lib/web/src/components/attachment-composer.tsx:328
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx:190
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:598
 #: ../../../lib/web/src/features/access/access-list.tsx:270
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:180
 msgid "Remove"
@@ -1960,13 +1966,13 @@ msgstr "Тилкенин атын өзгөртүү"
 msgid "Rename this board column"
 msgstr "Такта тилкесинин атын өзгөртүү"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:294
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:342
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:295
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:343
 msgid "Reply"
 msgstr "Жооп"
 
 #. placeholder {0}: comment.name || comment.author
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:385
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:386
 msgid "Reply to {0}..."
 msgstr "{0}-га жооп..."
 
@@ -1974,7 +1980,7 @@ msgstr "{0}-га жооп..."
 msgid "Required"
 msgstr "Талап кылынат"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:367
+#: ../../../lib/web/src/components/step-up-dialog.tsx:381
 msgid "Resend email"
 msgstr "Катты кайра жөнөтүү"
 
@@ -2005,13 +2011,21 @@ msgstr "Оюндан баш тартасызбы?"
 msgid "Resigning..."
 msgstr "Баш тартылууда..."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:253
+#: ../../../lib/web/src/components/attachment-composer.tsx:346
 msgid "Retry"
 msgstr "Кайра аракет кылуу"
 
-#: ../../../lib/web/src/components/options-menu.tsx:181
+#: ../../../lib/web/src/components/options-menu.tsx:250
+msgid "Revoke"
+msgstr ""
+
+#: ../../../lib/web/src/components/options-menu.tsx:184
 msgid "Revoke access"
 msgstr "Мүмкүнчүлүктү кайтарып алуу"
+
+#: ../../../lib/web/src/components/options-menu.tsx:244
+msgid "Revoke RSS access?"
+msgstr ""
 
 #: ../../../lib/web/src/components/config-drawer.tsx:362
 msgid "Right to Left"
@@ -2034,15 +2048,15 @@ msgstr "Саптар мунун боюнча топтолот"
 msgid "Rows per page"
 msgstr "Бир барактагы саптар"
 
-#: ../../../lib/web/src/components/options-menu.tsx:131
+#: ../../../lib/web/src/components/options-menu.tsx:134
 msgid "RSS access revoked"
 msgstr "RSS мүмкүнчүлүгү кайтарылды"
 
-#: ../../../lib/web/src/components/options-menu.tsx:171
+#: ../../../lib/web/src/components/options-menu.tsx:174
 msgid "RSS feed"
 msgstr "RSS тасмасы"
 
-#: ../../../lib/web/src/components/options-menu.tsx:121
+#: ../../../lib/web/src/components/options-menu.tsx:123
 msgid "RSS URL copied to clipboard"
 msgstr "RSS URL алмашуу буферине көчүрүлдү"
 
@@ -2050,7 +2064,7 @@ msgstr "RSS URL алмашуу буферине көчүрүлдү"
 msgid "Saturday"
 msgstr "Ишемби"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:269
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:270
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:173
 #: ../../../lib/web/src/components/ui/editable-field-row.tsx:122
 #: ../../../lib/web/src/components/ui/secret-field.tsx:77
@@ -2102,6 +2116,7 @@ msgstr "Бул көрүнүштү издеңиз, көзөмөлдөңүз жа�
 
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:181
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:257
+#: ../../../lib/web/src/components/inline-entity-search.tsx:73
 #: ../../../lib/web/src/components/person-picker.tsx:324
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:81
 #: ../../../lib/web/src/components/search-entity-page.tsx:72
@@ -2205,7 +2220,7 @@ msgstr "Тандалган: <0>{0}</0>"
 msgid "Send again"
 msgstr "Кайра жөнөтүү"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:307
+#: ../../../lib/web/src/components/step-up-dialog.tsx:321
 msgid "Send email"
 msgstr "Электрондук почта жөнөтүү"
 
@@ -2238,7 +2253,7 @@ msgstr "Чыгуу жана баруу жерин коюу"
 
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx:126
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx:132
-#: ../../../lib/web/src/components/options-menu.tsx:196
+#: ../../../lib/web/src/components/options-menu.tsx:199
 msgid "Settings"
 msgstr "Жөндөөлөр"
 
@@ -2295,7 +2310,7 @@ msgstr "Кичине"
 msgid "Sort"
 msgstr "Сорттоо"
 
-#: ../../../lib/web/src/components/options-menu.tsx:158
+#: ../../../lib/web/src/components/options-menu.tsx:161
 msgid "Sources"
 msgstr "Булактар"
 
@@ -2311,7 +2326,7 @@ msgstr "Жаңы шахмат оюнун баштоо"
 msgid "Start game"
 msgstr "Оюнду баштоо"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:451
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:461
 msgid "Start the discussion by adding the first comment."
 msgstr "Биринчи комментарий жазып, талкууну баштаңыз."
 
@@ -2323,16 +2338,18 @@ msgstr "Бирок биз менен болуңуз!"
 msgid "Subject"
 msgstr "Тема"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:431
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:440
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:441
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:450
 msgid "Submit comment"
 msgstr "Комментарий жөнөтүү"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:470
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:475
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:476
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:481
 msgid "Submit reply"
 msgstr "Жоопту жөнөтүү"
 
+#: ../../../lib/web/src/components/inline-entity-search.tsx:76
+#: ../../../lib/web/src/components/recommended-entities.tsx:66
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:83
 #: ../../../lib/web/src/components/search-entity-page.tsx:74
 msgid "Subscribe"
@@ -2384,9 +2401,18 @@ msgstr "Эрежелер жана шарттар"
 msgid "Text"
 msgstr "Текст"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:195
+#: ../../../lib/web/src/components/step-up-dialog.tsx:204
 msgid "That code is incorrect or has expired."
 msgstr "Бул код туура эмес же мөөнөтү бүткөн."
+
+#: ../../../lib/web/src/hooks/use-attachment-error.ts:31
+msgid "That could not be sent. The files may be too large, or your connection failed. Try smaller files."
+msgstr ""
+
+#: ../../../lib/web/src/hooks/use-attachment-error.ts:28
+#: ../../../lib/web/src/lib/handle-server-error.ts:26
+msgid "That was too large to upload. Remove or shrink files and try again."
+msgstr ""
 
 #: ../../../lib/web/src/features/errors/general-error.tsx:68
 msgid "The requested content could not be found."
@@ -2543,11 +2569,11 @@ msgstr "Кошмо Штаттар"
 msgid "Unknown"
 msgstr "Белгисиз"
 
-#: ../../../lib/web/src/components/options-menu.tsx:211
+#: ../../../lib/web/src/components/options-menu.tsx:214
 msgid "Unsubscribe"
 msgstr "Жазылуудан баш тартуу"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:286
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:290
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx:103
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx:184
 msgid "Untitled"
@@ -2562,8 +2588,8 @@ msgstr "Текшерилген эмес"
 msgid "Updated"
 msgstr "Жаңыланды"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:630
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:259
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:648
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:301
 msgid "Upload"
 msgstr "Жүктөө"
 
@@ -2571,7 +2597,7 @@ msgstr "Жүктөө"
 msgid "Upload progress"
 msgstr "Жүктөө жүрүшү"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:338
+#: ../../../lib/web/src/components/step-up-dialog.tsx:352
 msgid "Use your passkey"
 msgstr "Passkey колдонуңуз"
 
@@ -2593,7 +2619,7 @@ msgstr "Текшерүү коду жөнөтүлдү"
 msgid "Verification failed"
 msgstr "Текшерүү ишке ашкан жок"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:388
+#: ../../../lib/web/src/components/step-up-dialog.tsx:402
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:172
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:111
 msgid "Verify"
@@ -2671,7 +2697,7 @@ msgstr "Ак"
 msgid "White {0}"
 msgstr "Ак {0}"
 
-#: src/features/chess/components/chat-message-list.tsx:214
+#: src/features/chess/components/chat-message-list.tsx:51
 msgid "You"
 msgstr "Сиз"
 
@@ -2691,14 +2717,14 @@ msgstr "Баарын көрдүңүз!"
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Аккаунтуңуз {source} дан бул жерге которулду. Аны ал жерде жоккун кана дебегенче, билдирүүлөр жана эскертмелер эки серверге тең жете алат, мазмунуңуздун бир бөлүгү эски серверден берилүүдө калат, ал эми жолдоочулар сизди бул жерден табуу үчүн бир нече мүнөт керек кылышы мүмкүн."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:295
+#: ../../../lib/web/src/components/comment-composer.tsx:291
 msgid "Your attachments will be lost."
 msgstr "Тиркемелериңиз жоголот."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:293
+#: ../../../lib/web/src/components/comment-composer.tsx:289
 msgid "Your text and attachments will be lost."
 msgstr "Текстиңиз жана тиркемелериңиз жоголот."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:296
+#: ../../../lib/web/src/components/comment-composer.tsx:292
 msgid "Your text will be lost."
 msgstr "Текстиңиз жоголот."

@@ -14,19 +14,19 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. js-lingui-explicit-id
-#: ../../../lib/web/src/lib/error-normalizer.ts:236
+#: ../../../lib/web/src/lib/error-normalizer.ts:244
 msgid "Please check your internet connection and try again."
 msgstr "कृपया आफ्नो इन्टरनेट जडान जाँच गरी पुनः प्रयास गर्नुहोस्।"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:302
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:306
 msgid " or "
 msgstr " वा "
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:228
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:229
 msgid "(edited)"
 msgstr "(सम्पादित)"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:212
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:213
 msgid "(expand)"
 msgstr "(विस्तार गर्नुहोस्)"
 
@@ -101,15 +101,15 @@ msgstr "{entityLabel} नाम"
 msgid "{entityLabel} name is required"
 msgstr "{entityLabel} नाम आवश्यक छ"
 
-#: src/features/chess/components/chat-message-list.tsx:195
+#: src/features/chess/components/chat-message-list.tsx:46
 msgid "{name} declined the draw"
 msgstr "{name} ले बराबरी अस्वीकार गर्‍यो"
 
-#: src/features/chess/components/chat-message-list.tsx:191
+#: src/features/chess/components/chat-message-list.tsx:44
 msgid "{name} offered a draw"
 msgstr "{name} ले बराबरीको प्रस्ताव गर्‍यो"
 
-#: src/features/chess/components/chat-message-list.tsx:189
+#: src/features/chess/components/chat-message-list.tsx:43
 msgid "{name} resigned"
 msgstr "{name} ले हार स्वीकार गर्‍यो"
 
@@ -133,15 +133,16 @@ msgstr "{selectedCount, plural, one {# चयन गरिएको} other {# �
 msgid "{selectedCount, plural, one {Bulk actions for # selected {entityName}} other {Bulk actions for # selected {manyName}}}"
 msgstr "{selectedCount, plural, one {# चयनित {entityName} का लागि बल्क कार्यहरू} other {# चयनित {manyName} का लागि बल्क कार्यहरू}}"
 
+#: ../../../lib/web/src/components/attachment-composer.tsx:252
 #: ../../../lib/web/src/components/ui/upload-progress.tsx:52
 msgid "{sentLabel} of {totalLabel}"
 msgstr "{totalLabel}मध्ये {sentLabel}"
 
-#: src/features/chess/components/chat-message-list.tsx:224
+#: src/features/chess/components/chat-message-list.tsx:57
 msgid "{subject} played <0>{san}</0>"
 msgstr "{subject} ले <0>{san}</0> खेल्यो"
 
-#: src/features/chess/components/chat-message-list.tsx:222
+#: src/features/chess/components/chat-message-list.tsx:53
 msgid "{subject} took <0>{san}</0>"
 msgstr "{subject} ले <0>{san}</0> लियो"
 
@@ -158,11 +159,11 @@ msgstr "{unreadCount, plural, one {मेनु खोल्नुहोस् (
 msgid "+{0} nested"
 msgstr "+{0} नेस्टेड"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:209
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:210
 msgid "+{totalDescendants} more replies"
 msgstr "+{totalDescendants} थप जवाफहरू"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:208
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:209
 msgid "1 reply"
 msgstr "१ जवाफ"
 
@@ -210,7 +211,7 @@ msgstr "खाता प्रकार"
 msgid "Account verified"
 msgstr "खाता प्रमाणीकरण गरियो"
 
-#: src/components/layout/chess-layout.tsx:110
+#: src/components/layout/chess-layout.tsx:58
 msgid "Active games"
 msgstr "सक्रिय खेलहरू"
 
@@ -220,7 +221,7 @@ msgstr "सक्रिय खेलहरू"
 msgid "Add"
 msgstr "थप्नुहोस्"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:360
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:365
 msgid "Add a comment..."
 msgstr "टिप्पणी थप्नुहोस्..."
 
@@ -348,8 +349,12 @@ msgstr "जोसुकै"
 msgid "Anyone who is logged in"
 msgstr "लग इन भएको जो कोही"
 
+#: ../../../lib/web/src/components/options-menu.tsx:249
+msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
+msgstr ""
+
 #. placeholder {0}: deleteTarget?.name
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:271
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:313
 msgid "Are you sure you want to delete \"{0}\"?"
 msgstr "के तपाईं \"{0}\" मेटाउन निश्चित हुनुहुन्छ?"
 
@@ -357,7 +362,7 @@ msgstr "के तपाईं \"{0}\" मेटाउन निश्चित 
 msgid "Are you sure you want to delete the \"{name}\" column? This cannot be undone."
 msgstr "के तपाईं \"{name}\" स्तम्भ मेटाउन निश्चित हुनुहुन्छ? यो फिर्ता गर्न सकिँदैन।"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:485
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:491
 msgid "Are you sure you want to delete this comment? This will also delete all replies."
 msgstr "के तपाईं यो टिप्पणी मेटाउन निश्चित हुनुहुन्छ? यसले सबै जवाफहरू पनि मेटाउनेछ।"
 
@@ -377,13 +382,13 @@ msgstr "बढ्दो"
 msgid "Ascending"
 msgstr "बढ्दो क्रम"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:398
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:403
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:408
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:413
 msgid "Attach comment files"
 msgstr "टिप्पणी फाइलहरू एट्याच गर्नुहोस्"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:439
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:444
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:445
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:450
 msgid "Attach reply files"
 msgstr "जवाफ फाइलहरू एट्याच गर्नुहोस्"
 
@@ -392,7 +397,7 @@ msgstr "जवाफ फाइलहरू एट्याच गर्नुह
 msgid "Authenticated users"
 msgstr "प्रमाणित प्रयोगकर्ताहरू"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:315
+#: ../../../lib/web/src/components/step-up-dialog.tsx:329
 msgid "Authenticator code"
 msgstr "Authenticator कोड"
 
@@ -470,11 +475,11 @@ msgid "Browser notifications"
 msgstr "ब्राउजर सूचनाहरू"
 
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:628
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:249
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:250
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:169
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:186
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx:67
-#: ../../../lib/web/src/components/step-up-dialog.tsx:363
+#: ../../../lib/web/src/components/step-up-dialog.tsx:377
 #: ../../../lib/web/src/components/travelling-picker.tsx:308
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:249
 #: ../../../lib/web/src/components/ui/editable-field-row.tsx:132
@@ -487,13 +492,13 @@ msgstr "ब्राउजर सूचनाहरू"
 msgid "Cancel"
 msgstr "रद्द गर्नुहोस्"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:415
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:420
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:425
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:430
 msgid "Cancel comment"
 msgstr "टिप्पणी रद्द गर्नुहोस्"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:455
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:460
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:461
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:466
 msgid "Cancel reply"
 msgstr "जवाफ रद्द गर्नुहोस्"
 
@@ -597,8 +602,8 @@ msgstr "चयन खाली गर्नुहोस्"
 msgid "Clear selection (Escape)"
 msgstr "चयन खाली गर्नुहोस् (Escape)"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:485
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:490
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:506
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:511
 #: ../../../lib/web/src/components/ui/dialog.tsx:78
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:358
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:361
@@ -667,8 +672,8 @@ msgstr "चाँडै आउँदै!"
 msgid "Command Palette"
 msgstr "कमाण्ड प्यालेट"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:330
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:337
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:331
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:338
 msgid "Comment actions"
 msgstr "टिप्पणी कार्यहरू"
 
@@ -677,7 +682,7 @@ msgstr "टिप्पणी कार्यहरू"
 msgid "Compact"
 msgstr "कम्प्याक्ट"
 
-#: src/components/layout/chess-layout.tsx:121
+#: src/components/layout/chess-layout.tsx:59
 msgid "Completed"
 msgstr "पूरा भयो"
 
@@ -722,7 +727,7 @@ msgstr "प्रासङ्गिक जानकारी र विवरण
 msgid "Continue"
 msgstr "जारी राख्नुहोस्"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:352
+#: ../../../lib/web/src/components/step-up-dialog.tsx:366
 msgid "Continue with {label}"
 msgstr "{label} सँग जारी राख्नुहोस्"
 
@@ -746,22 +751,22 @@ msgstr "यो कागजात लोड गर्न सकिएन। क�
 msgid "Couldn't load notifications"
 msgstr "सूचनाहरू लोड गर्न सकिएन"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:184
+#: ../../../lib/web/src/components/step-up-dialog.tsx:193
 msgid "Couldn't send the code. Please try again."
 msgstr "कोड पठाउन सकिएन। कृपया फेरि प्रयास गर्नुहोस्।"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:136
+#: ../../../lib/web/src/components/step-up-dialog.tsx:145
 msgid "Couldn't start re-authentication. Please try again."
 msgstr "पुन: प्रमाणीकरण सुरु गर्न सकिएन। कृपया फेरि प्रयास गर्नुहोस्।"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:221
+#: ../../../lib/web/src/components/step-up-dialog.tsx:235
 msgid "Couldn't verify with that account. Please try again."
 msgstr "त्यो खातासँग प्रमाणित गर्न सकिएन। कृपया फेरि प्रयास गर्नुहोस्।"
 
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:564
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:703
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:475
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:647
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:496
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:665
 #: ../../../lib/web/src/components/entity/entity-tree-view.tsx:672
 msgid "Create"
 msgstr "सिर्जना गर्नुहोस्"
@@ -780,7 +785,7 @@ msgstr "नयाँ वस्तु सिर्जना गर्नुहो
 msgid "Created"
 msgstr "सिर्जना गरियो"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:647
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:665
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:258
 #: src/features/chess/components/new-game.tsx:153
 msgid "Creating..."
@@ -831,18 +836,18 @@ msgstr "पूर्वनिर्धारित क्रमबद्ध"
 
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:583
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:644
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:318
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:361
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:486
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:173
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:178
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:227
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:272
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:319
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:362
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:492
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:198
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:203
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:252
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:314
 #: src/features/chess/index.tsx:609
 msgid "Delete"
 msgstr "मेटाउनुहोस्"
 
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:270
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:312
 msgid "Delete attachment"
 msgstr "एट्याचमेन्ट मेटाउनुहोस्"
 
@@ -850,7 +855,7 @@ msgstr "एट्याचमेन्ट मेटाउनुहोस्"
 msgid "Delete column"
 msgstr "स्तम्भ मेटाउनुहोस्"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:484
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:490
 msgid "Delete comment"
 msgstr "टिप्पणी मेटाउनुहोस्"
 
@@ -923,11 +928,11 @@ msgstr "दिशा"
 msgid "Directory"
 msgstr "निर्देशिका"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:304
+#: ../../../lib/web/src/components/comment-composer.tsx:300
 msgid "Discard"
 msgstr "हटाउनुहोस्"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:302
+#: ../../../lib/web/src/components/comment-composer.tsx:298
 msgid "Discard draft?"
 msgstr "मस्यौदा हटाउने?"
 
@@ -950,7 +955,7 @@ msgstr "मोबाइल साइडबार देखाउँछ।"
 msgid "Done"
 msgstr "सम्पन्न"
 
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:214
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:239
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:342
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:352
 msgid "Download"
@@ -960,7 +965,7 @@ msgstr "डाउनलोड"
 msgid "Download failed"
 msgstr "डाउनलोड असफल भयो"
 
-#: src/features/chess/components/chat-message-list.tsx:193
+#: src/features/chess/components/chat-message-list.tsx:45
 msgid "Draw agreed"
 msgstr "बराबरी सहमति भयो"
 
@@ -976,8 +981,8 @@ msgstr "नक्कली"
 msgid "Dyslexia-friendly"
 msgstr "डिस्लेक्सिया-मैत्रीपूर्ण"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:307
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:352
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:308
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:353
 msgid "Edit"
 msgstr "सम्पादन"
 
@@ -1015,15 +1020,15 @@ msgstr "दृश्य सम्पादन गर्नुहोस्"
 msgid "Email"
 msgstr "इमेल"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:289
+#: ../../../lib/web/src/components/step-up-dialog.tsx:303
 msgid "Email code"
 msgstr "इमेल कोड"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:299
+#: ../../../lib/web/src/components/step-up-dialog.tsx:313
 msgid "Enter the code from your email"
 msgstr "तपाईंको इमेलमा आएको कोड प्रविष्ट गर्नुहोस्"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:324
+#: ../../../lib/web/src/components/step-up-dialog.tsx:338
 msgid "Enter your authenticator code"
 msgstr "आफ्नो प्रमाणक कोड हाल्नुहोस्"
 
@@ -1068,7 +1073,7 @@ msgid "Failed to create game"
 msgstr "खेल सिर्जना गर्न असफल"
 
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx:137
-#: ../../../lib/web/src/components/options-menu.tsx:99
+#: ../../../lib/web/src/components/options-menu.tsx:101
 msgid "Failed to create link"
 msgstr "लिङ्क सिर्जना गर्न असफल"
 
@@ -1080,11 +1085,11 @@ msgstr "रिम्याच सिर्जना गर्न असफल"
 msgid "Failed to decline draw"
 msgstr "ड्र अस्वीकार गर्न असफल"
 
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:110
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:130
 msgid "Failed to delete attachment"
 msgstr "एट्याचमेन्ट मेटाउन असफल"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:207
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:212
 msgid "Failed to delete comment"
 msgstr "टिप्पणी मेटाउन असफल"
 
@@ -1096,7 +1101,7 @@ msgstr "खेल मेटाउन असफल"
 msgid "Failed to delete link"
 msgstr "लिङ्क मेटाउन असफल"
 
-#: ../../../lib/web/src/components/options-menu.tsx:123
+#: ../../../lib/web/src/components/options-menu.tsx:125
 msgid "Failed to get RSS token"
 msgstr "RSS टोकन प्राप्त गर्न असफल"
 
@@ -1124,7 +1129,7 @@ msgstr "चाल चल्न असफल"
 msgid "Failed to offer draw"
 msgstr "ड्र प्रस्ताव गर्न असफल"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:170
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:175
 msgid "Failed to post comment"
 msgstr "टिप्पणी पोस्ट गर्न असफल"
 
@@ -1136,7 +1141,7 @@ msgstr "खाता हटाउन असफल"
 msgid "Failed to resign"
 msgstr "राजीनामा दिन असफल"
 
-#: ../../../lib/web/src/components/options-menu.tsx:133
+#: ../../../lib/web/src/components/options-menu.tsx:136
 msgid "Failed to revoke RSS access"
 msgstr "RSS पहुँच रद्द गर्न असफल"
 
@@ -1149,17 +1154,17 @@ msgstr "पठाउन असफल"
 msgid "Failed to send verification code"
 msgstr "प्रमाणीकरण कोड पठाउन असफल"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:190
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:195
 msgid "Failed to update comment"
 msgstr "टिप्पणी अद्यावधिक गर्न असफल"
 
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:95
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:114
 msgid "Failed to upload attachment"
 msgstr "एट्याचमेन्ट अपलोड गर्न असफल"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:567
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:133
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:150
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:594
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:155
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:175
 msgid "Files"
 msgstr "फाइलहरू"
 
@@ -1372,7 +1377,7 @@ msgstr "अक्षर, अंक, स्पेस र ह्यायफन �
 msgid "Light"
 msgstr "उज्यालो"
 
-#: ../../../lib/web/src/components/options-menu.tsx:190
+#: ../../../lib/web/src/components/options-menu.tsx:193
 msgid "Link"
 msgstr "लिङ्क"
 
@@ -1466,7 +1471,7 @@ msgstr "न्यूनतम लम्बाइ"
 msgid "Mochi web"
 msgstr "Mochi वेब"
 
-#: ../../../lib/web/src/components/options-menu.tsx:164
+#: ../../../lib/web/src/components/options-menu.tsx:167
 msgid "Moderation"
 msgstr ""
 
@@ -1474,8 +1479,8 @@ msgstr ""
 msgid "Monday"
 msgstr "सोमबार"
 
-#: ../../../lib/web/src/components/options-menu.tsx:145
-#: ../../../lib/web/src/components/options-menu.tsx:152
+#: ../../../lib/web/src/components/options-menu.tsx:148
+#: ../../../lib/web/src/components/options-menu.tsx:155
 msgid "More options"
 msgstr "थप विकल्पहरू"
 
@@ -1500,14 +1505,14 @@ msgstr "नाम १००० वर्ण वा सोभन्दा कम 
 msgid "Network error"
 msgstr "नेटवर्क त्रुटि"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:460
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:481
 #: ../../../lib/web/src/components/ui/sort-selector.tsx:43
 msgid "New"
 msgstr "नयाँ"
 
 #: ../../../lib/web/src/components/game/game-empty-state.tsx:41
 #: ../../../lib/web/src/components/game/game-empty-state.tsx:53
-#: src/components/layout/chess-layout.tsx:138
+#: src/components/layout/chess-layout.tsx:60
 #: src/features/chess/components/new-game.tsx:96
 msgid "New game"
 msgstr "नयाँ खेल"
@@ -1517,7 +1522,7 @@ msgstr "नयाँ खेल"
 msgid "Next image"
 msgstr "अर्को तस्बिर"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:533
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:560
 msgid "No {parentClassNames} to add to"
 msgstr "थप्न कुनै {parentClassNames} छैन"
 
@@ -1529,7 +1534,7 @@ msgstr "कुनै पहुँच नियम कन्फिगर गर�
 msgid "No activity yet"
 msgstr "अहिलेसम्म कुनै गतिविधि छैन"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:450
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:460
 msgid "No comments yet"
 msgstr "अहिलेसम्म कुनै टिप्पणी छैन"
 
@@ -1553,7 +1558,7 @@ msgstr "अहिलेसम्म कुनै खेल छैन"
 msgid "No groups available"
 msgstr "कुनै समूह उपलब्ध छैन"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:500
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:527
 msgid "No item types can be created yet. Create the required parent items first."
 msgstr "अहिले कुनै आइटम प्रकार सिर्जना गर्न सकिँदैन। पहिले आवश्यक अभिभावक आइटमहरू सिर्जना गर्नुहोस्।"
 
@@ -1561,7 +1566,7 @@ msgstr "अहिले कुनै आइटम प्रकार सिर�
 msgid "No matching objects"
 msgstr "कुनै मिल्दो वस्तु छैन"
 
-#: src/features/chess/components/chat-message-list.tsx:158
+#: src/features/chess/components/chat-message-list.tsx:41
 msgid "No messages yet"
 msgstr "अहिलेसम्म कुनै सन्देश छैन"
 
@@ -1582,6 +1587,7 @@ msgstr "कुनै स्थान भेटिएन"
 msgid "No profile"
 msgstr "कुनै प्रोफाइल छैन"
 
+#: ../../../lib/web/src/components/inline-entity-search.tsx:74
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:82
 #: ../../../lib/web/src/components/search-entity-page.tsx:73
 msgid "No results found"
@@ -1619,9 +1625,9 @@ msgid "No views"
 msgstr "कुनै भ्यु छैन"
 
 #: ../../../lib/web/src/components/colour-picker.tsx:349
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:516
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:519
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:523
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:543
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:546
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:550
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:365
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:388
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:391
@@ -1761,15 +1767,15 @@ msgstr "मालिक"
 msgid "Page {currentPage} of {totalPages}"
 msgstr "पृष्ठ {currentPage} / {totalPages}"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:508
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:535
 msgid "Parent"
 msgstr "अभिभावक"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:334
+#: ../../../lib/web/src/components/step-up-dialog.tsx:348
 msgid "Passkey"
 msgstr "पासकी"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:209
+#: ../../../lib/web/src/components/step-up-dialog.tsx:218
 msgid "Passkey verification failed. Please try again."
 msgstr "पासकी प्रमाणीकरण असफल भयो। कृपया फेरि प्रयास गर्नुहोस्।"
 
@@ -1789,7 +1795,7 @@ msgstr "प्यादा"
 msgid "Pick a date"
 msgstr "मिति छान्नुहोस्"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:99
+#: ../../../lib/web/src/components/comment-composer.tsx:84
 #: ../../../lib/web/src/features/errors/general-error.tsx:54
 #: ../../../lib/web/src/lib/api-response-interceptors.ts:323
 msgid "Please check your internet connection and try again."
@@ -1811,11 +1817,11 @@ msgstr "कृपया फेरि प्रयास गर्नुहोस
 msgid "Please wait a moment and try again."
 msgstr "कृपया केही बेर पर्खनुहोस् र फेरि प्रयास गर्नुहोस्।"
 
-#: ../../../lib/web/src/components/options-menu.tsx:175
+#: ../../../lib/web/src/components/options-menu.tsx:178
 msgid "Posts"
 msgstr "पोस्टहरू"
 
-#: ../../../lib/web/src/components/options-menu.tsx:178
+#: ../../../lib/web/src/components/options-menu.tsx:181
 msgid "Posts and comments"
 msgstr "पोस्ट र टिप्पणीहरू"
 
@@ -1905,9 +1911,9 @@ msgstr "२४ घण्टाभित्र सापेक्ष, अन्�
 msgid "Rematch"
 msgstr "पुन: खेल"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:236
+#: ../../../lib/web/src/components/attachment-composer.tsx:289
+#: ../../../lib/web/src/components/attachment-composer.tsx:328
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx:190
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:598
 #: ../../../lib/web/src/features/access/access-list.tsx:270
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:180
 msgid "Remove"
@@ -1960,13 +1966,13 @@ msgstr "स्तम्भको नाम परिवर्तन गर्न
 msgid "Rename this board column"
 msgstr "यो बोर्ड स्तम्भको नाम परिवर्तन गर्नुहोस्"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:294
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:342
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:295
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:343
 msgid "Reply"
 msgstr "जवाफ दिनुहोस्"
 
 #. placeholder {0}: comment.name || comment.author
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:385
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:386
 msgid "Reply to {0}..."
 msgstr "{0} लाई जवाफ..."
 
@@ -1974,7 +1980,7 @@ msgstr "{0} लाई जवाफ..."
 msgid "Required"
 msgstr "आवश्यक"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:367
+#: ../../../lib/web/src/components/step-up-dialog.tsx:381
 msgid "Resend email"
 msgstr "इमेल फेरि पठाउनुहोस्"
 
@@ -2005,13 +2011,21 @@ msgstr "खेल छोड्ने?"
 msgid "Resigning..."
 msgstr "हार स्वीकार्दै..."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:253
+#: ../../../lib/web/src/components/attachment-composer.tsx:346
 msgid "Retry"
 msgstr "फेरि प्रयास गर्नुहोस्"
 
-#: ../../../lib/web/src/components/options-menu.tsx:181
+#: ../../../lib/web/src/components/options-menu.tsx:250
+msgid "Revoke"
+msgstr ""
+
+#: ../../../lib/web/src/components/options-menu.tsx:184
 msgid "Revoke access"
 msgstr "पहुँच रद्द गर्नुहोस्"
+
+#: ../../../lib/web/src/components/options-menu.tsx:244
+msgid "Revoke RSS access?"
+msgstr ""
 
 #: ../../../lib/web/src/components/config-drawer.tsx:362
 msgid "Right to Left"
@@ -2034,15 +2048,15 @@ msgstr "पङ्क्तिहरू समूहीकरण"
 msgid "Rows per page"
 msgstr "प्रति पृष्ठ पङ्क्तिहरू"
 
-#: ../../../lib/web/src/components/options-menu.tsx:131
+#: ../../../lib/web/src/components/options-menu.tsx:134
 msgid "RSS access revoked"
 msgstr "RSS पहुँच रद्द गरियो"
 
-#: ../../../lib/web/src/components/options-menu.tsx:171
+#: ../../../lib/web/src/components/options-menu.tsx:174
 msgid "RSS feed"
 msgstr "RSS फिड"
 
-#: ../../../lib/web/src/components/options-menu.tsx:121
+#: ../../../lib/web/src/components/options-menu.tsx:123
 msgid "RSS URL copied to clipboard"
 msgstr "RSS URL क्लिपबोर्डमा प्रतिलिपि गरियो"
 
@@ -2050,7 +2064,7 @@ msgstr "RSS URL क्लिपबोर्डमा प्रतिलिपि
 msgid "Saturday"
 msgstr "शनिबार"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:269
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:270
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:173
 #: ../../../lib/web/src/components/ui/editable-field-row.tsx:122
 #: ../../../lib/web/src/components/ui/secret-field.tsx:77
@@ -2102,6 +2116,7 @@ msgstr "यो दृश्य खोज्नुहोस्, हेर्न�
 
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:181
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:257
+#: ../../../lib/web/src/components/inline-entity-search.tsx:73
 #: ../../../lib/web/src/components/person-picker.tsx:324
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:81
 #: ../../../lib/web/src/components/search-entity-page.tsx:72
@@ -2205,7 +2220,7 @@ msgstr "छानिएको: <0>{0}</0>"
 msgid "Send again"
 msgstr "फेरि पठाउनुहोस्"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:307
+#: ../../../lib/web/src/components/step-up-dialog.tsx:321
 msgid "Send email"
 msgstr "इमेल पठाउनुहोस्"
 
@@ -2238,7 +2253,7 @@ msgstr "उत्पत्ति र गन्तव्य सेट गर्�
 
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx:126
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx:132
-#: ../../../lib/web/src/components/options-menu.tsx:196
+#: ../../../lib/web/src/components/options-menu.tsx:199
 msgid "Settings"
 msgstr "सेटिङहरू"
 
@@ -2295,7 +2310,7 @@ msgstr "सानो"
 msgid "Sort"
 msgstr "क्रमबद्ध गर्नुहोस्"
 
-#: ../../../lib/web/src/components/options-menu.tsx:158
+#: ../../../lib/web/src/components/options-menu.tsx:161
 msgid "Sources"
 msgstr "स्रोतहरू"
 
@@ -2311,7 +2326,7 @@ msgstr "नयाँ चेस खेल सुरु गर्नुहोस�
 msgid "Start game"
 msgstr "खेल सुरु गर्नुहोस्"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:451
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:461
 msgid "Start the discussion by adding the first comment."
 msgstr "पहिलो टिप्पणी थपेर छलफल सुरु गर्नुहोस्।"
 
@@ -2323,16 +2338,18 @@ msgstr "तर सम्पर्कमा रहनुहोस्!"
 msgid "Subject"
 msgstr "विषय"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:431
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:440
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:441
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:450
 msgid "Submit comment"
 msgstr "टिप्पणी पेस गर्नुहोस्"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:470
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:475
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:476
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:481
 msgid "Submit reply"
 msgstr "जवाफ पेस गर्नुहोस्"
 
+#: ../../../lib/web/src/components/inline-entity-search.tsx:76
+#: ../../../lib/web/src/components/recommended-entities.tsx:66
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:83
 #: ../../../lib/web/src/components/search-entity-page.tsx:74
 msgid "Subscribe"
@@ -2384,9 +2401,18 @@ msgstr "नियम र सर्तहरू"
 msgid "Text"
 msgstr "पाठ"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:195
+#: ../../../lib/web/src/components/step-up-dialog.tsx:204
 msgid "That code is incorrect or has expired."
 msgstr "त्यो कोड गलत छ वा म्याद सकिएको छ।"
+
+#: ../../../lib/web/src/hooks/use-attachment-error.ts:31
+msgid "That could not be sent. The files may be too large, or your connection failed. Try smaller files."
+msgstr ""
+
+#: ../../../lib/web/src/hooks/use-attachment-error.ts:28
+#: ../../../lib/web/src/lib/handle-server-error.ts:26
+msgid "That was too large to upload. Remove or shrink files and try again."
+msgstr ""
 
 #: ../../../lib/web/src/features/errors/general-error.tsx:68
 msgid "The requested content could not be found."
@@ -2543,11 +2569,11 @@ msgstr "संयुक्त राज्य अमेरिका"
 msgid "Unknown"
 msgstr "अज्ञात"
 
-#: ../../../lib/web/src/components/options-menu.tsx:211
+#: ../../../lib/web/src/components/options-menu.tsx:214
 msgid "Unsubscribe"
 msgstr "सदस्यता हटाउनुहोस्"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:286
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:290
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx:103
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx:184
 msgid "Untitled"
@@ -2562,8 +2588,8 @@ msgstr "अप्रमाणित"
 msgid "Updated"
 msgstr "अद्यावधिक गरियो"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:630
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:259
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:648
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:301
 msgid "Upload"
 msgstr "अपलोड गर्नुहोस्"
 
@@ -2571,7 +2597,7 @@ msgstr "अपलोड गर्नुहोस्"
 msgid "Upload progress"
 msgstr "अपलोड प्रगति"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:338
+#: ../../../lib/web/src/components/step-up-dialog.tsx:352
 msgid "Use your passkey"
 msgstr "आफ्नो पासकी प्रयोग गर्नुहोस्"
 
@@ -2593,7 +2619,7 @@ msgstr "प्रमाणीकरण कोड पठाइयो"
 msgid "Verification failed"
 msgstr "प्रमाणीकरण असफल भयो"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:388
+#: ../../../lib/web/src/components/step-up-dialog.tsx:402
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:172
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:111
 msgid "Verify"
@@ -2671,7 +2697,7 @@ msgstr "सेतो"
 msgid "White {0}"
 msgstr "सेतो {0}"
 
-#: src/features/chess/components/chat-message-list.tsx:214
+#: src/features/chess/components/chat-message-list.tsx:51
 msgid "You"
 msgstr "तपाईं"
 
@@ -2691,14 +2717,14 @@ msgstr "तपाईंले सबै हेर्नुभयो!"
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "तपाईंको खाता {source} बाट यहाँ सारिएको छ। त्यहाँ मेटाउनु नभएसम्म, सन्देश र सूचनाहरू दुवै सर्भरमा पुग्न सक्छन्, तपाईंको केही सामग्री पुरानो सर्भरबाट आउन सक्छ, र अनुयायीहरूलाई तपाईंलाई यहाँ भेट्न केही मिनेट लाग्न सक्छ।"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:295
+#: ../../../lib/web/src/components/comment-composer.tsx:291
 msgid "Your attachments will be lost."
 msgstr "तपाईंका संलग्नकहरू हराउनेछन्।"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:293
+#: ../../../lib/web/src/components/comment-composer.tsx:289
 msgid "Your text and attachments will be lost."
 msgstr "तपाईंको पाठ र संलग्नकहरू हराउनेछन्।"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:296
+#: ../../../lib/web/src/components/comment-composer.tsx:292
 msgid "Your text will be lost."
 msgstr "तपाईंको पाठ हराउनेछ।"
