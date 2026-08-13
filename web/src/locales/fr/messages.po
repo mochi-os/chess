@@ -14,19 +14,19 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. js-lingui-explicit-id
-#: ../../../lib/web/src/lib/error-normalizer.ts:236
+#: ../../../lib/web/src/lib/error-normalizer.ts:244
 msgid "Please check your internet connection and try again."
 msgstr "Veuillez vérifier votre connexion Internet et réessayer."
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:302
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:306
 msgid " or "
 msgstr " ou "
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:228
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:229
 msgid "(edited)"
 msgstr "(modifié)"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:212
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:213
 msgid "(expand)"
 msgstr "(développer)"
 
@@ -73,19 +73,19 @@ msgstr "{count, plural, one {# dame} other {# dames}}"
 msgid "{count, plural, one {# rook} other {# rooks}}"
 msgstr "{count, plural, one {# tour} other {# tours}}"
 
-#: ../../../lib/web/src/lib/locale-format.ts:121
+#: ../../../lib/web/src/lib/locale-format.ts:183
 msgid "{count, plural, one {#d} other {#d}}"
 msgstr "{count, plural, one {#j} other {#j}}"
 
-#: ../../../lib/web/src/lib/locale-format.ts:117
+#: ../../../lib/web/src/lib/locale-format.ts:179
 msgid "{count, plural, one {#h} other {#h}}"
 msgstr "{count, plural, one {#h} other {#h}}"
 
-#: ../../../lib/web/src/lib/locale-format.ts:113
+#: ../../../lib/web/src/lib/locale-format.ts:175
 msgid "{count, plural, one {#m} other {#m}}"
 msgstr "{count, plural, one {#min} other {#min}}"
 
-#: ../../../lib/web/src/lib/locale-format.ts:125
+#: ../../../lib/web/src/lib/locale-format.ts:187
 msgid "{count, plural, one {#w} other {#w}}"
 msgstr "{count, plural, one {#sem} other {#sem}}"
 
@@ -101,15 +101,15 @@ msgstr "Nom du {entityLabel}"
 msgid "{entityLabel} name is required"
 msgstr "Le nom de {entityLabel} est obligatoire"
 
-#: src/features/chess/components/chat-message-list.tsx:195
+#: src/features/chess/components/chat-message-list.tsx:46
 msgid "{name} declined the draw"
 msgstr "{name} a refusé la nulle"
 
-#: src/features/chess/components/chat-message-list.tsx:191
+#: src/features/chess/components/chat-message-list.tsx:44
 msgid "{name} offered a draw"
 msgstr "{name} a proposé la nulle"
 
-#: src/features/chess/components/chat-message-list.tsx:189
+#: src/features/chess/components/chat-message-list.tsx:43
 msgid "{name} resigned"
 msgstr "{name} a abandonné"
 
@@ -133,15 +133,16 @@ msgstr "{selectedCount, plural, one {# sélectionnés} other {# sélectionnés}}
 msgid "{selectedCount, plural, one {Bulk actions for # selected {entityName}} other {Bulk actions for # selected {manyName}}}"
 msgstr "{selectedCount, plural, one {Actions groupées pour # {entityName} sélectionné} other {Actions groupées pour # {manyName} sélectionnés}}"
 
+#: ../../../lib/web/src/components/attachment-composer.tsx:252
 #: ../../../lib/web/src/components/ui/upload-progress.tsx:52
 msgid "{sentLabel} of {totalLabel}"
 msgstr "{sentLabel} sur {totalLabel}"
 
-#: src/features/chess/components/chat-message-list.tsx:224
+#: src/features/chess/components/chat-message-list.tsx:57
 msgid "{subject} played <0>{san}</0>"
 msgstr "{subject} a joué <0>{san}</0>"
 
-#: src/features/chess/components/chat-message-list.tsx:222
+#: src/features/chess/components/chat-message-list.tsx:53
 msgid "{subject} took <0>{san}</0>"
 msgstr "{subject} a pris <0>{san}</0>"
 
@@ -158,11 +159,11 @@ msgstr "{unreadCount, plural, one {Ouvrir le menu (# notification non lue)} othe
 msgid "+{0} nested"
 msgstr "+{0} imbriqués"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:209
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:210
 msgid "+{totalDescendants} more replies"
 msgstr "+{totalDescendants} autres réponses"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:208
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:209
 msgid "1 reply"
 msgstr "1 réponse"
 
@@ -210,7 +211,7 @@ msgstr "Type de compte"
 msgid "Account verified"
 msgstr "Compte vérifié"
 
-#: src/components/layout/chess-layout.tsx:110
+#: src/components/layout/chess-layout.tsx:58
 msgid "Active games"
 msgstr "Parties actives"
 
@@ -220,7 +221,7 @@ msgstr "Parties actives"
 msgid "Add"
 msgstr "Ajouter"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:360
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:365
 msgid "Add a comment..."
 msgstr "Ajouter un commentaire…"
 
@@ -348,8 +349,12 @@ msgstr "N'importe qui"
 msgid "Anyone who is logged in"
 msgstr "Toute personne connectée"
 
+#: ../../../lib/web/src/components/options-menu.tsx:249
+msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
+msgstr ""
+
 #. placeholder {0}: deleteTarget?.name
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:271
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:313
 msgid "Are you sure you want to delete \"{0}\"?"
 msgstr "Voulez-vous vraiment supprimer « {0} » ?"
 
@@ -357,7 +362,7 @@ msgstr "Voulez-vous vraiment supprimer « {0} » ?"
 msgid "Are you sure you want to delete the \"{name}\" column? This cannot be undone."
 msgstr "Voulez-vous vraiment supprimer la colonne « {name} » ? Cette action est irréversible."
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:485
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:491
 msgid "Are you sure you want to delete this comment? This will also delete all replies."
 msgstr "Voulez-vous vraiment supprimer ce commentaire ? Toutes les réponses seront également supprimées."
 
@@ -377,13 +382,13 @@ msgstr "Croissant"
 msgid "Ascending"
 msgstr "Croissant"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:398
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:403
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:408
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:413
 msgid "Attach comment files"
 msgstr "Joindre des fichiers au commentaire"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:439
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:444
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:445
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:450
 msgid "Attach reply files"
 msgstr "Joindre des fichiers à la réponse"
 
@@ -392,7 +397,7 @@ msgstr "Joindre des fichiers à la réponse"
 msgid "Authenticated users"
 msgstr "Utilisateurs authentifiés"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:315
+#: ../../../lib/web/src/components/step-up-dialog.tsx:329
 msgid "Authenticator code"
 msgstr "Code d'authentification"
 
@@ -470,11 +475,11 @@ msgid "Browser notifications"
 msgstr "Notifications du navigateur"
 
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:628
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:249
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:250
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:169
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:186
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx:67
-#: ../../../lib/web/src/components/step-up-dialog.tsx:363
+#: ../../../lib/web/src/components/step-up-dialog.tsx:377
 #: ../../../lib/web/src/components/travelling-picker.tsx:308
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:249
 #: ../../../lib/web/src/components/ui/editable-field-row.tsx:132
@@ -487,13 +492,13 @@ msgstr "Notifications du navigateur"
 msgid "Cancel"
 msgstr "Annuler"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:415
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:420
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:425
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:430
 msgid "Cancel comment"
 msgstr "Annuler le commentaire"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:455
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:460
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:461
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:466
 msgid "Cancel reply"
 msgstr "Annuler la réponse"
 
@@ -597,8 +602,8 @@ msgstr "Effacer la sélection"
 msgid "Clear selection (Escape)"
 msgstr "Effacer la sélection (Échap)"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:485
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:490
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:506
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:511
 #: ../../../lib/web/src/components/ui/dialog.tsx:78
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:358
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:361
@@ -667,8 +672,8 @@ msgstr "Bientôt disponible !"
 msgid "Command Palette"
 msgstr "Palette de commandes"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:330
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:337
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:331
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:338
 msgid "Comment actions"
 msgstr "Actions du commentaire"
 
@@ -677,7 +682,7 @@ msgstr "Actions du commentaire"
 msgid "Compact"
 msgstr "Compact"
 
-#: src/components/layout/chess-layout.tsx:121
+#: src/components/layout/chess-layout.tsx:59
 msgid "Completed"
 msgstr "Terminé"
 
@@ -722,7 +727,7 @@ msgstr "Informations contextuelles et détails."
 msgid "Continue"
 msgstr "Continuer"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:352
+#: ../../../lib/web/src/components/step-up-dialog.tsx:366
 msgid "Continue with {label}"
 msgstr "Continuer avec {label}"
 
@@ -746,22 +751,22 @@ msgstr "Impossible de charger ce document. Veuillez réessayer plus tard."
 msgid "Couldn't load notifications"
 msgstr "Impossible de charger les notifications"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:184
+#: ../../../lib/web/src/components/step-up-dialog.tsx:193
 msgid "Couldn't send the code. Please try again."
 msgstr "Impossible d'envoyer le code. Veuillez réessayer."
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:136
+#: ../../../lib/web/src/components/step-up-dialog.tsx:145
 msgid "Couldn't start re-authentication. Please try again."
 msgstr "Impossible de démarrer la réauthentification. Veuillez réessayer."
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:221
+#: ../../../lib/web/src/components/step-up-dialog.tsx:235
 msgid "Couldn't verify with that account. Please try again."
 msgstr "Impossible de vérifier avec ce compte. Veuillez réessayer."
 
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:564
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:703
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:475
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:647
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:496
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:665
 #: ../../../lib/web/src/components/entity/entity-tree-view.tsx:672
 msgid "Create"
 msgstr "Créer"
@@ -780,7 +785,7 @@ msgstr "Créer un nouvel élément"
 msgid "Created"
 msgstr "Créé"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:647
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:665
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:258
 #: src/features/chess/components/new-game.tsx:153
 msgid "Creating..."
@@ -831,18 +836,18 @@ msgstr "Tri par défaut"
 
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:583
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:644
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:318
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:361
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:486
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:173
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:178
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:227
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:272
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:319
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:362
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:492
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:198
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:203
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:252
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:314
 #: src/features/chess/index.tsx:609
 msgid "Delete"
 msgstr "Supprimer"
 
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:270
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:312
 msgid "Delete attachment"
 msgstr "Supprimer la pièce jointe"
 
@@ -850,7 +855,7 @@ msgstr "Supprimer la pièce jointe"
 msgid "Delete column"
 msgstr "Supprimer la colonne"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:484
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:490
 msgid "Delete comment"
 msgstr "Supprimer le commentaire"
 
@@ -923,11 +928,11 @@ msgstr "Direction"
 msgid "Directory"
 msgstr "Annuaire"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:304
+#: ../../../lib/web/src/components/comment-composer.tsx:300
 msgid "Discard"
 msgstr "Abandonner"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:302
+#: ../../../lib/web/src/components/comment-composer.tsx:298
 msgid "Discard draft?"
 msgstr "Abandonner le brouillon ?"
 
@@ -950,7 +955,7 @@ msgstr "Affiche la barre latérale mobile."
 msgid "Done"
 msgstr "Terminé"
 
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:214
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:239
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:342
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:352
 msgid "Download"
@@ -960,7 +965,7 @@ msgstr "Télécharger"
 msgid "Download failed"
 msgstr "Échec du téléchargement"
 
-#: src/features/chess/components/chat-message-list.tsx:193
+#: src/features/chess/components/chat-message-list.tsx:45
 msgid "Draw agreed"
 msgstr "Nulle acceptée"
 
@@ -976,8 +981,8 @@ msgstr "Duplique"
 msgid "Dyslexia-friendly"
 msgstr "Adapté à la dyslexie"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:307
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:352
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:308
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:353
 msgid "Edit"
 msgstr "Modifier"
 
@@ -1015,15 +1020,15 @@ msgstr "Modifier la vue"
 msgid "Email"
 msgstr "E-mail"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:289
+#: ../../../lib/web/src/components/step-up-dialog.tsx:303
 msgid "Email code"
 msgstr "Code par e-mail"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:299
+#: ../../../lib/web/src/components/step-up-dialog.tsx:313
 msgid "Enter the code from your email"
 msgstr "Saisissez le code reçu par e-mail"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:324
+#: ../../../lib/web/src/components/step-up-dialog.tsx:338
 msgid "Enter your authenticator code"
 msgstr "Saisissez le code de votre application d'authentification"
 
@@ -1068,7 +1073,7 @@ msgid "Failed to create game"
 msgstr "Échec de la création de la partie"
 
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx:137
-#: ../../../lib/web/src/components/options-menu.tsx:99
+#: ../../../lib/web/src/components/options-menu.tsx:101
 msgid "Failed to create link"
 msgstr "Échec de la création du lien"
 
@@ -1080,11 +1085,11 @@ msgstr "Échec de la création de la revanche"
 msgid "Failed to decline draw"
 msgstr "Échec du refus du match nul"
 
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:110
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:130
 msgid "Failed to delete attachment"
 msgstr "Échec de la suppression de la pièce jointe"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:207
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:212
 msgid "Failed to delete comment"
 msgstr "Échec de la suppression du commentaire"
 
@@ -1096,7 +1101,7 @@ msgstr "Échec de la suppression de la partie"
 msgid "Failed to delete link"
 msgstr "Échec de la suppression du lien"
 
-#: ../../../lib/web/src/components/options-menu.tsx:123
+#: ../../../lib/web/src/components/options-menu.tsx:125
 msgid "Failed to get RSS token"
 msgstr "Échec de la récupération du jeton RSS"
 
@@ -1124,7 +1129,7 @@ msgstr "Échec du coup"
 msgid "Failed to offer draw"
 msgstr "Échec de la proposition de match nul"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:170
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:175
 msgid "Failed to post comment"
 msgstr "Échec de la publication du commentaire"
 
@@ -1136,7 +1141,7 @@ msgstr "Échec de la suppression du compte"
 msgid "Failed to resign"
 msgstr "Échec de l'abandon"
 
-#: ../../../lib/web/src/components/options-menu.tsx:133
+#: ../../../lib/web/src/components/options-menu.tsx:136
 msgid "Failed to revoke RSS access"
 msgstr "Échec de la révocation de l'accès RSS"
 
@@ -1149,17 +1154,17 @@ msgstr "Échec de l'envoi"
 msgid "Failed to send verification code"
 msgstr "Échec de l'envoi du code de vérification"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:190
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:195
 msgid "Failed to update comment"
 msgstr "Échec de la mise à jour du commentaire"
 
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:95
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:114
 msgid "Failed to upload attachment"
 msgstr "Échec du téléversement de la pièce jointe"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:567
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:133
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:150
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:594
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:155
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:175
 msgid "Files"
 msgstr "Fichiers"
 
@@ -1327,7 +1332,7 @@ msgstr "Code de vérification invalide"
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
 msgstr "Il semble que la page que vous recherchez <0/>n'existe pas ou a été supprimée."
 
-#: ../../../lib/web/src/lib/locale-format.ts:110
+#: ../../../lib/web/src/lib/locale-format.ts:172
 msgid "Just now"
 msgstr "À l'instant"
 
@@ -1372,7 +1377,7 @@ msgstr "Lettres, chiffres, espaces et traits d'union uniquement"
 msgid "Light"
 msgstr "Clair"
 
-#: ../../../lib/web/src/components/options-menu.tsx:190
+#: ../../../lib/web/src/components/options-menu.tsx:193
 msgid "Link"
 msgstr "Lien"
 
@@ -1466,7 +1471,7 @@ msgstr "Longueur minimale"
 msgid "Mochi web"
 msgstr "Mochi web"
 
-#: ../../../lib/web/src/components/options-menu.tsx:164
+#: ../../../lib/web/src/components/options-menu.tsx:167
 msgid "Moderation"
 msgstr ""
 
@@ -1474,8 +1479,8 @@ msgstr ""
 msgid "Monday"
 msgstr "Lundi"
 
-#: ../../../lib/web/src/components/options-menu.tsx:145
-#: ../../../lib/web/src/components/options-menu.tsx:152
+#: ../../../lib/web/src/components/options-menu.tsx:148
+#: ../../../lib/web/src/components/options-menu.tsx:155
 msgid "More options"
 msgstr "Plus d'options"
 
@@ -1500,14 +1505,14 @@ msgstr "Le nom doit comporter 1000 caractères ou moins"
 msgid "Network error"
 msgstr "Erreur réseau"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:460
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:481
 #: ../../../lib/web/src/components/ui/sort-selector.tsx:43
 msgid "New"
 msgstr "Nouveau"
 
 #: ../../../lib/web/src/components/game/game-empty-state.tsx:41
 #: ../../../lib/web/src/components/game/game-empty-state.tsx:53
-#: src/components/layout/chess-layout.tsx:138
+#: src/components/layout/chess-layout.tsx:60
 #: src/features/chess/components/new-game.tsx:96
 msgid "New game"
 msgstr "Nouvelle partie"
@@ -1517,7 +1522,7 @@ msgstr "Nouvelle partie"
 msgid "Next image"
 msgstr "Image suivante"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:533
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:560
 msgid "No {parentClassNames} to add to"
 msgstr "Aucun {parentClassNames} auquel ajouter"
 
@@ -1529,7 +1534,7 @@ msgstr "Aucune règle d'accès configurée. Ajoutez des règles pour contrôler 
 msgid "No activity yet"
 msgstr "Aucune activité pour le moment"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:450
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:460
 msgid "No comments yet"
 msgstr "Aucun commentaire pour le moment"
 
@@ -1553,7 +1558,7 @@ msgstr "Aucune partie pour le moment"
 msgid "No groups available"
 msgstr "Aucun groupe disponible"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:500
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:527
 msgid "No item types can be created yet. Create the required parent items first."
 msgstr "Aucun type d'élément ne peut encore être créé. Créez d'abord les éléments parents requis."
 
@@ -1561,7 +1566,7 @@ msgstr "Aucun type d'élément ne peut encore être créé. Créez d'abord les �
 msgid "No matching objects"
 msgstr "Aucun objet correspondant"
 
-#: src/features/chess/components/chat-message-list.tsx:158
+#: src/features/chess/components/chat-message-list.tsx:41
 msgid "No messages yet"
 msgstr "Aucun message pour le moment"
 
@@ -1582,6 +1587,7 @@ msgstr "Aucun lieu trouvé"
 msgid "No profile"
 msgstr "Aucun profil"
 
+#: ../../../lib/web/src/components/inline-entity-search.tsx:74
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:82
 #: ../../../lib/web/src/components/search-entity-page.tsx:73
 msgid "No results found"
@@ -1619,9 +1625,9 @@ msgid "No views"
 msgstr "Aucune vue"
 
 #: ../../../lib/web/src/components/colour-picker.tsx:349
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:516
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:519
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:523
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:543
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:546
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:550
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:365
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:388
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:391
@@ -1761,15 +1767,15 @@ msgstr "Propriétaire"
 msgid "Page {currentPage} of {totalPages}"
 msgstr "Page {currentPage} sur {totalPages}"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:508
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:535
 msgid "Parent"
 msgstr "Parent"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:334
+#: ../../../lib/web/src/components/step-up-dialog.tsx:348
 msgid "Passkey"
 msgstr "Clé d'accès"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:209
+#: ../../../lib/web/src/components/step-up-dialog.tsx:218
 msgid "Passkey verification failed. Please try again."
 msgstr "La vérification par clé d'accès a échoué. Veuillez réessayer."
 
@@ -1789,7 +1795,7 @@ msgstr "pion"
 msgid "Pick a date"
 msgstr "Choisir une date"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:99
+#: ../../../lib/web/src/components/comment-composer.tsx:84
 #: ../../../lib/web/src/features/errors/general-error.tsx:54
 #: ../../../lib/web/src/lib/api-response-interceptors.ts:323
 msgid "Please check your internet connection and try again."
@@ -1811,11 +1817,11 @@ msgstr "Veuillez réessayer."
 msgid "Please wait a moment and try again."
 msgstr "Veuillez patienter un instant, puis réessayer."
 
-#: ../../../lib/web/src/components/options-menu.tsx:175
+#: ../../../lib/web/src/components/options-menu.tsx:178
 msgid "Posts"
 msgstr "Publications"
 
-#: ../../../lib/web/src/components/options-menu.tsx:178
+#: ../../../lib/web/src/components/options-menu.tsx:181
 msgid "Posts and comments"
 msgstr "Publications et commentaires"
 
@@ -1905,9 +1911,9 @@ msgstr "Relatif dans les 24 heures, sinon absolu"
 msgid "Rematch"
 msgstr "Revanche"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:236
+#: ../../../lib/web/src/components/attachment-composer.tsx:289
+#: ../../../lib/web/src/components/attachment-composer.tsx:328
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx:190
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:598
 #: ../../../lib/web/src/features/access/access-list.tsx:270
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:180
 msgid "Remove"
@@ -1960,13 +1966,13 @@ msgstr "Renommer la colonne"
 msgid "Rename this board column"
 msgstr "Renommer cette colonne du tableau"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:294
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:342
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:295
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:343
 msgid "Reply"
 msgstr "Répondre"
 
 #. placeholder {0}: comment.name || comment.author
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:385
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:386
 msgid "Reply to {0}..."
 msgstr "Répondre à {0}..."
 
@@ -1974,7 +1980,7 @@ msgstr "Répondre à {0}..."
 msgid "Required"
 msgstr "Requis"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:367
+#: ../../../lib/web/src/components/step-up-dialog.tsx:381
 msgid "Resend email"
 msgstr "Renvoyer l'e-mail"
 
@@ -2005,13 +2011,21 @@ msgstr "Abandonner la partie ?"
 msgid "Resigning..."
 msgstr "Abandon..."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:253
+#: ../../../lib/web/src/components/attachment-composer.tsx:346
 msgid "Retry"
 msgstr "Réessayer"
 
-#: ../../../lib/web/src/components/options-menu.tsx:181
+#: ../../../lib/web/src/components/options-menu.tsx:250
+msgid "Revoke"
+msgstr ""
+
+#: ../../../lib/web/src/components/options-menu.tsx:184
 msgid "Revoke access"
 msgstr "Révoquer l'accès"
+
+#: ../../../lib/web/src/components/options-menu.tsx:244
+msgid "Revoke RSS access?"
+msgstr ""
 
 #: ../../../lib/web/src/components/config-drawer.tsx:362
 msgid "Right to Left"
@@ -2034,15 +2048,15 @@ msgstr "Lignes regroupées par"
 msgid "Rows per page"
 msgstr "Lignes par page"
 
-#: ../../../lib/web/src/components/options-menu.tsx:131
+#: ../../../lib/web/src/components/options-menu.tsx:134
 msgid "RSS access revoked"
 msgstr "Accès RSS révoqué"
 
-#: ../../../lib/web/src/components/options-menu.tsx:171
+#: ../../../lib/web/src/components/options-menu.tsx:174
 msgid "RSS feed"
 msgstr "Flux RSS"
 
-#: ../../../lib/web/src/components/options-menu.tsx:121
+#: ../../../lib/web/src/components/options-menu.tsx:123
 msgid "RSS URL copied to clipboard"
 msgstr "URL RSS copiée dans le presse-papiers"
 
@@ -2050,7 +2064,7 @@ msgstr "URL RSS copiée dans le presse-papiers"
 msgid "Saturday"
 msgstr "Samedi"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:269
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:270
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:173
 #: ../../../lib/web/src/components/ui/editable-field-row.tsx:122
 #: ../../../lib/web/src/components/ui/secret-field.tsx:77
@@ -2102,6 +2116,7 @@ msgstr "Rechercher, surveiller et trier cette vue."
 
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:181
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:257
+#: ../../../lib/web/src/components/inline-entity-search.tsx:73
 #: ../../../lib/web/src/components/person-picker.tsx:324
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:81
 #: ../../../lib/web/src/components/search-entity-page.tsx:72
@@ -2205,7 +2220,7 @@ msgstr "Sélectionné : <0>{0}</0>"
 msgid "Send again"
 msgstr "Renvoyer"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:307
+#: ../../../lib/web/src/components/step-up-dialog.tsx:321
 msgid "Send email"
 msgstr "Envoyer l'e-mail"
 
@@ -2238,7 +2253,7 @@ msgstr "Définir l'origine et la destination"
 
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx:126
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx:132
-#: ../../../lib/web/src/components/options-menu.tsx:196
+#: ../../../lib/web/src/components/options-menu.tsx:199
 msgid "Settings"
 msgstr "Paramètres"
 
@@ -2295,7 +2310,7 @@ msgstr "Petit"
 msgid "Sort"
 msgstr "Trier"
 
-#: ../../../lib/web/src/components/options-menu.tsx:158
+#: ../../../lib/web/src/components/options-menu.tsx:161
 msgid "Sources"
 msgstr "Sources"
 
@@ -2311,7 +2326,7 @@ msgstr "Démarrer une nouvelle partie d'échecs"
 msgid "Start game"
 msgstr "Démarrer la partie"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:451
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:461
 msgid "Start the discussion by adding the first comment."
 msgstr "Lancez la discussion en ajoutant le premier commentaire."
 
@@ -2323,16 +2338,18 @@ msgstr "Restez à l'écoute !"
 msgid "Subject"
 msgstr "Sujet"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:431
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:440
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:441
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:450
 msgid "Submit comment"
 msgstr "Envoyer le commentaire"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:470
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:475
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:476
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:481
 msgid "Submit reply"
 msgstr "Envoyer la réponse"
 
+#: ../../../lib/web/src/components/inline-entity-search.tsx:76
+#: ../../../lib/web/src/components/recommended-entities.tsx:66
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:83
 #: ../../../lib/web/src/components/search-entity-page.tsx:74
 msgid "Subscribe"
@@ -2384,9 +2401,18 @@ msgstr "Conditions générales"
 msgid "Text"
 msgstr "Texte"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:195
+#: ../../../lib/web/src/components/step-up-dialog.tsx:204
 msgid "That code is incorrect or has expired."
 msgstr "Ce code est incorrect ou a expiré."
+
+#: ../../../lib/web/src/hooks/use-attachment-error.ts:31
+msgid "That could not be sent. The files may be too large, or your connection failed. Try smaller files."
+msgstr ""
+
+#: ../../../lib/web/src/hooks/use-attachment-error.ts:28
+#: ../../../lib/web/src/lib/handle-server-error.ts:26
+msgid "That was too large to upload. Remove or shrink files and try again."
+msgstr ""
 
 #: ../../../lib/web/src/features/errors/general-error.tsx:68
 msgid "The requested content could not be found."
@@ -2539,15 +2565,15 @@ msgid "United States"
 msgstr "États-Unis"
 
 #: ../../../lib/web/src/features/accounts/types.ts:29
-#: src/hooks/useGameWebsocket.ts:233
+#: src/hooks/useGameWebsocket.ts:34
 msgid "Unknown"
 msgstr "Inconnu"
 
-#: ../../../lib/web/src/components/options-menu.tsx:211
+#: ../../../lib/web/src/components/options-menu.tsx:214
 msgid "Unsubscribe"
 msgstr "Se désabonner"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:286
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:290
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx:103
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx:184
 msgid "Untitled"
@@ -2562,8 +2588,8 @@ msgstr "Non vérifié"
 msgid "Updated"
 msgstr "Mis à jour"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:630
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:259
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:648
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:301
 msgid "Upload"
 msgstr "Téléverser"
 
@@ -2571,7 +2597,7 @@ msgstr "Téléverser"
 msgid "Upload progress"
 msgstr "Progression du téléversement"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:338
+#: ../../../lib/web/src/components/step-up-dialog.tsx:352
 msgid "Use your passkey"
 msgstr "Utiliser votre clé d'accès"
 
@@ -2593,7 +2619,7 @@ msgstr "Code de vérification envoyé"
 msgid "Verification failed"
 msgstr "Échec de la vérification"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:388
+#: ../../../lib/web/src/components/step-up-dialog.tsx:402
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:172
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:111
 msgid "Verify"
@@ -2671,7 +2697,7 @@ msgstr "Blanc"
 msgid "White {0}"
 msgstr "{0} blanc"
 
-#: src/features/chess/components/chat-message-list.tsx:214
+#: src/features/chess/components/chat-message-list.tsx:51
 msgid "You"
 msgstr "Vous"
 
@@ -2691,14 +2717,14 @@ msgstr "Vous êtes à jour !"
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Votre compte a été déplacé ici depuis {source}. Tant que vous ne le supprimez pas là-bas, les messages et notifications peuvent parvenir aux deux serveurs, une partie de votre contenu continue d'être servie depuis l'ancien serveur, et vos abonnés peuvent avoir besoin de quelques minutes pour vous trouver ici."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:295
+#: ../../../lib/web/src/components/comment-composer.tsx:291
 msgid "Your attachments will be lost."
 msgstr "Vos pièces jointes seront perdues."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:293
+#: ../../../lib/web/src/components/comment-composer.tsx:289
 msgid "Your text and attachments will be lost."
 msgstr "Votre texte et vos pièces jointes seront perdus."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:296
+#: ../../../lib/web/src/components/comment-composer.tsx:292
 msgid "Your text will be lost."
 msgstr "Votre texte sera perdu."

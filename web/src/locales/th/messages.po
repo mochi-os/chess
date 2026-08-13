@@ -14,19 +14,19 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. js-lingui-explicit-id
-#: ../../../lib/web/src/lib/error-normalizer.ts:236
+#: ../../../lib/web/src/lib/error-normalizer.ts:244
 msgid "Please check your internet connection and try again."
 msgstr "โปรดตรวจสอบการเชื่อมต่ออินเทอร์เน็ตของคุณแล้วลองอีกครั้ง"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:302
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:306
 msgid " or "
 msgstr " หรือ "
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:228
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:229
 msgid "(edited)"
 msgstr "(แก้ไขแล้ว)"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:212
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:213
 msgid "(expand)"
 msgstr "(ขยาย)"
 
@@ -73,19 +73,19 @@ msgstr "{count, plural, other {ควีน # ตัว}}"
 msgid "{count, plural, one {# rook} other {# rooks}}"
 msgstr "{count, plural, other {เรือ # ตัว}}"
 
-#: ../../../lib/web/src/lib/locale-format.ts:121
+#: ../../../lib/web/src/lib/locale-format.ts:183
 msgid "{count, plural, one {#d} other {#d}}"
 msgstr "{count, plural, one {#ว} other {#ว}}"
 
-#: ../../../lib/web/src/lib/locale-format.ts:117
+#: ../../../lib/web/src/lib/locale-format.ts:179
 msgid "{count, plural, one {#h} other {#h}}"
 msgstr "{count, plural, one {#ชม} other {#ชม}}"
 
-#: ../../../lib/web/src/lib/locale-format.ts:113
+#: ../../../lib/web/src/lib/locale-format.ts:175
 msgid "{count, plural, one {#m} other {#m}}"
 msgstr "{count, plural, one {#น} other {#น}}"
 
-#: ../../../lib/web/src/lib/locale-format.ts:125
+#: ../../../lib/web/src/lib/locale-format.ts:187
 msgid "{count, plural, one {#w} other {#w}}"
 msgstr "{count, plural, one {#สัป} other {#สัป}}"
 
@@ -101,15 +101,15 @@ msgstr "ชื่อ {entityLabel}"
 msgid "{entityLabel} name is required"
 msgstr "ต้องระบุชื่อ{entityLabel}"
 
-#: src/features/chess/components/chat-message-list.tsx:195
+#: src/features/chess/components/chat-message-list.tsx:46
 msgid "{name} declined the draw"
 msgstr "{name} ปฏิเสธการเสมอ"
 
-#: src/features/chess/components/chat-message-list.tsx:191
+#: src/features/chess/components/chat-message-list.tsx:44
 msgid "{name} offered a draw"
 msgstr "{name} เสนอเสมอ"
 
-#: src/features/chess/components/chat-message-list.tsx:189
+#: src/features/chess/components/chat-message-list.tsx:43
 msgid "{name} resigned"
 msgstr "{name} ยอมแพ้"
 
@@ -133,15 +133,16 @@ msgstr "{selectedCount, plural, one {# ที่เลือก} other {# ที
 msgid "{selectedCount, plural, one {Bulk actions for # selected {entityName}} other {Bulk actions for # selected {manyName}}}"
 msgstr "{selectedCount, plural, one {การดำเนินการเป็นกลุ่มสำหรับ {entityName} # รายการที่เลือก} other {การดำเนินการเป็นกลุ่มสำหรับ {manyName} # รายการที่เลือก}}"
 
+#: ../../../lib/web/src/components/attachment-composer.tsx:252
 #: ../../../lib/web/src/components/ui/upload-progress.tsx:52
 msgid "{sentLabel} of {totalLabel}"
 msgstr "{sentLabel} จาก {totalLabel}"
 
-#: src/features/chess/components/chat-message-list.tsx:224
+#: src/features/chess/components/chat-message-list.tsx:57
 msgid "{subject} played <0>{san}</0>"
 msgstr "{subject} เดิน <0>{san}</0>"
 
-#: src/features/chess/components/chat-message-list.tsx:222
+#: src/features/chess/components/chat-message-list.tsx:53
 msgid "{subject} took <0>{san}</0>"
 msgstr "{subject} จับ <0>{san}</0>"
 
@@ -158,11 +159,11 @@ msgstr "{unreadCount, plural, one {เปิดเมนู (การแจ้�
 msgid "+{0} nested"
 msgstr "+{0} ที่ซ้อนกัน"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:209
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:210
 msgid "+{totalDescendants} more replies"
 msgstr "+{totalDescendants} การตอบกลับเพิ่มเติม"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:208
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:209
 msgid "1 reply"
 msgstr "1 การตอบกลับ"
 
@@ -210,7 +211,7 @@ msgstr "ประเภทบัญชี"
 msgid "Account verified"
 msgstr "ยืนยันบัญชีแล้ว"
 
-#: src/components/layout/chess-layout.tsx:110
+#: src/components/layout/chess-layout.tsx:58
 msgid "Active games"
 msgstr "เกมที่ใช้งานอยู่"
 
@@ -220,7 +221,7 @@ msgstr "เกมที่ใช้งานอยู่"
 msgid "Add"
 msgstr "เพิ่ม"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:360
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:365
 msgid "Add a comment..."
 msgstr "เพิ่มความคิดเห็น..."
 
@@ -348,8 +349,12 @@ msgstr "ใครก็ได้"
 msgid "Anyone who is logged in"
 msgstr "ใครก็ตามที่เข้าสู่ระบบ"
 
+#: ../../../lib/web/src/components/options-menu.tsx:249
+msgid "Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards."
+msgstr ""
+
 #. placeholder {0}: deleteTarget?.name
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:271
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:313
 msgid "Are you sure you want to delete \"{0}\"?"
 msgstr "คุณแน่ใจหรือไม่ว่าต้องการลบ\"{0}\"?"
 
@@ -357,7 +362,7 @@ msgstr "คุณแน่ใจหรือไม่ว่าต้องกา
 msgid "Are you sure you want to delete the \"{name}\" column? This cannot be undone."
 msgstr "คุณแน่ใจหรือไม่ว่าต้องการลบคอลัมน์\"{name}\"? การกระทำนี้ไม่สามารถยกเลิกได้"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:485
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:491
 msgid "Are you sure you want to delete this comment? This will also delete all replies."
 msgstr "คุณแน่ใจหรือไม่ว่าต้องการลบความคิดเห็นนี้? การตอบกลับทั้งหมดจะถูกลบด้วย"
 
@@ -377,13 +382,13 @@ msgstr "น้อยไปมาก"
 msgid "Ascending"
 msgstr "จากน้อยไปมาก"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:398
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:403
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:408
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:413
 msgid "Attach comment files"
 msgstr "แนบไฟล์ความคิดเห็น"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:439
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:444
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:445
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:450
 msgid "Attach reply files"
 msgstr "แนบไฟล์ตอบกลับ"
 
@@ -392,7 +397,7 @@ msgstr "แนบไฟล์ตอบกลับ"
 msgid "Authenticated users"
 msgstr "ผู้ใช้ที่ยืนยันตัวตนแล้ว"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:315
+#: ../../../lib/web/src/components/step-up-dialog.tsx:329
 msgid "Authenticator code"
 msgstr "รหัส Authenticator"
 
@@ -470,11 +475,11 @@ msgid "Browser notifications"
 msgstr "การแจ้งเตือนของเบราว์เซอร์"
 
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:628
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:249
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:250
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:169
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:186
 #: ../../../lib/web/src/components/responsive-confirm-dialog.tsx:67
-#: ../../../lib/web/src/components/step-up-dialog.tsx:363
+#: ../../../lib/web/src/components/step-up-dialog.tsx:377
 #: ../../../lib/web/src/components/travelling-picker.tsx:308
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:249
 #: ../../../lib/web/src/components/ui/editable-field-row.tsx:132
@@ -487,13 +492,13 @@ msgstr "การแจ้งเตือนของเบราว์เซอ
 msgid "Cancel"
 msgstr "ยกเลิก"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:415
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:420
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:425
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:430
 msgid "Cancel comment"
 msgstr "ยกเลิกความคิดเห็น"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:455
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:460
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:461
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:466
 msgid "Cancel reply"
 msgstr "ยกเลิกการตอบกลับ"
 
@@ -597,8 +602,8 @@ msgstr "ล้างการเลือก"
 msgid "Clear selection (Escape)"
 msgstr "ล้างการเลือก (Escape)"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:485
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:490
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:506
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:511
 #: ../../../lib/web/src/components/ui/dialog.tsx:78
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:358
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:361
@@ -667,8 +672,8 @@ msgstr "เร็วๆนี้!"
 msgid "Command Palette"
 msgstr "แผงคำสั่ง"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:330
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:337
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:331
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:338
 msgid "Comment actions"
 msgstr "การดำเนินการความคิดเห็น"
 
@@ -677,7 +682,7 @@ msgstr "การดำเนินการความคิดเห็น"
 msgid "Compact"
 msgstr "กะทัดรัด"
 
-#: src/components/layout/chess-layout.tsx:121
+#: src/components/layout/chess-layout.tsx:59
 msgid "Completed"
 msgstr "เสร็จสมบูรณ์"
 
@@ -722,7 +727,7 @@ msgstr "ข้อมูลบริบทและรายละเอียด
 msgid "Continue"
 msgstr "ดำเนินการต่อ"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:352
+#: ../../../lib/web/src/components/step-up-dialog.tsx:366
 msgid "Continue with {label}"
 msgstr "ดำเนินการต่อด้วย {label}"
 
@@ -746,22 +751,22 @@ msgstr "ไม่สามารถโหลดเอกสารนี้ได
 msgid "Couldn't load notifications"
 msgstr "ไม่สามารถโหลดการแจ้งเตือนได้"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:184
+#: ../../../lib/web/src/components/step-up-dialog.tsx:193
 msgid "Couldn't send the code. Please try again."
 msgstr "ส่งรหัสไม่สำเร็จ โปรดลองอีกครั้ง"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:136
+#: ../../../lib/web/src/components/step-up-dialog.tsx:145
 msgid "Couldn't start re-authentication. Please try again."
 msgstr "เริ่มการยืนยันตัวตนอีกครั้งไม่สำเร็จ โปรดลองอีกครั้ง"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:221
+#: ../../../lib/web/src/components/step-up-dialog.tsx:235
 msgid "Couldn't verify with that account. Please try again."
 msgstr "ไม่สามารถยืนยันด้วยบัญชีนั้นได้ โปรดลองอีกครั้ง"
 
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:564
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:703
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:475
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:647
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:496
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:665
 #: ../../../lib/web/src/components/entity/entity-tree-view.tsx:672
 msgid "Create"
 msgstr "สร้าง"
@@ -780,7 +785,7 @@ msgstr "สร้างรายการใหม่"
 msgid "Created"
 msgstr "สร้างแล้ว"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:647
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:665
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:258
 #: src/features/chess/components/new-game.tsx:153
 msgid "Creating..."
@@ -831,18 +836,18 @@ msgstr "การเรียงลำดับเริ่มต้น"
 
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:583
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:644
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:318
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:361
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:486
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:173
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:178
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:227
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:272
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:319
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:362
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:492
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:198
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:203
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:252
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:314
 #: src/features/chess/index.tsx:609
 msgid "Delete"
 msgstr "ลบ"
 
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:270
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:312
 msgid "Delete attachment"
 msgstr "ลบไฟล์แนบ"
 
@@ -850,7 +855,7 @@ msgstr "ลบไฟล์แนบ"
 msgid "Delete column"
 msgstr "ลบคอลัมน์"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:484
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:490
 msgid "Delete comment"
 msgstr "ลบความคิดเห็น"
 
@@ -923,11 +928,11 @@ msgstr "ทิศทาง"
 msgid "Directory"
 msgstr "ไดเรกทอรี"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:304
+#: ../../../lib/web/src/components/comment-composer.tsx:300
 msgid "Discard"
 msgstr "ยกเลิก"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:302
+#: ../../../lib/web/src/components/comment-composer.tsx:298
 msgid "Discard draft?"
 msgstr "ยกเลิกฉบับร่างใช่ไหม?"
 
@@ -950,7 +955,7 @@ msgstr "แสดงแถบด้านข้างบนมือถือ"
 msgid "Done"
 msgstr "เสร็จสิ้น"
 
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:214
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:239
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:342
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:352
 msgid "Download"
@@ -960,7 +965,7 @@ msgstr "ดาวน์โหลด"
 msgid "Download failed"
 msgstr "ดาวน์โหลดไม่สำเร็จ"
 
-#: src/features/chess/components/chat-message-list.tsx:193
+#: src/features/chess/components/chat-message-list.tsx:45
 msgid "Draw agreed"
 msgstr "ตกลงเสมอ"
 
@@ -976,8 +981,8 @@ msgstr "ทำซ้ำ"
 msgid "Dyslexia-friendly"
 msgstr "เหมาะสำหรับผู้บกพร่องการอ่าน"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:307
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:352
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:308
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:353
 msgid "Edit"
 msgstr "แก้ไข"
 
@@ -1015,15 +1020,15 @@ msgstr "แก้ไขมุมมอง"
 msgid "Email"
 msgstr "อีเมล"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:289
+#: ../../../lib/web/src/components/step-up-dialog.tsx:303
 msgid "Email code"
 msgstr "รหัสอีเมล"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:299
+#: ../../../lib/web/src/components/step-up-dialog.tsx:313
 msgid "Enter the code from your email"
 msgstr "ป้อนรหัสจากอีเมลของคุณ"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:324
+#: ../../../lib/web/src/components/step-up-dialog.tsx:338
 msgid "Enter your authenticator code"
 msgstr "ป้อนรหัสจากแอปยืนยันตัวตนของคุณ"
 
@@ -1068,7 +1073,7 @@ msgid "Failed to create game"
 msgstr "ไม่สามารถสร้างเกมได้"
 
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx:137
-#: ../../../lib/web/src/components/options-menu.tsx:99
+#: ../../../lib/web/src/components/options-menu.tsx:101
 msgid "Failed to create link"
 msgstr "ไม่สามารถสร้างลิงก์ได้"
 
@@ -1080,11 +1085,11 @@ msgstr "ไม่สามารถสร้างการแข่งใหม
 msgid "Failed to decline draw"
 msgstr "ไม่สามารถปฏิเสธการเสมอได้"
 
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:110
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:130
 msgid "Failed to delete attachment"
 msgstr "ไม่สามารถลบไฟล์แนบได้"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:207
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:212
 msgid "Failed to delete comment"
 msgstr "ไม่สามารถลบความคิดเห็นได้"
 
@@ -1096,7 +1101,7 @@ msgstr "ไม่สามารถลบเกมได้"
 msgid "Failed to delete link"
 msgstr "ไม่สามารถลบลิงก์ได้"
 
-#: ../../../lib/web/src/components/options-menu.tsx:123
+#: ../../../lib/web/src/components/options-menu.tsx:125
 msgid "Failed to get RSS token"
 msgstr "ไม่สามารถรับ RSS token ได้"
 
@@ -1124,7 +1129,7 @@ msgstr "ไม่สามารถเดินได้"
 msgid "Failed to offer draw"
 msgstr "ไม่สามารถเสนอเสมอได้"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:170
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:175
 msgid "Failed to post comment"
 msgstr "ไม่สามารถโพสต์ความคิดเห็นได้"
 
@@ -1136,7 +1141,7 @@ msgstr "ไม่สามารถเอาบัญชีออกได้"
 msgid "Failed to resign"
 msgstr "ไม่สามารถยอมแพ้ได้"
 
-#: ../../../lib/web/src/components/options-menu.tsx:133
+#: ../../../lib/web/src/components/options-menu.tsx:136
 msgid "Failed to revoke RSS access"
 msgstr "ไม่สามารถเพิกถอนการเข้าถึง RSS ได้"
 
@@ -1149,17 +1154,17 @@ msgstr "ไม่สามารถส่งได้"
 msgid "Failed to send verification code"
 msgstr "ไม่สามารถส่งรหัสยืนยันได้"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:190
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:195
 msgid "Failed to update comment"
 msgstr "ไม่สามารถอัปเดตความคิดเห็นได้"
 
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:95
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:114
 msgid "Failed to upload attachment"
 msgstr "ไม่สามารถอัปโหลดไฟล์แนบได้"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:567
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:133
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:150
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:594
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:155
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:175
 msgid "Files"
 msgstr "ไฟล์"
 
@@ -1327,7 +1332,7 @@ msgstr "รหัสยืนยันไม่ถูกต้อง"
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
 msgstr "ดูเหมือนว่าหน้าที่คุณกำลังมองหา <0/>ไม่มีอยู่หรืออาจถูกลบไปแล้ว"
 
-#: ../../../lib/web/src/lib/locale-format.ts:110
+#: ../../../lib/web/src/lib/locale-format.ts:172
 msgid "Just now"
 msgstr "เมื่อสักครู่"
 
@@ -1372,7 +1377,7 @@ msgstr "ตัวอักษร ตัวเลข เว้นวรรค แ
 msgid "Light"
 msgstr "สว่าง"
 
-#: ../../../lib/web/src/components/options-menu.tsx:190
+#: ../../../lib/web/src/components/options-menu.tsx:193
 msgid "Link"
 msgstr "ลิงก์"
 
@@ -1466,7 +1471,7 @@ msgstr "ความยาวขั้นต่ำ"
 msgid "Mochi web"
 msgstr "Mochi เว็บ"
 
-#: ../../../lib/web/src/components/options-menu.tsx:164
+#: ../../../lib/web/src/components/options-menu.tsx:167
 msgid "Moderation"
 msgstr ""
 
@@ -1474,8 +1479,8 @@ msgstr ""
 msgid "Monday"
 msgstr "วันจันทร์"
 
-#: ../../../lib/web/src/components/options-menu.tsx:145
-#: ../../../lib/web/src/components/options-menu.tsx:152
+#: ../../../lib/web/src/components/options-menu.tsx:148
+#: ../../../lib/web/src/components/options-menu.tsx:155
 msgid "More options"
 msgstr "ตัวเลือกเพิ่มเติม"
 
@@ -1500,14 +1505,14 @@ msgstr "ชื่อต้องไม่เกิน 1000 ตัวอักษ
 msgid "Network error"
 msgstr "ข้อผิดพลาดของเครือข่าย"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:460
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:481
 #: ../../../lib/web/src/components/ui/sort-selector.tsx:43
 msgid "New"
 msgstr "ใหม่"
 
 #: ../../../lib/web/src/components/game/game-empty-state.tsx:41
 #: ../../../lib/web/src/components/game/game-empty-state.tsx:53
-#: src/components/layout/chess-layout.tsx:138
+#: src/components/layout/chess-layout.tsx:60
 #: src/features/chess/components/new-game.tsx:96
 msgid "New game"
 msgstr "เกมใหม่"
@@ -1517,7 +1522,7 @@ msgstr "เกมใหม่"
 msgid "Next image"
 msgstr "รูปถัดไป"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:533
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:560
 msgid "No {parentClassNames} to add to"
 msgstr "ไม่มี {parentClassNames} ให้เพิ่ม"
 
@@ -1529,7 +1534,7 @@ msgstr "ยังไม่ได้ตั้งกฎการเข้าถึ
 msgid "No activity yet"
 msgstr "ยังไม่มีกิจกรรม"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:450
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:460
 msgid "No comments yet"
 msgstr "ยังไม่มีความคิดเห็น"
 
@@ -1553,7 +1558,7 @@ msgstr "ยังไม่มีเกม"
 msgid "No groups available"
 msgstr "ไม่มีกลุ่มที่ใช้งานได้"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:500
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:527
 msgid "No item types can be created yet. Create the required parent items first."
 msgstr "ยังไม่สามารถสร้างประเภทรายการได้ กรุณาสร้างรายการแม่ที่จำเป็นก่อน"
 
@@ -1561,7 +1566,7 @@ msgstr "ยังไม่สามารถสร้างประเภทร
 msgid "No matching objects"
 msgstr "ไม่มีออบเจกต์ที่ตรงกัน"
 
-#: src/features/chess/components/chat-message-list.tsx:158
+#: src/features/chess/components/chat-message-list.tsx:41
 msgid "No messages yet"
 msgstr "ยังไม่มีข้อความ"
 
@@ -1582,6 +1587,7 @@ msgstr "ไม่พบสถานที่"
 msgid "No profile"
 msgstr "ไม่มีโปรไฟล์"
 
+#: ../../../lib/web/src/components/inline-entity-search.tsx:74
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:82
 #: ../../../lib/web/src/components/search-entity-page.tsx:73
 msgid "No results found"
@@ -1619,9 +1625,9 @@ msgid "No views"
 msgstr "ไม่มีการเข้าชม"
 
 #: ../../../lib/web/src/components/colour-picker.tsx:349
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:516
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:519
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:523
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:543
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:546
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:550
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:365
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:388
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:391
@@ -1761,15 +1767,15 @@ msgstr "เจ้าของ"
 msgid "Page {currentPage} of {totalPages}"
 msgstr "หน้า {currentPage} จาก {totalPages}"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:508
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:535
 msgid "Parent"
 msgstr "แม่"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:334
+#: ../../../lib/web/src/components/step-up-dialog.tsx:348
 msgid "Passkey"
 msgstr "พาสคีย์"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:209
+#: ../../../lib/web/src/components/step-up-dialog.tsx:218
 msgid "Passkey verification failed. Please try again."
 msgstr "การยืนยันด้วยพาสคีย์ล้มเหลว โปรดลองอีกครั้ง"
 
@@ -1789,7 +1795,7 @@ msgstr "เบี้ย"
 msgid "Pick a date"
 msgstr "เลือกวันที่"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:99
+#: ../../../lib/web/src/components/comment-composer.tsx:84
 #: ../../../lib/web/src/features/errors/general-error.tsx:54
 #: ../../../lib/web/src/lib/api-response-interceptors.ts:323
 msgid "Please check your internet connection and try again."
@@ -1811,11 +1817,11 @@ msgstr "โปรดลองอีกครั้ง"
 msgid "Please wait a moment and try again."
 msgstr "โปรดรอสักครู่แล้วลองอีกครั้ง"
 
-#: ../../../lib/web/src/components/options-menu.tsx:175
+#: ../../../lib/web/src/components/options-menu.tsx:178
 msgid "Posts"
 msgstr "โพสต์"
 
-#: ../../../lib/web/src/components/options-menu.tsx:178
+#: ../../../lib/web/src/components/options-menu.tsx:181
 msgid "Posts and comments"
 msgstr "โพสต์และความคิดเห็น"
 
@@ -1905,9 +1911,9 @@ msgstr "สัมพัทธ์ภายใน 24 ชั่วโมง นอ�
 msgid "Rematch"
 msgstr "แข่งใหม่"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:236
+#: ../../../lib/web/src/components/attachment-composer.tsx:289
+#: ../../../lib/web/src/components/attachment-composer.tsx:328
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx:190
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:598
 #: ../../../lib/web/src/features/access/access-list.tsx:270
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:180
 msgid "Remove"
@@ -1960,13 +1966,13 @@ msgstr "เปลี่ยนชื่อคอลัมน์"
 msgid "Rename this board column"
 msgstr "เปลี่ยนชื่อคอลัมน์ของบอร์ดนี้"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:294
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:342
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:295
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:343
 msgid "Reply"
 msgstr "ตอบกลับ"
 
 #. placeholder {0}: comment.name || comment.author
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:385
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:386
 msgid "Reply to {0}..."
 msgstr "ตอบกลับ {0}..."
 
@@ -1974,7 +1980,7 @@ msgstr "ตอบกลับ {0}..."
 msgid "Required"
 msgstr "จำเป็น"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:367
+#: ../../../lib/web/src/components/step-up-dialog.tsx:381
 msgid "Resend email"
 msgstr "ส่งอีเมลอีกครั้ง"
 
@@ -2005,13 +2011,21 @@ msgstr "ยอมแพ้เกม?"
 msgid "Resigning..."
 msgstr "กำลังยอมแพ้..."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:253
+#: ../../../lib/web/src/components/attachment-composer.tsx:346
 msgid "Retry"
 msgstr "ลองอีกครั้ง"
 
-#: ../../../lib/web/src/components/options-menu.tsx:181
+#: ../../../lib/web/src/components/options-menu.tsx:250
+msgid "Revoke"
+msgstr ""
+
+#: ../../../lib/web/src/components/options-menu.tsx:184
 msgid "Revoke access"
 msgstr "เพิกถอนการเข้าถึง"
+
+#: ../../../lib/web/src/components/options-menu.tsx:244
+msgid "Revoke RSS access?"
+msgstr ""
 
 #: ../../../lib/web/src/components/config-drawer.tsx:362
 msgid "Right to Left"
@@ -2034,15 +2048,15 @@ msgstr "จัดกลุ่มแถวตาม"
 msgid "Rows per page"
 msgstr "แถวต่อหน้า"
 
-#: ../../../lib/web/src/components/options-menu.tsx:131
+#: ../../../lib/web/src/components/options-menu.tsx:134
 msgid "RSS access revoked"
 msgstr "เพิกถอนการเข้าถึง RSS แล้ว"
 
-#: ../../../lib/web/src/components/options-menu.tsx:171
+#: ../../../lib/web/src/components/options-menu.tsx:174
 msgid "RSS feed"
 msgstr "ฟีด RSS"
 
-#: ../../../lib/web/src/components/options-menu.tsx:121
+#: ../../../lib/web/src/components/options-menu.tsx:123
 msgid "RSS URL copied to clipboard"
 msgstr "คัดลอก URL RSS ไปยังคลิปบอร์ดแล้ว"
 
@@ -2050,7 +2064,7 @@ msgstr "คัดลอก URL RSS ไปยังคลิปบอร์ดแ
 msgid "Saturday"
 msgstr "วันเสาร์"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:269
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:270
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:173
 #: ../../../lib/web/src/components/ui/editable-field-row.tsx:122
 #: ../../../lib/web/src/components/ui/secret-field.tsx:77
@@ -2102,6 +2116,7 @@ msgstr "ค้นหา ติดตาม และจัดเรียงม�
 
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:181
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:257
+#: ../../../lib/web/src/components/inline-entity-search.tsx:73
 #: ../../../lib/web/src/components/person-picker.tsx:324
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:81
 #: ../../../lib/web/src/components/search-entity-page.tsx:72
@@ -2205,7 +2220,7 @@ msgstr "เลือก: <0>{0}</0>"
 msgid "Send again"
 msgstr "ส่งอีกครั้ง"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:307
+#: ../../../lib/web/src/components/step-up-dialog.tsx:321
 msgid "Send email"
 msgstr "ส่งอีเมล"
 
@@ -2238,7 +2253,7 @@ msgstr "ตั้งค่าต้นทางและปลายทาง"
 
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx:126
 #: ../../../lib/web/src/components/layout/mochi-menu.tsx:132
-#: ../../../lib/web/src/components/options-menu.tsx:196
+#: ../../../lib/web/src/components/options-menu.tsx:199
 msgid "Settings"
 msgstr "การตั้งค่า"
 
@@ -2295,7 +2310,7 @@ msgstr "เล็ก"
 msgid "Sort"
 msgstr "เรียงลำดับ"
 
-#: ../../../lib/web/src/components/options-menu.tsx:158
+#: ../../../lib/web/src/components/options-menu.tsx:161
 msgid "Sources"
 msgstr "แหล่งที่มา"
 
@@ -2311,7 +2326,7 @@ msgstr "เริ่มเกมหมากรุกใหม่"
 msgid "Start game"
 msgstr "เริ่มเกม"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:451
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:461
 msgid "Start the discussion by adding the first comment."
 msgstr "เริ่มการสนทนาโดยเพิ่มความคิดเห็นแรก"
 
@@ -2323,16 +2338,18 @@ msgstr "โปรดรอติดตาม!"
 msgid "Subject"
 msgstr "หัวเรื่อง"
 
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:431
-#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:440
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:441
+#: ../../../lib/web/src/components/entity/entity-comment-list.tsx:450
 msgid "Submit comment"
 msgstr "ส่งความคิดเห็น"
 
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:470
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:475
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:476
+#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:481
 msgid "Submit reply"
 msgstr "ส่งการตอบกลับ"
 
+#: ../../../lib/web/src/components/inline-entity-search.tsx:76
+#: ../../../lib/web/src/components/recommended-entities.tsx:66
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:83
 #: ../../../lib/web/src/components/search-entity-page.tsx:74
 msgid "Subscribe"
@@ -2384,9 +2401,18 @@ msgstr "ข้อกำหนดและเงื่อนไข"
 msgid "Text"
 msgstr "ข้อความ"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:195
+#: ../../../lib/web/src/components/step-up-dialog.tsx:204
 msgid "That code is incorrect or has expired."
 msgstr "รหัสนั้นไม่ถูกต้องหรือหมดอายุแล้ว"
+
+#: ../../../lib/web/src/hooks/use-attachment-error.ts:31
+msgid "That could not be sent. The files may be too large, or your connection failed. Try smaller files."
+msgstr ""
+
+#: ../../../lib/web/src/hooks/use-attachment-error.ts:28
+#: ../../../lib/web/src/lib/handle-server-error.ts:26
+msgid "That was too large to upload. Remove or shrink files and try again."
+msgstr ""
 
 #: ../../../lib/web/src/features/errors/general-error.tsx:68
 msgid "The requested content could not be found."
@@ -2539,15 +2565,15 @@ msgid "United States"
 msgstr "สหรัฐอเมริกา"
 
 #: ../../../lib/web/src/features/accounts/types.ts:29
-#: src/hooks/useGameWebsocket.ts:233
+#: src/hooks/useGameWebsocket.ts:34
 msgid "Unknown"
 msgstr "ไม่ทราบ"
 
-#: ../../../lib/web/src/components/options-menu.tsx:211
+#: ../../../lib/web/src/components/options-menu.tsx:214
 msgid "Unsubscribe"
 msgstr "ยกเลิกการติดตาม"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:286
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:290
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx:103
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx:184
 msgid "Untitled"
@@ -2562,8 +2588,8 @@ msgstr "ยังไม่ยืนยัน"
 msgid "Updated"
 msgstr "อัปเดตแล้ว"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:630
-#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:259
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:648
+#: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:301
 msgid "Upload"
 msgstr "อัปโหลด"
 
@@ -2571,7 +2597,7 @@ msgstr "อัปโหลด"
 msgid "Upload progress"
 msgstr "ความคืบหน้าการอัปโหลด"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:338
+#: ../../../lib/web/src/components/step-up-dialog.tsx:352
 msgid "Use your passkey"
 msgstr "ใช้พาสคีย์ของคุณ"
 
@@ -2593,7 +2619,7 @@ msgstr "ส่งรหัสยืนยันแล้ว"
 msgid "Verification failed"
 msgstr "การยืนยันไม่สำเร็จ"
 
-#: ../../../lib/web/src/components/step-up-dialog.tsx:388
+#: ../../../lib/web/src/components/step-up-dialog.tsx:402
 #: ../../../lib/web/src/features/accounts/account-manager.tsx:172
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:111
 msgid "Verify"
@@ -2671,7 +2697,7 @@ msgstr "ขาว"
 msgid "White {0}"
 msgstr "{0} ขาว"
 
-#: src/features/chess/components/chat-message-list.tsx:214
+#: src/features/chess/components/chat-message-list.tsx:51
 msgid "You"
 msgstr "คุณ"
 
@@ -2691,14 +2717,14 @@ msgstr "คุณดูครบแล้ว!"
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "บัญชีของคุณถูกย้ายมาที่นี่จาก {source} จนกว่าคุณจะลบออกที่นั่น ข้อความและการแจ้งเตือนอาจไปถึงทั้งสองเซิร์ฟเวอร์ เนื้อหาบางส่วนของคุณยังคงให้บริการจากเซิร์ฟเวอร์เดิม และผู้ติดตามอาจต้องใช้เวลาสักครู่เพื่อพบคุณที่นี่"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:295
+#: ../../../lib/web/src/components/comment-composer.tsx:291
 msgid "Your attachments will be lost."
 msgstr "ไฟล์แนบของคุณจะหายไป"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:293
+#: ../../../lib/web/src/components/comment-composer.tsx:289
 msgid "Your text and attachments will be lost."
 msgstr "ข้อความและไฟล์แนบของคุณจะหายไป"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:296
+#: ../../../lib/web/src/components/comment-composer.tsx:292
 msgid "Your text will be lost."
 msgstr "ข้อความของคุณจะหายไป"
