@@ -169,6 +169,12 @@ def stream_asset(a, entity_id, service, asset):
 	if not entity_id:
 		a.error.label(404, "errors.asset_unavailable", asset=asset)
 		return None
+	# Reject a malformed id before opening a stream: mochi.remote.stream errors
+	# out on an invalid entity, which aborts the whole action as a 500. The
+	# user-asset routes pass a caller-supplied id here. Mirrors crm.
+	if not mochi.text.valid(entity_id, "entity") and not mochi.text.valid(entity_id, "fingerprint"):
+		a.error.label(404, "errors.asset_unavailable", asset=asset)
+		return None
 	s = mochi.remote.stream(entity_id, service, asset, {})
 	if not s:
 		a.error.label(404, "errors.asset_unavailable", asset=asset)
