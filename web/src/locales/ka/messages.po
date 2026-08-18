@@ -615,8 +615,8 @@ msgstr "არჩევის გასუფთავება (Escape)"
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:506
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:511
 #: ../../../lib/web/src/components/ui/dialog.tsx:78
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:373
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:376
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:469
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:472
 #: ../../../lib/web/src/components/ui/sheet.tsx:79
 msgid "Close"
 msgstr "დახურვა"
@@ -686,6 +686,11 @@ msgstr "ბრძანებების პალიტრა"
 #: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:338
 msgid "Comment actions"
 msgstr "კომენტარის მოქმედებები"
+
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:432
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:444
+msgid "Comments"
+msgstr "კომენტარები"
 
 #: ../../../lib/web/src/components/config-drawer.tsx:316
 #: ../../../lib/web/src/lib/preference-utils.ts:95
@@ -966,12 +971,12 @@ msgid "Done"
 msgstr "მზადაა"
 
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:239
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:357
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:367
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:453
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:463
 msgid "Download"
 msgstr "ჩამოტვირთვა"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:69
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:92
 msgid "Download failed"
 msgstr "ჩამოტვირთვა ვერ მოხერხდა"
 
@@ -1127,11 +1132,11 @@ msgstr "ჩატვირთვა ვერ მოხერხდა"
 msgid "Failed to load history"
 msgstr "ისტორიის ჩატვირთვა ვერ მოხერხდა"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:264
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:339
 msgid "Failed to load image"
 msgstr "სურათის ჩატვირთვა ვერ მოხერხდა"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:264
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:339
 msgid "Failed to load video"
 msgstr "ვიდეოს ჩატვირთვა ვერ მოხერხდა"
 
@@ -1302,7 +1307,7 @@ msgid "ID"
 msgstr "ID"
 
 #. placeholder {0}: currentMedia.name
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:248
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:317
 msgid "Image viewer: {0}"
 msgstr "სურათის მნახველი: {0}"
 
@@ -1531,8 +1536,8 @@ msgstr "ახალი"
 msgid "New game"
 msgstr "ახალი თამაში"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:407
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:412
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:530
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:535
 msgid "Next image"
 msgstr "შემდეგი სურათი"
 
@@ -1839,8 +1844,8 @@ msgstr "პოსტები"
 msgid "Posts and comments"
 msgstr "პოსტები და კომენტარები"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:392
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:397
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:514
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:519
 msgid "Previous image"
 msgstr "წინა სურათი"
 
@@ -2516,6 +2521,7 @@ msgstr "ძალიან დიდი"
 #: ../../../lib/web/src/components/travelling-picker.tsx:145
 msgid "Travelling"
 msgstr "მოგზაურობა"
+
 #: ../../../lib/web/src/components/search-entity-dialog.tsx:194
 #: ../../../lib/web/src/components/search-entity-page.tsx:217
 msgid "Try adjusting your search terms"
@@ -2564,6 +2570,7 @@ msgstr "ვერსიის ინფორმაციის ჩატვი�
 #: ../../../lib/web/src/components/notification-category-button.tsx:117
 msgid "Unassigned"
 msgstr "მიუნიჭებელი"
+
 #: ../../../lib/web/src/features/errors/unauthorized-error.tsx:16
 msgid "Unauthorized Access"
 msgstr "არაავტორიზებული წვდომა"
@@ -2600,6 +2607,7 @@ msgstr "უსათაურო ლისტინგი"
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:500
 msgid "Updated"
 msgstr "განახლებულია"
+
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:648
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:301
 msgid "Upload"
@@ -2641,12 +2649,12 @@ msgstr "შემოწმებული"
 msgid "Verify email address"
 msgstr "შემოწმება და ჩართვა"
 
-#: ../../../lib/web/src/components/attachment-gallery.tsx:85
+#: ../../../lib/web/src/components/attachment-gallery.tsx:94
 msgid "Video thumbnail"
 msgstr "ვიდეოს მინიატურა"
 
 #. placeholder {0}: currentMedia.name
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:247
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:316
 msgid "Video viewer: {0}"
 msgstr "ვიდეოს მნახველი: {0}"
 
@@ -2701,6 +2709,7 @@ msgstr "ვებსაიტი ტექმომსახურებაშ�
 #: src/features/chess/index.tsx:418
 msgid "White"
 msgstr "თეთრი"
+
 #. placeholder {0}: pieceName(piece.type)
 #. placeholder {0}: pieceName(type)
 #: src/features/chess/components/chess-board.tsx:305
