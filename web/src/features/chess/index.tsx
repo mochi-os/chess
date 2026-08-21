@@ -260,9 +260,8 @@ export function ChessGame() {
     (from: string, to: string, promotion?: string) => {
       if (!game || !selectedGame) return
 
-      // Use a fresh chess instance to validate the move. chess.js v1 throws
-      // on a corrupt FEN and on an illegal move rather than returning null,
-      // which made the old `if (!move) return` dead code.
+      // chess.js v1 throws on a corrupt FEN or an illegal move rather than
+      // returning null.
       let c: Chess
       let move: ReturnType<Chess['move']>
       try {

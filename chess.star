@@ -5,64 +5,22 @@
 
 # Mochi Chess app
 
-# Trust model.
-#
-# This is a game between accepted participants, not between adversaries.
-# The rules engine is chess.js in the frontend, and the server takes
-# its word for the state a move produces: it validates SHAPE - field
-# present, right form, status in the known set, winner an actual player -
-# and never legality. It does not replay the move to confirm it was
-# legal.
-#
-# A participant who modifies their own client can therefore submit a state
-# the rules would not have produced. That is accepted, not overlooked:
-# making the server authoritative would mean a second rules engine in
-# Starlark, which is not worth it for this audience. Reviews should not
-# report it as a defect.
-#
-# What the server DOES enforce, and what changes here must preserve:
-#
-#   Participation  Only an accepted participant can reach a game. Creation
-#                  is gated on friendship, and event_new requires both the
-#                  recipient AND the sender to be listed players, so a
-#                  friend cannot plant a game between other people.
-#   Provenance     Inbound state is bound to a player of this game: a
-#                  relayed snapshot's writer must be one, and a direct
-#                  event's writer must be its authenticated sender.
-#   Convergence    Ordering, deduplication and repair - see the concurrency
-#                  block below. A tampering participant can corrupt their
-#                  own game; they cannot desynchronise anyone else's.
-#   Shape          Every stored field is validated, so a malformed or
-#                  hostile value cannot crash a peer's client or wedge
-#                  their game.
-#
-# The boundary is participation, not honesty.
+# Trust model: chess.js in the client is the rules engine; the server validates
+# shape (fields, status set, winner is a player), never legality. A participant
+# with a modified client can submit an illegal state - accepted by design, not a
+# defect. What the server does enforce: participation (only listed players reach
+# a game; event_new requires sender and recipient both be players), provenance
+# (inbound state is bound to a player), convergence (see the concurrency block)
+# and shape.
 
 
 def notify(topic, object="", title="", body="", url="", event_id=""):
 	mochi.service.call("notifications", "send", topic, object, title, body, url, mochi.app.label("notifications.topic." + topic.replace("/", ".")), "", "", None, event_id)
 
-# Commit hook: fires the live-update websocket on every host that sees
-# a new messages row commit, whether locally (via action_send /
-# action_move / event_message / event_move calling
-# mochi.db.commit.fire) or via replication apply (auto-fired by core
-# with op.UID set, per the row-uid wire field added in #36). Both
-# replicas of a paired account thus see the live update in any open
-# browser tab, instead of only the host that served the action.
-#
-# Scope: messages.insert with type 'message' or 'move'. Move payloads
-# enrich the message row with current game state (fen / pgn / status /
-# winner / draw_offer) read from the games row, which the move action
-# updated immediately before inserting the message row.
-#
-# Skipped: type 'system' messages (resign / draw_offer / draw_accept /
-# draw_decline). They all funnel through messages.insert with the
-# same shape, and the hook can't disambiguate the four distinct
-# semantic events from the row state alone — disambiguating from the
-# games row state is fragile under replication-apply reordering. They
-# stay on direct mochi.websocket.write for now; paired-host clients
-# won't see them live until they refresh, the same behaviour they had
-# before any of this conversion.
+# Live-update websocket for messages.insert of type 'message' or 'move'; move
+# payloads carry the games row state the move action just wrote. 'system'
+# messages (resign, draw offer/accept/decline) stay on direct
+# mochi.websocket.write: the hook cannot tell the four apart from the row state.
 def chess_commit_hook(table, kind, row_uid):
 	if table != "messages" or kind != "insert" or not row_uid:
 		return
@@ -98,11 +56,7 @@ def chess_ensure_commit_hook():
 
 def database_upgrade(version):
 	if version == 4:
-		# Version tuple. A scalar counter each peer increments locally is not
-		# a total order: two peers can both commit a different state at N+1
-		# and then reject each other forever. Ordering is now
-		# (terminal, revision, writer, event) compared lexicographically, so
-		# concurrent writes resolve to the same winner on every peer.
+		# Version tuple columns (writer, event) - see the concurrency block.
 		columns = []
 		for column in mochi.db.table("games"):
 			columns.append(column["name"])
@@ -122,9 +76,8 @@ def database_upgrade(version):
 		if not found:
 			mochi.db.execute("alter table games add column revision integer not null default 0")
 	if version == 2:
-		# Drop the pre-2026-07 broadcast tables left in the app data DB when
-		# broadcast state moved to the per-app system DB - inert, but stale
-		# sequence/log copies mislead diagnosis.
+		# Drop the broadcast tables left in the app data DB when broadcast state moved
+		# to the per-app system DB - stale copies mislead diagnosis.
 		for table in ["sequence", "log", "acknowledged", "received"]:
 			mochi.db.execute("drop table if exists " + table)
 
@@ -187,11 +140,9 @@ def stream_asset(a, entity_id, service, asset):
 	if "data" in header:
 		return {"data": header["data"]}
 	a.header("Content-Type", header.get("content_type", "application/octet-stream"))
-	# Bytes to relay per slot, matching what the people app accepts on upload.
-	# Without a cap, a peer answering for a person can stream indefinitely through
-	# this route, which is public. Only the three binary slots reach here - style
-	# and information returned above as data - so an unrecognised slot falls back
-	# to the largest of them rather than breaking a route that would otherwise work.
+	# Per-slot byte caps matching what the people app accepts on upload; the route
+	# is public, so an uncapped stream could run indefinitely. Unknown slots fall
+	# back to the largest cap.
 	caps = {"avatar": 2 * 1024 * 1024, "banner": 10 * 1024 * 1024, "favicon": 64 * 1024}
 	a.write.stream(s, maximum=caps.get(asset, 10 * 1024 * 1024))
 	return None
@@ -231,65 +182,20 @@ def get_opponent(game, user_id):
 		return game["opponent"]
 	return game["identity"]
 
-# Concurrency and convergence.
-#
-# Two problems, one mechanism.
-#
-# Locally, nothing serialises HTTP actions for a (user, app): core's
-# per-worker guarantee (protocol2_worker.go) covers inbound P2P frames
-# only. Two HTTP actions, or an HTTP action and an inbound event, can
-# read the same row and write over each other.
-#
-# Between peers, there is no coordinator. A scalar counter that each peer
-# increments from its own state is NOT a total order - both peers can
-# commit a different state at N+1 (two players offering a draw at the
-# same moment, or resigning), and a strictly-greater test then makes each
-# reject the other permanently.
-#
-# Ordering is therefore the tuple (terminal, revision, writer, event),
-# compared lexicographically:
-#
-#   revision  the logical counter, and it leads. An earlier version put
-#             terminal first, which made EVERY terminal state outrank every
-#             non-terminal one at any counter: a player resigning from a
-#             stale revision-4 view then rewound peers at revision 30 to
-#             revision-4 boards, racks and scores. Causality first.
-#   terminal  1 when the status ends the game, else 0. Second, so it decides
-#             only genuine same-counter conflicts - a resignation racing a
-#             move at the same revision survives on both peers - without
-#             letting an ancient terminal defeat newer state. A resignation
-#             made against a state that no longer exists is discarded, and
-#             the player reissues it once caught up.
-#   writer    the entity that produced the state. Breaks ties between
-#             peers at the same counter, identically on both sides.
-#   event     a per-write uid. Only reachable if one writer produced two
-#             states at the same counter, which the local CAS prevents;
-#             carried so the order is total without relying on that.
-#
-# Every event carries a COMPLETE snapshot of the shared columns, not a
-# delta. A delta would make "revision already passed" mean the state was
-# passed, which is false: applying a higher auxiliary event (a resign)
-# would advance the counter while omitting a board carried only by a
-# lower one, and that lower event is then rejected for good - core acks
-# any handler that returns cleanly (protocol2_worker.go), so nothing
-# retries it.
+# Concurrency: nothing serialises HTTP actions for a (user, app) and peers have
+# no coordinator, so every write is a compare-and-swap on the version tuple
+# (revision, terminal, writer, event), compared lexicographically: revision
+# leads so causality wins, terminal decides only same-revision conflicts, writer
+# breaks ties identically on both peers, event makes the order total. Every
+# event carries a complete snapshot of the shared columns, never a delta: core
+# acks any handler that returns cleanly, so a rejected lower event is never
+# retried and a board carried only by it would be lost.
 
-#
-# Protocol invariants. These are the properties the code above is meant to
-# hold; anything added here should be tested against them, not just against a
-# final database row.
-#
-#   1. Every applied event carries one complete, validated state.
-#   2. Every replica deterministically retains the maximum version.
-#   3. A rejected sender eventually learns the dominating version (event_sync).
-#   4. Browser state eventually equals its local canonical row.
-#   5. History divergence is permitted and is NOT a bug.
-#
-# On (5): the games row is canonical. The messages table is an activity feed,
-# not an authoritative ledger of moves and events - under concurrent writes
-# each peer keeps its own losing action, so two peers can legitimately show
-# different system messages for the same game. Do not write code that
-# reconstructs game state from message history; it cannot.
+# Protocol invariants: every applied event carries one complete validated state;
+# every replica retains the maximum version; a rejected sender learns the
+# dominating version (event_sync); browser state converges to the local row. The
+# games row is canonical and the messages table is an activity feed - never
+# reconstruct game state from message history.
 
 GAME_COLUMNS = ["fen", "pgn", "status", "winner", "draw_offer"]
 GAME_TERMINAL = ["checkmate", "stalemate", "draw", "resigned"]
@@ -304,12 +210,7 @@ def game_players(game):
 	return [game["identity"], game["opponent"]]
 
 def event_created(e, now):
-	"""Peer-supplied message timestamp, clamped to our clock.
-
-	A stamp far from now would pin the message out of order forever and
-	distort the created-keyed pagination cursor, so anything more than a
-	day behind or five minutes ahead is replaced with our own time.
-	Returns None when the field is absent or malformed."""
+	"""Peer-supplied timestamp, clamped to our clock: more than a day behind or five minutes ahead becomes now, so a bad stamp cannot pin the message out of order. None when absent or malformed."""
 	created = e.content("created")
 	if not mochi.text.valid(str(created), "integer"):
 		return None
@@ -319,23 +220,14 @@ def event_created(e, now):
 	return created
 
 def event_name(value):
-	"""Peer-supplied display name, held to core's name rules.
-
-	Rejects angle brackets and line breaks and caps at 1000 characters, so a
-	peer cannot store an unbounded string or smuggle markup into the label
-	shown beside their moves."""
+	"""Peer-supplied display name, held to core's name rules (no angle brackets or line breaks, at most 1000 characters)."""
 	value = str(value or "")
 	if not value or not mochi.text.valid(value, "name"):
 		return "Opponent"
 	return value
 
 def event_body(value, maximum, fallback):
-	"""Peer-supplied display text, held to the bound the local path uses.
-
-	Clamped rather than rejected. The board in the same event is validated
-	separately and is the real state; dropping an otherwise-good move over a
-	bad label would leave us behind the sender with no way to catch up, which
-	is a worse outcome than showing a fallback for one move."""
+	"""Peer-supplied display text, clamped to `maximum` rather than rejected: dropping an otherwise-good move over a bad label would leave us behind the sender for good."""
 	value = str(value or "")
 	if not value or len(value) > maximum:
 		return fallback
@@ -358,11 +250,7 @@ def game_state(game, changes):
 	return state
 
 def game_snapshot_valid(game, state):
-	"""Validate a complete inbound snapshot before it can replace our row.
-
-	Snapshot mode reads the columns straight off the event, so the checks
-	each handler runs on its own fields do not apply to it. Without this a
-	peer could set an arbitrary status or winner through any event type."""
+	"""Validate a complete inbound snapshot; snapshot columns bypass the per-handler field checks, so without this any event type could set an arbitrary status or winner."""
 	if not valid_fen(state["fen"]):
 		return False
 	if len(state["pgn"]) > 10000:
@@ -377,12 +265,7 @@ def game_snapshot_valid(game, state):
 	return True
 
 def game_write(game, changes, writer, now):
-	"""Apply a local change, guarding on the exact tuple we read.
-
-	Returns the complete new state to ship to the opponent, or None when
-	another writer got there first - in which case the caller must
-	abandon the change entirely, emitting no message, no websocket
-	payload and no P2P event."""
+	"""Apply a local change with a compare-and-swap on the tuple we read. Returns the new state to ship, or None when another writer got there first - the caller must then abandon the change entirely (no message, websocket or event)."""
 	state = game_state(game, changes)
 	sets = []
 	params = []
@@ -402,14 +285,7 @@ def game_write(game, changes, writer, now):
 	return state
 
 def game_apply(e, game, now, sync=False):
-	"""Apply an inbound change if it outranks the row we hold.
-
-	Every event carries a complete snapshot and a full version tuple; there
-	is no partial form. The pre-snapshot delta path this replaces synthesised
-	a tuple with an empty writer, which game_reconcile cannot relay, so a row
-	it touched could never be repaired - and it was the only route into the
-	games row that skipped validation. An event without a snapshot is now
-	simply not one of ours."""
+	"""Apply an inbound change if it outranks our row. Every event carries a complete snapshot and full version tuple; an event without a snapshot is not one of ours."""
 	if not e.content("snapshot"):
 		return None
 	state = {}
@@ -433,11 +309,9 @@ def game_apply(e, game, now, sync=False):
 	# being well formed.
 	writer = e.content("writer")
 	if sync:
-		# A relayed snapshot is forwarded by whichever peer held the winning
-		# state, which is not necessarily the peer that wrote it - that is the
-		# whole point of reconciliation. Bind the writer to the game's players
-		# rather than to the relay, and never rewrite it: the writer element
-		# decides conflicts, so changing it in transit would change who wins.
+		# A relayed snapshot is forwarded by whoever held the winning state, not
+		# necessarily its writer. Bind the writer to the game's players and never
+		# rewrite it: it decides conflicts.
 		if writer not in game_players(game):
 			return None
 	elif writer != e.header("from"):
@@ -460,11 +334,9 @@ def game_apply(e, game, now, sync=False):
 	params.extend([revision, writer, event, now, game["id"],
 		revision, game_terminal(state["status"]), writer, event])
 	if mochi.db.execute(sql, *params) == 0:
-		# Our state dominates. Rejecting is only safe if the sender eventually
-		# learns why, otherwise a peer that acted on a stale view sits on it
-		# forever - core acks a handler that returns cleanly, so nothing else
-		# tells them. Send our winning snapshot back. sync is True on the
-		# reply path itself so this cannot ping-pong.
+		# Our state dominates. Send it back, or a peer that acted on a stale view
+		# never learns (core acks a clean return). sync is True on the reply path, so
+		# this cannot ping-pong.
 		if not sync:
 			game_reconcile(e, game)
 		return None
@@ -643,13 +515,8 @@ def action_messages(a):
 	if limit_str and mochi.text.valid(limit_str, "natural"):
 		limit = min(int(limit_str), 100)
 
-	# Cursor is "<created>:<id>". created alone is not unique - messages
-	# sharing a second are common on a fast exchange - so a created-only
-	# cursor silently dropped every row that shared the page boundary's
-	# timestamp. The id breaks the tie and makes the order total.
-	#
-	# A bare number is still accepted: that is what an older client sends,
-	# and it keeps the old behaviour for it rather than erroring.
+	# Cursor is "<created>:<id>"; created alone is not unique, the id makes the
+	# order total. A bare number from an older client is still accepted.
 	before_created = None
 	before_id = ""
 	before_str = a.input("before")
@@ -785,13 +652,10 @@ def action_move(a):
 
 	chess_ensure_commit_hook()
 	now = mochi.time.now()
-	# Compare-and-swap against the position we validated the turn against.
-	# Nothing serialises HTTP actions for a (user, app) - core's per-worker
-	# guarantee covers inbound P2P frames only - so a double submit, or the
-	# opponent's move landing in the same instant, otherwise lets both
-	# requests validate the same turn and the later write wins blind.
-	# status is in the predicate because a resignation arriving in that
-	# window changes the row without touching the FEN.
+	# Compare-and-swap on the position the turn was validated against: nothing
+	# serialises HTTP actions for a (user, app), so a double submit or a
+	# simultaneous opponent move would otherwise both pass. status is in the
+	# predicate because a resignation changes the row without touching the FEN.
 	state = game_write(game, {"fen": fen, "pgn": pgn or "", "status": new_status,
 		"winner": new_winner, "draw_offer": None}, a.user.identity.id, now)
 	if state == None:
@@ -803,11 +667,8 @@ def action_move(a):
 	id = mochi.uid()
 	mochi.db.execute("insert into messages ( id, game, member, name, body, type, created ) values ( ?, ?, ?, ?, ?, 'move', ? )", id, game["id"], a.user.identity.id, a.user.identity.name, san, now)
 
-	# Live-update websocket: fired from chess_commit_hook on every host
-	# that sees this messages row. The hook enriches the move payload
-	# with current games row state (fen / pgn / status / winner /
-	# draw_offer) — which the update above just landed — so paired
-	# hosts emit the same payload shape clients already expect.
+	# The live push fires from chess_commit_hook, which adds the games row state
+	# landed above.
 	mochi.db.commit.fire("messages", "insert", id)
 
 	other = get_opponent(game, a.user.identity.id)
@@ -1115,12 +976,9 @@ def event_move(e):
 	if winner and winner not in players:
 		winner = None
 
-	# Apply atomically, ordered by the sender's revision. The earlier
-	# read-then-write shape lost to a concurrent local action: this handler
-	# accepted a board, an HTTP move advanced the row, and the unconditional
-	# write then erased it. Core dedups inbound frames by id, but that cache
-	# is in memory and does not survive a restart, so a retry after a lost
-	# ack can also arrive looking new.
+	# Apply atomically, ordered by the sender's tuple: a read-then-write loses to a
+	# concurrent local move, and core's inbound dedup is in memory only, so a retry
+	# after a lost ack can arrive looking new.
 	now = mochi.time.now()
 	if game_apply(e, game, now) == None:
 		return
@@ -1233,13 +1091,9 @@ def event_draw_offer(e):
 	body = event_body(e.content("body"), 10000, mochi.app.label("notifications.body.draw_offered"))
 	sender_name = game["identity_name"] if sender == game["identity"] else game["opponent_name"]
 
-	# Ordering is the version tuple, not the wall clock. The gate that used
-	# to sit here compared the sender's clock against our `updated` and ran
-	# BEFORE the tuple was consulted, so a strictly higher-ordered offer lost
-	# to clock skew - or simply to any local move, since every state change
-	# bumps `updated`. It was reaching for a deterministic winner when both
-	# players offer at once; the tuple's writer element does that properly,
-	# and identically on both peers.
+	# Ordering is the version tuple, not the wall clock: a clock gate here would
+	# lose a higher-ordered offer to skew, or to any local move, since every state
+	# change bumps `updated`.
 	now = mochi.time.now()
 	incoming = str(e.content("created", "0"))
 	if not mochi.text.valid(incoming, "integer"):

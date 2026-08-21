@@ -34,14 +34,9 @@ function toCapturedPieceList(
   )
 }
 
-// Derives captures by counting the pieces still on the board, straight from
-// the position itself. The previous version replayed SAN from the message
-// history, which the protocol explicitly treats as an activity feed rather
-// than a state ledger - it can diverge from the board, and the replay then
-// silently showed nothing. Counting the FEN is always available and never
-// divergent; its one imprecision is promotion, where a promoted piece makes
-// the pawn look captured and offsets its own kind, which is the standard
-// limit of deriving captures from a position alone.
+// Count captures from the position itself, never by replaying message history
+// (an activity feed that can diverge from the board). The one imprecision is
+// promotion, where a promoted piece reads as a capture of its kind.
 export function getCapturedPiecesSummary(fen: string): CapturedPiecesSummary {
   const board = fen.split(' ')[0] ?? ''
   const white: Record<CapturedPieceType, number> = { ...STARTING_COUNTS }
