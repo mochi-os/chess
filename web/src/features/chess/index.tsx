@@ -403,7 +403,7 @@ export function ChessGame() {
                 mode="inline"
                 reset={refetchGameDetail}
               />
-            ) : game && chess ? (
+            ) : game ? (
               <>
                 <div className="shrink-0">
                   <GameHeader
