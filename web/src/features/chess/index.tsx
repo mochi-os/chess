@@ -32,6 +32,7 @@ import {
 } from '@mochi/web'
 import { MoreHorizontal, Trash2, Loader2, Flag, Handshake, RotateCcw, MessageCircle } from 'lucide-react'
 import { useSidebarContext } from '@/context/sidebar-context'
+import { resume } from '@/lib/pgn'
 import { setLastGame } from '@/hooks/useGameStorage'
 import { useGameWebsocket } from '@/hooks/useGameWebsocket'
 import { getOpponentName, type Game } from '@/api/games'
@@ -261,12 +262,13 @@ export function ChessGame() {
       if (!game || !selectedGame) return
 
       // chess.js v1 throws on a corrupt FEN or an illegal move rather than
-      // returning null.
+      // returning null. resume() replays the stored PGN so c.pgn() below
+      // EXTENDS the game score; loading the FEN alone starts an empty history
+      // and every move would replace the record with just itself.
       let c: Chess
       let move: ReturnType<Chess['move']>
       try {
-        c = new Chess()
-        c.load(game.fen)
+        c = resume(game.fen, game.pgn)
         move = c.move({ from, to, promotion })
       } catch {
         return
