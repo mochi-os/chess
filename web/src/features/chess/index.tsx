@@ -63,7 +63,8 @@ function chessStatusText(
   game: Game,
   myIdentity: string,
   isMyTurn: boolean,
-  isCheck: boolean
+  isCheck: boolean,
+  positionReadable: boolean
 ): string {
   const opponentName = getOpponentName(game, myIdentity)
 
@@ -85,6 +86,12 @@ function chessStatusText(
     return game.winner === myIdentity
       ? t`${opponentName} resigned — you win!`
       : t`You resigned — ${opponentName} wins`
+  }
+
+  // Whose move it is comes from the parsed position. With no position there is
+  // no turn to state, and asserting one names the wrong player half the time.
+  if (!positionReadable) {
+    return t`Game state unavailable`
   }
 
   if (isCheck) {
@@ -138,13 +145,20 @@ export function ChessGame() {
     [games, selectedGameId]
   )
 
+  // Cleared on switch and on the game's own position change: the marker is set
+  // only from our own play, so it is stale both on the next game (drawn
+  // wherever a stone/piece happens to sit) and once the opponent replies.
+  useEffect(() => {
+    setLastMove(null)
+  }, [selectedGameId, selectedGame?.fen])
+
   // Game detail
   const {
     data: gameDetail,
     isLoading: isLoadingDetail,
     error: gameDetailError,
     refetch: refetchGameDetail,
-  } = useGameDetailQuery(selectedGame?.id)
+  } = useGameDetailQuery(selectedGameId)
 
   const game = gameDetail?.game
   const myIdentity = gameDetail?.identity ?? currentUserIdentity
@@ -277,6 +291,10 @@ export function ChessGame() {
       let moveStatus = ''
       let winner = ''
       if (c.isCheckmate()) {
+        // Only claim the win when the identity actually resolved - an empty one
+        // records checkmate with a NULL winner, which the status line then reads
+        // as the loser having won.
+        if (!myIdentity) return
         moveStatus = 'checkmate'
         winner = myIdentity
       } else if (c.isStalemate()) {
@@ -412,7 +430,7 @@ export function ChessGame() {
                     title={opponentName}
                     opponentFingerprint={opponentFingerprint || undefined}
                     opponentName={opponentName}
-                    status={chessStatusText(t, game, myIdentity, isMyTurn, isCheck)}
+                    status={chessStatusText(t, game, myIdentity, isMyTurn, isCheck, chess !== null)}
                     stats={
                       <GameHeaderStat
                         icon={<GameHeaderStoneDot color={myColor === 'w' ? 'white' : 'black'} />}

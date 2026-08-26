@@ -44,15 +44,21 @@ export function ChessBoard({
   const [keyboardPos, setKeyboardPos] = useState<[number, number] | null>(null)
   const [isBoardFocused, setIsBoardFocused] = useState(false)
 
+  // Guarded like the parent's identical call: an unguarded throw here
+  // crash-looped the view. null renders the fallback below.
   const chess = useMemo(() => {
-    const c = new Chess()
-    c.load(fen)
-    return c
+    try {
+      const c = new Chess()
+      c.load(fen)
+      return c
+    } catch {
+      return null
+    }
   }, [fen])
 
-  const board = chess.board()
+  const board = chess?.board() ?? []
   const isActive = gameStatus === 'active'
-  const inCheck = chess.isCheck()
+  const inCheck = chess?.isCheck() ?? false
   const capturedPiecesSummary = useMemo(
     () => getCapturedPiecesSummary(fen),
     [fen]
@@ -63,7 +69,7 @@ export function ChessBoard({
     for (let r = 0; r < 8; r++) {
       for (let f = 0; f < 8; f++) {
         const piece = board[r][f]
-        if (piece && piece.type === 'k' && piece.color === chess.turn()) {
+        if (piece && piece.type === 'k' && piece.color === chess?.turn()) {
           return piece.square
         }
       }
@@ -87,7 +93,7 @@ export function ChessBoard({
   const handleDragStart = useCallback(
     (e: React.DragEvent, square: string) => {
       if (!isActive || !isMyTurn) return
-      const piece = chess.get(square as Square)
+      const piece = chess?.get(square as Square)
       if (!piece || piece.color !== myColor) {
         e.preventDefault()
         return
@@ -96,7 +102,7 @@ export function ChessBoard({
       e.dataTransfer.effectAllowed = 'move'
       setDragFrom(square)
 
-      const moves = chess.moves({ square: square as Square, verbose: true })
+      const moves = chess?.moves({ square: square as Square, verbose: true }) ?? []
       setLegalTargets(new Set(moves.map((m) => m.to)))
     },
     [chess, isActive, isMyTurn, myColor]
@@ -119,7 +125,7 @@ export function ChessBoard({
       if (!fromSquare || !legalTargets.has(toSquare)) return
 
       // Check for pawn promotion
-      const piece = chess.get(fromSquare as Square)
+      const piece = chess?.get(fromSquare as Square)
       if (
         piece?.type === 'p' &&
         ((piece.color === 'w' && toSquare[1] === '8') ||
@@ -147,7 +153,7 @@ export function ChessBoard({
 
       if (dragFrom) {
         if (legalTargets.has(square)) {
-          const piece = chess.get(dragFrom as Square)
+          const piece = chess?.get(dragFrom as Square)
           if (
             piece?.type === 'p' &&
             ((piece.color === 'w' && square[1] === '8') ||
@@ -158,15 +164,20 @@ export function ChessBoard({
             onMove(dragFrom, square)
           }
         }
-        setDragFrom(null)
-        setLegalTargets(new Set())
-        return
+        // Fall through when the click was on another of our own pieces:
+        // deselect-then-return made re-selecting take two clicks.
+        const own = chess?.get(square as Square)
+        if (!(own && own.color === myColor && square !== dragFrom)) {
+          setDragFrom(null)
+          setLegalTargets(new Set())
+          return
+        }
       }
 
-      const piece = chess.get(square as Square)
+      const piece = chess?.get(square as Square)
       if (piece && piece.color === myColor) {
         setDragFrom(square)
-        const moves = chess.moves({ square: square as Square, verbose: true })
+        const moves = chess?.moves({ square: square as Square, verbose: true }) ?? []
         setLegalTargets(new Set(moves.map((m) => m.to)))
       }
     },
@@ -175,7 +186,9 @@ export function ChessBoard({
 
   const handleKeyDown = useCallback(
     (e: React.KeyboardEvent<HTMLDivElement>) => {
-      const [kr, kc] = keyboardPos ?? [3, 3]
+      // Same seed onFocus uses, so the fallback is neither arbitrary nor
+      // unreachable.
+      const [kr, kc] = keyboardPos ?? (myColor === 'w' ? [6, 4] : [6, 3])
 
       switch (e.key) {
         case 'ArrowUp':
@@ -268,7 +281,7 @@ export function ChessBoard({
         {ranks.map((rank, ri) =>
           files.map((file, fi) => {
             const square = `${file}${rank}`
-            const piece = chess.get(square as Square)
+            const piece = chess?.get(square as Square)
             const isLight = (ri + fi) % 2 === 0
             const isDragSource = dragFrom === square
             const isLegalTarget = legalTargets.has(square)

@@ -22,7 +22,6 @@ function useColorName(color: 'w' | 'b'): string {
 }
 
 function usePieceLabel() {
-  const { t } = useLingui()
   return (type: CapturedPieceType, count: number): string => {
     switch (type) {
       case 'p':
@@ -35,8 +34,6 @@ function usePieceLabel() {
         return plural(count, { one: '# rook', other: '# rooks' })
       case 'q':
         return plural(count, { one: '# queen', other: '# queens' })
-      default:
-        return t`${count} pieces`
     }
   }
 }

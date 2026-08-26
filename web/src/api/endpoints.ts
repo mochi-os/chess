@@ -18,12 +18,6 @@ const endpoints = {
     drawDecline: (gameId: string) => `/${gameId}/-/draw-decline`,
     delete: (gameId: string) => `/${gameId}/-/delete`,
   },
-  auth: {
-    code: '/_/code',
-    verify: '/_/verify',
-    identity: '/_/identity',
-    logout: '/_/logout',
-  },
 } as const
 
 export default endpoints

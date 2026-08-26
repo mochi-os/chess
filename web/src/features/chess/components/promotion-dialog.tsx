@@ -62,7 +62,10 @@ export function PromotionDialog({
   }
 
   return (
-    <div className="absolute inset-0 z-10 flex items-center justify-center bg-black/40">
+    <div
+      className="absolute inset-0 z-10 flex items-center justify-center bg-black/40"
+      onClick={onCancel}
+    >
       <div
         aria-labelledby={titleId}
         aria-modal="true"

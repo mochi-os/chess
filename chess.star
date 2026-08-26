@@ -253,6 +253,8 @@ def game_snapshot_valid(game, state):
 	"""Validate a complete inbound snapshot; snapshot columns bypass the per-handler field checks, so without this any event type could set an arbitrary status or winner."""
 	if not valid_fen(state["fen"]):
 		return False
+	if not textual(state["pgn"]):
+		return False
 	if len(state["pgn"]) > 10000:
 		return False
 	if state["status"] not in ["active", "checkmate", "stalemate", "draw", "resigned"]:
@@ -407,7 +409,15 @@ def load_game(a):
 def valid_square(s):
 	return len(s) == 2 and s[0] in "abcdefgh" and s[1] in "12345678"
 
+# textual(value) -> bool: whether a peer-supplied value is a string. Event
+# content is decoded JSON, so a peer controls the types; len() on a number
+# raises, and Starlark has no try/except, so the handler aborts part-done.
+def textual(value):
+	return type(value) == "string"
+
 def valid_fen(fen):
+	if not textual(fen):
+		return False
 	if not fen or len(fen) > 200:
 		return False
 	parts = fen.split(" ")
@@ -646,8 +656,9 @@ def action_move(a):
 	# Validate status and winner
 	valid_statuses = ["active", "checkmate", "stalemate", "draw"]
 	new_status = status if status in valid_statuses else "active"
-	black = game["opponent"] if game["white"] == game["identity"] else game["identity"]
-	players = [game["white"], black]
+	# The pair, not white: every other player check in this file uses it, and
+	# deriving from white puts whatever white holds into the allowlist.
+	players = [game["identity"], game["opponent"]]
 	new_winner = winner if winner in players else None
 
 	chess_ensure_commit_hook()
@@ -919,6 +930,11 @@ def event_new(e):
 	white = e.content("white")
 	if not mochi.text.valid(white, "entity"):
 		return
+	# Bind white to this game's two players. Well-formed is not enough: white is
+	# what action_move derives its winner allowlist from, so a third entity here
+	# both admits a non-player as winner and excludes the real opponent.
+	if white not in [identity, opponent]:
+		return
 
 	created = event_created(e, mochi.time.now())
 	if created == None:
@@ -959,22 +975,16 @@ def event_move(e):
 	fen = e.content("fen")
 	pgn = e.content("pgn") or ""
 	san = e.content("body")
-	status = e.content("status") or "active"
-	winner = e.content("winner") or None
 
+	# Gates, not values: game_apply re-reads and re-validates fen, pgn, status
+	# and winner from the snapshot, so a local copy would be discarded. Only san
+	# is consumed below. Refuse a malformed event here rather than carrying it.
 	if not fen or not san:
 		return
 	if not valid_fen(fen):
 		return
-	if len(pgn) > 10000:
+	if not textual(pgn) or len(pgn) > 10000:
 		return
-
-	valid_statuses = ["active", "checkmate", "stalemate", "draw"]
-	if status not in valid_statuses:
-		status = "active"
-	players = [game["identity"], game["opponent"]]
-	if winner and winner not in players:
-		winner = None
 
 	# Apply atomically, ordered by the sender's tuple: a read-then-write loses to a
 	# concurrent local move, and core's inbound dedup is in memory only, so a retry
@@ -1049,14 +1059,13 @@ def event_resign(e):
 	if sender != game["identity"] and sender != game["opponent"]:
 		return
 
-	winner = e.content("winner")
 	body = event_body(e.content("body"), 10000, mochi.app.label("notifications.body.opponent_resigned"))
 	sender_name = game["identity_name"] if sender == game["identity"] else game["opponent_name"]
 
-	# Derive winner: the other player (not the one who resigned)
-	players = [game["identity"], game["opponent"]]
-	if winner not in players:
-		winner = game["opponent"] if sender == game["identity"] else game["identity"]
+	# No local winner derivation: game_apply writes the snapshot, whose winner
+	# game_snapshot_valid has already bound to the two players, and the state
+	# loop below puts that same value on the wire. A derivation here would be
+	# overwritten by it, so it corrected nothing.
 
 	now = mochi.time.now()
 	state = game_apply(e, game, now)
@@ -1068,7 +1077,7 @@ def event_resign(e):
 
 	# Kept on direct websocket.write: type='system' is multi-semantic;
 	# see chess_commit_hook for the rationale.
-	ws_data = {"type": "system", "event": "resign", "name": sender_name, "created": now, "body": body, "winner": winner or ""}
+	ws_data = {"type": "system", "event": "resign", "name": sender_name, "created": now, "body": body}
 	# A snapshot may have repaired more than this event's own subject - a
 	# draw offer can carry a board move the peer never received - so send the
 	# applied state, not just the fields this event is about. Otherwise an

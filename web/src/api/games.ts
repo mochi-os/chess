@@ -35,8 +35,8 @@ const unwrapData = <T>(raw: unknown): T => {
 export const gamesApi = {
   list: (): Promise<GetGamesResponse> =>
     client
-      .get<{ data: Game[] }>(endpoints.game.list)
-      .then((res) => ({ games: res.data })),
+      .get<{ data: Game[] } | Game[]>(endpoints.game.list)
+      .then((res) => ({ games: unwrapData<Game[]>(res) })),
 
   detail: (gameId: string) =>
     client
