@@ -103,6 +103,14 @@ msgstr "{name} အရှုံးပေးလိုက်သည်"
 msgid "{opponentName} offered a draw"
 msgstr "{opponentName} က သရေ ပေးခဲ့သည်"
 
+#: src/features/chess/index.tsx:373
+msgid "{opponentName} resigned — you win!"
+msgstr "{opponentName} လက်လျှော့လိုက်သည် — သင်နိုင်သည်!"
+
+#: src/features/chess/index.tsx:386
+msgid "{opponentName}'s move"
+msgstr "{opponentName} ၏အလှည့်"
+
 #: ../../../lib/web/src/components/attachment-composer.tsx:248
 #: ../../../lib/web/src/components/ui/upload-progress.tsx:52
 msgid "{sentLabel} of {totalLabel}"
@@ -306,7 +314,7 @@ msgstr "ဤမှတ်ချက်ကို ဖျက်မှာသေချ�
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "log out လုပ်မှာသေချာပါသလား? သင့်အကောင့်ကို ပြန်ဝင်ရန် log in ပြန်လုပ်ရမည်။"
 
-#: src/features/chess/index.tsx:599
+#: src/features/chess/index.tsx:584
 msgid "Are you sure you want to resign? {opponentName} will win the game."
 msgstr "လက်လျှော့မှာသေချာပါသလား? {opponentName} က ပွဲကို နိုင်မည်ဖြစ်သည်။"
 
@@ -361,7 +369,7 @@ msgid "bishop"
 msgstr "ဆင်"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:437
+#: src/features/chess/index.tsx:422
 msgid "Black"
 msgstr "အနက်"
 
@@ -444,10 +452,18 @@ msgstr "ဤအကြောင်းကြားချက်များအတွ
 msgid "Change notification category"
 msgstr "အကြောင်းကြားချက် အမျိုးအစား ပြောင်းမည်"
 
-#: src/features/chess/index.tsx:537
-#: src/features/chess/index.tsx:570
+#: src/features/chess/index.tsx:522
+#: src/features/chess/index.tsx:555
 msgid "Chat"
 msgstr "စကားပြောခန်း"
+
+#: src/features/chess/index.tsx:383
+msgid "Check — {opponentName}'s move"
+msgstr "ရှက် — {opponentName} ၏အလှည့်"
+
+#: src/features/chess/index.tsx:382
+msgid "Check — your move"
+msgstr "ရှက် — သင့်အလှည့်"
 
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx:137
 msgid "Checkbox"
@@ -457,9 +473,17 @@ msgstr "checkbox"
 msgid "Checklist"
 msgstr "Checklist"
 
-#: src/features/chess/index.tsx:106
+#: src/features/chess/index.tsx:366
+msgid "Checkmate — {opponentName} wins"
+msgstr "ရှက်မိတ် — {opponentName} နိုင်သည်"
+
 #: src/features/chess/index.tsx:365
-#: src/features/chess/index.tsx:377
+msgid "Checkmate — you win!"
+msgstr "ရှက်မိတ် — သင်နိုင်သည်!"
+
+#: src/features/chess/index.tsx:60
+#: src/features/chess/index.tsx:319
+#: src/features/chess/index.tsx:331
 msgid "Chess"
 msgstr "ဆက်စ်"
 
@@ -727,7 +751,7 @@ msgstr "မူရင်း sort"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:203
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:252
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:314
-#: src/features/chess/index.tsx:628
+#: src/features/chess/index.tsx:613
 msgid "Delete"
 msgstr "ဖျက်မည်"
 
@@ -747,11 +771,11 @@ msgstr "မှတ်ချက် ဖျက်မည်"
 msgid "Delete field"
 msgstr "field ဖျက်မည်"
 
-#: src/features/chess/index.tsx:483
+#: src/features/chess/index.tsx:468
 msgid "Delete game"
 msgstr "ဂိမ်း ဖျက်မည်"
 
-#: src/features/chess/index.tsx:619
+#: src/features/chess/index.tsx:604
 msgid "Delete game?"
 msgstr "ဂိမ်းကို ဖျက်မလား?"
 
@@ -773,7 +797,7 @@ msgstr "ကြည့်ရှုမှု ဖျက်မည်"
 msgid "Delete your account on the old server"
 msgstr "ဟောင်းသောဆာဗာမှ သင်၏အကောင့်ကို ဖျက်ပါ"
 
-#: src/features/chess/index.tsx:625
+#: src/features/chess/index.tsx:610
 msgid "Deleting..."
 msgstr "ဖျက်နေသည်..."
 
@@ -841,11 +865,15 @@ msgstr "ဒေါင်းလုဒ်"
 msgid "Download failed"
 msgstr "ဒေါင်းလုဒ် မအောင်မြင်ပါ"
 
+#: src/features/chess/index.tsx:370
+msgid "Draw"
+msgstr "သရေ"
+
 #: src/features/chess/components/chat-message-list.tsx:45
 msgid "Draw agreed"
 msgstr "သရေကျရန် သဘောတူသည်"
 
-#: src/features/chess/index.tsx:496
+#: src/features/chess/index.tsx:481
 msgid "Draw offered — waiting for {opponentName}"
 msgstr "သရေ ကမ်းလှမ်းထားသည် — {opponentName} ကို စောင့်နေသည်"
 
@@ -931,7 +959,7 @@ msgstr "ပြင်ပ URL"
 msgid "Extra large"
 msgstr "အလွန်ကြီး"
 
-#: src/features/chess/index.tsx:231
+#: src/features/chess/index.tsx:185
 msgid "Failed to accept draw"
 msgstr "သရေ လက်ခံ၍ မရပါ"
 
@@ -949,11 +977,11 @@ msgstr "ဂိမ်း ဖန်တီး၍ မရပါ"
 msgid "Failed to create link"
 msgstr "လင့် ဖန်တီး၍ မရပါ"
 
-#: src/features/chess/index.tsx:246
+#: src/features/chess/index.tsx:200
 msgid "Failed to create rematch"
 msgstr "ပြန်ပြိုင်ပွဲ ဖန်တီး၍ မရပါ"
 
-#: src/features/chess/index.tsx:236
+#: src/features/chess/index.tsx:190
 msgid "Failed to decline draw"
 msgstr "သရေ ငြင်းပယ်၍ မရပါ"
 
@@ -965,7 +993,7 @@ msgstr "တွဲဖက်ဖိုင် ဖျက်၍ မရပါ"
 msgid "Failed to delete comment"
 msgstr "မှတ်ချက် ဖျက်၍ မရပါ"
 
-#: src/features/chess/index.tsx:258
+#: src/features/chess/index.tsx:212
 msgid "Failed to delete game"
 msgstr "ဂိမ်း ဖျက်၍ မရပါ"
 
@@ -993,11 +1021,11 @@ msgstr "ပုံကို ဖွင့်၍မရပါ"
 msgid "Failed to load video"
 msgstr "ဗီဒီယိုကို ဖွင့်၍မရပါ"
 
-#: src/features/chess/index.tsx:209
+#: src/features/chess/index.tsx:163
 msgid "Failed to make move"
 msgstr "ရွှေ့ခြင်း လုပ်၍ မရပါ"
 
-#: src/features/chess/index.tsx:226
+#: src/features/chess/index.tsx:180
 msgid "Failed to offer draw"
 msgstr "သရေ ကမ်းလှမ်း၍ မရပါ"
 
@@ -1005,7 +1033,7 @@ msgstr "သရေ ကမ်းလှမ်း၍ မရပါ"
 msgid "Failed to post comment"
 msgstr "မှတ်ချက် တင်၍ မရပါ"
 
-#: src/features/chess/index.tsx:219
+#: src/features/chess/index.tsx:173
 msgid "Failed to resign"
 msgstr "ရှုံးရန် ထုတ်ပြန်၍ မရပါ"
 
@@ -1013,8 +1041,8 @@ msgstr "ရှုံးရန် ထုတ်ပြန်၍ မရပါ"
 msgid "Failed to revoke RSS access"
 msgstr "RSS အသုံးပြုခွင့် ရုပ်သိမ်း၍ မရပါ"
 
-#: src/features/chess/index.tsx:554
-#: src/features/chess/index.tsx:587
+#: src/features/chess/index.tsx:539
+#: src/features/chess/index.tsx:572
 msgid "Failed to send"
 msgstr "ပို့၍ မရပါ"
 
@@ -1068,9 +1096,13 @@ msgstr "အပြင်အဆင်မှ"
 msgid "Game created"
 msgstr "ဂိမ်း ဖန်တီးပြီးပါပြီ"
 
-#: src/features/chess/index.tsx:254
+#: src/features/chess/index.tsx:208
 msgid "Game deleted"
 msgstr "ဂိမ်း ဖျက်ပြီးပါပြီ"
+
+#: src/features/chess/index.tsx:379
+msgid "Game state unavailable"
+msgstr "ဂိမ်းအခြေအနေ မရရှိနိုင်ပါ"
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx:26
 #: ../../../lib/web/src/features/errors/unauthorized-error.tsx:26
@@ -1445,7 +1477,7 @@ msgstr "အကြောင်းကြားချက်များ- {0}"
 msgid "Number"
 msgstr "နံပါတ်"
 
-#: src/features/chess/index.tsx:467
+#: src/features/chess/index.tsx:452
 msgid "Offer draw"
 msgstr "ထိုးကွက် ပြန်မျှခြင်း ကမ်းလှမ်း"
 
@@ -1462,11 +1494,11 @@ msgstr "အိုး! စာမျက်နှာ မတွေ့ပါ!"
 msgid "Open actions"
 msgstr "လုပ်ဆောင်ချက်များ ဖွင့်ရန်"
 
-#: src/features/chess/index.tsx:446
+#: src/features/chess/index.tsx:431
 msgid "Open chat panel"
 msgstr "ချတ် panel ကို ဖွင့်"
 
-#: src/features/chess/index.tsx:454
+#: src/features/chess/index.tsx:439
 msgid "Open game actions"
 msgstr "ဂိမ်း လုပ်ဆောင်ချက်များကို ဖွင့်"
 
@@ -1647,7 +1679,7 @@ msgstr "ဆက်စပ် (5m, 3h, 2d)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "၂၄ နာရီအတွင်း ဆက်စပ်၊ ပြင်ပတွင် တိကျသော"
 
-#: src/features/chess/index.tsx:480
+#: src/features/chess/index.tsx:465
 msgid "Rematch"
 msgstr "ပြန်ကစား"
 
@@ -1723,16 +1755,16 @@ msgstr "လိုအပ်"
 msgid "Resend email"
 msgstr "အီးမေးလ်ပြန်ပို့ရန်"
 
-#: src/features/chess/index.tsx:471
-#: src/features/chess/index.tsx:607
+#: src/features/chess/index.tsx:456
+#: src/features/chess/index.tsx:592
 msgid "Resign"
 msgstr "ရှုံးကြောင်းပြော"
 
-#: src/features/chess/index.tsx:598
+#: src/features/chess/index.tsx:583
 msgid "Resign game?"
 msgstr "ဂိမ်း ရှုံးကြောင်းပြောမလား?"
 
-#: src/features/chess/index.tsx:604
+#: src/features/chess/index.tsx:589
 msgid "Resigning..."
 msgstr "ရှုံးကြောင်းပြောနေသည်..."
 
@@ -1995,6 +2027,10 @@ msgstr "မူရင်းများ"
 msgid "Spacious"
 msgstr "ကျယ်ပြန့်သော"
 
+#: src/features/chess/index.tsx:368
+msgid "Stalemate — draw"
+msgstr "ရပ်တန့် — သရေ"
+
 #: src/features/chess/components/new-game.tsx:99
 msgid "Start a new chess game"
 msgstr "Chess ဂိမ်းအသစ် စတင်ပါ"
@@ -2082,7 +2118,7 @@ msgstr "တောင်းဆိုထားသော အကြောင်း�
 msgid "The server returned a web page instead of data."
 msgstr "ဆာဗာသည် ဒေတာအစား ဝဘ်စာမျက်နှာကို ပြန်ပေးခဲ့သည်။"
 
-#: src/features/chess/index.tsx:620
+#: src/features/chess/index.tsx:605
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "ဤလုပ်ဆောင်ချက်သည် ဂိမ်းနှင့် ၎င်း၏ ချတ်ကို အပြီးအပိုင် ဖျက်ပစ်မည်ဖြစ်သည်။ ဤလုပ်ဆောင်ချက်ကို ပြန်ပြောင်း၍မရပါ။"
 
@@ -2285,7 +2321,7 @@ msgid "Wednesday"
 msgstr "ဗုဒ္ဓဟူး"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:437
+#: src/features/chess/index.tsx:422
 msgid "White"
 msgstr "အဖြူ"
 
@@ -2304,6 +2340,10 @@ msgstr "သင်"
 msgid "You do not have access to this section."
 msgstr "ဤအပိုင်းသို့ သင့်တွင် ဝင်ရောက်ခွင့်မရှိပါ။"
 
+#: src/features/chess/index.tsx:374
+msgid "You resigned — {opponentName} wins"
+msgstr "သင်လက်လျှော့လိုက်သည် — {opponentName} နိုင်သည်"
+
 #: ../../../lib/web/src/components/restore-banner.tsx:100
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "သင်၏အကောင့်ကို {source} မှ ဤနေရာသို့ ရွှေ့ပြောင်းခဲ့သည်။ သင်ကာကိုဖျက်မသည်အထိ၊ မက်ဆေ့ချ်များနှင့် အကြောင်းကြားချက်များ ဆာဗာနှစ်ခုလုံးသို့ ရောက်နိုင်သည်၊ သင်၏အချို့သောအကြောင်းအရာများကို ဟောင်းသောဆာဗာမှ ဆက်လက်ပေးဆောင်နေမည်ဖြစ်ပြီး ကြည့်ရှုသူများ သင်ကိုဤနေရာတွင် ရှာဖွေရန် မိနစ်အနည်းငယ် ကြာနိုင်သည်။"
@@ -2311,6 +2351,10 @@ msgstr "သင်၏အကောင့်ကို {source} မှ ဤနေရ�
 #: ../../../lib/web/src/components/comment-composer.tsx:302
 msgid "Your attachments will be lost."
 msgstr "သင့်ပူးတွဲဖိုင်များ ပျောက်ဆုံးသွားပါမည်။"
+
+#: src/features/chess/index.tsx:385
+msgid "Your move"
+msgstr "သင်၏ အလှည့်"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:300
 msgid "Your text and attachments will be lost."

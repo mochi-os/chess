@@ -103,6 +103,14 @@ msgstr "{name} gaf op"
 msgid "{opponentName} offered a draw"
 msgstr "{opponentName} bood remise aan"
 
+#: src/features/chess/index.tsx:373
+msgid "{opponentName} resigned — you win!"
+msgstr "{opponentName} heeft opgegeven — je wint!"
+
+#: src/features/chess/index.tsx:386
+msgid "{opponentName}'s move"
+msgstr "{opponentName} is aan zet"
+
 #: ../../../lib/web/src/components/attachment-composer.tsx:248
 #: ../../../lib/web/src/components/ui/upload-progress.tsx:52
 msgid "{sentLabel} of {totalLabel}"
@@ -306,7 +314,7 @@ msgstr "Weet u zeker dat u deze reactie wilt verwijderen? Dit verwijdert ook all
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "Weet u zeker dat u wilt uitloggen? U moet opnieuw inloggen om toegang te krijgen tot uw account."
 
-#: src/features/chess/index.tsx:599
+#: src/features/chess/index.tsx:584
 msgid "Are you sure you want to resign? {opponentName} will win the game."
 msgstr "Bent u zeker dat u wilt opgeven? {opponentName} wint de partij."
 
@@ -361,7 +369,7 @@ msgid "bishop"
 msgstr "loper"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:437
+#: src/features/chess/index.tsx:422
 msgid "Black"
 msgstr "Zwart"
 
@@ -444,10 +452,18 @@ msgstr "Categorie voor deze meldingen"
 msgid "Change notification category"
 msgstr "Meldingscategorie wijzigen"
 
-#: src/features/chess/index.tsx:537
-#: src/features/chess/index.tsx:570
+#: src/features/chess/index.tsx:522
+#: src/features/chess/index.tsx:555
 msgid "Chat"
 msgstr "Chat"
+
+#: src/features/chess/index.tsx:383
+msgid "Check — {opponentName}'s move"
+msgstr "Schaak — {opponentName} is aan zet"
+
+#: src/features/chess/index.tsx:382
+msgid "Check — your move"
+msgstr "Schaak — jij bent aan zet"
 
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx:137
 msgid "Checkbox"
@@ -457,9 +473,17 @@ msgstr "Selectievakje"
 msgid "Checklist"
 msgstr "Checklist"
 
-#: src/features/chess/index.tsx:106
+#: src/features/chess/index.tsx:366
+msgid "Checkmate — {opponentName} wins"
+msgstr "Schaakmat — {opponentName} wint"
+
 #: src/features/chess/index.tsx:365
-#: src/features/chess/index.tsx:377
+msgid "Checkmate — you win!"
+msgstr "Schaakmat — je wint!"
+
+#: src/features/chess/index.tsx:60
+#: src/features/chess/index.tsx:319
+#: src/features/chess/index.tsx:331
 msgid "Chess"
 msgstr "Schaken"
 
@@ -727,7 +751,7 @@ msgstr "Standaardsortering"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:203
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:252
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:314
-#: src/features/chess/index.tsx:628
+#: src/features/chess/index.tsx:613
 msgid "Delete"
 msgstr "Verwijderen"
 
@@ -747,11 +771,11 @@ msgstr "Reactie verwijderen"
 msgid "Delete field"
 msgstr "Veld verwijderen"
 
-#: src/features/chess/index.tsx:483
+#: src/features/chess/index.tsx:468
 msgid "Delete game"
 msgstr "Spel verwijderen"
 
-#: src/features/chess/index.tsx:619
+#: src/features/chess/index.tsx:604
 msgid "Delete game?"
 msgstr "Spel verwijderen?"
 
@@ -773,7 +797,7 @@ msgstr "Weergave verwijderen"
 msgid "Delete your account on the old server"
 msgstr "Verwijder uw account op de oude server"
 
-#: src/features/chess/index.tsx:625
+#: src/features/chess/index.tsx:610
 msgid "Deleting..."
 msgstr "Verwijderen..."
 
@@ -841,11 +865,15 @@ msgstr "Downloaden"
 msgid "Download failed"
 msgstr "Download mislukt"
 
+#: src/features/chess/index.tsx:370
+msgid "Draw"
+msgstr "Remise"
+
 #: src/features/chess/components/chat-message-list.tsx:45
 msgid "Draw agreed"
 msgstr "Remise overeengekomen"
 
-#: src/features/chess/index.tsx:496
+#: src/features/chess/index.tsx:481
 msgid "Draw offered — waiting for {opponentName}"
 msgstr "Remise aangeboden — wachten op {opponentName}"
 
@@ -931,7 +959,7 @@ msgstr "Externe URL"
 msgid "Extra large"
 msgstr "Extra groot"
 
-#: src/features/chess/index.tsx:231
+#: src/features/chess/index.tsx:185
 msgid "Failed to accept draw"
 msgstr "Remise accepteren mislukt"
 
@@ -949,11 +977,11 @@ msgstr "Spel aanmaken mislukt"
 msgid "Failed to create link"
 msgstr "Link aanmaken mislukt"
 
-#: src/features/chess/index.tsx:246
+#: src/features/chess/index.tsx:200
 msgid "Failed to create rematch"
 msgstr "Rematch aanmaken mislukt"
 
-#: src/features/chess/index.tsx:236
+#: src/features/chess/index.tsx:190
 msgid "Failed to decline draw"
 msgstr "Remise weigeren mislukt"
 
@@ -965,7 +993,7 @@ msgstr "Bijlage verwijderen mislukt"
 msgid "Failed to delete comment"
 msgstr "Reactie verwijderen mislukt"
 
-#: src/features/chess/index.tsx:258
+#: src/features/chess/index.tsx:212
 msgid "Failed to delete game"
 msgstr "Spel verwijderen mislukt"
 
@@ -993,11 +1021,11 @@ msgstr "Kan afbeelding niet laden"
 msgid "Failed to load video"
 msgstr "Kan video niet laden"
 
-#: src/features/chess/index.tsx:209
+#: src/features/chess/index.tsx:163
 msgid "Failed to make move"
 msgstr "Zet uitvoeren mislukt"
 
-#: src/features/chess/index.tsx:226
+#: src/features/chess/index.tsx:180
 msgid "Failed to offer draw"
 msgstr "Remise aanbieden mislukt"
 
@@ -1005,7 +1033,7 @@ msgstr "Remise aanbieden mislukt"
 msgid "Failed to post comment"
 msgstr "Reactie plaatsen mislukt"
 
-#: src/features/chess/index.tsx:219
+#: src/features/chess/index.tsx:173
 msgid "Failed to resign"
 msgstr "Opgeven mislukt"
 
@@ -1013,8 +1041,8 @@ msgstr "Opgeven mislukt"
 msgid "Failed to revoke RSS access"
 msgstr "Kan RSS-toegang niet intrekken"
 
-#: src/features/chess/index.tsx:554
-#: src/features/chess/index.tsx:587
+#: src/features/chess/index.tsx:539
+#: src/features/chess/index.tsx:572
 msgid "Failed to send"
 msgstr "Verzenden mislukt"
 
@@ -1068,9 +1096,13 @@ msgstr "Van thema"
 msgid "Game created"
 msgstr "Spel aangemaakt"
 
-#: src/features/chess/index.tsx:254
+#: src/features/chess/index.tsx:208
 msgid "Game deleted"
 msgstr "Spel verwijderd"
+
+#: src/features/chess/index.tsx:379
+msgid "Game state unavailable"
+msgstr "Spelstatus niet beschikbaar"
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx:26
 #: ../../../lib/web/src/features/errors/unauthorized-error.tsx:26
@@ -1445,7 +1477,7 @@ msgstr "Meldingen: {0}"
 msgid "Number"
 msgstr "Getal"
 
-#: src/features/chess/index.tsx:467
+#: src/features/chess/index.tsx:452
 msgid "Offer draw"
 msgstr "Remise aanbieden"
 
@@ -1462,11 +1494,11 @@ msgstr "Oeps! Pagina niet gevonden!"
 msgid "Open actions"
 msgstr "Acties openen"
 
-#: src/features/chess/index.tsx:446
+#: src/features/chess/index.tsx:431
 msgid "Open chat panel"
 msgstr "Chatpaneel openen"
 
-#: src/features/chess/index.tsx:454
+#: src/features/chess/index.tsx:439
 msgid "Open game actions"
 msgstr "Spelacties openen"
 
@@ -1647,7 +1679,7 @@ msgstr "Relatief (5m, 3u, 2d)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "Relatief binnen 24 uur, anders absoluut"
 
-#: src/features/chess/index.tsx:480
+#: src/features/chess/index.tsx:465
 msgid "Rematch"
 msgstr "Revanche"
 
@@ -1723,16 +1755,16 @@ msgstr "Verplicht"
 msgid "Resend email"
 msgstr "E-mail opnieuw verzenden"
 
-#: src/features/chess/index.tsx:471
-#: src/features/chess/index.tsx:607
+#: src/features/chess/index.tsx:456
+#: src/features/chess/index.tsx:592
 msgid "Resign"
 msgstr "Opgeven"
 
-#: src/features/chess/index.tsx:598
+#: src/features/chess/index.tsx:583
 msgid "Resign game?"
 msgstr "Spel opgeven?"
 
-#: src/features/chess/index.tsx:604
+#: src/features/chess/index.tsx:589
 msgid "Resigning..."
 msgstr "Bezig met opgeven..."
 
@@ -1995,6 +2027,10 @@ msgstr "Bronnen"
 msgid "Spacious"
 msgstr "Ruim"
 
+#: src/features/chess/index.tsx:368
+msgid "Stalemate — draw"
+msgstr "Pat — remise"
+
 #: src/features/chess/components/new-game.tsx:99
 msgid "Start a new chess game"
 msgstr "Start een nieuw schaakspel"
@@ -2082,7 +2118,7 @@ msgstr "De opgevraagde inhoud kon niet worden gevonden."
 msgid "The server returned a web page instead of data."
 msgstr "De server heeft een webpagina teruggestuurd in plaats van gegevens."
 
-#: src/features/chess/index.tsx:620
+#: src/features/chess/index.tsx:605
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Hierdoor worden het spel en de bijbehorende chat permanent verwijderd. Deze actie kan niet ongedaan worden gemaakt."
 
@@ -2285,7 +2321,7 @@ msgid "Wednesday"
 msgstr "Woensdag"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:437
+#: src/features/chess/index.tsx:422
 msgid "White"
 msgstr "Wit"
 
@@ -2304,6 +2340,10 @@ msgstr "U"
 msgid "You do not have access to this section."
 msgstr "Je hebt geen toegang tot dit onderdeel."
 
+#: src/features/chess/index.tsx:374
+msgid "You resigned — {opponentName} wins"
+msgstr "Je hebt opgegeven — {opponentName} wint"
+
 #: ../../../lib/web/src/components/restore-banner.tsx:100
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Uw account is hier naartoe verplaatst vanuit {source}. Totdat u het daar verwijdert, kunnen berichten en meldingen beide servers bereiken, wordt een deel van uw inhoud nog steeds van de oude server geleverd, en kan het een paar minuten duren voordat volgers u hier vinden."
@@ -2311,6 +2351,10 @@ msgstr "Uw account is hier naartoe verplaatst vanuit {source}. Totdat u het daar
 #: ../../../lib/web/src/components/comment-composer.tsx:302
 msgid "Your attachments will be lost."
 msgstr "Je bijlagen gaan verloren."
+
+#: src/features/chess/index.tsx:385
+msgid "Your move"
+msgstr "Uw zet"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:300
 msgid "Your text and attachments will be lost."

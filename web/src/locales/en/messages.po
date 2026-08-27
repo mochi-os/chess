@@ -103,6 +103,14 @@ msgstr "{name} resigned"
 msgid "{opponentName} offered a draw"
 msgstr "{opponentName} offered a draw"
 
+#: src/features/chess/index.tsx:373
+msgid "{opponentName} resigned — you win!"
+msgstr "{opponentName} resigned — you win!"
+
+#: src/features/chess/index.tsx:386
+msgid "{opponentName}'s move"
+msgstr "{opponentName}'s move"
+
 #: ../../../lib/web/src/components/attachment-composer.tsx:248
 #: ../../../lib/web/src/components/ui/upload-progress.tsx:52
 msgid "{sentLabel} of {totalLabel}"
@@ -306,7 +314,7 @@ msgstr "Are you sure you want to delete this comment? This will also delete all 
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "Are you sure you want to log out? You will need to log in again to access your account."
 
-#: src/features/chess/index.tsx:599
+#: src/features/chess/index.tsx:584
 msgid "Are you sure you want to resign? {opponentName} will win the game."
 msgstr "Are you sure you want to resign? {opponentName} will win the game."
 
@@ -361,7 +369,7 @@ msgid "bishop"
 msgstr "bishop"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:437
+#: src/features/chess/index.tsx:422
 msgid "Black"
 msgstr "Black"
 
@@ -444,10 +452,18 @@ msgstr "Category for these notifications"
 msgid "Change notification category"
 msgstr "Change notification category"
 
-#: src/features/chess/index.tsx:537
-#: src/features/chess/index.tsx:570
+#: src/features/chess/index.tsx:522
+#: src/features/chess/index.tsx:555
 msgid "Chat"
 msgstr "Chat"
+
+#: src/features/chess/index.tsx:383
+msgid "Check — {opponentName}'s move"
+msgstr "Check — {opponentName}'s move"
+
+#: src/features/chess/index.tsx:382
+msgid "Check — your move"
+msgstr "Check — your move"
 
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx:137
 msgid "Checkbox"
@@ -457,9 +473,17 @@ msgstr "Checkbox"
 msgid "Checklist"
 msgstr "Checklist"
 
-#: src/features/chess/index.tsx:106
+#: src/features/chess/index.tsx:366
+msgid "Checkmate — {opponentName} wins"
+msgstr "Checkmate — {opponentName} wins"
+
 #: src/features/chess/index.tsx:365
-#: src/features/chess/index.tsx:377
+msgid "Checkmate — you win!"
+msgstr "Checkmate — you win!"
+
+#: src/features/chess/index.tsx:60
+#: src/features/chess/index.tsx:319
+#: src/features/chess/index.tsx:331
 msgid "Chess"
 msgstr "Chess"
 
@@ -727,7 +751,7 @@ msgstr "Default sort"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:203
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:252
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:314
-#: src/features/chess/index.tsx:628
+#: src/features/chess/index.tsx:613
 msgid "Delete"
 msgstr "Delete"
 
@@ -747,11 +771,11 @@ msgstr "Delete comment"
 msgid "Delete field"
 msgstr "Delete field"
 
-#: src/features/chess/index.tsx:483
+#: src/features/chess/index.tsx:468
 msgid "Delete game"
 msgstr "Delete game"
 
-#: src/features/chess/index.tsx:619
+#: src/features/chess/index.tsx:604
 msgid "Delete game?"
 msgstr "Delete game?"
 
@@ -773,7 +797,7 @@ msgstr "Delete view"
 msgid "Delete your account on the old server"
 msgstr "Delete your account on the old server"
 
-#: src/features/chess/index.tsx:625
+#: src/features/chess/index.tsx:610
 msgid "Deleting..."
 msgstr "Deleting..."
 
@@ -841,11 +865,15 @@ msgstr "Download"
 msgid "Download failed"
 msgstr "Download failed"
 
+#: src/features/chess/index.tsx:370
+msgid "Draw"
+msgstr "Draw"
+
 #: src/features/chess/components/chat-message-list.tsx:45
 msgid "Draw agreed"
 msgstr "Draw agreed"
 
-#: src/features/chess/index.tsx:496
+#: src/features/chess/index.tsx:481
 msgid "Draw offered — waiting for {opponentName}"
 msgstr "Draw offered — waiting for {opponentName}"
 
@@ -931,7 +959,7 @@ msgstr "External URL"
 msgid "Extra large"
 msgstr "Extra large"
 
-#: src/features/chess/index.tsx:231
+#: src/features/chess/index.tsx:185
 msgid "Failed to accept draw"
 msgstr "Failed to accept draw"
 
@@ -949,11 +977,11 @@ msgstr "Failed to create game"
 msgid "Failed to create link"
 msgstr "Failed to create link"
 
-#: src/features/chess/index.tsx:246
+#: src/features/chess/index.tsx:200
 msgid "Failed to create rematch"
 msgstr "Failed to create rematch"
 
-#: src/features/chess/index.tsx:236
+#: src/features/chess/index.tsx:190
 msgid "Failed to decline draw"
 msgstr "Failed to decline draw"
 
@@ -965,7 +993,7 @@ msgstr "Failed to delete attachment"
 msgid "Failed to delete comment"
 msgstr "Failed to delete comment"
 
-#: src/features/chess/index.tsx:258
+#: src/features/chess/index.tsx:212
 msgid "Failed to delete game"
 msgstr "Failed to delete game"
 
@@ -993,11 +1021,11 @@ msgstr "Failed to load image"
 msgid "Failed to load video"
 msgstr "Failed to load video"
 
-#: src/features/chess/index.tsx:209
+#: src/features/chess/index.tsx:163
 msgid "Failed to make move"
 msgstr "Failed to make move"
 
-#: src/features/chess/index.tsx:226
+#: src/features/chess/index.tsx:180
 msgid "Failed to offer draw"
 msgstr "Failed to offer draw"
 
@@ -1005,7 +1033,7 @@ msgstr "Failed to offer draw"
 msgid "Failed to post comment"
 msgstr "Failed to post comment"
 
-#: src/features/chess/index.tsx:219
+#: src/features/chess/index.tsx:173
 msgid "Failed to resign"
 msgstr "Failed to resign"
 
@@ -1013,8 +1041,8 @@ msgstr "Failed to resign"
 msgid "Failed to revoke RSS access"
 msgstr "Failed to revoke RSS access"
 
-#: src/features/chess/index.tsx:554
-#: src/features/chess/index.tsx:587
+#: src/features/chess/index.tsx:539
+#: src/features/chess/index.tsx:572
 msgid "Failed to send"
 msgstr "Failed to send"
 
@@ -1068,9 +1096,13 @@ msgstr "From theme"
 msgid "Game created"
 msgstr "Game created"
 
-#: src/features/chess/index.tsx:254
+#: src/features/chess/index.tsx:208
 msgid "Game deleted"
 msgstr "Game deleted"
+
+#: src/features/chess/index.tsx:379
+msgid "Game state unavailable"
+msgstr "Game state unavailable"
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx:26
 #: ../../../lib/web/src/features/errors/unauthorized-error.tsx:26
@@ -1445,7 +1477,7 @@ msgstr "Notifications: {0}"
 msgid "Number"
 msgstr "Number"
 
-#: src/features/chess/index.tsx:467
+#: src/features/chess/index.tsx:452
 msgid "Offer draw"
 msgstr "Offer draw"
 
@@ -1462,11 +1494,11 @@ msgstr "Oops! Page Not Found!"
 msgid "Open actions"
 msgstr "Open actions"
 
-#: src/features/chess/index.tsx:446
+#: src/features/chess/index.tsx:431
 msgid "Open chat panel"
 msgstr "Open chat panel"
 
-#: src/features/chess/index.tsx:454
+#: src/features/chess/index.tsx:439
 msgid "Open game actions"
 msgstr "Open game actions"
 
@@ -1647,7 +1679,7 @@ msgstr "Relative (5m, 3h, 2d)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "Relative within 24 hours, else absolute"
 
-#: src/features/chess/index.tsx:480
+#: src/features/chess/index.tsx:465
 msgid "Rematch"
 msgstr "Rematch"
 
@@ -1723,16 +1755,16 @@ msgstr "Required"
 msgid "Resend email"
 msgstr "Resend email"
 
-#: src/features/chess/index.tsx:471
-#: src/features/chess/index.tsx:607
+#: src/features/chess/index.tsx:456
+#: src/features/chess/index.tsx:592
 msgid "Resign"
 msgstr "Resign"
 
-#: src/features/chess/index.tsx:598
+#: src/features/chess/index.tsx:583
 msgid "Resign game?"
 msgstr "Resign game?"
 
-#: src/features/chess/index.tsx:604
+#: src/features/chess/index.tsx:589
 msgid "Resigning..."
 msgstr "Resigning..."
 
@@ -1995,6 +2027,10 @@ msgstr "Sources"
 msgid "Spacious"
 msgstr "Spacious"
 
+#: src/features/chess/index.tsx:368
+msgid "Stalemate — draw"
+msgstr "Stalemate — draw"
+
 #: src/features/chess/components/new-game.tsx:99
 msgid "Start a new chess game"
 msgstr "Start a new chess game"
@@ -2082,7 +2118,7 @@ msgstr "The requested content could not be found."
 msgid "The server returned a web page instead of data."
 msgstr "The server returned a web page instead of data."
 
-#: src/features/chess/index.tsx:620
+#: src/features/chess/index.tsx:605
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "This permanently deletes the game and its chat. This cannot be undone."
 
@@ -2285,7 +2321,7 @@ msgid "Wednesday"
 msgstr "Wednesday"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:437
+#: src/features/chess/index.tsx:422
 msgid "White"
 msgstr "White"
 
@@ -2304,6 +2340,10 @@ msgstr "You"
 msgid "You do not have access to this section."
 msgstr "You do not have access to this section."
 
+#: src/features/chess/index.tsx:374
+msgid "You resigned — {opponentName} wins"
+msgstr "You resigned — {opponentName} wins"
+
 #: ../../../lib/web/src/components/restore-banner.tsx:100
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
@@ -2311,6 +2351,10 @@ msgstr "Your account was moved here from {source}. Until you delete it there, me
 #: ../../../lib/web/src/components/comment-composer.tsx:302
 msgid "Your attachments will be lost."
 msgstr "Your attachments will be lost."
+
+#: src/features/chess/index.tsx:385
+msgid "Your move"
+msgstr "Your move"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:300
 msgid "Your text and attachments will be lost."

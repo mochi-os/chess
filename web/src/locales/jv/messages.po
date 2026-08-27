@@ -103,6 +103,14 @@ msgstr "{name} nyerah"
 msgid "{opponentName} offered a draw"
 msgstr "{opponentName} nawakaké imbang"
 
+#: src/features/chess/index.tsx:373
+msgid "{opponentName} resigned — you win!"
+msgstr "{opponentName} nyerah — sampeyan menang!"
+
+#: src/features/chess/index.tsx:386
+msgid "{opponentName}'s move"
+msgstr "Giliran {opponentName}"
+
 #: ../../../lib/web/src/components/attachment-composer.tsx:248
 #: ../../../lib/web/src/components/ui/upload-progress.tsx:52
 msgid "{sentLabel} of {totalLabel}"
@@ -306,7 +314,7 @@ msgstr "Sampéyan yakin arep mbusak komentar iki? Iki uga bakal mbusak kabèh ba
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "Sampéyan yakin arep metu? Sampéyan kudu mlebu manèh kanggo ngakses akun sampéyan."
 
-#: src/features/chess/index.tsx:599
+#: src/features/chess/index.tsx:584
 msgid "Are you sure you want to resign? {opponentName} will win the game."
 msgstr "Sampéyan yakin arep nyerah? {opponentName} bakal menang ing game iki."
 
@@ -361,7 +369,7 @@ msgid "bishop"
 msgstr "bishop"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:437
+#: src/features/chess/index.tsx:422
 msgid "Black"
 msgstr "Ireng"
 
@@ -444,10 +452,18 @@ msgstr "Kategori kanggo pemberitahuan iki"
 msgid "Change notification category"
 msgstr "Ganti kategori pemberitahuan"
 
-#: src/features/chess/index.tsx:537
-#: src/features/chess/index.tsx:570
+#: src/features/chess/index.tsx:522
+#: src/features/chess/index.tsx:555
 msgid "Chat"
 msgstr "Chat"
+
+#: src/features/chess/index.tsx:383
+msgid "Check — {opponentName}'s move"
+msgstr "Skak — giliran {opponentName}"
+
+#: src/features/chess/index.tsx:382
+msgid "Check — your move"
+msgstr "Skak — giliran sampeyan"
 
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx:137
 msgid "Checkbox"
@@ -457,9 +473,17 @@ msgstr "Kothak centhang"
 msgid "Checklist"
 msgstr "Checklist"
 
-#: src/features/chess/index.tsx:106
+#: src/features/chess/index.tsx:366
+msgid "Checkmate — {opponentName} wins"
+msgstr "Skakmat — {opponentName} menang"
+
 #: src/features/chess/index.tsx:365
-#: src/features/chess/index.tsx:377
+msgid "Checkmate — you win!"
+msgstr "Skakmat — sampeyan menang!"
+
+#: src/features/chess/index.tsx:60
+#: src/features/chess/index.tsx:319
+#: src/features/chess/index.tsx:331
 msgid "Chess"
 msgstr "Catur"
 
@@ -727,7 +751,7 @@ msgstr "Urutan standar"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:203
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:252
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:314
-#: src/features/chess/index.tsx:628
+#: src/features/chess/index.tsx:613
 msgid "Delete"
 msgstr "Busak"
 
@@ -747,11 +771,11 @@ msgstr "Busak komentar"
 msgid "Delete field"
 msgstr "Busak field"
 
-#: src/features/chess/index.tsx:483
+#: src/features/chess/index.tsx:468
 msgid "Delete game"
 msgstr "Busak game"
 
-#: src/features/chess/index.tsx:619
+#: src/features/chess/index.tsx:604
 msgid "Delete game?"
 msgstr "Busak game?"
 
@@ -773,7 +797,7 @@ msgstr "Busak tampilan"
 msgid "Delete your account on the old server"
 msgstr "Busak akun sampeyan ing server lawas"
 
-#: src/features/chess/index.tsx:625
+#: src/features/chess/index.tsx:610
 msgid "Deleting..."
 msgstr "Mbusak..."
 
@@ -841,11 +865,15 @@ msgstr "Download"
 msgid "Download failed"
 msgstr "Gagal ngundhuh"
 
+#: src/features/chess/index.tsx:370
+msgid "Draw"
+msgstr "Seri"
+
 #: src/features/chess/components/chat-message-list.tsx:45
 msgid "Draw agreed"
 msgstr "Remis disarujuki"
 
-#: src/features/chess/index.tsx:496
+#: src/features/chess/index.tsx:481
 msgid "Draw offered — waiting for {opponentName}"
 msgstr "Tawaran imbang — ngenténi {opponentName}"
 
@@ -931,7 +959,7 @@ msgstr "URL Eksternal"
 msgid "Extra large"
 msgstr "Gedhe banget"
 
-#: src/features/chess/index.tsx:231
+#: src/features/chess/index.tsx:185
 msgid "Failed to accept draw"
 msgstr "Gagal nampa imbang"
 
@@ -949,11 +977,11 @@ msgstr "Gagal nggawé game"
 msgid "Failed to create link"
 msgstr "Gagal nggawé link"
 
-#: src/features/chess/index.tsx:246
+#: src/features/chess/index.tsx:200
 msgid "Failed to create rematch"
 msgstr "Gagal nggawé tandhing manèh"
 
-#: src/features/chess/index.tsx:236
+#: src/features/chess/index.tsx:190
 msgid "Failed to decline draw"
 msgstr "Gagal nolak imbang"
 
@@ -965,7 +993,7 @@ msgstr "Gagal mbusak lampiran"
 msgid "Failed to delete comment"
 msgstr "Gagal mbusak komentar"
 
-#: src/features/chess/index.tsx:258
+#: src/features/chess/index.tsx:212
 msgid "Failed to delete game"
 msgstr "Gagal mbusak game"
 
@@ -993,11 +1021,11 @@ msgstr "Gagal mbukak gambar"
 msgid "Failed to load video"
 msgstr "Gagal mbukak video"
 
-#: src/features/chess/index.tsx:209
+#: src/features/chess/index.tsx:163
 msgid "Failed to make move"
 msgstr "Gagal nggawé langkah"
 
-#: src/features/chess/index.tsx:226
+#: src/features/chess/index.tsx:180
 msgid "Failed to offer draw"
 msgstr "Gagal nawakké imbang"
 
@@ -1005,7 +1033,7 @@ msgstr "Gagal nawakké imbang"
 msgid "Failed to post comment"
 msgstr "Gagal posting komentar"
 
-#: src/features/chess/index.tsx:219
+#: src/features/chess/index.tsx:173
 msgid "Failed to resign"
 msgstr "Gagal nyerah"
 
@@ -1013,8 +1041,8 @@ msgstr "Gagal nyerah"
 msgid "Failed to revoke RSS access"
 msgstr "Gagal mbatalake akses RSS"
 
-#: src/features/chess/index.tsx:554
-#: src/features/chess/index.tsx:587
+#: src/features/chess/index.tsx:539
+#: src/features/chess/index.tsx:572
 msgid "Failed to send"
 msgstr "Gagal ngirim"
 
@@ -1068,9 +1096,13 @@ msgstr "Saka tema"
 msgid "Game created"
 msgstr "Game digawé"
 
-#: src/features/chess/index.tsx:254
+#: src/features/chess/index.tsx:208
 msgid "Game deleted"
 msgstr "Game dibusak"
+
+#: src/features/chess/index.tsx:379
+msgid "Game state unavailable"
+msgstr "Kahanan dolanan ora kasedhiya"
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx:26
 #: ../../../lib/web/src/features/errors/unauthorized-error.tsx:26
@@ -1445,7 +1477,7 @@ msgstr "Notifikasi: {0}"
 msgid "Number"
 msgstr "Nomer"
 
-#: src/features/chess/index.tsx:467
+#: src/features/chess/index.tsx:452
 msgid "Offer draw"
 msgstr "Tawaran remis"
 
@@ -1462,11 +1494,11 @@ msgstr "Adhuh! Kaca Ora Ditemokaké!"
 msgid "Open actions"
 msgstr "Bukak tumindak"
 
-#: src/features/chess/index.tsx:446
+#: src/features/chess/index.tsx:431
 msgid "Open chat panel"
 msgstr "Bukak panel chat"
 
-#: src/features/chess/index.tsx:454
+#: src/features/chess/index.tsx:439
 msgid "Open game actions"
 msgstr "Bukak aksi game"
 
@@ -1647,7 +1679,7 @@ msgstr "Relatif (5m, 3j, 2d)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "Relatif sajroning 24 jam, liyané absolut"
 
-#: src/features/chess/index.tsx:480
+#: src/features/chess/index.tsx:465
 msgid "Rematch"
 msgstr "Tandhing manèh"
 
@@ -1723,16 +1755,16 @@ msgstr "Dibutuhaké"
 msgid "Resend email"
 msgstr "Kirim ulang email"
 
-#: src/features/chess/index.tsx:471
-#: src/features/chess/index.tsx:607
+#: src/features/chess/index.tsx:456
+#: src/features/chess/index.tsx:592
 msgid "Resign"
 msgstr "Nyerah"
 
-#: src/features/chess/index.tsx:598
+#: src/features/chess/index.tsx:583
 msgid "Resign game?"
 msgstr "Nyerah game?"
 
-#: src/features/chess/index.tsx:604
+#: src/features/chess/index.tsx:589
 msgid "Resigning..."
 msgstr "Lagi nyerah..."
 
@@ -1995,6 +2027,10 @@ msgstr "Sumber"
 msgid "Spacious"
 msgstr "Jembar"
 
+#: src/features/chess/index.tsx:368
+msgid "Stalemate — draw"
+msgstr "Remis — seri"
+
 #: src/features/chess/components/new-game.tsx:99
 msgid "Start a new chess game"
 msgstr "Miwiti game catur anyar"
@@ -2082,7 +2118,7 @@ msgstr "Konten sing dijaluk ora bisa ditemokake."
 msgid "The server returned a web page instead of data."
 msgstr "Server mbalèkaké kaca web tinimbang data."
 
-#: src/features/chess/index.tsx:620
+#: src/features/chess/index.tsx:605
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Iki bakal mbusak game lan obrolane kanthi permanen. Tindakan iki ora bisa dibatalake."
 
@@ -2285,7 +2321,7 @@ msgid "Wednesday"
 msgstr "Rebo"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:437
+#: src/features/chess/index.tsx:422
 msgid "White"
 msgstr "Putih"
 
@@ -2304,6 +2340,10 @@ msgstr "Sampéyan"
 msgid "You do not have access to this section."
 msgstr "Sampeyan ora duwe akses menyang bagean iki."
 
+#: src/features/chess/index.tsx:374
+msgid "You resigned — {opponentName} wins"
+msgstr "Sampeyan nyerah — {opponentName} menang"
+
 #: ../../../lib/web/src/components/restore-banner.tsx:100
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Akun sampeyan dipindah mrene saka {source}. Nganti sampeyan mbusak ana, pesen lan notifikasi bisa tekan loro-lorone server, sawetara konten sampeyan tetep dilayani saka server lawas, lan pengikut bisa butuh sawetara menit kanggo nemokake sampeyan ing kene."
@@ -2311,6 +2351,10 @@ msgstr "Akun sampeyan dipindah mrene saka {source}. Nganti sampeyan mbusak ana, 
 #: ../../../lib/web/src/components/comment-composer.tsx:302
 msgid "Your attachments will be lost."
 msgstr "Lampiranmu bakal ilang."
+
+#: src/features/chess/index.tsx:385
+msgid "Your move"
+msgstr "Langkahmu"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:300
 msgid "Your text and attachments will be lost."

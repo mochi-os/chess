@@ -103,6 +103,14 @@ msgstr "Ildiodd {name}"
 msgid "{opponentName} offered a draw"
 msgstr "Cynigiodd {opponentName} gêm gyfartal"
 
+#: src/features/chess/index.tsx:373
+msgid "{opponentName} resigned — you win!"
+msgstr "Mae {opponentName} wedi ildio — rydych chi'n ennill!"
+
+#: src/features/chess/index.tsx:386
+msgid "{opponentName}'s move"
+msgstr "Tro {opponentName}"
+
 #: ../../../lib/web/src/components/attachment-composer.tsx:248
 #: ../../../lib/web/src/components/ui/upload-progress.tsx:52
 msgid "{sentLabel} of {totalLabel}"
@@ -306,7 +314,7 @@ msgstr "Ydych chi'n siŵr eich bod am ddileu'r sylw hwn? Bydd hyn hefyd yn dileu
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "Ydych chi'n siŵr eich bod am allgofnodi? Bydd angen i chi fewngofnodi eto i gael at eich cyfrif."
 
-#: src/features/chess/index.tsx:599
+#: src/features/chess/index.tsx:584
 msgid "Are you sure you want to resign? {opponentName} will win the game."
 msgstr "Ydych chi'n siŵr eich bod am ymddiswyddo? Bydd {opponentName} yn ennill y gêm."
 
@@ -361,7 +369,7 @@ msgid "bishop"
 msgstr "esgob"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:437
+#: src/features/chess/index.tsx:422
 msgid "Black"
 msgstr "Du"
 
@@ -444,10 +452,18 @@ msgstr "Categori ar gyfer yr hysbysiadau hyn"
 msgid "Change notification category"
 msgstr "Newid categori hysbysiad"
 
-#: src/features/chess/index.tsx:537
-#: src/features/chess/index.tsx:570
+#: src/features/chess/index.tsx:522
+#: src/features/chess/index.tsx:555
 msgid "Chat"
 msgstr "Sgwrs"
+
+#: src/features/chess/index.tsx:383
+msgid "Check — {opponentName}'s move"
+msgstr "Siec — tro {opponentName}"
+
+#: src/features/chess/index.tsx:382
+msgid "Check — your move"
+msgstr "Siec — eich tro chi"
 
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx:137
 msgid "Checkbox"
@@ -457,9 +473,17 @@ msgstr "Blwch ticio"
 msgid "Checklist"
 msgstr "Rhestr wirio"
 
-#: src/features/chess/index.tsx:106
+#: src/features/chess/index.tsx:366
+msgid "Checkmate — {opponentName} wins"
+msgstr "Siec mat — {opponentName} sy'n ennill"
+
 #: src/features/chess/index.tsx:365
-#: src/features/chess/index.tsx:377
+msgid "Checkmate — you win!"
+msgstr "Siec mat — rydych chi'n ennill!"
+
+#: src/features/chess/index.tsx:60
+#: src/features/chess/index.tsx:319
+#: src/features/chess/index.tsx:331
 msgid "Chess"
 msgstr "Gwyddbwyll"
 
@@ -727,7 +751,7 @@ msgstr "Trefnu diofyn"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:203
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:252
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:314
-#: src/features/chess/index.tsx:628
+#: src/features/chess/index.tsx:613
 msgid "Delete"
 msgstr "Dileu"
 
@@ -747,11 +771,11 @@ msgstr "Dileu sylw"
 msgid "Delete field"
 msgstr "Dileu maes"
 
-#: src/features/chess/index.tsx:483
+#: src/features/chess/index.tsx:468
 msgid "Delete game"
 msgstr "Dileu gêm"
 
-#: src/features/chess/index.tsx:619
+#: src/features/chess/index.tsx:604
 msgid "Delete game?"
 msgstr "Dileu'r gêm?"
 
@@ -773,7 +797,7 @@ msgstr "Dileu golwg"
 msgid "Delete your account on the old server"
 msgstr "Dilëwch eich cyfrif ar yr hen weinydd"
 
-#: src/features/chess/index.tsx:625
+#: src/features/chess/index.tsx:610
 msgid "Deleting..."
 msgstr "Yn dileu..."
 
@@ -841,11 +865,15 @@ msgstr "Lawrlwytho"
 msgid "Download failed"
 msgstr "Methwyd â lawrlwytho"
 
+#: src/features/chess/index.tsx:370
+msgid "Draw"
+msgstr "Gêm gyfartal"
+
 #: src/features/chess/components/chat-message-list.tsx:45
 msgid "Draw agreed"
 msgstr "Cytunwyd ar gyfartal"
 
-#: src/features/chess/index.tsx:496
+#: src/features/chess/index.tsx:481
 msgid "Draw offered — waiting for {opponentName}"
 msgstr "Cynigiwyd cyfartal — yn aros am {opponentName}"
 
@@ -931,7 +959,7 @@ msgstr "URL allanol"
 msgid "Extra large"
 msgstr "Ychwanegol o fawr"
 
-#: src/features/chess/index.tsx:231
+#: src/features/chess/index.tsx:185
 msgid "Failed to accept draw"
 msgstr "Methwyd derbyn cyfartal"
 
@@ -949,11 +977,11 @@ msgstr "Methwyd creu gêm"
 msgid "Failed to create link"
 msgstr "Methwyd creu dolen"
 
-#: src/features/chess/index.tsx:246
+#: src/features/chess/index.tsx:200
 msgid "Failed to create rematch"
 msgstr "Methwyd creu ailchwarae"
 
-#: src/features/chess/index.tsx:236
+#: src/features/chess/index.tsx:190
 msgid "Failed to decline draw"
 msgstr "Methwyd gwrthod cyfartal"
 
@@ -965,7 +993,7 @@ msgstr "Methwyd dileu'r atodiad"
 msgid "Failed to delete comment"
 msgstr "Methwyd dileu'r sylw"
 
-#: src/features/chess/index.tsx:258
+#: src/features/chess/index.tsx:212
 msgid "Failed to delete game"
 msgstr "Methwyd dileu'r gêm"
 
@@ -993,11 +1021,11 @@ msgstr "Methwyd llwytho'r ddelwedd"
 msgid "Failed to load video"
 msgstr "Methwyd llwytho'r fideo"
 
-#: src/features/chess/index.tsx:209
+#: src/features/chess/index.tsx:163
 msgid "Failed to make move"
 msgstr "Methwyd gwneud symudiad"
 
-#: src/features/chess/index.tsx:226
+#: src/features/chess/index.tsx:180
 msgid "Failed to offer draw"
 msgstr "Methwyd cynnig cyfartal"
 
@@ -1005,7 +1033,7 @@ msgstr "Methwyd cynnig cyfartal"
 msgid "Failed to post comment"
 msgstr "Methwyd postio sylw"
 
-#: src/features/chess/index.tsx:219
+#: src/features/chess/index.tsx:173
 msgid "Failed to resign"
 msgstr "Methwyd ymddiswyddo"
 
@@ -1013,8 +1041,8 @@ msgstr "Methwyd ymddiswyddo"
 msgid "Failed to revoke RSS access"
 msgstr "Methwyd â dirymu mynediad RSS"
 
-#: src/features/chess/index.tsx:554
-#: src/features/chess/index.tsx:587
+#: src/features/chess/index.tsx:539
+#: src/features/chess/index.tsx:572
 msgid "Failed to send"
 msgstr "Methwyd anfon"
 
@@ -1068,9 +1096,13 @@ msgstr "O'r thema"
 msgid "Game created"
 msgstr "Gêm wedi'i chreu"
 
-#: src/features/chess/index.tsx:254
+#: src/features/chess/index.tsx:208
 msgid "Game deleted"
 msgstr "Gêm wedi'i dileu"
+
+#: src/features/chess/index.tsx:379
+msgid "Game state unavailable"
+msgstr "Nid yw cyflwr y gêm ar gael"
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx:26
 #: ../../../lib/web/src/features/errors/unauthorized-error.tsx:26
@@ -1445,7 +1477,7 @@ msgstr "Hysbysiadau: {0}"
 msgid "Number"
 msgstr "Rhif"
 
-#: src/features/chess/index.tsx:467
+#: src/features/chess/index.tsx:452
 msgid "Offer draw"
 msgstr "Cynnig gêm gyfartal"
 
@@ -1462,11 +1494,11 @@ msgstr "Wps! Heb Ddod o Hyd i'r Dudalen!"
 msgid "Open actions"
 msgstr "Agor gweithredoedd"
 
-#: src/features/chess/index.tsx:446
+#: src/features/chess/index.tsx:431
 msgid "Open chat panel"
 msgstr "Agor panel sgwrs"
 
-#: src/features/chess/index.tsx:454
+#: src/features/chess/index.tsx:439
 msgid "Open game actions"
 msgstr "Agor camau gweithredu gêm"
 
@@ -1647,7 +1679,7 @@ msgstr "Cymharol (5m, 3a, 2d)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "Cymharol o fewn 24 awr, fel arall yn absoliwt"
 
-#: src/features/chess/index.tsx:480
+#: src/features/chess/index.tsx:465
 msgid "Rematch"
 msgstr "Aildrefnu gêm"
 
@@ -1723,16 +1755,16 @@ msgstr "Gofynnol"
 msgid "Resend email"
 msgstr "Ailanfon yr e-bost"
 
-#: src/features/chess/index.tsx:471
-#: src/features/chess/index.tsx:607
+#: src/features/chess/index.tsx:456
+#: src/features/chess/index.tsx:592
 msgid "Resign"
 msgstr "Ymddiswyddo"
 
-#: src/features/chess/index.tsx:598
+#: src/features/chess/index.tsx:583
 msgid "Resign game?"
 msgstr "Ymddiswyddo o'r gêm?"
 
-#: src/features/chess/index.tsx:604
+#: src/features/chess/index.tsx:589
 msgid "Resigning..."
 msgstr "Yn ymddiswyddo..."
 
@@ -1995,6 +2027,10 @@ msgstr "Ffynonellau"
 msgid "Spacious"
 msgstr "Helaeth"
 
+#: src/features/chess/index.tsx:368
+msgid "Stalemate — draw"
+msgstr "Sefyllfa ddi-symud — gêm gyfartal"
+
 #: src/features/chess/components/new-game.tsx:99
 msgid "Start a new chess game"
 msgstr "Cychwyn gêm wyddbwyll newydd"
@@ -2082,7 +2118,7 @@ msgstr "Nid oedd modd dod o hyd i'r cynnwys y gofynnwyd amdano."
 msgid "The server returned a web page instead of data."
 msgstr "Dychwelodd y gweinydd dudalen we yn lle data."
 
-#: src/features/chess/index.tsx:620
+#: src/features/chess/index.tsx:605
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Bydd hyn yn dileu'r gêm a'i sgwrs yn barhaol. Ni ellir dadwneud hyn."
 
@@ -2285,7 +2321,7 @@ msgid "Wednesday"
 msgstr "Dydd Mercher"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:437
+#: src/features/chess/index.tsx:422
 msgid "White"
 msgstr "Gwyn"
 
@@ -2304,6 +2340,10 @@ msgstr "Chi"
 msgid "You do not have access to this section."
 msgstr "Nid oes gennych fynediad i'r adran hon."
 
+#: src/features/chess/index.tsx:374
+msgid "You resigned — {opponentName} wins"
+msgstr "Rydych wedi ildio — {opponentName} sy'n ennill"
+
 #: ../../../lib/web/src/components/restore-banner.tsx:100
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Symudwyd eich cyfrif yma o {source}. Hyd nes y byddwch yn ei ddileu yno, gall negeseuon a hysbysiadau gyrraedd y ddau weinydd, gall peth o'ch cynnwys barhau i gael ei weini o'r hen weinydd, a gall dilynwyr gymryd ychydig funudau i ddod o hyd i chi yma."
@@ -2311,6 +2351,10 @@ msgstr "Symudwyd eich cyfrif yma o {source}. Hyd nes y byddwch yn ei ddileu yno,
 #: ../../../lib/web/src/components/comment-composer.tsx:302
 msgid "Your attachments will be lost."
 msgstr "Bydd eich atodiadau'n cael eu colli."
+
+#: src/features/chess/index.tsx:385
+msgid "Your move"
+msgstr "Eich symudiad"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:300
 msgid "Your text and attachments will be lost."

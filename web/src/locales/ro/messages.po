@@ -103,6 +103,14 @@ msgstr "{name} a abandonat"
 msgid "{opponentName} offered a draw"
 msgstr "{opponentName} a oferit egalitate"
 
+#: src/features/chess/index.tsx:373
+msgid "{opponentName} resigned — you win!"
+msgstr "{opponentName} a abandonat — ai câștigat!"
+
+#: src/features/chess/index.tsx:386
+msgid "{opponentName}'s move"
+msgstr "Este rândul lui {opponentName}"
+
 #: ../../../lib/web/src/components/attachment-composer.tsx:248
 #: ../../../lib/web/src/components/ui/upload-progress.tsx:52
 msgid "{sentLabel} of {totalLabel}"
@@ -306,7 +314,7 @@ msgstr "Sigur vrei să ștergi acest comentariu? Asta va șterge și toate răsp
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "Sigur vrei să te deconectezi? Va trebui să te autentifici din nou pentru a accesa contul."
 
-#: src/features/chess/index.tsx:599
+#: src/features/chess/index.tsx:584
 msgid "Are you sure you want to resign? {opponentName} will win the game."
 msgstr "Sigur vrei să te retragi? {opponentName} va câștiga jocul."
 
@@ -361,7 +369,7 @@ msgid "bishop"
 msgstr "nebun"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:437
+#: src/features/chess/index.tsx:422
 msgid "Black"
 msgstr "Negru"
 
@@ -444,10 +452,18 @@ msgstr "Categorie pentru aceste notificări"
 msgid "Change notification category"
 msgstr "Schimbă categoria notificării"
 
-#: src/features/chess/index.tsx:537
-#: src/features/chess/index.tsx:570
+#: src/features/chess/index.tsx:522
+#: src/features/chess/index.tsx:555
 msgid "Chat"
 msgstr "Chat"
+
+#: src/features/chess/index.tsx:383
+msgid "Check — {opponentName}'s move"
+msgstr "Șah — este rândul lui {opponentName}"
+
+#: src/features/chess/index.tsx:382
+msgid "Check — your move"
+msgstr "Șah — este rândul tău"
 
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx:137
 msgid "Checkbox"
@@ -457,9 +473,17 @@ msgstr "Casetă de selectare"
 msgid "Checklist"
 msgstr "Listă de verificare"
 
-#: src/features/chess/index.tsx:106
+#: src/features/chess/index.tsx:366
+msgid "Checkmate — {opponentName} wins"
+msgstr "Șah mat — câștigă {opponentName}"
+
 #: src/features/chess/index.tsx:365
-#: src/features/chess/index.tsx:377
+msgid "Checkmate — you win!"
+msgstr "Șah mat — ai câștigat!"
+
+#: src/features/chess/index.tsx:60
+#: src/features/chess/index.tsx:319
+#: src/features/chess/index.tsx:331
 msgid "Chess"
 msgstr "Șah"
 
@@ -727,7 +751,7 @@ msgstr "Sortare implicită"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:203
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:252
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:314
-#: src/features/chess/index.tsx:628
+#: src/features/chess/index.tsx:613
 msgid "Delete"
 msgstr "Șterge"
 
@@ -747,11 +771,11 @@ msgstr "Șterge comentariul"
 msgid "Delete field"
 msgstr "Șterge câmpul"
 
-#: src/features/chess/index.tsx:483
+#: src/features/chess/index.tsx:468
 msgid "Delete game"
 msgstr "Șterge jocul"
 
-#: src/features/chess/index.tsx:619
+#: src/features/chess/index.tsx:604
 msgid "Delete game?"
 msgstr "Ștergi jocul?"
 
@@ -773,7 +797,7 @@ msgstr "Șterge vizualizarea"
 msgid "Delete your account on the old server"
 msgstr "Ștergeți contul de pe serverul vechi"
 
-#: src/features/chess/index.tsx:625
+#: src/features/chess/index.tsx:610
 msgid "Deleting..."
 msgstr "Se șterge..."
 
@@ -841,11 +865,15 @@ msgstr "Descarcă"
 msgid "Download failed"
 msgstr "Descărcarea a eșuat"
 
+#: src/features/chess/index.tsx:370
+msgid "Draw"
+msgstr "Remiză"
+
 #: src/features/chess/components/chat-message-list.tsx:45
 msgid "Draw agreed"
 msgstr "Remiză acceptată"
 
-#: src/features/chess/index.tsx:496
+#: src/features/chess/index.tsx:481
 msgid "Draw offered — waiting for {opponentName}"
 msgstr "Remiză oferită — se așteaptă {opponentName}"
 
@@ -931,7 +959,7 @@ msgstr "URL extern"
 msgid "Extra large"
 msgstr "Extra mare"
 
-#: src/features/chess/index.tsx:231
+#: src/features/chess/index.tsx:185
 msgid "Failed to accept draw"
 msgstr "Acceptarea remizei a eșuat"
 
@@ -949,11 +977,11 @@ msgstr "Crearea jocului a eșuat"
 msgid "Failed to create link"
 msgstr "Crearea linkului a eșuat"
 
-#: src/features/chess/index.tsx:246
+#: src/features/chess/index.tsx:200
 msgid "Failed to create rematch"
 msgstr "Crearea revanșei a eșuat"
 
-#: src/features/chess/index.tsx:236
+#: src/features/chess/index.tsx:190
 msgid "Failed to decline draw"
 msgstr "Refuzul remizei a eșuat"
 
@@ -965,7 +993,7 @@ msgstr "Ștergerea atașamentului a eșuat"
 msgid "Failed to delete comment"
 msgstr "Ștergerea comentariului a eșuat"
 
-#: src/features/chess/index.tsx:258
+#: src/features/chess/index.tsx:212
 msgid "Failed to delete game"
 msgstr "Ștergerea jocului a eșuat"
 
@@ -993,11 +1021,11 @@ msgstr "Imaginea nu a putut fi încărcată"
 msgid "Failed to load video"
 msgstr "Videoclipul nu a putut fi încărcat"
 
-#: src/features/chess/index.tsx:209
+#: src/features/chess/index.tsx:163
 msgid "Failed to make move"
 msgstr "Efectuarea mutării a eșuat"
 
-#: src/features/chess/index.tsx:226
+#: src/features/chess/index.tsx:180
 msgid "Failed to offer draw"
 msgstr "Oferirea remizei a eșuat"
 
@@ -1005,7 +1033,7 @@ msgstr "Oferirea remizei a eșuat"
 msgid "Failed to post comment"
 msgstr "Postarea comentariului a eșuat"
 
-#: src/features/chess/index.tsx:219
+#: src/features/chess/index.tsx:173
 msgid "Failed to resign"
 msgstr "Abandonul a eșuat"
 
@@ -1013,8 +1041,8 @@ msgstr "Abandonul a eșuat"
 msgid "Failed to revoke RSS access"
 msgstr "Revocarea accesului RSS a eșuat"
 
-#: src/features/chess/index.tsx:554
-#: src/features/chess/index.tsx:587
+#: src/features/chess/index.tsx:539
+#: src/features/chess/index.tsx:572
 msgid "Failed to send"
 msgstr "Trimiterea a eșuat"
 
@@ -1068,9 +1096,13 @@ msgstr "Din temă"
 msgid "Game created"
 msgstr "Joc creat"
 
-#: src/features/chess/index.tsx:254
+#: src/features/chess/index.tsx:208
 msgid "Game deleted"
 msgstr "Joc șters"
+
+#: src/features/chess/index.tsx:379
+msgid "Game state unavailable"
+msgstr "Starea partidei nu este disponibilă"
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx:26
 #: ../../../lib/web/src/features/errors/unauthorized-error.tsx:26
@@ -1445,7 +1477,7 @@ msgstr "Notificări: {0}"
 msgid "Number"
 msgstr "Număr"
 
-#: src/features/chess/index.tsx:467
+#: src/features/chess/index.tsx:452
 msgid "Offer draw"
 msgstr "Oferă remiză"
 
@@ -1462,11 +1494,11 @@ msgstr "Hopa! Pagina nu a fost găsită!"
 msgid "Open actions"
 msgstr "Deschide acțiunile"
 
-#: src/features/chess/index.tsx:446
+#: src/features/chess/index.tsx:431
 msgid "Open chat panel"
 msgstr "Deschide panoul de conversație"
 
-#: src/features/chess/index.tsx:454
+#: src/features/chess/index.tsx:439
 msgid "Open game actions"
 msgstr "Deschide acțiuni joc"
 
@@ -1647,7 +1679,7 @@ msgstr "Relativ (5m, 3h, 2z)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "Relativ în 24 de ore, altfel absolut"
 
-#: src/features/chess/index.tsx:480
+#: src/features/chess/index.tsx:465
 msgid "Rematch"
 msgstr "Revanșă"
 
@@ -1723,16 +1755,16 @@ msgstr "Obligatoriu"
 msgid "Resend email"
 msgstr "Retrimite e-mailul"
 
-#: src/features/chess/index.tsx:471
-#: src/features/chess/index.tsx:607
+#: src/features/chess/index.tsx:456
+#: src/features/chess/index.tsx:592
 msgid "Resign"
 msgstr "Abandonează"
 
-#: src/features/chess/index.tsx:598
+#: src/features/chess/index.tsx:583
 msgid "Resign game?"
 msgstr "Abandonezi jocul?"
 
-#: src/features/chess/index.tsx:604
+#: src/features/chess/index.tsx:589
 msgid "Resigning..."
 msgstr "Se abandonează..."
 
@@ -1995,6 +2027,10 @@ msgstr "Surse"
 msgid "Spacious"
 msgstr "Spațios"
 
+#: src/features/chess/index.tsx:368
+msgid "Stalemate — draw"
+msgstr "Pat — remiză"
+
 #: src/features/chess/components/new-game.tsx:99
 msgid "Start a new chess game"
 msgstr "Începe un joc de șah nou"
@@ -2082,7 +2118,7 @@ msgstr "Conținutul solicitat nu a putut fi găsit."
 msgid "The server returned a web page instead of data."
 msgstr "Serverul a returnat o pagină web în loc de date."
 
-#: src/features/chess/index.tsx:620
+#: src/features/chess/index.tsx:605
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Aceasta va șterge definitiv jocul și discuția asociată. Această acțiune nu poate fi anulată."
 
@@ -2285,7 +2321,7 @@ msgid "Wednesday"
 msgstr "Miercuri"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:437
+#: src/features/chess/index.tsx:422
 msgid "White"
 msgstr "Alb"
 
@@ -2304,6 +2340,10 @@ msgstr "Tu"
 msgid "You do not have access to this section."
 msgstr "Nu aveți acces la această secțiune."
 
+#: src/features/chess/index.tsx:374
+msgid "You resigned — {opponentName} wins"
+msgstr "Ai abandonat — câștigă {opponentName}"
+
 #: ../../../lib/web/src/components/restore-banner.tsx:100
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Contul dvs. a fost mutat aici de la {source}. Până când îl ștergeți de acolo, mesajele și notificările pot ajunge pe ambele servere, o parte din conținutul dvs. continuă să fie servit de pe serverul vechi, iar urmăritorii pot avea nevoie de câteva minute pentru a vă găsi aici."
@@ -2311,6 +2351,10 @@ msgstr "Contul dvs. a fost mutat aici de la {source}. Până când îl ștergeț
 #: ../../../lib/web/src/components/comment-composer.tsx:302
 msgid "Your attachments will be lost."
 msgstr "Atașamentele tale se vor pierde."
+
+#: src/features/chess/index.tsx:385
+msgid "Your move"
+msgstr "Mutarea ta"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:300
 msgid "Your text and attachments will be lost."

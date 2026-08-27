@@ -103,6 +103,14 @@ msgstr "{name} هار مڃي"
 msgid "{opponentName} offered a draw"
 msgstr "{opponentName} ڊرا جي پيشڪش ڪئي"
 
+#: src/features/chess/index.tsx:373
+msgid "{opponentName} resigned — you win!"
+msgstr "{opponentName} هار مڃي — توهان کٽيو!"
+
+#: src/features/chess/index.tsx:386
+msgid "{opponentName}'s move"
+msgstr "{opponentName} جو وارو"
+
 #: ../../../lib/web/src/components/attachment-composer.tsx:248
 #: ../../../lib/web/src/components/ui/upload-progress.tsx:52
 msgid "{sentLabel} of {totalLabel}"
@@ -306,7 +314,7 @@ msgstr "ڇا توهان پڪ سان هي تبصرو ختم ڪرڻ چاهيو ٿ�
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "ڇا توهان پڪ سان لاگ آئوٽ ڪرڻ چاهيو ٿا؟ پنهنجي اڪائونٽ تائين رسائي لاءِ توهان کي ٻيهر لاگ ان ڪرڻو پوندو."
 
-#: src/features/chess/index.tsx:599
+#: src/features/chess/index.tsx:584
 msgid "Are you sure you want to resign? {opponentName} will win the game."
 msgstr "ڇا توهان پڪ سان دستبردار ٿيڻ چاهيو ٿا؟ {opponentName} راند کٽيندو."
 
@@ -361,7 +369,7 @@ msgid "bishop"
 msgstr "بشپ"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:437
+#: src/features/chess/index.tsx:422
 msgid "Black"
 msgstr "ڪارو"
 
@@ -444,10 +452,18 @@ msgstr "هنن اطلاعن لاءِ زمرو"
 msgid "Change notification category"
 msgstr "اطلاع جو زمرو تبديل ڪريو"
 
-#: src/features/chess/index.tsx:537
-#: src/features/chess/index.tsx:570
+#: src/features/chess/index.tsx:522
+#: src/features/chess/index.tsx:555
 msgid "Chat"
 msgstr "چيٽ"
+
+#: src/features/chess/index.tsx:383
+msgid "Check — {opponentName}'s move"
+msgstr "شھ — {opponentName} جو وارو"
+
+#: src/features/chess/index.tsx:382
+msgid "Check — your move"
+msgstr "شھ — توهانجو وارو"
 
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx:137
 msgid "Checkbox"
@@ -457,9 +473,17 @@ msgstr "چيڪ بڪس"
 msgid "Checklist"
 msgstr "چيڪ لسٽ"
 
-#: src/features/chess/index.tsx:106
+#: src/features/chess/index.tsx:366
+msgid "Checkmate — {opponentName} wins"
+msgstr "شھ مات — {opponentName} کٽيو"
+
 #: src/features/chess/index.tsx:365
-#: src/features/chess/index.tsx:377
+msgid "Checkmate — you win!"
+msgstr "شھ مات — توهان کٽيو!"
+
+#: src/features/chess/index.tsx:60
+#: src/features/chess/index.tsx:319
+#: src/features/chess/index.tsx:331
 msgid "Chess"
 msgstr "شطرنج"
 
@@ -727,7 +751,7 @@ msgstr "ڊفالٽ ترتيب"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:203
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:252
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:314
-#: src/features/chess/index.tsx:628
+#: src/features/chess/index.tsx:613
 msgid "Delete"
 msgstr "ختم ڪريو"
 
@@ -747,11 +771,11 @@ msgstr "تبصرو ختم ڪريو"
 msgid "Delete field"
 msgstr "فيلڊ ختم ڪريو"
 
-#: src/features/chess/index.tsx:483
+#: src/features/chess/index.tsx:468
 msgid "Delete game"
 msgstr "راند ختم ڪريو"
 
-#: src/features/chess/index.tsx:619
+#: src/features/chess/index.tsx:604
 msgid "Delete game?"
 msgstr "گيم ختم ڪجي؟"
 
@@ -773,7 +797,7 @@ msgstr "نظارو ختم ڪريو"
 msgid "Delete your account on the old server"
 msgstr "پراڻي سرور تي پنهنجو اڪائونٽ ختم ڪريو"
 
-#: src/features/chess/index.tsx:625
+#: src/features/chess/index.tsx:610
 msgid "Deleting..."
 msgstr "ختم ڪري رهيو آهي..."
 
@@ -841,11 +865,15 @@ msgstr "ڊائون لوڊ"
 msgid "Download failed"
 msgstr "ڊائون لوڊ ناڪام ٿيو"
 
+#: src/features/chess/index.tsx:370
+msgid "Draw"
+msgstr "برابر"
+
 #: src/features/chess/components/chat-message-list.tsx:45
 msgid "Draw agreed"
 msgstr "برابري تي اتفاق ٿيو"
 
-#: src/features/chess/index.tsx:496
+#: src/features/chess/index.tsx:481
 msgid "Draw offered — waiting for {opponentName}"
 msgstr "برابر جي پيشڪش — {opponentName} جي انتظار ۾"
 
@@ -931,7 +959,7 @@ msgstr "خارجي URL"
 msgid "Extra large"
 msgstr "تمام وڏو"
 
-#: src/features/chess/index.tsx:231
+#: src/features/chess/index.tsx:185
 msgid "Failed to accept draw"
 msgstr "برابر قبول ڪرڻ ۾ ناڪام"
 
@@ -949,11 +977,11 @@ msgstr "راند ٺاهڻ ۾ ناڪام"
 msgid "Failed to create link"
 msgstr "لنڪ ٺاهڻ ۾ ناڪام"
 
-#: src/features/chess/index.tsx:246
+#: src/features/chess/index.tsx:200
 msgid "Failed to create rematch"
 msgstr "ريميچ ٺاهڻ ۾ ناڪام"
 
-#: src/features/chess/index.tsx:236
+#: src/features/chess/index.tsx:190
 msgid "Failed to decline draw"
 msgstr "برابر رد ڪرڻ ۾ ناڪام"
 
@@ -965,7 +993,7 @@ msgstr "ضميمو ختم ڪرڻ ۾ ناڪام"
 msgid "Failed to delete comment"
 msgstr "تبصرو ختم ڪرڻ ۾ ناڪام"
 
-#: src/features/chess/index.tsx:258
+#: src/features/chess/index.tsx:212
 msgid "Failed to delete game"
 msgstr "راند ختم ڪرڻ ۾ ناڪام"
 
@@ -993,11 +1021,11 @@ msgstr "تصوير لوڊ ٿي نه سگهيو"
 msgid "Failed to load video"
 msgstr "وڊيو لوڊ ٿي نه سگهيو"
 
-#: src/features/chess/index.tsx:209
+#: src/features/chess/index.tsx:163
 msgid "Failed to make move"
 msgstr "حرڪت ڪرڻ ۾ ناڪام"
 
-#: src/features/chess/index.tsx:226
+#: src/features/chess/index.tsx:180
 msgid "Failed to offer draw"
 msgstr "برابر پيش ڪرڻ ۾ ناڪام"
 
@@ -1005,7 +1033,7 @@ msgstr "برابر پيش ڪرڻ ۾ ناڪام"
 msgid "Failed to post comment"
 msgstr "تبصرو پوسٽ ڪرڻ ۾ ناڪام"
 
-#: src/features/chess/index.tsx:219
+#: src/features/chess/index.tsx:173
 msgid "Failed to resign"
 msgstr "استعفيٰ ڏيڻ ۾ ناڪام"
 
@@ -1013,8 +1041,8 @@ msgstr "استعفيٰ ڏيڻ ۾ ناڪام"
 msgid "Failed to revoke RSS access"
 msgstr "RSS رسائي واپس وٺڻ ۾ ناڪام"
 
-#: src/features/chess/index.tsx:554
-#: src/features/chess/index.tsx:587
+#: src/features/chess/index.tsx:539
+#: src/features/chess/index.tsx:572
 msgid "Failed to send"
 msgstr "موڪلڻ ۾ ناڪام"
 
@@ -1068,9 +1096,13 @@ msgstr "ٿيم کان"
 msgid "Game created"
 msgstr "راند ٺهي وئي"
 
-#: src/features/chess/index.tsx:254
+#: src/features/chess/index.tsx:208
 msgid "Game deleted"
 msgstr "راند ختم ٿي وئي"
+
+#: src/features/chess/index.tsx:379
+msgid "Game state unavailable"
+msgstr "راند جي حالت موجود ناهي"
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx:26
 #: ../../../lib/web/src/features/errors/unauthorized-error.tsx:26
@@ -1445,7 +1477,7 @@ msgstr "اطلاعون: {0}"
 msgid "Number"
 msgstr "نمبر"
 
-#: src/features/chess/index.tsx:467
+#: src/features/chess/index.tsx:452
 msgid "Offer draw"
 msgstr "ڊرا جي پيشڪش ڪريو"
 
@@ -1462,11 +1494,11 @@ msgstr "افسوس! صفحو نه مليو!"
 msgid "Open actions"
 msgstr "ڪارروايون کوليو"
 
-#: src/features/chess/index.tsx:446
+#: src/features/chess/index.tsx:431
 msgid "Open chat panel"
 msgstr "چيٽ پينل کوليو"
 
-#: src/features/chess/index.tsx:454
+#: src/features/chess/index.tsx:439
 msgid "Open game actions"
 msgstr "گيم ڪارناما کوليو"
 
@@ -1647,7 +1679,7 @@ msgstr "نسبتي (5m، 3h، 2d)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "24 ڪلاڪن اندر نسبتي، ٻي صورت ۾ مطلق"
 
-#: src/features/chess/index.tsx:480
+#: src/features/chess/index.tsx:465
 msgid "Rematch"
 msgstr "ٻيهر ميچ"
 
@@ -1723,16 +1755,16 @@ msgstr "گهربل"
 msgid "Resend email"
 msgstr "اي ميل ٻيهر موڪليو"
 
-#: src/features/chess/index.tsx:471
-#: src/features/chess/index.tsx:607
+#: src/features/chess/index.tsx:456
+#: src/features/chess/index.tsx:592
 msgid "Resign"
 msgstr "هار مڃيو"
 
-#: src/features/chess/index.tsx:598
+#: src/features/chess/index.tsx:583
 msgid "Resign game?"
 msgstr "گيم هار مڃجي؟"
 
-#: src/features/chess/index.tsx:604
+#: src/features/chess/index.tsx:589
 msgid "Resigning..."
 msgstr "هار مڃي رهيو آهي..."
 
@@ -1995,6 +2027,10 @@ msgstr "ماخذ"
 msgid "Spacious"
 msgstr "ڪشادو"
 
+#: src/features/chess/index.tsx:368
+msgid "Stalemate — draw"
+msgstr "پاٽ — برابر"
+
 #: src/features/chess/components/new-game.tsx:99
 msgid "Start a new chess game"
 msgstr "نئين شطرنج راند شروع ڪريو"
@@ -2082,7 +2118,7 @@ msgstr "گهربل مواد نه ملي سگهيو."
 msgid "The server returned a web page instead of data."
 msgstr "سرور ڊيٽا جي بجاءِ ويب پيج موٽايو."
 
-#: src/features/chess/index.tsx:620
+#: src/features/chess/index.tsx:605
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "هي عمل گيم ۽ ان جي چيٽ کي مستقل طور ختم ڪندو. هي عمل واپس نه ٿي سگهندو."
 
@@ -2285,7 +2321,7 @@ msgid "Wednesday"
 msgstr "اربع"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:437
+#: src/features/chess/index.tsx:422
 msgid "White"
 msgstr "اڇو"
 
@@ -2304,6 +2340,10 @@ msgstr "توھان"
 msgid "You do not have access to this section."
 msgstr "توهان کي هن حصي تائين رسائي ناهي."
 
+#: src/features/chess/index.tsx:374
+msgid "You resigned — {opponentName} wins"
+msgstr "توهان هار مڃي — {opponentName} کٽيو"
+
 #: ../../../lib/web/src/components/restore-banner.tsx:100
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "توهان جو اڪائونٽ {source} کان هتي منتقل ڪيو ويو. جيستائين توهان اتي ان کي نه ختم ڪيو، پيغام ۽ اطلاع ٻنهي سرورن تي پهچي سگهن ٿا، توهان جو ڪجهه مواد اڃا به پراڻي سرور کان فراهم ٿئي ٿو، ۽ پيروڪارن کي هتي توهان کي ڳولڻ ۾ ڪجهه منٽ لڳي سگهن ٿا."
@@ -2311,6 +2351,10 @@ msgstr "توهان جو اڪائونٽ {source} کان هتي منتقل ڪيو 
 #: ../../../lib/web/src/components/comment-composer.tsx:302
 msgid "Your attachments will be lost."
 msgstr "توهان جون منسلڪات گم ٿي وينديون."
+
+#: src/features/chess/index.tsx:385
+msgid "Your move"
+msgstr "توهان جي چال"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:300
 msgid "Your text and attachments will be lost."

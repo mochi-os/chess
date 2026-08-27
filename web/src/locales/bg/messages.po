@@ -103,6 +103,14 @@ msgstr "{name} се предаде"
 msgid "{opponentName} offered a draw"
 msgstr "{opponentName} предложи равенство"
 
+#: src/features/chess/index.tsx:373
+msgid "{opponentName} resigned — you win!"
+msgstr "{opponentName} се предаде — вие печелите!"
+
+#: src/features/chess/index.tsx:386
+msgid "{opponentName}'s move"
+msgstr "{opponentName} е на ход"
+
 #: ../../../lib/web/src/components/attachment-composer.tsx:248
 #: ../../../lib/web/src/components/ui/upload-progress.tsx:52
 msgid "{sentLabel} of {totalLabel}"
@@ -306,7 +314,7 @@ msgstr "Сигурни ли сте, че искате да изтриете то
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "Сигурни ли сте, че искате да излезете? Ще трябва да влезете отново, за да достъпите акаунта си."
 
-#: src/features/chess/index.tsx:599
+#: src/features/chess/index.tsx:584
 msgid "Are you sure you want to resign? {opponentName} will win the game."
 msgstr "Сигурни ли сте, че искате да се откажете? {opponentName} ще спечели играта."
 
@@ -361,7 +369,7 @@ msgid "bishop"
 msgstr "офицер"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:437
+#: src/features/chess/index.tsx:422
 msgid "Black"
 msgstr "Черен"
 
@@ -444,10 +452,18 @@ msgstr "Категория за тези известия"
 msgid "Change notification category"
 msgstr "Смени категорията на известие"
 
-#: src/features/chess/index.tsx:537
-#: src/features/chess/index.tsx:570
+#: src/features/chess/index.tsx:522
+#: src/features/chess/index.tsx:555
 msgid "Chat"
 msgstr "Чат"
+
+#: src/features/chess/index.tsx:383
+msgid "Check — {opponentName}'s move"
+msgstr "Шах — {opponentName} е на ход"
+
+#: src/features/chess/index.tsx:382
+msgid "Check — your move"
+msgstr "Шах — вие сте на ход"
 
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx:137
 msgid "Checkbox"
@@ -457,9 +473,17 @@ msgstr "Чекбокс"
 msgid "Checklist"
 msgstr "Чек-лист"
 
-#: src/features/chess/index.tsx:106
+#: src/features/chess/index.tsx:366
+msgid "Checkmate — {opponentName} wins"
+msgstr "Мат — {opponentName} печели"
+
 #: src/features/chess/index.tsx:365
-#: src/features/chess/index.tsx:377
+msgid "Checkmate — you win!"
+msgstr "Мат — вие печелите!"
+
+#: src/features/chess/index.tsx:60
+#: src/features/chess/index.tsx:319
+#: src/features/chess/index.tsx:331
 msgid "Chess"
 msgstr "Шах"
 
@@ -727,7 +751,7 @@ msgstr "Сортиране по подразбиране"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:203
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:252
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:314
-#: src/features/chess/index.tsx:628
+#: src/features/chess/index.tsx:613
 msgid "Delete"
 msgstr "Изтрий"
 
@@ -747,11 +771,11 @@ msgstr "Изтрий коментара"
 msgid "Delete field"
 msgstr "Изтрий полето"
 
-#: src/features/chess/index.tsx:483
+#: src/features/chess/index.tsx:468
 msgid "Delete game"
 msgstr "Изтрий играта"
 
-#: src/features/chess/index.tsx:619
+#: src/features/chess/index.tsx:604
 msgid "Delete game?"
 msgstr "Да се изтрие ли играта?"
 
@@ -773,7 +797,7 @@ msgstr "Изтрий изгледа"
 msgid "Delete your account on the old server"
 msgstr "Изтрийте профила си на стария сървър"
 
-#: src/features/chess/index.tsx:625
+#: src/features/chess/index.tsx:610
 msgid "Deleting..."
 msgstr "Изтриване..."
 
@@ -841,11 +865,15 @@ msgstr "Изтегляне"
 msgid "Download failed"
 msgstr "Изтеглянето е неуспешно"
 
+#: src/features/chess/index.tsx:370
+msgid "Draw"
+msgstr "Реми"
+
 #: src/features/chess/components/chat-message-list.tsx:45
 msgid "Draw agreed"
 msgstr "Договорено реми"
 
-#: src/features/chess/index.tsx:496
+#: src/features/chess/index.tsx:481
 msgid "Draw offered — waiting for {opponentName}"
 msgstr "Предложено реми — изчакване на {opponentName}"
 
@@ -931,7 +959,7 @@ msgstr "Външен URL"
 msgid "Extra large"
 msgstr "Много голям"
 
-#: src/features/chess/index.tsx:231
+#: src/features/chess/index.tsx:185
 msgid "Failed to accept draw"
 msgstr "Неуспешно приемане на реми"
 
@@ -949,11 +977,11 @@ msgstr "Неуспешно създаване на игра"
 msgid "Failed to create link"
 msgstr "Неуспешно създаване на връзка"
 
-#: src/features/chess/index.tsx:246
+#: src/features/chess/index.tsx:200
 msgid "Failed to create rematch"
 msgstr "Неуспешно създаване на реванш"
 
-#: src/features/chess/index.tsx:236
+#: src/features/chess/index.tsx:190
 msgid "Failed to decline draw"
 msgstr "Неуспешно отхвърляне на реми"
 
@@ -965,7 +993,7 @@ msgstr "Неуспешно изтриване на прикачен файл"
 msgid "Failed to delete comment"
 msgstr "Неуспешно изтриване на коментар"
 
-#: src/features/chess/index.tsx:258
+#: src/features/chess/index.tsx:212
 msgid "Failed to delete game"
 msgstr "Неуспешно изтриване на игра"
 
@@ -993,11 +1021,11 @@ msgstr "Изображението не можа да се зареди"
 msgid "Failed to load video"
 msgstr "Видеото не можа да се зареди"
 
-#: src/features/chess/index.tsx:209
+#: src/features/chess/index.tsx:163
 msgid "Failed to make move"
 msgstr "Неуспешен ход"
 
-#: src/features/chess/index.tsx:226
+#: src/features/chess/index.tsx:180
 msgid "Failed to offer draw"
 msgstr "Неуспешно предлагане на реми"
 
@@ -1005,7 +1033,7 @@ msgstr "Неуспешно предлагане на реми"
 msgid "Failed to post comment"
 msgstr "Неуспешно публикуване на коментар"
 
-#: src/features/chess/index.tsx:219
+#: src/features/chess/index.tsx:173
 msgid "Failed to resign"
 msgstr "Неуспешно предаване на партията"
 
@@ -1013,8 +1041,8 @@ msgstr "Неуспешно предаване на партията"
 msgid "Failed to revoke RSS access"
 msgstr "Неуспешно отменяне на достъпа до RSS"
 
-#: src/features/chess/index.tsx:554
-#: src/features/chess/index.tsx:587
+#: src/features/chess/index.tsx:539
+#: src/features/chess/index.tsx:572
 msgid "Failed to send"
 msgstr "Неуспешно изпращане"
 
@@ -1068,9 +1096,13 @@ msgstr "От темата"
 msgid "Game created"
 msgstr "Играта е създадена"
 
-#: src/features/chess/index.tsx:254
+#: src/features/chess/index.tsx:208
 msgid "Game deleted"
 msgstr "Играта е изтрита"
+
+#: src/features/chess/index.tsx:379
+msgid "Game state unavailable"
+msgstr "Състоянието на играта е недостъпно"
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx:26
 #: ../../../lib/web/src/features/errors/unauthorized-error.tsx:26
@@ -1445,7 +1477,7 @@ msgstr "Известия: {0}"
 msgid "Number"
 msgstr "Номер"
 
-#: src/features/chess/index.tsx:467
+#: src/features/chess/index.tsx:452
 msgid "Offer draw"
 msgstr "Предложи равенство"
 
@@ -1462,11 +1494,11 @@ msgstr "Опа! Страницата не е намерена!"
 msgid "Open actions"
 msgstr "Отвори действията"
 
-#: src/features/chess/index.tsx:446
+#: src/features/chess/index.tsx:431
 msgid "Open chat panel"
 msgstr "Отвори панела за чат"
 
-#: src/features/chess/index.tsx:454
+#: src/features/chess/index.tsx:439
 msgid "Open game actions"
 msgstr "Отвори действия за играта"
 
@@ -1647,7 +1679,7 @@ msgstr "Относително (5m, 3h, 2d)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "Относително в рамките на 24 часа, иначе абсолютно"
 
-#: src/features/chess/index.tsx:480
+#: src/features/chess/index.tsx:465
 msgid "Rematch"
 msgstr "Реванш"
 
@@ -1723,16 +1755,16 @@ msgstr "Задължително"
 msgid "Resend email"
 msgstr "Изпрати имейла отново"
 
-#: src/features/chess/index.tsx:471
-#: src/features/chess/index.tsx:607
+#: src/features/chess/index.tsx:456
+#: src/features/chess/index.tsx:592
 msgid "Resign"
 msgstr "Предай се"
 
-#: src/features/chess/index.tsx:598
+#: src/features/chess/index.tsx:583
 msgid "Resign game?"
 msgstr "Да се предадеш ли в играта?"
 
-#: src/features/chess/index.tsx:604
+#: src/features/chess/index.tsx:589
 msgid "Resigning..."
 msgstr "Предава се..."
 
@@ -1995,6 +2027,10 @@ msgstr "Източници"
 msgid "Spacious"
 msgstr "Просторно"
 
+#: src/features/chess/index.tsx:368
+msgid "Stalemate — draw"
+msgstr "Пат — реми"
+
 #: src/features/chess/components/new-game.tsx:99
 msgid "Start a new chess game"
 msgstr "Започни нова шахматна партия"
@@ -2082,7 +2118,7 @@ msgstr "Заявеното съдържание не беше намерено."
 msgid "The server returned a web page instead of data."
 msgstr "Сървърът върна уеб страница вместо данни."
 
-#: src/features/chess/index.tsx:620
+#: src/features/chess/index.tsx:605
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Това ще изтрие завинаги играта и нейния чат. Това действие не може да бъде отменено."
 
@@ -2285,7 +2321,7 @@ msgid "Wednesday"
 msgstr "Сряда"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:437
+#: src/features/chess/index.tsx:422
 msgid "White"
 msgstr "Бели"
 
@@ -2304,6 +2340,10 @@ msgstr "Вие"
 msgid "You do not have access to this section."
 msgstr "Нямате достъп до този раздел."
 
+#: src/features/chess/index.tsx:374
+msgid "You resigned — {opponentName} wins"
+msgstr "Предадохте се — {opponentName} печели"
+
 #: ../../../lib/web/src/components/restore-banner.tsx:100
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Профилът ви беше преместен тук от {source}. Докато не го изтриете там, съобщенията и известията може да достигат до двата сървъра, част от съдържанието ви продължава да се обслужва от стария сървър и последователите може да отнеме няколко минути, за да ви намерят тук."
@@ -2311,6 +2351,10 @@ msgstr "Профилът ви беше преместен тук от {source}. 
 #: ../../../lib/web/src/components/comment-composer.tsx:302
 msgid "Your attachments will be lost."
 msgstr "Прикачените файлове ще бъдат изгубени."
+
+#: src/features/chess/index.tsx:385
+msgid "Your move"
+msgstr "Вашият ход"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:300
 msgid "Your text and attachments will be lost."

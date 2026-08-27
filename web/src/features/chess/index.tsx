@@ -35,7 +35,6 @@ import { useSidebarContext } from '@/context/sidebar-context'
 import { resume } from '@/lib/pgn'
 import { setLastGame } from '@/hooks/useGameStorage'
 import { useGameWebsocket } from '@/hooks/useGameWebsocket'
-import { getOpponentName, type Game } from '@/api/games'
 import {
   useInfiniteMessagesQuery,
   useGamesQuery,
@@ -55,51 +54,6 @@ import { DrawOfferBanner } from './components/draw-offer-banner'
 import { ChatMessageList } from './components/chat-message-list'
 import { ChatInput } from './components/chat-input'
 
-// Plain function (not a hook) so it can be called from inside conditional JSX
-// without violating the rules of hooks. The `t` tag is passed in from the
-// component's own useLingui() call.
-function chessStatusText(
-  t: ReturnType<typeof useLingui>['t'],
-  game: Game,
-  myIdentity: string,
-  isMyTurn: boolean,
-  isCheck: boolean,
-  positionReadable: boolean
-): string {
-  const opponentName = getOpponentName(game, myIdentity)
-
-  if (game.status === 'checkmate') {
-    return game.winner === myIdentity
-      ? t`Checkmate — you win!`
-      : t`Checkmate — ${opponentName} wins`
-  }
-
-  if (game.status === 'stalemate') {
-    return t`Stalemate — draw`
-  }
-
-  if (game.status === 'draw') {
-    return t`Draw`
-  }
-
-  if (game.status === 'resigned') {
-    return game.winner === myIdentity
-      ? t`${opponentName} resigned — you win!`
-      : t`You resigned — ${opponentName} wins`
-  }
-
-  // Whose move it is comes from the parsed position. With no position there is
-  // no turn to state, and asserting one names the wrong player half the time.
-  if (!positionReadable) {
-    return t`Game state unavailable`
-  }
-
-  if (isCheck) {
-    return isMyTurn ? t`Check — your move` : t`Check — ${opponentName}'s move`
-  }
-
-  return isMyTurn ? t`Your move` : t`${opponentName}'s move`
-}
 
 export function ChessGame() {
   const { t } = useLingui()
@@ -400,6 +354,37 @@ export function ChessGame() {
       : game.identity_name
     : ''
 
+  // Inline rather than a helper taking `t`: the Lingui macro only rewrites
+  // templates tagged with the identifier destructured from useLingui(), so a
+  // `t` passed as a parameter is a different binding and none of these is
+  // extracted or rendered.
+  const headline = !game
+    ? ''
+    : game.status === 'checkmate'
+      ? game.winner === myIdentity
+        ? t`Checkmate — you win!`
+        : t`Checkmate — ${opponentName} wins`
+      : game.status === 'stalemate'
+        ? t`Stalemate — draw`
+        : game.status === 'draw'
+          ? t`Draw`
+          : game.status === 'resigned'
+            ? game.winner === myIdentity
+              ? t`${opponentName} resigned — you win!`
+              : t`You resigned — ${opponentName} wins`
+            : // Whose move it is comes from the parsed position. With no
+              // position there is no turn to state, and asserting one names
+              // the wrong player half the time.
+              chess === null
+              ? t`Game state unavailable`
+              : isCheck
+                ? isMyTurn
+                  ? t`Check — your move`
+                  : t`Check — ${opponentName}'s move`
+                : isMyTurn
+                  ? t`Your move`
+                  : t`${opponentName}'s move`
+
   const opponentFingerprint = game
     ? game.identity === myIdentity
       ? game.opponent
@@ -430,7 +415,7 @@ export function ChessGame() {
                     title={opponentName}
                     opponentFingerprint={opponentFingerprint || undefined}
                     opponentName={opponentName}
-                    status={chessStatusText(t, game, myIdentity, isMyTurn, isCheck, chess !== null)}
+                    status={headline}
                     stats={
                       <GameHeaderStat
                         icon={<GameHeaderStoneDot color={myColor === 'w' ? 'white' : 'black'} />}

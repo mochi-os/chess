@@ -103,6 +103,14 @@ msgstr "{name} alijiuzulu"
 msgid "{opponentName} offered a draw"
 msgstr "{opponentName} ametoa sare"
 
+#: src/features/chess/index.tsx:373
+msgid "{opponentName} resigned — you win!"
+msgstr "{opponentName} amejisalimisha — umeshinda!"
+
+#: src/features/chess/index.tsx:386
+msgid "{opponentName}'s move"
+msgstr "Zamu ya {opponentName}"
+
 #: ../../../lib/web/src/components/attachment-composer.tsx:248
 #: ../../../lib/web/src/components/ui/upload-progress.tsx:52
 msgid "{sentLabel} of {totalLabel}"
@@ -306,7 +314,7 @@ msgstr "Una uhakika unataka kufuta maoni haya? Hii pia itafuta majibu yote."
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "Una uhakika unataka kuondoka? Utahitaji kuingia tena kufikia akaunti yako."
 
-#: src/features/chess/index.tsx:599
+#: src/features/chess/index.tsx:584
 msgid "Are you sure you want to resign? {opponentName} will win the game."
 msgstr "Una uhakika unataka kujisalimisha? {opponentName} atashinda mchezo."
 
@@ -361,7 +369,7 @@ msgid "bishop"
 msgstr "askofu"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:437
+#: src/features/chess/index.tsx:422
 msgid "Black"
 msgstr "Nyeusi"
 
@@ -444,10 +452,18 @@ msgstr "Kategoria ya arifa hizi"
 msgid "Change notification category"
 msgstr "Badilisha kategoria ya arifa"
 
-#: src/features/chess/index.tsx:537
-#: src/features/chess/index.tsx:570
+#: src/features/chess/index.tsx:522
+#: src/features/chess/index.tsx:555
 msgid "Chat"
 msgstr "Gumzo"
+
+#: src/features/chess/index.tsx:383
+msgid "Check — {opponentName}'s move"
+msgstr "Shemeji — zamu ya {opponentName}"
+
+#: src/features/chess/index.tsx:382
+msgid "Check — your move"
+msgstr "Shemeji — zamu yako"
 
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx:137
 msgid "Checkbox"
@@ -457,9 +473,17 @@ msgstr "Kisanduku cha kuteua"
 msgid "Checklist"
 msgstr "Orodha ya ukaguzi"
 
-#: src/features/chess/index.tsx:106
+#: src/features/chess/index.tsx:366
+msgid "Checkmate — {opponentName} wins"
+msgstr "Shahmati — {opponentName} ameshinda"
+
 #: src/features/chess/index.tsx:365
-#: src/features/chess/index.tsx:377
+msgid "Checkmate — you win!"
+msgstr "Shahmati — umeshinda!"
+
+#: src/features/chess/index.tsx:60
+#: src/features/chess/index.tsx:319
+#: src/features/chess/index.tsx:331
 msgid "Chess"
 msgstr "Sataranji"
 
@@ -727,7 +751,7 @@ msgstr "Mpangilio chaguo-msingi"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:203
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:252
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:314
-#: src/features/chess/index.tsx:628
+#: src/features/chess/index.tsx:613
 msgid "Delete"
 msgstr "Futa"
 
@@ -747,11 +771,11 @@ msgstr "Futa maoni"
 msgid "Delete field"
 msgstr "Futa uga"
 
-#: src/features/chess/index.tsx:483
+#: src/features/chess/index.tsx:468
 msgid "Delete game"
 msgstr "Futa mchezo"
 
-#: src/features/chess/index.tsx:619
+#: src/features/chess/index.tsx:604
 msgid "Delete game?"
 msgstr "Futa mchezo?"
 
@@ -773,7 +797,7 @@ msgstr "Futa mwonekano"
 msgid "Delete your account on the old server"
 msgstr "Futa akaunti yako kwenye seva ya zamani"
 
-#: src/features/chess/index.tsx:625
+#: src/features/chess/index.tsx:610
 msgid "Deleting..."
 msgstr "Inafuta..."
 
@@ -841,11 +865,15 @@ msgstr "Pakua"
 msgid "Download failed"
 msgstr "Upakuaji umeshindwa"
 
+#: src/features/chess/index.tsx:370
+msgid "Draw"
+msgstr "Sare"
+
 #: src/features/chess/components/chat-message-list.tsx:45
 msgid "Draw agreed"
 msgstr "Sare imekubaliwa"
 
-#: src/features/chess/index.tsx:496
+#: src/features/chess/index.tsx:481
 msgid "Draw offered — waiting for {opponentName}"
 msgstr "Sare imetolewa — inasubiri {opponentName}"
 
@@ -931,7 +959,7 @@ msgstr "URL ya nje"
 msgid "Extra large"
 msgstr "Kubwa zaidi"
 
-#: src/features/chess/index.tsx:231
+#: src/features/chess/index.tsx:185
 msgid "Failed to accept draw"
 msgstr "Imeshindwa kukubali sare"
 
@@ -949,11 +977,11 @@ msgstr "Imeshindwa kuunda mchezo"
 msgid "Failed to create link"
 msgstr "Imeshindwa kuunda kiungo"
 
-#: src/features/chess/index.tsx:246
+#: src/features/chess/index.tsx:200
 msgid "Failed to create rematch"
 msgstr "Imeshindwa kuunda mchezo upya"
 
-#: src/features/chess/index.tsx:236
+#: src/features/chess/index.tsx:190
 msgid "Failed to decline draw"
 msgstr "Imeshindwa kukataa sare"
 
@@ -965,7 +993,7 @@ msgstr "Imeshindwa kufuta kiambatisho"
 msgid "Failed to delete comment"
 msgstr "Imeshindwa kufuta maoni"
 
-#: src/features/chess/index.tsx:258
+#: src/features/chess/index.tsx:212
 msgid "Failed to delete game"
 msgstr "Imeshindwa kufuta mchezo"
 
@@ -993,11 +1021,11 @@ msgstr "Imeshindwa kupakia picha"
 msgid "Failed to load video"
 msgstr "Imeshindwa kupakia video"
 
-#: src/features/chess/index.tsx:209
+#: src/features/chess/index.tsx:163
 msgid "Failed to make move"
 msgstr "Imeshindwa kufanya hatua"
 
-#: src/features/chess/index.tsx:226
+#: src/features/chess/index.tsx:180
 msgid "Failed to offer draw"
 msgstr "Imeshindwa kutoa sare"
 
@@ -1005,7 +1033,7 @@ msgstr "Imeshindwa kutoa sare"
 msgid "Failed to post comment"
 msgstr "Imeshindwa kuchapisha maoni"
 
-#: src/features/chess/index.tsx:219
+#: src/features/chess/index.tsx:173
 msgid "Failed to resign"
 msgstr "Imeshindwa kujiuzulu"
 
@@ -1013,8 +1041,8 @@ msgstr "Imeshindwa kujiuzulu"
 msgid "Failed to revoke RSS access"
 msgstr "Imeshindwa kubatilisha ufikiaji wa RSS"
 
-#: src/features/chess/index.tsx:554
-#: src/features/chess/index.tsx:587
+#: src/features/chess/index.tsx:539
+#: src/features/chess/index.tsx:572
 msgid "Failed to send"
 msgstr "Imeshindwa kutuma"
 
@@ -1068,9 +1096,13 @@ msgstr "Kutoka mandhari"
 msgid "Game created"
 msgstr "Mchezo umeundwa"
 
-#: src/features/chess/index.tsx:254
+#: src/features/chess/index.tsx:208
 msgid "Game deleted"
 msgstr "Mchezo umefutwa"
+
+#: src/features/chess/index.tsx:379
+msgid "Game state unavailable"
+msgstr "Hali ya mchezo haipatikani"
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx:26
 #: ../../../lib/web/src/features/errors/unauthorized-error.tsx:26
@@ -1445,7 +1477,7 @@ msgstr "Arifa: {0}"
 msgid "Number"
 msgstr "Nambari"
 
-#: src/features/chess/index.tsx:467
+#: src/features/chess/index.tsx:452
 msgid "Offer draw"
 msgstr "Toa sare"
 
@@ -1462,11 +1494,11 @@ msgstr "Lo! Ukurasa Haukupatikana!"
 msgid "Open actions"
 msgstr "Fungua vitendo"
 
-#: src/features/chess/index.tsx:446
+#: src/features/chess/index.tsx:431
 msgid "Open chat panel"
 msgstr "Fungua paneli ya mazungumzo"
 
-#: src/features/chess/index.tsx:454
+#: src/features/chess/index.tsx:439
 msgid "Open game actions"
 msgstr "Fungua vitendo vya mchezo"
 
@@ -1647,7 +1679,7 @@ msgstr "Linganifu (5d, 3s, 2sk)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "Linganifu ndani ya saa 24, vinginevyo kamili"
 
-#: src/features/chess/index.tsx:480
+#: src/features/chess/index.tsx:465
 msgid "Rematch"
 msgstr "Mechi tena"
 
@@ -1723,16 +1755,16 @@ msgstr "Inahitajika"
 msgid "Resend email"
 msgstr "Tuma barua pepe tena"
 
-#: src/features/chess/index.tsx:471
-#: src/features/chess/index.tsx:607
+#: src/features/chess/index.tsx:456
+#: src/features/chess/index.tsx:592
 msgid "Resign"
 msgstr "Jiuzulu"
 
-#: src/features/chess/index.tsx:598
+#: src/features/chess/index.tsx:583
 msgid "Resign game?"
 msgstr "Jiuzulu mchezo?"
 
-#: src/features/chess/index.tsx:604
+#: src/features/chess/index.tsx:589
 msgid "Resigning..."
 msgstr "Inajiuzulu..."
 
@@ -1995,6 +2027,10 @@ msgstr "Vyanzo"
 msgid "Spacious"
 msgstr "Pana"
 
+#: src/features/chess/index.tsx:368
+msgid "Stalemate — draw"
+msgstr "Sare ya kukwama — sare"
+
 #: src/features/chess/components/new-game.tsx:99
 msgid "Start a new chess game"
 msgstr "Anza mchezo mpya wa chess"
@@ -2082,7 +2118,7 @@ msgstr "Maudhui yaliyoombwa hayakupatikana."
 msgid "The server returned a web page instead of data."
 msgstr "Seva ilirudisha ukurasa wa wavuti badala ya data."
 
-#: src/features/chess/index.tsx:620
+#: src/features/chess/index.tsx:605
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Hatua hii itafuta mchezo na mazungumzo yake kabisa. Hatua hii haiwezi kutenduliwa."
 
@@ -2285,7 +2321,7 @@ msgid "Wednesday"
 msgstr "Jumatano"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:437
+#: src/features/chess/index.tsx:422
 msgid "White"
 msgstr "Nyeupe"
 
@@ -2304,6 +2340,10 @@ msgstr "Wewe"
 msgid "You do not have access to this section."
 msgstr "Huna ruhusa ya kufikia sehemu hii."
 
+#: src/features/chess/index.tsx:374
+msgid "You resigned — {opponentName} wins"
+msgstr "Umejisalimisha — {opponentName} ameshinda"
+
 #: ../../../lib/web/src/components/restore-banner.tsx:100
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Akaunti yako ilihamishiwa hapa kutoka {source}. Mpaka uifute hapo, ujumbe na arifa zinaweza kufikia seva zote mbili, baadhi ya maudhui yako bado yanatolewa kutoka seva ya zamani, na wafuasi wanaweza kuchukua dakika chache kukupata hapa."
@@ -2311,6 +2351,10 @@ msgstr "Akaunti yako ilihamishiwa hapa kutoka {source}. Mpaka uifute hapo, ujumb
 #: ../../../lib/web/src/components/comment-composer.tsx:302
 msgid "Your attachments will be lost."
 msgstr "Viambatisho vyako vitapotea."
+
+#: src/features/chess/index.tsx:385
+msgid "Your move"
+msgstr "Hamisho lako"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:300
 msgid "Your text and attachments will be lost."

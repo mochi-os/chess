@@ -103,6 +103,14 @@ msgstr "Ghéill {name}"
 msgid "{opponentName} offered a draw"
 msgstr "Mhol {opponentName} comhscór"
 
+#: src/features/chess/index.tsx:373
+msgid "{opponentName} resigned — you win!"
+msgstr "Ghéill {opponentName} — bhuaigh tú!"
+
+#: src/features/chess/index.tsx:386
+msgid "{opponentName}'s move"
+msgstr "Seal {opponentName}"
+
 #: ../../../lib/web/src/components/attachment-composer.tsx:248
 #: ../../../lib/web/src/components/ui/upload-progress.tsx:52
 msgid "{sentLabel} of {totalLabel}"
@@ -306,7 +314,7 @@ msgstr "An bhfuil tú cinnte gur mian leat an nóta tráchta seo a scriosadh? Sc
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "An bhfuil tú cinnte gur mian leat logáil amach? Beidh ort logáil isteach arís chun do chuntas a rochtain."
 
-#: src/features/chess/index.tsx:599
+#: src/features/chess/index.tsx:584
 msgid "Are you sure you want to resign? {opponentName} will win the game."
 msgstr "An bhfuil tú cinnte gur mian leat éirí as? Buaillfidh {opponentName} an cluiche."
 
@@ -361,7 +369,7 @@ msgid "bishop"
 msgstr "easpag"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:437
+#: src/features/chess/index.tsx:422
 msgid "Black"
 msgstr "Dubh"
 
@@ -444,10 +452,18 @@ msgstr "Catagóir do na fógraí seo"
 msgid "Change notification category"
 msgstr "Athraigh catagóir an fhógra"
 
-#: src/features/chess/index.tsx:537
-#: src/features/chess/index.tsx:570
+#: src/features/chess/index.tsx:522
+#: src/features/chess/index.tsx:555
 msgid "Chat"
 msgstr "Comhrá"
+
+#: src/features/chess/index.tsx:383
+msgid "Check — {opponentName}'s move"
+msgstr "Sáinn — seal {opponentName}"
+
+#: src/features/chess/index.tsx:382
+msgid "Check — your move"
+msgstr "Sáinn — do sheal"
 
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx:137
 msgid "Checkbox"
@@ -457,9 +473,17 @@ msgstr "Ticbhosca"
 msgid "Checklist"
 msgstr "Seicliosta"
 
-#: src/features/chess/index.tsx:106
+#: src/features/chess/index.tsx:366
+msgid "Checkmate — {opponentName} wins"
+msgstr "Marbhsháinn — buann {opponentName}"
+
 #: src/features/chess/index.tsx:365
-#: src/features/chess/index.tsx:377
+msgid "Checkmate — you win!"
+msgstr "Marbhsháinn — bhuaigh tú!"
+
+#: src/features/chess/index.tsx:60
+#: src/features/chess/index.tsx:319
+#: src/features/chess/index.tsx:331
 msgid "Chess"
 msgstr "Ficheall"
 
@@ -727,7 +751,7 @@ msgstr "Sórtáil réamhshocraithe"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:203
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:252
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:314
-#: src/features/chess/index.tsx:628
+#: src/features/chess/index.tsx:613
 msgid "Delete"
 msgstr "Scrios"
 
@@ -747,11 +771,11 @@ msgstr "Scrios nóta tráchta"
 msgid "Delete field"
 msgstr "Scrios réimse"
 
-#: src/features/chess/index.tsx:483
+#: src/features/chess/index.tsx:468
 msgid "Delete game"
 msgstr "Scrios cluiche"
 
-#: src/features/chess/index.tsx:619
+#: src/features/chess/index.tsx:604
 msgid "Delete game?"
 msgstr "Scrios an cluiche?"
 
@@ -773,7 +797,7 @@ msgstr "Scrios radharc"
 msgid "Delete your account on the old server"
 msgstr "Scrios do chuntas ar an sean-fhreastalaí"
 
-#: src/features/chess/index.tsx:625
+#: src/features/chess/index.tsx:610
 msgid "Deleting..."
 msgstr "Á scriosadh..."
 
@@ -841,11 +865,15 @@ msgstr "Íoslódáil"
 msgid "Download failed"
 msgstr "Theip ar an íoslódáil"
 
+#: src/features/chess/index.tsx:370
+msgid "Draw"
+msgstr "Cluiche cothrom"
+
 #: src/features/chess/components/chat-message-list.tsx:45
 msgid "Draw agreed"
 msgstr "Cothrom comhaontaithe"
 
-#: src/features/chess/index.tsx:496
+#: src/features/chess/index.tsx:481
 msgid "Draw offered — waiting for {opponentName}"
 msgstr "Comhionannas tairgthe — ag fanacht le {opponentName}"
 
@@ -931,7 +959,7 @@ msgstr "URL seachtrach"
 msgid "Extra large"
 msgstr "Breise mór"
 
-#: src/features/chess/index.tsx:231
+#: src/features/chess/index.tsx:185
 msgid "Failed to accept draw"
 msgstr "Theip ar ghlacadh leis an gcomhionannas"
 
@@ -949,11 +977,11 @@ msgstr "Theip ar chluiche a chruthú"
 msgid "Failed to create link"
 msgstr "Theip ar nasc a chruthú"
 
-#: src/features/chess/index.tsx:246
+#: src/features/chess/index.tsx:200
 msgid "Failed to create rematch"
 msgstr "Theip ar athchluiche a chruthú"
 
-#: src/features/chess/index.tsx:236
+#: src/features/chess/index.tsx:190
 msgid "Failed to decline draw"
 msgstr "Theip ar dhiúltú don chomhionannas"
 
@@ -965,7 +993,7 @@ msgstr "Theip ar cheangaltán a scriosadh"
 msgid "Failed to delete comment"
 msgstr "Theip ar nóta tráchta a scriosadh"
 
-#: src/features/chess/index.tsx:258
+#: src/features/chess/index.tsx:212
 msgid "Failed to delete game"
 msgstr "Theip ar chluiche a scriosadh"
 
@@ -993,11 +1021,11 @@ msgstr "Theip ar an íomhá a lódáil"
 msgid "Failed to load video"
 msgstr "Theip ar an bhfíseán a lódáil"
 
-#: src/features/chess/index.tsx:209
+#: src/features/chess/index.tsx:163
 msgid "Failed to make move"
 msgstr "Theip ar bhogadh a dhéanamh"
 
-#: src/features/chess/index.tsx:226
+#: src/features/chess/index.tsx:180
 msgid "Failed to offer draw"
 msgstr "Theip ar chomhionannas a thairiscint"
 
@@ -1005,7 +1033,7 @@ msgstr "Theip ar chomhionannas a thairiscint"
 msgid "Failed to post comment"
 msgstr "Theip ar nóta tráchta a phostáil"
 
-#: src/features/chess/index.tsx:219
+#: src/features/chess/index.tsx:173
 msgid "Failed to resign"
 msgstr "Theip ar éirí as"
 
@@ -1013,8 +1041,8 @@ msgstr "Theip ar éirí as"
 msgid "Failed to revoke RSS access"
 msgstr "Theip ar rochtain RSS a chúlghairm"
 
-#: src/features/chess/index.tsx:554
-#: src/features/chess/index.tsx:587
+#: src/features/chess/index.tsx:539
+#: src/features/chess/index.tsx:572
 msgid "Failed to send"
 msgstr "Theip ar sheoladh"
 
@@ -1068,9 +1096,13 @@ msgstr "Ón téama"
 msgid "Game created"
 msgstr "Cluiche cruthaithe"
 
-#: src/features/chess/index.tsx:254
+#: src/features/chess/index.tsx:208
 msgid "Game deleted"
 msgstr "Cluiche scriosta"
+
+#: src/features/chess/index.tsx:379
+msgid "Game state unavailable"
+msgstr "Níl staid an chluiche ar fáil"
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx:26
 #: ../../../lib/web/src/features/errors/unauthorized-error.tsx:26
@@ -1445,7 +1477,7 @@ msgstr "Fógraí: {0}"
 msgid "Number"
 msgstr "Uimhir"
 
-#: src/features/chess/index.tsx:467
+#: src/features/chess/index.tsx:452
 msgid "Offer draw"
 msgstr "Tairg comhscór"
 
@@ -1462,11 +1494,11 @@ msgstr "Úps! Níor aimsíodh an leathanach!"
 msgid "Open actions"
 msgstr "Oscail gníomhartha"
 
-#: src/features/chess/index.tsx:446
+#: src/features/chess/index.tsx:431
 msgid "Open chat panel"
 msgstr "Oscail painéal comhrá"
 
-#: src/features/chess/index.tsx:454
+#: src/features/chess/index.tsx:439
 msgid "Open game actions"
 msgstr "Oscail gníomhartha cluiche"
 
@@ -1647,7 +1679,7 @@ msgstr "Coibhneasta (5n, 3u, 2l)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "Coibhneasta laistigh de 24 uair, eile dearbhach"
 
-#: src/features/chess/index.tsx:480
+#: src/features/chess/index.tsx:465
 msgid "Rematch"
 msgstr "Athchluiche"
 
@@ -1723,16 +1755,16 @@ msgstr "Riachtanach"
 msgid "Resend email"
 msgstr "Seol an ríomhphost arís"
 
-#: src/features/chess/index.tsx:471
-#: src/features/chess/index.tsx:607
+#: src/features/chess/index.tsx:456
+#: src/features/chess/index.tsx:592
 msgid "Resign"
 msgstr "Éirigh as"
 
-#: src/features/chess/index.tsx:598
+#: src/features/chess/index.tsx:583
 msgid "Resign game?"
 msgstr "Éirigh as an gcluiche?"
 
-#: src/features/chess/index.tsx:604
+#: src/features/chess/index.tsx:589
 msgid "Resigning..."
 msgstr "Ag éirí as..."
 
@@ -1995,6 +2027,10 @@ msgstr "Foinsí"
 msgid "Spacious"
 msgstr "Spáslach"
 
+#: src/features/chess/index.tsx:368
+msgid "Stalemate — draw"
+msgstr "Leamhsháinn — cluiche cothrom"
+
 #: src/features/chess/components/new-game.tsx:99
 msgid "Start a new chess game"
 msgstr "Tosaigh cluiche fichille nua"
@@ -2082,7 +2118,7 @@ msgstr "Níorbh fhéidir an t-ábhar iarrtha a aimsiú."
 msgid "The server returned a web page instead of data."
 msgstr "Sheol an freastalaí leathanach gréasáin ar ais in ionad sonraí."
 
-#: src/features/chess/index.tsx:620
+#: src/features/chess/index.tsx:605
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Scriosfaidh sé seo an cluiche agus a chomhrá go buan. Ní féidir é seo a chur ar ceal."
 
@@ -2285,7 +2321,7 @@ msgid "Wednesday"
 msgstr "Céadaoin"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:437
+#: src/features/chess/index.tsx:422
 msgid "White"
 msgstr "Bán"
 
@@ -2304,6 +2340,10 @@ msgstr "Tusa"
 msgid "You do not have access to this section."
 msgstr "Níl rochtain agat ar an rannán seo."
 
+#: src/features/chess/index.tsx:374
+msgid "You resigned — {opponentName} wins"
+msgstr "Ghéill tú — buann {opponentName}"
+
 #: ../../../lib/web/src/components/restore-banner.tsx:100
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Aistríodh do chuntas anseo ó {source}. Go dtí go scriosann tú é ansin, d'fhéadfadh teachtaireachtaí agus fógraí an dá fhreastalaí a bhaint amach, leanann roinnt de d'ábhar á sheirbheáil ón sean-fhreastalaí, agus d'fhéadfadh sé cúpla nóiméad a thógáil ar do lucht leanúna tú a aimsiú anseo."
@@ -2311,6 +2351,10 @@ msgstr "Aistríodh do chuntas anseo ó {source}. Go dtí go scriosann tú é ans
 #: ../../../lib/web/src/components/comment-composer.tsx:302
 msgid "Your attachments will be lost."
 msgstr "Caillfear do cheangaltáin."
+
+#: src/features/chess/index.tsx:385
+msgid "Your move"
+msgstr "Do ghluaiseacht"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:300
 msgid "Your text and attachments will be lost."

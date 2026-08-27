@@ -103,6 +103,14 @@ msgstr "{name} sa vzdal"
 msgid "{opponentName} offered a draw"
 msgstr "{opponentName} ponúkol remízu"
 
+#: src/features/chess/index.tsx:373
+msgid "{opponentName} resigned — you win!"
+msgstr "{opponentName} sa vzdal — vyhrali ste!"
+
+#: src/features/chess/index.tsx:386
+msgid "{opponentName}'s move"
+msgstr "Na ťahu je {opponentName}"
+
 #: ../../../lib/web/src/components/attachment-composer.tsx:248
 #: ../../../lib/web/src/components/ui/upload-progress.tsx:52
 msgid "{sentLabel} of {totalLabel}"
@@ -306,7 +314,7 @@ msgstr "Naozaj chcete odstrániť tento komentár? Odstránia sa aj všetky odpo
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "Naozaj sa chcete odhlásiť? Pre prístup k účtu sa budete musieť znova prihlásiť."
 
-#: src/features/chess/index.tsx:599
+#: src/features/chess/index.tsx:584
 msgid "Are you sure you want to resign? {opponentName} will win the game."
 msgstr "Naozaj sa chcete vzdať? Hru vyhrá {opponentName}."
 
@@ -361,7 +369,7 @@ msgid "bishop"
 msgstr "strelec"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:437
+#: src/features/chess/index.tsx:422
 msgid "Black"
 msgstr "Čierne"
 
@@ -444,10 +452,18 @@ msgstr "Kategória pre tieto notifikácie"
 msgid "Change notification category"
 msgstr "Zmeniť kategóriu notifikácie"
 
-#: src/features/chess/index.tsx:537
-#: src/features/chess/index.tsx:570
+#: src/features/chess/index.tsx:522
+#: src/features/chess/index.tsx:555
 msgid "Chat"
 msgstr "Chat"
+
+#: src/features/chess/index.tsx:383
+msgid "Check — {opponentName}'s move"
+msgstr "Šach — na ťahu je {opponentName}"
+
+#: src/features/chess/index.tsx:382
+msgid "Check — your move"
+msgstr "Šach — ste na ťahu"
 
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx:137
 msgid "Checkbox"
@@ -457,9 +473,17 @@ msgstr "Zaškrtávacie pole"
 msgid "Checklist"
 msgstr "Zoznam úloh"
 
-#: src/features/chess/index.tsx:106
+#: src/features/chess/index.tsx:366
+msgid "Checkmate — {opponentName} wins"
+msgstr "Mat — vyhráva {opponentName}"
+
 #: src/features/chess/index.tsx:365
-#: src/features/chess/index.tsx:377
+msgid "Checkmate — you win!"
+msgstr "Mat — vyhrali ste!"
+
+#: src/features/chess/index.tsx:60
+#: src/features/chess/index.tsx:319
+#: src/features/chess/index.tsx:331
 msgid "Chess"
 msgstr "Šach"
 
@@ -727,7 +751,7 @@ msgstr "Predvolené triedenie"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:203
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:252
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:314
-#: src/features/chess/index.tsx:628
+#: src/features/chess/index.tsx:613
 msgid "Delete"
 msgstr "Odstrániť"
 
@@ -747,11 +771,11 @@ msgstr "Odstrániť komentár"
 msgid "Delete field"
 msgstr "Odstrániť pole"
 
-#: src/features/chess/index.tsx:483
+#: src/features/chess/index.tsx:468
 msgid "Delete game"
 msgstr "Odstrániť hru"
 
-#: src/features/chess/index.tsx:619
+#: src/features/chess/index.tsx:604
 msgid "Delete game?"
 msgstr "Odstrániť hru?"
 
@@ -773,7 +797,7 @@ msgstr "Odstrániť zobrazenie"
 msgid "Delete your account on the old server"
 msgstr "Odstráňte svoj účet na starom serveri"
 
-#: src/features/chess/index.tsx:625
+#: src/features/chess/index.tsx:610
 msgid "Deleting..."
 msgstr "Odstraňuje sa..."
 
@@ -841,11 +865,15 @@ msgstr "Stiahnuť"
 msgid "Download failed"
 msgstr "Sťahovanie zlyhalo"
 
+#: src/features/chess/index.tsx:370
+msgid "Draw"
+msgstr "Remíza"
+
 #: src/features/chess/components/chat-message-list.tsx:45
 msgid "Draw agreed"
 msgstr "Remíza dohodnutá"
 
-#: src/features/chess/index.tsx:496
+#: src/features/chess/index.tsx:481
 msgid "Draw offered — waiting for {opponentName}"
 msgstr "Ponúknutá remíza — čaká sa na {opponentName}"
 
@@ -931,7 +959,7 @@ msgstr "Externá URL"
 msgid "Extra large"
 msgstr "Veľmi veľké"
 
-#: src/features/chess/index.tsx:231
+#: src/features/chess/index.tsx:185
 msgid "Failed to accept draw"
 msgstr "Nepodarilo sa prijať remízu"
 
@@ -949,11 +977,11 @@ msgstr "Nepodarilo sa vytvoriť hru"
 msgid "Failed to create link"
 msgstr "Nepodarilo sa vytvoriť odkaz"
 
-#: src/features/chess/index.tsx:246
+#: src/features/chess/index.tsx:200
 msgid "Failed to create rematch"
 msgstr "Nepodarilo sa vytvoriť odvetu"
 
-#: src/features/chess/index.tsx:236
+#: src/features/chess/index.tsx:190
 msgid "Failed to decline draw"
 msgstr "Nepodarilo sa odmietnuť remízu"
 
@@ -965,7 +993,7 @@ msgstr "Nepodarilo sa zmazať prílohu"
 msgid "Failed to delete comment"
 msgstr "Nepodarilo sa zmazať komentár"
 
-#: src/features/chess/index.tsx:258
+#: src/features/chess/index.tsx:212
 msgid "Failed to delete game"
 msgstr "Nepodarilo sa zmazať hru"
 
@@ -993,11 +1021,11 @@ msgstr "Obrázok sa nepodarilo načítať"
 msgid "Failed to load video"
 msgstr "Video sa nepodarilo načítať"
 
-#: src/features/chess/index.tsx:209
+#: src/features/chess/index.tsx:163
 msgid "Failed to make move"
 msgstr "Nepodarilo sa vykonať ťah"
 
-#: src/features/chess/index.tsx:226
+#: src/features/chess/index.tsx:180
 msgid "Failed to offer draw"
 msgstr "Nepodarilo sa ponúknuť remízu"
 
@@ -1005,7 +1033,7 @@ msgstr "Nepodarilo sa ponúknuť remízu"
 msgid "Failed to post comment"
 msgstr "Nepodarilo sa odoslať komentár"
 
-#: src/features/chess/index.tsx:219
+#: src/features/chess/index.tsx:173
 msgid "Failed to resign"
 msgstr "Nepodarilo sa vzdať"
 
@@ -1013,8 +1041,8 @@ msgstr "Nepodarilo sa vzdať"
 msgid "Failed to revoke RSS access"
 msgstr "Zrušenie prístupu RSS zlyhalo"
 
-#: src/features/chess/index.tsx:554
-#: src/features/chess/index.tsx:587
+#: src/features/chess/index.tsx:539
+#: src/features/chess/index.tsx:572
 msgid "Failed to send"
 msgstr "Nepodarilo sa odoslať"
 
@@ -1068,9 +1096,13 @@ msgstr "Z motívu"
 msgid "Game created"
 msgstr "Hra vytvorená"
 
-#: src/features/chess/index.tsx:254
+#: src/features/chess/index.tsx:208
 msgid "Game deleted"
 msgstr "Hra zmazaná"
+
+#: src/features/chess/index.tsx:379
+msgid "Game state unavailable"
+msgstr "Stav hry nie je dostupný"
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx:26
 #: ../../../lib/web/src/features/errors/unauthorized-error.tsx:26
@@ -1445,7 +1477,7 @@ msgstr "Oznámenia: {0}"
 msgid "Number"
 msgstr "Číslo"
 
-#: src/features/chess/index.tsx:467
+#: src/features/chess/index.tsx:452
 msgid "Offer draw"
 msgstr "Ponúknuť remízu"
 
@@ -1462,11 +1494,11 @@ msgstr "Ups! Stránka sa nenašla!"
 msgid "Open actions"
 msgstr "Otvoriť akcie"
 
-#: src/features/chess/index.tsx:446
+#: src/features/chess/index.tsx:431
 msgid "Open chat panel"
 msgstr "Otvoriť panel chatu"
 
-#: src/features/chess/index.tsx:454
+#: src/features/chess/index.tsx:439
 msgid "Open game actions"
 msgstr "Otvoriť akcie hry"
 
@@ -1647,7 +1679,7 @@ msgstr "Relatívne (5 m, 3 h, 2 d)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "Relatívne do 24 hodín, inak absolútne"
 
-#: src/features/chess/index.tsx:480
+#: src/features/chess/index.tsx:465
 msgid "Rematch"
 msgstr "Odveta"
 
@@ -1723,16 +1755,16 @@ msgstr "Povinné"
 msgid "Resend email"
 msgstr "Odoslať e-mail znova"
 
-#: src/features/chess/index.tsx:471
-#: src/features/chess/index.tsx:607
+#: src/features/chess/index.tsx:456
+#: src/features/chess/index.tsx:592
 msgid "Resign"
 msgstr "Vzdať"
 
-#: src/features/chess/index.tsx:598
+#: src/features/chess/index.tsx:583
 msgid "Resign game?"
 msgstr "Vzdať hru?"
 
-#: src/features/chess/index.tsx:604
+#: src/features/chess/index.tsx:589
 msgid "Resigning..."
 msgstr "Vzdávam..."
 
@@ -1995,6 +2027,10 @@ msgstr "Zdroje"
 msgid "Spacious"
 msgstr "Priestranné"
 
+#: src/features/chess/index.tsx:368
+msgid "Stalemate — draw"
+msgstr "Pat — remíza"
+
 #: src/features/chess/components/new-game.tsx:99
 msgid "Start a new chess game"
 msgstr "Začať novú šachovú partiu"
@@ -2082,7 +2118,7 @@ msgstr "Požadovaný obsah sa nepodarilo nájsť."
 msgid "The server returned a web page instead of data."
 msgstr "Server vrátil webovú stránku namiesto údajov."
 
-#: src/features/chess/index.tsx:620
+#: src/features/chess/index.tsx:605
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Týmto trvalo odstránite hru a jej chat. Túto akciu nemožno vrátiť späť."
 
@@ -2285,7 +2321,7 @@ msgid "Wednesday"
 msgstr "Streda"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:437
+#: src/features/chess/index.tsx:422
 msgid "White"
 msgstr "Biely"
 
@@ -2304,6 +2340,10 @@ msgstr "Vy"
 msgid "You do not have access to this section."
 msgstr "Nemáte prístup k tejto sekcii."
 
+#: src/features/chess/index.tsx:374
+msgid "You resigned — {opponentName} wins"
+msgstr "Vzdali ste sa — vyhráva {opponentName}"
+
 #: ../../../lib/web/src/components/restore-banner.tsx:100
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Váš účet bol presunutý sem z {source}. Kým ho tam neodstránite, správy a upozornenia môžu dosiahnuť oba servery, časť vášho obsahu naďalej pochádza zo starého servera a sledovateľom môže chvíľu trvať, kým vás tu nájdu."
@@ -2311,6 +2351,10 @@ msgstr "Váš účet bol presunutý sem z {source}. Kým ho tam neodstránite, s
 #: ../../../lib/web/src/components/comment-composer.tsx:302
 msgid "Your attachments will be lost."
 msgstr "Vaše prílohy sa stratia."
+
+#: src/features/chess/index.tsx:385
+msgid "Your move"
+msgstr "Váš ťah"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:300
 msgid "Your text and attachments will be lost."

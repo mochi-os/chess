@@ -103,6 +103,14 @@ msgstr "{name} pasidavė"
 msgid "{opponentName} offered a draw"
 msgstr "{opponentName} pasiūlė lygiąsias"
 
+#: src/features/chess/index.tsx:373
+msgid "{opponentName} resigned — you win!"
+msgstr "{opponentName} pasidavė — jūs laimėjote!"
+
+#: src/features/chess/index.tsx:386
+msgid "{opponentName}'s move"
+msgstr "{opponentName} ėjimas"
+
 #: ../../../lib/web/src/components/attachment-composer.tsx:248
 #: ../../../lib/web/src/components/ui/upload-progress.tsx:52
 msgid "{sentLabel} of {totalLabel}"
@@ -306,7 +314,7 @@ msgstr "Ar tikrai norite ištrinti šį komentarą? Tai taip pat ištrins visus 
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "Ar tikrai norite atsijungti? Norėdami pasiekti paskyrą, turėsite vėl prisijungti."
 
-#: src/features/chess/index.tsx:599
+#: src/features/chess/index.tsx:584
 msgid "Are you sure you want to resign? {opponentName} will win the game."
 msgstr "Ar tikrai norite pasiduoti? {opponentName} laimės žaidimą."
 
@@ -361,7 +369,7 @@ msgid "bishop"
 msgstr "rikis"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:437
+#: src/features/chess/index.tsx:422
 msgid "Black"
 msgstr "Juoda"
 
@@ -444,10 +452,18 @@ msgstr "Šių pranešimų kategorija"
 msgid "Change notification category"
 msgstr "Pakeisti pranešimo kategoriją"
 
-#: src/features/chess/index.tsx:537
-#: src/features/chess/index.tsx:570
+#: src/features/chess/index.tsx:522
+#: src/features/chess/index.tsx:555
 msgid "Chat"
 msgstr "Pokalbis"
+
+#: src/features/chess/index.tsx:383
+msgid "Check — {opponentName}'s move"
+msgstr "Šachas — {opponentName} ėjimas"
+
+#: src/features/chess/index.tsx:382
+msgid "Check — your move"
+msgstr "Šachas — jūsų ėjimas"
 
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx:137
 msgid "Checkbox"
@@ -457,9 +473,17 @@ msgstr "Žymimasis langelis"
 msgid "Checklist"
 msgstr "Užduočių sąrašas"
 
-#: src/features/chess/index.tsx:106
+#: src/features/chess/index.tsx:366
+msgid "Checkmate — {opponentName} wins"
+msgstr "Matas — laimi {opponentName}"
+
 #: src/features/chess/index.tsx:365
-#: src/features/chess/index.tsx:377
+msgid "Checkmate — you win!"
+msgstr "Matas — jūs laimėjote!"
+
+#: src/features/chess/index.tsx:60
+#: src/features/chess/index.tsx:319
+#: src/features/chess/index.tsx:331
 msgid "Chess"
 msgstr "Šachmatai"
 
@@ -727,7 +751,7 @@ msgstr "Numatytasis rūšiavimas"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:203
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:252
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:314
-#: src/features/chess/index.tsx:628
+#: src/features/chess/index.tsx:613
 msgid "Delete"
 msgstr "Ištrinti"
 
@@ -747,11 +771,11 @@ msgstr "Ištrinti komentarą"
 msgid "Delete field"
 msgstr "Ištrinti lauką"
 
-#: src/features/chess/index.tsx:483
+#: src/features/chess/index.tsx:468
 msgid "Delete game"
 msgstr "Ištrinti žaidimą"
 
-#: src/features/chess/index.tsx:619
+#: src/features/chess/index.tsx:604
 msgid "Delete game?"
 msgstr "Ištrinti žaidimą?"
 
@@ -773,7 +797,7 @@ msgstr "Ištrinti rodinį"
 msgid "Delete your account on the old server"
 msgstr "Ištrinkite paskyrą senajame serveryje"
 
-#: src/features/chess/index.tsx:625
+#: src/features/chess/index.tsx:610
 msgid "Deleting..."
 msgstr "Ištrinama..."
 
@@ -841,11 +865,15 @@ msgstr "Atsisiųsti"
 msgid "Download failed"
 msgstr "Atsisiųsti nepavyko"
 
+#: src/features/chess/index.tsx:370
+msgid "Draw"
+msgstr "Lygiosios"
+
 #: src/features/chess/components/chat-message-list.tsx:45
 msgid "Draw agreed"
 msgstr "Sutarta dėl lygiųjų"
 
-#: src/features/chess/index.tsx:496
+#: src/features/chess/index.tsx:481
 msgid "Draw offered — waiting for {opponentName}"
 msgstr "Pasiūlytos lygiosios — laukiama {opponentName}"
 
@@ -931,7 +959,7 @@ msgstr "Išorinis URL"
 msgid "Extra large"
 msgstr "Labai didelis"
 
-#: src/features/chess/index.tsx:231
+#: src/features/chess/index.tsx:185
 msgid "Failed to accept draw"
 msgstr "Nepavyko priimti lygiųjų"
 
@@ -949,11 +977,11 @@ msgstr "Nepavyko sukurti žaidimo"
 msgid "Failed to create link"
 msgstr "Nepavyko sukurti nuorodos"
 
-#: src/features/chess/index.tsx:246
+#: src/features/chess/index.tsx:200
 msgid "Failed to create rematch"
 msgstr "Nepavyko sukurti revanšo"
 
-#: src/features/chess/index.tsx:236
+#: src/features/chess/index.tsx:190
 msgid "Failed to decline draw"
 msgstr "Nepavyko atmesti lygiųjų"
 
@@ -965,7 +993,7 @@ msgstr "Nepavyko ištrinti priedo"
 msgid "Failed to delete comment"
 msgstr "Nepavyko ištrinti komentaro"
 
-#: src/features/chess/index.tsx:258
+#: src/features/chess/index.tsx:212
 msgid "Failed to delete game"
 msgstr "Nepavyko ištrinti žaidimo"
 
@@ -993,11 +1021,11 @@ msgstr "Nepavyko įkelti paveikslėlio"
 msgid "Failed to load video"
 msgstr "Nepavyko įkelti vaizdo įrašo"
 
-#: src/features/chess/index.tsx:209
+#: src/features/chess/index.tsx:163
 msgid "Failed to make move"
 msgstr "Nepavyko atlikti ėjimo"
 
-#: src/features/chess/index.tsx:226
+#: src/features/chess/index.tsx:180
 msgid "Failed to offer draw"
 msgstr "Nepavyko pasiūlyti lygiųjų"
 
@@ -1005,7 +1033,7 @@ msgstr "Nepavyko pasiūlyti lygiųjų"
 msgid "Failed to post comment"
 msgstr "Nepavyko paskelbti komentaro"
 
-#: src/features/chess/index.tsx:219
+#: src/features/chess/index.tsx:173
 msgid "Failed to resign"
 msgstr "Nepavyko pasitraukti"
 
@@ -1013,8 +1041,8 @@ msgstr "Nepavyko pasitraukti"
 msgid "Failed to revoke RSS access"
 msgstr "Nepavyko atšaukti RSS prieigos"
 
-#: src/features/chess/index.tsx:554
-#: src/features/chess/index.tsx:587
+#: src/features/chess/index.tsx:539
+#: src/features/chess/index.tsx:572
 msgid "Failed to send"
 msgstr "Nepavyko išsiųsti"
 
@@ -1068,9 +1096,13 @@ msgstr "Iš temos"
 msgid "Game created"
 msgstr "Žaidimas sukurtas"
 
-#: src/features/chess/index.tsx:254
+#: src/features/chess/index.tsx:208
 msgid "Game deleted"
 msgstr "Žaidimas ištrintas"
+
+#: src/features/chess/index.tsx:379
+msgid "Game state unavailable"
+msgstr "Žaidimo būsena nepasiekiama"
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx:26
 #: ../../../lib/web/src/features/errors/unauthorized-error.tsx:26
@@ -1445,7 +1477,7 @@ msgstr "Pranešimai: {0}"
 msgid "Number"
 msgstr "Skaičius"
 
-#: src/features/chess/index.tsx:467
+#: src/features/chess/index.tsx:452
 msgid "Offer draw"
 msgstr "Siūlyti lygiąsias"
 
@@ -1462,11 +1494,11 @@ msgstr "Oi! Puslapis nerastas!"
 msgid "Open actions"
 msgstr "Atidaryti veiksmus"
 
-#: src/features/chess/index.tsx:446
+#: src/features/chess/index.tsx:431
 msgid "Open chat panel"
 msgstr "Atidaryti pokalbio skydelį"
 
-#: src/features/chess/index.tsx:454
+#: src/features/chess/index.tsx:439
 msgid "Open game actions"
 msgstr "Atidaryti game veiksmus"
 
@@ -1647,7 +1679,7 @@ msgstr "Santykinis (5m, 3h, 2d)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "Santykinis per 24 val., kitaip absoliutus"
 
-#: src/features/chess/index.tsx:480
+#: src/features/chess/index.tsx:465
 msgid "Rematch"
 msgstr "Permatch"
 
@@ -1723,16 +1755,16 @@ msgstr "Privaloma"
 msgid "Resend email"
 msgstr "Siųsti el. laišką dar kartą"
 
-#: src/features/chess/index.tsx:471
-#: src/features/chess/index.tsx:607
+#: src/features/chess/index.tsx:456
+#: src/features/chess/index.tsx:592
 msgid "Resign"
 msgstr "Pasiduoti"
 
-#: src/features/chess/index.tsx:598
+#: src/features/chess/index.tsx:583
 msgid "Resign game?"
 msgstr "Pasiduoti game?"
 
-#: src/features/chess/index.tsx:604
+#: src/features/chess/index.tsx:589
 msgid "Resigning..."
 msgstr "Pasiduodama..."
 
@@ -1995,6 +2027,10 @@ msgstr "Šaltiniai"
 msgid "Spacious"
 msgstr "Erdvus"
 
+#: src/features/chess/index.tsx:368
+msgid "Stalemate — draw"
+msgstr "Patas — lygiosios"
+
 #: src/features/chess/components/new-game.tsx:99
 msgid "Start a new chess game"
 msgstr "Pradėti naują šachmatų žaidimą"
@@ -2082,7 +2118,7 @@ msgstr "Prašomo turinio rasti nepavyko."
 msgid "The server returned a web page instead of data."
 msgstr "Serveris grąžino tinklalapį vietoj duomenų."
 
-#: src/features/chess/index.tsx:620
+#: src/features/chess/index.tsx:605
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Tai visam laikui ištrins žaidimą ir jo pokalbį. Šio veiksmo negalima anuliuoti."
 
@@ -2285,7 +2321,7 @@ msgid "Wednesday"
 msgstr "Trečiadienis"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:437
+#: src/features/chess/index.tsx:422
 msgid "White"
 msgstr "Baltoji"
 
@@ -2304,6 +2340,10 @@ msgstr "Jūs"
 msgid "You do not have access to this section."
 msgstr "Neturite prieigos prie šios skilties."
 
+#: src/features/chess/index.tsx:374
+msgid "You resigned — {opponentName} wins"
+msgstr "Pasidavėte — laimi {opponentName}"
+
 #: ../../../lib/web/src/components/restore-banner.tsx:100
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Jūsų paskyra buvo perkelta čia iš {source}. Kol jos ten neištrinate, žinutės ir pranešimai gali pasiekti abu serverius, dalis jūsų turinio toliau pateikiama iš senojo serverio, o pasekėjams gali prireikti kelių minučių jus rasti čia."
@@ -2311,6 +2351,10 @@ msgstr "Jūsų paskyra buvo perkelta čia iš {source}. Kol jos ten neištrinate
 #: ../../../lib/web/src/components/comment-composer.tsx:302
 msgid "Your attachments will be lost."
 msgstr "Jūsų priedai bus prarasti."
+
+#: src/features/chess/index.tsx:385
+msgid "Your move"
+msgstr "Jūsų ėjimas"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:300
 msgid "Your text and attachments will be lost."

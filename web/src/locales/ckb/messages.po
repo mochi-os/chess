@@ -103,6 +103,14 @@ msgstr "{name} وازی هێنا"
 msgid "{opponentName} offered a draw"
 msgstr "{opponentName} پێشنیاری یەکسانی کرد"
 
+#: src/features/chess/index.tsx:373
+msgid "{opponentName} resigned — you win!"
+msgstr "{opponentName} خۆی بەدەستەوەدا — تۆ بردت!"
+
+#: src/features/chess/index.tsx:386
+msgid "{opponentName}'s move"
+msgstr "نۆرەی {opponentName}"
+
 #: ../../../lib/web/src/components/attachment-composer.tsx:248
 #: ../../../lib/web/src/components/ui/upload-progress.tsx:52
 msgid "{sentLabel} of {totalLabel}"
@@ -306,7 +314,7 @@ msgstr "ئایا دڵنیایت لە سڕینەوەی ئەم لێدوانە؟ ئ
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "ئایا دڵنیایت لە چوونە دەرەوە؟ پێویستە دیسان بچیتە ژوورەوە بۆ گەیشتن بە هەژمارەکەت."
 
-#: src/features/chess/index.tsx:599
+#: src/features/chess/index.tsx:584
 msgid "Are you sure you want to resign? {opponentName} will win the game."
 msgstr "ئایا دڵنیایت لە دەستلەکارکێشانەوە؟ {opponentName} لە یارییەکە دەباتەوە."
 
@@ -361,7 +369,7 @@ msgid "bishop"
 msgstr "بیشۆپ"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:437
+#: src/features/chess/index.tsx:422
 msgid "Black"
 msgstr "ڕەش"
 
@@ -444,10 +452,18 @@ msgstr "هاوپۆلی ئەم ئاگادارکردنەوانە"
 msgid "Change notification category"
 msgstr "گۆڕینی هاوپۆلی ئاگادارکردنەوە"
 
-#: src/features/chess/index.tsx:537
-#: src/features/chess/index.tsx:570
+#: src/features/chess/index.tsx:522
+#: src/features/chess/index.tsx:555
 msgid "Chat"
 msgstr "گفتوگۆ"
+
+#: src/features/chess/index.tsx:383
+msgid "Check — {opponentName}'s move"
+msgstr "کش — نۆرەی {opponentName}"
+
+#: src/features/chess/index.tsx:382
+msgid "Check — your move"
+msgstr "کش — نۆرەی تۆیە"
 
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx:137
 msgid "Checkbox"
@@ -457,9 +473,17 @@ msgstr "بۆکسی پشکنین"
 msgid "Checklist"
 msgstr "لیستی پشکنین"
 
-#: src/features/chess/index.tsx:106
+#: src/features/chess/index.tsx:366
+msgid "Checkmate — {opponentName} wins"
+msgstr "کش مات — {opponentName} بردی"
+
 #: src/features/chess/index.tsx:365
-#: src/features/chess/index.tsx:377
+msgid "Checkmate — you win!"
+msgstr "کش مات — تۆ بردت!"
+
+#: src/features/chess/index.tsx:60
+#: src/features/chess/index.tsx:319
+#: src/features/chess/index.tsx:331
 msgid "Chess"
 msgstr "شەترەنج"
 
@@ -727,7 +751,7 @@ msgstr "ڕیزکردنی بنەڕەت"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:203
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:252
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:314
-#: src/features/chess/index.tsx:628
+#: src/features/chess/index.tsx:613
 msgid "Delete"
 msgstr "سڕینەوە"
 
@@ -747,11 +771,11 @@ msgstr "سڕینەوەی لێدوان"
 msgid "Delete field"
 msgstr "سڕینەوەی خانە"
 
-#: src/features/chess/index.tsx:483
+#: src/features/chess/index.tsx:468
 msgid "Delete game"
 msgstr "سڕینەوەی یاری"
 
-#: src/features/chess/index.tsx:619
+#: src/features/chess/index.tsx:604
 msgid "Delete game?"
 msgstr "یارییەکە بسڕدرێتەوە؟"
 
@@ -773,7 +797,7 @@ msgstr "سڕینەوەی ڕوانگە"
 msgid "Delete your account on the old server"
 msgstr "هەژمارەکەت لە سێرڤەری کۆنەکەوە بسڕەوە"
 
-#: src/features/chess/index.tsx:625
+#: src/features/chess/index.tsx:610
 msgid "Deleting..."
 msgstr "سڕینەوە..."
 
@@ -841,11 +865,15 @@ msgstr "داگرتن"
 msgid "Download failed"
 msgstr "داگرتن سەرکەوتوو نەبوو"
 
+#: src/features/chess/index.tsx:370
+msgid "Draw"
+msgstr "یەکسان"
+
 #: src/features/chess/components/chat-message-list.tsx:45
 msgid "Draw agreed"
 msgstr "ڕێککەوتن لەسەر یەکسانی"
 
-#: src/features/chess/index.tsx:496
+#: src/features/chess/index.tsx:481
 msgid "Draw offered — waiting for {opponentName}"
 msgstr "یەکسانی پێشنیار کرا — چاوەڕێی {opponentName}"
 
@@ -931,7 +959,7 @@ msgstr "URLی دەرەکی"
 msgid "Extra large"
 msgstr "زۆر گەورە"
 
-#: src/features/chess/index.tsx:231
+#: src/features/chess/index.tsx:185
 msgid "Failed to accept draw"
 msgstr "وەرگرتنی یەکسانی سەرکەوتوو نەبوو"
 
@@ -949,11 +977,11 @@ msgstr "دروستکردنی یاری سەرکەوتوو نەبوو"
 msgid "Failed to create link"
 msgstr "دروستکردنی بەستەر سەرکەوتوو نەبوو"
 
-#: src/features/chess/index.tsx:246
+#: src/features/chess/index.tsx:200
 msgid "Failed to create rematch"
 msgstr "دروستکردنی یاری دووبارە سەرکەوتوو نەبوو"
 
-#: src/features/chess/index.tsx:236
+#: src/features/chess/index.tsx:190
 msgid "Failed to decline draw"
 msgstr "ڕەتکردنەوەی یەکسانی سەرکەوتوو نەبوو"
 
@@ -965,7 +993,7 @@ msgstr "سڕینەوەی هاوپێچ سەرکەوتوو نەبوو"
 msgid "Failed to delete comment"
 msgstr "سڕینەوەی بۆچوون سەرکەوتوو نەبوو"
 
-#: src/features/chess/index.tsx:258
+#: src/features/chess/index.tsx:212
 msgid "Failed to delete game"
 msgstr "سڕینەوەی یاری سەرکەوتوو نەبوو"
 
@@ -993,11 +1021,11 @@ msgstr "وێنەکە بار نەکرا"
 msgid "Failed to load video"
 msgstr "ڤیدیۆکە بار نەکرا"
 
-#: src/features/chess/index.tsx:209
+#: src/features/chess/index.tsx:163
 msgid "Failed to make move"
 msgstr "ئەنجامدانی جوڵە سەرکەوتوو نەبوو"
 
-#: src/features/chess/index.tsx:226
+#: src/features/chess/index.tsx:180
 msgid "Failed to offer draw"
 msgstr "پێشنیاری یەکسانی سەرکەوتوو نەبوو"
 
@@ -1005,7 +1033,7 @@ msgstr "پێشنیاری یەکسانی سەرکەوتوو نەبوو"
 msgid "Failed to post comment"
 msgstr "ناردنی بۆچوون سەرکەوتوو نەبوو"
 
-#: src/features/chess/index.tsx:219
+#: src/features/chess/index.tsx:173
 msgid "Failed to resign"
 msgstr "وازهێنان سەرکەوتوو نەبوو"
 
@@ -1013,8 +1041,8 @@ msgstr "وازهێنان سەرکەوتوو نەبوو"
 msgid "Failed to revoke RSS access"
 msgstr "ڕەتکردنەوەی دەستپێگەیشتنی RSS سەرکەوتوو نەبوو"
 
-#: src/features/chess/index.tsx:554
-#: src/features/chess/index.tsx:587
+#: src/features/chess/index.tsx:539
+#: src/features/chess/index.tsx:572
 msgid "Failed to send"
 msgstr "ناردن سەرکەوتوو نەبوو"
 
@@ -1068,9 +1096,13 @@ msgstr "لە ڕووکارەوە"
 msgid "Game created"
 msgstr "یاری دروست کرا"
 
-#: src/features/chess/index.tsx:254
+#: src/features/chess/index.tsx:208
 msgid "Game deleted"
 msgstr "یاری سڕایەوە"
+
+#: src/features/chess/index.tsx:379
+msgid "Game state unavailable"
+msgstr "دۆخی یاری بەردەست نییە"
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx:26
 #: ../../../lib/web/src/features/errors/unauthorized-error.tsx:26
@@ -1445,7 +1477,7 @@ msgstr "ئاگادارکردنەوەکان: {0}"
 msgid "Number"
 msgstr "ژمارە"
 
-#: src/features/chess/index.tsx:467
+#: src/features/chess/index.tsx:452
 msgid "Offer draw"
 msgstr "پێشنیاری وەکیەکی"
 
@@ -1462,11 +1494,11 @@ msgstr "ئۆه! پەڕە نەدۆزرایەوە!"
 msgid "Open actions"
 msgstr "کردارەکان بکەرەوە"
 
-#: src/features/chess/index.tsx:446
+#: src/features/chess/index.tsx:431
 msgid "Open chat panel"
 msgstr "کردنەوەی پانێڵی گفتوگۆ"
 
-#: src/features/chess/index.tsx:454
+#: src/features/chess/index.tsx:439
 msgid "Open game actions"
 msgstr "کردنەوەی کردارەکانی یاری"
 
@@ -1647,7 +1679,7 @@ msgstr "ڕێژەیی (٥خ، ٣ک، ٢ڕ)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "ڕێژەیی لە ماوەی ٢٤ کاتژمێر، ئەگەرنا تەواو"
 
-#: src/features/chess/index.tsx:480
+#: src/features/chess/index.tsx:465
 msgid "Rematch"
 msgstr "یاری دووبارە"
 
@@ -1723,16 +1755,16 @@ msgstr "پێویست"
 msgid "Resend email"
 msgstr "ئیمەیڵ دووبارە بنێرە"
 
-#: src/features/chess/index.tsx:471
-#: src/features/chess/index.tsx:607
+#: src/features/chess/index.tsx:456
+#: src/features/chess/index.tsx:592
 msgid "Resign"
 msgstr "دەستلەکارکێشانەوە"
 
-#: src/features/chess/index.tsx:598
+#: src/features/chess/index.tsx:583
 msgid "Resign game?"
 msgstr "دەست لە یاری بکێشیتەوە؟"
 
-#: src/features/chess/index.tsx:604
+#: src/features/chess/index.tsx:589
 msgid "Resigning..."
 msgstr "دەستلەکارکێشانەوە..."
 
@@ -1995,6 +2027,10 @@ msgstr "سەرچاوەکان"
 msgid "Spacious"
 msgstr "فراوان"
 
+#: src/features/chess/index.tsx:368
+msgid "Stalemate — draw"
+msgstr "پات — یەکسان"
+
 #: src/features/chess/components/new-game.tsx:99
 msgid "Start a new chess game"
 msgstr "یارییەکی نوێی شەترەنج دەستپێبکە"
@@ -2082,7 +2118,7 @@ msgstr "ناوەڕۆکی داواکراو نەدۆزرایەوە."
 msgid "The server returned a web page instead of data."
 msgstr "ڕاژەکار لە جیاتی داتا پەڕەیەکی وێبی گەڕاندەوە."
 
-#: src/features/chess/index.tsx:620
+#: src/features/chess/index.tsx:605
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "ئەمە یارییەکە و چاتەکەی بە یەکجاری دەسڕێتەوە. ئەم کردارە ناتوانرێت پووچ بکرێتەوە."
 
@@ -2285,7 +2321,7 @@ msgid "Wednesday"
 msgstr "چوارشەممە"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:437
+#: src/features/chess/index.tsx:422
 msgid "White"
 msgstr "سپی"
 
@@ -2304,6 +2340,10 @@ msgstr "تۆ"
 msgid "You do not have access to this section."
 msgstr "دەستپێگەیشتنت بەم بەشە نییە."
 
+#: src/features/chess/index.tsx:374
+msgid "You resigned — {opponentName} wins"
+msgstr "تۆ خۆت بەدەستەوەدا — {opponentName} بردی"
+
 #: ../../../lib/web/src/components/restore-banner.tsx:100
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "هەژمارەکەت لە {source} بۆ ئێرە گواستراوەتەوە. تا کاتێک ئەوێ بیسڕیتەوە، پەیام و ئاگادارکردنەوەکان دەتوانن بگەنە هەردوو سێرڤەرەکە، بەشێک لە ناوەڕۆکەکەت لە سێرڤەری کۆنەکەوە دەمێنێتەوە، و بەدواداچووەکانت دەتوانن چەند خولەکێک بخایەن تا بیتدۆزنەوە."
@@ -2311,6 +2351,10 @@ msgstr "هەژمارەکەت لە {source} بۆ ئێرە گواستراوەتە�
 #: ../../../lib/web/src/components/comment-composer.tsx:302
 msgid "Your attachments will be lost."
 msgstr "هاوپێچەکانت لەدەست دەچن."
+
+#: src/features/chess/index.tsx:385
+msgid "Your move"
+msgstr "نۆرەی تۆ"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:300
 msgid "Your text and attachments will be lost."

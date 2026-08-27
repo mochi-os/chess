@@ -103,6 +103,14 @@ msgstr "{name} gav upp"
 msgid "{opponentName} offered a draw"
 msgstr "{opponentName} erbjöd remi"
 
+#: src/features/chess/index.tsx:373
+msgid "{opponentName} resigned — you win!"
+msgstr "{opponentName} gav upp — du vinner!"
+
+#: src/features/chess/index.tsx:386
+msgid "{opponentName}'s move"
+msgstr "{opponentName}s tur"
+
 #: ../../../lib/web/src/components/attachment-composer.tsx:248
 #: ../../../lib/web/src/components/ui/upload-progress.tsx:52
 msgid "{sentLabel} of {totalLabel}"
@@ -306,7 +314,7 @@ msgstr "Är du säker på att du vill ta bort denna kommentar? Detta tar även b
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "Är du säker på att du vill logga ut? Du behöver logga in igen för att komma åt ditt konto."
 
-#: src/features/chess/index.tsx:599
+#: src/features/chess/index.tsx:584
 msgid "Are you sure you want to resign? {opponentName} will win the game."
 msgstr "Är du säker på att du vill ge upp? {opponentName} kommer att vinna partiet."
 
@@ -361,7 +369,7 @@ msgid "bishop"
 msgstr "löpare"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:437
+#: src/features/chess/index.tsx:422
 msgid "Black"
 msgstr "Svart"
 
@@ -444,10 +452,18 @@ msgstr "Kategori för dessa aviseringar"
 msgid "Change notification category"
 msgstr "Ändra aviseringskategori"
 
-#: src/features/chess/index.tsx:537
-#: src/features/chess/index.tsx:570
+#: src/features/chess/index.tsx:522
+#: src/features/chess/index.tsx:555
 msgid "Chat"
 msgstr "Chatt"
+
+#: src/features/chess/index.tsx:383
+msgid "Check — {opponentName}'s move"
+msgstr "Schack — {opponentName}s tur"
+
+#: src/features/chess/index.tsx:382
+msgid "Check — your move"
+msgstr "Schack — din tur"
 
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx:137
 msgid "Checkbox"
@@ -457,9 +473,17 @@ msgstr "Kryssruta"
 msgid "Checklist"
 msgstr "Checklista"
 
-#: src/features/chess/index.tsx:106
+#: src/features/chess/index.tsx:366
+msgid "Checkmate — {opponentName} wins"
+msgstr "Schackmatt — {opponentName} vinner"
+
 #: src/features/chess/index.tsx:365
-#: src/features/chess/index.tsx:377
+msgid "Checkmate — you win!"
+msgstr "Schackmatt — du vinner!"
+
+#: src/features/chess/index.tsx:60
+#: src/features/chess/index.tsx:319
+#: src/features/chess/index.tsx:331
 msgid "Chess"
 msgstr "Schack"
 
@@ -727,7 +751,7 @@ msgstr "Standardsortering"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:203
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:252
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:314
-#: src/features/chess/index.tsx:628
+#: src/features/chess/index.tsx:613
 msgid "Delete"
 msgstr "Ta bort"
 
@@ -747,11 +771,11 @@ msgstr "Ta bort kommentar"
 msgid "Delete field"
 msgstr "Ta bort fält"
 
-#: src/features/chess/index.tsx:483
+#: src/features/chess/index.tsx:468
 msgid "Delete game"
 msgstr "Ta bort spel"
 
-#: src/features/chess/index.tsx:619
+#: src/features/chess/index.tsx:604
 msgid "Delete game?"
 msgstr "Ta bort partiet?"
 
@@ -773,7 +797,7 @@ msgstr "Ta bort vy"
 msgid "Delete your account on the old server"
 msgstr "Ta bort ditt konto på den gamla servern"
 
-#: src/features/chess/index.tsx:625
+#: src/features/chess/index.tsx:610
 msgid "Deleting..."
 msgstr "Tar bort..."
 
@@ -841,11 +865,15 @@ msgstr "Ladda ner"
 msgid "Download failed"
 msgstr "Nedladdningen misslyckades"
 
+#: src/features/chess/index.tsx:370
+msgid "Draw"
+msgstr "Remi"
+
 #: src/features/chess/components/chat-message-list.tsx:45
 msgid "Draw agreed"
 msgstr "Remi överenskommen"
 
-#: src/features/chess/index.tsx:496
+#: src/features/chess/index.tsx:481
 msgid "Draw offered — waiting for {opponentName}"
 msgstr "Remi erbjuden — väntar på {opponentName}"
 
@@ -931,7 +959,7 @@ msgstr "Extern URL"
 msgid "Extra large"
 msgstr "Extra stor"
 
-#: src/features/chess/index.tsx:231
+#: src/features/chess/index.tsx:185
 msgid "Failed to accept draw"
 msgstr "Kunde inte acceptera remi"
 
@@ -949,11 +977,11 @@ msgstr "Kunde inte skapa spel"
 msgid "Failed to create link"
 msgstr "Kunde inte skapa länk"
 
-#: src/features/chess/index.tsx:246
+#: src/features/chess/index.tsx:200
 msgid "Failed to create rematch"
 msgstr "Kunde inte skapa returmatch"
 
-#: src/features/chess/index.tsx:236
+#: src/features/chess/index.tsx:190
 msgid "Failed to decline draw"
 msgstr "Kunde inte avböja remi"
 
@@ -965,7 +993,7 @@ msgstr "Kunde inte radera bilaga"
 msgid "Failed to delete comment"
 msgstr "Kunde inte radera kommentar"
 
-#: src/features/chess/index.tsx:258
+#: src/features/chess/index.tsx:212
 msgid "Failed to delete game"
 msgstr "Kunde inte radera spel"
 
@@ -993,11 +1021,11 @@ msgstr "Det gick inte att läsa in bilden"
 msgid "Failed to load video"
 msgstr "Det gick inte att läsa in videon"
 
-#: src/features/chess/index.tsx:209
+#: src/features/chess/index.tsx:163
 msgid "Failed to make move"
 msgstr "Kunde inte göra drag"
 
-#: src/features/chess/index.tsx:226
+#: src/features/chess/index.tsx:180
 msgid "Failed to offer draw"
 msgstr "Kunde inte erbjuda remi"
 
@@ -1005,7 +1033,7 @@ msgstr "Kunde inte erbjuda remi"
 msgid "Failed to post comment"
 msgstr "Kunde inte publicera kommentar"
 
-#: src/features/chess/index.tsx:219
+#: src/features/chess/index.tsx:173
 msgid "Failed to resign"
 msgstr "Kunde inte ge upp"
 
@@ -1013,8 +1041,8 @@ msgstr "Kunde inte ge upp"
 msgid "Failed to revoke RSS access"
 msgstr "Det gick inte att återkalla RSS-åtkomst"
 
-#: src/features/chess/index.tsx:554
-#: src/features/chess/index.tsx:587
+#: src/features/chess/index.tsx:539
+#: src/features/chess/index.tsx:572
 msgid "Failed to send"
 msgstr "Kunde inte skicka"
 
@@ -1068,9 +1096,13 @@ msgstr "Från tema"
 msgid "Game created"
 msgstr "Spel skapat"
 
-#: src/features/chess/index.tsx:254
+#: src/features/chess/index.tsx:208
 msgid "Game deleted"
 msgstr "Spel raderat"
+
+#: src/features/chess/index.tsx:379
+msgid "Game state unavailable"
+msgstr "Spelets tillstånd är inte tillgängligt"
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx:26
 #: ../../../lib/web/src/features/errors/unauthorized-error.tsx:26
@@ -1445,7 +1477,7 @@ msgstr "Aviseringar: {0}"
 msgid "Number"
 msgstr "Nummer"
 
-#: src/features/chess/index.tsx:467
+#: src/features/chess/index.tsx:452
 msgid "Offer draw"
 msgstr "Erbjud remi"
 
@@ -1462,11 +1494,11 @@ msgstr "Hoppsan! Sidan hittades inte!"
 msgid "Open actions"
 msgstr "Öppna åtgärder"
 
-#: src/features/chess/index.tsx:446
+#: src/features/chess/index.tsx:431
 msgid "Open chat panel"
 msgstr "Öppna chattpanel"
 
-#: src/features/chess/index.tsx:454
+#: src/features/chess/index.tsx:439
 msgid "Open game actions"
 msgstr "Öppna spelåtgärder"
 
@@ -1647,7 +1679,7 @@ msgstr "Relativ (5 min, 3 tim, 2 d)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "Relativ inom 24 timmar, annars absolut"
 
-#: src/features/chess/index.tsx:480
+#: src/features/chess/index.tsx:465
 msgid "Rematch"
 msgstr "Revansch"
 
@@ -1723,16 +1755,16 @@ msgstr "Obligatorisk"
 msgid "Resend email"
 msgstr "Skicka e-post igen"
 
-#: src/features/chess/index.tsx:471
-#: src/features/chess/index.tsx:607
+#: src/features/chess/index.tsx:456
+#: src/features/chess/index.tsx:592
 msgid "Resign"
 msgstr "Ge upp"
 
-#: src/features/chess/index.tsx:598
+#: src/features/chess/index.tsx:583
 msgid "Resign game?"
 msgstr "Ge upp partiet?"
 
-#: src/features/chess/index.tsx:604
+#: src/features/chess/index.tsx:589
 msgid "Resigning..."
 msgstr "Ger upp..."
 
@@ -1995,6 +2027,10 @@ msgstr "Källor"
 msgid "Spacious"
 msgstr "Rymlig"
 
+#: src/features/chess/index.tsx:368
+msgid "Stalemate — draw"
+msgstr "Patt — remi"
+
 #: src/features/chess/components/new-game.tsx:99
 msgid "Start a new chess game"
 msgstr "Starta ett nytt schackparti"
@@ -2082,7 +2118,7 @@ msgstr "Det begärda innehållet kunde inte hittas."
 msgid "The server returned a web page instead of data."
 msgstr "Servern returnerade en webbsida i stället för data."
 
-#: src/features/chess/index.tsx:620
+#: src/features/chess/index.tsx:605
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Detta tar bort partiet och dess chatt permanent. Detta går inte att ångra."
 
@@ -2285,7 +2321,7 @@ msgid "Wednesday"
 msgstr "Onsdag"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:437
+#: src/features/chess/index.tsx:422
 msgid "White"
 msgstr "Vit"
 
@@ -2304,6 +2340,10 @@ msgstr "Du"
 msgid "You do not have access to this section."
 msgstr "Du har inte åtkomst till det här avsnittet."
 
+#: src/features/chess/index.tsx:374
+msgid "You resigned — {opponentName} wins"
+msgstr "Du gav upp — {opponentName} vinner"
+
 #: ../../../lib/web/src/components/restore-banner.tsx:100
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Ditt konto flyttades hit från {source}. Tills du tar bort det där kan meddelanden och notiser nå båda servrarna, en del av ditt innehåll fortsätter att levereras från den gamla servern och följare kan behöva några minuter för att hitta dig här."
@@ -2311,6 +2351,10 @@ msgstr "Ditt konto flyttades hit från {source}. Tills du tar bort det där kan 
 #: ../../../lib/web/src/components/comment-composer.tsx:302
 msgid "Your attachments will be lost."
 msgstr "Dina bilagor går förlorade."
+
+#: src/features/chess/index.tsx:385
+msgid "Your move"
+msgstr "Ditt drag"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:300
 msgid "Your text and attachments will be lost."

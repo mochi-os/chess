@@ -103,6 +103,14 @@ msgstr "{name} unikele"
 msgid "{opponentName} offered a draw"
 msgstr "{opponentName} unike idrowu"
 
+#: src/features/chess/index.tsx:373
+msgid "{opponentName} resigned — you win!"
+msgstr "U-{opponentName} unikezele — uphumelele!"
+
+#: src/features/chess/index.tsx:386
+msgid "{opponentName}'s move"
+msgstr "Lithuba lika-{opponentName}"
+
 #: ../../../lib/web/src/components/attachment-composer.tsx:248
 #: ../../../lib/web/src/components/ui/upload-progress.tsx:52
 msgid "{sentLabel} of {totalLabel}"
@@ -306,7 +314,7 @@ msgstr "Uqinisekile ufuna ukucima esi siphawuli? Oku kuya kucima zonke iimpendul
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "Uqinisekile ufuna ukuphuma? Kuya kufuneka ungene kwakhona ukuze ufikelele kwi-akhawunti yakho."
 
-#: src/features/chess/index.tsx:599
+#: src/features/chess/index.tsx:584
 msgid "Are you sure you want to resign? {opponentName} will win the game."
 msgstr "Uqinisekile ukuba ufuna ukunikezela? {opponentName} uza kuphumelela umdlalo."
 
@@ -361,7 +369,7 @@ msgid "bishop"
 msgstr "ibhishophu"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:437
+#: src/features/chess/index.tsx:422
 msgid "Black"
 msgstr "Mnyama"
 
@@ -444,10 +452,18 @@ msgstr "Udidi lwezi zaziso"
 msgid "Change notification category"
 msgstr "Tshintsha udidi lwesaziso"
 
-#: src/features/chess/index.tsx:537
-#: src/features/chess/index.tsx:570
+#: src/features/chess/index.tsx:522
+#: src/features/chess/index.tsx:555
 msgid "Chat"
 msgstr "Incoko"
+
+#: src/features/chess/index.tsx:383
+msgid "Check — {opponentName}'s move"
+msgstr "Isishwa — lithuba lika-{opponentName}"
+
+#: src/features/chess/index.tsx:382
+msgid "Check — your move"
+msgstr "Isishwa — lithuba lakho"
 
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx:137
 msgid "Checkbox"
@@ -457,9 +473,17 @@ msgstr "Ibhokisi yokuhlola"
 msgid "Checklist"
 msgstr "Uluhlu lokuhlola"
 
-#: src/features/chess/index.tsx:106
+#: src/features/chess/index.tsx:366
+msgid "Checkmate — {opponentName} wins"
+msgstr "Isishwa esigqibeleleyo — kuphumelele u-{opponentName}"
+
 #: src/features/chess/index.tsx:365
-#: src/features/chess/index.tsx:377
+msgid "Checkmate — you win!"
+msgstr "Isishwa esigqibeleleyo — uphumelele!"
+
+#: src/features/chess/index.tsx:60
+#: src/features/chess/index.tsx:319
+#: src/features/chess/index.tsx:331
 msgid "Chess"
 msgstr "Itshesi"
 
@@ -727,7 +751,7 @@ msgstr "Ukuhlela koqobo"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:203
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:252
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:314
-#: src/features/chess/index.tsx:628
+#: src/features/chess/index.tsx:613
 msgid "Delete"
 msgstr "Cima"
 
@@ -747,11 +771,11 @@ msgstr "Cima isiphawuli"
 msgid "Delete field"
 msgstr "Cima intsimi"
 
-#: src/features/chess/index.tsx:483
+#: src/features/chess/index.tsx:468
 msgid "Delete game"
 msgstr "Cima umdlalo"
 
-#: src/features/chess/index.tsx:619
+#: src/features/chess/index.tsx:604
 msgid "Delete game?"
 msgstr "Cima umdlalo?"
 
@@ -773,7 +797,7 @@ msgstr "Cima imbono"
 msgid "Delete your account on the old server"
 msgstr "Cima i-akhawunti yakho kwiseva endala"
 
-#: src/features/chess/index.tsx:625
+#: src/features/chess/index.tsx:610
 msgid "Deleting..."
 msgstr "Iyacinywa..."
 
@@ -841,11 +865,15 @@ msgstr "Khuphela"
 msgid "Download failed"
 msgstr "Ukukhuphela akuphumelelanga"
 
+#: src/features/chess/index.tsx:370
+msgid "Draw"
+msgstr "Ukulingana"
+
 #: src/features/chess/components/chat-message-list.tsx:45
 msgid "Draw agreed"
 msgstr "Kuvunyelwene ngokulingana"
 
-#: src/features/chess/index.tsx:496
+#: src/features/chess/index.tsx:481
 msgid "Draw offered — waiting for {opponentName}"
 msgstr "Idrowu inikiwe — kulindwe {opponentName}"
 
@@ -931,7 +959,7 @@ msgstr "I-URL yangaphandle"
 msgid "Extra large"
 msgstr "Inkulu kakhulu"
 
-#: src/features/chess/index.tsx:231
+#: src/features/chess/index.tsx:185
 msgid "Failed to accept draw"
 msgstr "Ayiphumelelanga ukwamkela ukulingana"
 
@@ -949,11 +977,11 @@ msgstr "Ayiphumelelanga ukudala umdlalo"
 msgid "Failed to create link"
 msgstr "Ayiphumelelanga ukudala ikhonkco"
 
-#: src/features/chess/index.tsx:246
+#: src/features/chess/index.tsx:200
 msgid "Failed to create rematch"
 msgstr "Ayiphumelelanga ukudala umdlalo omtsha"
 
-#: src/features/chess/index.tsx:236
+#: src/features/chess/index.tsx:190
 msgid "Failed to decline draw"
 msgstr "Ayiphumelelanga ukwala ukulingana"
 
@@ -965,7 +993,7 @@ msgstr "Ayiphumelelanga ukucima isiqhoboshelo"
 msgid "Failed to delete comment"
 msgstr "Ayiphumelelanga ukucima uluvo"
 
-#: src/features/chess/index.tsx:258
+#: src/features/chess/index.tsx:212
 msgid "Failed to delete game"
 msgstr "Ayiphumelelanga ukucima umdlalo"
 
@@ -993,11 +1021,11 @@ msgstr "Ayikwazanga ukulayisha umfanekiso"
 msgid "Failed to load video"
 msgstr "Ayikwazanga ukulayisha ividiyo"
 
-#: src/features/chess/index.tsx:209
+#: src/features/chess/index.tsx:163
 msgid "Failed to make move"
 msgstr "Ayiphumelelanga ukwenza intshukumo"
 
-#: src/features/chess/index.tsx:226
+#: src/features/chess/index.tsx:180
 msgid "Failed to offer draw"
 msgstr "Ayiphumelelanga ukunika ukulingana"
 
@@ -1005,7 +1033,7 @@ msgstr "Ayiphumelelanga ukunika ukulingana"
 msgid "Failed to post comment"
 msgstr "Ayiphumelelanga ukuposa uluvo"
 
-#: src/features/chess/index.tsx:219
+#: src/features/chess/index.tsx:173
 msgid "Failed to resign"
 msgstr "Ayiphumelelanga ukurhoxa"
 
@@ -1013,8 +1041,8 @@ msgstr "Ayiphumelelanga ukurhoxa"
 msgid "Failed to revoke RSS access"
 msgstr "Ayiphumelelanga ukurhoxisa ufikelelo lwe-RSS"
 
-#: src/features/chess/index.tsx:554
-#: src/features/chess/index.tsx:587
+#: src/features/chess/index.tsx:539
+#: src/features/chess/index.tsx:572
 msgid "Failed to send"
 msgstr "Ayiphumelelanga ukuthumela"
 
@@ -1068,9 +1096,13 @@ msgstr "Kwitimu"
 msgid "Game created"
 msgstr "Umdlalo udaliwe"
 
-#: src/features/chess/index.tsx:254
+#: src/features/chess/index.tsx:208
 msgid "Game deleted"
 msgstr "Umdlalo ucinyiwe"
+
+#: src/features/chess/index.tsx:379
+msgid "Game state unavailable"
+msgstr "Imeko yomdlalo ayifumaneki"
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx:26
 #: ../../../lib/web/src/features/errors/unauthorized-error.tsx:26
@@ -1445,7 +1477,7 @@ msgstr "Izaziso: {0}"
 msgid "Number"
 msgstr "Inani"
 
-#: src/features/chess/index.tsx:467
+#: src/features/chess/index.tsx:452
 msgid "Offer draw"
 msgstr "Bona ngokulinganayo"
 
@@ -1462,11 +1494,11 @@ msgstr "Yhu! Iphepha Alifumanekanga!"
 msgid "Open actions"
 msgstr "Vula izenzo"
 
-#: src/features/chess/index.tsx:446
+#: src/features/chess/index.tsx:431
 msgid "Open chat panel"
 msgstr "Vula iphaneli yencoko"
 
-#: src/features/chess/index.tsx:454
+#: src/features/chess/index.tsx:439
 msgid "Open game actions"
 msgstr "Vula izenzo zomdlalo"
 
@@ -1647,7 +1679,7 @@ msgstr "Khwiniyene (5m, 3h, 2d)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "Khwiniyene kumayure angama-24, kungenjalo kupheleleyo"
 
-#: src/features/chess/index.tsx:480
+#: src/features/chess/index.tsx:465
 msgid "Rematch"
 msgstr "Phinda udlale"
 
@@ -1723,16 +1755,16 @@ msgstr "Iyafuneka"
 msgid "Resend email"
 msgstr "Thumela kwakhona i-imeyile"
 
-#: src/features/chess/index.tsx:471
-#: src/features/chess/index.tsx:607
+#: src/features/chess/index.tsx:456
+#: src/features/chess/index.tsx:592
 msgid "Resign"
 msgstr "Rhoxa"
 
-#: src/features/chess/index.tsx:598
+#: src/features/chess/index.tsx:583
 msgid "Resign game?"
 msgstr "Rhoxa kumdlalo?"
 
-#: src/features/chess/index.tsx:604
+#: src/features/chess/index.tsx:589
 msgid "Resigning..."
 msgstr "Iyarhoxa..."
 
@@ -1995,6 +2027,10 @@ msgstr "Imithombo"
 msgid "Spacious"
 msgstr "Banzi"
 
+#: src/features/chess/index.tsx:368
+msgid "Stalemate — draw"
+msgstr "Ukuxinga — ukulingana"
+
 #: src/features/chess/components/new-game.tsx:99
 msgid "Start a new chess game"
 msgstr "Qalisa umdlalo omtsha we-chess"
@@ -2082,7 +2118,7 @@ msgstr "Umxholo oceliweyo awufumanekanga."
 msgid "The server returned a web page instead of data."
 msgstr "Iseva ibuyise iphepha lewebhu endaweni yedatha."
 
-#: src/features/chess/index.tsx:620
+#: src/features/chess/index.tsx:605
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Oku kuza kucima umdlalo nengxoxo yawo ngokusisigxina. Esi senzo asinakuguqulwa."
 
@@ -2285,7 +2321,7 @@ msgid "Wednesday"
 msgstr "Ulwesithathu"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:437
+#: src/features/chess/index.tsx:422
 msgid "White"
 msgstr "Mhlophe"
 
@@ -2304,6 +2340,10 @@ msgstr "Wena"
 msgid "You do not have access to this section."
 msgstr "Awunalo ufikelelo kweli candelo."
 
+#: src/features/chess/index.tsx:374
+msgid "You resigned — {opponentName} wins"
+msgstr "Unikezele — kuphumelele u-{opponentName}"
+
 #: ../../../lib/web/src/components/restore-banner.tsx:100
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "I-akhawunti yakho ihanjiswe apha ukusuka ku-{source}. Kude ukuze uyicime apho, iimessage nezaziso zingafika kumaseva omabini, inxalenye yemixholo yakho iqhubeka isebenziswa kwiseva endala, kwaye abalandeli bangathatha imizuzu embalwa ukukufumana apha."
@@ -2311,6 +2351,10 @@ msgstr "I-akhawunti yakho ihanjiswe apha ukusuka ku-{source}. Kude ukuze uyicime
 #: ../../../lib/web/src/components/comment-composer.tsx:302
 msgid "Your attachments will be lost."
 msgstr "Iziqhoboshelo zakho ziza kulahleka."
+
+#: src/features/chess/index.tsx:385
+msgid "Your move"
+msgstr "Umqhubo wakho"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:300
 msgid "Your text and attachments will be lost."

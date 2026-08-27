@@ -103,6 +103,14 @@ msgstr "{name} ya ja da"
 msgid "{opponentName} offered a draw"
 msgstr "{opponentName} ya ba da kunnen doki"
 
+#: src/features/chess/index.tsx:373
+msgid "{opponentName} resigned — you win!"
+msgstr "{opponentName} ya mika wuya — ka yi nasara!"
+
+#: src/features/chess/index.tsx:386
+msgid "{opponentName}'s move"
+msgstr "Lokacin {opponentName}"
+
 #: ../../../lib/web/src/components/attachment-composer.tsx:248
 #: ../../../lib/web/src/components/ui/upload-progress.tsx:52
 msgid "{sentLabel} of {totalLabel}"
@@ -306,7 +314,7 @@ msgstr "Ka tabbata kana son goge wannan sharhi? Wannan zai goge duk amsoshi kuma
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "Ka tabbata kana son fita? Za ka buƙaci shiga kuma don shiga asusunka."
 
-#: src/features/chess/index.tsx:599
+#: src/features/chess/index.tsx:584
 msgid "Are you sure you want to resign? {opponentName} will win the game."
 msgstr "Kana da tabbacin kana son mika wuya? {opponentName} zai lashe wasan."
 
@@ -361,7 +369,7 @@ msgid "bishop"
 msgstr "bishop"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:437
+#: src/features/chess/index.tsx:422
 msgid "Black"
 msgstr "Baƙi"
 
@@ -444,10 +452,18 @@ msgstr "Rukuni don waɗannan sanarwoni"
 msgid "Change notification category"
 msgstr "Sauya rukunin sanarwa"
 
-#: src/features/chess/index.tsx:537
-#: src/features/chess/index.tsx:570
+#: src/features/chess/index.tsx:522
+#: src/features/chess/index.tsx:555
 msgid "Chat"
 msgstr "Chat"
+
+#: src/features/chess/index.tsx:383
+msgid "Check — {opponentName}'s move"
+msgstr "Sha — lokacin {opponentName}"
+
+#: src/features/chess/index.tsx:382
+msgid "Check — your move"
+msgstr "Sha — lokacinka ne"
 
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx:137
 msgid "Checkbox"
@@ -457,9 +473,17 @@ msgstr "Checkbox"
 msgid "Checklist"
 msgstr "Checklist"
 
-#: src/features/chess/index.tsx:106
+#: src/features/chess/index.tsx:366
+msgid "Checkmate — {opponentName} wins"
+msgstr "Sha-mat — {opponentName} ya yi nasara"
+
 #: src/features/chess/index.tsx:365
-#: src/features/chess/index.tsx:377
+msgid "Checkmate — you win!"
+msgstr "Sha-mat — ka yi nasara!"
+
+#: src/features/chess/index.tsx:60
+#: src/features/chess/index.tsx:319
+#: src/features/chess/index.tsx:331
 msgid "Chess"
 msgstr "Chess"
 
@@ -727,7 +751,7 @@ msgstr "Default sort"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:203
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:252
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:314
-#: src/features/chess/index.tsx:628
+#: src/features/chess/index.tsx:613
 msgid "Delete"
 msgstr "Goge"
 
@@ -747,11 +771,11 @@ msgstr "Goge sharhi"
 msgid "Delete field"
 msgstr "Goge fili"
 
-#: src/features/chess/index.tsx:483
+#: src/features/chess/index.tsx:468
 msgid "Delete game"
 msgstr "Goge wasa"
 
-#: src/features/chess/index.tsx:619
+#: src/features/chess/index.tsx:604
 msgid "Delete game?"
 msgstr "A goge wasan?"
 
@@ -773,7 +797,7 @@ msgstr "Goge view"
 msgid "Delete your account on the old server"
 msgstr "Goge asusu ka akan tsohon uwar garken"
 
-#: src/features/chess/index.tsx:625
+#: src/features/chess/index.tsx:610
 msgid "Deleting..."
 msgstr "Ana goge..."
 
@@ -841,11 +865,15 @@ msgstr "Sauke"
 msgid "Download failed"
 msgstr "Saukarwa ta gaza"
 
+#: src/features/chess/index.tsx:370
+msgid "Draw"
+msgstr "Kunnen kai"
+
 #: src/features/chess/components/chat-message-list.tsx:45
 msgid "Draw agreed"
 msgstr "An yarda da canjaras"
 
-#: src/features/chess/index.tsx:496
+#: src/features/chess/index.tsx:481
 msgid "Draw offered — waiting for {opponentName}"
 msgstr "An ba da kunnen doki — ana jiran {opponentName}"
 
@@ -931,7 +959,7 @@ msgstr "URL na waje"
 msgid "Extra large"
 msgstr "Babba sosai"
 
-#: src/features/chess/index.tsx:231
+#: src/features/chess/index.tsx:185
 msgid "Failed to accept draw"
 msgstr "An gaza karɓar canjaras"
 
@@ -949,11 +977,11 @@ msgstr "An gaza ƙirƙirar wasa"
 msgid "Failed to create link"
 msgstr "An gaza ƙirƙirar link"
 
-#: src/features/chess/index.tsx:246
+#: src/features/chess/index.tsx:200
 msgid "Failed to create rematch"
 msgstr "An gaza ƙirƙirar rematch"
 
-#: src/features/chess/index.tsx:236
+#: src/features/chess/index.tsx:190
 msgid "Failed to decline draw"
 msgstr "An gaza ƙin canjaras"
 
@@ -965,7 +993,7 @@ msgstr "An gaza share attachment"
 msgid "Failed to delete comment"
 msgstr "An gaza share comment"
 
-#: src/features/chess/index.tsx:258
+#: src/features/chess/index.tsx:212
 msgid "Failed to delete game"
 msgstr "An gaza share wasa"
 
@@ -993,11 +1021,11 @@ msgstr "An kasa loda hoton"
 msgid "Failed to load video"
 msgstr "An kasa loda bidiyon"
 
-#: src/features/chess/index.tsx:209
+#: src/features/chess/index.tsx:163
 msgid "Failed to make move"
 msgstr "An gaza yin motsi"
 
-#: src/features/chess/index.tsx:226
+#: src/features/chess/index.tsx:180
 msgid "Failed to offer draw"
 msgstr "An gaza ba da canjaras"
 
@@ -1005,7 +1033,7 @@ msgstr "An gaza ba da canjaras"
 msgid "Failed to post comment"
 msgstr "An gaza post comment"
 
-#: src/features/chess/index.tsx:219
+#: src/features/chess/index.tsx:173
 msgid "Failed to resign"
 msgstr "An gaza yin murabus"
 
@@ -1013,8 +1041,8 @@ msgstr "An gaza yin murabus"
 msgid "Failed to revoke RSS access"
 msgstr "An kasa soke damar shiga RSS"
 
-#: src/features/chess/index.tsx:554
-#: src/features/chess/index.tsx:587
+#: src/features/chess/index.tsx:539
+#: src/features/chess/index.tsx:572
 msgid "Failed to send"
 msgstr "An gaza aikawa"
 
@@ -1068,9 +1096,13 @@ msgstr "Daga jigo"
 msgid "Game created"
 msgstr "An ƙirƙiri wasa"
 
-#: src/features/chess/index.tsx:254
+#: src/features/chess/index.tsx:208
 msgid "Game deleted"
 msgstr "An share wasa"
+
+#: src/features/chess/index.tsx:379
+msgid "Game state unavailable"
+msgstr "Yanayin wasan babu shi"
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx:26
 #: ../../../lib/web/src/features/errors/unauthorized-error.tsx:26
@@ -1445,7 +1477,7 @@ msgstr "Sanarwa: {0}"
 msgid "Number"
 msgstr "Lamba"
 
-#: src/features/chess/index.tsx:467
+#: src/features/chess/index.tsx:452
 msgid "Offer draw"
 msgstr "Ba da tayin canjaras"
 
@@ -1462,11 +1494,11 @@ msgstr "Kai! Ba a Sami Shafi Ba!"
 msgid "Open actions"
 msgstr "Buɗe ayyuka"
 
-#: src/features/chess/index.tsx:446
+#: src/features/chess/index.tsx:431
 msgid "Open chat panel"
 msgstr "Buɗe panel ɗin chat"
 
-#: src/features/chess/index.tsx:454
+#: src/features/chess/index.tsx:439
 msgid "Open game actions"
 msgstr "Buɗe ayyukan wasa"
 
@@ -1647,7 +1679,7 @@ msgstr "Mai dangantaka (5m, 3h, 2d)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "Relative cikin sa'o'i 24, in ba haka ba absolute"
 
-#: src/features/chess/index.tsx:480
+#: src/features/chess/index.tsx:465
 msgid "Rematch"
 msgstr "Sake wasa"
 
@@ -1723,16 +1755,16 @@ msgstr "Ana buƙata"
 msgid "Resend email"
 msgstr "Sake aika imel"
 
-#: src/features/chess/index.tsx:471
-#: src/features/chess/index.tsx:607
+#: src/features/chess/index.tsx:456
+#: src/features/chess/index.tsx:592
 msgid "Resign"
 msgstr "Yi murabus"
 
-#: src/features/chess/index.tsx:598
+#: src/features/chess/index.tsx:583
 msgid "Resign game?"
 msgstr "A yi murabus daga wasa?"
 
-#: src/features/chess/index.tsx:604
+#: src/features/chess/index.tsx:589
 msgid "Resigning..."
 msgstr "Ana murabus..."
 
@@ -1995,6 +2027,10 @@ msgstr "Tushe"
 msgid "Spacious"
 msgstr "Faffaka"
 
+#: src/features/chess/index.tsx:368
+msgid "Stalemate — draw"
+msgstr "Tsayawa — kunnen kai"
+
 #: src/features/chess/components/new-game.tsx:99
 msgid "Start a new chess game"
 msgstr "Fara sabon wasan chess"
@@ -2082,7 +2118,7 @@ msgstr "Ba a iya samun abun cikin da aka nema ba."
 msgid "The server returned a web page instead of data."
 msgstr "Sabar ya mayar da shafin yanar gizo maimakon bayanai."
 
-#: src/features/chess/index.tsx:620
+#: src/features/chess/index.tsx:605
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Wannan zai goge wasan da hirarsa har abada. Ba za a iya sokewa ba."
 
@@ -2285,7 +2321,7 @@ msgid "Wednesday"
 msgstr "Laraba"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:437
+#: src/features/chess/index.tsx:422
 msgid "White"
 msgstr "Fari"
 
@@ -2304,6 +2340,10 @@ msgstr "Kai"
 msgid "You do not have access to this section."
 msgstr "Ba ka da damar shiga wannan sashe ba."
 
+#: src/features/chess/index.tsx:374
+msgid "You resigned — {opponentName} wins"
+msgstr "Ka mika wuya — {opponentName} ya yi nasara"
+
 #: ../../../lib/web/src/components/restore-banner.tsx:100
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "An ƙauri asusunka zuwa nan daga {source}. Sai ka goge shi a can, saƙonni da sanarwa na iya kai ga uwar garken biyu, wasu abubuwan ka suna ci gaba da samarwa daga tsohon uwar garken, kuma mabiyanka na iya ɗaukar 'yan mintoci don su same ka nan."
@@ -2311,6 +2351,10 @@ msgstr "An ƙauri asusunka zuwa nan daga {source}. Sai ka goge shi a can, saƙon
 #: ../../../lib/web/src/components/comment-composer.tsx:302
 msgid "Your attachments will be lost."
 msgstr "Za a rasa fayilolin da ka makala."
+
+#: src/features/chess/index.tsx:385
+msgid "Your move"
+msgstr "Move ɗinku"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:300
 msgid "Your text and attachments will be lost."

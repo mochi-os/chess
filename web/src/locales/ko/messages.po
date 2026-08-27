@@ -103,6 +103,14 @@ msgstr "{name} 기권함"
 msgid "{opponentName} offered a draw"
 msgstr "{opponentName}이(가) 무승부를 제안했습니다"
 
+#: src/features/chess/index.tsx:373
+msgid "{opponentName} resigned — you win!"
+msgstr "{opponentName}이(가) 기권했습니다 — 당신이 이겼습니다!"
+
+#: src/features/chess/index.tsx:386
+msgid "{opponentName}'s move"
+msgstr "{opponentName}의 차례입니다"
+
 #: ../../../lib/web/src/components/attachment-composer.tsx:248
 #: ../../../lib/web/src/components/ui/upload-progress.tsx:52
 msgid "{sentLabel} of {totalLabel}"
@@ -306,7 +314,7 @@ msgstr "이 댓글을 삭제할까요? 모든 답글도 함께 삭제돼요."
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "로그아웃할까요? 계정에 다시 접근하려면 다시 로그인해야 해요."
 
-#: src/features/chess/index.tsx:599
+#: src/features/chess/index.tsx:584
 msgid "Are you sure you want to resign? {opponentName} will win the game."
 msgstr "정말 기권하시겠습니까? {opponentName}이(가) 게임에서 이깁니다."
 
@@ -361,7 +369,7 @@ msgid "bishop"
 msgstr "비숍"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:437
+#: src/features/chess/index.tsx:422
 msgid "Black"
 msgstr "검정"
 
@@ -444,10 +452,18 @@ msgstr "이 알림들의 카테고리"
 msgid "Change notification category"
 msgstr "알림 카테고리 변경"
 
-#: src/features/chess/index.tsx:537
-#: src/features/chess/index.tsx:570
+#: src/features/chess/index.tsx:522
+#: src/features/chess/index.tsx:555
 msgid "Chat"
 msgstr "채팅"
+
+#: src/features/chess/index.tsx:383
+msgid "Check — {opponentName}'s move"
+msgstr "체크 — {opponentName}의 차례입니다"
+
+#: src/features/chess/index.tsx:382
+msgid "Check — your move"
+msgstr "체크 — 당신의 차례입니다"
 
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx:137
 msgid "Checkbox"
@@ -457,9 +473,17 @@ msgstr "체크박스"
 msgid "Checklist"
 msgstr "체크리스트"
 
-#: src/features/chess/index.tsx:106
+#: src/features/chess/index.tsx:366
+msgid "Checkmate — {opponentName} wins"
+msgstr "체크메이트 — {opponentName} 승리"
+
 #: src/features/chess/index.tsx:365
-#: src/features/chess/index.tsx:377
+msgid "Checkmate — you win!"
+msgstr "체크메이트 — 당신이 이겼습니다!"
+
+#: src/features/chess/index.tsx:60
+#: src/features/chess/index.tsx:319
+#: src/features/chess/index.tsx:331
 msgid "Chess"
 msgstr "체스"
 
@@ -727,7 +751,7 @@ msgstr "기본 정렬"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:203
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:252
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:314
-#: src/features/chess/index.tsx:628
+#: src/features/chess/index.tsx:613
 msgid "Delete"
 msgstr "삭제"
 
@@ -747,11 +771,11 @@ msgstr "댓글 삭제"
 msgid "Delete field"
 msgstr "필드 삭제"
 
-#: src/features/chess/index.tsx:483
+#: src/features/chess/index.tsx:468
 msgid "Delete game"
 msgstr "게임 삭제"
 
-#: src/features/chess/index.tsx:619
+#: src/features/chess/index.tsx:604
 msgid "Delete game?"
 msgstr "게임을 삭제할까요?"
 
@@ -773,7 +797,7 @@ msgstr "뷰 삭제"
 msgid "Delete your account on the old server"
 msgstr "이전 서버에서 계정 삭제"
 
-#: src/features/chess/index.tsx:625
+#: src/features/chess/index.tsx:610
 msgid "Deleting..."
 msgstr "삭제 중..."
 
@@ -841,11 +865,15 @@ msgstr "다운로드"
 msgid "Download failed"
 msgstr "다운로드 실패"
 
+#: src/features/chess/index.tsx:370
+msgid "Draw"
+msgstr "무승부"
+
 #: src/features/chess/components/chat-message-list.tsx:45
 msgid "Draw agreed"
 msgstr "무승부 합의됨"
 
-#: src/features/chess/index.tsx:496
+#: src/features/chess/index.tsx:481
 msgid "Draw offered — waiting for {opponentName}"
 msgstr "무승부 제안됨 — {opponentName}의 응답을 기다리는 중"
 
@@ -931,7 +959,7 @@ msgstr "외부 URL"
 msgid "Extra large"
 msgstr "아주 크게"
 
-#: src/features/chess/index.tsx:231
+#: src/features/chess/index.tsx:185
 msgid "Failed to accept draw"
 msgstr "무승부 수락에 실패했어요"
 
@@ -949,11 +977,11 @@ msgstr "게임 생성에 실패했어요"
 msgid "Failed to create link"
 msgstr "링크 생성에 실패했어요"
 
-#: src/features/chess/index.tsx:246
+#: src/features/chess/index.tsx:200
 msgid "Failed to create rematch"
 msgstr "재대결 생성에 실패했어요"
 
-#: src/features/chess/index.tsx:236
+#: src/features/chess/index.tsx:190
 msgid "Failed to decline draw"
 msgstr "무승부 거절에 실패했어요"
 
@@ -965,7 +993,7 @@ msgstr "첨부 파일 삭제에 실패했어요"
 msgid "Failed to delete comment"
 msgstr "댓글 삭제에 실패했어요"
 
-#: src/features/chess/index.tsx:258
+#: src/features/chess/index.tsx:212
 msgid "Failed to delete game"
 msgstr "게임 삭제에 실패했어요"
 
@@ -993,11 +1021,11 @@ msgstr "이미지를 불러오지 못했어요"
 msgid "Failed to load video"
 msgstr "동영상을 불러오지 못했어요"
 
-#: src/features/chess/index.tsx:209
+#: src/features/chess/index.tsx:163
 msgid "Failed to make move"
 msgstr "수를 두지 못했어요"
 
-#: src/features/chess/index.tsx:226
+#: src/features/chess/index.tsx:180
 msgid "Failed to offer draw"
 msgstr "무승부 제안에 실패했어요"
 
@@ -1005,7 +1033,7 @@ msgstr "무승부 제안에 실패했어요"
 msgid "Failed to post comment"
 msgstr "댓글 게시에 실패했어요"
 
-#: src/features/chess/index.tsx:219
+#: src/features/chess/index.tsx:173
 msgid "Failed to resign"
 msgstr "기권에 실패했어요"
 
@@ -1013,8 +1041,8 @@ msgstr "기권에 실패했어요"
 msgid "Failed to revoke RSS access"
 msgstr "RSS 액세스 취소에 실패했습니다"
 
-#: src/features/chess/index.tsx:554
-#: src/features/chess/index.tsx:587
+#: src/features/chess/index.tsx:539
+#: src/features/chess/index.tsx:572
 msgid "Failed to send"
 msgstr "전송에 실패했어요"
 
@@ -1068,9 +1096,13 @@ msgstr "테마에서"
 msgid "Game created"
 msgstr "게임이 생성되었어요"
 
-#: src/features/chess/index.tsx:254
+#: src/features/chess/index.tsx:208
 msgid "Game deleted"
 msgstr "게임이 삭제되었어요"
+
+#: src/features/chess/index.tsx:379
+msgid "Game state unavailable"
+msgstr "게임 상태를 불러올 수 없습니다"
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx:26
 #: ../../../lib/web/src/features/errors/unauthorized-error.tsx:26
@@ -1445,7 +1477,7 @@ msgstr "알림: {0}"
 msgid "Number"
 msgstr "숫자"
 
-#: src/features/chess/index.tsx:467
+#: src/features/chess/index.tsx:452
 msgid "Offer draw"
 msgstr "무승부 제안"
 
@@ -1462,11 +1494,11 @@ msgstr "이런! 페이지를 찾을 수 없어요!"
 msgid "Open actions"
 msgstr "작업 열기"
 
-#: src/features/chess/index.tsx:446
+#: src/features/chess/index.tsx:431
 msgid "Open chat panel"
 msgstr "채팅 패널 열기"
 
-#: src/features/chess/index.tsx:454
+#: src/features/chess/index.tsx:439
 msgid "Open game actions"
 msgstr "게임 작업 열기"
 
@@ -1647,7 +1679,7 @@ msgstr "상대적 (5분, 3시간, 2일)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "24시간 이내는 상대적, 그 외는 절대적"
 
-#: src/features/chess/index.tsx:480
+#: src/features/chess/index.tsx:465
 msgid "Rematch"
 msgstr "재대결"
 
@@ -1723,16 +1755,16 @@ msgstr "필수"
 msgid "Resend email"
 msgstr "이메일 다시 보내기"
 
-#: src/features/chess/index.tsx:471
-#: src/features/chess/index.tsx:607
+#: src/features/chess/index.tsx:456
+#: src/features/chess/index.tsx:592
 msgid "Resign"
 msgstr "기권"
 
-#: src/features/chess/index.tsx:598
+#: src/features/chess/index.tsx:583
 msgid "Resign game?"
 msgstr "게임을 기권할까요?"
 
-#: src/features/chess/index.tsx:604
+#: src/features/chess/index.tsx:589
 msgid "Resigning..."
 msgstr "기권 중..."
 
@@ -1995,6 +2027,10 @@ msgstr "소스"
 msgid "Spacious"
 msgstr "여유로운"
 
+#: src/features/chess/index.tsx:368
+msgid "Stalemate — draw"
+msgstr "스테일메이트 — 무승부"
+
 #: src/features/chess/components/new-game.tsx:99
 msgid "Start a new chess game"
 msgstr "새 체스 게임 시작"
@@ -2082,7 +2118,7 @@ msgstr "요청한 콘텐츠를 찾을 수 없습니다."
 msgid "The server returned a web page instead of data."
 msgstr "서버가 데이터 대신 웹 페이지를 반환했습니다."
 
-#: src/features/chess/index.tsx:620
+#: src/features/chess/index.tsx:605
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "이 작업은 게임과 채팅을 영구적으로 삭제합니다. 이 작업은 되돌릴 수 없습니다."
 
@@ -2285,7 +2321,7 @@ msgid "Wednesday"
 msgstr "수요일"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:437
+#: src/features/chess/index.tsx:422
 msgid "White"
 msgstr "백"
 
@@ -2304,6 +2340,10 @@ msgstr "본인"
 msgid "You do not have access to this section."
 msgstr "이 섹션에 대한 접근 권한이 없습니다."
 
+#: src/features/chess/index.tsx:374
+msgid "You resigned — {opponentName} wins"
+msgstr "기권했습니다 — {opponentName} 승리"
+
 #: ../../../lib/web/src/components/restore-banner.tsx:100
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "계정이 {source}에서 이곳으로 이전되었습니다. 거기서 삭제할 때까지 메시지와 알림이 두 서버 모두에 전달될 수 있으며, 일부 콘텐츠는 이전 서버에서 계속 제공되고 팔로워가 이곳에서 나를 찾는 데 몇 분이 걸릴 수 있습니다."
@@ -2311,6 +2351,10 @@ msgstr "계정이 {source}에서 이곳으로 이전되었습니다. 거기서 �
 #: ../../../lib/web/src/components/comment-composer.tsx:302
 msgid "Your attachments will be lost."
 msgstr "첨부 파일이 사라집니다."
+
+#: src/features/chess/index.tsx:385
+msgid "Your move"
+msgstr "본인의 차례"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:300
 msgid "Your text and attachments will be lost."

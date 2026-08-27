@@ -103,6 +103,14 @@ msgstr "{name} берілді"
 msgid "{opponentName} offered a draw"
 msgstr "{opponentName} тең ойын ұсынды"
 
+#: src/features/chess/index.tsx:373
+msgid "{opponentName} resigned — you win!"
+msgstr "{opponentName} берілді — сіз жеңдіңіз!"
+
+#: src/features/chess/index.tsx:386
+msgid "{opponentName}'s move"
+msgstr "{opponentName} жүрісі"
+
 #: ../../../lib/web/src/components/attachment-composer.tsx:248
 #: ../../../lib/web/src/components/ui/upload-progress.tsx:52
 msgid "{sentLabel} of {totalLabel}"
@@ -306,7 +314,7 @@ msgstr "Бұл пікірді жойғыңыз келетініне сенімд
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "Шынымен шыққыңыз келе ме? Тіркелгіге қол жеткізу үшін қайта кіруге тура келеді."
 
-#: src/features/chess/index.tsx:599
+#: src/features/chess/index.tsx:584
 msgid "Are you sure you want to resign? {opponentName} will win the game."
 msgstr "Шынымен бас тартқыңыз келе ме? {opponentName} ойынды жеңеді."
 
@@ -361,7 +369,7 @@ msgid "bishop"
 msgstr "піл"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:437
+#: src/features/chess/index.tsx:422
 msgid "Black"
 msgstr "Қара"
 
@@ -444,10 +452,18 @@ msgstr "Осы хабарландырулардың санаты"
 msgid "Change notification category"
 msgstr "Хабарландыру санатын өзгерту"
 
-#: src/features/chess/index.tsx:537
-#: src/features/chess/index.tsx:570
+#: src/features/chess/index.tsx:522
+#: src/features/chess/index.tsx:555
 msgid "Chat"
 msgstr "Чат"
+
+#: src/features/chess/index.tsx:383
+msgid "Check — {opponentName}'s move"
+msgstr "Шах — {opponentName} жүрісі"
+
+#: src/features/chess/index.tsx:382
+msgid "Check — your move"
+msgstr "Шах — сіздің жүрісіңіз"
 
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx:137
 msgid "Checkbox"
@@ -457,9 +473,17 @@ msgstr "Жалаушалар"
 msgid "Checklist"
 msgstr "Тапсырмалар тізімі"
 
-#: src/features/chess/index.tsx:106
+#: src/features/chess/index.tsx:366
+msgid "Checkmate — {opponentName} wins"
+msgstr "Мат — {opponentName} жеңді"
+
 #: src/features/chess/index.tsx:365
-#: src/features/chess/index.tsx:377
+msgid "Checkmate — you win!"
+msgstr "Мат — сіз жеңдіңіз!"
+
+#: src/features/chess/index.tsx:60
+#: src/features/chess/index.tsx:319
+#: src/features/chess/index.tsx:331
 msgid "Chess"
 msgstr "Шахмат"
 
@@ -727,7 +751,7 @@ msgstr "Әдепкі сұрыптау"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:203
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:252
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:314
-#: src/features/chess/index.tsx:628
+#: src/features/chess/index.tsx:613
 msgid "Delete"
 msgstr "Жою"
 
@@ -747,11 +771,11 @@ msgstr "Пікірді жою"
 msgid "Delete field"
 msgstr "Өрісті жою"
 
-#: src/features/chess/index.tsx:483
+#: src/features/chess/index.tsx:468
 msgid "Delete game"
 msgstr "Ойынды жою"
 
-#: src/features/chess/index.tsx:619
+#: src/features/chess/index.tsx:604
 msgid "Delete game?"
 msgstr "Ойын жойылсын ба?"
 
@@ -773,7 +797,7 @@ msgstr "Көріністі жою"
 msgid "Delete your account on the old server"
 msgstr "Ескі серверден тіркелгіңізді жойыңыз"
 
-#: src/features/chess/index.tsx:625
+#: src/features/chess/index.tsx:610
 msgid "Deleting..."
 msgstr "Жойылуда..."
 
@@ -841,11 +865,15 @@ msgstr "Жүктеп алу"
 msgid "Download failed"
 msgstr "Жүктеп алу сәтсіз аяқталды"
 
+#: src/features/chess/index.tsx:370
+msgid "Draw"
+msgstr "Тең ойын"
+
 #: src/features/chess/components/chat-message-list.tsx:45
 msgid "Draw agreed"
 msgstr "Тең ойын келісілді"
 
-#: src/features/chess/index.tsx:496
+#: src/features/chess/index.tsx:481
 msgid "Draw offered — waiting for {opponentName}"
 msgstr "Тең ойын ұсынылды — {opponentName} күтілуде"
 
@@ -931,7 +959,7 @@ msgstr "Сыртқы URL"
 msgid "Extra large"
 msgstr "Өте үлкен"
 
-#: src/features/chess/index.tsx:231
+#: src/features/chess/index.tsx:185
 msgid "Failed to accept draw"
 msgstr "Тең ойынды қабылдау сәтсіз аяқталды"
 
@@ -949,11 +977,11 @@ msgstr "Ойын жасау сәтсіз аяқталды"
 msgid "Failed to create link"
 msgstr "Сілтеме жасау сәтсіз аяқталды"
 
-#: src/features/chess/index.tsx:246
+#: src/features/chess/index.tsx:200
 msgid "Failed to create rematch"
 msgstr "Қайта матчты жасау сәтсіз аяқталды"
 
-#: src/features/chess/index.tsx:236
+#: src/features/chess/index.tsx:190
 msgid "Failed to decline draw"
 msgstr "Тең ойынды қабылдамау сәтсіз аяқталды"
 
@@ -965,7 +993,7 @@ msgstr "Тіркемені жою сәтсіз аяқталды"
 msgid "Failed to delete comment"
 msgstr "Пікірді жою сәтсіз аяқталды"
 
-#: src/features/chess/index.tsx:258
+#: src/features/chess/index.tsx:212
 msgid "Failed to delete game"
 msgstr "Ойынды жою сәтсіз аяқталды"
 
@@ -993,11 +1021,11 @@ msgstr "Суретті жүктеу мүмкін болмады"
 msgid "Failed to load video"
 msgstr "Бейнені жүктеу мүмкін болмады"
 
-#: src/features/chess/index.tsx:209
+#: src/features/chess/index.tsx:163
 msgid "Failed to make move"
 msgstr "Жүрісті жасау сәтсіз аяқталды"
 
-#: src/features/chess/index.tsx:226
+#: src/features/chess/index.tsx:180
 msgid "Failed to offer draw"
 msgstr "Тең ойынды ұсыну сәтсіз аяқталды"
 
@@ -1005,7 +1033,7 @@ msgstr "Тең ойынды ұсыну сәтсіз аяқталды"
 msgid "Failed to post comment"
 msgstr "Пікір қосу сәтсіз аяқталды"
 
-#: src/features/chess/index.tsx:219
+#: src/features/chess/index.tsx:173
 msgid "Failed to resign"
 msgstr "Тапсыру сәтсіз аяқталды"
 
@@ -1013,8 +1041,8 @@ msgstr "Тапсыру сәтсіз аяқталды"
 msgid "Failed to revoke RSS access"
 msgstr "RSS кіру құқығын қайтарып алу сәтсіз аяқталды"
 
-#: src/features/chess/index.tsx:554
-#: src/features/chess/index.tsx:587
+#: src/features/chess/index.tsx:539
+#: src/features/chess/index.tsx:572
 msgid "Failed to send"
 msgstr "Жіберу сәтсіз аяқталды"
 
@@ -1068,9 +1096,13 @@ msgstr "Тақырыптан"
 msgid "Game created"
 msgstr "Ойын жасалды"
 
-#: src/features/chess/index.tsx:254
+#: src/features/chess/index.tsx:208
 msgid "Game deleted"
 msgstr "Ойын жойылды"
+
+#: src/features/chess/index.tsx:379
+msgid "Game state unavailable"
+msgstr "Ойын күйі қолжетімсіз"
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx:26
 #: ../../../lib/web/src/features/errors/unauthorized-error.tsx:26
@@ -1445,7 +1477,7 @@ msgstr "Хабарландырулар: {0}"
 msgid "Number"
 msgstr "Сан"
 
-#: src/features/chess/index.tsx:467
+#: src/features/chess/index.tsx:452
 msgid "Offer draw"
 msgstr "Тең ойынды ұсыну"
 
@@ -1462,11 +1494,11 @@ msgstr "Ой! Бет табылмады!"
 msgid "Open actions"
 msgstr "Әрекеттерді ашу"
 
-#: src/features/chess/index.tsx:446
+#: src/features/chess/index.tsx:431
 msgid "Open chat panel"
 msgstr "Чат тақтасын ашу"
 
-#: src/features/chess/index.tsx:454
+#: src/features/chess/index.tsx:439
 msgid "Open game actions"
 msgstr "Ойын әрекеттерін ашу"
 
@@ -1647,7 +1679,7 @@ msgstr "Қатысты (5м, 3с, 2к)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "24 сағат ішінде салыстырмалы, әйтпесе абсолютті"
 
-#: src/features/chess/index.tsx:480
+#: src/features/chess/index.tsx:465
 msgid "Rematch"
 msgstr "Қайта матч"
 
@@ -1723,16 +1755,16 @@ msgstr "Міндетті"
 msgid "Resend email"
 msgstr "Хатты қайта жіберу"
 
-#: src/features/chess/index.tsx:471
-#: src/features/chess/index.tsx:607
+#: src/features/chess/index.tsx:456
+#: src/features/chess/index.tsx:592
 msgid "Resign"
 msgstr "Бас тарту"
 
-#: src/features/chess/index.tsx:598
+#: src/features/chess/index.tsx:583
 msgid "Resign game?"
 msgstr "Ойыннан бас тарту керек пе?"
 
-#: src/features/chess/index.tsx:604
+#: src/features/chess/index.tsx:589
 msgid "Resigning..."
 msgstr "Бас тарту..."
 
@@ -1995,6 +2027,10 @@ msgstr "Дереккөздер"
 msgid "Spacious"
 msgstr "Кең"
 
+#: src/features/chess/index.tsx:368
+msgid "Stalemate — draw"
+msgstr "Пат — тең ойын"
+
 #: src/features/chess/components/new-game.tsx:99
 msgid "Start a new chess game"
 msgstr "Жаңа шахмат ойынын бастау"
@@ -2082,7 +2118,7 @@ msgstr "Сұралған мазмұн табылмады."
 msgid "The server returned a web page instead of data."
 msgstr "Сервер деректердің орнына веб-бетті қайтарды."
 
-#: src/features/chess/index.tsx:620
+#: src/features/chess/index.tsx:605
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Бұл ойын мен оның чатын біржола жояды. Бұл әрекетті болдырмауға болмайды."
 
@@ -2285,7 +2321,7 @@ msgid "Wednesday"
 msgstr "Сәрсенбі"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:437
+#: src/features/chess/index.tsx:422
 msgid "White"
 msgstr "Ақ"
 
@@ -2304,6 +2340,10 @@ msgstr "Сіз"
 msgid "You do not have access to this section."
 msgstr "Сізде бұл бөлімге кіру мүмкіндігі жоқ."
 
+#: src/features/chess/index.tsx:374
+msgid "You resigned — {opponentName} wins"
+msgstr "Сіз берілдіңіз — {opponentName} жеңді"
+
 #: ../../../lib/web/src/components/restore-banner.tsx:100
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Тіркелгіңіз {source} жерінен осында ауыстырылды. Сіз оны сол жерден жоймайынша, хабарлар мен хабарландырулар екі серверге де жетуі мүмкін, кейбір мазмұныңыз ескі серверден берілуін жалғастырады, ал жазылушылар сізді осында табу үшін бірнеше минут кетуі мүмкін."
@@ -2311,6 +2351,10 @@ msgstr "Тіркелгіңіз {source} жерінен осында ауысты
 #: ../../../lib/web/src/components/comment-composer.tsx:302
 msgid "Your attachments will be lost."
 msgstr "Тіркемелеріңіз жоғалады."
+
+#: src/features/chess/index.tsx:385
+msgid "Your move"
+msgstr "Сіздің жүрісіңіз"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:300
 msgid "Your text and attachments will be lost."

@@ -103,6 +103,14 @@ msgstr "{name} ยอมแพ้"
 msgid "{opponentName} offered a draw"
 msgstr "{opponentName} เสนอเสมอ"
 
+#: src/features/chess/index.tsx:373
+msgid "{opponentName} resigned — you win!"
+msgstr "{opponentName} ยอมแพ้ — คุณชนะ!"
+
+#: src/features/chess/index.tsx:386
+msgid "{opponentName}'s move"
+msgstr "ตาของ {opponentName}"
+
 #: ../../../lib/web/src/components/attachment-composer.tsx:248
 #: ../../../lib/web/src/components/ui/upload-progress.tsx:52
 msgid "{sentLabel} of {totalLabel}"
@@ -306,7 +314,7 @@ msgstr "คุณแน่ใจหรือไม่ว่าต้องกา
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "คุณแน่ใจหรือไม่ว่าต้องการออกจากระบบ? คุณจะต้องเข้าสู่ระบบอีกครั้งเพื่อเข้าถึงบัญชีของคุณ"
 
-#: src/features/chess/index.tsx:599
+#: src/features/chess/index.tsx:584
 msgid "Are you sure you want to resign? {opponentName} will win the game."
 msgstr "คุณแน่ใจหรือไม่ว่าต้องการยอมแพ้? {opponentName} จะชนะเกม"
 
@@ -361,7 +369,7 @@ msgid "bishop"
 msgstr "บิชอป"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:437
+#: src/features/chess/index.tsx:422
 msgid "Black"
 msgstr "ดำ"
 
@@ -444,10 +452,18 @@ msgstr "หมวดหมู่สำหรับการแจ้งเตื
 msgid "Change notification category"
 msgstr "เปลี่ยนหมวดหมู่การแจ้งเตือน"
 
-#: src/features/chess/index.tsx:537
-#: src/features/chess/index.tsx:570
+#: src/features/chess/index.tsx:522
+#: src/features/chess/index.tsx:555
 msgid "Chat"
 msgstr "แชท"
+
+#: src/features/chess/index.tsx:383
+msgid "Check — {opponentName}'s move"
+msgstr "รุก — ตาของ {opponentName}"
+
+#: src/features/chess/index.tsx:382
+msgid "Check — your move"
+msgstr "รุก — ตาของคุณ"
 
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx:137
 msgid "Checkbox"
@@ -457,9 +473,17 @@ msgstr "ช่องทำเครื่องหมาย"
 msgid "Checklist"
 msgstr "เช็คลิสต์"
 
-#: src/features/chess/index.tsx:106
+#: src/features/chess/index.tsx:366
+msgid "Checkmate — {opponentName} wins"
+msgstr "รุกจน — {opponentName} ชนะ"
+
 #: src/features/chess/index.tsx:365
-#: src/features/chess/index.tsx:377
+msgid "Checkmate — you win!"
+msgstr "รุกจน — คุณชนะ!"
+
+#: src/features/chess/index.tsx:60
+#: src/features/chess/index.tsx:319
+#: src/features/chess/index.tsx:331
 msgid "Chess"
 msgstr "หมากรุก"
 
@@ -727,7 +751,7 @@ msgstr "การเรียงลำดับเริ่มต้น"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:203
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:252
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:314
-#: src/features/chess/index.tsx:628
+#: src/features/chess/index.tsx:613
 msgid "Delete"
 msgstr "ลบ"
 
@@ -747,11 +771,11 @@ msgstr "ลบความคิดเห็น"
 msgid "Delete field"
 msgstr "ลบฟิลด์"
 
-#: src/features/chess/index.tsx:483
+#: src/features/chess/index.tsx:468
 msgid "Delete game"
 msgstr "ลบเกม"
 
-#: src/features/chess/index.tsx:619
+#: src/features/chess/index.tsx:604
 msgid "Delete game?"
 msgstr "ลบเกม?"
 
@@ -773,7 +797,7 @@ msgstr "ลบมุมมอง"
 msgid "Delete your account on the old server"
 msgstr "ลบบัญชีของคุณบนเซิร์ฟเวอร์เดิม"
 
-#: src/features/chess/index.tsx:625
+#: src/features/chess/index.tsx:610
 msgid "Deleting..."
 msgstr "กำลังลบ..."
 
@@ -841,11 +865,15 @@ msgstr "ดาวน์โหลด"
 msgid "Download failed"
 msgstr "ดาวน์โหลดไม่สำเร็จ"
 
+#: src/features/chess/index.tsx:370
+msgid "Draw"
+msgstr "เสมอ"
+
 #: src/features/chess/components/chat-message-list.tsx:45
 msgid "Draw agreed"
 msgstr "ตกลงเสมอ"
 
-#: src/features/chess/index.tsx:496
+#: src/features/chess/index.tsx:481
 msgid "Draw offered — waiting for {opponentName}"
 msgstr "เสนอเสมอแล้ว — กำลังรอ {opponentName}"
 
@@ -931,7 +959,7 @@ msgstr "URL ภายนอก"
 msgid "Extra large"
 msgstr "ใหญ่พิเศษ"
 
-#: src/features/chess/index.tsx:231
+#: src/features/chess/index.tsx:185
 msgid "Failed to accept draw"
 msgstr "ไม่สามารถยอมรับการเสมอได้"
 
@@ -949,11 +977,11 @@ msgstr "ไม่สามารถสร้างเกมได้"
 msgid "Failed to create link"
 msgstr "ไม่สามารถสร้างลิงก์ได้"
 
-#: src/features/chess/index.tsx:246
+#: src/features/chess/index.tsx:200
 msgid "Failed to create rematch"
 msgstr "ไม่สามารถสร้างการแข่งใหม่ได้"
 
-#: src/features/chess/index.tsx:236
+#: src/features/chess/index.tsx:190
 msgid "Failed to decline draw"
 msgstr "ไม่สามารถปฏิเสธการเสมอได้"
 
@@ -965,7 +993,7 @@ msgstr "ไม่สามารถลบไฟล์แนบได้"
 msgid "Failed to delete comment"
 msgstr "ไม่สามารถลบความคิดเห็นได้"
 
-#: src/features/chess/index.tsx:258
+#: src/features/chess/index.tsx:212
 msgid "Failed to delete game"
 msgstr "ไม่สามารถลบเกมได้"
 
@@ -993,11 +1021,11 @@ msgstr "โหลดรูปภาพไม่สำเร็จ"
 msgid "Failed to load video"
 msgstr "โหลดวิดีโอไม่สำเร็จ"
 
-#: src/features/chess/index.tsx:209
+#: src/features/chess/index.tsx:163
 msgid "Failed to make move"
 msgstr "ไม่สามารถเดินได้"
 
-#: src/features/chess/index.tsx:226
+#: src/features/chess/index.tsx:180
 msgid "Failed to offer draw"
 msgstr "ไม่สามารถเสนอเสมอได้"
 
@@ -1005,7 +1033,7 @@ msgstr "ไม่สามารถเสนอเสมอได้"
 msgid "Failed to post comment"
 msgstr "ไม่สามารถโพสต์ความคิดเห็นได้"
 
-#: src/features/chess/index.tsx:219
+#: src/features/chess/index.tsx:173
 msgid "Failed to resign"
 msgstr "ไม่สามารถยอมแพ้ได้"
 
@@ -1013,8 +1041,8 @@ msgstr "ไม่สามารถยอมแพ้ได้"
 msgid "Failed to revoke RSS access"
 msgstr "ไม่สามารถเพิกถอนการเข้าถึง RSS ได้"
 
-#: src/features/chess/index.tsx:554
-#: src/features/chess/index.tsx:587
+#: src/features/chess/index.tsx:539
+#: src/features/chess/index.tsx:572
 msgid "Failed to send"
 msgstr "ไม่สามารถส่งได้"
 
@@ -1068,9 +1096,13 @@ msgstr "จากธีม"
 msgid "Game created"
 msgstr "สร้างเกมแล้ว"
 
-#: src/features/chess/index.tsx:254
+#: src/features/chess/index.tsx:208
 msgid "Game deleted"
 msgstr "ลบเกมแล้ว"
+
+#: src/features/chess/index.tsx:379
+msgid "Game state unavailable"
+msgstr "ไม่สามารถดูสถานะเกมได้"
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx:26
 #: ../../../lib/web/src/features/errors/unauthorized-error.tsx:26
@@ -1445,7 +1477,7 @@ msgstr "การแจ้งเตือน: {0}"
 msgid "Number"
 msgstr "ตัวเลข"
 
-#: src/features/chess/index.tsx:467
+#: src/features/chess/index.tsx:452
 msgid "Offer draw"
 msgstr "เสนอเสมอ"
 
@@ -1462,11 +1494,11 @@ msgstr "ขออภัย! ไม่พบหน้านี้!"
 msgid "Open actions"
 msgstr "เปิดการดำเนินการ"
 
-#: src/features/chess/index.tsx:446
+#: src/features/chess/index.tsx:431
 msgid "Open chat panel"
 msgstr "เปิดแผงแชต"
 
-#: src/features/chess/index.tsx:454
+#: src/features/chess/index.tsx:439
 msgid "Open game actions"
 msgstr "เปิดการดำเนินการของเกม"
 
@@ -1647,7 +1679,7 @@ msgstr "แบบสัมพัทธ์ (5m, 3h, 2d)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "สัมพัทธ์ภายใน 24 ชั่วโมง นอกนั้นแบบสัมบูรณ์"
 
-#: src/features/chess/index.tsx:480
+#: src/features/chess/index.tsx:465
 msgid "Rematch"
 msgstr "แข่งใหม่"
 
@@ -1723,16 +1755,16 @@ msgstr "จำเป็น"
 msgid "Resend email"
 msgstr "ส่งอีเมลอีกครั้ง"
 
-#: src/features/chess/index.tsx:471
-#: src/features/chess/index.tsx:607
+#: src/features/chess/index.tsx:456
+#: src/features/chess/index.tsx:592
 msgid "Resign"
 msgstr "ยอมแพ้"
 
-#: src/features/chess/index.tsx:598
+#: src/features/chess/index.tsx:583
 msgid "Resign game?"
 msgstr "ยอมแพ้เกม?"
 
-#: src/features/chess/index.tsx:604
+#: src/features/chess/index.tsx:589
 msgid "Resigning..."
 msgstr "กำลังยอมแพ้..."
 
@@ -1995,6 +2027,10 @@ msgstr "แหล่งที่มา"
 msgid "Spacious"
 msgstr "กว้างขวาง"
 
+#: src/features/chess/index.tsx:368
+msgid "Stalemate — draw"
+msgstr "อับ — เสมอ"
+
 #: src/features/chess/components/new-game.tsx:99
 msgid "Start a new chess game"
 msgstr "เริ่มเกมหมากรุกใหม่"
@@ -2082,7 +2118,7 @@ msgstr "ไม่พบเนื้อหาที่ร้องขอ"
 msgid "The server returned a web page instead of data."
 msgstr "เซิร์ฟเวอร์ส่งคืนหน้าเว็บแทนข้อมูล"
 
-#: src/features/chess/index.tsx:620
+#: src/features/chess/index.tsx:605
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "การดำเนินการนี้จะลบเกมและแชทของเกมอย่างถาวร ไม่สามารถยกเลิกการดำเนินการนี้ได้"
 
@@ -2285,7 +2321,7 @@ msgid "Wednesday"
 msgstr "วันพุธ"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:437
+#: src/features/chess/index.tsx:422
 msgid "White"
 msgstr "ขาว"
 
@@ -2304,6 +2340,10 @@ msgstr "คุณ"
 msgid "You do not have access to this section."
 msgstr "คุณไม่มีสิทธิ์เข้าถึงส่วนนี้"
 
+#: src/features/chess/index.tsx:374
+msgid "You resigned — {opponentName} wins"
+msgstr "คุณยอมแพ้ — {opponentName} ชนะ"
+
 #: ../../../lib/web/src/components/restore-banner.tsx:100
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "บัญชีของคุณถูกย้ายมาที่นี่จาก {source} จนกว่าคุณจะลบออกที่นั่น ข้อความและการแจ้งเตือนอาจไปถึงทั้งสองเซิร์ฟเวอร์ เนื้อหาบางส่วนของคุณยังคงให้บริการจากเซิร์ฟเวอร์เดิม และผู้ติดตามอาจต้องใช้เวลาสักครู่เพื่อพบคุณที่นี่"
@@ -2311,6 +2351,10 @@ msgstr "บัญชีของคุณถูกย้ายมาที่น
 #: ../../../lib/web/src/components/comment-composer.tsx:302
 msgid "Your attachments will be lost."
 msgstr "ไฟล์แนบของคุณจะหายไป"
+
+#: src/features/chess/index.tsx:385
+msgid "Your move"
+msgstr "ตาของคุณ"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:300
 msgid "Your text and attachments will be lost."

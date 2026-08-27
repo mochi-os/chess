@@ -103,6 +103,14 @@ msgstr "{name} đã xin thua"
 msgid "{opponentName} offered a draw"
 msgstr "{opponentName} đã đề nghị hòa"
 
+#: src/features/chess/index.tsx:373
+msgid "{opponentName} resigned — you win!"
+msgstr "{opponentName} đã xin thua — bạn thắng!"
+
+#: src/features/chess/index.tsx:386
+msgid "{opponentName}'s move"
+msgstr "Đến lượt {opponentName}"
+
 #: ../../../lib/web/src/components/attachment-composer.tsx:248
 #: ../../../lib/web/src/components/ui/upload-progress.tsx:52
 msgid "{sentLabel} of {totalLabel}"
@@ -306,7 +314,7 @@ msgstr "Bạn có chắc muốn xóa bình luận này? Tất cả phản hồi 
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "Bạn có chắc muốn đăng xuất? Bạn sẽ cần đăng nhập lại để truy cập tài khoản."
 
-#: src/features/chess/index.tsx:599
+#: src/features/chess/index.tsx:584
 msgid "Are you sure you want to resign? {opponentName} will win the game."
 msgstr "Bạn có chắc muốn xin thua không? {opponentName} sẽ thắng ván cờ."
 
@@ -361,7 +369,7 @@ msgid "bishop"
 msgstr "tượng"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:437
+#: src/features/chess/index.tsx:422
 msgid "Black"
 msgstr "Đen"
 
@@ -444,10 +452,18 @@ msgstr "Danh mục cho các thông báo này"
 msgid "Change notification category"
 msgstr "Đổi danh mục thông báo"
 
-#: src/features/chess/index.tsx:537
-#: src/features/chess/index.tsx:570
+#: src/features/chess/index.tsx:522
+#: src/features/chess/index.tsx:555
 msgid "Chat"
 msgstr "Trò chuyện"
+
+#: src/features/chess/index.tsx:383
+msgid "Check — {opponentName}'s move"
+msgstr "Chiếu — đến lượt {opponentName}"
+
+#: src/features/chess/index.tsx:382
+msgid "Check — your move"
+msgstr "Chiếu — đến lượt bạn"
 
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx:137
 msgid "Checkbox"
@@ -457,9 +473,17 @@ msgstr "Hộp kiểm"
 msgid "Checklist"
 msgstr "Danh sách kiểm tra"
 
-#: src/features/chess/index.tsx:106
+#: src/features/chess/index.tsx:366
+msgid "Checkmate — {opponentName} wins"
+msgstr "Chiếu hết — {opponentName} thắng"
+
 #: src/features/chess/index.tsx:365
-#: src/features/chess/index.tsx:377
+msgid "Checkmate — you win!"
+msgstr "Chiếu hết — bạn thắng!"
+
+#: src/features/chess/index.tsx:60
+#: src/features/chess/index.tsx:319
+#: src/features/chess/index.tsx:331
 msgid "Chess"
 msgstr "Cờ vua"
 
@@ -727,7 +751,7 @@ msgstr "Sắp xếp mặc định"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:203
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:252
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:314
-#: src/features/chess/index.tsx:628
+#: src/features/chess/index.tsx:613
 msgid "Delete"
 msgstr "Xóa"
 
@@ -747,11 +771,11 @@ msgstr "Xóa bình luận"
 msgid "Delete field"
 msgstr "Xóa trường"
 
-#: src/features/chess/index.tsx:483
+#: src/features/chess/index.tsx:468
 msgid "Delete game"
 msgstr "Xóa ván"
 
-#: src/features/chess/index.tsx:619
+#: src/features/chess/index.tsx:604
 msgid "Delete game?"
 msgstr "Xóa trận đấu?"
 
@@ -773,7 +797,7 @@ msgstr "Xóa chế độ xem"
 msgid "Delete your account on the old server"
 msgstr "Xóa tài khoản của bạn trên máy chủ cũ"
 
-#: src/features/chess/index.tsx:625
+#: src/features/chess/index.tsx:610
 msgid "Deleting..."
 msgstr "Đang xóa..."
 
@@ -841,11 +865,15 @@ msgstr "Tải xuống"
 msgid "Download failed"
 msgstr "Tải xuống thất bại"
 
+#: src/features/chess/index.tsx:370
+msgid "Draw"
+msgstr "Hòa"
+
 #: src/features/chess/components/chat-message-list.tsx:45
 msgid "Draw agreed"
 msgstr "Đã đồng ý hòa"
 
-#: src/features/chess/index.tsx:496
+#: src/features/chess/index.tsx:481
 msgid "Draw offered — waiting for {opponentName}"
 msgstr "Đã đề nghị hòa — đang chờ {opponentName}"
 
@@ -931,7 +959,7 @@ msgstr "URL bên ngoài"
 msgid "Extra large"
 msgstr "Rất lớn"
 
-#: src/features/chess/index.tsx:231
+#: src/features/chess/index.tsx:185
 msgid "Failed to accept draw"
 msgstr "Không chấp nhận hoà được"
 
@@ -949,11 +977,11 @@ msgstr "Không tạo trò chơi được"
 msgid "Failed to create link"
 msgstr "Không tạo liên kết được"
 
-#: src/features/chess/index.tsx:246
+#: src/features/chess/index.tsx:200
 msgid "Failed to create rematch"
 msgstr "Không tạo trận tái đấu được"
 
-#: src/features/chess/index.tsx:236
+#: src/features/chess/index.tsx:190
 msgid "Failed to decline draw"
 msgstr "Không từ chối hoà được"
 
@@ -965,7 +993,7 @@ msgstr "Không xoá tệp đính kèm được"
 msgid "Failed to delete comment"
 msgstr "Không xoá bình luận được"
 
-#: src/features/chess/index.tsx:258
+#: src/features/chess/index.tsx:212
 msgid "Failed to delete game"
 msgstr "Không xoá trò chơi được"
 
@@ -993,11 +1021,11 @@ msgstr "Không tải được hình ảnh"
 msgid "Failed to load video"
 msgstr "Không tải được video"
 
-#: src/features/chess/index.tsx:209
+#: src/features/chess/index.tsx:163
 msgid "Failed to make move"
 msgstr "Không thực hiện nước đi được"
 
-#: src/features/chess/index.tsx:226
+#: src/features/chess/index.tsx:180
 msgid "Failed to offer draw"
 msgstr "Không đề nghị hoà được"
 
@@ -1005,7 +1033,7 @@ msgstr "Không đề nghị hoà được"
 msgid "Failed to post comment"
 msgstr "Không đăng bình luận được"
 
-#: src/features/chess/index.tsx:219
+#: src/features/chess/index.tsx:173
 msgid "Failed to resign"
 msgstr "Không xin thua được"
 
@@ -1013,8 +1041,8 @@ msgstr "Không xin thua được"
 msgid "Failed to revoke RSS access"
 msgstr "Không thể thu hồi quyền truy cập RSS"
 
-#: src/features/chess/index.tsx:554
-#: src/features/chess/index.tsx:587
+#: src/features/chess/index.tsx:539
+#: src/features/chess/index.tsx:572
 msgid "Failed to send"
 msgstr "Không gửi được"
 
@@ -1068,9 +1096,13 @@ msgstr "Từ giao diện"
 msgid "Game created"
 msgstr "Đã tạo trò chơi"
 
-#: src/features/chess/index.tsx:254
+#: src/features/chess/index.tsx:208
 msgid "Game deleted"
 msgstr "Đã xoá trò chơi"
+
+#: src/features/chess/index.tsx:379
+msgid "Game state unavailable"
+msgstr "Không lấy được trạng thái ván cờ"
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx:26
 #: ../../../lib/web/src/features/errors/unauthorized-error.tsx:26
@@ -1445,7 +1477,7 @@ msgstr "Thông báo: {0}"
 msgid "Number"
 msgstr "Số"
 
-#: src/features/chess/index.tsx:467
+#: src/features/chess/index.tsx:452
 msgid "Offer draw"
 msgstr "Đề nghị hoà"
 
@@ -1462,11 +1494,11 @@ msgstr "Rất tiếc! Không tìm thấy trang!"
 msgid "Open actions"
 msgstr "Mở thao tác"
 
-#: src/features/chess/index.tsx:446
+#: src/features/chess/index.tsx:431
 msgid "Open chat panel"
 msgstr "Mở bảng trò chuyện"
 
-#: src/features/chess/index.tsx:454
+#: src/features/chess/index.tsx:439
 msgid "Open game actions"
 msgstr "Mở thao tác trò chơi"
 
@@ -1647,7 +1679,7 @@ msgstr "Tương đối (5m, 3h, 2d)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "Tương đối trong vòng 24 giờ, ngoài ra dùng tuyệt đối"
 
-#: src/features/chess/index.tsx:480
+#: src/features/chess/index.tsx:465
 msgid "Rematch"
 msgstr "Đấu lại"
 
@@ -1723,16 +1755,16 @@ msgstr "Bắt buộc"
 msgid "Resend email"
 msgstr "Gửi lại email"
 
-#: src/features/chess/index.tsx:471
-#: src/features/chess/index.tsx:607
+#: src/features/chess/index.tsx:456
+#: src/features/chess/index.tsx:592
 msgid "Resign"
 msgstr "Đầu hàng"
 
-#: src/features/chess/index.tsx:598
+#: src/features/chess/index.tsx:583
 msgid "Resign game?"
 msgstr "Đầu hàng trận đấu?"
 
-#: src/features/chess/index.tsx:604
+#: src/features/chess/index.tsx:589
 msgid "Resigning..."
 msgstr "Đang đầu hàng..."
 
@@ -1995,6 +2027,10 @@ msgstr "Nguồn"
 msgid "Spacious"
 msgstr "Rộng rãi"
 
+#: src/features/chess/index.tsx:368
+msgid "Stalemate — draw"
+msgstr "Hết nước đi — hòa"
+
 #: src/features/chess/components/new-game.tsx:99
 msgid "Start a new chess game"
 msgstr "Bắt đầu một ván cờ vua mới"
@@ -2082,7 +2118,7 @@ msgstr "Không tìm thấy nội dung được yêu cầu."
 msgid "The server returned a web page instead of data."
 msgstr "Máy chủ đã trả về một trang web thay vì dữ liệu."
 
-#: src/features/chess/index.tsx:620
+#: src/features/chess/index.tsx:605
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Thao tác này sẽ xóa vĩnh viễn trận đấu và cuộc trò chuyện của nó. Không thể hoàn tác thao tác này."
 
@@ -2285,7 +2321,7 @@ msgid "Wednesday"
 msgstr "Thứ tư"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:437
+#: src/features/chess/index.tsx:422
 msgid "White"
 msgstr "Trắng"
 
@@ -2304,6 +2340,10 @@ msgstr "Bạn"
 msgid "You do not have access to this section."
 msgstr "Bạn không có quyền truy cập vào phần này."
 
+#: src/features/chess/index.tsx:374
+msgid "You resigned — {opponentName} wins"
+msgstr "Bạn đã xin thua — {opponentName} thắng"
+
 #: ../../../lib/web/src/components/restore-banner.tsx:100
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Tài khoản của bạn đã được chuyển đến đây từ {source}. Cho đến khi bạn xóa nó ở đó, tin nhắn và thông báo có thể đến cả hai máy chủ, một số nội dung của bạn vẫn được phục vụ từ máy chủ cũ và người theo dõi có thể mất vài phút để tìm thấy bạn ở đây."
@@ -2311,6 +2351,10 @@ msgstr "Tài khoản của bạn đã được chuyển đến đây từ {sourc
 #: ../../../lib/web/src/components/comment-composer.tsx:302
 msgid "Your attachments will be lost."
 msgstr "Tệp đính kèm của bạn sẽ bị mất."
+
+#: src/features/chess/index.tsx:385
+msgid "Your move"
+msgstr "Lượt của bạn"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:300
 msgid "Your text and attachments will be lost."

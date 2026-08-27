@@ -103,6 +103,14 @@ msgstr "{name} dorëzoi"
 msgid "{opponentName} offered a draw"
 msgstr "{opponentName} ofroi një barazim"
 
+#: src/features/chess/index.tsx:373
+msgid "{opponentName} resigned — you win!"
+msgstr "{opponentName} u dorëzua — fitove!"
+
+#: src/features/chess/index.tsx:386
+msgid "{opponentName}'s move"
+msgstr "Radha e {opponentName}"
+
 #: ../../../lib/web/src/components/attachment-composer.tsx:248
 #: ../../../lib/web/src/components/ui/upload-progress.tsx:52
 msgid "{sentLabel} of {totalLabel}"
@@ -306,7 +314,7 @@ msgstr "Je i sigurt që do të fshish këtë koment? Kjo do të fshijë gjithash
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "Je i sigurt që do të dalësh? Do të të duhet të rihysh për të hyrë në llogarinë tënde."
 
-#: src/features/chess/index.tsx:599
+#: src/features/chess/index.tsx:584
 msgid "Are you sure you want to resign? {opponentName} will win the game."
 msgstr "Je i sigurt që do të dorëzohesh? {opponentName} do të fitojë lojën."
 
@@ -361,7 +369,7 @@ msgid "bishop"
 msgstr "fil"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:437
+#: src/features/chess/index.tsx:422
 msgid "Black"
 msgstr "I zi"
 
@@ -444,10 +452,18 @@ msgstr "Kategoria për këto njoftime"
 msgid "Change notification category"
 msgstr "Ndrysho kategorinë e njoftimit"
 
-#: src/features/chess/index.tsx:537
-#: src/features/chess/index.tsx:570
+#: src/features/chess/index.tsx:522
+#: src/features/chess/index.tsx:555
 msgid "Chat"
 msgstr "Bisedë"
+
+#: src/features/chess/index.tsx:383
+msgid "Check — {opponentName}'s move"
+msgstr "Shah — radha e {opponentName}"
+
+#: src/features/chess/index.tsx:382
+msgid "Check — your move"
+msgstr "Shah — radha jote"
 
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx:137
 msgid "Checkbox"
@@ -457,9 +473,17 @@ msgstr "Kuti zgjedhjeje"
 msgid "Checklist"
 msgstr "Listë kontrolli"
 
-#: src/features/chess/index.tsx:106
+#: src/features/chess/index.tsx:366
+msgid "Checkmate — {opponentName} wins"
+msgstr "Mat — fiton {opponentName}"
+
 #: src/features/chess/index.tsx:365
-#: src/features/chess/index.tsx:377
+msgid "Checkmate — you win!"
+msgstr "Mat — fitove!"
+
+#: src/features/chess/index.tsx:60
+#: src/features/chess/index.tsx:319
+#: src/features/chess/index.tsx:331
 msgid "Chess"
 msgstr "Chess"
 
@@ -727,7 +751,7 @@ msgstr "Renditja e parazgjedhur"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:203
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:252
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:314
-#: src/features/chess/index.tsx:628
+#: src/features/chess/index.tsx:613
 msgid "Delete"
 msgstr "Fshi"
 
@@ -747,11 +771,11 @@ msgstr "Fshi komentin"
 msgid "Delete field"
 msgstr "Fshi fushën"
 
-#: src/features/chess/index.tsx:483
+#: src/features/chess/index.tsx:468
 msgid "Delete game"
 msgstr "Fshi lojën"
 
-#: src/features/chess/index.tsx:619
+#: src/features/chess/index.tsx:604
 msgid "Delete game?"
 msgstr "Të fshihet loja?"
 
@@ -773,7 +797,7 @@ msgstr "Fshi pamjen"
 msgid "Delete your account on the old server"
 msgstr "Fshini llogarinë tuaj në serverin e vjetër"
 
-#: src/features/chess/index.tsx:625
+#: src/features/chess/index.tsx:610
 msgid "Deleting..."
 msgstr "Po fshin..."
 
@@ -841,11 +865,15 @@ msgstr "Shkarko"
 msgid "Download failed"
 msgstr "Shkarkimi dështoi"
 
+#: src/features/chess/index.tsx:370
+msgid "Draw"
+msgstr "Barazim"
+
 #: src/features/chess/components/chat-message-list.tsx:45
 msgid "Draw agreed"
 msgstr "Barazimi u pranua"
 
-#: src/features/chess/index.tsx:496
+#: src/features/chess/index.tsx:481
 msgid "Draw offered — waiting for {opponentName}"
 msgstr "U ofrua barazim — duke pritur për {opponentName}"
 
@@ -931,7 +959,7 @@ msgstr "URL e jashtme"
 msgid "Extra large"
 msgstr "Shumë i madh"
 
-#: src/features/chess/index.tsx:231
+#: src/features/chess/index.tsx:185
 msgid "Failed to accept draw"
 msgstr "Pranimi i barazimit dështoi"
 
@@ -949,11 +977,11 @@ msgstr "Krijimi i lojës dështoi"
 msgid "Failed to create link"
 msgstr "Krijimi i lidhjes dështoi"
 
-#: src/features/chess/index.tsx:246
+#: src/features/chess/index.tsx:200
 msgid "Failed to create rematch"
 msgstr "Krijimi i ndeshjes së re dështoi"
 
-#: src/features/chess/index.tsx:236
+#: src/features/chess/index.tsx:190
 msgid "Failed to decline draw"
 msgstr "Refuzimi i barazimit dështoi"
 
@@ -965,7 +993,7 @@ msgstr "Fshirja e bashkëngjitjes dështoi"
 msgid "Failed to delete comment"
 msgstr "Fshirja e komentit dështoi"
 
-#: src/features/chess/index.tsx:258
+#: src/features/chess/index.tsx:212
 msgid "Failed to delete game"
 msgstr "Fshirja e lojës dështoi"
 
@@ -993,11 +1021,11 @@ msgstr "Ngarkimi i figurës dështoi"
 msgid "Failed to load video"
 msgstr "Ngarkimi i videos dështoi"
 
-#: src/features/chess/index.tsx:209
+#: src/features/chess/index.tsx:163
 msgid "Failed to make move"
 msgstr "Lëvizja dështoi"
 
-#: src/features/chess/index.tsx:226
+#: src/features/chess/index.tsx:180
 msgid "Failed to offer draw"
 msgstr "Ofrimi i barazimit dështoi"
 
@@ -1005,7 +1033,7 @@ msgstr "Ofrimi i barazimit dështoi"
 msgid "Failed to post comment"
 msgstr "Postimi i komentit dështoi"
 
-#: src/features/chess/index.tsx:219
+#: src/features/chess/index.tsx:173
 msgid "Failed to resign"
 msgstr "Dorëzimi dështoi"
 
@@ -1013,8 +1041,8 @@ msgstr "Dorëzimi dështoi"
 msgid "Failed to revoke RSS access"
 msgstr "Anulimi i aksesit RSS dështoi"
 
-#: src/features/chess/index.tsx:554
-#: src/features/chess/index.tsx:587
+#: src/features/chess/index.tsx:539
+#: src/features/chess/index.tsx:572
 msgid "Failed to send"
 msgstr "Dërgimi dështoi"
 
@@ -1068,9 +1096,13 @@ msgstr "Nga tema"
 msgid "Game created"
 msgstr "Loja u krijua"
 
-#: src/features/chess/index.tsx:254
+#: src/features/chess/index.tsx:208
 msgid "Game deleted"
 msgstr "Loja u fshi"
+
+#: src/features/chess/index.tsx:379
+msgid "Game state unavailable"
+msgstr "Gjendja e lojës nuk është e disponueshme"
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx:26
 #: ../../../lib/web/src/features/errors/unauthorized-error.tsx:26
@@ -1445,7 +1477,7 @@ msgstr "Njoftimet: {0}"
 msgid "Number"
 msgstr "Numri"
 
-#: src/features/chess/index.tsx:467
+#: src/features/chess/index.tsx:452
 msgid "Offer draw"
 msgstr "Ofro barazim"
 
@@ -1462,11 +1494,11 @@ msgstr "Ups! Faqja s'u gjet!"
 msgid "Open actions"
 msgstr "Hap veprimet"
 
-#: src/features/chess/index.tsx:446
+#: src/features/chess/index.tsx:431
 msgid "Open chat panel"
 msgstr "Hap panelin e bisedës"
 
-#: src/features/chess/index.tsx:454
+#: src/features/chess/index.tsx:439
 msgid "Open game actions"
 msgstr "Hap veprimet e lojës"
 
@@ -1647,7 +1679,7 @@ msgstr "Relativ (5m, 3h, 2d)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "Relative brenda 24 orëve, përndryshe absolute"
 
-#: src/features/chess/index.tsx:480
+#: src/features/chess/index.tsx:465
 msgid "Rematch"
 msgstr "Përsërit ndeshjen"
 
@@ -1723,16 +1755,16 @@ msgstr "I detyrueshëm"
 msgid "Resend email"
 msgstr "Ridërgo email-in"
 
-#: src/features/chess/index.tsx:471
-#: src/features/chess/index.tsx:607
+#: src/features/chess/index.tsx:456
+#: src/features/chess/index.tsx:592
 msgid "Resign"
 msgstr "Dorëzohu"
 
-#: src/features/chess/index.tsx:598
+#: src/features/chess/index.tsx:583
 msgid "Resign game?"
 msgstr "Të dorëzohesh nga loja?"
 
-#: src/features/chess/index.tsx:604
+#: src/features/chess/index.tsx:589
 msgid "Resigning..."
 msgstr "Duke u dorëzuar..."
 
@@ -1995,6 +2027,10 @@ msgstr "Burimet"
 msgid "Spacious"
 msgstr "I hapësirshëm"
 
+#: src/features/chess/index.tsx:368
+msgid "Stalemate — draw"
+msgstr "Pat — barazim"
+
 #: src/features/chess/components/new-game.tsx:99
 msgid "Start a new chess game"
 msgstr "Fillo një lojë të re shahu"
@@ -2082,7 +2118,7 @@ msgstr "Përmbajtja e kërkuar nuk u gjet."
 msgid "The server returned a web page instead of data."
 msgstr "Serveri ktheu një faqe interneti në vend të të dhënave."
 
-#: src/features/chess/index.tsx:620
+#: src/features/chess/index.tsx:605
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Kjo do të fshijë përgjithmonë lojën dhe bisedën e saj. Ky veprim nuk mund të zhbëhet."
 
@@ -2285,7 +2321,7 @@ msgid "Wednesday"
 msgstr "E mërkurë"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:437
+#: src/features/chess/index.tsx:422
 msgid "White"
 msgstr "I bardhë"
 
@@ -2304,6 +2340,10 @@ msgstr "Ti"
 msgid "You do not have access to this section."
 msgstr "Nuk keni qasje në këtë seksion."
 
+#: src/features/chess/index.tsx:374
+msgid "You resigned — {opponentName} wins"
+msgstr "Dorëzove — fiton {opponentName}"
+
 #: ../../../lib/web/src/components/restore-banner.tsx:100
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Llogaria juaj u zhvendos këtu nga {source}. Derisa ta fshini atje, mesazhet dhe njoftimet mund të arrijnë në të dy serverët, një pjesë e përmbajtjes suaj vazhdon të shërbejë nga serveri i vjetër dhe ndjekësit mund të kenë nevojë për disa minuta që t'ju gjejnë këtu."
@@ -2311,6 +2351,10 @@ msgstr "Llogaria juaj u zhvendos këtu nga {source}. Derisa ta fshini atje, mesa
 #: ../../../lib/web/src/components/comment-composer.tsx:302
 msgid "Your attachments will be lost."
 msgstr "Bashkëngjitjet tuaja do të humbasin."
+
+#: src/features/chess/index.tsx:385
+msgid "Your move"
+msgstr "Lëvizja jote"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:300
 msgid "Your text and attachments will be lost."

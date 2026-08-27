@@ -103,6 +103,14 @@ msgstr "{name} taslim bo‘ldi"
 msgid "{opponentName} offered a draw"
 msgstr "{opponentName} durang taklif qildi"
 
+#: src/features/chess/index.tsx:373
+msgid "{opponentName} resigned — you win!"
+msgstr "{opponentName} taslim bo'ldi — siz yutdingiz!"
+
+#: src/features/chess/index.tsx:386
+msgid "{opponentName}'s move"
+msgstr "{opponentName} yurishi"
+
 #: ../../../lib/web/src/components/attachment-composer.tsx:248
 #: ../../../lib/web/src/components/ui/upload-progress.tsx:52
 msgid "{sentLabel} of {totalLabel}"
@@ -306,7 +314,7 @@ msgstr "Bu izohni oʻchirmoqchimisiz? Bu barcha javoblarni ham oʻchiradi."
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "Chiqishga ishonchingiz komilmi? Hisobingizga kirish uchun yana kirishingiz kerak boʻladi."
 
-#: src/features/chess/index.tsx:599
+#: src/features/chess/index.tsx:584
 msgid "Are you sure you want to resign? {opponentName} will win the game."
 msgstr "Taslim boʻlishga ishonchingiz komilmi? {opponentName} oʻyinda gʻalaba qozonadi."
 
@@ -361,7 +369,7 @@ msgid "bishop"
 msgstr "fil (slon)"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:437
+#: src/features/chess/index.tsx:422
 msgid "Black"
 msgstr "Qora"
 
@@ -444,10 +452,18 @@ msgstr "Bu bildirishnomalar uchun toifa"
 msgid "Change notification category"
 msgstr "Bildirishnoma toifasini oʻzgartirish"
 
-#: src/features/chess/index.tsx:537
-#: src/features/chess/index.tsx:570
+#: src/features/chess/index.tsx:522
+#: src/features/chess/index.tsx:555
 msgid "Chat"
 msgstr "Suhbat"
+
+#: src/features/chess/index.tsx:383
+msgid "Check — {opponentName}'s move"
+msgstr "Shoh — {opponentName} yurishi"
+
+#: src/features/chess/index.tsx:382
+msgid "Check — your move"
+msgstr "Shoh — sizning yurishingiz"
 
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx:137
 msgid "Checkbox"
@@ -457,9 +473,17 @@ msgstr "Belgilash katakchasi"
 msgid "Checklist"
 msgstr "Roʻyxat"
 
-#: src/features/chess/index.tsx:106
+#: src/features/chess/index.tsx:366
+msgid "Checkmate — {opponentName} wins"
+msgstr "Mat — {opponentName} yutdi"
+
 #: src/features/chess/index.tsx:365
-#: src/features/chess/index.tsx:377
+msgid "Checkmate — you win!"
+msgstr "Mat — siz yutdingiz!"
+
+#: src/features/chess/index.tsx:60
+#: src/features/chess/index.tsx:319
+#: src/features/chess/index.tsx:331
 msgid "Chess"
 msgstr "Shaxmat"
 
@@ -727,7 +751,7 @@ msgstr "Standart saralash"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:203
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:252
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:314
-#: src/features/chess/index.tsx:628
+#: src/features/chess/index.tsx:613
 msgid "Delete"
 msgstr "Oʻchirish"
 
@@ -747,11 +771,11 @@ msgstr "Izohni oʻchirish"
 msgid "Delete field"
 msgstr "Maydonni oʻchirish"
 
-#: src/features/chess/index.tsx:483
+#: src/features/chess/index.tsx:468
 msgid "Delete game"
 msgstr "Oʻyinni oʻchirish"
 
-#: src/features/chess/index.tsx:619
+#: src/features/chess/index.tsx:604
 msgid "Delete game?"
 msgstr "Oʻyin oʻchirilsinmi?"
 
@@ -773,7 +797,7 @@ msgstr "Koʻrinishni oʻchirish"
 msgid "Delete your account on the old server"
 msgstr "Eski serverdagi hisobingizni o'chiring"
 
-#: src/features/chess/index.tsx:625
+#: src/features/chess/index.tsx:610
 msgid "Deleting..."
 msgstr "Oʻchirilmoqda..."
 
@@ -841,11 +865,15 @@ msgstr "Yuklab olish"
 msgid "Download failed"
 msgstr "Yuklab olib boʻlmadi"
 
+#: src/features/chess/index.tsx:370
+msgid "Draw"
+msgstr "Durang"
+
 #: src/features/chess/components/chat-message-list.tsx:45
 msgid "Draw agreed"
 msgstr "Durang qabul qilindi"
 
-#: src/features/chess/index.tsx:496
+#: src/features/chess/index.tsx:481
 msgid "Draw offered — waiting for {opponentName}"
 msgstr "Durang taklif qilindi — {opponentName} kutilmoqda"
 
@@ -931,7 +959,7 @@ msgstr "Tashqi URL"
 msgid "Extra large"
 msgstr "Juda katta"
 
-#: src/features/chess/index.tsx:231
+#: src/features/chess/index.tsx:185
 msgid "Failed to accept draw"
 msgstr "Durangni qabul qilib boʻlmadi"
 
@@ -949,11 +977,11 @@ msgstr "Oʻyin yaratib boʻlmadi"
 msgid "Failed to create link"
 msgstr "Havola yaratib boʻlmadi"
 
-#: src/features/chess/index.tsx:246
+#: src/features/chess/index.tsx:200
 msgid "Failed to create rematch"
 msgstr "Qayta oʻyin yaratib boʻlmadi"
 
-#: src/features/chess/index.tsx:236
+#: src/features/chess/index.tsx:190
 msgid "Failed to decline draw"
 msgstr "Durangni rad etib boʻlmadi"
 
@@ -965,7 +993,7 @@ msgstr "Ilovani oʻchirib boʻlmadi"
 msgid "Failed to delete comment"
 msgstr "Izohni oʻchirib boʻlmadi"
 
-#: src/features/chess/index.tsx:258
+#: src/features/chess/index.tsx:212
 msgid "Failed to delete game"
 msgstr "Oʻyinni oʻchirib boʻlmadi"
 
@@ -993,11 +1021,11 @@ msgstr "Rasmni yuklab bo'lmadi"
 msgid "Failed to load video"
 msgstr "Videoni yuklab bo'lmadi"
 
-#: src/features/chess/index.tsx:209
+#: src/features/chess/index.tsx:163
 msgid "Failed to make move"
 msgstr "Yurish qilib boʻlmadi"
 
-#: src/features/chess/index.tsx:226
+#: src/features/chess/index.tsx:180
 msgid "Failed to offer draw"
 msgstr "Durang taklif qilib boʻlmadi"
 
@@ -1005,7 +1033,7 @@ msgstr "Durang taklif qilib boʻlmadi"
 msgid "Failed to post comment"
 msgstr "Izoh joylashtirib boʻlmadi"
 
-#: src/features/chess/index.tsx:219
+#: src/features/chess/index.tsx:173
 msgid "Failed to resign"
 msgstr "Taslim boʻlib boʻlmadi"
 
@@ -1013,8 +1041,8 @@ msgstr "Taslim boʻlib boʻlmadi"
 msgid "Failed to revoke RSS access"
 msgstr "RSS kirishini bekor qilib bo'lmadi"
 
-#: src/features/chess/index.tsx:554
-#: src/features/chess/index.tsx:587
+#: src/features/chess/index.tsx:539
+#: src/features/chess/index.tsx:572
 msgid "Failed to send"
 msgstr "Yuborib boʻlmadi"
 
@@ -1068,9 +1096,13 @@ msgstr "Mavzudan"
 msgid "Game created"
 msgstr "Oʻyin yaratildi"
 
-#: src/features/chess/index.tsx:254
+#: src/features/chess/index.tsx:208
 msgid "Game deleted"
 msgstr "Oʻyin oʻchirildi"
+
+#: src/features/chess/index.tsx:379
+msgid "Game state unavailable"
+msgstr "O'yin holati mavjud emas"
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx:26
 #: ../../../lib/web/src/features/errors/unauthorized-error.tsx:26
@@ -1445,7 +1477,7 @@ msgstr "Bildirishnomalar: {0}"
 msgid "Number"
 msgstr "Raqam"
 
-#: src/features/chess/index.tsx:467
+#: src/features/chess/index.tsx:452
 msgid "Offer draw"
 msgstr "Durang taklif qilish"
 
@@ -1462,11 +1494,11 @@ msgstr "Voy! Sahifa topilmadi!"
 msgid "Open actions"
 msgstr "Amallarni ochish"
 
-#: src/features/chess/index.tsx:446
+#: src/features/chess/index.tsx:431
 msgid "Open chat panel"
 msgstr "Suhbat panelini ochish"
 
-#: src/features/chess/index.tsx:454
+#: src/features/chess/index.tsx:439
 msgid "Open game actions"
 msgstr "Oʻyin amallarini ochish"
 
@@ -1647,7 +1679,7 @@ msgstr "Nisbiy (5d, 3s, 2k)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "24 soat ichida nisbiy, aks holda mutlaq"
 
-#: src/features/chess/index.tsx:480
+#: src/features/chess/index.tsx:465
 msgid "Rematch"
 msgstr "Qayta oʻyin"
 
@@ -1723,16 +1755,16 @@ msgstr "Talab qilinadi"
 msgid "Resend email"
 msgstr "Xatni qayta yuborish"
 
-#: src/features/chess/index.tsx:471
-#: src/features/chess/index.tsx:607
+#: src/features/chess/index.tsx:456
+#: src/features/chess/index.tsx:592
 msgid "Resign"
 msgstr "Taslim boʻlish"
 
-#: src/features/chess/index.tsx:598
+#: src/features/chess/index.tsx:583
 msgid "Resign game?"
 msgstr "Oʻyindan voz kechilsinmi?"
 
-#: src/features/chess/index.tsx:604
+#: src/features/chess/index.tsx:589
 msgid "Resigning..."
 msgstr "Taslim boʻlinmoqda..."
 
@@ -1995,6 +2027,10 @@ msgstr "Manbalar"
 msgid "Spacious"
 msgstr "Keng"
 
+#: src/features/chess/index.tsx:368
+msgid "Stalemate — draw"
+msgstr "Pat — durang"
+
 #: src/features/chess/components/new-game.tsx:99
 msgid "Start a new chess game"
 msgstr "Yangi shaxmat oʻyini boshlash"
@@ -2082,7 +2118,7 @@ msgstr "Soʻralgan kontent topilmadi."
 msgid "The server returned a web page instead of data."
 msgstr "Server ma'lumot o'rniga veb-sahifani qaytardi."
 
-#: src/features/chess/index.tsx:620
+#: src/features/chess/index.tsx:605
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Bu oʻyin va uning chatini butunlay oʻchirib tashlaydi. Bu amalni bekor qilib boʻlmaydi."
 
@@ -2285,7 +2321,7 @@ msgid "Wednesday"
 msgstr "Chorshanba"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:437
+#: src/features/chess/index.tsx:422
 msgid "White"
 msgstr "Oq"
 
@@ -2304,6 +2340,10 @@ msgstr "Siz"
 msgid "You do not have access to this section."
 msgstr "Bu boʻlimga kirish huquqingiz yoʻq."
 
+#: src/features/chess/index.tsx:374
+msgid "You resigned — {opponentName} wins"
+msgstr "Siz taslim bo'ldingiz — {opponentName} yutdi"
+
 #: ../../../lib/web/src/components/restore-banner.tsx:100
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Hisobingiz {source} dan bu yerga ko'chirildi. U yerdan o'chirmaguncha, xabarlar va bildirishnomalar ikkala serverga ham yetishi mumkin, ba'zi kontentingiz eski serverdan erilib berilishda davom etadi va kuzatuvchilar sizni bu yerda topish uchun bir necha daqiqa vaqt ketishi mumkin."
@@ -2311,6 +2351,10 @@ msgstr "Hisobingiz {source} dan bu yerga ko'chirildi. U yerdan o'chirmaguncha, x
 #: ../../../lib/web/src/components/comment-composer.tsx:302
 msgid "Your attachments will be lost."
 msgstr "Biriktirmalaringiz yo‘qoladi."
+
+#: src/features/chess/index.tsx:385
+msgid "Your move"
+msgstr "Sizning yurishingiz"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:300
 msgid "Your text and attachments will be lost."

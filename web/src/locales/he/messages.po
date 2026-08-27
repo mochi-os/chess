@@ -103,6 +103,14 @@ msgstr "{name} פרש"
 msgid "{opponentName} offered a draw"
 msgstr "{opponentName} הציע תיקו"
 
+#: src/features/chess/index.tsx:373
+msgid "{opponentName} resigned — you win!"
+msgstr "{opponentName} פרש — ניצחת!"
+
+#: src/features/chess/index.tsx:386
+msgid "{opponentName}'s move"
+msgstr "תורו של {opponentName}"
+
 #: ../../../lib/web/src/components/attachment-composer.tsx:248
 #: ../../../lib/web/src/components/ui/upload-progress.tsx:52
 msgid "{sentLabel} of {totalLabel}"
@@ -306,7 +314,7 @@ msgstr "האם אתה בטוח שברצונך למחוק תגובה זו? פעו
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "האם אתה בטוח שברצונך להתנתק? יהיה עליך להתחבר שוב כדי לגשת לחשבונך."
 
-#: src/features/chess/index.tsx:599
+#: src/features/chess/index.tsx:584
 msgid "Are you sure you want to resign? {opponentName} will win the game."
 msgstr "האם אתה בטוח שברצונך לפרוש? {opponentName} ינצח במשחק."
 
@@ -361,7 +369,7 @@ msgid "bishop"
 msgstr "רץ"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:437
+#: src/features/chess/index.tsx:422
 msgid "Black"
 msgstr "שחור"
 
@@ -444,10 +452,18 @@ msgstr "קטגוריה עבור התראות אלו"
 msgid "Change notification category"
 msgstr "שנה קטגוריית התראה"
 
-#: src/features/chess/index.tsx:537
-#: src/features/chess/index.tsx:570
+#: src/features/chess/index.tsx:522
+#: src/features/chess/index.tsx:555
 msgid "Chat"
 msgstr "צ'אט"
+
+#: src/features/chess/index.tsx:383
+msgid "Check — {opponentName}'s move"
+msgstr "שח — תורו של {opponentName}"
+
+#: src/features/chess/index.tsx:382
+msgid "Check — your move"
+msgstr "שח — תורך"
 
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx:137
 msgid "Checkbox"
@@ -457,9 +473,17 @@ msgstr "תיבת סימון"
 msgid "Checklist"
 msgstr "רשימת משימות"
 
-#: src/features/chess/index.tsx:106
+#: src/features/chess/index.tsx:366
+msgid "Checkmate — {opponentName} wins"
+msgstr "שח מט — {opponentName} ניצח"
+
 #: src/features/chess/index.tsx:365
-#: src/features/chess/index.tsx:377
+msgid "Checkmate — you win!"
+msgstr "שח מט — ניצחת!"
+
+#: src/features/chess/index.tsx:60
+#: src/features/chess/index.tsx:319
+#: src/features/chess/index.tsx:331
 msgid "Chess"
 msgstr "שחמט"
 
@@ -727,7 +751,7 @@ msgstr "מיון ברירת מחדל"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:203
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:252
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:314
-#: src/features/chess/index.tsx:628
+#: src/features/chess/index.tsx:613
 msgid "Delete"
 msgstr "מחק"
 
@@ -747,11 +771,11 @@ msgstr "מחק תגובה"
 msgid "Delete field"
 msgstr "מחק שדה"
 
-#: src/features/chess/index.tsx:483
+#: src/features/chess/index.tsx:468
 msgid "Delete game"
 msgstr "מחק משחק"
 
-#: src/features/chess/index.tsx:619
+#: src/features/chess/index.tsx:604
 msgid "Delete game?"
 msgstr "למחוק את המשחק?"
 
@@ -773,7 +797,7 @@ msgstr "מחק תצוגה"
 msgid "Delete your account on the old server"
 msgstr "מחק את חשבונך בשרת הישן"
 
-#: src/features/chess/index.tsx:625
+#: src/features/chess/index.tsx:610
 msgid "Deleting..."
 msgstr "מוחק..."
 
@@ -841,11 +865,15 @@ msgstr "הורדה"
 msgid "Download failed"
 msgstr "ההורדה נכשלה"
 
+#: src/features/chess/index.tsx:370
+msgid "Draw"
+msgstr "תיקו"
+
 #: src/features/chess/components/chat-message-list.tsx:45
 msgid "Draw agreed"
 msgstr "הוסכם על תיקו"
 
-#: src/features/chess/index.tsx:496
+#: src/features/chess/index.tsx:481
 msgid "Draw offered — waiting for {opponentName}"
 msgstr "הוצעה תיקו — ממתין ל-{opponentName}"
 
@@ -931,7 +959,7 @@ msgstr "כתובת URL חיצונית"
 msgid "Extra large"
 msgstr "גדול במיוחד"
 
-#: src/features/chess/index.tsx:231
+#: src/features/chess/index.tsx:185
 msgid "Failed to accept draw"
 msgstr "קבלת התיקו נכשלה"
 
@@ -949,11 +977,11 @@ msgstr "יצירת המשחק נכשלה"
 msgid "Failed to create link"
 msgstr "יצירת הקישור נכשלה"
 
-#: src/features/chess/index.tsx:246
+#: src/features/chess/index.tsx:200
 msgid "Failed to create rematch"
 msgstr "יצירת המשחק החוזר נכשלה"
 
-#: src/features/chess/index.tsx:236
+#: src/features/chess/index.tsx:190
 msgid "Failed to decline draw"
 msgstr "דחיית התיקו נכשלה"
 
@@ -965,7 +993,7 @@ msgstr "מחיקת הקובץ המצורף נכשלה"
 msgid "Failed to delete comment"
 msgstr "מחיקת התגובה נכשלה"
 
-#: src/features/chess/index.tsx:258
+#: src/features/chess/index.tsx:212
 msgid "Failed to delete game"
 msgstr "מחיקת המשחק נכשלה"
 
@@ -993,11 +1021,11 @@ msgstr "טעינת התמונה נכשלה"
 msgid "Failed to load video"
 msgstr "טעינת הווידאו נכשלה"
 
-#: src/features/chess/index.tsx:209
+#: src/features/chess/index.tsx:163
 msgid "Failed to make move"
 msgstr "ביצוע המהלך נכשל"
 
-#: src/features/chess/index.tsx:226
+#: src/features/chess/index.tsx:180
 msgid "Failed to offer draw"
 msgstr "הצעת התיקו נכשלה"
 
@@ -1005,7 +1033,7 @@ msgstr "הצעת התיקו נכשלה"
 msgid "Failed to post comment"
 msgstr "פרסום התגובה נכשל"
 
-#: src/features/chess/index.tsx:219
+#: src/features/chess/index.tsx:173
 msgid "Failed to resign"
 msgstr "ההתפטרות נכשלה"
 
@@ -1013,8 +1041,8 @@ msgstr "ההתפטרות נכשלה"
 msgid "Failed to revoke RSS access"
 msgstr "ביטול גישת RSS נכשל"
 
-#: src/features/chess/index.tsx:554
-#: src/features/chess/index.tsx:587
+#: src/features/chess/index.tsx:539
+#: src/features/chess/index.tsx:572
 msgid "Failed to send"
 msgstr "השליחה נכשלה"
 
@@ -1068,9 +1096,13 @@ msgstr "מערכת נושא"
 msgid "Game created"
 msgstr "המשחק נוצר"
 
-#: src/features/chess/index.tsx:254
+#: src/features/chess/index.tsx:208
 msgid "Game deleted"
 msgstr "המשחק נמחק"
+
+#: src/features/chess/index.tsx:379
+msgid "Game state unavailable"
+msgstr "מצב המשחק אינו זמין"
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx:26
 #: ../../../lib/web/src/features/errors/unauthorized-error.tsx:26
@@ -1445,7 +1477,7 @@ msgstr "התראות: {0}"
 msgid "Number"
 msgstr "מספר"
 
-#: src/features/chess/index.tsx:467
+#: src/features/chess/index.tsx:452
 msgid "Offer draw"
 msgstr "הצע תיקו"
 
@@ -1462,11 +1494,11 @@ msgstr "אופס! הדף לא נמצא!"
 msgid "Open actions"
 msgstr "פתיחת פעולות"
 
-#: src/features/chess/index.tsx:446
+#: src/features/chess/index.tsx:431
 msgid "Open chat panel"
 msgstr "פתח פאנל צ'אט"
 
-#: src/features/chess/index.tsx:454
+#: src/features/chess/index.tsx:439
 msgid "Open game actions"
 msgstr "פתח פעולות משחק"
 
@@ -1647,7 +1679,7 @@ msgstr "יחסי (5 דקות, 3 שעות, 2 ימים)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "יחסי בתוך 24 שעות, אחרת מוחלט"
 
-#: src/features/chess/index.tsx:480
+#: src/features/chess/index.tsx:465
 msgid "Rematch"
 msgstr "משחק חוזר"
 
@@ -1723,16 +1755,16 @@ msgstr "נדרש"
 msgid "Resend email"
 msgstr "שלח את האימייל שוב"
 
-#: src/features/chess/index.tsx:471
-#: src/features/chess/index.tsx:607
+#: src/features/chess/index.tsx:456
+#: src/features/chess/index.tsx:592
 msgid "Resign"
 msgstr "פרוש"
 
-#: src/features/chess/index.tsx:598
+#: src/features/chess/index.tsx:583
 msgid "Resign game?"
 msgstr "לפרוש מהמשחק?"
 
-#: src/features/chess/index.tsx:604
+#: src/features/chess/index.tsx:589
 msgid "Resigning..."
 msgstr "פורש..."
 
@@ -1995,6 +2027,10 @@ msgstr "מקורות"
 msgid "Spacious"
 msgstr "מרווח"
 
+#: src/features/chess/index.tsx:368
+msgid "Stalemate — draw"
+msgstr "פט — תיקו"
+
 #: src/features/chess/components/new-game.tsx:99
 msgid "Start a new chess game"
 msgstr "התחל משחק שחמט חדש"
@@ -2082,7 +2118,7 @@ msgstr "לא ניתן למצוא את התוכן המבוקש."
 msgid "The server returned a web page instead of data."
 msgstr "השרת החזיר דף אינטרנט במקום נתונים."
 
-#: src/features/chess/index.tsx:620
+#: src/features/chess/index.tsx:605
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "פעולה זו תמחק לצמיתות את המשחק ואת הצ'אט שלו. לא ניתן לבטל פעולה זו."
 
@@ -2285,7 +2321,7 @@ msgid "Wednesday"
 msgstr "יום רביעי"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:437
+#: src/features/chess/index.tsx:422
 msgid "White"
 msgstr "לבן"
 
@@ -2304,6 +2340,10 @@ msgstr "אתה"
 msgid "You do not have access to this section."
 msgstr "אין לך גישה לאזור זה."
 
+#: src/features/chess/index.tsx:374
+msgid "You resigned — {opponentName} wins"
+msgstr "פרשת — {opponentName} ניצח"
+
 #: ../../../lib/web/src/components/restore-banner.tsx:100
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "חשבונך הועבר לכאן מ-{source}. עד שתמחק אותו שם, הודעות והתראות עשויות להגיע לשני השרתים, חלק מהתוכן שלך ממשיך להיות מוגש מהשרת הישן, ועוקבים עשויים לקחת מספר דקות למצוא אותך כאן."
@@ -2311,6 +2351,10 @@ msgstr "חשבונך הועבר לכאן מ-{source}. עד שתמחק אותו �
 #: ../../../lib/web/src/components/comment-composer.tsx:302
 msgid "Your attachments will be lost."
 msgstr "הקבצים המצורפים שלך יאבדו."
+
+#: src/features/chess/index.tsx:385
+msgid "Your move"
+msgstr "התור שלך"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:300
 msgid "Your text and attachments will be lost."

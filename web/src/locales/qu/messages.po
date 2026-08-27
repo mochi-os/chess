@@ -103,6 +103,14 @@ msgstr "{name} haykurqa"
 msgid "{opponentName} offered a draw"
 msgstr "{opponentName} kuska kayta nirqan"
 
+#: src/features/chess/index.tsx:373
+msgid "{opponentName} resigned — you win!"
+msgstr "{opponentName} saqirqan — atipanki!"
+
+#: src/features/chess/index.tsx:386
+msgid "{opponentName}'s move"
+msgstr "{opponentName} mit'an"
+
 #: ../../../lib/web/src/components/attachment-composer.tsx:248
 #: ../../../lib/web/src/components/ui/upload-progress.tsx:52
 msgid "{sentLabel} of {totalLabel}"
@@ -306,7 +314,7 @@ msgstr "Kay comentario-ta wischuyta munanki? Kayqa kutichikunatapas wischunqa."
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "Lluqsiyta munanki? Kutichiy yaykunaykipaq cuenta-yki-pi."
 
-#: src/features/chess/index.tsx:599
+#: src/features/chess/index.tsx:584
 msgid "Are you sure you want to resign? {opponentName} will win the game."
 msgstr "Saqiyta munanki? {opponentName} pukllayta atipanqa."
 
@@ -361,7 +369,7 @@ msgid "bishop"
 msgstr "bishop"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:437
+#: src/features/chess/index.tsx:422
 msgid "Black"
 msgstr "Yana"
 
@@ -444,10 +452,18 @@ msgstr "Kay willaykunapaq categoría"
 msgid "Change notification category"
 msgstr "Willaykuna categoría tikray"
 
-#: src/features/chess/index.tsx:537
-#: src/features/chess/index.tsx:570
+#: src/features/chess/index.tsx:522
+#: src/features/chess/index.tsx:555
 msgid "Chat"
 msgstr "Chat"
+
+#: src/features/chess/index.tsx:383
+msgid "Check — {opponentName}'s move"
+msgstr "Jaque — {opponentName} mit'an"
+
+#: src/features/chess/index.tsx:382
+msgid "Check — your move"
+msgstr "Jaque — qampa mit'ayki"
 
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx:137
 msgid "Checkbox"
@@ -457,9 +473,17 @@ msgstr "Checkbox"
 msgid "Checklist"
 msgstr "Lista"
 
-#: src/features/chess/index.tsx:106
+#: src/features/chess/index.tsx:366
+msgid "Checkmate — {opponentName} wins"
+msgstr "Jaque mate — {opponentName} atipan"
+
 #: src/features/chess/index.tsx:365
-#: src/features/chess/index.tsx:377
+msgid "Checkmate — you win!"
+msgstr "Jaque mate — atipanki!"
+
+#: src/features/chess/index.tsx:60
+#: src/features/chess/index.tsx:319
+#: src/features/chess/index.tsx:331
 msgid "Chess"
 msgstr "Chess"
 
@@ -727,7 +751,7 @@ msgstr "Default sort"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:203
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:252
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:314
-#: src/features/chess/index.tsx:628
+#: src/features/chess/index.tsx:613
 msgid "Delete"
 msgstr "Wischuy"
 
@@ -747,11 +771,11 @@ msgstr "Comentario wischuy"
 msgid "Delete field"
 msgstr "Campo wischuy"
 
-#: src/features/chess/index.tsx:483
+#: src/features/chess/index.tsx:468
 msgid "Delete game"
 msgstr "Pukllay wischuy"
 
-#: src/features/chess/index.tsx:619
+#: src/features/chess/index.tsx:604
 msgid "Delete game?"
 msgstr "Pukllayta wischuy?"
 
@@ -773,7 +797,7 @@ msgstr "Vista wischuy"
 msgid "Delete your account on the old server"
 msgstr "Ñawpaq serverpi cuenta-ykita qichuy"
 
-#: src/features/chess/index.tsx:625
+#: src/features/chess/index.tsx:610
 msgid "Deleting..."
 msgstr "Wischuspa..."
 
@@ -841,11 +865,15 @@ msgstr "Uray chaskiy"
 msgid "Download failed"
 msgstr "Urayachiy mana atikurqanchu"
 
+#: src/features/chess/index.tsx:370
+msgid "Draw"
+msgstr "Kikin"
+
 #: src/features/chess/components/chat-message-list.tsx:45
 msgid "Draw agreed"
 msgstr "Kikllachakuy ari nisqa"
 
-#: src/features/chess/index.tsx:496
+#: src/features/chess/index.tsx:481
 msgid "Draw offered — waiting for {opponentName}"
 msgstr "Chiqansipaña haywasqa — {opponentName} suyaspa"
 
@@ -931,7 +959,7 @@ msgstr "Hawa URL"
 msgid "Extra large"
 msgstr "Sinchi hatun"
 
-#: src/features/chess/index.tsx:231
+#: src/features/chess/index.tsx:185
 msgid "Failed to accept draw"
 msgstr "Mana chiqansipañata chaskiyta atinchu"
 
@@ -949,11 +977,11 @@ msgstr "Mana pukllayta paqarichiyta atinchu"
 msgid "Failed to create link"
 msgstr "Mana enlaceta paqarichiyta atinchu"
 
-#: src/features/chess/index.tsx:246
+#: src/features/chess/index.tsx:200
 msgid "Failed to create rematch"
 msgstr "Mana watiqmanta pukllayta paqarichiyta atinchu"
 
-#: src/features/chess/index.tsx:236
+#: src/features/chess/index.tsx:190
 msgid "Failed to decline draw"
 msgstr "Mana chiqansipañata mana munayta atinchu"
 
@@ -965,7 +993,7 @@ msgstr "Mana adjuntota pichayta atinchu"
 msgid "Failed to delete comment"
 msgstr "Mana comentariota pichayta atinchu"
 
-#: src/features/chess/index.tsx:258
+#: src/features/chess/index.tsx:212
 msgid "Failed to delete game"
 msgstr "Mana pukllayta pichayta atinchu"
 
@@ -993,11 +1021,11 @@ msgstr "Manam rikchata cargayta atikunchu"
 msgid "Failed to load video"
 msgstr "Manam videota cargayta atikunchu"
 
-#: src/features/chess/index.tsx:209
+#: src/features/chess/index.tsx:163
 msgid "Failed to make move"
 msgstr "Mana kuyuyta ruwayta atinchu"
 
-#: src/features/chess/index.tsx:226
+#: src/features/chess/index.tsx:180
 msgid "Failed to offer draw"
 msgstr "Mana chiqansipañata haywayta atinchu"
 
@@ -1005,7 +1033,7 @@ msgstr "Mana chiqansipañata haywayta atinchu"
 msgid "Failed to post comment"
 msgstr "Mana comentariota willakuyta atinchu"
 
-#: src/features/chess/index.tsx:219
+#: src/features/chess/index.tsx:173
 msgid "Failed to resign"
 msgstr "Mana saqiyta atinchu"
 
@@ -1013,8 +1041,8 @@ msgstr "Mana saqiyta atinchu"
 msgid "Failed to revoke RSS access"
 msgstr "Mana atikunchu RSS yaykuyta chinkachiy"
 
-#: src/features/chess/index.tsx:554
-#: src/features/chess/index.tsx:587
+#: src/features/chess/index.tsx:539
+#: src/features/chess/index.tsx:572
 msgid "Failed to send"
 msgstr "Mana apachiyta atinchu"
 
@@ -1068,9 +1096,13 @@ msgstr "Temamanta"
 msgid "Game created"
 msgstr "Pukllay paqarichisqa"
 
-#: src/features/chess/index.tsx:254
+#: src/features/chess/index.tsx:208
 msgid "Game deleted"
 msgstr "Pukllay pichasqa"
+
+#: src/features/chess/index.tsx:379
+msgid "Game state unavailable"
+msgstr "Pukllay kaynin mana tarikunchu"
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx:26
 #: ../../../lib/web/src/features/errors/unauthorized-error.tsx:26
@@ -1445,7 +1477,7 @@ msgstr "Willakuykuna: {0}"
 msgid "Number"
 msgstr "Yupay"
 
-#: src/features/chess/index.tsx:467
+#: src/features/chess/index.tsx:452
 msgid "Offer draw"
 msgstr "Empate ofrecey"
 
@@ -1462,11 +1494,11 @@ msgstr "¡Ay! ¡Página Mana Tarisqachu!"
 msgid "Open actions"
 msgstr "Ruwaykunata kichay"
 
-#: src/features/chess/index.tsx:446
+#: src/features/chess/index.tsx:431
 msgid "Open chat panel"
 msgstr "Chat panelta kichay"
 
-#: src/features/chess/index.tsx:454
+#: src/features/chess/index.tsx:439
 msgid "Open game actions"
 msgstr "Pukllay ruwaykunata kichay"
 
@@ -1647,7 +1679,7 @@ msgstr "Relativo (5m, 3h, 2d)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "24 horas ukhupi relativo, mana chayqa absoluto"
 
-#: src/features/chess/index.tsx:480
+#: src/features/chess/index.tsx:465
 msgid "Rematch"
 msgstr "Watiqmanta pukllay"
 
@@ -1723,16 +1755,16 @@ msgstr "Munasqa"
 msgid "Resend email"
 msgstr "Correota kutiy apachiy"
 
-#: src/features/chess/index.tsx:471
-#: src/features/chess/index.tsx:607
+#: src/features/chess/index.tsx:456
+#: src/features/chess/index.tsx:592
 msgid "Resign"
 msgstr "Saqirakapuy"
 
-#: src/features/chess/index.tsx:598
+#: src/features/chess/index.tsx:583
 msgid "Resign game?"
 msgstr "Pukllayta saqirakapuy?"
 
-#: src/features/chess/index.tsx:604
+#: src/features/chess/index.tsx:589
 msgid "Resigning..."
 msgstr "Saqirakapushan..."
 
@@ -1995,6 +2027,10 @@ msgstr "Pukyukuna"
 msgid "Spacious"
 msgstr "Hatun"
 
+#: src/features/chess/index.tsx:368
+msgid "Stalemate — draw"
+msgstr "Ahogado — kikin"
+
 #: src/features/chess/components/new-game.tsx:99
 msgid "Start a new chess game"
 msgstr "Musuq ajedrez pukllayta qallariy"
@@ -2082,7 +2118,7 @@ msgstr "Mañakusqa willaykuna mana tarikunchu."
 msgid "The server returned a web page instead of data."
 msgstr "Servidorqa mana willakuykunatachu kutichirqan, huk web p'anqatam."
 
-#: src/features/chess/index.tsx:620
+#: src/features/chess/index.tsx:605
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Kayqa pukllayta rimanakuywantin wiñaypaq wischun. Kayta mana kutichinachu."
 
@@ -2285,7 +2321,7 @@ msgid "Wednesday"
 msgstr "Quyllurchaw"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:437
+#: src/features/chess/index.tsx:422
 msgid "White"
 msgstr "Yuraq"
 
@@ -2304,6 +2340,10 @@ msgstr "Qan"
 msgid "You do not have access to this section."
 msgstr "Kay t'aqamanqa mana yaykuyta atinkichu."
 
+#: src/features/chess/index.tsx:374
+msgid "You resigned — {opponentName} wins"
+msgstr "Saqirqanki — {opponentName} atipan"
+
 #: ../../../lib/web/src/components/restore-banner.tsx:100
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Cuenta-yki {source} llaqtamanta kaypi churasqa karqan. Chaypeqa manaraj qichuykiptiyki, willakuykuna hinaspa sut'ichakuykuna iskay serverkunaman chayayta atinku, imaymayki wakin ñawpaq servermanta kamachikapusqanmi kachkan, hinaspa qhatiqniykim kaypi tarisunkaypaq huk minutokunata suyayta atinku."
@@ -2311,6 +2351,10 @@ msgstr "Cuenta-yki {source} llaqtamanta kaypi churasqa karqan. Chaypeqa manaraj 
 #: ../../../lib/web/src/components/comment-composer.tsx:302
 msgid "Your attachments will be lost."
 msgstr "Ratachisqaykikuna chinkapunqa."
+
+#: src/features/chess/index.tsx:385
+msgid "Your move"
+msgstr "Movimientoyki"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:300
 msgid "Your text and attachments will be lost."

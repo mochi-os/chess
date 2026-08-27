@@ -103,6 +103,14 @@ msgstr "استسلم {name}"
 msgid "{opponentName} offered a draw"
 msgstr "عرض {opponentName} التعادل"
 
+#: src/features/chess/index.tsx:373
+msgid "{opponentName} resigned — you win!"
+msgstr "انسحب {opponentName} — أنت الفائز!"
+
+#: src/features/chess/index.tsx:386
+msgid "{opponentName}'s move"
+msgstr "دور {opponentName}"
+
 #: ../../../lib/web/src/components/attachment-composer.tsx:248
 #: ../../../lib/web/src/components/ui/upload-progress.tsx:52
 msgid "{sentLabel} of {totalLabel}"
@@ -306,7 +314,7 @@ msgstr "هل أنت متأكد من حذف هذا التعليق؟ سيؤدي ذ
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "هل أنت متأكد من تسجيل الخروج؟ ستحتاج إلى تسجيل الدخول مرة أخرى للوصول إلى حسابك."
 
-#: src/features/chess/index.tsx:599
+#: src/features/chess/index.tsx:584
 msgid "Are you sure you want to resign? {opponentName} will win the game."
 msgstr "هل أنت متأكد أنك تريد الاستسلام؟ سيفوز {opponentName} باللعبة."
 
@@ -361,7 +369,7 @@ msgid "bishop"
 msgstr "فيل"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:437
+#: src/features/chess/index.tsx:422
 msgid "Black"
 msgstr "أسود"
 
@@ -444,10 +452,18 @@ msgstr "فئة هذه الإشعارات"
 msgid "Change notification category"
 msgstr "تغيير فئة الإشعار"
 
-#: src/features/chess/index.tsx:537
-#: src/features/chess/index.tsx:570
+#: src/features/chess/index.tsx:522
+#: src/features/chess/index.tsx:555
 msgid "Chat"
 msgstr "الدردشة"
+
+#: src/features/chess/index.tsx:383
+msgid "Check — {opponentName}'s move"
+msgstr "كش — دور {opponentName}"
+
+#: src/features/chess/index.tsx:382
+msgid "Check — your move"
+msgstr "كش — دورك"
 
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx:137
 msgid "Checkbox"
@@ -457,9 +473,17 @@ msgstr "مربع اختيار"
 msgid "Checklist"
 msgstr "قائمة المهام"
 
-#: src/features/chess/index.tsx:106
+#: src/features/chess/index.tsx:366
+msgid "Checkmate — {opponentName} wins"
+msgstr "كش مات — فوز {opponentName}"
+
 #: src/features/chess/index.tsx:365
-#: src/features/chess/index.tsx:377
+msgid "Checkmate — you win!"
+msgstr "كش مات — أنت الفائز!"
+
+#: src/features/chess/index.tsx:60
+#: src/features/chess/index.tsx:319
+#: src/features/chess/index.tsx:331
 msgid "Chess"
 msgstr "الشطرنج"
 
@@ -727,7 +751,7 @@ msgstr "الترتيب الافتراضي"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:203
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:252
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:314
-#: src/features/chess/index.tsx:628
+#: src/features/chess/index.tsx:613
 msgid "Delete"
 msgstr "حذف"
 
@@ -747,11 +771,11 @@ msgstr "حذف التعليق"
 msgid "Delete field"
 msgstr "حذف الحقل"
 
-#: src/features/chess/index.tsx:483
+#: src/features/chess/index.tsx:468
 msgid "Delete game"
 msgstr "حذف اللعبة"
 
-#: src/features/chess/index.tsx:619
+#: src/features/chess/index.tsx:604
 msgid "Delete game?"
 msgstr "حذف اللعبة؟"
 
@@ -773,7 +797,7 @@ msgstr "حذف العرض"
 msgid "Delete your account on the old server"
 msgstr "احذف حسابك من الخادم القديم"
 
-#: src/features/chess/index.tsx:625
+#: src/features/chess/index.tsx:610
 msgid "Deleting..."
 msgstr "جارٍ الحذف..."
 
@@ -841,11 +865,15 @@ msgstr "تنزيل"
 msgid "Download failed"
 msgstr "فشل التنزيل"
 
+#: src/features/chess/index.tsx:370
+msgid "Draw"
+msgstr "تعادل"
+
 #: src/features/chess/components/chat-message-list.tsx:45
 msgid "Draw agreed"
 msgstr "تم الاتفاق على التعادل"
 
-#: src/features/chess/index.tsx:496
+#: src/features/chess/index.tsx:481
 msgid "Draw offered — waiting for {opponentName}"
 msgstr "تم عرض التعادل — في انتظار {opponentName}"
 
@@ -931,7 +959,7 @@ msgstr "URL خارجي"
 msgid "Extra large"
 msgstr "كبير جداً"
 
-#: src/features/chess/index.tsx:231
+#: src/features/chess/index.tsx:185
 msgid "Failed to accept draw"
 msgstr "فشل قبول التعادل"
 
@@ -949,11 +977,11 @@ msgstr "فشل إنشاء اللعبة"
 msgid "Failed to create link"
 msgstr "فشل إنشاء الرابط"
 
-#: src/features/chess/index.tsx:246
+#: src/features/chess/index.tsx:200
 msgid "Failed to create rematch"
 msgstr "فشل إنشاء مباراة جديدة"
 
-#: src/features/chess/index.tsx:236
+#: src/features/chess/index.tsx:190
 msgid "Failed to decline draw"
 msgstr "فشل رفض التعادل"
 
@@ -965,7 +993,7 @@ msgstr "فشل حذف المرفق"
 msgid "Failed to delete comment"
 msgstr "فشل حذف التعليق"
 
-#: src/features/chess/index.tsx:258
+#: src/features/chess/index.tsx:212
 msgid "Failed to delete game"
 msgstr "فشل حذف اللعبة"
 
@@ -993,11 +1021,11 @@ msgstr "تعذّر تحميل الصورة"
 msgid "Failed to load video"
 msgstr "تعذّر تحميل الفيديو"
 
-#: src/features/chess/index.tsx:209
+#: src/features/chess/index.tsx:163
 msgid "Failed to make move"
 msgstr "فشل تنفيذ الحركة"
 
-#: src/features/chess/index.tsx:226
+#: src/features/chess/index.tsx:180
 msgid "Failed to offer draw"
 msgstr "فشل عرض التعادل"
 
@@ -1005,7 +1033,7 @@ msgstr "فشل عرض التعادل"
 msgid "Failed to post comment"
 msgstr "فشل نشر التعليق"
 
-#: src/features/chess/index.tsx:219
+#: src/features/chess/index.tsx:173
 msgid "Failed to resign"
 msgstr "فشل الاستسلام"
 
@@ -1013,8 +1041,8 @@ msgstr "فشل الاستسلام"
 msgid "Failed to revoke RSS access"
 msgstr "فشل إلغاء وصول RSS"
 
-#: src/features/chess/index.tsx:554
-#: src/features/chess/index.tsx:587
+#: src/features/chess/index.tsx:539
+#: src/features/chess/index.tsx:572
 msgid "Failed to send"
 msgstr "فشل الإرسال"
 
@@ -1068,9 +1096,13 @@ msgstr "من السمة"
 msgid "Game created"
 msgstr "تم إنشاء اللعبة"
 
-#: src/features/chess/index.tsx:254
+#: src/features/chess/index.tsx:208
 msgid "Game deleted"
 msgstr "تم حذف اللعبة"
+
+#: src/features/chess/index.tsx:379
+msgid "Game state unavailable"
+msgstr "حالة اللعبة غير متاحة"
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx:26
 #: ../../../lib/web/src/features/errors/unauthorized-error.tsx:26
@@ -1445,7 +1477,7 @@ msgstr "الإشعارات: {0}"
 msgid "Number"
 msgstr "الرقم"
 
-#: src/features/chess/index.tsx:467
+#: src/features/chess/index.tsx:452
 msgid "Offer draw"
 msgstr "عرض التعادل"
 
@@ -1462,11 +1494,11 @@ msgstr "عذراً! الصفحة غير موجودة!"
 msgid "Open actions"
 msgstr "فتح الإجراءات"
 
-#: src/features/chess/index.tsx:446
+#: src/features/chess/index.tsx:431
 msgid "Open chat panel"
 msgstr "فتح لوحة المحادثة"
 
-#: src/features/chess/index.tsx:454
+#: src/features/chess/index.tsx:439
 msgid "Open game actions"
 msgstr "فتح إجراءات اللعبة"
 
@@ -1647,7 +1679,7 @@ msgstr "نسبي (5د, 3س, 2ي)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "نسبي خلال 24 ساعة، وإلا مطلق"
 
-#: src/features/chess/index.tsx:480
+#: src/features/chess/index.tsx:465
 msgid "Rematch"
 msgstr "مباراة جديدة"
 
@@ -1723,16 +1755,16 @@ msgstr "مطلوب"
 msgid "Resend email"
 msgstr "إعادة إرسال البريد الإلكتروني"
 
-#: src/features/chess/index.tsx:471
-#: src/features/chess/index.tsx:607
+#: src/features/chess/index.tsx:456
+#: src/features/chess/index.tsx:592
 msgid "Resign"
 msgstr "الاستسلام"
 
-#: src/features/chess/index.tsx:598
+#: src/features/chess/index.tsx:583
 msgid "Resign game?"
 msgstr "الاستسلام في اللعبة؟"
 
-#: src/features/chess/index.tsx:604
+#: src/features/chess/index.tsx:589
 msgid "Resigning..."
 msgstr "جاري الاستسلام..."
 
@@ -1995,6 +2027,10 @@ msgstr "المصادر"
 msgid "Spacious"
 msgstr "واسع"
 
+#: src/features/chess/index.tsx:368
+msgid "Stalemate — draw"
+msgstr "تعادل بالحصار — تعادل"
+
 #: src/features/chess/components/new-game.tsx:99
 msgid "Start a new chess game"
 msgstr "بدء لعبة شطرنج جديدة"
@@ -2082,7 +2118,7 @@ msgstr "تعذر العثور على المحتوى المطلوب."
 msgid "The server returned a web page instead of data."
 msgstr "أعاد الخادم صفحة ويب بدلاً من البيانات."
 
-#: src/features/chess/index.tsx:620
+#: src/features/chess/index.tsx:605
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "سيؤدي هذا إلى حذف اللعبة ومحادثتها نهائيًا. لا يمكن التراجع عن هذا الإجراء."
 
@@ -2285,7 +2321,7 @@ msgid "Wednesday"
 msgstr "الأربعاء"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:437
+#: src/features/chess/index.tsx:422
 msgid "White"
 msgstr "أبيض"
 
@@ -2304,6 +2340,10 @@ msgstr "أنت"
 msgid "You do not have access to this section."
 msgstr "ليس لديك صلاحية الوصول إلى هذا القسم."
 
+#: src/features/chess/index.tsx:374
+msgid "You resigned — {opponentName} wins"
+msgstr "لقد انسحبت — فوز {opponentName}"
+
 #: ../../../lib/web/src/components/restore-banner.tsx:100
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "تم نقل حسابك إلى هنا من {source}. حتى تحذفه من هناك، قد تصل الرسائل والإشعارات إلى كلا الخادمين، وقد يظل بعض محتواك يُقدَّم من الخادم القديم، وقد يستغرق المتابعون بضع دقائق للعثور عليك هنا."
@@ -2311,6 +2351,10 @@ msgstr "تم نقل حسابك إلى هنا من {source}. حتى تحذفه م
 #: ../../../lib/web/src/components/comment-composer.tsx:302
 msgid "Your attachments will be lost."
 msgstr "سيتم فقدان مرفقاتك."
+
+#: src/features/chess/index.tsx:385
+msgid "Your move"
+msgstr "دورك"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:300
 msgid "Your text and attachments will be lost."

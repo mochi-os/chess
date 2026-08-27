@@ -103,6 +103,14 @@ msgstr "{name} 认输"
 msgid "{opponentName} offered a draw"
 msgstr "{opponentName} 提议和棋"
 
+#: src/features/chess/index.tsx:373
+msgid "{opponentName} resigned — you win!"
+msgstr "{opponentName} 已认输 — 你赢了！"
+
+#: src/features/chess/index.tsx:386
+msgid "{opponentName}'s move"
+msgstr "轮到 {opponentName} 了"
+
 #: ../../../lib/web/src/components/attachment-composer.tsx:248
 #: ../../../lib/web/src/components/ui/upload-progress.tsx:52
 msgid "{sentLabel} of {totalLabel}"
@@ -306,7 +314,7 @@ msgstr "确定要删除此评论吗?这将同时删除所有回复。"
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "确定要退出登录吗?你需要重新登录才能访问账户。"
 
-#: src/features/chess/index.tsx:599
+#: src/features/chess/index.tsx:584
 msgid "Are you sure you want to resign? {opponentName} will win the game."
 msgstr "确定要认输吗?{opponentName} 将赢得比赛。"
 
@@ -361,7 +369,7 @@ msgid "bishop"
 msgstr "象"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:437
+#: src/features/chess/index.tsx:422
 msgid "Black"
 msgstr "黑色"
 
@@ -444,10 +452,18 @@ msgstr "这些通知的分类"
 msgid "Change notification category"
 msgstr "更改通知分类"
 
-#: src/features/chess/index.tsx:537
-#: src/features/chess/index.tsx:570
+#: src/features/chess/index.tsx:522
+#: src/features/chess/index.tsx:555
 msgid "Chat"
 msgstr "聊天"
+
+#: src/features/chess/index.tsx:383
+msgid "Check — {opponentName}'s move"
+msgstr "将军 — 轮到 {opponentName} 了"
+
+#: src/features/chess/index.tsx:382
+msgid "Check — your move"
+msgstr "将军 — 轮到你了"
 
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx:137
 msgid "Checkbox"
@@ -457,9 +473,17 @@ msgstr "复选框"
 msgid "Checklist"
 msgstr "清单"
 
-#: src/features/chess/index.tsx:106
+#: src/features/chess/index.tsx:366
+msgid "Checkmate — {opponentName} wins"
+msgstr "将死 — {opponentName} 获胜"
+
 #: src/features/chess/index.tsx:365
-#: src/features/chess/index.tsx:377
+msgid "Checkmate — you win!"
+msgstr "将死 — 你赢了！"
+
+#: src/features/chess/index.tsx:60
+#: src/features/chess/index.tsx:319
+#: src/features/chess/index.tsx:331
 msgid "Chess"
 msgstr "国际象棋"
 
@@ -727,7 +751,7 @@ msgstr "默认排序"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:203
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:252
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:314
-#: src/features/chess/index.tsx:628
+#: src/features/chess/index.tsx:613
 msgid "Delete"
 msgstr "删除"
 
@@ -747,11 +771,11 @@ msgstr "删除评论"
 msgid "Delete field"
 msgstr "删除字段"
 
-#: src/features/chess/index.tsx:483
+#: src/features/chess/index.tsx:468
 msgid "Delete game"
 msgstr "删除游戏"
 
-#: src/features/chess/index.tsx:619
+#: src/features/chess/index.tsx:604
 msgid "Delete game?"
 msgstr "删除对局?"
 
@@ -773,7 +797,7 @@ msgstr "删除视图"
 msgid "Delete your account on the old server"
 msgstr "删除旧服务器上的账户"
 
-#: src/features/chess/index.tsx:625
+#: src/features/chess/index.tsx:610
 msgid "Deleting..."
 msgstr "删除中..."
 
@@ -841,11 +865,15 @@ msgstr "下载"
 msgid "Download failed"
 msgstr "下载失败"
 
+#: src/features/chess/index.tsx:370
+msgid "Draw"
+msgstr "和棋"
+
 #: src/features/chess/components/chat-message-list.tsx:45
 msgid "Draw agreed"
 msgstr "同意和棋"
 
-#: src/features/chess/index.tsx:496
+#: src/features/chess/index.tsx:481
 msgid "Draw offered — waiting for {opponentName}"
 msgstr "已提议和棋 — 等待 {opponentName}"
 
@@ -931,7 +959,7 @@ msgstr "外部 URL"
 msgid "Extra large"
 msgstr "特大"
 
-#: src/features/chess/index.tsx:231
+#: src/features/chess/index.tsx:185
 msgid "Failed to accept draw"
 msgstr "接受和棋失败"
 
@@ -949,11 +977,11 @@ msgstr "创建游戏失败"
 msgid "Failed to create link"
 msgstr "创建链接失败"
 
-#: src/features/chess/index.tsx:246
+#: src/features/chess/index.tsx:200
 msgid "Failed to create rematch"
 msgstr "创建再赛失败"
 
-#: src/features/chess/index.tsx:236
+#: src/features/chess/index.tsx:190
 msgid "Failed to decline draw"
 msgstr "拒绝和棋失败"
 
@@ -965,7 +993,7 @@ msgstr "删除附件失败"
 msgid "Failed to delete comment"
 msgstr "删除评论失败"
 
-#: src/features/chess/index.tsx:258
+#: src/features/chess/index.tsx:212
 msgid "Failed to delete game"
 msgstr "删除游戏失败"
 
@@ -993,11 +1021,11 @@ msgstr "无法加载图片"
 msgid "Failed to load video"
 msgstr "无法加载视频"
 
-#: src/features/chess/index.tsx:209
+#: src/features/chess/index.tsx:163
 msgid "Failed to make move"
 msgstr "走子失败"
 
-#: src/features/chess/index.tsx:226
+#: src/features/chess/index.tsx:180
 msgid "Failed to offer draw"
 msgstr "提议和棋失败"
 
@@ -1005,7 +1033,7 @@ msgstr "提议和棋失败"
 msgid "Failed to post comment"
 msgstr "发布评论失败"
 
-#: src/features/chess/index.tsx:219
+#: src/features/chess/index.tsx:173
 msgid "Failed to resign"
 msgstr "认输失败"
 
@@ -1013,8 +1041,8 @@ msgstr "认输失败"
 msgid "Failed to revoke RSS access"
 msgstr "撤销 RSS 访问权限失败"
 
-#: src/features/chess/index.tsx:554
-#: src/features/chess/index.tsx:587
+#: src/features/chess/index.tsx:539
+#: src/features/chess/index.tsx:572
 msgid "Failed to send"
 msgstr "发送失败"
 
@@ -1068,9 +1096,13 @@ msgstr "来自主题"
 msgid "Game created"
 msgstr "已创建游戏"
 
-#: src/features/chess/index.tsx:254
+#: src/features/chess/index.tsx:208
 msgid "Game deleted"
 msgstr "已删除游戏"
+
+#: src/features/chess/index.tsx:379
+msgid "Game state unavailable"
+msgstr "无法获取对局状态"
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx:26
 #: ../../../lib/web/src/features/errors/unauthorized-error.tsx:26
@@ -1445,7 +1477,7 @@ msgstr "通知：{0}"
 msgid "Number"
 msgstr "数字"
 
-#: src/features/chess/index.tsx:467
+#: src/features/chess/index.tsx:452
 msgid "Offer draw"
 msgstr "提议和棋"
 
@@ -1462,11 +1494,11 @@ msgstr "抱歉!页面未找到!"
 msgid "Open actions"
 msgstr "打开操作"
 
-#: src/features/chess/index.tsx:446
+#: src/features/chess/index.tsx:431
 msgid "Open chat panel"
 msgstr "打开聊天面板"
 
-#: src/features/chess/index.tsx:454
+#: src/features/chess/index.tsx:439
 msgid "Open game actions"
 msgstr "打开游戏操作"
 
@@ -1647,7 +1679,7 @@ msgstr "相对时间(5分钟、3小时、2天)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "24 小时内显示相对时间,否则显示绝对时间"
 
-#: src/features/chess/index.tsx:480
+#: src/features/chess/index.tsx:465
 msgid "Rematch"
 msgstr "再来一局"
 
@@ -1723,16 +1755,16 @@ msgstr "必填"
 msgid "Resend email"
 msgstr "重新发送邮件"
 
-#: src/features/chess/index.tsx:471
-#: src/features/chess/index.tsx:607
+#: src/features/chess/index.tsx:456
+#: src/features/chess/index.tsx:592
 msgid "Resign"
 msgstr "认输"
 
-#: src/features/chess/index.tsx:598
+#: src/features/chess/index.tsx:583
 msgid "Resign game?"
 msgstr "认输?"
 
-#: src/features/chess/index.tsx:604
+#: src/features/chess/index.tsx:589
 msgid "Resigning..."
 msgstr "正在认输..."
 
@@ -1995,6 +2027,10 @@ msgstr "来源"
 msgid "Spacious"
 msgstr "宽松"
 
+#: src/features/chess/index.tsx:368
+msgid "Stalemate — draw"
+msgstr "逼和 — 和棋"
+
 #: src/features/chess/components/new-game.tsx:99
 msgid "Start a new chess game"
 msgstr "开始新国际象棋对局"
@@ -2082,7 +2118,7 @@ msgstr "找不到请求的内容。"
 msgid "The server returned a web page instead of data."
 msgstr "服务器返回了网页而不是数据。"
 
-#: src/features/chess/index.tsx:620
+#: src/features/chess/index.tsx:605
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "此操作将永久删除对局及其聊天记录，且无法撤销。"
 
@@ -2285,7 +2321,7 @@ msgid "Wednesday"
 msgstr "星期三"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:437
+#: src/features/chess/index.tsx:422
 msgid "White"
 msgstr "白"
 
@@ -2304,6 +2340,10 @@ msgstr "您"
 msgid "You do not have access to this section."
 msgstr "您无权访问此部分。"
 
+#: src/features/chess/index.tsx:374
+msgid "You resigned — {opponentName} wins"
+msgstr "你已认输 — {opponentName} 获胜"
+
 #: ../../../lib/web/src/components/restore-banner.tsx:100
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "您的账户已从 {source} 迁移至此。在您于那里删除之前，消息和通知可能会同时到达两个服务器，您的部分内容仍会从旧服务器提供，关注者可能需要几分钟才能在此找到您。"
@@ -2311,6 +2351,10 @@ msgstr "您的账户已从 {source} 迁移至此。在您于那里删除之前�
 #: ../../../lib/web/src/components/comment-composer.tsx:302
 msgid "Your attachments will be lost."
 msgstr "您的附件将丢失。"
+
+#: src/features/chess/index.tsx:385
+msgid "Your move"
+msgstr "轮到您"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:300
 msgid "Your text and attachments will be lost."

@@ -103,6 +103,14 @@ msgstr "{name} ఓటమిని అంగీకరించారు"
 msgid "{opponentName} offered a draw"
 msgstr "{opponentName} డ్రా అందించారు"
 
+#: src/features/chess/index.tsx:373
+msgid "{opponentName} resigned — you win!"
+msgstr "{opponentName} లొంగిపోయారు — మీరు గెలిచారు!"
+
+#: src/features/chess/index.tsx:386
+msgid "{opponentName}'s move"
+msgstr "{opponentName} వంతు"
+
 #: ../../../lib/web/src/components/attachment-composer.tsx:248
 #: ../../../lib/web/src/components/ui/upload-progress.tsx:52
 msgid "{sentLabel} of {totalLabel}"
@@ -306,7 +314,7 @@ msgstr "మీరు ఈ వ్యాఖ్యను తొలగించాల
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "మీరు లాగ్ అవుట్ చేయాలనుకుంటున్నారా? మీ ఖాతాను యాక్సెస్ చేయడానికి మీరు మళ్లీ లాగిన్ చేయవలసి ఉంటుంది."
 
-#: src/features/chess/index.tsx:599
+#: src/features/chess/index.tsx:584
 msgid "Are you sure you want to resign? {opponentName} will win the game."
 msgstr "మీరు నిజంగా రాజీనామా చేయాలనుకుంటున్నారా? {opponentName} ఆటను గెలుస్తాడు."
 
@@ -361,7 +369,7 @@ msgid "bishop"
 msgstr "శకటం"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:437
+#: src/features/chess/index.tsx:422
 msgid "Black"
 msgstr "నలుపు"
 
@@ -444,10 +452,18 @@ msgstr "ఈ నోటిఫికేషన్ల కోసం వర్గం"
 msgid "Change notification category"
 msgstr "నోటిఫికేషన్ వర్గాన్ని మార్చండి"
 
-#: src/features/chess/index.tsx:537
-#: src/features/chess/index.tsx:570
+#: src/features/chess/index.tsx:522
+#: src/features/chess/index.tsx:555
 msgid "Chat"
 msgstr "చాట్"
+
+#: src/features/chess/index.tsx:383
+msgid "Check — {opponentName}'s move"
+msgstr "చెక్ — {opponentName} వంతు"
+
+#: src/features/chess/index.tsx:382
+msgid "Check — your move"
+msgstr "చెక్ — మీ వంతు"
 
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx:137
 msgid "Checkbox"
@@ -457,9 +473,17 @@ msgstr "చెక్‌బాక్స్"
 msgid "Checklist"
 msgstr "చెక్‌లిస్ట్"
 
-#: src/features/chess/index.tsx:106
+#: src/features/chess/index.tsx:366
+msgid "Checkmate — {opponentName} wins"
+msgstr "చెక్‌మేట్ — {opponentName} గెలిచారు"
+
 #: src/features/chess/index.tsx:365
-#: src/features/chess/index.tsx:377
+msgid "Checkmate — you win!"
+msgstr "చెక్‌మేట్ — మీరు గెలిచారు!"
+
+#: src/features/chess/index.tsx:60
+#: src/features/chess/index.tsx:319
+#: src/features/chess/index.tsx:331
 msgid "Chess"
 msgstr "చెస్"
 
@@ -727,7 +751,7 @@ msgstr "డిఫాల్ట్ క్రమబద్ధీకరణ"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:203
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:252
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:314
-#: src/features/chess/index.tsx:628
+#: src/features/chess/index.tsx:613
 msgid "Delete"
 msgstr "తొలగించండి"
 
@@ -747,11 +771,11 @@ msgstr "వ్యాఖ్యను తొలగించండి"
 msgid "Delete field"
 msgstr "ఫీల్డ్‌ను తొలగించండి"
 
-#: src/features/chess/index.tsx:483
+#: src/features/chess/index.tsx:468
 msgid "Delete game"
 msgstr "ఆటను తొలగించండి"
 
-#: src/features/chess/index.tsx:619
+#: src/features/chess/index.tsx:604
 msgid "Delete game?"
 msgstr "గేమ్‌ను తొలగించాలా?"
 
@@ -773,7 +797,7 @@ msgstr "వీక్షణను తొలగించండి"
 msgid "Delete your account on the old server"
 msgstr "పాత సర్వర్‌లో మీ ఖాతాను తొలగించండి"
 
-#: src/features/chess/index.tsx:625
+#: src/features/chess/index.tsx:610
 msgid "Deleting..."
 msgstr "తొలగిస్తోంది..."
 
@@ -841,11 +865,15 @@ msgstr "డౌన్‌లోడ్"
 msgid "Download failed"
 msgstr "డౌన్‌లోడ్ విఫలమైంది"
 
+#: src/features/chess/index.tsx:370
+msgid "Draw"
+msgstr "డ్రా"
+
 #: src/features/chess/components/chat-message-list.tsx:45
 msgid "Draw agreed"
 msgstr "డ్రాకు అంగీకరించారు"
 
-#: src/features/chess/index.tsx:496
+#: src/features/chess/index.tsx:481
 msgid "Draw offered — waiting for {opponentName}"
 msgstr "డ్రా అందించబడింది — {opponentName} కోసం వేచి ఉంది"
 
@@ -931,7 +959,7 @@ msgstr "బాహ్య URL"
 msgid "Extra large"
 msgstr "అదనపు పెద్దది"
 
-#: src/features/chess/index.tsx:231
+#: src/features/chess/index.tsx:185
 msgid "Failed to accept draw"
 msgstr "డ్రాను అంగీకరించడంలో విఫలమైంది"
 
@@ -949,11 +977,11 @@ msgstr "ఆటను సృష్టించడంలో విఫలమైం�
 msgid "Failed to create link"
 msgstr "లింక్‌ను సృష్టించడంలో విఫలమైంది"
 
-#: src/features/chess/index.tsx:246
+#: src/features/chess/index.tsx:200
 msgid "Failed to create rematch"
 msgstr "రీమ్యాచ్‌ను సృష్టించడంలో విఫలమైంది"
 
-#: src/features/chess/index.tsx:236
+#: src/features/chess/index.tsx:190
 msgid "Failed to decline draw"
 msgstr "డ్రాను తిరస్కరించడంలో విఫలమైంది"
 
@@ -965,7 +993,7 @@ msgstr "జోడింపును తొలగించడంలో విఫ�
 msgid "Failed to delete comment"
 msgstr "వ్యాఖ్యను తొలగించడంలో విఫలమైంది"
 
-#: src/features/chess/index.tsx:258
+#: src/features/chess/index.tsx:212
 msgid "Failed to delete game"
 msgstr "ఆటను తొలగించడంలో విఫలమైంది"
 
@@ -993,11 +1021,11 @@ msgstr "చిత్రాన్ని లోడ్ చేయడంలో వి
 msgid "Failed to load video"
 msgstr "వీడియోను లోడ్ చేయడంలో విఫలమైంది"
 
-#: src/features/chess/index.tsx:209
+#: src/features/chess/index.tsx:163
 msgid "Failed to make move"
 msgstr "ఎత్తు వేయడంలో విఫలమైంది"
 
-#: src/features/chess/index.tsx:226
+#: src/features/chess/index.tsx:180
 msgid "Failed to offer draw"
 msgstr "డ్రాను ఆఫర్ చేయడంలో విఫలమైంది"
 
@@ -1005,7 +1033,7 @@ msgstr "డ్రాను ఆఫర్ చేయడంలో విఫలమై
 msgid "Failed to post comment"
 msgstr "వ్యాఖ్యను పోస్ట్ చేయడంలో విఫలమైంది"
 
-#: src/features/chess/index.tsx:219
+#: src/features/chess/index.tsx:173
 msgid "Failed to resign"
 msgstr "రాజీనామా చేయడంలో విఫలమైంది"
 
@@ -1013,8 +1041,8 @@ msgstr "రాజీనామా చేయడంలో విఫలమైంద�
 msgid "Failed to revoke RSS access"
 msgstr "RSS యాక్సెస్ ఉపసంహరించడంలో విఫలమైంది"
 
-#: src/features/chess/index.tsx:554
-#: src/features/chess/index.tsx:587
+#: src/features/chess/index.tsx:539
+#: src/features/chess/index.tsx:572
 msgid "Failed to send"
 msgstr "పంపడంలో విఫలమైంది"
 
@@ -1068,9 +1096,13 @@ msgstr "థీమ్ నుండి"
 msgid "Game created"
 msgstr "ఆట సృష్టించబడింది"
 
-#: src/features/chess/index.tsx:254
+#: src/features/chess/index.tsx:208
 msgid "Game deleted"
 msgstr "ఆట తొలగించబడింది"
+
+#: src/features/chess/index.tsx:379
+msgid "Game state unavailable"
+msgstr "ఆట స్థితి అందుబాటులో లేదు"
 
 #: ../../../lib/web/src/features/errors/not-found-error.tsx:26
 #: ../../../lib/web/src/features/errors/unauthorized-error.tsx:26
@@ -1445,7 +1477,7 @@ msgstr "నోటిఫికేషన్‌లు: {0}"
 msgid "Number"
 msgstr "సంఖ్య"
 
-#: src/features/chess/index.tsx:467
+#: src/features/chess/index.tsx:452
 msgid "Offer draw"
 msgstr "డ్రా ఆఫర్ చేయండి"
 
@@ -1462,11 +1494,11 @@ msgstr "అయ్యో! పేజీ కనుగొనబడలేదు!"
 msgid "Open actions"
 msgstr "చర్యలను తెరవండి"
 
-#: src/features/chess/index.tsx:446
+#: src/features/chess/index.tsx:431
 msgid "Open chat panel"
 msgstr "చాట్ ప్యానెల్‌ను ఓపెన్ చేయండి"
 
-#: src/features/chess/index.tsx:454
+#: src/features/chess/index.tsx:439
 msgid "Open game actions"
 msgstr "గేమ్ చర్యలను ఓపెన్ చేయండి"
 
@@ -1647,7 +1679,7 @@ msgstr "సాపేక్ష (5m, 3h, 2d)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "24 గంటల్లో సాపేక్ష, లేకపోతే నిరపేక్ష"
 
-#: src/features/chess/index.tsx:480
+#: src/features/chess/index.tsx:465
 msgid "Rematch"
 msgstr "రీమ్యాచ్"
 
@@ -1723,16 +1755,16 @@ msgstr "అవసరం"
 msgid "Resend email"
 msgstr "ఇమెయిల్‌ను మళ్లీ పంపండి"
 
-#: src/features/chess/index.tsx:471
-#: src/features/chess/index.tsx:607
+#: src/features/chess/index.tsx:456
+#: src/features/chess/index.tsx:592
 msgid "Resign"
 msgstr "రిజైన్"
 
-#: src/features/chess/index.tsx:598
+#: src/features/chess/index.tsx:583
 msgid "Resign game?"
 msgstr "గేమ్‌ను రిజైన్ చేయాలా?"
 
-#: src/features/chess/index.tsx:604
+#: src/features/chess/index.tsx:589
 msgid "Resigning..."
 msgstr "రిజైన్ చేస్తోంది..."
 
@@ -1995,6 +2027,10 @@ msgstr "సోర్స్‌లు"
 msgid "Spacious"
 msgstr "విశాలమైన"
 
+#: src/features/chess/index.tsx:368
+msgid "Stalemate — draw"
+msgstr "స్టేల్‌మేట్ — డ్రా"
+
 #: src/features/chess/components/new-game.tsx:99
 msgid "Start a new chess game"
 msgstr "కొత్త chess గేమ్‌ను ప్రారంభించండి"
@@ -2082,7 +2118,7 @@ msgstr "అభ్యర్థించిన కంటెంట్ కనుగ�
 msgid "The server returned a web page instead of data."
 msgstr "సర్వర్ డేటాకు బదులుగా వెబ్ పేజీని అందించింది."
 
-#: src/features/chess/index.tsx:620
+#: src/features/chess/index.tsx:605
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "ఇది గేమ్‌ను మరియు దాని చాట్‌ను శాశ్వతంగా తొలగిస్తుంది. ఈ చర్యను తిరిగి మార్చలేరు."
 
@@ -2285,7 +2321,7 @@ msgid "Wednesday"
 msgstr "బుధవారం"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:437
+#: src/features/chess/index.tsx:422
 msgid "White"
 msgstr "తెలుపు"
 
@@ -2304,6 +2340,10 @@ msgstr "మీరు"
 msgid "You do not have access to this section."
 msgstr "ఈ విభాగానికి మీకు యాక్సెస్ లేదు."
 
+#: src/features/chess/index.tsx:374
+msgid "You resigned — {opponentName} wins"
+msgstr "మీరు లొంగిపోయారు — {opponentName} గెలిచారు"
+
 #: ../../../lib/web/src/components/restore-banner.tsx:100
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "మీ ఖాతా {source} నుండి ఇక్కడికి తరలించబడింది. మీరు అక్కడ దాన్ని తొలగించే వరకు, సందేశాలు మరియు నోటిఫికేషన్లు రెండు సర్వర్లకు చేరవచ్చు, మీ కొంత కంటెంట్ పాత సర్వర్ నుండి అందించబడుతూ ఉంటుంది, మరియు ఫాలోవర్లు మిమ్మల్ని ఇక్కడ కనుగొనడానికి కొన్ని నిమిషాలు పట్టవచ్చు."
@@ -2311,6 +2351,10 @@ msgstr "మీ ఖాతా {source} నుండి ఇక్కడికి �
 #: ../../../lib/web/src/components/comment-composer.tsx:302
 msgid "Your attachments will be lost."
 msgstr "మీ జోడింపులు పోతాయి."
+
+#: src/features/chess/index.tsx:385
+msgid "Your move"
+msgstr "మీ మూవ్"
 
 #: ../../../lib/web/src/components/comment-composer.tsx:300
 msgid "Your text and attachments will be lost."
