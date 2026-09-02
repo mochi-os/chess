@@ -21,10 +21,8 @@ import {
   getErrorMessage,
   toast,
   Skeleton,
-  Sheet,
-  SheetContent,
-  SheetHeader,
-  SheetTitle,
+  GameChatSidebar,
+  GameChatSheet,
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
@@ -52,7 +50,6 @@ import { GameEmptyState } from './components/game-empty-state'
 import { ChessBoard } from './components/chess-board'
 import { DrawOfferBanner } from './components/draw-offer-banner'
 import { ChatMessageList } from './components/chat-message-list'
-import { ChatInput } from './components/chat-input'
 
 
 export function ChessGame() {
@@ -426,7 +423,7 @@ export function ChessGame() {
                       <>
                         <IconButton
                           variant='ghost'
-                          className='min-[900px]:hidden'
+                          className='lg:hidden'
                           onClick={() => setShowMobileChat(true)}
                           label={t`Open chat panel`}
                         >
@@ -517,43 +514,38 @@ export function ChessGame() {
           </div>
 
           {/* Right: Chat sidebar */}
-          <div className="hidden min-[900px]:flex w-72 lg:w-80 flex-col border-s">
-            <div className="border-b px-3 py-2">
-              <h3 className="text-sm font-medium"><Trans>Chat</Trans></h3>
-            </div>
-            <ChatMessageList
-              key={selectedGame.id}
-              messagesQuery={messagesQuery}
-              chatMessages={chatMessages}
-              isLoadingMessages={messagesQuery.isLoading}
-              messagesError={messagesQuery.error}
-              currentUserIdentity={myIdentity}
-            />
-            <ChatInput
-              newMessage={newMessage}
-              setNewMessage={setNewMessage}
-              onSendMessage={handleSendMessage}
-              isSending={sendMessageMutation.isPending}
-              errorMessage={
-                sendMessageMutation.error
-                  ? getErrorMessage(sendMessageMutation.error, t`Failed to send`)
-                  : null
-              }
-            />
-          </div>
+          <GameChatSidebar
+            className="hidden lg:flex w-72 xl:w-80"
+            title={<Trans>Chat</Trans>}
+            messageList={
+              <ChatMessageList
+                key={selectedGame.id}
+                messagesQuery={messagesQuery}
+                chatMessages={chatMessages}
+                isLoadingMessages={messagesQuery.isLoading}
+                messagesError={messagesQuery.error}
+                currentUserIdentity={myIdentity}
+              />
+            }
+            newMessage={newMessage}
+            setNewMessage={setNewMessage}
+            onSendMessage={handleSendMessage}
+            isSending={sendMessageMutation.isPending}
+            sendErrorMessage={
+              sendMessageMutation.error
+                ? getErrorMessage(sendMessageMutation.error, t`Failed to send`)
+                : null
+            }
+          />
         </Main>
       </div>
 
       {/* Mobile chat sheet */}
-      <Sheet open={showMobileChat} onOpenChange={setShowMobileChat}>
-        <SheetContent
-          side="right"
-          className="flex flex-col p-0 w-80"
-          onOpenAutoFocus={(event) => event.preventDefault()}
-        >
-          <SheetHeader className="border-b px-3 py-2">
-            <SheetTitle className="text-sm font-medium"><Trans>Chat</Trans></SheetTitle>
-          </SheetHeader>
+      <GameChatSheet
+        open={showMobileChat}
+        onOpenChange={setShowMobileChat}
+        title={<Trans>Chat</Trans>}
+        messageList={
           <ChatMessageList
             key={selectedGame.id}
             messagesQuery={messagesQuery}
@@ -562,19 +554,17 @@ export function ChessGame() {
             messagesError={messagesQuery.error}
             currentUserIdentity={myIdentity}
           />
-          <ChatInput
-            newMessage={newMessage}
-            setNewMessage={setNewMessage}
-            onSendMessage={handleSendMessage}
-            isSending={sendMessageMutation.isPending}
-            errorMessage={
-              sendMessageMutation.error
-                ? getErrorMessage(sendMessageMutation.error, t`Failed to send`)
-                : null
-            }
-          />
-        </SheetContent>
-      </Sheet>
+        }
+        newMessage={newMessage}
+        setNewMessage={setNewMessage}
+        onSendMessage={handleSendMessage}
+        isSending={sendMessageMutation.isPending}
+        sendErrorMessage={
+          sendMessageMutation.error
+            ? getErrorMessage(sendMessageMutation.error, t`Failed to send`)
+            : null
+        }
+      />
 
       {/* Resign confirmation */}
       <ConfirmDialog
