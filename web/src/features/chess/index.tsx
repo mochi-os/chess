@@ -29,6 +29,7 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
+  getAppPath,
 } from '@mochi/web'
 import { MoreHorizontal, Trash2, Loader2, Flag, Handshake, RotateCcw, MessageCircle } from 'lucide-react'
 import { useSidebarContext } from '@/context/sidebar-context'
@@ -390,6 +391,12 @@ export function ChessGame() {
       ? game.opponent
       : game.identity
     : ''
+  // The opponent's avatar and style come through this app's own game-bound
+  // player-asset route, never a cross-app fetch from the people app.
+  const opponentAssetUrl = (asset: 'avatar' | 'style') =>
+    opponentFingerprint && selectedGameId
+      ? `${getAppPath()}/${selectedGameId}/-/user/${opponentFingerprint}/asset/${asset}`
+      : null
 
   return (
     <>
@@ -413,8 +420,9 @@ export function ChessGame() {
                     variant='strip'
                     myTurn={game.status === 'active' ? isMyTurn : undefined}
                     title={opponentName}
-                    opponentFingerprint={opponentFingerprint || undefined}
                     opponentName={opponentName}
+                    opponentAvatarUrl={opponentAssetUrl('avatar')}
+                    opponentStyleUrl={opponentAssetUrl('style')}
                     status={headline}
                     stats={
                       <GameHeaderStat
