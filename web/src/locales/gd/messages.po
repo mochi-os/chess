@@ -18,7 +18,7 @@ msgstr ""
 msgid "Please check your internet connection and try again."
 msgstr "Thoir sùil air a' cheangal eadar-lìn agad agus feuch ris a-rithist."
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:301
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:295
 msgid " or "
 msgstr " no "
 
@@ -103,11 +103,11 @@ msgstr "Ghèill {name}"
 msgid "{opponentName} offered a draw"
 msgstr "Thairg {opponentName} co-ionann"
 
-#: src/features/chess/index.tsx:373
+#: src/features/chess/index.tsx:356
 msgid "{opponentName} resigned — you win!"
 msgstr "Ghèill {opponentName} — bhuannaich thu!"
 
-#: src/features/chess/index.tsx:386
+#: src/features/chess/index.tsx:369
 msgid "{opponentName}'s move"
 msgstr "Car {opponentName}"
 
@@ -173,9 +173,13 @@ msgstr "Ìre inntrigidh"
 msgid "Account type"
 msgstr "Seòrsa cunntais"
 
-#: src/components/layout/chess-layout.tsx:58
+#: src/components/layout/chess-layout.tsx:42
 msgid "Active games"
 msgstr "Geamannan gnìomhach"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:413
+msgid "Activity"
+msgstr ""
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:720
 #: ../../../lib/web/src/features/access/access-dialog.tsx:332
@@ -216,11 +220,11 @@ msgstr "Cuir nì ris an liosta-dearbhaidh"
 msgid "Add field"
 msgstr "Cuir raon ris"
 
-#: src/features/chess/components/new-game.tsx:121
+#: src/features/chess/components/new-game.tsx:83
 msgid "Add friends"
 msgstr "Cuir caraidean ris"
 
-#: src/features/chess/components/new-game.tsx:114
+#: src/features/chess/components/new-game.tsx:82
 msgid "Add friends in the People app to start playing"
 msgstr "Cuir caraidean ris ann an aplacaid Daoine gus tòiseachadh a' cluich"
 
@@ -228,7 +232,7 @@ msgstr "Cuir caraidean ris ann an aplacaid Daoine gus tòiseachadh a' cluich"
 msgid "Add item..."
 msgstr "Cuir nì ris..."
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:320
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:314
 msgid "Add link"
 msgstr "Cuir ceangal ris"
 
@@ -302,6 +306,10 @@ msgstr "Sguiridh rud sam bith a tha air fo-sgrìobhadh ris an inbhir seo ga fhai
 msgid "Are you sure you want to delete \"{0}\"?"
 msgstr "A bheil thu cinnteach gu bheil thu airson \"{0}\" a sguabadh às?"
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:660
+msgid "Are you sure you want to delete \"{title}\"? This action cannot be undone."
+msgstr ""
+
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:629
 msgid "Are you sure you want to delete the \"{name}\" column? This cannot be undone."
 msgstr "A bheil thu cinnteach gu bheil thu airson an colbh \"{name}\" a sguabadh às? Cha ghabh seo a thilleadh."
@@ -314,7 +322,11 @@ msgstr "A bheil thu cinnteach gu bheil thu airson am beachd seo a sguabadh às? 
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "A bheil thu cinnteach gu bheil thu airson clàradh a-mach? Feumaidh tu clàradh a-steach a-rithist gus do chunntas inntrigeadh."
 
-#: src/features/chess/index.tsx:584
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:39
+msgid "Are you sure you want to resign?"
+msgstr ""
+
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:38
 msgid "Are you sure you want to resign? {opponentName} will win the game."
 msgstr "A bheil thu cinnteach gu bheil thu airson dreuchd a leigeil dhìot? Buannaichidh {opponentName} an geama."
 
@@ -360,16 +372,25 @@ msgstr "Air ais"
 msgid "Back to home"
 msgstr "Air ais dhan dachaigh"
 
+#: ../../../lib/web/src/components/banner-section.tsx:80
 #: ../../../lib/web/src/components/entity-banner.tsx:17
 msgid "Banner"
 msgstr "Bratach"
+
+#: ../../../lib/web/src/components/banner-section.tsx:69
+msgid "Banner removed"
+msgstr ""
+
+#: ../../../lib/web/src/components/banner-section.tsx:69
+msgid "Banner updated"
+msgstr ""
 
 #: src/features/chess/lib/use-chess-piece-name.ts:20
 msgid "bishop"
 msgstr "easbaig"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:422
+#: src/features/chess/index.tsx:405
 msgid "Black"
 msgstr "Dubh"
 
@@ -380,8 +401,8 @@ msgstr "Dubh"
 msgid "Black {0}"
 msgstr "Dubh {0}"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:68
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:215
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:72
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:209
 msgid "Blocked by"
 msgstr "Bacte le"
 
@@ -390,7 +411,7 @@ msgstr "Bacte le"
 msgid "Blocked navigation to untrusted link"
 msgstr "Chaidh seòladaireachd gu ceangal neo-earbsach a bhacadh"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:66
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:70
 msgid "Blocks"
 msgstr "Blocaichean"
 
@@ -425,7 +446,7 @@ msgstr "Brathan brabhsair"
 #: ../../../lib/web/src/features/access/access-list.tsx:268
 #: ../../../lib/web/src/features/accounts/account-add.tsx:201
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:91
-#: src/features/chess/components/new-game.tsx:145
+#: src/features/chess/components/new-game.tsx:86
 #: src/features/chess/components/promotion-dialog.tsx:111
 msgid "Cancel"
 msgstr "Sguir dheth"
@@ -452,16 +473,15 @@ msgstr "Roinn airson nam brathan seo"
 msgid "Change notification category"
 msgstr "Atharraich roinn nam brathan"
 
-#: src/features/chess/index.tsx:522
-#: src/features/chess/index.tsx:555
+#: src/features/chess/index.tsx:505
 msgid "Chat"
 msgstr "Còmhradh"
 
-#: src/features/chess/index.tsx:383
+#: src/features/chess/index.tsx:366
 msgid "Check — {opponentName}'s move"
 msgstr "Cunnart — car {opponentName}"
 
-#: src/features/chess/index.tsx:382
+#: src/features/chess/index.tsx:365
 msgid "Check — your move"
 msgstr "Cunnart — do char"
 
@@ -473,17 +493,17 @@ msgstr "Bogsa-cromaige"
 msgid "Checklist"
 msgstr "Liosta-dearbhaidh"
 
-#: src/features/chess/index.tsx:366
+#: src/features/chess/index.tsx:349
 msgid "Checkmate — {opponentName} wins"
 msgstr "Tul-chunnart — buannaichidh {opponentName}"
 
-#: src/features/chess/index.tsx:365
+#: src/features/chess/index.tsx:348
 msgid "Checkmate — you win!"
 msgstr "Tul-chunnart — bhuannaich thu!"
 
-#: src/features/chess/index.tsx:60
-#: src/features/chess/index.tsx:319
-#: src/features/chess/index.tsx:331
+#: src/features/chess/index.tsx:58
+#: src/features/chess/index.tsx:307
+#: src/features/chess/index.tsx:316
 msgid "Chess"
 msgstr "Tàileasg"
 
@@ -499,15 +519,16 @@ msgstr "Bòrd tàileisg. Do char-sa. Cleachd na h-iuchraichean saighde gus seòl
 msgid "Choose a game from the sidebar or start a new one."
 msgstr "Tagh geama bhon bhàr-thaobh no tòisich fear ùr."
 
-#: ../../../lib/web/src/components/language-picker.tsx:264
-#: ../../../lib/web/src/components/language-picker.tsx:271
+#: ../../../lib/web/src/components/language-picker.tsx:267
+#: ../../../lib/web/src/components/language-picker.tsx:274
 msgid "Choose language"
 msgstr "Tagh cànan"
 
-#: src/features/chess/components/new-game.tsx:105
+#: src/features/chess/components/new-game.tsx:80
 msgid "Choose opponent"
 msgstr "Tagh nàmhaid"
 
+#: ../../../lib/web/src/components/banner-section.tsx:111
 #: ../../../lib/web/src/components/colour-picker.tsx:274
 #: ../../../lib/web/src/components/colour-picker.tsx:355
 #: ../../../lib/web/src/components/travelling-picker.tsx:164
@@ -525,8 +546,8 @@ msgstr "Falamhaich a h-uile"
 msgid "Clear search"
 msgstr "Falamhaich an lorg"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:501
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:506
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:495
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:500
 #: ../../../lib/web/src/components/ui/dialog.tsx:78
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:468
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:471
@@ -601,11 +622,16 @@ msgstr "Gnìomhan beachd"
 msgid "Comments"
 msgstr "Beachdan"
 
+#. placeholder {0}: data.comment_count || 0
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:409
+msgid "Comments ({0})"
+msgstr ""
+
 #: ../../../lib/web/src/lib/preference-utils.ts:90
 msgid "Compact"
 msgstr "Dùmhail"
 
-#: src/components/layout/chess-layout.tsx:59
+#: src/components/layout/chess-layout.tsx:43
 msgid "Completed"
 msgstr "Crìochnaichte"
 
@@ -684,8 +710,8 @@ msgstr "Cha b' urrainn dearbhadh leis a' chunntas sin. Feuch ris a-rithist."
 
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:550
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:689
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:491
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:656
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:485
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:650
 #: ../../../lib/web/src/components/entity/entity-tree-view.tsx:675
 msgid "Create"
 msgstr "Cruthaich"
@@ -704,9 +730,9 @@ msgstr "Cruthaich nì ùr"
 msgid "Created"
 msgstr "Cruthaichte"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:656
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:650
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:258
-#: src/features/chess/components/new-game.tsx:153
+#: src/features/chess/components/new-game.tsx:88
 msgid "Creating..."
 msgstr "A' cruthachadh..."
 
@@ -714,6 +740,7 @@ msgstr "A' cruthachadh..."
 msgid "Current location"
 msgstr "An t-àite làithreach"
 
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:132
 #: ../../../lib/web/src/components/colour-picker.tsx:265
 msgid "Custom"
 msgstr "Gnàthaichte"
@@ -734,6 +761,10 @@ msgstr "Ceann-là"
 msgid "Decline"
 msgstr "Diùlt"
 
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:129
+msgid "Default"
+msgstr ""
+
 #: ../../../lib/web/src/features/accounts/account-add.tsx:185
 msgid "Default AI account"
 msgstr "Cunntas AI bunaiteach"
@@ -751,7 +782,8 @@ msgstr "Seòrsachadh bunaiteach"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:203
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:252
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:314
-#: src/features/chess/index.tsx:613
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:661
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:78
 msgid "Delete"
 msgstr "Sguab às"
 
@@ -771,13 +803,19 @@ msgstr "Sguab às beachd"
 msgid "Delete field"
 msgstr "Sguab às raon"
 
-#: src/features/chess/index.tsx:468
+#: src/features/chess/index.tsx:451
 msgid "Delete game"
 msgstr "Sguab às geama"
 
-#: src/features/chess/index.tsx:604
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:69
 msgid "Delete game?"
 msgstr "A bheil thu airson an geama a sguabadh às?"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:478
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:483
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:659
+msgid "Delete item"
+msgstr ""
 
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:116
 msgid "Delete option"
@@ -797,7 +835,7 @@ msgstr "Sguab às sealladh"
 msgid "Delete your account on the old server"
 msgstr "Sguab às do chunntas air an t-seann fhrithealaiche"
 
-#: src/features/chess/index.tsx:610
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:75
 msgid "Deleting..."
 msgstr "A' sguabadh às..."
 
@@ -813,7 +851,7 @@ msgstr "Tuairisgeul"
 msgid "Details Panel"
 msgstr "Pannal mion-fhiosrachaidh"
 
-#: ../../../lib/web/src/components/language-picker.tsx:240
+#: ../../../lib/web/src/components/language-picker.tsx:243
 #: ../../../lib/web/src/components/timezone-select.tsx:46
 #: ../../../lib/web/src/components/timezone-select.tsx:83
 #: ../../../lib/web/src/lib/preference-utils.ts:23
@@ -851,6 +889,7 @@ msgid "Displays the mobile sidebar."
 msgstr "Seallaidh am bàr-thaobh fòn-làimhe."
 
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:305
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:487
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:518
 msgid "Done"
 msgstr "Deiseil"
@@ -865,7 +904,7 @@ msgstr "Luchdaich a-nuas"
 msgid "Download failed"
 msgstr "Dh’fhàillig an luchdadh a-nuas"
 
-#: src/features/chess/index.tsx:370
+#: src/features/chess/index.tsx:353
 msgid "Draw"
 msgstr "Geama ionann"
 
@@ -873,11 +912,11 @@ msgstr "Geama ionann"
 msgid "Draw agreed"
 msgstr "Geall-cothrom aontaichte"
 
-#: src/features/chess/index.tsx:481
+#: src/features/chess/index.tsx:464
 msgid "Draw offered — waiting for {opponentName}"
 msgstr "Tarraing air a thabhann — a' feitheamh ri {opponentName}"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:67
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:71
 msgid "Duplicates"
 msgstr "Dùblaichean"
 
@@ -932,6 +971,10 @@ msgstr "Post-d"
 msgid "Email code"
 msgstr "Còd puist-d"
 
+#: ../../../lib/web/src/components/banner-section.tsx:88
+msgid "Enter banner text (markdown supported)..."
+msgstr ""
+
 #: ../../../lib/web/src/components/step-up-dialog.tsx:302
 msgid "Enter the code from your email"
 msgstr "Cuir a-steach an còd on phost-d agad"
@@ -939,6 +982,10 @@ msgstr "Cuir a-steach an còd on phost-d agad"
 #: ../../../lib/web/src/components/step-up-dialog.tsx:327
 msgid "Enter your authenticator code"
 msgstr "Cuir a-steach còd na h-aplacaid dearbhaidh agad"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:379
+msgid "Error"
+msgstr ""
 
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:101
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:110
@@ -959,7 +1006,7 @@ msgstr "URL on taobh a-muigh"
 msgid "Extra large"
 msgstr "A bharrachd mòr"
 
-#: src/features/chess/index.tsx:185
+#: src/features/chess/index.tsx:174
 msgid "Failed to accept draw"
 msgstr "Cha do ghabh ri tarraing"
 
@@ -968,22 +1015,26 @@ msgstr "Cha do ghabh ri tarraing"
 msgid "Failed to copy"
 msgstr "Cha b' urrainn copaigeadh"
 
-#: src/features/chess/components/new-game.tsx:52
+#: src/features/chess/components/new-game.tsx:40
 msgid "Failed to create game"
 msgstr "Cha b' urrainn geama a chruthachadh"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:137
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:131
 #: ../../../lib/web/src/components/options-menu.tsx:98
 msgid "Failed to create link"
 msgstr "Cha b' urrainn ceangal a chruthachadh"
 
-#: src/features/chess/index.tsx:200
+#: src/features/chess/index.tsx:189
 msgid "Failed to create rematch"
 msgstr "Cha b' urrainn ath-mhaids a chruthachadh"
 
-#: src/features/chess/index.tsx:190
+#: src/features/chess/index.tsx:179
 msgid "Failed to decline draw"
 msgstr "Cha do ghabh ri diùltadh tarraing"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:301
+msgid "Failed to delete"
+msgstr ""
 
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:130
 msgid "Failed to delete attachment"
@@ -993,11 +1044,11 @@ msgstr "Cha b' urrainn ceangaltas a sguabadh às"
 msgid "Failed to delete comment"
 msgstr "Cha b' urrainn am beachd a sguabadh às"
 
-#: src/features/chess/index.tsx:212
+#: src/features/chess/index.tsx:201
 msgid "Failed to delete game"
 msgstr "Cha b' urrainn geama a sguabadh às"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:159
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:153
 msgid "Failed to delete link"
 msgstr "Cha b' urrainn ceangal a sguabadh às"
 
@@ -1017,15 +1068,28 @@ msgstr "Cha b' urrainn an eachdraidh a luchdadh"
 msgid "Failed to load image"
 msgstr "Dh'fhàillig luchdachadh an deilbh"
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:380
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:383
+msgid "Failed to load item"
+msgstr ""
+
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:213
+msgid "Failed to load prompts"
+msgstr ""
+
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:338
 msgid "Failed to load video"
 msgstr "Dh'fhàillig luchdachadh a' video"
 
-#: src/features/chess/index.tsx:163
+#: src/features/chess/index.tsx:152
 msgid "Failed to make move"
 msgstr "Cha b' urrainn an gluasad a dhèanamh"
 
-#: src/features/chess/index.tsx:180
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:315
+msgid "Failed to move"
+msgstr ""
+
+#: src/features/chess/index.tsx:169
 msgid "Failed to offer draw"
 msgstr "Cha b' urrainn tarraing a thabhann"
 
@@ -1033,7 +1097,11 @@ msgstr "Cha b' urrainn tarraing a thabhann"
 msgid "Failed to post comment"
 msgstr "Cha b' urrainn beachd a phostadh"
 
-#: src/features/chess/index.tsx:173
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:90
+msgid "Failed to reset prompt"
+msgstr ""
+
+#: src/features/chess/index.tsx:162
 msgid "Failed to resign"
 msgstr "Cha b' urrainn gèilleadh"
 
@@ -1041,20 +1109,35 @@ msgstr "Cha b' urrainn gèilleadh"
 msgid "Failed to revoke RSS access"
 msgstr "Cha b' urrainn inntrigeadh RSS a chùl-ghairm"
 
-#: src/features/chess/index.tsx:539
-#: src/features/chess/index.tsx:572
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:271
+msgid "Failed to save"
+msgstr ""
+
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:111
+msgid "Failed to save prompt"
+msgstr ""
+
+#: src/features/chess/index.tsx:522
 msgid "Failed to send"
 msgstr "Cha b' urrainn cur"
+
+#: ../../../lib/web/src/components/banner-section.tsx:71
+msgid "Failed to update banner"
+msgstr ""
 
 #: ../../../lib/web/src/components/entity/entity-comment-list.tsx:174
 msgid "Failed to update comment"
 msgstr "Cha b' urrainn am beachd ùrachadh"
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:286
+msgid "Failed to update watching"
+msgstr ""
+
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:114
 msgid "Failed to upload attachment"
 msgstr "Cha b' urrainn an ceangaltas a luchdadh suas"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:589
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:583
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:155
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:175
 msgid "Files"
@@ -1092,15 +1175,15 @@ msgstr "O"
 msgid "From theme"
 msgstr "On ùrlar"
 
-#: src/features/chess/components/new-game.tsx:48
+#: src/features/chess/components/new-game.tsx:36
 msgid "Game created"
 msgstr "Chaidh an geama a chruthachadh"
 
-#: src/features/chess/index.tsx:208
+#: src/features/chess/index.tsx:197
 msgid "Game deleted"
 msgstr "Chaidh an geama a sguabadh às"
 
-#: src/features/chess/index.tsx:379
+#: src/features/chess/index.tsx:362
 msgid "Game state unavailable"
 msgstr "Chan eil staid a' gheama ri fhaighinn"
 
@@ -1174,6 +1257,10 @@ msgstr "Ceann-latha mì-dhligheach"
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
 msgstr "Tha coltas nach eil an duilleag a tha thu a' sireadh <0/>ann no gun deach a toirt air falbh."
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:433
+msgid "Item details"
+msgstr ""
+
 #: ../../../lib/web/src/lib/locale-format.ts:165
 msgid "Just now"
 msgstr "An-dràsta fhèin"
@@ -1211,7 +1298,7 @@ msgstr "Soilleir"
 msgid "Link"
 msgstr "Ceangal"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:279
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:273
 msgid "Links"
 msgstr "Ceanglaichean"
 
@@ -1226,6 +1313,14 @@ msgstr "Luchdaich barrachd"
 #: ../../../lib/web/src/components/ui/loading-content.tsx:26
 msgid "Loading content…"
 msgstr "A’ luchdadh susbaint…"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:363
+msgid "Loading item"
+msgstr ""
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:364
+msgid "Loading item details"
+msgstr ""
 
 #: ../../../lib/web/src/components/ui/load-more.tsx:35
 #: ../../../lib/web/src/features/document/document-page.tsx:88
@@ -1328,15 +1423,15 @@ msgstr "Feumaidh an t-ainm a bhith 1000 caractaran no nas lugha"
 msgid "Network error"
 msgstr "Mearachd lìonraidh"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:476
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:470
 #: ../../../lib/web/src/components/ui/sort-selector.tsx:43
 msgid "New"
 msgstr "Ùr"
 
 #: ../../../lib/web/src/components/game/game-empty-state.tsx:39
 #: ../../../lib/web/src/components/game/game-empty-state.tsx:51
-#: src/components/layout/chess-layout.tsx:60
-#: src/features/chess/components/new-game.tsx:96
+#: src/components/layout/chess-layout.tsx:44
+#: src/features/chess/components/new-game.tsx:78
 msgid "New game"
 msgstr "Geama ùr"
 
@@ -1345,7 +1440,7 @@ msgstr "Geama ùr"
 msgid "Next image"
 msgstr "An ath dhealbh"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:555
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:549
 msgid "No {parentClassNames} to add to"
 msgstr "Chan eil {parentClassNames} ann ri chur ris"
 
@@ -1361,11 +1456,11 @@ msgstr "Chan eil gnìomhachd ann fhathast"
 msgid "No comments yet"
 msgstr "Chan eil beachdan ann fhathast"
 
-#: src/features/chess/components/new-game.tsx:131
+#: src/features/chess/components/new-game.tsx:85
 msgid "No friends found"
 msgstr "Cha deach caraidean a lorg"
 
-#: src/features/chess/components/new-game.tsx:113
+#: src/features/chess/components/new-game.tsx:81
 msgid "No friends yet"
 msgstr "Chan eil caraidean ann fhathast"
 
@@ -1377,11 +1472,11 @@ msgstr "Chan eil geamannan ann fhathast"
 msgid "No groups available"
 msgstr "Chan eil buidhnean rim faotainn"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:522
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:516
 msgid "No item types can be created yet. Create the required parent items first."
 msgstr "Chan urrainnear seòrsa nì sam bith a chruthachadh fhathast. Cruthaich na nithean pàrant riatanach an toiseach."
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:360
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:354
 msgid "No matching objects"
 msgstr "Chan eil nithean a' freagairt"
 
@@ -1434,9 +1529,13 @@ msgid "No views"
 msgstr "Gun shealladh"
 
 #: ../../../lib/web/src/components/colour-picker.tsx:349
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:538
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:541
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:545
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:532
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:535
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:539
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:548
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:561
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:562
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:566
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:359
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:382
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:385
@@ -1477,7 +1576,7 @@ msgstr "Brathan: {0}"
 msgid "Number"
 msgstr "Àireamh"
 
-#: src/features/chess/index.tsx:452
+#: src/features/chess/index.tsx:435
 msgid "Offer draw"
 msgstr "Tairg co-ionnan"
 
@@ -1494,11 +1593,11 @@ msgstr "Och! Cha deach an duilleag a lorg!"
 msgid "Open actions"
 msgstr "Fosgail na gnìomhan"
 
-#: src/features/chess/index.tsx:431
+#: src/features/chess/index.tsx:414
 msgid "Open chat panel"
 msgstr "Fosgail panail na cabadaich"
 
-#: src/features/chess/index.tsx:439
+#: src/features/chess/index.tsx:422
 msgid "Open game actions"
 msgstr "Fosgail gnìomhan a' gheama"
 
@@ -1548,7 +1647,8 @@ msgstr "Eile"
 msgid "Owner"
 msgstr "Sealbhadair"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:530
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:524
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:544
 msgid "Parent"
 msgstr "Pàrant"
 
@@ -1582,7 +1682,7 @@ msgstr "Thoir sùil air a' cheangal eadar-lìn agad agus feuch ris a-rithist."
 msgid "Please log in with the appropriate credentials <0/> to access this resource."
 msgstr "Clàraich a-steach le teisteanas iomchaidh <0/> gus an goireas seo inntrigeadh."
 
-#: src/features/chess/components/new-game.tsx:67
+#: src/features/chess/components/new-game.tsx:53
 msgid "Please select a friend"
 msgstr "Tagh caraid"
 
@@ -1630,6 +1730,14 @@ msgstr "Àrdaich gu {0}"
 msgid "Promote to:"
 msgstr "Àrdaich gu:"
 
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:108
+msgid "Prompt saved"
+msgstr ""
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:406
+msgid "Properties"
+msgstr ""
+
 #: ../../../lib/web/src/features/accounts/types.ts:21
 msgid "Push notification"
 msgstr "Brath push"
@@ -1667,7 +1775,7 @@ msgstr "Ag ath-stiùireadh dhan log a-steach."
 msgid "Reduce interest"
 msgstr "Lùghdaich an ùidh"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:65
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:69
 msgid "Relates"
 msgstr "A' buntainn"
 
@@ -1679,7 +1787,7 @@ msgstr "Coimeasach (5m, 3u, 2l)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "Coimeasach taobh a-staigh 24 uair, no fuirich absoluteach"
 
-#: src/features/chess/index.tsx:465
+#: src/features/chess/index.tsx:448
 msgid "Rematch"
 msgstr "Geama ùr"
 
@@ -1719,8 +1827,8 @@ msgstr "Thoir an ùidh air falbh"
 msgid "Remove item"
 msgstr "Thoir an nì air falbh"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:304
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:309
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:298
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:303
 msgid "Remove link"
 msgstr "Thoir an ceangal air falbh"
 
@@ -1755,16 +1863,16 @@ msgstr "Riatanach"
 msgid "Resend email"
 msgstr "Cuir am post-d a-rithist"
 
-#: src/features/chess/index.tsx:456
-#: src/features/chess/index.tsx:592
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:48
+#: src/features/chess/index.tsx:439
 msgid "Resign"
 msgstr "Leig seachad"
 
-#: src/features/chess/index.tsx:583
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:35
 msgid "Resign game?"
 msgstr "An leig thu seachad an geama?"
 
-#: src/features/chess/index.tsx:589
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:45
 msgid "Resigning..."
 msgstr "A' leigeil seachad..."
 
@@ -1813,13 +1921,19 @@ msgstr "Chaidh URL RSS a lethbhreacadh dhan stòr-bhòrd"
 msgid "Saturday"
 msgstr "Disathairne"
 
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:156
 #: ../../../lib/web/src/components/attachment-composer.tsx:430
+#: ../../../lib/web/src/components/banner-section.tsx:99
 #: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:231
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:170
 #: ../../../lib/web/src/components/ui/editable-field-row.tsx:122
 #: ../../../lib/web/src/components/ui/secret-field.tsx:79
 msgid "Save"
 msgstr "Sàbhail"
+
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:156
+msgid "Saving..."
+msgstr ""
 
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:175
 #: ../../../lib/web/src/components/filter-bar.tsx:32
@@ -1848,7 +1962,7 @@ msgstr "Lorg ceann-uidhe..."
 msgid "Search for origin..."
 msgstr "Lorg tùs..."
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:337
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:331
 msgid "Search objects..."
 msgstr "Lorg nithean..."
 
@@ -1885,7 +1999,7 @@ msgstr "Tagh"
 msgid "Select a field"
 msgstr "Tagh raon"
 
-#: src/features/chess/components/new-game.tsx:130
+#: src/features/chess/components/new-game.tsx:84
 msgid "Select a friend..."
 msgstr "Tagh caraid..."
 
@@ -2027,21 +2141,26 @@ msgstr "Tùsan"
 msgid "Spacious"
 msgstr "Farsaing"
 
-#: src/features/chess/index.tsx:368
+#: src/features/chess/index.tsx:351
 msgid "Stalemate — draw"
 msgstr "Sàs — geama ionann"
 
-#: src/features/chess/components/new-game.tsx:99
+#: src/features/chess/components/new-game.tsx:79
 msgid "Start a new chess game"
 msgstr "Tòisich geama tàileisg ùr"
 
-#: src/features/chess/components/new-game.tsx:153
+#: src/features/chess/components/new-game.tsx:87
 msgid "Start game"
 msgstr "Tòisich an geama"
 
 #: ../../../lib/web/src/components/entity/entity-comment-list.tsx:323
 msgid "Start the discussion by adding the first comment."
 msgstr "Tòisich an deasbad le bhith a' cur a' chiad bheachd ris."
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:463
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:468
+msgid "Stop watching"
+msgstr ""
 
 #: ../../../lib/web/src/features/access/access-list.tsx:196
 msgid "Subject"
@@ -2118,7 +2237,7 @@ msgstr "Cha b' urrainn dhuinn an t-susbaint a chaidh iarraidh a lorg."
 msgid "The server returned a web page instead of data."
 msgstr "Thill am frithealaiche duilleag-lìn an àite dàta."
 
-#: src/features/chess/index.tsx:605
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:70
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Sguabaidh seo às an geama agus an cabadaich aige gu buan. Chan urrainn seo a neo-dhèanamh."
 
@@ -2241,9 +2360,8 @@ msgstr "Neo-aithnichte"
 msgid "Unsubscribe"
 msgstr "Dì-fho-sgrìobh"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:285
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:103
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:184
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:178
+#: ../../../lib/web/src/lib/entity-title.ts:40
 msgid "Untitled"
 msgstr "Gun tiotal"
 
@@ -2252,7 +2370,7 @@ msgstr "Gun tiotal"
 msgid "Updated"
 msgstr "Ùraichte"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:639
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:633
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:301
 msgid "Upload"
 msgstr "Luchdaich suas"
@@ -2270,6 +2388,10 @@ msgstr "Cleachd an iuchair-inntrigidh agad"
 #: ../../../lib/web/src/features/access/access-dialog.tsx:158
 msgid "User"
 msgstr "Cleachdaiche"
+
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:159
+msgid "Variables: {variables}"
+msgstr ""
 
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:73
 msgid "Verification code"
@@ -2298,9 +2420,18 @@ msgstr "Sealladair video: {0}"
 msgid "View all notifications"
 msgstr "Seall a h-uile brath"
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:434
+msgid "View and edit item details"
+msgstr ""
+
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:170
 msgid "View controls"
 msgstr "Smachdan seallaidh"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:463
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:468
+msgid "Watch"
+msgstr ""
 
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:269
 #: ../../../lib/web/src/components/filter-bar.tsx:35
@@ -2321,7 +2452,7 @@ msgid "Wednesday"
 msgstr "Diciadain"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:422
+#: src/features/chess/index.tsx:405
 msgid "White"
 msgstr "Geal"
 
@@ -2340,7 +2471,7 @@ msgstr "Thusa"
 msgid "You do not have access to this section."
 msgstr "Chan eil cead-inntrigidh agad dhan earrann seo."
 
-#: src/features/chess/index.tsx:374
+#: src/features/chess/index.tsx:357
 msgid "You resigned — {opponentName} wins"
 msgstr "Ghèill thu — buannaichidh {opponentName}"
 
@@ -2352,7 +2483,7 @@ msgstr "Chaidh do chunntas a ghluasad an seo à {source}. Gus an sguab thu às e
 msgid "Your attachments will be lost."
 msgstr "Thèid na ceanglachain agad air chall."
 
-#: src/features/chess/index.tsx:385
+#: src/features/chess/index.tsx:368
 msgid "Your move"
 msgstr "Do ghluasad"
 

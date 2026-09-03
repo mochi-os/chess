@@ -18,7 +18,7 @@ msgstr ""
 msgid "Please check your internet connection and try again."
 msgstr "בדקו את חיבור האינטרנט ונסו שוב."
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:301
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:295
 msgid " or "
 msgstr " או "
 
@@ -103,11 +103,11 @@ msgstr "{name} פרש"
 msgid "{opponentName} offered a draw"
 msgstr "{opponentName} הציע תיקו"
 
-#: src/features/chess/index.tsx:373
+#: src/features/chess/index.tsx:356
 msgid "{opponentName} resigned — you win!"
 msgstr "{opponentName} פרש — ניצחת!"
 
-#: src/features/chess/index.tsx:386
+#: src/features/chess/index.tsx:369
 msgid "{opponentName}'s move"
 msgstr "תורו של {opponentName}"
 
@@ -173,9 +173,13 @@ msgstr "רמת גישה"
 msgid "Account type"
 msgstr "סוג חשבון"
 
-#: src/components/layout/chess-layout.tsx:58
+#: src/components/layout/chess-layout.tsx:42
 msgid "Active games"
 msgstr "משחקים פעילים"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:413
+msgid "Activity"
+msgstr ""
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:720
 #: ../../../lib/web/src/features/access/access-dialog.tsx:332
@@ -216,11 +220,11 @@ msgstr "הוסף פריט לרשימת משימות"
 msgid "Add field"
 msgstr "הוסף שדה"
 
-#: src/features/chess/components/new-game.tsx:121
+#: src/features/chess/components/new-game.tsx:83
 msgid "Add friends"
 msgstr "הוסף חברים"
 
-#: src/features/chess/components/new-game.tsx:114
+#: src/features/chess/components/new-game.tsx:82
 msgid "Add friends in the People app to start playing"
 msgstr "הוסף חברים באפליקציית האנשים כדי להתחיל לשחק"
 
@@ -228,7 +232,7 @@ msgstr "הוסף חברים באפליקציית האנשים כדי להתחי�
 msgid "Add item..."
 msgstr "הוסף פריט..."
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:320
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:314
 msgid "Add link"
 msgstr "הוסף קישור"
 
@@ -302,6 +306,10 @@ msgstr "כל מה שרשום להזנה הזו יפסיק לקבל אותה. א�
 msgid "Are you sure you want to delete \"{0}\"?"
 msgstr "האם אתה בטוח שברצונך למחוק את \"{0}\"?"
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:660
+msgid "Are you sure you want to delete \"{title}\"? This action cannot be undone."
+msgstr ""
+
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:629
 msgid "Are you sure you want to delete the \"{name}\" column? This cannot be undone."
 msgstr "האם אתה בטוח שברצונך למחוק את העמודה \"{name}\"? לא ניתן לבטל פעולה זו."
@@ -314,7 +322,11 @@ msgstr "האם אתה בטוח שברצונך למחוק תגובה זו? פעו
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "האם אתה בטוח שברצונך להתנתק? יהיה עליך להתחבר שוב כדי לגשת לחשבונך."
 
-#: src/features/chess/index.tsx:584
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:39
+msgid "Are you sure you want to resign?"
+msgstr ""
+
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:38
 msgid "Are you sure you want to resign? {opponentName} will win the game."
 msgstr "האם אתה בטוח שברצונך לפרוש? {opponentName} ינצח במשחק."
 
@@ -360,16 +372,25 @@ msgstr "חזור"
 msgid "Back to home"
 msgstr "חזרה לבית"
 
+#: ../../../lib/web/src/components/banner-section.tsx:80
 #: ../../../lib/web/src/components/entity-banner.tsx:17
 msgid "Banner"
 msgstr "באנר"
+
+#: ../../../lib/web/src/components/banner-section.tsx:69
+msgid "Banner removed"
+msgstr ""
+
+#: ../../../lib/web/src/components/banner-section.tsx:69
+msgid "Banner updated"
+msgstr ""
 
 #: src/features/chess/lib/use-chess-piece-name.ts:20
 msgid "bishop"
 msgstr "רץ"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:422
+#: src/features/chess/index.tsx:405
 msgid "Black"
 msgstr "שחור"
 
@@ -380,8 +401,8 @@ msgstr "שחור"
 msgid "Black {0}"
 msgstr "{0} שחור"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:68
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:215
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:72
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:209
 msgid "Blocked by"
 msgstr "חסום על ידי"
 
@@ -390,7 +411,7 @@ msgstr "חסום על ידי"
 msgid "Blocked navigation to untrusted link"
 msgstr "ניווט לקישור לא מהימן נחסם"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:66
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:70
 msgid "Blocks"
 msgstr "חוסם"
 
@@ -425,7 +446,7 @@ msgstr "התראות דפדפן"
 #: ../../../lib/web/src/features/access/access-list.tsx:268
 #: ../../../lib/web/src/features/accounts/account-add.tsx:201
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:91
-#: src/features/chess/components/new-game.tsx:145
+#: src/features/chess/components/new-game.tsx:86
 #: src/features/chess/components/promotion-dialog.tsx:111
 msgid "Cancel"
 msgstr "ביטול"
@@ -452,16 +473,15 @@ msgstr "קטגוריה עבור התראות אלו"
 msgid "Change notification category"
 msgstr "שנה קטגוריית התראה"
 
-#: src/features/chess/index.tsx:522
-#: src/features/chess/index.tsx:555
+#: src/features/chess/index.tsx:505
 msgid "Chat"
 msgstr "צ'אט"
 
-#: src/features/chess/index.tsx:383
+#: src/features/chess/index.tsx:366
 msgid "Check — {opponentName}'s move"
 msgstr "שח — תורו של {opponentName}"
 
-#: src/features/chess/index.tsx:382
+#: src/features/chess/index.tsx:365
 msgid "Check — your move"
 msgstr "שח — תורך"
 
@@ -473,17 +493,17 @@ msgstr "תיבת סימון"
 msgid "Checklist"
 msgstr "רשימת משימות"
 
-#: src/features/chess/index.tsx:366
+#: src/features/chess/index.tsx:349
 msgid "Checkmate — {opponentName} wins"
 msgstr "שח מט — {opponentName} ניצח"
 
-#: src/features/chess/index.tsx:365
+#: src/features/chess/index.tsx:348
 msgid "Checkmate — you win!"
 msgstr "שח מט — ניצחת!"
 
-#: src/features/chess/index.tsx:60
-#: src/features/chess/index.tsx:319
-#: src/features/chess/index.tsx:331
+#: src/features/chess/index.tsx:58
+#: src/features/chess/index.tsx:307
+#: src/features/chess/index.tsx:316
 msgid "Chess"
 msgstr "שחמט"
 
@@ -499,15 +519,16 @@ msgstr "לוח שחמט. תורך. השתמש במקשי החצים לניווט
 msgid "Choose a game from the sidebar or start a new one."
 msgstr "בחר משחק מהסרגל הצדדי או התחל אחד חדש."
 
-#: ../../../lib/web/src/components/language-picker.tsx:264
-#: ../../../lib/web/src/components/language-picker.tsx:271
+#: ../../../lib/web/src/components/language-picker.tsx:267
+#: ../../../lib/web/src/components/language-picker.tsx:274
 msgid "Choose language"
 msgstr "בחר שפה"
 
-#: src/features/chess/components/new-game.tsx:105
+#: src/features/chess/components/new-game.tsx:80
 msgid "Choose opponent"
 msgstr "בחר יריב"
 
+#: ../../../lib/web/src/components/banner-section.tsx:111
 #: ../../../lib/web/src/components/colour-picker.tsx:274
 #: ../../../lib/web/src/components/colour-picker.tsx:355
 #: ../../../lib/web/src/components/travelling-picker.tsx:164
@@ -525,8 +546,8 @@ msgstr "נקה הכול"
 msgid "Clear search"
 msgstr "נקה חיפוש"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:501
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:506
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:495
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:500
 #: ../../../lib/web/src/components/ui/dialog.tsx:78
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:468
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:471
@@ -601,11 +622,16 @@ msgstr "פעולות תגובה"
 msgid "Comments"
 msgstr "תגובות"
 
+#. placeholder {0}: data.comment_count || 0
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:409
+msgid "Comments ({0})"
+msgstr ""
+
 #: ../../../lib/web/src/lib/preference-utils.ts:90
 msgid "Compact"
 msgstr "מצומצם"
 
-#: src/components/layout/chess-layout.tsx:59
+#: src/components/layout/chess-layout.tsx:43
 msgid "Completed"
 msgstr "הושלם"
 
@@ -684,8 +710,8 @@ msgstr "לא ניתן היה לאמת עם החשבון הזה. נסה שוב."
 
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:550
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:689
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:491
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:656
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:485
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:650
 #: ../../../lib/web/src/components/entity/entity-tree-view.tsx:675
 msgid "Create"
 msgstr "צור"
@@ -704,9 +730,9 @@ msgstr "צור פריט חדש"
 msgid "Created"
 msgstr "נוצר"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:656
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:650
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:258
-#: src/features/chess/components/new-game.tsx:153
+#: src/features/chess/components/new-game.tsx:88
 msgid "Creating..."
 msgstr "יוצר..."
 
@@ -714,6 +740,7 @@ msgstr "יוצר..."
 msgid "Current location"
 msgstr "מיקום נוכחי"
 
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:132
 #: ../../../lib/web/src/components/colour-picker.tsx:265
 msgid "Custom"
 msgstr "מותאם אישית"
@@ -734,6 +761,10 @@ msgstr "תאריך"
 msgid "Decline"
 msgstr "דחייה"
 
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:129
+msgid "Default"
+msgstr ""
+
 #: ../../../lib/web/src/features/accounts/account-add.tsx:185
 msgid "Default AI account"
 msgstr "חשבון AI ברירת מחדל"
@@ -751,7 +782,8 @@ msgstr "מיון ברירת מחדל"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:203
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:252
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:314
-#: src/features/chess/index.tsx:613
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:661
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:78
 msgid "Delete"
 msgstr "מחק"
 
@@ -771,13 +803,19 @@ msgstr "מחק תגובה"
 msgid "Delete field"
 msgstr "מחק שדה"
 
-#: src/features/chess/index.tsx:468
+#: src/features/chess/index.tsx:451
 msgid "Delete game"
 msgstr "מחק משחק"
 
-#: src/features/chess/index.tsx:604
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:69
 msgid "Delete game?"
 msgstr "למחוק את המשחק?"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:478
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:483
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:659
+msgid "Delete item"
+msgstr ""
 
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:116
 msgid "Delete option"
@@ -797,7 +835,7 @@ msgstr "מחק תצוגה"
 msgid "Delete your account on the old server"
 msgstr "מחק את חשבונך בשרת הישן"
 
-#: src/features/chess/index.tsx:610
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:75
 msgid "Deleting..."
 msgstr "מוחק..."
 
@@ -813,7 +851,7 @@ msgstr "תיאור"
 msgid "Details Panel"
 msgstr "פאנל פרטים"
 
-#: ../../../lib/web/src/components/language-picker.tsx:240
+#: ../../../lib/web/src/components/language-picker.tsx:243
 #: ../../../lib/web/src/components/timezone-select.tsx:46
 #: ../../../lib/web/src/components/timezone-select.tsx:83
 #: ../../../lib/web/src/lib/preference-utils.ts:23
@@ -851,6 +889,7 @@ msgid "Displays the mobile sidebar."
 msgstr "מציג את סרגל הצד למובייל."
 
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:305
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:487
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:518
 msgid "Done"
 msgstr "בוצע"
@@ -865,7 +904,7 @@ msgstr "הורדה"
 msgid "Download failed"
 msgstr "ההורדה נכשלה"
 
-#: src/features/chess/index.tsx:370
+#: src/features/chess/index.tsx:353
 msgid "Draw"
 msgstr "תיקו"
 
@@ -873,11 +912,11 @@ msgstr "תיקו"
 msgid "Draw agreed"
 msgstr "הוסכם על תיקו"
 
-#: src/features/chess/index.tsx:481
+#: src/features/chess/index.tsx:464
 msgid "Draw offered — waiting for {opponentName}"
 msgstr "הוצעה תיקו — ממתין ל-{opponentName}"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:67
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:71
 msgid "Duplicates"
 msgstr "משכפל"
 
@@ -932,6 +971,10 @@ msgstr "אימייל"
 msgid "Email code"
 msgstr "קוד אימייל"
 
+#: ../../../lib/web/src/components/banner-section.tsx:88
+msgid "Enter banner text (markdown supported)..."
+msgstr ""
+
 #: ../../../lib/web/src/components/step-up-dialog.tsx:302
 msgid "Enter the code from your email"
 msgstr "הזן את הקוד מהאימייל שלך"
@@ -939,6 +982,10 @@ msgstr "הזן את הקוד מהאימייל שלך"
 #: ../../../lib/web/src/components/step-up-dialog.tsx:327
 msgid "Enter your authenticator code"
 msgstr "הזן את הקוד מאפליקציית האימות"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:379
+msgid "Error"
+msgstr ""
 
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:101
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:110
@@ -959,7 +1006,7 @@ msgstr "כתובת URL חיצונית"
 msgid "Extra large"
 msgstr "גדול במיוחד"
 
-#: src/features/chess/index.tsx:185
+#: src/features/chess/index.tsx:174
 msgid "Failed to accept draw"
 msgstr "קבלת התיקו נכשלה"
 
@@ -968,22 +1015,26 @@ msgstr "קבלת התיקו נכשלה"
 msgid "Failed to copy"
 msgstr "ההעתקה נכשלה"
 
-#: src/features/chess/components/new-game.tsx:52
+#: src/features/chess/components/new-game.tsx:40
 msgid "Failed to create game"
 msgstr "יצירת המשחק נכשלה"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:137
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:131
 #: ../../../lib/web/src/components/options-menu.tsx:98
 msgid "Failed to create link"
 msgstr "יצירת הקישור נכשלה"
 
-#: src/features/chess/index.tsx:200
+#: src/features/chess/index.tsx:189
 msgid "Failed to create rematch"
 msgstr "יצירת המשחק החוזר נכשלה"
 
-#: src/features/chess/index.tsx:190
+#: src/features/chess/index.tsx:179
 msgid "Failed to decline draw"
 msgstr "דחיית התיקו נכשלה"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:301
+msgid "Failed to delete"
+msgstr ""
 
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:130
 msgid "Failed to delete attachment"
@@ -993,11 +1044,11 @@ msgstr "מחיקת הקובץ המצורף נכשלה"
 msgid "Failed to delete comment"
 msgstr "מחיקת התגובה נכשלה"
 
-#: src/features/chess/index.tsx:212
+#: src/features/chess/index.tsx:201
 msgid "Failed to delete game"
 msgstr "מחיקת המשחק נכשלה"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:159
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:153
 msgid "Failed to delete link"
 msgstr "מחיקת הקישור נכשלה"
 
@@ -1017,15 +1068,28 @@ msgstr "טעינת ההיסטוריה נכשלה"
 msgid "Failed to load image"
 msgstr "טעינת התמונה נכשלה"
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:380
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:383
+msgid "Failed to load item"
+msgstr ""
+
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:213
+msgid "Failed to load prompts"
+msgstr ""
+
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:338
 msgid "Failed to load video"
 msgstr "טעינת הווידאו נכשלה"
 
-#: src/features/chess/index.tsx:163
+#: src/features/chess/index.tsx:152
 msgid "Failed to make move"
 msgstr "ביצוע המהלך נכשל"
 
-#: src/features/chess/index.tsx:180
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:315
+msgid "Failed to move"
+msgstr ""
+
+#: src/features/chess/index.tsx:169
 msgid "Failed to offer draw"
 msgstr "הצעת התיקו נכשלה"
 
@@ -1033,7 +1097,11 @@ msgstr "הצעת התיקו נכשלה"
 msgid "Failed to post comment"
 msgstr "פרסום התגובה נכשל"
 
-#: src/features/chess/index.tsx:173
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:90
+msgid "Failed to reset prompt"
+msgstr ""
+
+#: src/features/chess/index.tsx:162
 msgid "Failed to resign"
 msgstr "ההתפטרות נכשלה"
 
@@ -1041,20 +1109,35 @@ msgstr "ההתפטרות נכשלה"
 msgid "Failed to revoke RSS access"
 msgstr "ביטול גישת RSS נכשל"
 
-#: src/features/chess/index.tsx:539
-#: src/features/chess/index.tsx:572
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:271
+msgid "Failed to save"
+msgstr ""
+
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:111
+msgid "Failed to save prompt"
+msgstr ""
+
+#: src/features/chess/index.tsx:522
 msgid "Failed to send"
 msgstr "השליחה נכשלה"
+
+#: ../../../lib/web/src/components/banner-section.tsx:71
+msgid "Failed to update banner"
+msgstr ""
 
 #: ../../../lib/web/src/components/entity/entity-comment-list.tsx:174
 msgid "Failed to update comment"
 msgstr "עדכון התגובה נכשל"
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:286
+msgid "Failed to update watching"
+msgstr ""
+
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:114
 msgid "Failed to upload attachment"
 msgstr "העלאת הקובץ המצורף נכשלה"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:589
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:583
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:155
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:175
 msgid "Files"
@@ -1092,15 +1175,15 @@ msgstr "מאת"
 msgid "From theme"
 msgstr "מערכת נושא"
 
-#: src/features/chess/components/new-game.tsx:48
+#: src/features/chess/components/new-game.tsx:36
 msgid "Game created"
 msgstr "המשחק נוצר"
 
-#: src/features/chess/index.tsx:208
+#: src/features/chess/index.tsx:197
 msgid "Game deleted"
 msgstr "המשחק נמחק"
 
-#: src/features/chess/index.tsx:379
+#: src/features/chess/index.tsx:362
 msgid "Game state unavailable"
 msgstr "מצב המשחק אינו זמין"
 
@@ -1174,6 +1257,10 @@ msgstr "תאריך לא תקין"
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
 msgstr "נראה שהדף שאתה מחפש <0/>אינו קיים או שהוסר."
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:433
+msgid "Item details"
+msgstr ""
+
 #: ../../../lib/web/src/lib/locale-format.ts:165
 msgid "Just now"
 msgstr "הרגע"
@@ -1211,7 +1298,7 @@ msgstr "בהיר"
 msgid "Link"
 msgstr "קישור"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:279
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:273
 msgid "Links"
 msgstr "קישורים"
 
@@ -1226,6 +1313,14 @@ msgstr "טען עוד"
 #: ../../../lib/web/src/components/ui/loading-content.tsx:26
 msgid "Loading content…"
 msgstr "טוען תוכן…"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:363
+msgid "Loading item"
+msgstr ""
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:364
+msgid "Loading item details"
+msgstr ""
 
 #: ../../../lib/web/src/components/ui/load-more.tsx:35
 #: ../../../lib/web/src/features/document/document-page.tsx:88
@@ -1328,15 +1423,15 @@ msgstr "השם חייב להיות 1000 תווים או פחות"
 msgid "Network error"
 msgstr "שגיאת רשת"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:476
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:470
 #: ../../../lib/web/src/components/ui/sort-selector.tsx:43
 msgid "New"
 msgstr "חדש"
 
 #: ../../../lib/web/src/components/game/game-empty-state.tsx:39
 #: ../../../lib/web/src/components/game/game-empty-state.tsx:51
-#: src/components/layout/chess-layout.tsx:60
-#: src/features/chess/components/new-game.tsx:96
+#: src/components/layout/chess-layout.tsx:44
+#: src/features/chess/components/new-game.tsx:78
 msgid "New game"
 msgstr "משחק חדש"
 
@@ -1345,7 +1440,7 @@ msgstr "משחק חדש"
 msgid "Next image"
 msgstr "התמונה הבאה"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:555
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:549
 msgid "No {parentClassNames} to add to"
 msgstr "אין {parentClassNames} להוסיף אליו"
 
@@ -1361,11 +1456,11 @@ msgstr "עדיין אין פעילות"
 msgid "No comments yet"
 msgstr "עדיין אין תגובות"
 
-#: src/features/chess/components/new-game.tsx:131
+#: src/features/chess/components/new-game.tsx:85
 msgid "No friends found"
 msgstr "לא נמצאו חברים"
 
-#: src/features/chess/components/new-game.tsx:113
+#: src/features/chess/components/new-game.tsx:81
 msgid "No friends yet"
 msgstr "עדיין אין חברים"
 
@@ -1377,11 +1472,11 @@ msgstr "עדיין אין משחקים"
 msgid "No groups available"
 msgstr "אין קבוצות זמינות"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:522
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:516
 msgid "No item types can be created yet. Create the required parent items first."
 msgstr "עדיין לא ניתן ליצור סוגי פריטים. צור תחילה את פריטי האב הנדרשים."
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:360
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:354
 msgid "No matching objects"
 msgstr "אין אובייקטים תואמים"
 
@@ -1434,9 +1529,13 @@ msgid "No views"
 msgstr "אין תצוגות"
 
 #: ../../../lib/web/src/components/colour-picker.tsx:349
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:538
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:541
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:545
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:532
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:535
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:539
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:548
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:561
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:562
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:566
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:359
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:382
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:385
@@ -1477,7 +1576,7 @@ msgstr "התראות: {0}"
 msgid "Number"
 msgstr "מספר"
 
-#: src/features/chess/index.tsx:452
+#: src/features/chess/index.tsx:435
 msgid "Offer draw"
 msgstr "הצע תיקו"
 
@@ -1494,11 +1593,11 @@ msgstr "אופס! הדף לא נמצא!"
 msgid "Open actions"
 msgstr "פתיחת פעולות"
 
-#: src/features/chess/index.tsx:431
+#: src/features/chess/index.tsx:414
 msgid "Open chat panel"
 msgstr "פתח פאנל צ'אט"
 
-#: src/features/chess/index.tsx:439
+#: src/features/chess/index.tsx:422
 msgid "Open game actions"
 msgstr "פתח פעולות משחק"
 
@@ -1548,7 +1647,8 @@ msgstr "אחר"
 msgid "Owner"
 msgstr "בעלים"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:530
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:524
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:544
 msgid "Parent"
 msgstr "אב"
 
@@ -1582,7 +1682,7 @@ msgstr "בדקו את חיבור האינטרנט ונסו שוב."
 msgid "Please log in with the appropriate credentials <0/> to access this resource."
 msgstr "היכנס עם פרטי הכניסה המתאימים <0/> כדי לגשת למשאב זה."
 
-#: src/features/chess/components/new-game.tsx:67
+#: src/features/chess/components/new-game.tsx:53
 msgid "Please select a friend"
 msgstr "בחר חבר"
 
@@ -1630,6 +1730,14 @@ msgstr "הכתרה ל-{0}"
 msgid "Promote to:"
 msgstr "הכתרה ל:"
 
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:108
+msgid "Prompt saved"
+msgstr ""
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:406
+msgid "Properties"
+msgstr ""
+
 #: ../../../lib/web/src/features/accounts/types.ts:21
 msgid "Push notification"
 msgstr "התראת פוש"
@@ -1667,7 +1775,7 @@ msgstr "מפנה לדף ההתחברות."
 msgid "Reduce interest"
 msgstr "הפחת עניין"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:65
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:69
 msgid "Relates"
 msgstr "מתייחס"
 
@@ -1679,7 +1787,7 @@ msgstr "יחסי (5 דקות, 3 שעות, 2 ימים)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "יחסי בתוך 24 שעות, אחרת מוחלט"
 
-#: src/features/chess/index.tsx:465
+#: src/features/chess/index.tsx:448
 msgid "Rematch"
 msgstr "משחק חוזר"
 
@@ -1719,8 +1827,8 @@ msgstr "הסר עניין"
 msgid "Remove item"
 msgstr "הסר פריט"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:304
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:309
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:298
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:303
 msgid "Remove link"
 msgstr "הסרת קישור"
 
@@ -1755,16 +1863,16 @@ msgstr "נדרש"
 msgid "Resend email"
 msgstr "שלח את האימייל שוב"
 
-#: src/features/chess/index.tsx:456
-#: src/features/chess/index.tsx:592
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:48
+#: src/features/chess/index.tsx:439
 msgid "Resign"
 msgstr "פרוש"
 
-#: src/features/chess/index.tsx:583
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:35
 msgid "Resign game?"
 msgstr "לפרוש מהמשחק?"
 
-#: src/features/chess/index.tsx:589
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:45
 msgid "Resigning..."
 msgstr "פורש..."
 
@@ -1813,13 +1921,19 @@ msgstr "כתובת ה-URL של RSS הועתקה ללוח"
 msgid "Saturday"
 msgstr "שבת"
 
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:156
 #: ../../../lib/web/src/components/attachment-composer.tsx:430
+#: ../../../lib/web/src/components/banner-section.tsx:99
 #: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:231
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:170
 #: ../../../lib/web/src/components/ui/editable-field-row.tsx:122
 #: ../../../lib/web/src/components/ui/secret-field.tsx:79
 msgid "Save"
 msgstr "שמור"
+
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:156
+msgid "Saving..."
+msgstr ""
 
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:175
 #: ../../../lib/web/src/components/filter-bar.tsx:32
@@ -1848,7 +1962,7 @@ msgstr "חפש יעד..."
 msgid "Search for origin..."
 msgstr "חפש מקור..."
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:337
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:331
 msgid "Search objects..."
 msgstr "חפש פריטים..."
 
@@ -1885,7 +1999,7 @@ msgstr "בחר"
 msgid "Select a field"
 msgstr "בחר שדה"
 
-#: src/features/chess/components/new-game.tsx:130
+#: src/features/chess/components/new-game.tsx:84
 msgid "Select a friend..."
 msgstr "בחר חבר..."
 
@@ -2027,21 +2141,26 @@ msgstr "מקורות"
 msgid "Spacious"
 msgstr "מרווח"
 
-#: src/features/chess/index.tsx:368
+#: src/features/chess/index.tsx:351
 msgid "Stalemate — draw"
 msgstr "פט — תיקו"
 
-#: src/features/chess/components/new-game.tsx:99
+#: src/features/chess/components/new-game.tsx:79
 msgid "Start a new chess game"
 msgstr "התחל משחק שחמט חדש"
 
-#: src/features/chess/components/new-game.tsx:153
+#: src/features/chess/components/new-game.tsx:87
 msgid "Start game"
 msgstr "התחל משחק"
 
 #: ../../../lib/web/src/components/entity/entity-comment-list.tsx:323
 msgid "Start the discussion by adding the first comment."
 msgstr "התחל את הדיון על ידי הוספת התגובה הראשונה."
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:463
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:468
+msgid "Stop watching"
+msgstr ""
 
 #: ../../../lib/web/src/features/access/access-list.tsx:196
 msgid "Subject"
@@ -2118,7 +2237,7 @@ msgstr "לא ניתן למצוא את התוכן המבוקש."
 msgid "The server returned a web page instead of data."
 msgstr "השרת החזיר דף אינטרנט במקום נתונים."
 
-#: src/features/chess/index.tsx:605
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:70
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "פעולה זו תמחק לצמיתות את המשחק ואת הצ'אט שלו. לא ניתן לבטל פעולה זו."
 
@@ -2241,9 +2360,8 @@ msgstr "לא ידוע"
 msgid "Unsubscribe"
 msgstr "בטל הרשמה"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:285
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:103
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:184
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:178
+#: ../../../lib/web/src/lib/entity-title.ts:40
 msgid "Untitled"
 msgstr "ללא כותרת"
 
@@ -2252,7 +2370,7 @@ msgstr "ללא כותרת"
 msgid "Updated"
 msgstr "עודכן"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:639
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:633
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:301
 msgid "Upload"
 msgstr "העלה"
@@ -2270,6 +2388,10 @@ msgstr "השתמש במפתח הגישה שלך"
 #: ../../../lib/web/src/features/access/access-dialog.tsx:158
 msgid "User"
 msgstr "משתמש"
+
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:159
+msgid "Variables: {variables}"
+msgstr ""
 
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:73
 msgid "Verification code"
@@ -2298,9 +2420,18 @@ msgstr "מציג וידאו: {0}"
 msgid "View all notifications"
 msgstr "הצג את כל ההתראות"
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:434
+msgid "View and edit item details"
+msgstr ""
+
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:170
 msgid "View controls"
 msgstr "פקדי תצוגה"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:463
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:468
+msgid "Watch"
+msgstr ""
 
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:269
 #: ../../../lib/web/src/components/filter-bar.tsx:35
@@ -2321,7 +2452,7 @@ msgid "Wednesday"
 msgstr "יום רביעי"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:422
+#: src/features/chess/index.tsx:405
 msgid "White"
 msgstr "לבן"
 
@@ -2340,7 +2471,7 @@ msgstr "אתה"
 msgid "You do not have access to this section."
 msgstr "אין לך גישה לאזור זה."
 
-#: src/features/chess/index.tsx:374
+#: src/features/chess/index.tsx:357
 msgid "You resigned — {opponentName} wins"
 msgstr "פרשת — {opponentName} ניצח"
 
@@ -2352,7 +2483,7 @@ msgstr "חשבונך הועבר לכאן מ-{source}. עד שתמחק אותו �
 msgid "Your attachments will be lost."
 msgstr "הקבצים המצורפים שלך יאבדו."
 
-#: src/features/chess/index.tsx:385
+#: src/features/chess/index.tsx:368
 msgid "Your move"
 msgstr "התור שלך"
 

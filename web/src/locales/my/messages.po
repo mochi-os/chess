@@ -18,7 +18,7 @@ msgstr ""
 msgid "Please check your internet connection and try again."
 msgstr "သင့်အင်တာနက်ချိတ်ဆက်မှုကို စစ်ဆေးပြီး ထပ်မံကြိုးစားပါ။"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:301
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:295
 msgid " or "
 msgstr " သို့မဟုတ် "
 
@@ -103,11 +103,11 @@ msgstr "{name} အရှုံးပေးလိုက်သည်"
 msgid "{opponentName} offered a draw"
 msgstr "{opponentName} က သရေ ပေးခဲ့သည်"
 
-#: src/features/chess/index.tsx:373
+#: src/features/chess/index.tsx:356
 msgid "{opponentName} resigned — you win!"
 msgstr "{opponentName} လက်လျှော့လိုက်သည် — သင်နိုင်သည်!"
 
-#: src/features/chess/index.tsx:386
+#: src/features/chess/index.tsx:369
 msgid "{opponentName}'s move"
 msgstr "{opponentName} ၏အလှည့်"
 
@@ -173,9 +173,13 @@ msgstr "ဝင်ရောက်ခွင့်အဆင့်"
 msgid "Account type"
 msgstr "အကောင့်အမျိုးအစား"
 
-#: src/components/layout/chess-layout.tsx:58
+#: src/components/layout/chess-layout.tsx:42
 msgid "Active games"
 msgstr "လက်ရှိ Games"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:413
+msgid "Activity"
+msgstr ""
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:720
 #: ../../../lib/web/src/features/access/access-dialog.tsx:332
@@ -216,11 +220,11 @@ msgstr "checklist အရာ ထည့်မည်"
 msgid "Add field"
 msgstr "field ထည့်မည်"
 
-#: src/features/chess/components/new-game.tsx:121
+#: src/features/chess/components/new-game.tsx:83
 msgid "Add friends"
 msgstr "သူငယ်ချင်းများ ထည့်မည်"
 
-#: src/features/chess/components/new-game.tsx:114
+#: src/features/chess/components/new-game.tsx:82
 msgid "Add friends in the People app to start playing"
 msgstr "ကစားစတင်ရန် People app တွင် သူငယ်ချင်းများ ထည့်ပါ"
 
@@ -228,7 +232,7 @@ msgstr "ကစားစတင်ရန် People app တွင် သူငယ�
 msgid "Add item..."
 msgstr "အရာ ထည့်ရန်..."
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:320
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:314
 msgid "Add link"
 msgstr "လင့်ခ် ထည့်မည်"
 
@@ -302,6 +306,10 @@ msgstr "ဤဖိဒ်ကို စာရင်းသွင်းထားသ�
 msgid "Are you sure you want to delete \"{0}\"?"
 msgstr "\"{0}\" ကို ဖျက်မှာသေချာပါသလား?"
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:660
+msgid "Are you sure you want to delete \"{title}\"? This action cannot be undone."
+msgstr ""
+
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:629
 msgid "Are you sure you want to delete the \"{name}\" column? This cannot be undone."
 msgstr "\"{name}\" ကော်လံကို ဖျက်မှာသေချာပါသလား? ပြန်လည်ပြုပြင်၍မရပါ။"
@@ -314,7 +322,11 @@ msgstr "ဤမှတ်ချက်ကို ဖျက်မှာသေချ�
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "log out လုပ်မှာသေချာပါသလား? သင့်အကောင့်ကို ပြန်ဝင်ရန် log in ပြန်လုပ်ရမည်။"
 
-#: src/features/chess/index.tsx:584
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:39
+msgid "Are you sure you want to resign?"
+msgstr ""
+
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:38
 msgid "Are you sure you want to resign? {opponentName} will win the game."
 msgstr "လက်လျှော့မှာသေချာပါသလား? {opponentName} က ပွဲကို နိုင်မည်ဖြစ်သည်။"
 
@@ -360,16 +372,25 @@ msgstr "နောက်သို့"
 msgid "Back to home"
 msgstr "ပင်မစာမျက်နှာ သို့ပြန်သွားရန်"
 
+#: ../../../lib/web/src/components/banner-section.tsx:80
 #: ../../../lib/web/src/components/entity-banner.tsx:17
 msgid "Banner"
 msgstr "ပိုစတာ"
+
+#: ../../../lib/web/src/components/banner-section.tsx:69
+msgid "Banner removed"
+msgstr ""
+
+#: ../../../lib/web/src/components/banner-section.tsx:69
+msgid "Banner updated"
+msgstr ""
 
 #: src/features/chess/lib/use-chess-piece-name.ts:20
 msgid "bishop"
 msgstr "ဆင်"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:422
+#: src/features/chess/index.tsx:405
 msgid "Black"
 msgstr "အနက်"
 
@@ -380,8 +401,8 @@ msgstr "အနက်"
 msgid "Black {0}"
 msgstr "အနက် {0}"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:68
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:215
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:72
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:209
 msgid "Blocked by"
 msgstr "ပိတ်ဆို့သူ"
 
@@ -390,7 +411,7 @@ msgstr "ပိတ်ဆို့သူ"
 msgid "Blocked navigation to untrusted link"
 msgstr "မယုံကြည်ရသော လင့်ခ်သို့ သွားရောက်ခြင်းကို ပိတ်ဆို့ထားသည်"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:66
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:70
 msgid "Blocks"
 msgstr "ပိတ်ဆို့မှုများ"
 
@@ -425,7 +446,7 @@ msgstr "Browser အကြောင်းကြားချက်များ"
 #: ../../../lib/web/src/features/access/access-list.tsx:268
 #: ../../../lib/web/src/features/accounts/account-add.tsx:201
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:91
-#: src/features/chess/components/new-game.tsx:145
+#: src/features/chess/components/new-game.tsx:86
 #: src/features/chess/components/promotion-dialog.tsx:111
 msgid "Cancel"
 msgstr "မလုပ်တော့ပါ"
@@ -452,16 +473,15 @@ msgstr "ဤအကြောင်းကြားချက်များအတွ
 msgid "Change notification category"
 msgstr "အကြောင်းကြားချက် အမျိုးအစား ပြောင်းမည်"
 
-#: src/features/chess/index.tsx:522
-#: src/features/chess/index.tsx:555
+#: src/features/chess/index.tsx:505
 msgid "Chat"
 msgstr "စကားပြောခန်း"
 
-#: src/features/chess/index.tsx:383
+#: src/features/chess/index.tsx:366
 msgid "Check — {opponentName}'s move"
 msgstr "ရှက် — {opponentName} ၏အလှည့်"
 
-#: src/features/chess/index.tsx:382
+#: src/features/chess/index.tsx:365
 msgid "Check — your move"
 msgstr "ရှက် — သင့်အလှည့်"
 
@@ -473,17 +493,17 @@ msgstr "checkbox"
 msgid "Checklist"
 msgstr "Checklist"
 
-#: src/features/chess/index.tsx:366
+#: src/features/chess/index.tsx:349
 msgid "Checkmate — {opponentName} wins"
 msgstr "ရှက်မိတ် — {opponentName} နိုင်သည်"
 
-#: src/features/chess/index.tsx:365
+#: src/features/chess/index.tsx:348
 msgid "Checkmate — you win!"
 msgstr "ရှက်မိတ် — သင်နိုင်သည်!"
 
-#: src/features/chess/index.tsx:60
-#: src/features/chess/index.tsx:319
-#: src/features/chess/index.tsx:331
+#: src/features/chess/index.tsx:58
+#: src/features/chess/index.tsx:307
+#: src/features/chess/index.tsx:316
 msgid "Chess"
 msgstr "ဆက်စ်"
 
@@ -499,15 +519,16 @@ msgstr "ဆက်စ်ဘုတ်။ သင့်အလှည့်ဖြစ�
 msgid "Choose a game from the sidebar or start a new one."
 msgstr "ဘေးဘားမှ ဂိမ်းတစ်ခုကို ရွေးချယ်ပါ သို့မဟုတ် အသစ်တစ်ခု စတင်ပါ။"
 
-#: ../../../lib/web/src/components/language-picker.tsx:264
-#: ../../../lib/web/src/components/language-picker.tsx:271
+#: ../../../lib/web/src/components/language-picker.tsx:267
+#: ../../../lib/web/src/components/language-picker.tsx:274
 msgid "Choose language"
 msgstr "ဘာသာစကား ရွေးချယ်ပါ"
 
-#: src/features/chess/components/new-game.tsx:105
+#: src/features/chess/components/new-game.tsx:80
 msgid "Choose opponent"
 msgstr "ပြိုင်ဘက် ရွေးချယ်ပါ"
 
+#: ../../../lib/web/src/components/banner-section.tsx:111
 #: ../../../lib/web/src/components/colour-picker.tsx:274
 #: ../../../lib/web/src/components/colour-picker.tsx:355
 #: ../../../lib/web/src/components/travelling-picker.tsx:164
@@ -525,8 +546,8 @@ msgstr "အားလုံး ရှင်းမည်"
 msgid "Clear search"
 msgstr "ရှာဖွေမှု ရှင်းမည်"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:501
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:506
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:495
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:500
 #: ../../../lib/web/src/components/ui/dialog.tsx:78
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:468
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:471
@@ -601,11 +622,16 @@ msgstr "မှတ်ချက် လုပ်ဆောင်ချက်မျ�
 msgid "Comments"
 msgstr "မှတ်ချက်များ"
 
+#. placeholder {0}: data.comment_count || 0
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:409
+msgid "Comments ({0})"
+msgstr ""
+
 #: ../../../lib/web/src/lib/preference-utils.ts:90
 msgid "Compact"
 msgstr "ကျစ်လျစ်"
 
-#: src/components/layout/chess-layout.tsx:59
+#: src/components/layout/chess-layout.tsx:43
 msgid "Completed"
 msgstr "ပြီးစီးပြီး"
 
@@ -684,8 +710,8 @@ msgstr "ထိုအကောင့်ဖြင့် အတည်ပြု၍�
 
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:550
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:689
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:491
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:656
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:485
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:650
 #: ../../../lib/web/src/components/entity/entity-tree-view.tsx:675
 msgid "Create"
 msgstr "ဖန်တီးမည်"
@@ -704,9 +730,9 @@ msgstr "အရာအသစ် ဖန်တီးမည်"
 msgid "Created"
 msgstr "ဖန်တီးပြီး"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:656
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:650
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:258
-#: src/features/chess/components/new-game.tsx:153
+#: src/features/chess/components/new-game.tsx:88
 msgid "Creating..."
 msgstr "ဖန်တီးနေသည်..."
 
@@ -714,6 +740,7 @@ msgstr "ဖန်တီးနေသည်..."
 msgid "Current location"
 msgstr "လက်ရှိတည်နေရာ"
 
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:132
 #: ../../../lib/web/src/components/colour-picker.tsx:265
 msgid "Custom"
 msgstr "စိတ်ကြိုက်"
@@ -734,6 +761,10 @@ msgstr "ရက်စွဲ"
 msgid "Decline"
 msgstr "ငြင်းပယ်မည်"
 
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:129
+msgid "Default"
+msgstr ""
+
 #: ../../../lib/web/src/features/accounts/account-add.tsx:185
 msgid "Default AI account"
 msgstr "မူရင်း AI အကောင့်"
@@ -751,7 +782,8 @@ msgstr "မူရင်း sort"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:203
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:252
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:314
-#: src/features/chess/index.tsx:613
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:661
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:78
 msgid "Delete"
 msgstr "ဖျက်မည်"
 
@@ -771,13 +803,19 @@ msgstr "မှတ်ချက် ဖျက်မည်"
 msgid "Delete field"
 msgstr "field ဖျက်မည်"
 
-#: src/features/chess/index.tsx:468
+#: src/features/chess/index.tsx:451
 msgid "Delete game"
 msgstr "ဂိမ်း ဖျက်မည်"
 
-#: src/features/chess/index.tsx:604
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:69
 msgid "Delete game?"
 msgstr "ဂိမ်းကို ဖျက်မလား?"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:478
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:483
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:659
+msgid "Delete item"
+msgstr ""
 
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:116
 msgid "Delete option"
@@ -797,7 +835,7 @@ msgstr "ကြည့်ရှုမှု ဖျက်မည်"
 msgid "Delete your account on the old server"
 msgstr "ဟောင်းသောဆာဗာမှ သင်၏အကောင့်ကို ဖျက်ပါ"
 
-#: src/features/chess/index.tsx:610
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:75
 msgid "Deleting..."
 msgstr "ဖျက်နေသည်..."
 
@@ -813,7 +851,7 @@ msgstr "ဖော်ပြချက်"
 msgid "Details Panel"
 msgstr "အသေးစိတ် Panel"
 
-#: ../../../lib/web/src/components/language-picker.tsx:240
+#: ../../../lib/web/src/components/language-picker.tsx:243
 #: ../../../lib/web/src/components/timezone-select.tsx:46
 #: ../../../lib/web/src/components/timezone-select.tsx:83
 #: ../../../lib/web/src/lib/preference-utils.ts:23
@@ -851,6 +889,7 @@ msgid "Displays the mobile sidebar."
 msgstr "မိုဘိုင်း ဘေးဘားကို ပြသသည်။"
 
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:305
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:487
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:518
 msgid "Done"
 msgstr "ပြီးပါပြီ"
@@ -865,7 +904,7 @@ msgstr "ဒေါင်းလုဒ်"
 msgid "Download failed"
 msgstr "ဒေါင်းလုဒ် မအောင်မြင်ပါ"
 
-#: src/features/chess/index.tsx:370
+#: src/features/chess/index.tsx:353
 msgid "Draw"
 msgstr "သရေ"
 
@@ -873,11 +912,11 @@ msgstr "သရေ"
 msgid "Draw agreed"
 msgstr "သရေကျရန် သဘောတူသည်"
 
-#: src/features/chess/index.tsx:481
+#: src/features/chess/index.tsx:464
 msgid "Draw offered — waiting for {opponentName}"
 msgstr "သရေ ကမ်းလှမ်းထားသည် — {opponentName} ကို စောင့်နေသည်"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:67
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:71
 msgid "Duplicates"
 msgstr "ထပ်နေသော"
 
@@ -932,6 +971,10 @@ msgstr "အီးမေးလ်"
 msgid "Email code"
 msgstr "အီးမေးလ် ကုဒ်"
 
+#: ../../../lib/web/src/components/banner-section.tsx:88
+msgid "Enter banner text (markdown supported)..."
+msgstr ""
+
 #: ../../../lib/web/src/components/step-up-dialog.tsx:302
 msgid "Enter the code from your email"
 msgstr "သင့်အီးမေးလ်မှ ကုဒ်ကို ထည့်ပါ"
@@ -939,6 +982,10 @@ msgstr "သင့်အီးမေးလ်မှ ကုဒ်ကို ထည�
 #: ../../../lib/web/src/components/step-up-dialog.tsx:327
 msgid "Enter your authenticator code"
 msgstr "သင့်အထောက်အထားစိစစ်ရေးကုဒ်ကို ထည့်ပါ"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:379
+msgid "Error"
+msgstr ""
 
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:101
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:110
@@ -959,7 +1006,7 @@ msgstr "ပြင်ပ URL"
 msgid "Extra large"
 msgstr "အလွန်ကြီး"
 
-#: src/features/chess/index.tsx:185
+#: src/features/chess/index.tsx:174
 msgid "Failed to accept draw"
 msgstr "သရေ လက်ခံ၍ မရပါ"
 
@@ -968,22 +1015,26 @@ msgstr "သရေ လက်ခံ၍ မရပါ"
 msgid "Failed to copy"
 msgstr "ကူးယူ၍ မရပါ"
 
-#: src/features/chess/components/new-game.tsx:52
+#: src/features/chess/components/new-game.tsx:40
 msgid "Failed to create game"
 msgstr "ဂိမ်း ဖန်တီး၍ မရပါ"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:137
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:131
 #: ../../../lib/web/src/components/options-menu.tsx:98
 msgid "Failed to create link"
 msgstr "လင့် ဖန်တီး၍ မရပါ"
 
-#: src/features/chess/index.tsx:200
+#: src/features/chess/index.tsx:189
 msgid "Failed to create rematch"
 msgstr "ပြန်ပြိုင်ပွဲ ဖန်တီး၍ မရပါ"
 
-#: src/features/chess/index.tsx:190
+#: src/features/chess/index.tsx:179
 msgid "Failed to decline draw"
 msgstr "သရေ ငြင်းပယ်၍ မရပါ"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:301
+msgid "Failed to delete"
+msgstr ""
 
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:130
 msgid "Failed to delete attachment"
@@ -993,11 +1044,11 @@ msgstr "တွဲဖက်ဖိုင် ဖျက်၍ မရပါ"
 msgid "Failed to delete comment"
 msgstr "မှတ်ချက် ဖျက်၍ မရပါ"
 
-#: src/features/chess/index.tsx:212
+#: src/features/chess/index.tsx:201
 msgid "Failed to delete game"
 msgstr "ဂိမ်း ဖျက်၍ မရပါ"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:159
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:153
 msgid "Failed to delete link"
 msgstr "လင့် ဖျက်၍ မရပါ"
 
@@ -1017,15 +1068,28 @@ msgstr "မှတ်တမ်း တင်၍ မရပါ"
 msgid "Failed to load image"
 msgstr "ပုံကို ဖွင့်၍မရပါ"
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:380
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:383
+msgid "Failed to load item"
+msgstr ""
+
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:213
+msgid "Failed to load prompts"
+msgstr ""
+
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:338
 msgid "Failed to load video"
 msgstr "ဗီဒီယိုကို ဖွင့်၍မရပါ"
 
-#: src/features/chess/index.tsx:163
+#: src/features/chess/index.tsx:152
 msgid "Failed to make move"
 msgstr "ရွှေ့ခြင်း လုပ်၍ မရပါ"
 
-#: src/features/chess/index.tsx:180
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:315
+msgid "Failed to move"
+msgstr ""
+
+#: src/features/chess/index.tsx:169
 msgid "Failed to offer draw"
 msgstr "သရေ ကမ်းလှမ်း၍ မရပါ"
 
@@ -1033,7 +1097,11 @@ msgstr "သရေ ကမ်းလှမ်း၍ မရပါ"
 msgid "Failed to post comment"
 msgstr "မှတ်ချက် တင်၍ မရပါ"
 
-#: src/features/chess/index.tsx:173
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:90
+msgid "Failed to reset prompt"
+msgstr ""
+
+#: src/features/chess/index.tsx:162
 msgid "Failed to resign"
 msgstr "ရှုံးရန် ထုတ်ပြန်၍ မရပါ"
 
@@ -1041,20 +1109,35 @@ msgstr "ရှုံးရန် ထုတ်ပြန်၍ မရပါ"
 msgid "Failed to revoke RSS access"
 msgstr "RSS အသုံးပြုခွင့် ရုပ်သိမ်း၍ မရပါ"
 
-#: src/features/chess/index.tsx:539
-#: src/features/chess/index.tsx:572
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:271
+msgid "Failed to save"
+msgstr ""
+
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:111
+msgid "Failed to save prompt"
+msgstr ""
+
+#: src/features/chess/index.tsx:522
 msgid "Failed to send"
 msgstr "ပို့၍ မရပါ"
+
+#: ../../../lib/web/src/components/banner-section.tsx:71
+msgid "Failed to update banner"
+msgstr ""
 
 #: ../../../lib/web/src/components/entity/entity-comment-list.tsx:174
 msgid "Failed to update comment"
 msgstr "မှတ်ချက် ပြင်ဆင်၍ မရပါ"
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:286
+msgid "Failed to update watching"
+msgstr ""
+
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:114
 msgid "Failed to upload attachment"
 msgstr "တွဲဖက်ဖိုင် တင်၍ မရပါ"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:589
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:583
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:155
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:175
 msgid "Files"
@@ -1092,15 +1175,15 @@ msgstr "မှ"
 msgid "From theme"
 msgstr "အပြင်အဆင်မှ"
 
-#: src/features/chess/components/new-game.tsx:48
+#: src/features/chess/components/new-game.tsx:36
 msgid "Game created"
 msgstr "ဂိမ်း ဖန်တီးပြီးပါပြီ"
 
-#: src/features/chess/index.tsx:208
+#: src/features/chess/index.tsx:197
 msgid "Game deleted"
 msgstr "ဂိမ်း ဖျက်ပြီးပါပြီ"
 
-#: src/features/chess/index.tsx:379
+#: src/features/chess/index.tsx:362
 msgid "Game state unavailable"
 msgstr "ဂိမ်းအခြေအနေ မရရှိနိုင်ပါ"
 
@@ -1174,6 +1257,10 @@ msgstr "မမှန်ကန်သော ရက်စွဲ"
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
 msgstr "သင်ရှာဖွေနေသော စာမျက်နှာသည် <0/>မရှိတော့ပါ သို့မဟုတ် ဖယ်ရှားခံရပုံရသည်။"
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:433
+msgid "Item details"
+msgstr ""
+
 #: ../../../lib/web/src/lib/locale-format.ts:165
 msgid "Just now"
 msgstr "အခုပဲ"
@@ -1211,7 +1298,7 @@ msgstr "အလင်း"
 msgid "Link"
 msgstr "လင့်ခ်"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:279
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:273
 msgid "Links"
 msgstr "လင့်များ"
 
@@ -1226,6 +1313,14 @@ msgstr "ထပ်တင်"
 #: ../../../lib/web/src/components/ui/loading-content.tsx:26
 msgid "Loading content…"
 msgstr "အကြောင်းအရာ ဖွင့်နေသည်…"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:363
+msgid "Loading item"
+msgstr ""
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:364
+msgid "Loading item details"
+msgstr ""
 
 #: ../../../lib/web/src/components/ui/load-more.tsx:35
 #: ../../../lib/web/src/features/document/document-page.tsx:88
@@ -1328,15 +1423,15 @@ msgstr "အမည်သည် စာလုံး ၁၀၀၀ သို့မဟ
 msgid "Network error"
 msgstr "ကွန်ရက် အမှား"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:476
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:470
 #: ../../../lib/web/src/components/ui/sort-selector.tsx:43
 msgid "New"
 msgstr "အသစ်"
 
 #: ../../../lib/web/src/components/game/game-empty-state.tsx:39
 #: ../../../lib/web/src/components/game/game-empty-state.tsx:51
-#: src/components/layout/chess-layout.tsx:60
-#: src/features/chess/components/new-game.tsx:96
+#: src/components/layout/chess-layout.tsx:44
+#: src/features/chess/components/new-game.tsx:78
 msgid "New game"
 msgstr "ဂိမ်းအသစ်"
 
@@ -1345,7 +1440,7 @@ msgstr "ဂိမ်းအသစ်"
 msgid "Next image"
 msgstr "နောက်ပုံ"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:555
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:549
 msgid "No {parentClassNames} to add to"
 msgstr "ထည့်ရန် {parentClassNames} မရှိပါ"
 
@@ -1361,11 +1456,11 @@ msgstr "လှုပ်ရှားမှုများ မရှိသေး�
 msgid "No comments yet"
 msgstr "comment များ မရှိသေးပါ"
 
-#: src/features/chess/components/new-game.tsx:131
+#: src/features/chess/components/new-game.tsx:85
 msgid "No friends found"
 msgstr "သူငယ်ချင်းများ မတွေ့ပါ"
 
-#: src/features/chess/components/new-game.tsx:113
+#: src/features/chess/components/new-game.tsx:81
 msgid "No friends yet"
 msgstr "သူငယ်ချင်းများ မရှိသေးပါ"
 
@@ -1377,11 +1472,11 @@ msgstr "ဂိမ်းများ မရှိသေးပါ"
 msgid "No groups available"
 msgstr "အုပ်စုများ မရရှိနိုင်ပါ"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:522
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:516
 msgid "No item types can be created yet. Create the required parent items first."
 msgstr "item အမျိုးအစားအသစ်များ မဖန်တီးနိုင်သေးပါ။ လိုအပ်သော parent item များကို ဦးစွာဖန်တီးပါ။"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:360
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:354
 msgid "No matching objects"
 msgstr "ကိုက်ညီသော object များ မရှိပါ"
 
@@ -1434,9 +1529,13 @@ msgid "No views"
 msgstr "view များ မရှိ"
 
 #: ../../../lib/web/src/components/colour-picker.tsx:349
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:538
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:541
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:545
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:532
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:535
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:539
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:548
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:561
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:562
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:566
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:359
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:382
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:385
@@ -1477,7 +1576,7 @@ msgstr "အကြောင်းကြားချက်များ- {0}"
 msgid "Number"
 msgstr "နံပါတ်"
 
-#: src/features/chess/index.tsx:452
+#: src/features/chess/index.tsx:435
 msgid "Offer draw"
 msgstr "ထိုးကွက် ပြန်မျှခြင်း ကမ်းလှမ်း"
 
@@ -1494,11 +1593,11 @@ msgstr "အိုး! စာမျက်နှာ မတွေ့ပါ!"
 msgid "Open actions"
 msgstr "လုပ်ဆောင်ချက်များ ဖွင့်ရန်"
 
-#: src/features/chess/index.tsx:431
+#: src/features/chess/index.tsx:414
 msgid "Open chat panel"
 msgstr "ချတ် panel ကို ဖွင့်"
 
-#: src/features/chess/index.tsx:439
+#: src/features/chess/index.tsx:422
 msgid "Open game actions"
 msgstr "ဂိမ်း လုပ်ဆောင်ချက်များကို ဖွင့်"
 
@@ -1548,7 +1647,8 @@ msgstr "အခြား"
 msgid "Owner"
 msgstr "ပိုင်ရှင်"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:530
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:524
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:544
 msgid "Parent"
 msgstr "Parent"
 
@@ -1582,7 +1682,7 @@ msgstr "သင့်အင်တာနက်ချိတ်ဆက်မှုက
 msgid "Please log in with the appropriate credentials <0/> to access this resource."
 msgstr "ဤအရင်းအမြစ်ကို ဝင်ရောက်ရန် <0/> သင့်လျော်သော အထောက်အထားများဖြင့် ဝင်ရောက်ပါ။"
 
-#: src/features/chess/components/new-game.tsx:67
+#: src/features/chess/components/new-game.tsx:53
 msgid "Please select a friend"
 msgstr "သူငယ်ချင်းတစ်ဦး ရွေးချယ်ပါ"
 
@@ -1630,6 +1730,14 @@ msgstr "{0} သို့ မြှင့်တင်"
 msgid "Promote to:"
 msgstr "သို့ မြှင့်တင် -"
 
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:108
+msgid "Prompt saved"
+msgstr ""
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:406
+msgid "Properties"
+msgstr ""
+
 #: ../../../lib/web/src/features/accounts/types.ts:21
 msgid "Push notification"
 msgstr "Push အကြောင်းကြားချက်"
@@ -1667,7 +1775,7 @@ msgstr "Login သို့ redirect လုပ်နေသည်။"
 msgid "Reduce interest"
 msgstr "စိတ်ဝင်စားမှု လျှော့ချ"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:65
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:69
 msgid "Relates"
 msgstr "ဆက်စပ်"
 
@@ -1679,7 +1787,7 @@ msgstr "ဆက်စပ် (5m, 3h, 2d)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "၂၄ နာရီအတွင်း ဆက်စပ်၊ ပြင်ပတွင် တိကျသော"
 
-#: src/features/chess/index.tsx:465
+#: src/features/chess/index.tsx:448
 msgid "Rematch"
 msgstr "ပြန်ကစား"
 
@@ -1719,8 +1827,8 @@ msgstr "စိတ်ဝင်စားမှု ဖယ်ရှား"
 msgid "Remove item"
 msgstr "item ဖယ်ရှား"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:304
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:309
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:298
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:303
 msgid "Remove link"
 msgstr "လင့်ခ် ဖယ်ရှားရန်"
 
@@ -1755,16 +1863,16 @@ msgstr "လိုအပ်"
 msgid "Resend email"
 msgstr "အီးမေးလ်ပြန်ပို့ရန်"
 
-#: src/features/chess/index.tsx:456
-#: src/features/chess/index.tsx:592
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:48
+#: src/features/chess/index.tsx:439
 msgid "Resign"
 msgstr "ရှုံးကြောင်းပြော"
 
-#: src/features/chess/index.tsx:583
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:35
 msgid "Resign game?"
 msgstr "ဂိမ်း ရှုံးကြောင်းပြောမလား?"
 
-#: src/features/chess/index.tsx:589
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:45
 msgid "Resigning..."
 msgstr "ရှုံးကြောင်းပြောနေသည်..."
 
@@ -1813,13 +1921,19 @@ msgstr "RSS URL ကို clipboard သို့ ကူးယူပြီးပ�
 msgid "Saturday"
 msgstr "စနေနေ့"
 
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:156
 #: ../../../lib/web/src/components/attachment-composer.tsx:430
+#: ../../../lib/web/src/components/banner-section.tsx:99
 #: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:231
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:170
 #: ../../../lib/web/src/components/ui/editable-field-row.tsx:122
 #: ../../../lib/web/src/components/ui/secret-field.tsx:79
 msgid "Save"
 msgstr "သိမ်းမည်"
+
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:156
+msgid "Saving..."
+msgstr ""
 
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:175
 #: ../../../lib/web/src/components/filter-bar.tsx:32
@@ -1848,7 +1962,7 @@ msgstr "destination ရှာဖွေ..."
 msgid "Search for origin..."
 msgstr "Origin ရှာဖွေ..."
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:337
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:331
 msgid "Search objects..."
 msgstr "Object များ ရှာဖွေ..."
 
@@ -1885,7 +1999,7 @@ msgstr "ရွေးချယ်"
 msgid "Select a field"
 msgstr "field တစ်ခုကို ရွေးချယ်ပါ"
 
-#: src/features/chess/components/new-game.tsx:130
+#: src/features/chess/components/new-game.tsx:84
 msgid "Select a friend..."
 msgstr "သူငယ်ချင်းတစ်ဦးကို ရွေးချယ်ပါ..."
 
@@ -2027,21 +2141,26 @@ msgstr "မူရင်းများ"
 msgid "Spacious"
 msgstr "ကျယ်ပြန့်သော"
 
-#: src/features/chess/index.tsx:368
+#: src/features/chess/index.tsx:351
 msgid "Stalemate — draw"
 msgstr "ရပ်တန့် — သရေ"
 
-#: src/features/chess/components/new-game.tsx:99
+#: src/features/chess/components/new-game.tsx:79
 msgid "Start a new chess game"
 msgstr "Chess ဂိမ်းအသစ် စတင်ပါ"
 
-#: src/features/chess/components/new-game.tsx:153
+#: src/features/chess/components/new-game.tsx:87
 msgid "Start game"
 msgstr "ဂိမ်း စတင်မည်"
 
 #: ../../../lib/web/src/components/entity/entity-comment-list.tsx:323
 msgid "Start the discussion by adding the first comment."
 msgstr "ပထမမှတ်ချက် ထည့်၍ ဆွေးနွေးချက် စတင်ပါ။"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:463
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:468
+msgid "Stop watching"
+msgstr ""
 
 #: ../../../lib/web/src/features/access/access-list.tsx:196
 msgid "Subject"
@@ -2118,7 +2237,7 @@ msgstr "တောင်းဆိုထားသော အကြောင်း�
 msgid "The server returned a web page instead of data."
 msgstr "ဆာဗာသည် ဒေတာအစား ဝဘ်စာမျက်နှာကို ပြန်ပေးခဲ့သည်။"
 
-#: src/features/chess/index.tsx:605
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:70
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "ဤလုပ်ဆောင်ချက်သည် ဂိမ်းနှင့် ၎င်း၏ ချတ်ကို အပြီးအပိုင် ဖျက်ပစ်မည်ဖြစ်သည်။ ဤလုပ်ဆောင်ချက်ကို ပြန်ပြောင်း၍မရပါ။"
 
@@ -2241,9 +2360,8 @@ msgstr "မသိရသော"
 msgid "Unsubscribe"
 msgstr "Subscribe ဖြုတ်မည်"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:285
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:103
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:184
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:178
+#: ../../../lib/web/src/lib/entity-title.ts:40
 msgid "Untitled"
 msgstr "ခေါင်းစဉ်မရှိ"
 
@@ -2252,7 +2370,7 @@ msgstr "ခေါင်းစဉ်မရှိ"
 msgid "Updated"
 msgstr "အပ်ဒိတ်လုပ်ပြီး"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:639
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:633
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:301
 msgid "Upload"
 msgstr "Upload လုပ်မည်"
@@ -2270,6 +2388,10 @@ msgstr "သင့်ပတ်စ်ကီးကို သုံးပါ"
 #: ../../../lib/web/src/features/access/access-dialog.tsx:158
 msgid "User"
 msgstr "သုံးစွဲသူ"
+
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:159
+msgid "Variables: {variables}"
+msgstr ""
 
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:73
 msgid "Verification code"
@@ -2298,9 +2420,18 @@ msgstr "ဗီဒီယိုကြည့်ရှုစနစ်- {0}"
 msgid "View all notifications"
 msgstr "အသိပေးချက်များ အားလုံး ကြည့်ရှုမည်"
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:434
+msgid "View and edit item details"
+msgstr ""
+
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:170
 msgid "View controls"
 msgstr "ထိန်းချုပ်မှုများ ကြည့်ရှုမည်"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:463
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:468
+msgid "Watch"
+msgstr ""
 
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:269
 #: ../../../lib/web/src/components/filter-bar.tsx:35
@@ -2321,7 +2452,7 @@ msgid "Wednesday"
 msgstr "ဗုဒ္ဓဟူး"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:422
+#: src/features/chess/index.tsx:405
 msgid "White"
 msgstr "အဖြူ"
 
@@ -2340,7 +2471,7 @@ msgstr "သင်"
 msgid "You do not have access to this section."
 msgstr "ဤအပိုင်းသို့ သင့်တွင် ဝင်ရောက်ခွင့်မရှိပါ။"
 
-#: src/features/chess/index.tsx:374
+#: src/features/chess/index.tsx:357
 msgid "You resigned — {opponentName} wins"
 msgstr "သင်လက်လျှော့လိုက်သည် — {opponentName} နိုင်သည်"
 
@@ -2352,7 +2483,7 @@ msgstr "သင်၏အကောင့်ကို {source} မှ ဤနေရ�
 msgid "Your attachments will be lost."
 msgstr "သင့်ပူးတွဲဖိုင်များ ပျောက်ဆုံးသွားပါမည်။"
 
-#: src/features/chess/index.tsx:385
+#: src/features/chess/index.tsx:368
 msgid "Your move"
 msgstr "သင်၏ အလှည့်"
 

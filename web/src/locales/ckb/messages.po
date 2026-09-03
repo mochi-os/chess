@@ -18,7 +18,7 @@ msgstr ""
 msgid "Please check your internet connection and try again."
 msgstr "تکایە پەیوەندی ئینتەرنێتەکەت بپشکنە و دووبارە هەوڵ بدەرەوە."
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:301
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:295
 msgid " or "
 msgstr " یان "
 
@@ -103,11 +103,11 @@ msgstr "{name} وازی هێنا"
 msgid "{opponentName} offered a draw"
 msgstr "{opponentName} پێشنیاری یەکسانی کرد"
 
-#: src/features/chess/index.tsx:373
+#: src/features/chess/index.tsx:356
 msgid "{opponentName} resigned — you win!"
 msgstr "{opponentName} خۆی بەدەستەوەدا — تۆ بردت!"
 
-#: src/features/chess/index.tsx:386
+#: src/features/chess/index.tsx:369
 msgid "{opponentName}'s move"
 msgstr "نۆرەی {opponentName}"
 
@@ -173,9 +173,13 @@ msgstr "ئاستی دەستڕاگەیشتن"
 msgid "Account type"
 msgstr "جۆری هەژمار"
 
-#: src/components/layout/chess-layout.tsx:58
+#: src/components/layout/chess-layout.tsx:42
 msgid "Active games"
 msgstr "یارییە چالاکەکان"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:413
+msgid "Activity"
+msgstr ""
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:720
 #: ../../../lib/web/src/features/access/access-dialog.tsx:332
@@ -216,11 +220,11 @@ msgstr "زیادکردنی بڕگەی لیستی پشکنین"
 msgid "Add field"
 msgstr "زیادکردنی خانە"
 
-#: src/features/chess/components/new-game.tsx:121
+#: src/features/chess/components/new-game.tsx:83
 msgid "Add friends"
 msgstr "زیادکردنی هاوڕێیان"
 
-#: src/features/chess/components/new-game.tsx:114
+#: src/features/chess/components/new-game.tsx:82
 msgid "Add friends in the People app to start playing"
 msgstr "هاوڕێیان لە ئەپی خەڵک زیاد بکە بۆ دەستپێکردنی یاری"
 
@@ -228,7 +232,7 @@ msgstr "هاوڕێیان لە ئەپی خەڵک زیاد بکە بۆ دەستپ�
 msgid "Add item..."
 msgstr "بڕگە زیاد بکە..."
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:320
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:314
 msgid "Add link"
 msgstr "زیادکردنی بەستەر"
 
@@ -302,6 +306,10 @@ msgstr "هەر شتێک بەم لێدوانە بەشداری کردبێت وەر
 msgid "Are you sure you want to delete \"{0}\"?"
 msgstr "ئایا دڵنیایت لە سڕینەوەی \"{0}\"؟"
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:660
+msgid "Are you sure you want to delete \"{title}\"? This action cannot be undone."
+msgstr ""
+
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:629
 msgid "Are you sure you want to delete the \"{name}\" column? This cannot be undone."
 msgstr "ئایا دڵنیایت لە سڕینەوەی ستوونی \"{name}\"؟ ئەمە ناگەڕێتەوە."
@@ -314,7 +322,11 @@ msgstr "ئایا دڵنیایت لە سڕینەوەی ئەم لێدوانە؟ ئ
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "ئایا دڵنیایت لە چوونە دەرەوە؟ پێویستە دیسان بچیتە ژوورەوە بۆ گەیشتن بە هەژمارەکەت."
 
-#: src/features/chess/index.tsx:584
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:39
+msgid "Are you sure you want to resign?"
+msgstr ""
+
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:38
 msgid "Are you sure you want to resign? {opponentName} will win the game."
 msgstr "ئایا دڵنیایت لە دەستلەکارکێشانەوە؟ {opponentName} لە یارییەکە دەباتەوە."
 
@@ -360,16 +372,25 @@ msgstr "گەڕانەوە"
 msgid "Back to home"
 msgstr "گەڕانەوە بۆ ماڵەوە"
 
+#: ../../../lib/web/src/components/banner-section.tsx:80
 #: ../../../lib/web/src/components/entity-banner.tsx:17
 msgid "Banner"
 msgstr "بانەر"
+
+#: ../../../lib/web/src/components/banner-section.tsx:69
+msgid "Banner removed"
+msgstr ""
+
+#: ../../../lib/web/src/components/banner-section.tsx:69
+msgid "Banner updated"
+msgstr ""
 
 #: src/features/chess/lib/use-chess-piece-name.ts:20
 msgid "bishop"
 msgstr "بیشۆپ"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:422
+#: src/features/chess/index.tsx:405
 msgid "Black"
 msgstr "ڕەش"
 
@@ -380,8 +401,8 @@ msgstr "ڕەش"
 msgid "Black {0}"
 msgstr "ڕەش {0}"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:68
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:215
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:72
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:209
 msgid "Blocked by"
 msgstr "بلۆککرا لەلایەن"
 
@@ -390,7 +411,7 @@ msgstr "بلۆککرا لەلایەن"
 msgid "Blocked navigation to untrusted link"
 msgstr "ڕێگەنەدرا بە چوون بۆ بەستەری نامتمانە"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:66
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:70
 msgid "Blocks"
 msgstr "بلۆکەکان"
 
@@ -425,7 +446,7 @@ msgstr "ئاگادارکردنەوەی وێبگەڕ"
 #: ../../../lib/web/src/features/access/access-list.tsx:268
 #: ../../../lib/web/src/features/accounts/account-add.tsx:201
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:91
-#: src/features/chess/components/new-game.tsx:145
+#: src/features/chess/components/new-game.tsx:86
 #: src/features/chess/components/promotion-dialog.tsx:111
 msgid "Cancel"
 msgstr "هەڵوەشاندنەوە"
@@ -452,16 +473,15 @@ msgstr "هاوپۆلی ئەم ئاگادارکردنەوانە"
 msgid "Change notification category"
 msgstr "گۆڕینی هاوپۆلی ئاگادارکردنەوە"
 
-#: src/features/chess/index.tsx:522
-#: src/features/chess/index.tsx:555
+#: src/features/chess/index.tsx:505
 msgid "Chat"
 msgstr "گفتوگۆ"
 
-#: src/features/chess/index.tsx:383
+#: src/features/chess/index.tsx:366
 msgid "Check — {opponentName}'s move"
 msgstr "کش — نۆرەی {opponentName}"
 
-#: src/features/chess/index.tsx:382
+#: src/features/chess/index.tsx:365
 msgid "Check — your move"
 msgstr "کش — نۆرەی تۆیە"
 
@@ -473,17 +493,17 @@ msgstr "بۆکسی پشکنین"
 msgid "Checklist"
 msgstr "لیستی پشکنین"
 
-#: src/features/chess/index.tsx:366
+#: src/features/chess/index.tsx:349
 msgid "Checkmate — {opponentName} wins"
 msgstr "کش مات — {opponentName} بردی"
 
-#: src/features/chess/index.tsx:365
+#: src/features/chess/index.tsx:348
 msgid "Checkmate — you win!"
 msgstr "کش مات — تۆ بردت!"
 
-#: src/features/chess/index.tsx:60
-#: src/features/chess/index.tsx:319
-#: src/features/chess/index.tsx:331
+#: src/features/chess/index.tsx:58
+#: src/features/chess/index.tsx:307
+#: src/features/chess/index.tsx:316
 msgid "Chess"
 msgstr "شەترەنج"
 
@@ -499,15 +519,16 @@ msgstr "تەختەی شەترەنج. نۆرەی تۆیە. کلیلەکانی ت�
 msgid "Choose a game from the sidebar or start a new one."
 msgstr "یارییەک هەڵبژێرە لە لاتەنیشت یان نوێیەک دەست پێ بکە."
 
-#: ../../../lib/web/src/components/language-picker.tsx:264
-#: ../../../lib/web/src/components/language-picker.tsx:271
+#: ../../../lib/web/src/components/language-picker.tsx:267
+#: ../../../lib/web/src/components/language-picker.tsx:274
 msgid "Choose language"
 msgstr "زمان هەڵبژێرە"
 
-#: src/features/chess/components/new-game.tsx:105
+#: src/features/chess/components/new-game.tsx:80
 msgid "Choose opponent"
 msgstr "بەرامبەر هەڵبژێرە"
 
+#: ../../../lib/web/src/components/banner-section.tsx:111
 #: ../../../lib/web/src/components/colour-picker.tsx:274
 #: ../../../lib/web/src/components/colour-picker.tsx:355
 #: ../../../lib/web/src/components/travelling-picker.tsx:164
@@ -525,8 +546,8 @@ msgstr "پاککردنەوەی هەموو"
 msgid "Clear search"
 msgstr "پاککردنەوەی گەڕان"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:501
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:506
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:495
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:500
 #: ../../../lib/web/src/components/ui/dialog.tsx:78
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:468
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:471
@@ -601,11 +622,16 @@ msgstr "کردارەکانی سەرنج"
 msgid "Comments"
 msgstr "لێدوانەکان"
 
+#. placeholder {0}: data.comment_count || 0
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:409
+msgid "Comments ({0})"
+msgstr ""
+
 #: ../../../lib/web/src/lib/preference-utils.ts:90
 msgid "Compact"
 msgstr "بچووککراوە"
 
-#: src/components/layout/chess-layout.tsx:59
+#: src/components/layout/chess-layout.tsx:43
 msgid "Completed"
 msgstr "تەواوبوو"
 
@@ -684,8 +710,8 @@ msgstr "نەتوانرا بەو هەژمارە پشتڕاست بکرێتەوە. 
 
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:550
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:689
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:491
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:656
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:485
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:650
 #: ../../../lib/web/src/components/entity/entity-tree-view.tsx:675
 msgid "Create"
 msgstr "دروستکردن"
@@ -704,9 +730,9 @@ msgstr "دروستکردنی بڕگەی نوێ"
 msgid "Created"
 msgstr "دروستکرا"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:656
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:650
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:258
-#: src/features/chess/components/new-game.tsx:153
+#: src/features/chess/components/new-game.tsx:88
 msgid "Creating..."
 msgstr "دروستکردن..."
 
@@ -714,6 +740,7 @@ msgstr "دروستکردن..."
 msgid "Current location"
 msgstr "شوێنی ئێستا"
 
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:132
 #: ../../../lib/web/src/components/colour-picker.tsx:265
 msgid "Custom"
 msgstr "تایبەت"
@@ -734,6 +761,10 @@ msgstr "بەروار"
 msgid "Decline"
 msgstr "ڕەتکردنەوە"
 
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:129
+msgid "Default"
+msgstr ""
+
 #: ../../../lib/web/src/features/accounts/account-add.tsx:185
 msgid "Default AI account"
 msgstr "هەژماری بنەڕەتی AI"
@@ -751,7 +782,8 @@ msgstr "ڕیزکردنی بنەڕەت"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:203
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:252
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:314
-#: src/features/chess/index.tsx:613
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:661
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:78
 msgid "Delete"
 msgstr "سڕینەوە"
 
@@ -771,13 +803,19 @@ msgstr "سڕینەوەی لێدوان"
 msgid "Delete field"
 msgstr "سڕینەوەی خانە"
 
-#: src/features/chess/index.tsx:468
+#: src/features/chess/index.tsx:451
 msgid "Delete game"
 msgstr "سڕینەوەی یاری"
 
-#: src/features/chess/index.tsx:604
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:69
 msgid "Delete game?"
 msgstr "یارییەکە بسڕدرێتەوە؟"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:478
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:483
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:659
+msgid "Delete item"
+msgstr ""
 
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:116
 msgid "Delete option"
@@ -797,7 +835,7 @@ msgstr "سڕینەوەی ڕوانگە"
 msgid "Delete your account on the old server"
 msgstr "هەژمارەکەت لە سێرڤەری کۆنەکەوە بسڕەوە"
 
-#: src/features/chess/index.tsx:610
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:75
 msgid "Deleting..."
 msgstr "سڕینەوە..."
 
@@ -813,7 +851,7 @@ msgstr "وەسف"
 msgid "Details Panel"
 msgstr "پانێلی وردەکاری"
 
-#: ../../../lib/web/src/components/language-picker.tsx:240
+#: ../../../lib/web/src/components/language-picker.tsx:243
 #: ../../../lib/web/src/components/timezone-select.tsx:46
 #: ../../../lib/web/src/components/timezone-select.tsx:83
 #: ../../../lib/web/src/lib/preference-utils.ts:23
@@ -851,6 +889,7 @@ msgid "Displays the mobile sidebar."
 msgstr "لاتەنیشتی مۆبایل پیشان دەدات."
 
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:305
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:487
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:518
 msgid "Done"
 msgstr "تەواوبوو"
@@ -865,7 +904,7 @@ msgstr "داگرتن"
 msgid "Download failed"
 msgstr "داگرتن سەرکەوتوو نەبوو"
 
-#: src/features/chess/index.tsx:370
+#: src/features/chess/index.tsx:353
 msgid "Draw"
 msgstr "یەکسان"
 
@@ -873,11 +912,11 @@ msgstr "یەکسان"
 msgid "Draw agreed"
 msgstr "ڕێککەوتن لەسەر یەکسانی"
 
-#: src/features/chess/index.tsx:481
+#: src/features/chess/index.tsx:464
 msgid "Draw offered — waiting for {opponentName}"
 msgstr "یەکسانی پێشنیار کرا — چاوەڕێی {opponentName}"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:67
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:71
 msgid "Duplicates"
 msgstr "دووبارەکان"
 
@@ -932,6 +971,10 @@ msgstr "ئیمەیڵ"
 msgid "Email code"
 msgstr "کۆدی ئیمەیڵ"
 
+#: ../../../lib/web/src/components/banner-section.tsx:88
+msgid "Enter banner text (markdown supported)..."
+msgstr ""
+
 #: ../../../lib/web/src/components/step-up-dialog.tsx:302
 msgid "Enter the code from your email"
 msgstr "ئەو کۆدە بنووسە کە لە ئیمەیڵەکەتدا هاتووە"
@@ -939,6 +982,10 @@ msgstr "ئەو کۆدە بنووسە کە لە ئیمەیڵەکەتدا هاتو
 #: ../../../lib/web/src/components/step-up-dialog.tsx:327
 msgid "Enter your authenticator code"
 msgstr "کۆدی ڕاستاندنەکەت بنووسە"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:379
+msgid "Error"
+msgstr ""
 
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:101
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:110
@@ -959,7 +1006,7 @@ msgstr "URLی دەرەکی"
 msgid "Extra large"
 msgstr "زۆر گەورە"
 
-#: src/features/chess/index.tsx:185
+#: src/features/chess/index.tsx:174
 msgid "Failed to accept draw"
 msgstr "وەرگرتنی یەکسانی سەرکەوتوو نەبوو"
 
@@ -968,22 +1015,26 @@ msgstr "وەرگرتنی یەکسانی سەرکەوتوو نەبوو"
 msgid "Failed to copy"
 msgstr "لەبەرگیرایەوە سەرکەوتوو نەبوو"
 
-#: src/features/chess/components/new-game.tsx:52
+#: src/features/chess/components/new-game.tsx:40
 msgid "Failed to create game"
 msgstr "دروستکردنی یاری سەرکەوتوو نەبوو"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:137
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:131
 #: ../../../lib/web/src/components/options-menu.tsx:98
 msgid "Failed to create link"
 msgstr "دروستکردنی بەستەر سەرکەوتوو نەبوو"
 
-#: src/features/chess/index.tsx:200
+#: src/features/chess/index.tsx:189
 msgid "Failed to create rematch"
 msgstr "دروستکردنی یاری دووبارە سەرکەوتوو نەبوو"
 
-#: src/features/chess/index.tsx:190
+#: src/features/chess/index.tsx:179
 msgid "Failed to decline draw"
 msgstr "ڕەتکردنەوەی یەکسانی سەرکەوتوو نەبوو"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:301
+msgid "Failed to delete"
+msgstr ""
 
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:130
 msgid "Failed to delete attachment"
@@ -993,11 +1044,11 @@ msgstr "سڕینەوەی هاوپێچ سەرکەوتوو نەبوو"
 msgid "Failed to delete comment"
 msgstr "سڕینەوەی بۆچوون سەرکەوتوو نەبوو"
 
-#: src/features/chess/index.tsx:212
+#: src/features/chess/index.tsx:201
 msgid "Failed to delete game"
 msgstr "سڕینەوەی یاری سەرکەوتوو نەبوو"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:159
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:153
 msgid "Failed to delete link"
 msgstr "سڕینەوەی بەستەر سەرکەوتوو نەبوو"
 
@@ -1017,15 +1068,28 @@ msgstr "بارکردنی مێژوو سەرکەوتوو نەبوو"
 msgid "Failed to load image"
 msgstr "وێنەکە بار نەکرا"
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:380
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:383
+msgid "Failed to load item"
+msgstr ""
+
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:213
+msgid "Failed to load prompts"
+msgstr ""
+
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:338
 msgid "Failed to load video"
 msgstr "ڤیدیۆکە بار نەکرا"
 
-#: src/features/chess/index.tsx:163
+#: src/features/chess/index.tsx:152
 msgid "Failed to make move"
 msgstr "ئەنجامدانی جوڵە سەرکەوتوو نەبوو"
 
-#: src/features/chess/index.tsx:180
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:315
+msgid "Failed to move"
+msgstr ""
+
+#: src/features/chess/index.tsx:169
 msgid "Failed to offer draw"
 msgstr "پێشنیاری یەکسانی سەرکەوتوو نەبوو"
 
@@ -1033,7 +1097,11 @@ msgstr "پێشنیاری یەکسانی سەرکەوتوو نەبوو"
 msgid "Failed to post comment"
 msgstr "ناردنی بۆچوون سەرکەوتوو نەبوو"
 
-#: src/features/chess/index.tsx:173
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:90
+msgid "Failed to reset prompt"
+msgstr ""
+
+#: src/features/chess/index.tsx:162
 msgid "Failed to resign"
 msgstr "وازهێنان سەرکەوتوو نەبوو"
 
@@ -1041,20 +1109,35 @@ msgstr "وازهێنان سەرکەوتوو نەبوو"
 msgid "Failed to revoke RSS access"
 msgstr "ڕەتکردنەوەی دەستپێگەیشتنی RSS سەرکەوتوو نەبوو"
 
-#: src/features/chess/index.tsx:539
-#: src/features/chess/index.tsx:572
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:271
+msgid "Failed to save"
+msgstr ""
+
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:111
+msgid "Failed to save prompt"
+msgstr ""
+
+#: src/features/chess/index.tsx:522
 msgid "Failed to send"
 msgstr "ناردن سەرکەوتوو نەبوو"
+
+#: ../../../lib/web/src/components/banner-section.tsx:71
+msgid "Failed to update banner"
+msgstr ""
 
 #: ../../../lib/web/src/components/entity/entity-comment-list.tsx:174
 msgid "Failed to update comment"
 msgstr "نوێکردنەوەی بۆچوون سەرکەوتوو نەبوو"
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:286
+msgid "Failed to update watching"
+msgstr ""
+
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:114
 msgid "Failed to upload attachment"
 msgstr "بارکردنی هاوپێچ سەرکەوتوو نەبوو"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:589
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:583
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:155
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:175
 msgid "Files"
@@ -1092,15 +1175,15 @@ msgstr "لە"
 msgid "From theme"
 msgstr "لە ڕووکارەوە"
 
-#: src/features/chess/components/new-game.tsx:48
+#: src/features/chess/components/new-game.tsx:36
 msgid "Game created"
 msgstr "یاری دروست کرا"
 
-#: src/features/chess/index.tsx:208
+#: src/features/chess/index.tsx:197
 msgid "Game deleted"
 msgstr "یاری سڕایەوە"
 
-#: src/features/chess/index.tsx:379
+#: src/features/chess/index.tsx:362
 msgid "Game state unavailable"
 msgstr "دۆخی یاری بەردەست نییە"
 
@@ -1174,6 +1257,10 @@ msgstr "بەرواری نادروست"
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
 msgstr "وا دیارە ئەو پەڕەیەی بەدوایدا دەگەڕێیت <0/>بوونی نییە یان سڕاوەتەوە."
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:433
+msgid "Item details"
+msgstr ""
+
 #: ../../../lib/web/src/lib/locale-format.ts:165
 msgid "Just now"
 msgstr "ئێستا"
@@ -1211,7 +1298,7 @@ msgstr "ڕووناک"
 msgid "Link"
 msgstr "بەستەر"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:279
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:273
 msgid "Links"
 msgstr "بەستەرەکان"
 
@@ -1226,6 +1313,14 @@ msgstr "زیاتر باربکە"
 #: ../../../lib/web/src/components/ui/loading-content.tsx:26
 msgid "Loading content…"
 msgstr "ناوەڕۆک باردەکرێت…"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:363
+msgid "Loading item"
+msgstr ""
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:364
+msgid "Loading item details"
+msgstr ""
 
 #: ../../../lib/web/src/components/ui/load-more.tsx:35
 #: ../../../lib/web/src/features/document/document-page.tsx:88
@@ -1328,15 +1423,15 @@ msgstr "ناو دەبێت ١٠٠٠ نووسە یان کەمتر بێت"
 msgid "Network error"
 msgstr "هەڵەی تۆڕ"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:476
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:470
 #: ../../../lib/web/src/components/ui/sort-selector.tsx:43
 msgid "New"
 msgstr "نوێ"
 
 #: ../../../lib/web/src/components/game/game-empty-state.tsx:39
 #: ../../../lib/web/src/components/game/game-empty-state.tsx:51
-#: src/components/layout/chess-layout.tsx:60
-#: src/features/chess/components/new-game.tsx:96
+#: src/components/layout/chess-layout.tsx:44
+#: src/features/chess/components/new-game.tsx:78
 msgid "New game"
 msgstr "یاری نوێ"
 
@@ -1345,7 +1440,7 @@ msgstr "یاری نوێ"
 msgid "Next image"
 msgstr "وێنەی دواتر"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:555
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:549
 msgid "No {parentClassNames} to add to"
 msgstr "هیچ {parentClassNames} نییە بۆ زیادکردن بۆی"
 
@@ -1361,11 +1456,11 @@ msgstr "هێشتا هیچ چالاکییەک نییە"
 msgid "No comments yet"
 msgstr "هێشتا هیچ بۆچوونێک نییە"
 
-#: src/features/chess/components/new-game.tsx:131
+#: src/features/chess/components/new-game.tsx:85
 msgid "No friends found"
 msgstr "هیچ هاوڕێیەک نەدۆزرایەوە"
 
-#: src/features/chess/components/new-game.tsx:113
+#: src/features/chess/components/new-game.tsx:81
 msgid "No friends yet"
 msgstr "هێشتا هیچ هاوڕێیەک نییە"
 
@@ -1377,11 +1472,11 @@ msgstr "هێشتا هیچ یارییەک نییە"
 msgid "No groups available"
 msgstr "هیچ گرووپێک بەردەست نییە"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:522
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:516
 msgid "No item types can be created yet. Create the required parent items first."
 msgstr "هێشتا هیچ جۆرە بڕگەیەک ناتوانرێت دروست بکرێت. سەرەتا بڕگە باوانە پێویستەکان دروست بکە."
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:360
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:354
 msgid "No matching objects"
 msgstr "هیچ تەنێکی هاوسەنگ نییە"
 
@@ -1434,9 +1529,13 @@ msgid "No views"
 msgstr "هیچ بینینێک نییە"
 
 #: ../../../lib/web/src/components/colour-picker.tsx:349
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:538
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:541
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:545
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:532
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:535
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:539
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:548
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:561
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:562
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:566
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:359
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:382
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:385
@@ -1477,7 +1576,7 @@ msgstr "ئاگادارکردنەوەکان: {0}"
 msgid "Number"
 msgstr "ژمارە"
 
-#: src/features/chess/index.tsx:452
+#: src/features/chess/index.tsx:435
 msgid "Offer draw"
 msgstr "پێشنیاری وەکیەکی"
 
@@ -1494,11 +1593,11 @@ msgstr "ئۆه! پەڕە نەدۆزرایەوە!"
 msgid "Open actions"
 msgstr "کردارەکان بکەرەوە"
 
-#: src/features/chess/index.tsx:431
+#: src/features/chess/index.tsx:414
 msgid "Open chat panel"
 msgstr "کردنەوەی پانێڵی گفتوگۆ"
 
-#: src/features/chess/index.tsx:439
+#: src/features/chess/index.tsx:422
 msgid "Open game actions"
 msgstr "کردنەوەی کردارەکانی یاری"
 
@@ -1548,7 +1647,8 @@ msgstr "هیتر"
 msgid "Owner"
 msgstr "خاوەن"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:530
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:524
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:544
 msgid "Parent"
 msgstr "باوان"
 
@@ -1582,7 +1682,7 @@ msgstr "تکایە پەیوەندی ئینتەرنێتەکەت بپشکنە و �
 msgid "Please log in with the appropriate credentials <0/> to access this resource."
 msgstr "تکایە بە زانیارییە گونجاوەکان بچۆ ژوورەوە <0/> بۆ دەستپێگەیشتن بەم سەرچاوەیە."
 
-#: src/features/chess/components/new-game.tsx:67
+#: src/features/chess/components/new-game.tsx:53
 msgid "Please select a friend"
 msgstr "تکایە هاوڕێیەک هەڵبژێرە"
 
@@ -1630,6 +1730,14 @@ msgstr "پلەبەرزکردنەوە بۆ {0}"
 msgid "Promote to:"
 msgstr "پلەبەرزکردنەوە بۆ:"
 
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:108
+msgid "Prompt saved"
+msgstr ""
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:406
+msgid "Properties"
+msgstr ""
+
 #: ../../../lib/web/src/features/accounts/types.ts:21
 msgid "Push notification"
 msgstr "ئاگادارکردنەوەی پاڵنان"
@@ -1667,7 +1775,7 @@ msgstr "ڕەوانەکردنەوە بۆ چونەژوورەوە."
 msgid "Reduce interest"
 msgstr "کەمکردنەوەی بەرژەوەندی"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:65
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:69
 msgid "Relates"
 msgstr "پەیوەندیدارە"
 
@@ -1679,7 +1787,7 @@ msgstr "ڕێژەیی (٥خ، ٣ک، ٢ڕ)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "ڕێژەیی لە ماوەی ٢٤ کاتژمێر، ئەگەرنا تەواو"
 
-#: src/features/chess/index.tsx:465
+#: src/features/chess/index.tsx:448
 msgid "Rematch"
 msgstr "یاری دووبارە"
 
@@ -1719,8 +1827,8 @@ msgstr "لابردنی بەرژەوەندی"
 msgid "Remove item"
 msgstr "لابردنی بڕگە"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:304
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:309
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:298
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:303
 msgid "Remove link"
 msgstr "بەستەر بسڕەوە"
 
@@ -1755,16 +1863,16 @@ msgstr "پێویست"
 msgid "Resend email"
 msgstr "ئیمەیڵ دووبارە بنێرە"
 
-#: src/features/chess/index.tsx:456
-#: src/features/chess/index.tsx:592
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:48
+#: src/features/chess/index.tsx:439
 msgid "Resign"
 msgstr "دەستلەکارکێشانەوە"
 
-#: src/features/chess/index.tsx:583
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:35
 msgid "Resign game?"
 msgstr "دەست لە یاری بکێشیتەوە؟"
 
-#: src/features/chess/index.tsx:589
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:45
 msgid "Resigning..."
 msgstr "دەستلەکارکێشانەوە..."
 
@@ -1813,13 +1921,19 @@ msgstr "URLی RSS لەبەر کرایەوە بۆ کلیپ بۆرد"
 msgid "Saturday"
 msgstr "شەممە"
 
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:156
 #: ../../../lib/web/src/components/attachment-composer.tsx:430
+#: ../../../lib/web/src/components/banner-section.tsx:99
 #: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:231
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:170
 #: ../../../lib/web/src/components/ui/editable-field-row.tsx:122
 #: ../../../lib/web/src/components/ui/secret-field.tsx:79
 msgid "Save"
 msgstr "پاشەکەوتکردن"
+
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:156
+msgid "Saving..."
+msgstr ""
 
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:175
 #: ../../../lib/web/src/components/filter-bar.tsx:32
@@ -1848,7 +1962,7 @@ msgstr "گەڕان بۆ گەیشتنگا..."
 msgid "Search for origin..."
 msgstr "گەڕان بۆ سەرچاوە..."
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:337
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:331
 msgid "Search objects..."
 msgstr "گەڕانی تەنەکان..."
 
@@ -1885,7 +1999,7 @@ msgstr "هەڵبژاردن"
 msgid "Select a field"
 msgstr "خانەیەک هەڵبژێرە"
 
-#: src/features/chess/components/new-game.tsx:130
+#: src/features/chess/components/new-game.tsx:84
 msgid "Select a friend..."
 msgstr "هاوڕێیەک هەڵبژێرە..."
 
@@ -2027,21 +2141,26 @@ msgstr "سەرچاوەکان"
 msgid "Spacious"
 msgstr "فراوان"
 
-#: src/features/chess/index.tsx:368
+#: src/features/chess/index.tsx:351
 msgid "Stalemate — draw"
 msgstr "پات — یەکسان"
 
-#: src/features/chess/components/new-game.tsx:99
+#: src/features/chess/components/new-game.tsx:79
 msgid "Start a new chess game"
 msgstr "یارییەکی نوێی شەترەنج دەستپێبکە"
 
-#: src/features/chess/components/new-game.tsx:153
+#: src/features/chess/components/new-game.tsx:87
 msgid "Start game"
 msgstr "یاری دەستپێبکە"
 
 #: ../../../lib/web/src/components/entity/entity-comment-list.tsx:323
 msgid "Start the discussion by adding the first comment."
 msgstr "بە زیادکردنی یەکەم لێدوان گفتوگۆ دەستپێبکە."
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:463
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:468
+msgid "Stop watching"
+msgstr ""
 
 #: ../../../lib/web/src/features/access/access-list.tsx:196
 msgid "Subject"
@@ -2118,7 +2237,7 @@ msgstr "ناوەڕۆکی داواکراو نەدۆزرایەوە."
 msgid "The server returned a web page instead of data."
 msgstr "ڕاژەکار لە جیاتی داتا پەڕەیەکی وێبی گەڕاندەوە."
 
-#: src/features/chess/index.tsx:605
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:70
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "ئەمە یارییەکە و چاتەکەی بە یەکجاری دەسڕێتەوە. ئەم کردارە ناتوانرێت پووچ بکرێتەوە."
 
@@ -2241,9 +2360,8 @@ msgstr "نەناسراو"
 msgid "Unsubscribe"
 msgstr "بەشداری هەڵبوەشێنەوە"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:285
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:103
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:184
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:178
+#: ../../../lib/web/src/lib/entity-title.ts:40
 msgid "Untitled"
 msgstr "بێ ناونیشان"
 
@@ -2252,7 +2370,7 @@ msgstr "بێ ناونیشان"
 msgid "Updated"
 msgstr "نوێکرایەوە"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:639
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:633
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:301
 msgid "Upload"
 msgstr "بارکردن"
@@ -2270,6 +2388,10 @@ msgstr "کلیلی تێپەڕبوونەکەت بەکاربهێنە"
 #: ../../../lib/web/src/features/access/access-dialog.tsx:158
 msgid "User"
 msgstr "بەکارهێنەر"
+
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:159
+msgid "Variables: {variables}"
+msgstr ""
 
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:73
 msgid "Verification code"
@@ -2298,9 +2420,18 @@ msgstr "بینەری ڤیدیۆ: {0}"
 msgid "View all notifications"
 msgstr "هەموو ئاگادارکردنەوەکان ببینە"
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:434
+msgid "View and edit item details"
+msgstr ""
+
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:170
 msgid "View controls"
 msgstr "کۆنترۆڵەکانی بینین"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:463
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:468
+msgid "Watch"
+msgstr ""
 
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:269
 #: ../../../lib/web/src/components/filter-bar.tsx:35
@@ -2321,7 +2452,7 @@ msgid "Wednesday"
 msgstr "چوارشەممە"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:422
+#: src/features/chess/index.tsx:405
 msgid "White"
 msgstr "سپی"
 
@@ -2340,7 +2471,7 @@ msgstr "تۆ"
 msgid "You do not have access to this section."
 msgstr "دەستپێگەیشتنت بەم بەشە نییە."
 
-#: src/features/chess/index.tsx:374
+#: src/features/chess/index.tsx:357
 msgid "You resigned — {opponentName} wins"
 msgstr "تۆ خۆت بەدەستەوەدا — {opponentName} بردی"
 
@@ -2352,7 +2483,7 @@ msgstr "هەژمارەکەت لە {source} بۆ ئێرە گواستراوەتە�
 msgid "Your attachments will be lost."
 msgstr "هاوپێچەکانت لەدەست دەچن."
 
-#: src/features/chess/index.tsx:385
+#: src/features/chess/index.tsx:368
 msgid "Your move"
 msgstr "نۆرەی تۆ"
 

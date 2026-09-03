@@ -18,7 +18,7 @@ msgstr ""
 msgid "Please check your internet connection and try again."
 msgstr "براہ کرم اپنا انٹرنیٹ کنکشن چیک کریں اور دوبارہ کوشش کریں۔"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:301
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:295
 msgid " or "
 msgstr " یا "
 
@@ -103,11 +103,11 @@ msgstr "{name} نے ہار مان لی"
 msgid "{opponentName} offered a draw"
 msgstr "{opponentName} نے ڈرا کی پیشکش کی"
 
-#: src/features/chess/index.tsx:373
+#: src/features/chess/index.tsx:356
 msgid "{opponentName} resigned — you win!"
 msgstr "{opponentName} نے ہار مان لی — آپ جیت گئے!"
 
-#: src/features/chess/index.tsx:386
+#: src/features/chess/index.tsx:369
 msgid "{opponentName}'s move"
 msgstr "{opponentName} کی باری"
 
@@ -173,9 +173,13 @@ msgstr "رسائی کی سطح"
 msgid "Account type"
 msgstr "اکاؤنٹ کی قسم"
 
-#: src/components/layout/chess-layout.tsx:58
+#: src/components/layout/chess-layout.tsx:42
 msgid "Active games"
 msgstr "فعال گیمز"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:413
+msgid "Activity"
+msgstr ""
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:720
 #: ../../../lib/web/src/features/access/access-dialog.tsx:332
@@ -216,11 +220,11 @@ msgstr "چیک لسٹ آئٹم شامل کریں"
 msgid "Add field"
 msgstr "فیلڈ شامل کریں"
 
-#: src/features/chess/components/new-game.tsx:121
+#: src/features/chess/components/new-game.tsx:83
 msgid "Add friends"
 msgstr "دوست شامل کریں"
 
-#: src/features/chess/components/new-game.tsx:114
+#: src/features/chess/components/new-game.tsx:82
 msgid "Add friends in the People app to start playing"
 msgstr "کھیلنا شروع کرنے کے لیے People ایپ میں دوست شامل کریں"
 
@@ -228,7 +232,7 @@ msgstr "کھیلنا شروع کرنے کے لیے People ایپ میں دوست
 msgid "Add item..."
 msgstr "آئٹم شامل کریں..."
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:320
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:314
 msgid "Add link"
 msgstr "لنک شامل کریں"
 
@@ -302,6 +306,10 @@ msgstr "اس فیڈ کو سبسکرائب کرنے والی ہر چیز اسے �
 msgid "Are you sure you want to delete \"{0}\"?"
 msgstr "کیا آپ واقعی \"{0}\" کو حذف کرنا چاہتے ہیں؟"
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:660
+msgid "Are you sure you want to delete \"{title}\"? This action cannot be undone."
+msgstr ""
+
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:629
 msgid "Are you sure you want to delete the \"{name}\" column? This cannot be undone."
 msgstr "کیا آپ واقعی \"{name}\" کالم کو حذف کرنا چاہتے ہیں؟ یہ واپس نہیں لیا جا سکتا۔"
@@ -314,7 +322,11 @@ msgstr "کیا آپ واقعی اس تبصرے کو حذف کرنا چاہتے �
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "کیا آپ واقعی لاگ آؤٹ کرنا چاہتے ہیں؟ آپ کو اپنے اکاؤنٹ تک رسائی کے لیے دوبارہ لاگ ان کرنا ہوگا۔"
 
-#: src/features/chess/index.tsx:584
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:39
+msgid "Are you sure you want to resign?"
+msgstr ""
+
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:38
 msgid "Are you sure you want to resign? {opponentName} will win the game."
 msgstr "کیا آپ واقعی ہار ماننا چاہتے ہیں؟ {opponentName} کھیل جیت جائے گا۔"
 
@@ -360,16 +372,25 @@ msgstr "واپس"
 msgid "Back to home"
 msgstr "گھر واپس جائیں"
 
+#: ../../../lib/web/src/components/banner-section.tsx:80
 #: ../../../lib/web/src/components/entity-banner.tsx:17
 msgid "Banner"
 msgstr "بینر"
+
+#: ../../../lib/web/src/components/banner-section.tsx:69
+msgid "Banner removed"
+msgstr ""
+
+#: ../../../lib/web/src/components/banner-section.tsx:69
+msgid "Banner updated"
+msgstr ""
 
 #: src/features/chess/lib/use-chess-piece-name.ts:20
 msgid "bishop"
 msgstr "فیل"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:422
+#: src/features/chess/index.tsx:405
 msgid "Black"
 msgstr "کالا"
 
@@ -380,8 +401,8 @@ msgstr "کالا"
 msgid "Black {0}"
 msgstr "سیاہ {0}"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:68
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:215
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:72
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:209
 msgid "Blocked by"
 msgstr "بلاک کردہ"
 
@@ -390,7 +411,7 @@ msgstr "بلاک کردہ"
 msgid "Blocked navigation to untrusted link"
 msgstr "غیر بھروسہ مند لنک پر نیویگیشن مسدود"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:66
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:70
 msgid "Blocks"
 msgstr "بلاک کرتا ہے"
 
@@ -425,7 +446,7 @@ msgstr "براؤزر نوٹیفکیشنز"
 #: ../../../lib/web/src/features/access/access-list.tsx:268
 #: ../../../lib/web/src/features/accounts/account-add.tsx:201
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:91
-#: src/features/chess/components/new-game.tsx:145
+#: src/features/chess/components/new-game.tsx:86
 #: src/features/chess/components/promotion-dialog.tsx:111
 msgid "Cancel"
 msgstr "منسوخ کریں"
@@ -452,16 +473,15 @@ msgstr "ان نوٹیفکیشنز کے لیے زمرہ"
 msgid "Change notification category"
 msgstr "نوٹیفکیشن کا زمرہ تبدیل کریں"
 
-#: src/features/chess/index.tsx:522
-#: src/features/chess/index.tsx:555
+#: src/features/chess/index.tsx:505
 msgid "Chat"
 msgstr "چیٹ"
 
-#: src/features/chess/index.tsx:383
+#: src/features/chess/index.tsx:366
 msgid "Check — {opponentName}'s move"
 msgstr "شہ — {opponentName} کی باری"
 
-#: src/features/chess/index.tsx:382
+#: src/features/chess/index.tsx:365
 msgid "Check — your move"
 msgstr "شہ — آپ کی باری"
 
@@ -473,17 +493,17 @@ msgstr "چیک باکس"
 msgid "Checklist"
 msgstr "چیک لسٹ"
 
-#: src/features/chess/index.tsx:366
+#: src/features/chess/index.tsx:349
 msgid "Checkmate — {opponentName} wins"
 msgstr "شہ مات — {opponentName} جیت گئے"
 
-#: src/features/chess/index.tsx:365
+#: src/features/chess/index.tsx:348
 msgid "Checkmate — you win!"
 msgstr "شہ مات — آپ جیت گئے!"
 
-#: src/features/chess/index.tsx:60
-#: src/features/chess/index.tsx:319
-#: src/features/chess/index.tsx:331
+#: src/features/chess/index.tsx:58
+#: src/features/chess/index.tsx:307
+#: src/features/chess/index.tsx:316
 msgid "Chess"
 msgstr "شطرنج"
 
@@ -499,15 +519,16 @@ msgstr "شطرنج کی بساط۔ آپ کی باری۔ نیویگیٹ کرنے 
 msgid "Choose a game from the sidebar or start a new one."
 msgstr "سائڈ بار سے گیم منتخب کریں یا نئی شروع کریں۔"
 
-#: ../../../lib/web/src/components/language-picker.tsx:264
-#: ../../../lib/web/src/components/language-picker.tsx:271
+#: ../../../lib/web/src/components/language-picker.tsx:267
+#: ../../../lib/web/src/components/language-picker.tsx:274
 msgid "Choose language"
 msgstr "زبان منتخب کریں"
 
-#: src/features/chess/components/new-game.tsx:105
+#: src/features/chess/components/new-game.tsx:80
 msgid "Choose opponent"
 msgstr "حریف منتخب کریں"
 
+#: ../../../lib/web/src/components/banner-section.tsx:111
 #: ../../../lib/web/src/components/colour-picker.tsx:274
 #: ../../../lib/web/src/components/colour-picker.tsx:355
 #: ../../../lib/web/src/components/travelling-picker.tsx:164
@@ -525,8 +546,8 @@ msgstr "سب صاف کریں"
 msgid "Clear search"
 msgstr "تلاش صاف کریں"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:501
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:506
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:495
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:500
 #: ../../../lib/web/src/components/ui/dialog.tsx:78
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:468
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:471
@@ -601,11 +622,16 @@ msgstr "تبصرے کے اعمال"
 msgid "Comments"
 msgstr "تبصرے"
 
+#. placeholder {0}: data.comment_count || 0
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:409
+msgid "Comments ({0})"
+msgstr ""
+
 #: ../../../lib/web/src/lib/preference-utils.ts:90
 msgid "Compact"
 msgstr "کمپیکٹ"
 
-#: src/components/layout/chess-layout.tsx:59
+#: src/components/layout/chess-layout.tsx:43
 msgid "Completed"
 msgstr "مکمل"
 
@@ -684,8 +710,8 @@ msgstr "اس اکاؤنٹ سے تصدیق نہیں ہو سکی۔ براہ کرم
 
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:550
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:689
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:491
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:656
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:485
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:650
 #: ../../../lib/web/src/components/entity/entity-tree-view.tsx:675
 msgid "Create"
 msgstr "بنائیں"
@@ -704,9 +730,9 @@ msgstr "نیا آئٹم بنائیں"
 msgid "Created"
 msgstr "بنایا گیا"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:656
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:650
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:258
-#: src/features/chess/components/new-game.tsx:153
+#: src/features/chess/components/new-game.tsx:88
 msgid "Creating..."
 msgstr "بن رہا ہے..."
 
@@ -714,6 +740,7 @@ msgstr "بن رہا ہے..."
 msgid "Current location"
 msgstr "موجودہ مقام"
 
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:132
 #: ../../../lib/web/src/components/colour-picker.tsx:265
 msgid "Custom"
 msgstr "اپنی مرضی کا"
@@ -734,6 +761,10 @@ msgstr "تاریخ"
 msgid "Decline"
 msgstr "انکار کریں"
 
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:129
+msgid "Default"
+msgstr ""
+
 #: ../../../lib/web/src/features/accounts/account-add.tsx:185
 msgid "Default AI account"
 msgstr "ڈیفالٹ AI اکاؤنٹ"
@@ -751,7 +782,8 @@ msgstr "ڈیفالٹ ترتیب"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:203
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:252
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:314
-#: src/features/chess/index.tsx:613
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:661
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:78
 msgid "Delete"
 msgstr "حذف کریں"
 
@@ -771,13 +803,19 @@ msgstr "تبصرہ حذف کریں"
 msgid "Delete field"
 msgstr "فیلڈ حذف کریں"
 
-#: src/features/chess/index.tsx:468
+#: src/features/chess/index.tsx:451
 msgid "Delete game"
 msgstr "گیم حذف کریں"
 
-#: src/features/chess/index.tsx:604
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:69
 msgid "Delete game?"
 msgstr "گیم حذف کریں؟"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:478
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:483
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:659
+msgid "Delete item"
+msgstr ""
 
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:116
 msgid "Delete option"
@@ -797,7 +835,7 @@ msgstr "ویو حذف کریں"
 msgid "Delete your account on the old server"
 msgstr "پرانے سرور پر اپنا اکاؤنٹ حذف کریں"
 
-#: src/features/chess/index.tsx:610
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:75
 msgid "Deleting..."
 msgstr "حذف ہو رہا ہے..."
 
@@ -813,7 +851,7 @@ msgstr "تفصیل"
 msgid "Details Panel"
 msgstr "تفصیلات کا پینل"
 
-#: ../../../lib/web/src/components/language-picker.tsx:240
+#: ../../../lib/web/src/components/language-picker.tsx:243
 #: ../../../lib/web/src/components/timezone-select.tsx:46
 #: ../../../lib/web/src/components/timezone-select.tsx:83
 #: ../../../lib/web/src/lib/preference-utils.ts:23
@@ -851,6 +889,7 @@ msgid "Displays the mobile sidebar."
 msgstr "موبائل سائڈبار دکھاتا ہے۔"
 
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:305
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:487
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:518
 msgid "Done"
 msgstr "مکمل"
@@ -865,7 +904,7 @@ msgstr "ڈاؤن لوڈ"
 msgid "Download failed"
 msgstr "ڈاؤن لوڈ ناکام"
 
-#: src/features/chess/index.tsx:370
+#: src/features/chess/index.tsx:353
 msgid "Draw"
 msgstr "برابر"
 
@@ -873,11 +912,11 @@ msgstr "برابر"
 msgid "Draw agreed"
 msgstr "برابری پر اتفاق ہوا"
 
-#: src/features/chess/index.tsx:481
+#: src/features/chess/index.tsx:464
 msgid "Draw offered — waiting for {opponentName}"
 msgstr "ڈرا کی پیشکش کی گئی — {opponentName} کا انتظار ہے"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:67
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:71
 msgid "Duplicates"
 msgstr "نقل کرتا ہے"
 
@@ -932,6 +971,10 @@ msgstr "ای میل"
 msgid "Email code"
 msgstr "ای میل کوڈ"
 
+#: ../../../lib/web/src/components/banner-section.tsx:88
+msgid "Enter banner text (markdown supported)..."
+msgstr ""
+
 #: ../../../lib/web/src/components/step-up-dialog.tsx:302
 msgid "Enter the code from your email"
 msgstr "اپنی ای میل میں موجود کوڈ درج کریں"
@@ -939,6 +982,10 @@ msgstr "اپنی ای میل میں موجود کوڈ درج کریں"
 #: ../../../lib/web/src/components/step-up-dialog.tsx:327
 msgid "Enter your authenticator code"
 msgstr "اپنا اتھینٹیکیٹر کوڈ درج کریں"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:379
+msgid "Error"
+msgstr ""
 
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:101
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:110
@@ -959,7 +1006,7 @@ msgstr "بیرونی URL"
 msgid "Extra large"
 msgstr "بہت بڑا"
 
-#: src/features/chess/index.tsx:185
+#: src/features/chess/index.tsx:174
 msgid "Failed to accept draw"
 msgstr "برابر قبول کرنے میں ناکامی"
 
@@ -968,22 +1015,26 @@ msgstr "برابر قبول کرنے میں ناکامی"
 msgid "Failed to copy"
 msgstr "کاپی کرنے میں ناکامی"
 
-#: src/features/chess/components/new-game.tsx:52
+#: src/features/chess/components/new-game.tsx:40
 msgid "Failed to create game"
 msgstr "گیم بنانے میں ناکامی"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:137
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:131
 #: ../../../lib/web/src/components/options-menu.tsx:98
 msgid "Failed to create link"
 msgstr "لنک بنانے میں ناکامی"
 
-#: src/features/chess/index.tsx:200
+#: src/features/chess/index.tsx:189
 msgid "Failed to create rematch"
 msgstr "ری میچ بنانے میں ناکامی"
 
-#: src/features/chess/index.tsx:190
+#: src/features/chess/index.tsx:179
 msgid "Failed to decline draw"
 msgstr "برابر مسترد کرنے میں ناکامی"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:301
+msgid "Failed to delete"
+msgstr ""
 
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:130
 msgid "Failed to delete attachment"
@@ -993,11 +1044,11 @@ msgstr "اٹیچمنٹ حذف کرنے میں ناکامی"
 msgid "Failed to delete comment"
 msgstr "تبصرہ حذف کرنے میں ناکامی"
 
-#: src/features/chess/index.tsx:212
+#: src/features/chess/index.tsx:201
 msgid "Failed to delete game"
 msgstr "گیم حذف کرنے میں ناکامی"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:159
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:153
 msgid "Failed to delete link"
 msgstr "لنک حذف کرنے میں ناکامی"
 
@@ -1017,15 +1068,28 @@ msgstr "تاریخ لوڈ کرنے میں ناکامی"
 msgid "Failed to load image"
 msgstr "تصویر لوڈ نہیں ہو سکی"
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:380
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:383
+msgid "Failed to load item"
+msgstr ""
+
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:213
+msgid "Failed to load prompts"
+msgstr ""
+
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:338
 msgid "Failed to load video"
 msgstr "ویڈیو لوڈ نہیں ہو سکی"
 
-#: src/features/chess/index.tsx:163
+#: src/features/chess/index.tsx:152
 msgid "Failed to make move"
 msgstr "چال چلنے میں ناکامی"
 
-#: src/features/chess/index.tsx:180
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:315
+msgid "Failed to move"
+msgstr ""
+
+#: src/features/chess/index.tsx:169
 msgid "Failed to offer draw"
 msgstr "برابر کی پیشکش میں ناکامی"
 
@@ -1033,7 +1097,11 @@ msgstr "برابر کی پیشکش میں ناکامی"
 msgid "Failed to post comment"
 msgstr "تبصرہ پوسٹ کرنے میں ناکامی"
 
-#: src/features/chess/index.tsx:173
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:90
+msgid "Failed to reset prompt"
+msgstr ""
+
+#: src/features/chess/index.tsx:162
 msgid "Failed to resign"
 msgstr "دستبرداری میں ناکامی"
 
@@ -1041,20 +1109,35 @@ msgstr "دستبرداری میں ناکامی"
 msgid "Failed to revoke RSS access"
 msgstr "RSS رسائی منسوخ کرنے میں ناکام"
 
-#: src/features/chess/index.tsx:539
-#: src/features/chess/index.tsx:572
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:271
+msgid "Failed to save"
+msgstr ""
+
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:111
+msgid "Failed to save prompt"
+msgstr ""
+
+#: src/features/chess/index.tsx:522
 msgid "Failed to send"
 msgstr "بھیجنے میں ناکامی"
+
+#: ../../../lib/web/src/components/banner-section.tsx:71
+msgid "Failed to update banner"
+msgstr ""
 
 #: ../../../lib/web/src/components/entity/entity-comment-list.tsx:174
 msgid "Failed to update comment"
 msgstr "تبصرہ اپڈیٹ کرنے میں ناکامی"
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:286
+msgid "Failed to update watching"
+msgstr ""
+
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:114
 msgid "Failed to upload attachment"
 msgstr "اٹیچمنٹ اپ لوڈ کرنے میں ناکامی"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:589
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:583
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:155
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:175
 msgid "Files"
@@ -1092,15 +1175,15 @@ msgstr "سے"
 msgid "From theme"
 msgstr "تھیم سے"
 
-#: src/features/chess/components/new-game.tsx:48
+#: src/features/chess/components/new-game.tsx:36
 msgid "Game created"
 msgstr "گیم بنا دی گئی"
 
-#: src/features/chess/index.tsx:208
+#: src/features/chess/index.tsx:197
 msgid "Game deleted"
 msgstr "گیم حذف کر دی گئی"
 
-#: src/features/chess/index.tsx:379
+#: src/features/chess/index.tsx:362
 msgid "Game state unavailable"
 msgstr "کھیل کی حالت دستیاب نہیں"
 
@@ -1174,6 +1257,10 @@ msgstr "غلط تاریخ"
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
 msgstr "ایسا لگتا ہے کہ جو صفحہ آپ تلاش کر رہے ہیں <0/>وہ موجود نہیں ہے یا ہٹا دیا گیا ہے۔"
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:433
+msgid "Item details"
+msgstr ""
+
 #: ../../../lib/web/src/lib/locale-format.ts:165
 msgid "Just now"
 msgstr "ابھی"
@@ -1211,7 +1298,7 @@ msgstr "لائٹ"
 msgid "Link"
 msgstr "لنک"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:279
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:273
 msgid "Links"
 msgstr "لنکس"
 
@@ -1226,6 +1313,14 @@ msgstr "مزید لوڈ کریں"
 #: ../../../lib/web/src/components/ui/loading-content.tsx:26
 msgid "Loading content…"
 msgstr "مواد لوڈ ہو رہا ہے…"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:363
+msgid "Loading item"
+msgstr ""
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:364
+msgid "Loading item details"
+msgstr ""
 
 #: ../../../lib/web/src/components/ui/load-more.tsx:35
 #: ../../../lib/web/src/features/document/document-page.tsx:88
@@ -1328,15 +1423,15 @@ msgstr "نام 1000 حروف یا اس سے کم ہونا چاہیے"
 msgid "Network error"
 msgstr "نیٹ ورک کی خرابی"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:476
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:470
 #: ../../../lib/web/src/components/ui/sort-selector.tsx:43
 msgid "New"
 msgstr "نیا"
 
 #: ../../../lib/web/src/components/game/game-empty-state.tsx:39
 #: ../../../lib/web/src/components/game/game-empty-state.tsx:51
-#: src/components/layout/chess-layout.tsx:60
-#: src/features/chess/components/new-game.tsx:96
+#: src/components/layout/chess-layout.tsx:44
+#: src/features/chess/components/new-game.tsx:78
 msgid "New game"
 msgstr "نیا گیم"
 
@@ -1345,7 +1440,7 @@ msgstr "نیا گیم"
 msgid "Next image"
 msgstr "اگلی تصویر"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:555
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:549
 msgid "No {parentClassNames} to add to"
 msgstr "شامل کرنے کے لیے کوئی {parentClassNames} نہیں"
 
@@ -1361,11 +1456,11 @@ msgstr "ابھی تک کوئی سرگرمی نہیں"
 msgid "No comments yet"
 msgstr "ابھی تک کوئی تبصرے نہیں"
 
-#: src/features/chess/components/new-game.tsx:131
+#: src/features/chess/components/new-game.tsx:85
 msgid "No friends found"
 msgstr "کوئی دوست نہیں ملے"
 
-#: src/features/chess/components/new-game.tsx:113
+#: src/features/chess/components/new-game.tsx:81
 msgid "No friends yet"
 msgstr "ابھی تک کوئی دوست نہیں"
 
@@ -1377,11 +1472,11 @@ msgstr "ابھی تک کوئی گیمز نہیں"
 msgid "No groups available"
 msgstr "کوئی گروپ دستیاب نہیں"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:522
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:516
 msgid "No item types can be created yet. Create the required parent items first."
 msgstr "ابھی کوئی item types نہیں بنائے جا سکتے۔ پہلے درکار parent items بنائیں۔"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:360
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:354
 msgid "No matching objects"
 msgstr "کوئی matching objects نہیں"
 
@@ -1434,9 +1529,13 @@ msgid "No views"
 msgstr "کوئی views نہیں"
 
 #: ../../../lib/web/src/components/colour-picker.tsx:349
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:538
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:541
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:545
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:532
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:535
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:539
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:548
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:561
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:562
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:566
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:359
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:382
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:385
@@ -1477,7 +1576,7 @@ msgstr "اطلاعات: {0}"
 msgid "Number"
 msgstr "نمبر"
 
-#: src/features/chess/index.tsx:452
+#: src/features/chess/index.tsx:435
 msgid "Offer draw"
 msgstr "ڈرا کی پیشکش کریں"
 
@@ -1494,11 +1593,11 @@ msgstr "اوہ! صفحہ نہیں ملا!"
 msgid "Open actions"
 msgstr "کارروائیاں کھولیں"
 
-#: src/features/chess/index.tsx:431
+#: src/features/chess/index.tsx:414
 msgid "Open chat panel"
 msgstr "چیٹ panel کھولیں"
 
-#: src/features/chess/index.tsx:439
+#: src/features/chess/index.tsx:422
 msgid "Open game actions"
 msgstr "گیم actions کھولیں"
 
@@ -1548,7 +1647,8 @@ msgstr "دیگر"
 msgid "Owner"
 msgstr "مالک"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:530
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:524
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:544
 msgid "Parent"
 msgstr "parent"
 
@@ -1582,7 +1682,7 @@ msgstr "براہ کرم اپنا انٹرنیٹ کنکشن چیک کریں او�
 msgid "Please log in with the appropriate credentials <0/> to access this resource."
 msgstr "اس وسیلے تک رسائی کے لیے <0/> براہ کرم مناسب اسناد کے ساتھ لاگ ان کریں۔"
 
-#: src/features/chess/components/new-game.tsx:67
+#: src/features/chess/components/new-game.tsx:53
 msgid "Please select a friend"
 msgstr "براہ کرم ایک دوست منتخب کریں"
 
@@ -1630,6 +1730,14 @@ msgstr "{0} میں ترقی دیں"
 msgid "Promote to:"
 msgstr "ترقی دیں:"
 
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:108
+msgid "Prompt saved"
+msgstr ""
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:406
+msgid "Properties"
+msgstr ""
+
 #: ../../../lib/web/src/features/accounts/types.ts:21
 msgid "Push notification"
 msgstr "پش اطلاع"
@@ -1667,7 +1775,7 @@ msgstr "لاگ ان پر redirect ہو رہا ہے۔"
 msgid "Reduce interest"
 msgstr "دلچسپی کم کریں"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:65
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:69
 msgid "Relates"
 msgstr "متعلق"
 
@@ -1679,7 +1787,7 @@ msgstr "نسبتی (5m، 3h، 2d)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "24 گھنٹوں کے اندر نسبتی، ورنہ مطلق"
 
-#: src/features/chess/index.tsx:465
+#: src/features/chess/index.tsx:448
 msgid "Rematch"
 msgstr "دوبارہ میچ"
 
@@ -1719,8 +1827,8 @@ msgstr "دلچسپی ہٹائیں"
 msgid "Remove item"
 msgstr "item ہٹائیں"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:304
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:309
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:298
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:303
 msgid "Remove link"
 msgstr "لنک ہٹائیں"
 
@@ -1755,16 +1863,16 @@ msgstr "درکار"
 msgid "Resend email"
 msgstr "ای میل دوبارہ بھیجیں"
 
-#: src/features/chess/index.tsx:456
-#: src/features/chess/index.tsx:592
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:48
+#: src/features/chess/index.tsx:439
 msgid "Resign"
 msgstr "resign کریں"
 
-#: src/features/chess/index.tsx:583
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:35
 msgid "Resign game?"
 msgstr "گیم سے resign کریں؟"
 
-#: src/features/chess/index.tsx:589
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:45
 msgid "Resigning..."
 msgstr "resign ہو رہا ہے..."
 
@@ -1813,13 +1921,19 @@ msgstr "RSS URL clipboard پر copy ہو گیا"
 msgid "Saturday"
 msgstr "ہفتہ"
 
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:156
 #: ../../../lib/web/src/components/attachment-composer.tsx:430
+#: ../../../lib/web/src/components/banner-section.tsx:99
 #: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:231
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:170
 #: ../../../lib/web/src/components/ui/editable-field-row.tsx:122
 #: ../../../lib/web/src/components/ui/secret-field.tsx:79
 msgid "Save"
 msgstr "محفوظ کریں"
+
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:156
+msgid "Saving..."
+msgstr ""
 
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:175
 #: ../../../lib/web/src/components/filter-bar.tsx:32
@@ -1848,7 +1962,7 @@ msgstr "منزل تلاش کریں..."
 msgid "Search for origin..."
 msgstr "ابتدائی مقام تلاش کریں..."
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:337
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:331
 msgid "Search objects..."
 msgstr "آبجیکٹس تلاش کریں..."
 
@@ -1885,7 +1999,7 @@ msgstr "منتخب کریں"
 msgid "Select a field"
 msgstr "فیلڈ منتخب کریں"
 
-#: src/features/chess/components/new-game.tsx:130
+#: src/features/chess/components/new-game.tsx:84
 msgid "Select a friend..."
 msgstr "دوست منتخب کریں..."
 
@@ -2027,21 +2141,26 @@ msgstr "سورسز"
 msgid "Spacious"
 msgstr "کشادہ"
 
-#: src/features/chess/index.tsx:368
+#: src/features/chess/index.tsx:351
 msgid "Stalemate — draw"
 msgstr "پاٹ — برابر"
 
-#: src/features/chess/components/new-game.tsx:99
+#: src/features/chess/components/new-game.tsx:79
 msgid "Start a new chess game"
 msgstr "نیا شطرنج کا گیم شروع کریں"
 
-#: src/features/chess/components/new-game.tsx:153
+#: src/features/chess/components/new-game.tsx:87
 msgid "Start game"
 msgstr "گیم شروع کریں"
 
 #: ../../../lib/web/src/components/entity/entity-comment-list.tsx:323
 msgid "Start the discussion by adding the first comment."
 msgstr "پہلا تبصرہ شامل کر کے بحث شروع کریں۔"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:463
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:468
+msgid "Stop watching"
+msgstr ""
 
 #: ../../../lib/web/src/features/access/access-list.tsx:196
 msgid "Subject"
@@ -2118,7 +2237,7 @@ msgstr "مطلوبہ مواد نہیں مل سکا۔"
 msgid "The server returned a web page instead of data."
 msgstr "سرور نے ڈیٹا کے بجائے ایک ویب صفحہ واپس کیا۔"
 
-#: src/features/chess/index.tsx:605
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:70
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "یہ گیم اور اس کی چیٹ کو مستقل طور پر حذف کر دے گا۔ اس عمل کو واپس نہیں لیا جا سکتا۔"
 
@@ -2241,9 +2360,8 @@ msgstr "نامعلوم"
 msgid "Unsubscribe"
 msgstr "ان سبسکرائب کریں"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:285
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:103
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:184
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:178
+#: ../../../lib/web/src/lib/entity-title.ts:40
 msgid "Untitled"
 msgstr "بے عنوان"
 
@@ -2252,7 +2370,7 @@ msgstr "بے عنوان"
 msgid "Updated"
 msgstr "اپ ڈیٹ ہو گیا"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:639
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:633
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:301
 msgid "Upload"
 msgstr "اپ لوڈ کریں"
@@ -2270,6 +2388,10 @@ msgstr "اپنی پاس کی استعمال کریں"
 #: ../../../lib/web/src/features/access/access-dialog.tsx:158
 msgid "User"
 msgstr "صارف"
+
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:159
+msgid "Variables: {variables}"
+msgstr ""
 
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:73
 msgid "Verification code"
@@ -2298,9 +2420,18 @@ msgstr "ویڈیو ناظر: {0}"
 msgid "View all notifications"
 msgstr "تمام نوٹیفکیشنز دیکھیں"
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:434
+msgid "View and edit item details"
+msgstr ""
+
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:170
 msgid "View controls"
 msgstr "کنٹرولز دیکھیں"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:463
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:468
+msgid "Watch"
+msgstr ""
 
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:269
 #: ../../../lib/web/src/components/filter-bar.tsx:35
@@ -2321,7 +2452,7 @@ msgid "Wednesday"
 msgstr "بدھ"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:422
+#: src/features/chess/index.tsx:405
 msgid "White"
 msgstr "سفید"
 
@@ -2340,7 +2471,7 @@ msgstr "آپ"
 msgid "You do not have access to this section."
 msgstr "آپ کو اس حصے تک رسائی حاصل نہیں ہے۔"
 
-#: src/features/chess/index.tsx:374
+#: src/features/chess/index.tsx:357
 msgid "You resigned — {opponentName} wins"
 msgstr "آپ نے ہار مان لی — {opponentName} جیت گئے"
 
@@ -2352,7 +2483,7 @@ msgstr "آپ کا اکاؤنٹ {source} سے یہاں منتقل کر دیا گ�
 msgid "Your attachments will be lost."
 msgstr "آپ کے منسلکات ضائع ہو جائیں گے۔"
 
-#: src/features/chess/index.tsx:385
+#: src/features/chess/index.tsx:368
 msgid "Your move"
 msgstr "آپ کی چال"
 

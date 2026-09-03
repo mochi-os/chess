@@ -18,7 +18,7 @@ msgstr ""
 msgid "Please check your internet connection and try again."
 msgstr "ກະລຸນາກວດສອບການເຊື່ອມຕໍ່ອິນເຕີເນັດຂອງທ່ານ ແລະ ລອງໃໝ່ອີກຄັ້ງ."
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:301
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:295
 msgid " or "
 msgstr " ຫຼື "
 
@@ -103,11 +103,11 @@ msgstr "{name} ຍອມແພ້"
 msgid "{opponentName} offered a draw"
 msgstr "{opponentName} ສະເໜີສະເໝີ"
 
-#: src/features/chess/index.tsx:373
+#: src/features/chess/index.tsx:356
 msgid "{opponentName} resigned — you win!"
 msgstr "{opponentName} ຍອມແພ້ — ເຈົ້າຊະນະ!"
 
-#: src/features/chess/index.tsx:386
+#: src/features/chess/index.tsx:369
 msgid "{opponentName}'s move"
 msgstr "ຮອດເວນຂອງ {opponentName}"
 
@@ -173,9 +173,13 @@ msgstr "ລະດັບການເຂົ້າເຖິງ"
 msgid "Account type"
 msgstr "ປະເພດບັນຊີ"
 
-#: src/components/layout/chess-layout.tsx:58
+#: src/components/layout/chess-layout.tsx:42
 msgid "Active games"
 msgstr "ເກມທີ່ໃຊ້ງານຢູ່"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:413
+msgid "Activity"
+msgstr ""
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:720
 #: ../../../lib/web/src/features/access/access-dialog.tsx:332
@@ -216,11 +220,11 @@ msgstr "ເພີ່ມລາຍການກວດສອບ"
 msgid "Add field"
 msgstr "ເພີ່ມຊ່ອງຂໍ້ມູນ"
 
-#: src/features/chess/components/new-game.tsx:121
+#: src/features/chess/components/new-game.tsx:83
 msgid "Add friends"
 msgstr "ເພີ່ມເພື່ອນ"
 
-#: src/features/chess/components/new-game.tsx:114
+#: src/features/chess/components/new-game.tsx:82
 msgid "Add friends in the People app to start playing"
 msgstr "ເພີ່ມເພື່ອນໃນແອັບ People ເພື່ອເລີ່ມຫຼິ້ນ"
 
@@ -228,7 +232,7 @@ msgstr "ເພີ່ມເພື່ອນໃນແອັບ People ເພື່�
 msgid "Add item..."
 msgstr "ເພີ່ມລາຍການ..."
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:320
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:314
 msgid "Add link"
 msgstr "ເພີ່ມລິ້ງ"
 
@@ -302,6 +306,10 @@ msgstr "ທຸກຢ່າງທີ່ສະໝັກຮັບຟີດນີ້
 msgid "Are you sure you want to delete \"{0}\"?"
 msgstr "ທ່ານແນ່ໃຈບໍວ່າຕ້ອງການລົບ \"{0}\"?"
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:660
+msgid "Are you sure you want to delete \"{title}\"? This action cannot be undone."
+msgstr ""
+
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:629
 msgid "Are you sure you want to delete the \"{name}\" column? This cannot be undone."
 msgstr "ທ່ານແນ່ໃຈບໍວ່າຕ້ອງການລົບຖັນ \"{name}\"? ນີ້ບໍ່ສາມາດຍົກເລີກໄດ້."
@@ -314,7 +322,11 @@ msgstr "ທ່ານແນ່ໃຈບໍວ່າຕ້ອງການລົບ
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "ທ່ານແນ່ໃຈບໍວ່າຕ້ອງການອອກຈາກລະບົບ? ທ່ານຈະຕ້ອງເຂົ້າສູ່ລະບົບອີກຄັ້ງເພື່ອເຂົ້າເຖິງບັນຊີຂອງທ່ານ."
 
-#: src/features/chess/index.tsx:584
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:39
+msgid "Are you sure you want to resign?"
+msgstr ""
+
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:38
 msgid "Are you sure you want to resign? {opponentName} will win the game."
 msgstr "ທ່ານແນ່ໃຈບໍວ່າຕ້ອງການຍອມແພ້? {opponentName} ຈະຊະນະເກມ."
 
@@ -360,16 +372,25 @@ msgstr "ກັບຄືນ"
 msgid "Back to home"
 msgstr "ກັບໄປໜ້າຫຼັກ"
 
+#: ../../../lib/web/src/components/banner-section.tsx:80
 #: ../../../lib/web/src/components/entity-banner.tsx:17
 msgid "Banner"
 msgstr "ປ້າຍ"
+
+#: ../../../lib/web/src/components/banner-section.tsx:69
+msgid "Banner removed"
+msgstr ""
+
+#: ../../../lib/web/src/components/banner-section.tsx:69
+msgid "Banner updated"
+msgstr ""
 
 #: src/features/chess/lib/use-chess-piece-name.ts:20
 msgid "bishop"
 msgstr "bishop"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:422
+#: src/features/chess/index.tsx:405
 msgid "Black"
 msgstr "ດຳ"
 
@@ -380,8 +401,8 @@ msgstr "ດຳ"
 msgid "Black {0}"
 msgstr "ດຳ {0}"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:68
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:215
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:72
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:209
 msgid "Blocked by"
 msgstr "ຖືກບລັອກໂດຍ"
 
@@ -390,7 +411,7 @@ msgstr "ຖືກບລັອກໂດຍ"
 msgid "Blocked navigation to untrusted link"
 msgstr "ບລັອກການນຳທາງໄປຫາລິ້ງທີ່ບໍ່ເຊື່ອຖື"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:66
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:70
 msgid "Blocks"
 msgstr "ບລັອກ"
 
@@ -425,7 +446,7 @@ msgstr "ການແຈ້ງເຕືອນຕົວທ່ອງເວັບ"
 #: ../../../lib/web/src/features/access/access-list.tsx:268
 #: ../../../lib/web/src/features/accounts/account-add.tsx:201
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:91
-#: src/features/chess/components/new-game.tsx:145
+#: src/features/chess/components/new-game.tsx:86
 #: src/features/chess/components/promotion-dialog.tsx:111
 msgid "Cancel"
 msgstr "ຍົກເລີກ"
@@ -452,16 +473,15 @@ msgstr "ໝວດໝູ່ສຳລັບການແຈ້ງເຕືອນເ
 msgid "Change notification category"
 msgstr "ປ່ຽນໝວດໝູ່ການແຈ້ງເຕືອນ"
 
-#: src/features/chess/index.tsx:522
-#: src/features/chess/index.tsx:555
+#: src/features/chess/index.tsx:505
 msgid "Chat"
 msgstr "ແຊັດ"
 
-#: src/features/chess/index.tsx:383
+#: src/features/chess/index.tsx:366
 msgid "Check — {opponentName}'s move"
 msgstr "ຮຸກ — ຮອດເວນຂອງ {opponentName}"
 
-#: src/features/chess/index.tsx:382
+#: src/features/chess/index.tsx:365
 msgid "Check — your move"
 msgstr "ຮຸກ — ຮອດເວນຂອງເຈົ້າ"
 
@@ -473,17 +493,17 @@ msgstr "ກ່ອງໝາຍ"
 msgid "Checklist"
 msgstr "ລາຍການກວດສອບ"
 
-#: src/features/chess/index.tsx:366
+#: src/features/chess/index.tsx:349
 msgid "Checkmate — {opponentName} wins"
 msgstr "ຮຸກຈົນ — {opponentName} ຊະນະ"
 
-#: src/features/chess/index.tsx:365
+#: src/features/chess/index.tsx:348
 msgid "Checkmate — you win!"
 msgstr "ຮຸກຈົນ — ເຈົ້າຊະນະ!"
 
-#: src/features/chess/index.tsx:60
-#: src/features/chess/index.tsx:319
-#: src/features/chess/index.tsx:331
+#: src/features/chess/index.tsx:58
+#: src/features/chess/index.tsx:307
+#: src/features/chess/index.tsx:316
 msgid "Chess"
 msgstr "Chess"
 
@@ -499,15 +519,16 @@ msgstr "ກະດານ Chess. ການເຄື່ອນໄຫວຂອງທ�
 msgid "Choose a game from the sidebar or start a new one."
 msgstr "ເລືອກເກມຈາກແຖບຂ້າງ ຫຼື ເລີ່ມຕົ້ນອັນໃໝ່."
 
-#: ../../../lib/web/src/components/language-picker.tsx:264
-#: ../../../lib/web/src/components/language-picker.tsx:271
+#: ../../../lib/web/src/components/language-picker.tsx:267
+#: ../../../lib/web/src/components/language-picker.tsx:274
 msgid "Choose language"
 msgstr "ເລືອກພາສາ"
 
-#: src/features/chess/components/new-game.tsx:105
+#: src/features/chess/components/new-game.tsx:80
 msgid "Choose opponent"
 msgstr "ເລືອກຄູ່ຕໍ່ສູ້"
 
+#: ../../../lib/web/src/components/banner-section.tsx:111
 #: ../../../lib/web/src/components/colour-picker.tsx:274
 #: ../../../lib/web/src/components/colour-picker.tsx:355
 #: ../../../lib/web/src/components/travelling-picker.tsx:164
@@ -525,8 +546,8 @@ msgstr "ລ້າງທັງໝົດ"
 msgid "Clear search"
 msgstr "ລ້າງການຄົ້ນຫາ"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:501
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:506
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:495
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:500
 #: ../../../lib/web/src/components/ui/dialog.tsx:78
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:468
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:471
@@ -601,11 +622,16 @@ msgstr "ການກະທຳຄຳເຫັນ"
 msgid "Comments"
 msgstr "ຄຳເຫັນ"
 
+#. placeholder {0}: data.comment_count || 0
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:409
+msgid "Comments ({0})"
+msgstr ""
+
 #: ../../../lib/web/src/lib/preference-utils.ts:90
 msgid "Compact"
 msgstr "ຫຍໍ້"
 
-#: src/components/layout/chess-layout.tsx:59
+#: src/components/layout/chess-layout.tsx:43
 msgid "Completed"
 msgstr "ສຳເລັດແລ້ວ"
 
@@ -684,8 +710,8 @@ msgstr "ບໍ່ສາມາດຢືນຢັນດ້ວຍບັນຊີນ
 
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:550
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:689
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:491
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:656
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:485
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:650
 #: ../../../lib/web/src/components/entity/entity-tree-view.tsx:675
 msgid "Create"
 msgstr "ສ້າງ"
@@ -704,9 +730,9 @@ msgstr "ສ້າງລາຍການໃໝ່"
 msgid "Created"
 msgstr "ສ້າງແລ້ວ"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:656
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:650
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:258
-#: src/features/chess/components/new-game.tsx:153
+#: src/features/chess/components/new-game.tsx:88
 msgid "Creating..."
 msgstr "ກຳລັງສ້າງ..."
 
@@ -714,6 +740,7 @@ msgstr "ກຳລັງສ້າງ..."
 msgid "Current location"
 msgstr "ຕຳແໜ່ງປັດຈຸບັນ"
 
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:132
 #: ../../../lib/web/src/components/colour-picker.tsx:265
 msgid "Custom"
 msgstr "ກຳນົດເອງ"
@@ -734,6 +761,10 @@ msgstr "ວັນທີ"
 msgid "Decline"
 msgstr "ປະຕິເສດ"
 
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:129
+msgid "Default"
+msgstr ""
+
 #: ../../../lib/web/src/features/accounts/account-add.tsx:185
 msgid "Default AI account"
 msgstr "ບັນຊີ AI ເລີ່ມຕົ້ນ"
@@ -751,7 +782,8 @@ msgstr "ການຈັດລຽງເລີ່ມຕົ້ນ"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:203
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:252
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:314
-#: src/features/chess/index.tsx:613
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:661
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:78
 msgid "Delete"
 msgstr "ລົບ"
 
@@ -771,13 +803,19 @@ msgstr "ລົບຄຳເຫັນ"
 msgid "Delete field"
 msgstr "ລົບຊ່ອງຂໍ້ມູນ"
 
-#: src/features/chess/index.tsx:468
+#: src/features/chess/index.tsx:451
 msgid "Delete game"
 msgstr "ລົບເກມ"
 
-#: src/features/chess/index.tsx:604
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:69
 msgid "Delete game?"
 msgstr "ລົບເກມ?"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:478
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:483
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:659
+msgid "Delete item"
+msgstr ""
 
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:116
 msgid "Delete option"
@@ -797,7 +835,7 @@ msgstr "ລົບມຸມມອງ"
 msgid "Delete your account on the old server"
 msgstr "ລຶບບັນຊີຂອງທ່ານໃນເຊີຟເວີເກົ່າ"
 
-#: src/features/chess/index.tsx:610
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:75
 msgid "Deleting..."
 msgstr "ກຳລັງລົບ..."
 
@@ -813,7 +851,7 @@ msgstr "ລາຍລະອຽດ"
 msgid "Details Panel"
 msgstr "ແຜງລາຍລະອຽດ"
 
-#: ../../../lib/web/src/components/language-picker.tsx:240
+#: ../../../lib/web/src/components/language-picker.tsx:243
 #: ../../../lib/web/src/components/timezone-select.tsx:46
 #: ../../../lib/web/src/components/timezone-select.tsx:83
 #: ../../../lib/web/src/lib/preference-utils.ts:23
@@ -851,6 +889,7 @@ msgid "Displays the mobile sidebar."
 msgstr "ສະແດງແຖບຂ້າງມືຖື."
 
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:305
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:487
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:518
 msgid "Done"
 msgstr "ສຳເລັດແລ້ວ"
@@ -865,7 +904,7 @@ msgstr "ດາວໂຫຼດ"
 msgid "Download failed"
 msgstr "ດາວໂຫຼດບໍ່ສຳເລັດ"
 
-#: src/features/chess/index.tsx:370
+#: src/features/chess/index.tsx:353
 msgid "Draw"
 msgstr "ເສມີ"
 
@@ -873,11 +912,11 @@ msgstr "ເສມີ"
 msgid "Draw agreed"
 msgstr "ຕົກລົງເສມີ"
 
-#: src/features/chess/index.tsx:481
+#: src/features/chess/index.tsx:464
 msgid "Draw offered — waiting for {opponentName}"
 msgstr "ສະເໜີສະເໝີ — ກຳລັງລໍຖ້າ {opponentName}"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:67
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:71
 msgid "Duplicates"
 msgstr "ຊ້ຳກັນ"
 
@@ -932,6 +971,10 @@ msgstr "ອີເມວ"
 msgid "Email code"
 msgstr "ລະຫັດອີເມວ"
 
+#: ../../../lib/web/src/components/banner-section.tsx:88
+msgid "Enter banner text (markdown supported)..."
+msgstr ""
+
 #: ../../../lib/web/src/components/step-up-dialog.tsx:302
 msgid "Enter the code from your email"
 msgstr "ປ້ອນລະຫັດຈາກອີເມວຂອງທ່ານ"
@@ -939,6 +982,10 @@ msgstr "ປ້ອນລະຫັດຈາກອີເມວຂອງທ່ານ
 #: ../../../lib/web/src/components/step-up-dialog.tsx:327
 msgid "Enter your authenticator code"
 msgstr "ໃສ່ລະຫັດ authenticator ຂອງທ່ານ"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:379
+msgid "Error"
+msgstr ""
 
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:101
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:110
@@ -959,7 +1006,7 @@ msgstr "URL ພາຍນອກ"
 msgid "Extra large"
 msgstr "ໃຫຍ່ພິເສດ"
 
-#: src/features/chess/index.tsx:185
+#: src/features/chess/index.tsx:174
 msgid "Failed to accept draw"
 msgstr "ຮັບການສະເໜີສະເໝີລົ້ມເຫຼວ"
 
@@ -968,22 +1015,26 @@ msgstr "ຮັບການສະເໜີສະເໝີລົ້ມເຫຼວ
 msgid "Failed to copy"
 msgstr "ສຳເນົາລົ້ມເຫຼວ"
 
-#: src/features/chess/components/new-game.tsx:52
+#: src/features/chess/components/new-game.tsx:40
 msgid "Failed to create game"
 msgstr "ສ້າງເກມລົ້ມເຫຼວ"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:137
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:131
 #: ../../../lib/web/src/components/options-menu.tsx:98
 msgid "Failed to create link"
 msgstr "ສ້າງລິ້ງລົ້ມເຫຼວ"
 
-#: src/features/chess/index.tsx:200
+#: src/features/chess/index.tsx:189
 msgid "Failed to create rematch"
 msgstr "ສ້າງການແຂ່ງຂັນຄືນໃໝ່ລົ້ມເຫຼວ"
 
-#: src/features/chess/index.tsx:190
+#: src/features/chess/index.tsx:179
 msgid "Failed to decline draw"
 msgstr "ປະຕິເສດການສະເໜີສະເໝີລົ້ມເຫຼວ"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:301
+msgid "Failed to delete"
+msgstr ""
 
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:130
 msgid "Failed to delete attachment"
@@ -993,11 +1044,11 @@ msgstr "ລຶບໄຟລ໌ແນບລົ້ມເຫຼວ"
 msgid "Failed to delete comment"
 msgstr "ລຶບຄຳເຫັນລົ້ມເຫຼວ"
 
-#: src/features/chess/index.tsx:212
+#: src/features/chess/index.tsx:201
 msgid "Failed to delete game"
 msgstr "ລຶບເກມລົ້ມເຫຼວ"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:159
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:153
 msgid "Failed to delete link"
 msgstr "ລຶບລິ້ງລົ້ມເຫຼວ"
 
@@ -1017,15 +1068,28 @@ msgstr "ໂຫຼດປະຫວັດລົ້ມເຫຼວ"
 msgid "Failed to load image"
 msgstr "ໂຫຼດຮູບພາບບໍ່ສຳເລັດ"
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:380
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:383
+msgid "Failed to load item"
+msgstr ""
+
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:213
+msgid "Failed to load prompts"
+msgstr ""
+
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:338
 msgid "Failed to load video"
 msgstr "ໂຫຼດວິດີໂອບໍ່ສຳເລັດ"
 
-#: src/features/chess/index.tsx:163
+#: src/features/chess/index.tsx:152
 msgid "Failed to make move"
 msgstr "ເຄື່ອນໄຫວລົ້ມເຫຼວ"
 
-#: src/features/chess/index.tsx:180
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:315
+msgid "Failed to move"
+msgstr ""
+
+#: src/features/chess/index.tsx:169
 msgid "Failed to offer draw"
 msgstr "ສະເໜີສະເໝີລົ້ມເຫຼວ"
 
@@ -1033,7 +1097,11 @@ msgstr "ສະເໜີສະເໝີລົ້ມເຫຼວ"
 msgid "Failed to post comment"
 msgstr "ໂພສຄຳເຫັນລົ້ມເຫຼວ"
 
-#: src/features/chess/index.tsx:173
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:90
+msgid "Failed to reset prompt"
+msgstr ""
+
+#: src/features/chess/index.tsx:162
 msgid "Failed to resign"
 msgstr "ລາອອກລົ້ມເຫຼວ"
 
@@ -1041,20 +1109,35 @@ msgstr "ລາອອກລົ້ມເຫຼວ"
 msgid "Failed to revoke RSS access"
 msgstr "ຖອນການເຂົ້າເຖິງ RSS ບໍ່ສຳເລັດ"
 
-#: src/features/chess/index.tsx:539
-#: src/features/chess/index.tsx:572
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:271
+msgid "Failed to save"
+msgstr ""
+
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:111
+msgid "Failed to save prompt"
+msgstr ""
+
+#: src/features/chess/index.tsx:522
 msgid "Failed to send"
 msgstr "ສົ່ງລົ້ມເຫຼວ"
+
+#: ../../../lib/web/src/components/banner-section.tsx:71
+msgid "Failed to update banner"
+msgstr ""
 
 #: ../../../lib/web/src/components/entity/entity-comment-list.tsx:174
 msgid "Failed to update comment"
 msgstr "ອັບເດດຄຳເຫັນລົ້ມເຫຼວ"
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:286
+msgid "Failed to update watching"
+msgstr ""
+
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:114
 msgid "Failed to upload attachment"
 msgstr "ອັບໂຫຼດໄຟລ໌ແນບລົ້ມເຫຼວ"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:589
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:583
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:155
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:175
 msgid "Files"
@@ -1092,15 +1175,15 @@ msgstr "ຈາກ"
 msgid "From theme"
 msgstr "ຈາກຮູບແບບ"
 
-#: src/features/chess/components/new-game.tsx:48
+#: src/features/chess/components/new-game.tsx:36
 msgid "Game created"
 msgstr "ສ້າງເກມແລ້ວ"
 
-#: src/features/chess/index.tsx:208
+#: src/features/chess/index.tsx:197
 msgid "Game deleted"
 msgstr "ລຶບເກມແລ້ວ"
 
-#: src/features/chess/index.tsx:379
+#: src/features/chess/index.tsx:362
 msgid "Game state unavailable"
 msgstr "ບໍ່ສາມາດເອົາສະຖານະເກມໄດ້"
 
@@ -1174,6 +1257,10 @@ msgstr "ວັນທີ່ບໍ່ຖືກຕ້ອງ"
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
 msgstr "ເບິ່ງຄືວ່າໜ້າທີ່ທ່ານກຳລັງຊອກຫາ <0/>ບໍ່ມີ ຫຼື ອາດຖືກລຶບອອກແລ້ວ."
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:433
+msgid "Item details"
+msgstr ""
+
 #: ../../../lib/web/src/lib/locale-format.ts:165
 msgid "Just now"
 msgstr "ຫາກໍ"
@@ -1211,7 +1298,7 @@ msgstr "ສະຫວ່າງ"
 msgid "Link"
 msgstr "ລິ້ງ"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:279
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:273
 msgid "Links"
 msgstr "ລິ້ງ"
 
@@ -1226,6 +1313,14 @@ msgstr "ໂຫຼດເພີ່ມ"
 #: ../../../lib/web/src/components/ui/loading-content.tsx:26
 msgid "Loading content…"
 msgstr "ກຳລັງໂຫຼດເນື້ອຫາ…"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:363
+msgid "Loading item"
+msgstr ""
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:364
+msgid "Loading item details"
+msgstr ""
 
 #: ../../../lib/web/src/components/ui/load-more.tsx:35
 #: ../../../lib/web/src/features/document/document-page.tsx:88
@@ -1328,15 +1423,15 @@ msgstr "ຊື່ຕ້ອງມີ 1000 ຕົວອັກສອນຫຼືໜ
 msgid "Network error"
 msgstr "ຂໍ້ຜິດພາດເຄືອຂ່າຍ"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:476
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:470
 #: ../../../lib/web/src/components/ui/sort-selector.tsx:43
 msgid "New"
 msgstr "ໃໝ່"
 
 #: ../../../lib/web/src/components/game/game-empty-state.tsx:39
 #: ../../../lib/web/src/components/game/game-empty-state.tsx:51
-#: src/components/layout/chess-layout.tsx:60
-#: src/features/chess/components/new-game.tsx:96
+#: src/components/layout/chess-layout.tsx:44
+#: src/features/chess/components/new-game.tsx:78
 msgid "New game"
 msgstr "ເກມໃໝ່"
 
@@ -1345,7 +1440,7 @@ msgstr "ເກມໃໝ່"
 msgid "Next image"
 msgstr "ຮູບຕໍ່ໄປ"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:555
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:549
 msgid "No {parentClassNames} to add to"
 msgstr "ບໍ່ມີ {parentClassNames} ໃຫ້ເພີ່ມເຂົ້າ"
 
@@ -1361,11 +1456,11 @@ msgstr "ຍັງບໍ່ມີກິດຈະກຳ"
 msgid "No comments yet"
 msgstr "ຍັງບໍ່ມີຄຳເຫັນ"
 
-#: src/features/chess/components/new-game.tsx:131
+#: src/features/chess/components/new-game.tsx:85
 msgid "No friends found"
 msgstr "ບໍ່ພົບໝູ່"
 
-#: src/features/chess/components/new-game.tsx:113
+#: src/features/chess/components/new-game.tsx:81
 msgid "No friends yet"
 msgstr "ຍັງບໍ່ມີໝູ່"
 
@@ -1377,11 +1472,11 @@ msgstr "ຍັງບໍ່ມີເກມ"
 msgid "No groups available"
 msgstr "ບໍ່ມີກຸ່ມທີ່ມີຢູ່"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:522
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:516
 msgid "No item types can be created yet. Create the required parent items first."
 msgstr "ຍັງບໍ່ສາມາດສ້າງປະເພດລາຍການໄດ້. ສ້າງລາຍການແມ່ທີ່ຕ້ອງການກ່ອນ."
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:360
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:354
 msgid "No matching objects"
 msgstr "ບໍ່ມີວັດຖຸທີ່ກົງກັນ"
 
@@ -1434,9 +1529,13 @@ msgid "No views"
 msgstr "ບໍ່ມີການເບິ່ງ"
 
 #: ../../../lib/web/src/components/colour-picker.tsx:349
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:538
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:541
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:545
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:532
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:535
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:539
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:548
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:561
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:562
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:566
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:359
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:382
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:385
@@ -1477,7 +1576,7 @@ msgstr "ການແຈ້ງເຕືອນ: {0}"
 msgid "Number"
 msgstr "ຕົວເລກ"
 
-#: src/features/chess/index.tsx:452
+#: src/features/chess/index.tsx:435
 msgid "Offer draw"
 msgstr "ສະເໜີການເສະໜາ"
 
@@ -1494,11 +1593,11 @@ msgstr "ອຸບຍ! ບໍ່ພົບໜ້າ!"
 msgid "Open actions"
 msgstr "ເປີດການກະທຳ"
 
-#: src/features/chess/index.tsx:431
+#: src/features/chess/index.tsx:414
 msgid "Open chat panel"
 msgstr "ເປີດແຜງສົນທະນາ"
 
-#: src/features/chess/index.tsx:439
+#: src/features/chess/index.tsx:422
 msgid "Open game actions"
 msgstr "ເປີດການກະທຳເກມ"
 
@@ -1548,7 +1647,8 @@ msgstr "ອື່ນໆ"
 msgid "Owner"
 msgstr "ເຈົ້າຂອງ"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:530
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:524
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:544
 msgid "Parent"
 msgstr "ແມ່"
 
@@ -1582,7 +1682,7 @@ msgstr "ກະລຸນາກວດສອບການເຊື່ອມຕໍ່
 msgid "Please log in with the appropriate credentials <0/> to access this resource."
 msgstr "ກະລຸນາເຂົ້າສູ່ລະບົບດ້ວຍຂໍ້ມູນປະຈຳຕົວທີ່ເໝາະສົມ <0/> ເພື່ອເຂົ້າເຖິງຊັບພະຍາກອນນີ້."
 
-#: src/features/chess/components/new-game.tsx:67
+#: src/features/chess/components/new-game.tsx:53
 msgid "Please select a friend"
 msgstr "ກະລຸນາເລືອກໝູ່"
 
@@ -1630,6 +1730,14 @@ msgstr "ເລື່ອນຂັ້ນເປັນ {0}"
 msgid "Promote to:"
 msgstr "ເລື່ອນຂັ້ນເປັນ:"
 
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:108
+msgid "Prompt saved"
+msgstr ""
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:406
+msgid "Properties"
+msgstr ""
+
 #: ../../../lib/web/src/features/accounts/types.ts:21
 msgid "Push notification"
 msgstr "ການແຈ້ງເຕືອນ push"
@@ -1667,7 +1775,7 @@ msgstr "ກຳລັງປ່ຽນເສັ້ນທາງໄປຫາການ
 msgid "Reduce interest"
 msgstr "ຫຼຸດດອກເບ້ຍ"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:65
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:69
 msgid "Relates"
 msgstr "ກ່ຽວຂ້ອງ"
 
@@ -1679,7 +1787,7 @@ msgstr "ສຳພັດ (5m, 3h, 2d)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "ສຳພັດພາຍໃນ 24 ຊົ່ວໂມງ, ຖ້າບໍ່ດັ່ງນັ້ນສົມບູນ"
 
-#: src/features/chess/index.tsx:465
+#: src/features/chess/index.tsx:448
 msgid "Rematch"
 msgstr "ແຂ່ງຄືນ"
 
@@ -1719,8 +1827,8 @@ msgstr "ລຶບຄວາມສົນໃຈ"
 msgid "Remove item"
 msgstr "ລຶບລາຍການ"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:304
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:309
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:298
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:303
 msgid "Remove link"
 msgstr "ລຶບລິ້ງ"
 
@@ -1755,16 +1863,16 @@ msgstr "ຕ້ອງການ"
 msgid "Resend email"
 msgstr "ສົ່ງອີເມວອີກຄັ້ງ"
 
-#: src/features/chess/index.tsx:456
-#: src/features/chess/index.tsx:592
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:48
+#: src/features/chess/index.tsx:439
 msgid "Resign"
 msgstr "ຍອມແພ້"
 
-#: src/features/chess/index.tsx:583
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:35
 msgid "Resign game?"
 msgstr "ຍອມແພ້ເກມ?"
 
-#: src/features/chess/index.tsx:589
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:45
 msgid "Resigning..."
 msgstr "ກຳລັງຍອມແພ້..."
 
@@ -1813,13 +1921,19 @@ msgstr "ຄັດລອກ RSS URL ໄປຄລິບບອດແລ້ວ"
 msgid "Saturday"
 msgstr "ວັນເສົາ"
 
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:156
 #: ../../../lib/web/src/components/attachment-composer.tsx:430
+#: ../../../lib/web/src/components/banner-section.tsx:99
 #: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:231
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:170
 #: ../../../lib/web/src/components/ui/editable-field-row.tsx:122
 #: ../../../lib/web/src/components/ui/secret-field.tsx:79
 msgid "Save"
 msgstr "ບັນທຶກ"
+
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:156
+msgid "Saving..."
+msgstr ""
 
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:175
 #: ../../../lib/web/src/components/filter-bar.tsx:32
@@ -1848,7 +1962,7 @@ msgstr "ຄົ້ນຫາປາຍທາງ..."
 msgid "Search for origin..."
 msgstr "ຄົ້ນຫາຕົ້ນທາງ..."
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:337
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:331
 msgid "Search objects..."
 msgstr "ຄົ້ນຫາວັດຖຸ..."
 
@@ -1885,7 +1999,7 @@ msgstr "ເລືອກ"
 msgid "Select a field"
 msgstr "ເລືອກຊ່ອງ"
 
-#: src/features/chess/components/new-game.tsx:130
+#: src/features/chess/components/new-game.tsx:84
 msgid "Select a friend..."
 msgstr "ເລືອກໝູ່..."
 
@@ -2027,21 +2141,26 @@ msgstr "ແຫຼ່ງ"
 msgid "Spacious"
 msgstr "ກວ້າງຂວາງ"
 
-#: src/features/chess/index.tsx:368
+#: src/features/chess/index.tsx:351
 msgid "Stalemate — draw"
 msgstr "ອັບຈົນ — ເສມີ"
 
-#: src/features/chess/components/new-game.tsx:99
+#: src/features/chess/components/new-game.tsx:79
 msgid "Start a new chess game"
 msgstr "ເລີ່ມເກມໝາກຮຸກໃໝ່"
 
-#: src/features/chess/components/new-game.tsx:153
+#: src/features/chess/components/new-game.tsx:87
 msgid "Start game"
 msgstr "ເລີ່ມເກມ"
 
 #: ../../../lib/web/src/components/entity/entity-comment-list.tsx:323
 msgid "Start the discussion by adding the first comment."
 msgstr "ເລີ່ມການສົນທະນາໂດຍການເພີ່ມຄຳເຫັນທຳອິດ."
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:463
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:468
+msgid "Stop watching"
+msgstr ""
 
 #: ../../../lib/web/src/features/access/access-list.tsx:196
 msgid "Subject"
@@ -2118,7 +2237,7 @@ msgstr "ບໍ່ພົບເນື້ອຫາທີ່ຮ້ອງຂໍ."
 msgid "The server returned a web page instead of data."
 msgstr "ເຊີບເວີສົ່ງຄືນໜ້າເວັບແທນຂໍ້ມູນ."
 
-#: src/features/chess/index.tsx:605
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:70
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "ການດຳເນີນການນີ້ຈະລົບເກມ ແລະ ການສົນທະນາຂອງມັນຖາວອນ. ບໍ່ສາມາດຍົກເລີກການດຳເນີນການນີ້ໄດ້."
 
@@ -2241,9 +2360,8 @@ msgstr "ບໍ່ຮູ້ຈັກ"
 msgid "Unsubscribe"
 msgstr "ຍົກເລີກການສະໝັກສະມາຊິກ"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:285
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:103
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:184
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:178
+#: ../../../lib/web/src/lib/entity-title.ts:40
 msgid "Untitled"
 msgstr "ບໍ່ມີຊື່"
 
@@ -2252,7 +2370,7 @@ msgstr "ບໍ່ມີຊື່"
 msgid "Updated"
 msgstr "ອັບເດດແລ້ວ"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:639
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:633
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:301
 msgid "Upload"
 msgstr "ອັບໂຫຼດ"
@@ -2270,6 +2388,10 @@ msgstr "ໃຊ້ passkey ຂອງທ່ານ"
 #: ../../../lib/web/src/features/access/access-dialog.tsx:158
 msgid "User"
 msgstr "ຜູ້ໃຊ້"
+
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:159
+msgid "Variables: {variables}"
+msgstr ""
 
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:73
 msgid "Verification code"
@@ -2298,9 +2420,18 @@ msgstr "ຕົວເບິ່ງວິດີໂອ: {0}"
 msgid "View all notifications"
 msgstr "ເບິ່ງການແຈ້ງເຕືອນທັງໝົດ"
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:434
+msgid "View and edit item details"
+msgstr ""
+
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:170
 msgid "View controls"
 msgstr "ການຄວບຄຸມການເບິ່ງ"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:463
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:468
+msgid "Watch"
+msgstr ""
 
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:269
 #: ../../../lib/web/src/components/filter-bar.tsx:35
@@ -2321,7 +2452,7 @@ msgid "Wednesday"
 msgstr "ວັນພຸດ"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:422
+#: src/features/chess/index.tsx:405
 msgid "White"
 msgstr "ຂາວ"
 
@@ -2340,7 +2471,7 @@ msgstr "ທ່ານ"
 msgid "You do not have access to this section."
 msgstr "ທ່ານບໍ່ມີສິດເຂົ້າເຖິງພາກສ່ວນນີ້."
 
-#: src/features/chess/index.tsx:374
+#: src/features/chess/index.tsx:357
 msgid "You resigned — {opponentName} wins"
 msgstr "ເຈົ້າຍອມແພ້ — {opponentName} ຊະນະ"
 
@@ -2352,7 +2483,7 @@ msgstr "ບັນຊີຂອງທ່ານໄດ້ຍ້າຍມາທີ່
 msgid "Your attachments will be lost."
 msgstr "ໄຟລ໌ແນບຂອງທ່ານຈະສູນຫາຍ."
 
-#: src/features/chess/index.tsx:385
+#: src/features/chess/index.tsx:368
 msgid "Your move"
 msgstr "ການເຄື່ອນໄຫວຂອງທ່ານ"
 

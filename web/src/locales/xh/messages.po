@@ -18,7 +18,7 @@ msgstr ""
 msgid "Please check your internet connection and try again."
 msgstr "Nceda ukhangele uqhagamshelwano lwakho lwe-intanethi uze uzame kwakhona."
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:301
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:295
 msgid " or "
 msgstr " okanye "
 
@@ -103,11 +103,11 @@ msgstr "{name} unikele"
 msgid "{opponentName} offered a draw"
 msgstr "{opponentName} unike idrowu"
 
-#: src/features/chess/index.tsx:373
+#: src/features/chess/index.tsx:356
 msgid "{opponentName} resigned — you win!"
 msgstr "U-{opponentName} unikezele — uphumelele!"
 
-#: src/features/chess/index.tsx:386
+#: src/features/chess/index.tsx:369
 msgid "{opponentName}'s move"
 msgstr "Lithuba lika-{opponentName}"
 
@@ -173,9 +173,13 @@ msgstr "Inqanaba lofikelelo"
 msgid "Account type"
 msgstr "Uhlobo lwe-akhawunti"
 
-#: src/components/layout/chess-layout.tsx:58
+#: src/components/layout/chess-layout.tsx:42
 msgid "Active games"
 msgstr "Imidlalo Esebenzayo"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:413
+msgid "Activity"
+msgstr ""
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:720
 #: ../../../lib/web/src/features/access/access-dialog.tsx:332
@@ -216,11 +220,11 @@ msgstr "Yongeza into yoluhlu lokuhlola"
 msgid "Add field"
 msgstr "Yongeza intsimi"
 
-#: src/features/chess/components/new-game.tsx:121
+#: src/features/chess/components/new-game.tsx:83
 msgid "Add friends"
 msgstr "Yongeza abahlobo"
 
-#: src/features/chess/components/new-game.tsx:114
+#: src/features/chess/components/new-game.tsx:82
 msgid "Add friends in the People app to start playing"
 msgstr "Yongeza abahlobo kwi-app yeAbantu ukuze uqalise ukudlala"
 
@@ -228,7 +232,7 @@ msgstr "Yongeza abahlobo kwi-app yeAbantu ukuze uqalise ukudlala"
 msgid "Add item..."
 msgstr "Yongeza into..."
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:320
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:314
 msgid "Add link"
 msgstr "Yongeza ikhonkco"
 
@@ -302,6 +306,10 @@ msgstr "Nantoni na ebhalisele olu suselo iya kuyeka ukulufumana. Ungakhuphela i-
 msgid "Are you sure you want to delete \"{0}\"?"
 msgstr "Uqinisekile ufuna ukucima \"{0}\"?"
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:660
+msgid "Are you sure you want to delete \"{title}\"? This action cannot be undone."
+msgstr ""
+
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:629
 msgid "Are you sure you want to delete the \"{name}\" column? This cannot be undone."
 msgstr "Uqinisekile ufuna ukucima ikholamu \"{name}\"? Oku akunakubuyiswa."
@@ -314,7 +322,11 @@ msgstr "Uqinisekile ufuna ukucima esi siphawuli? Oku kuya kucima zonke iimpendul
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "Uqinisekile ufuna ukuphuma? Kuya kufuneka ungene kwakhona ukuze ufikelele kwi-akhawunti yakho."
 
-#: src/features/chess/index.tsx:584
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:39
+msgid "Are you sure you want to resign?"
+msgstr ""
+
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:38
 msgid "Are you sure you want to resign? {opponentName} will win the game."
 msgstr "Uqinisekile ukuba ufuna ukunikezela? {opponentName} uza kuphumelela umdlalo."
 
@@ -360,16 +372,25 @@ msgstr "Buyela"
 msgid "Back to home"
 msgstr "Buyela ekhaya"
 
+#: ../../../lib/web/src/components/banner-section.tsx:80
 #: ../../../lib/web/src/components/entity-banner.tsx:17
 msgid "Banner"
 msgstr "Ibhena"
+
+#: ../../../lib/web/src/components/banner-section.tsx:69
+msgid "Banner removed"
+msgstr ""
+
+#: ../../../lib/web/src/components/banner-section.tsx:69
+msgid "Banner updated"
+msgstr ""
 
 #: src/features/chess/lib/use-chess-piece-name.ts:20
 msgid "bishop"
 msgstr "ibhishophu"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:422
+#: src/features/chess/index.tsx:405
 msgid "Black"
 msgstr "Mnyama"
 
@@ -380,8 +401,8 @@ msgstr "Mnyama"
 msgid "Black {0}"
 msgstr "{0} eMnyama"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:68
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:215
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:72
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:209
 msgid "Blocked by"
 msgstr "Ivinjelwe ngu"
 
@@ -390,7 +411,7 @@ msgstr "Ivinjelwe ngu"
 msgid "Blocked navigation to untrusted link"
 msgstr "Kuvalwe ukuya kwikhonkco elingathenjwayo"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:66
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:70
 msgid "Blocks"
 msgstr "Iyavimba"
 
@@ -425,7 +446,7 @@ msgstr "Izaziso zebhrawuza"
 #: ../../../lib/web/src/features/access/access-list.tsx:268
 #: ../../../lib/web/src/features/accounts/account-add.tsx:201
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:91
-#: src/features/chess/components/new-game.tsx:145
+#: src/features/chess/components/new-game.tsx:86
 #: src/features/chess/components/promotion-dialog.tsx:111
 msgid "Cancel"
 msgstr "Rhoxisa"
@@ -452,16 +473,15 @@ msgstr "Udidi lwezi zaziso"
 msgid "Change notification category"
 msgstr "Tshintsha udidi lwesaziso"
 
-#: src/features/chess/index.tsx:522
-#: src/features/chess/index.tsx:555
+#: src/features/chess/index.tsx:505
 msgid "Chat"
 msgstr "Incoko"
 
-#: src/features/chess/index.tsx:383
+#: src/features/chess/index.tsx:366
 msgid "Check — {opponentName}'s move"
 msgstr "Isishwa — lithuba lika-{opponentName}"
 
-#: src/features/chess/index.tsx:382
+#: src/features/chess/index.tsx:365
 msgid "Check — your move"
 msgstr "Isishwa — lithuba lakho"
 
@@ -473,17 +493,17 @@ msgstr "Ibhokisi yokuhlola"
 msgid "Checklist"
 msgstr "Uluhlu lokuhlola"
 
-#: src/features/chess/index.tsx:366
+#: src/features/chess/index.tsx:349
 msgid "Checkmate — {opponentName} wins"
 msgstr "Isishwa esigqibeleleyo — kuphumelele u-{opponentName}"
 
-#: src/features/chess/index.tsx:365
+#: src/features/chess/index.tsx:348
 msgid "Checkmate — you win!"
 msgstr "Isishwa esigqibeleleyo — uphumelele!"
 
-#: src/features/chess/index.tsx:60
-#: src/features/chess/index.tsx:319
-#: src/features/chess/index.tsx:331
+#: src/features/chess/index.tsx:58
+#: src/features/chess/index.tsx:307
+#: src/features/chess/index.tsx:316
 msgid "Chess"
 msgstr "Itshesi"
 
@@ -499,15 +519,16 @@ msgstr "Ibhodi yeChess. Lithuba lakho. Sebenzisa amaqhosha eentolo ukukhangela, 
 msgid "Choose a game from the sidebar or start a new one."
 msgstr "Khetha umdlalo kwibha esecaleni okanye qalisa omtsha."
 
-#: ../../../lib/web/src/components/language-picker.tsx:264
-#: ../../../lib/web/src/components/language-picker.tsx:271
+#: ../../../lib/web/src/components/language-picker.tsx:267
+#: ../../../lib/web/src/components/language-picker.tsx:274
 msgid "Choose language"
 msgstr "Khetha ulwimi"
 
-#: src/features/chess/components/new-game.tsx:105
+#: src/features/chess/components/new-game.tsx:80
 msgid "Choose opponent"
 msgstr "Khetha umchasi"
 
+#: ../../../lib/web/src/components/banner-section.tsx:111
 #: ../../../lib/web/src/components/colour-picker.tsx:274
 #: ../../../lib/web/src/components/colour-picker.tsx:355
 #: ../../../lib/web/src/components/travelling-picker.tsx:164
@@ -525,8 +546,8 @@ msgstr "Cima konke"
 msgid "Clear search"
 msgstr "Cima ukukhangela"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:501
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:506
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:495
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:500
 #: ../../../lib/web/src/components/ui/dialog.tsx:78
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:468
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:471
@@ -601,11 +622,16 @@ msgstr "Izenzo zezimvo"
 msgid "Comments"
 msgstr "Izimvo"
 
+#. placeholder {0}: data.comment_count || 0
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:409
+msgid "Comments ({0})"
+msgstr ""
+
 #: ../../../lib/web/src/lib/preference-utils.ts:90
 msgid "Compact"
 msgstr "Mfutshane"
 
-#: src/components/layout/chess-layout.tsx:59
+#: src/components/layout/chess-layout.tsx:43
 msgid "Completed"
 msgstr "Kugqityiwe"
 
@@ -684,8 +710,8 @@ msgstr "Akukwazekanga ukuqinisekisa ngaloo akhawunti. Nceda uzame kwakhona."
 
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:550
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:689
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:491
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:656
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:485
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:650
 #: ../../../lib/web/src/components/entity/entity-tree-view.tsx:675
 msgid "Create"
 msgstr "Yenza"
@@ -704,9 +730,9 @@ msgstr "Yenza into entsha"
 msgid "Created"
 msgstr "Yenziwe"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:656
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:650
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:258
-#: src/features/chess/components/new-game.tsx:153
+#: src/features/chess/components/new-game.tsx:88
 msgid "Creating..."
 msgstr "Iyenziwa..."
 
@@ -714,6 +740,7 @@ msgstr "Iyenziwa..."
 msgid "Current location"
 msgstr "Indawo yangoku"
 
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:132
 #: ../../../lib/web/src/components/colour-picker.tsx:265
 msgid "Custom"
 msgstr "Ngokwesiqhelo"
@@ -734,6 +761,10 @@ msgstr "Umhla"
 msgid "Decline"
 msgstr "Yala"
 
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:129
+msgid "Default"
+msgstr ""
+
 #: ../../../lib/web/src/features/accounts/account-add.tsx:185
 msgid "Default AI account"
 msgstr "I-akhawunti yoqobo ye-AI"
@@ -751,7 +782,8 @@ msgstr "Ukuhlela koqobo"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:203
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:252
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:314
-#: src/features/chess/index.tsx:613
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:661
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:78
 msgid "Delete"
 msgstr "Cima"
 
@@ -771,13 +803,19 @@ msgstr "Cima isiphawuli"
 msgid "Delete field"
 msgstr "Cima intsimi"
 
-#: src/features/chess/index.tsx:468
+#: src/features/chess/index.tsx:451
 msgid "Delete game"
 msgstr "Cima umdlalo"
 
-#: src/features/chess/index.tsx:604
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:69
 msgid "Delete game?"
 msgstr "Cima umdlalo?"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:478
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:483
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:659
+msgid "Delete item"
+msgstr ""
 
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:116
 msgid "Delete option"
@@ -797,7 +835,7 @@ msgstr "Cima imbono"
 msgid "Delete your account on the old server"
 msgstr "Cima i-akhawunti yakho kwiseva endala"
 
-#: src/features/chess/index.tsx:610
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:75
 msgid "Deleting..."
 msgstr "Iyacinywa..."
 
@@ -813,7 +851,7 @@ msgstr "Inkcazo"
 msgid "Details Panel"
 msgstr "Iphaneli yenkcukacha"
 
-#: ../../../lib/web/src/components/language-picker.tsx:240
+#: ../../../lib/web/src/components/language-picker.tsx:243
 #: ../../../lib/web/src/components/timezone-select.tsx:46
 #: ../../../lib/web/src/components/timezone-select.tsx:83
 #: ../../../lib/web/src/lib/preference-utils.ts:23
@@ -851,6 +889,7 @@ msgid "Displays the mobile sidebar."
 msgstr "Ibonisa ibara lecala leselula."
 
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:305
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:487
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:518
 msgid "Done"
 msgstr "Kwenziwe"
@@ -865,7 +904,7 @@ msgstr "Khuphela"
 msgid "Download failed"
 msgstr "Ukukhuphela akuphumelelanga"
 
-#: src/features/chess/index.tsx:370
+#: src/features/chess/index.tsx:353
 msgid "Draw"
 msgstr "Ukulingana"
 
@@ -873,11 +912,11 @@ msgstr "Ukulingana"
 msgid "Draw agreed"
 msgstr "Kuvunyelwene ngokulingana"
 
-#: src/features/chess/index.tsx:481
+#: src/features/chess/index.tsx:464
 msgid "Draw offered — waiting for {opponentName}"
 msgstr "Idrowu inikiwe — kulindwe {opponentName}"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:67
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:71
 msgid "Duplicates"
 msgstr "Iphinda kabini"
 
@@ -932,6 +971,10 @@ msgstr "I-imeyili"
 msgid "Email code"
 msgstr "Ikhowudi ye-imeyili"
 
+#: ../../../lib/web/src/components/banner-section.tsx:88
+msgid "Enter banner text (markdown supported)..."
+msgstr ""
+
 #: ../../../lib/web/src/components/step-up-dialog.tsx:302
 msgid "Enter the code from your email"
 msgstr "Faka ikhowudi evela kwi-imeyile yakho"
@@ -939,6 +982,10 @@ msgstr "Faka ikhowudi evela kwi-imeyile yakho"
 #: ../../../lib/web/src/components/step-up-dialog.tsx:327
 msgid "Enter your authenticator code"
 msgstr "Faka ikhowudi yakho yesiqinisekisi"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:379
+msgid "Error"
+msgstr ""
 
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:101
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:110
@@ -959,7 +1006,7 @@ msgstr "I-URL yangaphandle"
 msgid "Extra large"
 msgstr "Inkulu kakhulu"
 
-#: src/features/chess/index.tsx:185
+#: src/features/chess/index.tsx:174
 msgid "Failed to accept draw"
 msgstr "Ayiphumelelanga ukwamkela ukulingana"
 
@@ -968,22 +1015,26 @@ msgstr "Ayiphumelelanga ukwamkela ukulingana"
 msgid "Failed to copy"
 msgstr "Ayiphumelelanga ukukhuphela"
 
-#: src/features/chess/components/new-game.tsx:52
+#: src/features/chess/components/new-game.tsx:40
 msgid "Failed to create game"
 msgstr "Ayiphumelelanga ukudala umdlalo"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:137
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:131
 #: ../../../lib/web/src/components/options-menu.tsx:98
 msgid "Failed to create link"
 msgstr "Ayiphumelelanga ukudala ikhonkco"
 
-#: src/features/chess/index.tsx:200
+#: src/features/chess/index.tsx:189
 msgid "Failed to create rematch"
 msgstr "Ayiphumelelanga ukudala umdlalo omtsha"
 
-#: src/features/chess/index.tsx:190
+#: src/features/chess/index.tsx:179
 msgid "Failed to decline draw"
 msgstr "Ayiphumelelanga ukwala ukulingana"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:301
+msgid "Failed to delete"
+msgstr ""
 
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:130
 msgid "Failed to delete attachment"
@@ -993,11 +1044,11 @@ msgstr "Ayiphumelelanga ukucima isiqhoboshelo"
 msgid "Failed to delete comment"
 msgstr "Ayiphumelelanga ukucima uluvo"
 
-#: src/features/chess/index.tsx:212
+#: src/features/chess/index.tsx:201
 msgid "Failed to delete game"
 msgstr "Ayiphumelelanga ukucima umdlalo"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:159
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:153
 msgid "Failed to delete link"
 msgstr "Ayiphumelelanga ukucima ikhonkco"
 
@@ -1017,15 +1068,28 @@ msgstr "Ayiphumelelanga ukulayisha imbali"
 msgid "Failed to load image"
 msgstr "Ayikwazanga ukulayisha umfanekiso"
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:380
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:383
+msgid "Failed to load item"
+msgstr ""
+
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:213
+msgid "Failed to load prompts"
+msgstr ""
+
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:338
 msgid "Failed to load video"
 msgstr "Ayikwazanga ukulayisha ividiyo"
 
-#: src/features/chess/index.tsx:163
+#: src/features/chess/index.tsx:152
 msgid "Failed to make move"
 msgstr "Ayiphumelelanga ukwenza intshukumo"
 
-#: src/features/chess/index.tsx:180
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:315
+msgid "Failed to move"
+msgstr ""
+
+#: src/features/chess/index.tsx:169
 msgid "Failed to offer draw"
 msgstr "Ayiphumelelanga ukunika ukulingana"
 
@@ -1033,7 +1097,11 @@ msgstr "Ayiphumelelanga ukunika ukulingana"
 msgid "Failed to post comment"
 msgstr "Ayiphumelelanga ukuposa uluvo"
 
-#: src/features/chess/index.tsx:173
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:90
+msgid "Failed to reset prompt"
+msgstr ""
+
+#: src/features/chess/index.tsx:162
 msgid "Failed to resign"
 msgstr "Ayiphumelelanga ukurhoxa"
 
@@ -1041,20 +1109,35 @@ msgstr "Ayiphumelelanga ukurhoxa"
 msgid "Failed to revoke RSS access"
 msgstr "Ayiphumelelanga ukurhoxisa ufikelelo lwe-RSS"
 
-#: src/features/chess/index.tsx:539
-#: src/features/chess/index.tsx:572
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:271
+msgid "Failed to save"
+msgstr ""
+
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:111
+msgid "Failed to save prompt"
+msgstr ""
+
+#: src/features/chess/index.tsx:522
 msgid "Failed to send"
 msgstr "Ayiphumelelanga ukuthumela"
+
+#: ../../../lib/web/src/components/banner-section.tsx:71
+msgid "Failed to update banner"
+msgstr ""
 
 #: ../../../lib/web/src/components/entity/entity-comment-list.tsx:174
 msgid "Failed to update comment"
 msgstr "Ayiphumelelanga ukuhlaziya uluvo"
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:286
+msgid "Failed to update watching"
+msgstr ""
+
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:114
 msgid "Failed to upload attachment"
 msgstr "Ayiphumelelanga ukulayisha isiqhoboshelo"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:589
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:583
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:155
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:175
 msgid "Files"
@@ -1092,15 +1175,15 @@ msgstr "Suka"
 msgid "From theme"
 msgstr "Kwitimu"
 
-#: src/features/chess/components/new-game.tsx:48
+#: src/features/chess/components/new-game.tsx:36
 msgid "Game created"
 msgstr "Umdlalo udaliwe"
 
-#: src/features/chess/index.tsx:208
+#: src/features/chess/index.tsx:197
 msgid "Game deleted"
 msgstr "Umdlalo ucinyiwe"
 
-#: src/features/chess/index.tsx:379
+#: src/features/chess/index.tsx:362
 msgid "Game state unavailable"
 msgstr "Imeko yomdlalo ayifumaneki"
 
@@ -1174,6 +1257,10 @@ msgstr "Umhla ongasebenziyo"
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
 msgstr "Kubonakala ngathi iphepha olikhangelayo <0/>alikho okanye lisusiwe."
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:433
+msgid "Item details"
+msgstr ""
+
 #: ../../../lib/web/src/lib/locale-format.ts:165
 msgid "Just now"
 msgstr "Kwangoku"
@@ -1211,7 +1298,7 @@ msgstr "Khaphukhaphu"
 msgid "Link"
 msgstr "Ikhonkco"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:279
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:273
 msgid "Links"
 msgstr "Amakhonkco"
 
@@ -1226,6 +1313,14 @@ msgstr "Layisha okungakumbi"
 #: ../../../lib/web/src/components/ui/loading-content.tsx:26
 msgid "Loading content…"
 msgstr "Iyalayisha umxholo…"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:363
+msgid "Loading item"
+msgstr ""
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:364
+msgid "Loading item details"
+msgstr ""
 
 #: ../../../lib/web/src/components/ui/load-more.tsx:35
 #: ../../../lib/web/src/features/document/document-page.tsx:88
@@ -1328,15 +1423,15 @@ msgstr "Igama kufuneka libe yimpawu eziyi-1000 okanye ngaphantsi"
 msgid "Network error"
 msgstr "Impazamo yothungelwano"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:476
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:470
 #: ../../../lib/web/src/components/ui/sort-selector.tsx:43
 msgid "New"
 msgstr "Entsha"
 
 #: ../../../lib/web/src/components/game/game-empty-state.tsx:39
 #: ../../../lib/web/src/components/game/game-empty-state.tsx:51
-#: src/components/layout/chess-layout.tsx:60
-#: src/features/chess/components/new-game.tsx:96
+#: src/components/layout/chess-layout.tsx:44
+#: src/features/chess/components/new-game.tsx:78
 msgid "New game"
 msgstr "Umdlalo omtsha"
 
@@ -1345,7 +1440,7 @@ msgstr "Umdlalo omtsha"
 msgid "Next image"
 msgstr "Umfanekiso olandelayo"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:555
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:549
 msgid "No {parentClassNames} to add to"
 msgstr "Akukho {parentClassNames} ongathela kuyo"
 
@@ -1361,11 +1456,11 @@ msgstr "Akukho msebenzi okwangoku"
 msgid "No comments yet"
 msgstr "Akukho zimvo okwangoku"
 
-#: src/features/chess/components/new-game.tsx:131
+#: src/features/chess/components/new-game.tsx:85
 msgid "No friends found"
 msgstr "Akukho bahlobo bafumanekileyo"
 
-#: src/features/chess/components/new-game.tsx:113
+#: src/features/chess/components/new-game.tsx:81
 msgid "No friends yet"
 msgstr "Akukho bahlobo okwangoku"
 
@@ -1377,11 +1472,11 @@ msgstr "Akukho midlalo okwangoku"
 msgid "No groups available"
 msgstr "Akukho maqela afumanekayo"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:522
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:516
 msgid "No item types can be created yet. Create the required parent items first."
 msgstr "Akukho ntlobo zezinto ezinokwenziwa okwangoku. Yenza izinto zomzali ezifunekayo kuqala."
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:360
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:354
 msgid "No matching objects"
 msgstr "Akukho zinto zifananisayo"
 
@@ -1434,9 +1529,13 @@ msgid "No views"
 msgstr "Akukho zinkangeleko"
 
 #: ../../../lib/web/src/components/colour-picker.tsx:349
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:538
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:541
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:545
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:532
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:535
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:539
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:548
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:561
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:562
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:566
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:359
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:382
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:385
@@ -1477,7 +1576,7 @@ msgstr "Izaziso: {0}"
 msgid "Number"
 msgstr "Inani"
 
-#: src/features/chess/index.tsx:452
+#: src/features/chess/index.tsx:435
 msgid "Offer draw"
 msgstr "Bona ngokulinganayo"
 
@@ -1494,11 +1593,11 @@ msgstr "Yhu! Iphepha Alifumanekanga!"
 msgid "Open actions"
 msgstr "Vula izenzo"
 
-#: src/features/chess/index.tsx:431
+#: src/features/chess/index.tsx:414
 msgid "Open chat panel"
 msgstr "Vula iphaneli yencoko"
 
-#: src/features/chess/index.tsx:439
+#: src/features/chess/index.tsx:422
 msgid "Open game actions"
 msgstr "Vula izenzo zomdlalo"
 
@@ -1548,7 +1647,8 @@ msgstr "Okunye"
 msgid "Owner"
 msgstr "Umnini"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:530
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:524
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:544
 msgid "Parent"
 msgstr "Umzali"
 
@@ -1582,7 +1682,7 @@ msgstr "Nceda ukhangele uqhagamshelwano lwakho lwe-intanethi uze uzame kwakhona.
 msgid "Please log in with the appropriate credentials <0/> to access this resource."
 msgstr "Nceda ungene ngeenkcukacha ezifanelekileyo <0/> ukuze ufikelele kolu vimba."
 
-#: src/features/chess/components/new-game.tsx:67
+#: src/features/chess/components/new-game.tsx:53
 msgid "Please select a friend"
 msgstr "Nceda khetha umhlobo"
 
@@ -1630,6 +1730,14 @@ msgstr "Nyusa ibe {0}"
 msgid "Promote to:"
 msgstr "Nyusa ibe:"
 
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:108
+msgid "Prompt saved"
+msgstr ""
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:406
+msgid "Properties"
+msgstr ""
+
 #: ../../../lib/web/src/features/accounts/types.ts:21
 msgid "Push notification"
 msgstr "Isaziso se-push"
@@ -1667,7 +1775,7 @@ msgstr "Iyahanjiswa kwiportal yokungena."
 msgid "Reduce interest"
 msgstr "Nciphisa umnxili"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:65
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:69
 msgid "Relates"
 msgstr "Inxulumene"
 
@@ -1679,7 +1787,7 @@ msgstr "Khwiniyene (5m, 3h, 2d)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "Khwiniyene kumayure angama-24, kungenjalo kupheleleyo"
 
-#: src/features/chess/index.tsx:465
+#: src/features/chess/index.tsx:448
 msgid "Rematch"
 msgstr "Phinda udlale"
 
@@ -1719,8 +1827,8 @@ msgstr "Susa umnxili"
 msgid "Remove item"
 msgstr "Susa into"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:304
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:309
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:298
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:303
 msgid "Remove link"
 msgstr "Susa ikhonkco"
 
@@ -1755,16 +1863,16 @@ msgstr "Iyafuneka"
 msgid "Resend email"
 msgstr "Thumela kwakhona i-imeyile"
 
-#: src/features/chess/index.tsx:456
-#: src/features/chess/index.tsx:592
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:48
+#: src/features/chess/index.tsx:439
 msgid "Resign"
 msgstr "Rhoxa"
 
-#: src/features/chess/index.tsx:583
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:35
 msgid "Resign game?"
 msgstr "Rhoxa kumdlalo?"
 
-#: src/features/chess/index.tsx:589
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:45
 msgid "Resigning..."
 msgstr "Iyarhoxa..."
 
@@ -1813,13 +1921,19 @@ msgstr "I-URL ye-RSS ikhutshelwe ku-clipboard"
 msgid "Saturday"
 msgstr "Umgqibelo"
 
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:156
 #: ../../../lib/web/src/components/attachment-composer.tsx:430
+#: ../../../lib/web/src/components/banner-section.tsx:99
 #: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:231
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:170
 #: ../../../lib/web/src/components/ui/editable-field-row.tsx:122
 #: ../../../lib/web/src/components/ui/secret-field.tsx:79
 msgid "Save"
 msgstr "Gcina"
+
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:156
+msgid "Saving..."
+msgstr ""
 
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:175
 #: ../../../lib/web/src/components/filter-bar.tsx:32
@@ -1848,7 +1962,7 @@ msgstr "Khangela indawo oyaaayo..."
 msgid "Search for origin..."
 msgstr "Khangela indawo yokuqala..."
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:337
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:331
 msgid "Search objects..."
 msgstr "Khangela izinto..."
 
@@ -1885,7 +1999,7 @@ msgstr "Khetha"
 msgid "Select a field"
 msgstr "Khetha indawo"
 
-#: src/features/chess/components/new-game.tsx:130
+#: src/features/chess/components/new-game.tsx:84
 msgid "Select a friend..."
 msgstr "Khetha umhlobo..."
 
@@ -2027,21 +2141,26 @@ msgstr "Imithombo"
 msgid "Spacious"
 msgstr "Banzi"
 
-#: src/features/chess/index.tsx:368
+#: src/features/chess/index.tsx:351
 msgid "Stalemate — draw"
 msgstr "Ukuxinga — ukulingana"
 
-#: src/features/chess/components/new-game.tsx:99
+#: src/features/chess/components/new-game.tsx:79
 msgid "Start a new chess game"
 msgstr "Qalisa umdlalo omtsha we-chess"
 
-#: src/features/chess/components/new-game.tsx:153
+#: src/features/chess/components/new-game.tsx:87
 msgid "Start game"
 msgstr "Qalisa umdlalo"
 
 #: ../../../lib/web/src/components/entity/entity-comment-list.tsx:323
 msgid "Start the discussion by adding the first comment."
 msgstr "Qalisa ingxoxo ngokongeza ilizwi lokuqala."
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:463
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:468
+msgid "Stop watching"
+msgstr ""
 
 #: ../../../lib/web/src/features/access/access-list.tsx:196
 msgid "Subject"
@@ -2118,7 +2237,7 @@ msgstr "Umxholo oceliweyo awufumanekanga."
 msgid "The server returned a web page instead of data."
 msgstr "Iseva ibuyise iphepha lewebhu endaweni yedatha."
 
-#: src/features/chess/index.tsx:605
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:70
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Oku kuza kucima umdlalo nengxoxo yawo ngokusisigxina. Esi senzo asinakuguqulwa."
 
@@ -2241,9 +2360,8 @@ msgstr "Akwaziwa"
 msgid "Unsubscribe"
 msgstr "Yeka ukurhuma"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:285
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:103
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:184
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:178
+#: ../../../lib/web/src/lib/entity-title.ts:40
 msgid "Untitled"
 msgstr "Akukho sihloko"
 
@@ -2252,7 +2370,7 @@ msgstr "Akukho sihloko"
 msgid "Updated"
 msgstr "Kuhlaziyiwe"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:639
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:633
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:301
 msgid "Upload"
 msgstr "Layisha"
@@ -2270,6 +2388,10 @@ msgstr "Sebenzisa i-passkey yakho"
 #: ../../../lib/web/src/features/access/access-dialog.tsx:158
 msgid "User"
 msgstr "Umsebenzisi"
+
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:159
+msgid "Variables: {variables}"
+msgstr ""
 
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:73
 msgid "Verification code"
@@ -2298,9 +2420,18 @@ msgstr "Umboniso wevidiyo: {0}"
 msgid "View all notifications"
 msgstr "Bonisa zonke izaziso"
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:434
+msgid "View and edit item details"
+msgstr ""
+
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:170
 msgid "View controls"
 msgstr "Bonisa izilawuli"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:463
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:468
+msgid "Watch"
+msgstr ""
 
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:269
 #: ../../../lib/web/src/components/filter-bar.tsx:35
@@ -2321,7 +2452,7 @@ msgid "Wednesday"
 msgstr "Ulwesithathu"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:422
+#: src/features/chess/index.tsx:405
 msgid "White"
 msgstr "Mhlophe"
 
@@ -2340,7 +2471,7 @@ msgstr "Wena"
 msgid "You do not have access to this section."
 msgstr "Awunalo ufikelelo kweli candelo."
 
-#: src/features/chess/index.tsx:374
+#: src/features/chess/index.tsx:357
 msgid "You resigned — {opponentName} wins"
 msgstr "Unikezele — kuphumelele u-{opponentName}"
 
@@ -2352,7 +2483,7 @@ msgstr "I-akhawunti yakho ihanjiswe apha ukusuka ku-{source}. Kude ukuze uyicime
 msgid "Your attachments will be lost."
 msgstr "Iziqhoboshelo zakho ziza kulahleka."
 
-#: src/features/chess/index.tsx:385
+#: src/features/chess/index.tsx:368
 msgid "Your move"
 msgstr "Umqhubo wakho"
 

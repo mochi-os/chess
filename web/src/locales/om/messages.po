@@ -18,7 +18,7 @@ msgstr ""
 msgid "Please check your internet connection and try again."
 msgstr "Maaloo walqunnamtii intarneetii kee mirkaneeffadhuutii irra deebi'ii yaali."
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:301
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:295
 msgid " or "
 msgstr " ykn "
 
@@ -103,11 +103,11 @@ msgstr "{name} harka kenne"
 msgid "{opponentName} offered a draw"
 msgstr "{opponentName} qixxee dhiyeesse"
 
-#: src/features/chess/index.tsx:373
+#: src/features/chess/index.tsx:356
 msgid "{opponentName} resigned — you win!"
 msgstr "{opponentName} harka kenne — ati mo'atte!"
 
-#: src/features/chess/index.tsx:386
+#: src/features/chess/index.tsx:369
 msgid "{opponentName}'s move"
 msgstr "Dabareen {opponentName}"
 
@@ -173,9 +173,13 @@ msgstr "Sadarkaa seensaa"
 msgid "Account type"
 msgstr "Gosa akkaawuntii"
 
-#: src/components/layout/chess-layout.tsx:58
+#: src/components/layout/chess-layout.tsx:42
 msgid "Active games"
 msgstr "Taphoota Hojii Irra Jiran"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:413
+msgid "Activity"
+msgstr ""
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:720
 #: ../../../lib/web/src/features/access/access-dialog.tsx:332
@@ -216,11 +220,11 @@ msgstr "Tarree shakkii dabali"
 msgid "Add field"
 msgstr "Dirree dabali"
 
-#: src/features/chess/components/new-game.tsx:121
+#: src/features/chess/components/new-game.tsx:83
 msgid "Add friends"
 msgstr "Michoota dabali"
 
-#: src/features/chess/components/new-game.tsx:114
+#: src/features/chess/components/new-game.tsx:82
 msgid "Add friends in the People app to start playing"
 msgstr "Tapha eegaluuf appii Namootaa keessatti michoota dabali"
 
@@ -228,7 +232,7 @@ msgstr "Tapha eegaluuf appii Namootaa keessatti michoota dabali"
 msgid "Add item..."
 msgstr "Wanta dabali..."
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:320
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:314
 msgid "Add link"
 msgstr "Hidhaa dabali"
 
@@ -302,6 +306,10 @@ msgstr "Wanti kamiyyuu nyaata kana ajaje fudhachuu ni dhaaba. Booda URL haaraa g
 msgid "Are you sure you want to delete \"{0}\"?"
 msgstr "\"{0}\" haquu mirkanaa'oo dha?"
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:660
+msgid "Are you sure you want to delete \"{title}\"? This action cannot be undone."
+msgstr ""
+
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:629
 msgid "Are you sure you want to delete the \"{name}\" column? This cannot be undone."
 msgstr "Tarjaa \"{name}\" haquu mirkanaa'oo dha? Kun deebi'uu hin danda'u."
@@ -314,7 +322,11 @@ msgstr "Yaada kana haquu mirkanaa'oo dha? Kun deebii hundi haqama."
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "Bahuu mirkanaa'oo dha? Akkaawuntii kee fayyadamuuf deebitee seenuu qabda."
 
-#: src/features/chess/index.tsx:584
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:39
+msgid "Are you sure you want to resign?"
+msgstr ""
+
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:38
 msgid "Are you sure you want to resign? {opponentName} will win the game."
 msgstr "Of harkatti kennuu mirkanaa'oo dha? {opponentName} taphicha mo'ata."
 
@@ -360,16 +372,25 @@ msgstr "Duuba"
 msgid "Back to home"
 msgstr "Gara mana deebi’uu"
 
+#: ../../../lib/web/src/components/banner-section.tsx:80
 #: ../../../lib/web/src/components/entity-banner.tsx:17
 msgid "Banner"
 msgstr "Bannerii"
+
+#: ../../../lib/web/src/components/banner-section.tsx:69
+msgid "Banner removed"
+msgstr ""
+
+#: ../../../lib/web/src/components/banner-section.tsx:69
+msgid "Banner updated"
+msgstr ""
 
 #: src/features/chess/lib/use-chess-piece-name.ts:20
 msgid "bishop"
 msgstr "biishop"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:422
+#: src/features/chess/index.tsx:405
 msgid "Black"
 msgstr "Gurraacha"
 
@@ -380,8 +401,8 @@ msgstr "Gurraacha"
 msgid "Black {0}"
 msgstr "Gurraacha {0}"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:68
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:215
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:72
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:209
 msgid "Blocked by"
 msgstr "Kan dhorkame"
 
@@ -390,7 +411,7 @@ msgstr "Kan dhorkame"
 msgid "Blocked navigation to untrusted link"
 msgstr "Karaa hin amanamne irraa qajeelfamni dhorkame"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:66
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:70
 msgid "Blocks"
 msgstr "Bloka"
 
@@ -425,7 +446,7 @@ msgstr "Beeksisa barreessaa"
 #: ../../../lib/web/src/features/access/access-list.tsx:268
 #: ../../../lib/web/src/features/accounts/account-add.tsx:201
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:91
-#: src/features/chess/components/new-game.tsx:145
+#: src/features/chess/components/new-game.tsx:86
 #: src/features/chess/components/promotion-dialog.tsx:111
 msgid "Cancel"
 msgstr "Haquu"
@@ -452,16 +473,15 @@ msgstr "Beeksisota kanaaf ramaddii"
 msgid "Change notification category"
 msgstr "Ramaddii beeksisaa jijjiiri"
 
-#: src/features/chess/index.tsx:522
-#: src/features/chess/index.tsx:555
+#: src/features/chess/index.tsx:505
 msgid "Chat"
 msgstr "Chaattii"
 
-#: src/features/chess/index.tsx:383
+#: src/features/chess/index.tsx:366
 msgid "Check — {opponentName}'s move"
 msgstr "Cheek — dabareen {opponentName}"
 
-#: src/features/chess/index.tsx:382
+#: src/features/chess/index.tsx:365
 msgid "Check — your move"
 msgstr "Cheek — dabareen kee"
 
@@ -473,17 +493,17 @@ msgstr "Saanduqa filannoo"
 msgid "Checklist"
 msgstr "Tarree shakkii"
 
-#: src/features/chess/index.tsx:366
+#: src/features/chess/index.tsx:349
 msgid "Checkmate — {opponentName} wins"
 msgstr "Cheekmeet — {opponentName} mo'ate"
 
-#: src/features/chess/index.tsx:365
+#: src/features/chess/index.tsx:348
 msgid "Checkmate — you win!"
 msgstr "Cheekmeet — ati mo'atte!"
 
-#: src/features/chess/index.tsx:60
-#: src/features/chess/index.tsx:319
-#: src/features/chess/index.tsx:331
+#: src/features/chess/index.tsx:58
+#: src/features/chess/index.tsx:307
+#: src/features/chess/index.tsx:316
 msgid "Chess"
 msgstr "Tapha shaaxixii"
 
@@ -499,15 +519,16 @@ msgstr "Boordii shaaxixii. Sochiin kee. Naannoo sochoo'uuf furtuu xiyyaa fayyada
 msgid "Choose a game from the sidebar or start a new one."
 msgstr "Cinaa keessaa tapha filadhu ykn haaraa eegali."
 
-#: ../../../lib/web/src/components/language-picker.tsx:264
-#: ../../../lib/web/src/components/language-picker.tsx:271
+#: ../../../lib/web/src/components/language-picker.tsx:267
+#: ../../../lib/web/src/components/language-picker.tsx:274
 msgid "Choose language"
 msgstr "Afaan filadhu"
 
-#: src/features/chess/components/new-game.tsx:105
+#: src/features/chess/components/new-game.tsx:80
 msgid "Choose opponent"
 msgstr "Mormituu filadhu"
 
+#: ../../../lib/web/src/components/banner-section.tsx:111
 #: ../../../lib/web/src/components/colour-picker.tsx:274
 #: ../../../lib/web/src/components/colour-picker.tsx:355
 #: ../../../lib/web/src/components/travelling-picker.tsx:164
@@ -525,8 +546,8 @@ msgstr "Hunda cilliisi"
 msgid "Clear search"
 msgstr "Barbaadii cilliisi"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:501
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:506
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:495
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:500
 #: ../../../lib/web/src/components/ui/dialog.tsx:78
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:468
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:471
@@ -601,11 +622,16 @@ msgstr "Gocha yaadaa"
 msgid "Comments"
 msgstr "Yaadawwan"
 
+#. placeholder {0}: data.comment_count || 0
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:409
+msgid "Comments ({0})"
+msgstr ""
+
 #: ../../../lib/web/src/lib/preference-utils.ts:90
 msgid "Compact"
 msgstr "Compact"
 
-#: src/components/layout/chess-layout.tsx:59
+#: src/components/layout/chess-layout.tsx:43
 msgid "Completed"
 msgstr "Xumurame"
 
@@ -684,8 +710,8 @@ msgstr "Akkaawuntii sana waliin mirkaneessuun hin danda'amne. Maaloo irra deebi'
 
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:550
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:689
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:491
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:656
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:485
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:650
 #: ../../../lib/web/src/components/entity/entity-tree-view.tsx:675
 msgid "Create"
 msgstr "Uumi"
@@ -704,9 +730,9 @@ msgstr "Wanta haaraa uumi"
 msgid "Created"
 msgstr "Uumame"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:656
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:650
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:258
-#: src/features/chess/components/new-game.tsx:153
+#: src/features/chess/components/new-game.tsx:88
 msgid "Creating..."
 msgstr "Uumaa jira..."
 
@@ -714,6 +740,7 @@ msgstr "Uumaa jira..."
 msgid "Current location"
 msgstr "Bakka ammaa"
 
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:132
 #: ../../../lib/web/src/components/colour-picker.tsx:265
 msgid "Custom"
 msgstr "Mataa keetiin"
@@ -734,6 +761,10 @@ msgstr "Guyyaa"
 msgid "Decline"
 msgstr "Dhiisi"
 
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:129
+msgid "Default"
+msgstr ""
+
 #: ../../../lib/web/src/features/accounts/account-add.tsx:185
 msgid "Default AI account"
 msgstr "Akkaawuntii AI idilee"
@@ -751,7 +782,8 @@ msgstr "Tartiiba idilee"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:203
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:252
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:314
-#: src/features/chess/index.tsx:613
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:661
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:78
 msgid "Delete"
 msgstr "Haqi"
 
@@ -771,13 +803,19 @@ msgstr "Yaada haqi"
 msgid "Delete field"
 msgstr "Dirree haqi"
 
-#: src/features/chess/index.tsx:468
+#: src/features/chess/index.tsx:451
 msgid "Delete game"
 msgstr "Tapha haqi"
 
-#: src/features/chess/index.tsx:604
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:69
 msgid "Delete game?"
 msgstr "Taphicha haqi?"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:478
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:483
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:659
+msgid "Delete item"
+msgstr ""
 
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:116
 msgid "Delete option"
@@ -797,7 +835,7 @@ msgstr "Mul'ata haqi"
 msgid "Delete your account on the old server"
 msgstr "Akkaawuntii kee sarvaraa durii irraa haqi"
 
-#: src/features/chess/index.tsx:610
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:75
 msgid "Deleting..."
 msgstr "Haqaa jira..."
 
@@ -813,7 +851,7 @@ msgstr "Ibsa"
 msgid "Details Panel"
 msgstr "Paanelii Bal'inaan"
 
-#: ../../../lib/web/src/components/language-picker.tsx:240
+#: ../../../lib/web/src/components/language-picker.tsx:243
 #: ../../../lib/web/src/components/timezone-select.tsx:46
 #: ../../../lib/web/src/components/timezone-select.tsx:83
 #: ../../../lib/web/src/lib/preference-utils.ts:23
@@ -851,6 +889,7 @@ msgid "Displays the mobile sidebar."
 msgstr "Cinaa moobaayilaa mul'isa."
 
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:305
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:487
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:518
 msgid "Done"
 msgstr "Xumurame"
@@ -865,7 +904,7 @@ msgstr "Buufadhu"
 msgid "Download failed"
 msgstr "Buufachuun hin milkoofne"
 
-#: src/features/chess/index.tsx:370
+#: src/features/chess/index.tsx:353
 msgid "Draw"
 msgstr "Wal qixxee"
 
@@ -873,11 +912,11 @@ msgstr "Wal qixxee"
 msgid "Draw agreed"
 msgstr "Qixxaan walii galame"
 
-#: src/features/chess/index.tsx:481
+#: src/features/chess/index.tsx:464
 msgid "Draw offered — waiting for {opponentName}"
 msgstr "Walqixxeen dhiyaate — {opponentName} eegaa jirra"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:67
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:71
 msgid "Duplicates"
 msgstr "Lameetfamtoota"
 
@@ -932,6 +971,10 @@ msgstr "Imeelii"
 msgid "Email code"
 msgstr "Koodii imeelii"
 
+#: ../../../lib/web/src/components/banner-section.tsx:88
+msgid "Enter banner text (markdown supported)..."
+msgstr ""
+
 #: ../../../lib/web/src/components/step-up-dialog.tsx:302
 msgid "Enter the code from your email"
 msgstr "Koodii imeelii kee irraa galchi"
@@ -939,6 +982,10 @@ msgstr "Koodii imeelii kee irraa galchi"
 #: ../../../lib/web/src/components/step-up-dialog.tsx:327
 msgid "Enter your authenticator code"
 msgstr "Koodii mirkaneessaa kee galchi"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:379
+msgid "Error"
+msgstr ""
 
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:101
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:110
@@ -959,7 +1006,7 @@ msgstr "URL alaa"
 msgid "Extra large"
 msgstr "Guddaa Akkaan"
 
-#: src/features/chess/index.tsx:185
+#: src/features/chess/index.tsx:174
 msgid "Failed to accept draw"
 msgstr "Walqixxee fudhachuu hin dandeenye"
 
@@ -968,22 +1015,26 @@ msgstr "Walqixxee fudhachuu hin dandeenye"
 msgid "Failed to copy"
 msgstr "Garagalchuu hin dandeenye"
 
-#: src/features/chess/components/new-game.tsx:52
+#: src/features/chess/components/new-game.tsx:40
 msgid "Failed to create game"
 msgstr "Taphicha uumuu hin dandeenye"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:137
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:131
 #: ../../../lib/web/src/components/options-menu.tsx:98
 msgid "Failed to create link"
 msgstr "Hidhaa uumuu hin dandeenye"
 
-#: src/features/chess/index.tsx:200
+#: src/features/chess/index.tsx:189
 msgid "Failed to create rematch"
 msgstr "Walqixxee deebii uumuu hin dandeenye"
 
-#: src/features/chess/index.tsx:190
+#: src/features/chess/index.tsx:179
 msgid "Failed to decline draw"
 msgstr "Walqixxee diduu hin dandeenye"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:301
+msgid "Failed to delete"
+msgstr ""
 
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:130
 msgid "Failed to delete attachment"
@@ -993,11 +1044,11 @@ msgstr "Maxxansa haquu hin dandeenye"
 msgid "Failed to delete comment"
 msgstr "Yaada haquu hin dandeenye"
 
-#: src/features/chess/index.tsx:212
+#: src/features/chess/index.tsx:201
 msgid "Failed to delete game"
 msgstr "Taphicha haquu hin dandeenye"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:159
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:153
 msgid "Failed to delete link"
 msgstr "Hidhaa haquu hin dandeenye"
 
@@ -1017,15 +1068,28 @@ msgstr "Seenaa fe'achuu hin dandeenye"
 msgid "Failed to load image"
 msgstr "Fakkii fe'uu hin dandeenye"
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:380
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:383
+msgid "Failed to load item"
+msgstr ""
+
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:213
+msgid "Failed to load prompts"
+msgstr ""
+
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:338
 msgid "Failed to load video"
 msgstr "Viidiyoo fe'uu hin dandeenye"
 
-#: src/features/chess/index.tsx:163
+#: src/features/chess/index.tsx:152
 msgid "Failed to make move"
 msgstr "Sochii hojiirra oolchuu hin dandeenye"
 
-#: src/features/chess/index.tsx:180
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:315
+msgid "Failed to move"
+msgstr ""
+
+#: src/features/chess/index.tsx:169
 msgid "Failed to offer draw"
 msgstr "Walqixxee dhiyeessuu hin dandeenye"
 
@@ -1033,7 +1097,11 @@ msgstr "Walqixxee dhiyeessuu hin dandeenye"
 msgid "Failed to post comment"
 msgstr "Yaada maxxansuu hin dandeenye"
 
-#: src/features/chess/index.tsx:173
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:90
+msgid "Failed to reset prompt"
+msgstr ""
+
+#: src/features/chess/index.tsx:162
 msgid "Failed to resign"
 msgstr "Murtoo dhiyeessuu hin dandeenye"
 
@@ -1041,20 +1109,35 @@ msgstr "Murtoo dhiyeessuu hin dandeenye"
 msgid "Failed to revoke RSS access"
 msgstr "Argama RSS haquun hin milkoofne"
 
-#: src/features/chess/index.tsx:539
-#: src/features/chess/index.tsx:572
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:271
+msgid "Failed to save"
+msgstr ""
+
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:111
+msgid "Failed to save prompt"
+msgstr ""
+
+#: src/features/chess/index.tsx:522
 msgid "Failed to send"
 msgstr "Ergamuu hin dandeenye"
+
+#: ../../../lib/web/src/components/banner-section.tsx:71
+msgid "Failed to update banner"
+msgstr ""
 
 #: ../../../lib/web/src/components/entity/entity-comment-list.tsx:174
 msgid "Failed to update comment"
 msgstr "Yaada toattaachuu hin dandeenye"
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:286
+msgid "Failed to update watching"
+msgstr ""
+
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:114
 msgid "Failed to upload attachment"
 msgstr "Mallattoo olkaa'uu hin dandeenye"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:589
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:583
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:155
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:175
 msgid "Files"
@@ -1092,15 +1175,15 @@ msgstr "Irraa"
 msgid "From theme"
 msgstr "Akeeka irraa"
 
-#: src/features/chess/components/new-game.tsx:48
+#: src/features/chess/components/new-game.tsx:36
 msgid "Game created"
 msgstr "Taphichi uumame"
 
-#: src/features/chess/index.tsx:208
+#: src/features/chess/index.tsx:197
 msgid "Game deleted"
 msgstr "Taphichi haqame"
 
-#: src/features/chess/index.tsx:379
+#: src/features/chess/index.tsx:362
 msgid "Game state unavailable"
 msgstr "Haalli taphichaa hin argamu"
 
@@ -1174,6 +1257,10 @@ msgstr "Guyyaa sirrii hin taane"
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
 msgstr "Fuulli ati barbaadaa jirtu <0/>hin jiru yookaan haqameera fakkaata."
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:433
+msgid "Item details"
+msgstr ""
+
 #: ../../../lib/web/src/lib/locale-format.ts:165
 msgid "Just now"
 msgstr "Amma"
@@ -1211,7 +1298,7 @@ msgstr "Ifaa"
 msgid "Link"
 msgstr "Hidhaa"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:279
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:273
 msgid "Links"
 msgstr "Hidhaalee"
 
@@ -1226,6 +1313,14 @@ msgstr "Caalaa fe'i"
 #: ../../../lib/web/src/components/ui/loading-content.tsx:26
 msgid "Loading content…"
 msgstr "Qabiyyee fe’aa jira…"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:363
+msgid "Loading item"
+msgstr ""
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:364
+msgid "Loading item details"
+msgstr ""
 
 #: ../../../lib/web/src/components/ui/load-more.tsx:35
 #: ../../../lib/web/src/features/document/document-page.tsx:88
@@ -1328,15 +1423,15 @@ msgstr "Maqaan arfiilee 1000 ykn isaa gadi ta'uu qaba"
 msgid "Network error"
 msgstr "Dogoggora networkii"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:476
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:470
 #: ../../../lib/web/src/components/ui/sort-selector.tsx:43
 msgid "New"
 msgstr "Haaraa"
 
 #: ../../../lib/web/src/components/game/game-empty-state.tsx:39
 #: ../../../lib/web/src/components/game/game-empty-state.tsx:51
-#: src/components/layout/chess-layout.tsx:60
-#: src/features/chess/components/new-game.tsx:96
+#: src/components/layout/chess-layout.tsx:44
+#: src/features/chess/components/new-game.tsx:78
 msgid "New game"
 msgstr "Taphaa haaraa"
 
@@ -1345,7 +1440,7 @@ msgstr "Taphaa haaraa"
 msgid "Next image"
 msgstr "Suuraa itti aanu"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:555
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:549
 msgid "No {parentClassNames} to add to"
 msgstr "{parentClassNames} itti dabaluuf hin jiru"
 
@@ -1361,11 +1456,11 @@ msgstr "Hanga ammaatti sochiin hin jiru"
 msgid "No comments yet"
 msgstr "Hanga ammaatti yaadni hin jiru"
 
-#: src/features/chess/components/new-game.tsx:131
+#: src/features/chess/components/new-game.tsx:85
 msgid "No friends found"
 msgstr "Hiriyoonni hin argamne"
 
-#: src/features/chess/components/new-game.tsx:113
+#: src/features/chess/components/new-game.tsx:81
 msgid "No friends yet"
 msgstr "Hanga ammaatti hiriyoonni hin jiran"
 
@@ -1377,11 +1472,11 @@ msgstr "Hanga ammaatti taphaaleen hin jiran"
 msgid "No groups available"
 msgstr "Garreen hin jiran"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:522
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:516
 msgid "No item types can be created yet. Create the required parent items first."
 msgstr "Hanga ammaatti gosti meeshaalee uumamuu hin danda'u. Jalqaba meeshaalee maatii barbaachisaa uumi."
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:360
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:354
 msgid "No matching objects"
 msgstr "Wantoonni walsiman hin jiran"
 
@@ -1434,9 +1529,13 @@ msgid "No views"
 msgstr "Mul'annoon hin jiru"
 
 #: ../../../lib/web/src/components/colour-picker.tsx:349
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:538
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:541
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:545
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:532
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:535
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:539
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:548
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:561
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:562
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:566
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:359
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:382
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:385
@@ -1477,7 +1576,7 @@ msgstr "Beeksisawwan: {0}"
 msgid "Number"
 msgstr "Lakkoofsa"
 
-#: src/features/chess/index.tsx:452
+#: src/features/chess/index.tsx:435
 msgid "Offer draw"
 msgstr "Walqixxummaa dhiyeessi"
 
@@ -1494,11 +1593,11 @@ msgstr "Hoo! Fuulli hin argamne!"
 msgid "Open actions"
 msgstr "Gochaalee bani"
 
-#: src/features/chess/index.tsx:431
+#: src/features/chess/index.tsx:414
 msgid "Open chat panel"
 msgstr "Paaneela haasawaa bani"
 
-#: src/features/chess/index.tsx:439
+#: src/features/chess/index.tsx:422
 msgid "Open game actions"
 msgstr "Sochiiwwan taphaa bani"
 
@@ -1548,7 +1647,8 @@ msgstr "Biraa"
 msgid "Owner"
 msgstr "Abbaa qabeenyaa"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:530
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:524
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:544
 msgid "Parent"
 msgstr "Maatii"
 
@@ -1582,7 +1682,7 @@ msgstr "Maaloo walqunnamtii intarneetii kee mirkaneeffadhuutii irra deebi'ii yaa
 msgid "Please log in with the appropriate credentials <0/> to access this resource."
 msgstr "Qabeenya kana argachuuf <0/> maaloo ragaa sirrii ta'een seeni."
 
-#: src/features/chess/components/new-game.tsx:67
+#: src/features/chess/components/new-game.tsx:53
 msgid "Please select a friend"
 msgstr "Maaloo hiriyaa fili"
 
@@ -1630,6 +1730,14 @@ msgstr "Gara {0} guddisi"
 msgid "Promote to:"
 msgstr "Gara: guddisi"
 
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:108
+msgid "Prompt saved"
+msgstr ""
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:406
+msgid "Properties"
+msgstr ""
+
 #: ../../../lib/web/src/features/accounts/types.ts:21
 msgid "Push notification"
 msgstr "Beeksisa push"
@@ -1667,7 +1775,7 @@ msgstr "Gara galmeetti deebi'aa jira."
 msgid "Reduce interest"
 msgstr "Dantaa hir'isi"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:65
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:69
 msgid "Relates"
 msgstr "Walqabata"
 
@@ -1679,7 +1787,7 @@ msgstr "Walqabataa (5m, 3h, 2d)"
 msgid "Relative within 24 hours, else absolute"
 msgstr "Sa'aatii 24 keessatti walqabataa, kanaa alatti guutuu"
 
-#: src/features/chess/index.tsx:465
+#: src/features/chess/index.tsx:448
 msgid "Rematch"
 msgstr "Walqixxummaa deebi'ee"
 
@@ -1719,8 +1827,8 @@ msgstr "Dantaa haqi"
 msgid "Remove item"
 msgstr "Meeshaa haqi"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:304
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:309
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:298
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:303
 msgid "Remove link"
 msgstr "Hidhata haquu"
 
@@ -1755,16 +1863,16 @@ msgstr "Barbaachisaa"
 msgid "Resend email"
 msgstr "Imeelii irra deebi'ii ergi"
 
-#: src/features/chess/index.tsx:456
-#: src/features/chess/index.tsx:592
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:48
+#: src/features/chess/index.tsx:439
 msgid "Resign"
 msgstr "Keessaa ba'i"
 
-#: src/features/chess/index.tsx:583
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:35
 msgid "Resign game?"
 msgstr "Taphaa keessaa ba'uuf?"
 
-#: src/features/chess/index.tsx:589
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:45
 msgid "Resigning..."
 msgstr "Keessaa ba'aa jira..."
 
@@ -1813,13 +1921,19 @@ msgstr "URL RSS kilipboordiitti garagalfame"
 msgid "Saturday"
 msgstr "Sanbata"
 
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:156
 #: ../../../lib/web/src/components/attachment-composer.tsx:430
+#: ../../../lib/web/src/components/banner-section.tsx:99
 #: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:231
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:170
 #: ../../../lib/web/src/components/ui/editable-field-row.tsx:122
 #: ../../../lib/web/src/components/ui/secret-field.tsx:79
 msgid "Save"
 msgstr "Olkaa'i"
+
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:156
+msgid "Saving..."
+msgstr ""
 
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:175
 #: ../../../lib/web/src/components/filter-bar.tsx:32
@@ -1848,7 +1962,7 @@ msgstr "Galma barbaadi..."
 msgid "Search for origin..."
 msgstr "Madda barbaadi..."
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:337
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:331
 msgid "Search objects..."
 msgstr "Wantoota barbaadi..."
 
@@ -1885,7 +1999,7 @@ msgstr "Fili"
 msgid "Select a field"
 msgstr "Dirree fili"
 
-#: src/features/chess/components/new-game.tsx:130
+#: src/features/chess/components/new-game.tsx:84
 msgid "Select a friend..."
 msgstr "Hiriyaa fili..."
 
@@ -2027,21 +2141,26 @@ msgstr "Maddoota"
 msgid "Spacious"
 msgstr "Bal'aa"
 
-#: src/features/chess/index.tsx:368
+#: src/features/chess/index.tsx:351
 msgid "Stalemate — draw"
 msgstr "Dhaabbii — wal qixxee"
 
-#: src/features/chess/components/new-game.tsx:99
+#: src/features/chess/components/new-game.tsx:79
 msgid "Start a new chess game"
 msgstr "Taphaa chess haaraa jalqabi"
 
-#: src/features/chess/components/new-game.tsx:153
+#: src/features/chess/components/new-game.tsx:87
 msgid "Start game"
 msgstr "Tapha jalqabi"
 
 #: ../../../lib/web/src/components/entity/entity-comment-list.tsx:323
 msgid "Start the discussion by adding the first comment."
 msgstr "Yaada jalqabaa dabaluudhaan marii jalqabi."
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:463
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:468
+msgid "Stop watching"
+msgstr ""
 
 #: ../../../lib/web/src/features/access/access-list.tsx:196
 msgid "Subject"
@@ -2118,7 +2237,7 @@ msgstr "Qabiyyeen gaafatame argamuu hin dandeenye."
 msgid "The server returned a web page instead of data."
 msgstr "Sarviichiin qooda daataa fuula weebii deebise."
 
-#: src/features/chess/index.tsx:605
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:70
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Kun taphicha fi haasawa isaa bara baraan ni haqa. Wanti kun deebi'ee hin dandeenyu."
 
@@ -2241,9 +2360,8 @@ msgstr "Hin beekamu"
 msgid "Unsubscribe"
 msgstr "Galaa'uu kaasi"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:285
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:103
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:184
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:178
+#: ../../../lib/web/src/lib/entity-title.ts:40
 msgid "Untitled"
 msgstr "Mata dureen hin qabne"
 
@@ -2252,7 +2370,7 @@ msgstr "Mata dureen hin qabne"
 msgid "Updated"
 msgstr "Haaromfameera"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:639
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:633
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:301
 msgid "Upload"
 msgstr "Olfe'i"
@@ -2270,6 +2388,10 @@ msgstr "Passkey kee fayyadami"
 #: ../../../lib/web/src/features/access/access-dialog.tsx:158
 msgid "User"
 msgstr "Fayyadamaa"
+
+#: ../../../lib/web/src/components/ai-prompts-editor.tsx:159
+msgid "Variables: {variables}"
+msgstr ""
 
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:73
 msgid "Verification code"
@@ -2298,9 +2420,18 @@ msgstr "Ilaaltuu viidiyoo: {0}"
 msgid "View all notifications"
 msgstr "Beeksisa hunda daawwadhu"
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:434
+msgid "View and edit item details"
+msgstr ""
+
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:170
 msgid "View controls"
 msgstr "Toofta daawwannaa"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:463
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:468
+msgid "Watch"
+msgstr ""
 
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:269
 #: ../../../lib/web/src/components/filter-bar.tsx:35
@@ -2321,7 +2452,7 @@ msgid "Wednesday"
 msgstr "Roobii"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:422
+#: src/features/chess/index.tsx:405
 msgid "White"
 msgstr "Adii"
 
@@ -2340,7 +2471,7 @@ msgstr "Ati"
 msgid "You do not have access to this section."
 msgstr "Kutaa kanaaf dhaqqabummaa hin qabdu."
 
-#: src/features/chess/index.tsx:374
+#: src/features/chess/index.tsx:357
 msgid "You resigned — {opponentName} wins"
 msgstr "Ati harka kennite — {opponentName} mo'ate"
 
@@ -2352,7 +2483,7 @@ msgstr "Akkaawuntiin kee {source} irraa as fidame. Achitti haqtee hanga fixtutti
 msgid "Your attachments will be lost."
 msgstr "Miiltoowwan kee ni badu."
 
-#: src/features/chess/index.tsx:385
+#: src/features/chess/index.tsx:368
 msgid "Your move"
 msgstr "Tarkaanfii kee"
 
