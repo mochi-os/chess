@@ -18,10 +18,6 @@ msgstr ""
 msgid "Please check your internet connection and try again."
 msgstr "Jọ̀wọ́ ṣàyẹ̀wò ìsopọ̀ íntánẹ́ẹ̀tì rẹ kí o sì gbìyànjú lẹ́ẹ̀kan sí i."
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:301
-#~ msgid " or "
-#~ msgstr " tabi "
-
 #: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:189
 msgid "(edited)"
 msgstr "(a tunṣe)"
@@ -35,7 +31,7 @@ msgid "[not set]"
 msgstr "[kò sí]"
 
 #. placeholder {0}: displayInfo.count
-#: ../../../lib/web/src/components/person-picker.tsx:257
+#: ../../../lib/web/src/components/person-picker.tsx:260
 msgid "{0, plural, one {# selected} other {# selected}}"
 msgstr "{0, plural, one {# yan} other {# yan}}"
 
@@ -73,29 +69,25 @@ msgstr "{count, plural, other {# ayaba}}"
 msgid "{count, plural, one {# rook} other {# rooks}}"
 msgstr "{count, plural, other {# rúùkù}}"
 
-#: ../../../lib/web/src/lib/locale-format.ts:176
+#: ../../../lib/web/src/lib/locale-format.ts:191
 msgid "{count, plural, one {#d} other {#d}}"
 msgstr "{count, plural, one {#ọj} other {#ọj}}"
 
-#: ../../../lib/web/src/lib/locale-format.ts:172
+#: ../../../lib/web/src/lib/locale-format.ts:187
 msgid "{count, plural, one {#h} other {#h}}"
 msgstr "{count, plural, one {#wk} other {#wk}}"
 
-#: ../../../lib/web/src/lib/locale-format.ts:168
+#: ../../../lib/web/src/lib/locale-format.ts:183
 msgid "{count, plural, one {#m} other {#m}}"
 msgstr "{count, plural, one {#ìṣ} other {#ìṣ}}"
 
-#: ../../../lib/web/src/lib/locale-format.ts:180
+#: ../../../lib/web/src/lib/locale-format.ts:195
 msgid "{count, plural, one {#w} other {#w}}"
 msgstr "{count, plural, one {#ọs} other {#ọs}}"
 
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:176
 msgid "{entityLabel} name"
 msgstr "Orúkọ {entityLabel}"
-
-#: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:99
-#~ msgid "{entityLabel} name is required"
-#~ msgstr "Orúkọ {entityLabel} nílò"
 
 #: src/features/chess/components/chat-message-list.tsx:46
 msgid "{name} declined the draw"
@@ -146,18 +138,6 @@ msgstr "{totalDescendants, plural, one {Ìdáhùn #} other {+# àwọn ìdáhùn
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {Ṣí àkójọ àṣàyàn (# ìfitónilétí tí a kò kà)} other {Ṣí àkójọ àṣàyàn (# ìfitónilétí tí a kò kà)}}"
 
-#: ../../../lib/web/src/components/entity/entity-board-card.tsx:418
-#~ msgid "+{0} nested"
-#~ msgstr "+{0} tí a fi sínú"
-
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:171
-#~ msgid "+{totalDescendants} more replies"
-#~ msgstr "+{totalDescendants} àwọn ìdáhùn míràn"
-
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:170
-#~ msgid "1 reply"
-#~ msgstr "Ìdáhùn 1"
-
 #: ../../../lib/web/src/lib/preference-utils.ts:37
 msgid "12 hours"
 msgstr "Wákàtí 12"
@@ -165,6 +145,10 @@ msgstr "Wákàtí 12"
 #: ../../../lib/web/src/lib/preference-utils.ts:36
 msgid "24 hours"
 msgstr "Wákàtí 24"
+
+#: ../../../lib/web/src/lib/shell-errors.ts:35
+msgid "A recording is already in progress."
+msgstr "Gbigbasilẹ ti n lọ lọwọ tẹlẹ."
 
 #: ../../../lib/web/src/lib/preference-utils.ts:46
 msgid "Absolute (date and time)"
@@ -276,10 +260,6 @@ msgstr "Ó ń fi kún..."
 #: ../../../lib/web/src/components/ui/sort-selector.tsx:41
 msgid "AI"
 msgstr "AI"
-
-#: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:85
-#~ msgid "Allow anyone to search for {0}"
-#~ msgstr "Gba ẹnikẹ́ni láàyè láti wá {0}"
 
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:87
 msgid "Allow anyone to search for {entityLabel}"
@@ -429,6 +409,14 @@ msgstr "Àwọ̀ ààlà"
 msgid "Browser notifications"
 msgstr "Àwọn ìfitónilétí browser"
 
+#: ../../../lib/web/src/lib/shell-errors.ts:48
+msgid "Camera permission denied"
+msgstr "A kọ àṣẹ kámẹ́rà"
+
+#: ../../../lib/web/src/lib/shell-errors.ts:56
+msgid "Camera unavailable"
+msgstr "Kamẹra kò sí"
+
 #: ../../../lib/web/src/components/attachment-composer.tsx:426
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:616
 #: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:211
@@ -455,6 +443,12 @@ msgstr "Fagilé àlàyé"
 #: ../../../lib/web/src/components/comment-composer.tsx:429
 msgid "Cancel reply"
 msgstr "Fagilé ìdáhùn"
+
+#: ../../../lib/web/src/lib/shell-errors.ts:24
+#: ../../../lib/web/src/lib/shell-errors.ts:37
+#: ../../../lib/web/src/lib/shell-errors.ts:52
+msgid "Cancelled"
+msgstr "Tí a fagilé"
 
 #: ../../../lib/web/src/components/attachment-composer.tsx:386
 #: ../../../lib/web/src/components/attachment-composer.tsx:421
@@ -554,8 +548,8 @@ msgstr "Pa àwárí rẹ́"
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:523
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:528
 #: ../../../lib/web/src/components/ui/dialog.tsx:78
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:479
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:482
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:480
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:483
 #: ../../../lib/web/src/components/ui/sheet.tsx:79
 msgid "Close"
 msgstr "Tì"
@@ -622,8 +616,8 @@ msgstr "Àpótí àṣẹ"
 msgid "Comment actions"
 msgstr "Awọn iṣe asọye"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:442
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:454
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:443
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:455
 msgid "Comments"
 msgstr "Àwọn àlàyé"
 
@@ -715,10 +709,6 @@ msgstr "A kò lè fọwọ́sí pẹ̀lú àkàùntì yẹn. Jọ̀wọ́ gbìy�
 #: ../../../lib/web/src/components/entity/entity-tree-view.tsx:672
 msgid "Create"
 msgstr "Dá"
-
-#: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:144
-#~ msgid "Create {0}"
-#~ msgstr "Ṣẹ̀dá {0}"
 
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:146
 msgid "Create {entityLabel}"
@@ -832,7 +822,7 @@ msgstr "Pa àṣàyàn {0} rẹ́"
 msgid "Delete view"
 msgstr "Pa ìran rẹ́"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:95
+#: ../../../lib/web/src/components/restore-banner.tsx:101
 msgid "Delete your account on the old server"
 msgstr "Pa akonti rẹ rẹ lori olupin atijọ"
 
@@ -871,7 +861,7 @@ msgstr "Pánẹ́ẹ̀lì Àwọn Ẹ̀kúnrẹ́rẹ́"
 msgid "Detect from web browser"
 msgstr "Ṣàwárí láti web browser"
 
-#: ../../../lib/web/src/components/person-picker.tsx:190
+#: ../../../lib/web/src/components/person-picker.tsx:193
 msgid "Directory"
 msgstr "Àtòjọ"
 
@@ -888,8 +878,8 @@ msgstr "Sọ àkọ̀tẹ́lẹ̀ nù?"
 msgid "Disconnected"
 msgstr "Ti ge asopọ̀"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:74
 #: ../../../lib/web/src/components/restore-banner.tsx:80
+#: ../../../lib/web/src/components/restore-banner.tsx:86
 msgid "Dismiss"
 msgstr "Mú kúrò"
 
@@ -907,8 +897,8 @@ msgid "Done"
 msgstr "Ti parí"
 
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:243
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:463
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:473
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:464
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:474
 msgid "Download"
 msgstr "Gbà sílẹ̀"
 
@@ -1069,7 +1059,7 @@ msgstr "Kò lè ṣílọ̀"
 msgid "Failed to load history"
 msgstr "Kò lè ṣí ìtàn lọ̀"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:349
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:350
 msgid "Failed to load image"
 msgstr "Kò ṣeé gbé àwòrán wọlé"
 
@@ -1077,7 +1067,7 @@ msgstr "Kò ṣeé gbé àwòrán wọlé"
 msgid "Failed to load prompts"
 msgstr "Kò lè ṣí àwọn prompt lọ̀"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:349
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:350
 msgid "Failed to load video"
 msgstr "Kò ṣeé gbé fídíò wọlé"
 
@@ -1128,7 +1118,7 @@ msgstr "Kò lè gbé àfikún sókè"
 msgid "Files"
 msgstr "Àwọn fáìlì"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:83
+#: ../../../lib/web/src/components/restore-banner.tsx:89
 msgid "Finish moving your account"
 msgstr "Pari gbigbe akonti rẹ"
 
@@ -1144,7 +1134,7 @@ msgstr "Pẹ̀tẹ́lẹ̀"
 msgid "Friday"
 msgstr "Ọjọ́ Ẹ̀tì"
 
-#: ../../../lib/web/src/components/person-picker.tsx:183
+#: ../../../lib/web/src/components/person-picker.tsx:186
 msgid "Friends"
 msgstr "Àwọn ọ̀rẹ́"
 
@@ -1210,7 +1200,7 @@ msgid "ID"
 msgstr "ID"
 
 #. placeholder {0}: currentMedia.name
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:327
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:328
 msgid "Image viewer: {0}"
 msgstr "Ẹ̀rọ ìwo àwòrán: {0}"
 
@@ -1246,7 +1236,7 @@ msgstr "Ọjọ́ aláìdára"
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
 msgstr "Ó dàbí pé ojú-ìwé tí o ń wá <0/>kò sí tàbí a ti yọ ọ́ kúrò."
 
-#: ../../../lib/web/src/lib/locale-format.ts:165
+#: ../../../lib/web/src/lib/locale-format.ts:180
 msgid "Just now"
 msgstr "Ní báyìí"
 
@@ -1270,10 +1260,6 @@ msgstr "Tóbi"
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:309
 msgid "Layout"
 msgstr "Àtòjọ"
-
-#: ../../../lib/web/src/components/post-tags.tsx:72
-#~ msgid "Letters, numbers, spaces, and hyphens only"
-#~ msgstr "Àwọn lẹ́tà, nọ́mbà, àyè, àti òpó nìkan"
 
 #: ../../../lib/web/src/components/post-tags.tsx:73
 msgid "Letters, numbers, spaces, hyphens, and slashes only"
@@ -1366,6 +1352,10 @@ msgstr "Ìránṣẹ́"
 msgid "Metric"
 msgstr "Òṣùwọ̀n"
 
+#: ../../../lib/web/src/lib/shell-errors.ts:31
+msgid "Microphone permission denied"
+msgstr "A kọ̀ ìyọ̀ǹda gbohùngbohùn"
+
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:191
 msgid "Minimum length"
 msgstr "Gígùn tí ó kéré jùlọ"
@@ -1407,10 +1397,6 @@ msgstr "Orúkọ"
 msgid "Name cannot contain < or > characters"
 msgstr "Orúkọ kò lè ní àwọn lẹ́tà < tàbí >"
 
-#: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:102
-#~ msgid "Name cannot contain angle brackets, backslash, semicolon, quotes or backticks"
-#~ msgstr "Orúkọ kò lè ní àwọn àkámọ́ igun, ìlà ẹ̀yìn, kọ́mà-àmì, àmì ọ̀rọ̀ tàbí àmì ẹ̀yìn"
-
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:101
 msgid "Name is required"
 msgstr "A nílò orúkọ"
@@ -1436,8 +1422,8 @@ msgstr "Tuntun"
 msgid "New game"
 msgstr "Eré tuntun"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:536
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:541
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:537
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:542
 msgid "Next image"
 msgstr "Àwòrán tó kàn"
 
@@ -1540,7 +1526,7 @@ msgstr "Kò sí ìwò"
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:418
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:491
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:494
-#: ../../../lib/web/src/components/person-picker.tsx:326
+#: ../../../lib/web/src/components/person-picker.tsx:329
 #: ../../../lib/web/src/lib/preference-utils.ts:100
 msgid "None"
 msgstr "Kòsí"
@@ -1653,12 +1639,17 @@ msgid "Passkey"
 msgstr "Kọ́kọ́rọ́-ìwọlé"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:195
+#: ../../../lib/web/src/lib/shell-errors.ts:26
 msgid "Passkey verification failed. Please try again."
 msgstr "Ìjẹ́rìísí passkey kùnà. Jọ̀wọ́ gbìyànjú lẹ́ẹ̀kan sí i."
 
-#: ../../../lib/web/src/components/restore-banner.tsx:132
+#: ../../../lib/web/src/components/restore-banner.tsx:138
 msgid "Passkeys"
 msgstr "Àwọn passkey"
+
+#: ../../../lib/web/src/lib/shell-errors.ts:19
+msgid "Passkeys are not available in this browser"
+msgstr "Àwọn passkey kò sí ní aṣàwákiri yìí"
 
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:213
 msgid "Pattern (regex)"
@@ -1668,7 +1659,7 @@ msgstr "Àpẹẹrẹ (regex)"
 msgid "pawn"
 msgstr "ọmọ ogun"
 
-#: ../../../lib/web/src/components/person-picker.tsx:176
+#: ../../../lib/web/src/components/person-picker.tsx:179
 msgid "People"
 msgstr "Àwọn ènìyàn"
 
@@ -1677,10 +1668,6 @@ msgstr "Àwọn ènìyàn"
 #: ../../../lib/web/src/lib/api-response-interceptors.ts:314
 msgid "Please check your internet connection and try again."
 msgstr "Jọ̀wọ́ ṣàyẹ̀wò ìsopọ̀ íntánẹ́ẹ̀tì rẹ kí o sì gbìyànjú lẹ́ẹ̀kan sí i."
-
-#: ../../../lib/web/src/features/errors/unauthorized-error.tsx:18
-#~ msgid "Please log in with the appropriate credentials <0/> to access this resource."
-#~ msgstr "Jọ̀wọ́ wọlé pẹ̀lú àwọn ẹ̀rí tó yẹ <0/> láti wọlé sí ohun àmúlò yìí."
 
 #: src/features/chess/components/new-game.tsx:67
 msgid "Please select a friend"
@@ -1702,8 +1689,8 @@ msgstr "Àwọn ìfìránṣẹ́"
 msgid "Posts and comments"
 msgstr "Àwọn ìfìránṣẹ́ àti àlàyé"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:520
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:525
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:521
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:526
 msgid "Previous image"
 msgstr "Àwòrán tó kọjá"
 
@@ -1715,10 +1702,6 @@ msgstr "Aṣírí"
 #: ../../../lib/web/src/components/ui/upload-progress.tsx:50
 msgid "Processing…"
 msgstr "Ń ṣiṣẹ́ lé e…"
-
-#: ../../../lib/web/src/components/person-picker.tsx:200
-#~ msgid "Project members"
-#~ msgstr "Àwọn ọmọ ẹgbẹ́ iṣẹ́"
 
 #. placeholder {0}: pieceName(piece)
 #: src/features/chess/components/promotion-dialog.tsx:84
@@ -1746,11 +1729,11 @@ msgstr "ayaba"
 msgid "Raised"
 msgstr "Gbígbé sókè"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:104
+#: ../../../lib/web/src/components/restore-banner.tsx:110
 msgid "Re-link your accounts on this server"
 msgstr "Tun so akonti rẹ pọ lori olupin yii"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:126
+#: ../../../lib/web/src/components/restore-banner.tsx:132
 msgid "Re-register your passkeys on this server"
 msgstr "Tún àwọn bọ́tìnì ìwọlé rẹ forúkọsílẹ̀ lórí olùpèsè yìí"
 
@@ -1761,6 +1744,14 @@ msgstr "Tí a dábàá"
 #: ../../../lib/web/src/lib/chat-ui.ts:21
 msgid "Reconnecting ({retries})..."
 msgstr "Ń tún sopọ̀ ({retries})..."
+
+#: ../../../lib/web/src/lib/shell-errors.ts:43
+msgid "Recording failed. Please try again."
+msgstr "Gbigbasilẹ kùnà. Jọ̀wọ́ tún gbìyànjú."
+
+#: ../../../lib/web/src/lib/shell-errors.ts:39
+msgid "Recording produced no audio"
+msgstr "Gbigbasilẹ kò ní ohùn kankan"
 
 #: ../../../lib/web/src/components/layout/authenticated-layout.tsx:135
 msgid "Redirecting to login."
@@ -1984,7 +1975,7 @@ msgstr "Wá, ṣọ́, kí o sì ṣètò ìwòye yìí."
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:179
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:255
 #: ../../../lib/web/src/components/inline-entity-search.tsx:64
-#: ../../../lib/web/src/components/person-picker.tsx:300
+#: ../../../lib/web/src/components/person-picker.tsx:303
 #: ../../../lib/web/src/components/search-entity-page.tsx:72
 msgid "Search..."
 msgstr "Wá..."
@@ -2231,6 +2222,22 @@ msgstr "Kò lè ránṣẹ́. Àwọn fáìlì lè tóbi jù, tàbí àsopọ̀ 
 msgid "That was too large to upload. Remove or shrink files and try again."
 msgstr "Ó tóbi jù láti gbé sókè. Yọ àwọn fáìlì kúrò tàbí dín wọn kù kí o sì tún gbìyànjú."
 
+#: ../../../lib/web/src/lib/shell-errors.ts:50
+msgid "The camera is already in use"
+msgstr "Kámẹ́rà ti wà ní lílò"
+
+#: ../../../lib/web/src/lib/shell-errors.ts:54
+msgid "The camera request was not answered"
+msgstr "A kò dáhùn ìbéèrè kámẹ́rà náà"
+
+#: ../../../lib/web/src/lib/shell-errors.ts:41
+msgid "The microphone request was not answered"
+msgstr "A kò dáhùn ìbéèrè gbohùngbohùn náà"
+
+#: ../../../lib/web/src/lib/shell-errors.ts:21
+msgid "The passkey request was not answered"
+msgstr "A kò dáhùn ìbéèrè passkey náà"
+
 #: ../../../lib/web/src/features/errors/general-error.tsx:66
 msgid "The requested content could not be found."
 msgstr "A kò rí àkóónú tí o béèrè fún."
@@ -2238,6 +2245,10 @@ msgstr "A kò rí àkóónú tí o béèrè fún."
 #: ../../../lib/web/src/lib/api-response-interceptors.ts:152
 msgid "The server returned a web page instead of data."
 msgstr "Olupin naa da oju-ìwé wẹ́ẹ̀bù padà dípò data."
+
+#: ../../../lib/web/src/lib/shell-errors.ts:17
+msgid "This app is not allowed to use your passkey. Allow it in Settings, under Permissions."
+msgstr "Ìṣàmúlò yìí kò ní àṣẹ láti lo passkey rẹ. Fàyè gbà á ní Ètò, lábẹ́ Àwọn Àṣẹ."
 
 #: src/features/chess/index.tsx:613
 msgid "This permanently deletes the game and its chat. This cannot be undone."
@@ -2264,11 +2275,6 @@ msgstr "Ṣí/pa apá"
 #: ../../../lib/web/src/components/ui/sidebar.tsx:355
 msgid "Toggle sidebar"
 msgstr "Yí ẹ̀gbẹ́ padà"
-
-#: ../../../lib/web/src/components/ui/sidebar.tsx:352
-#: ../../../lib/web/src/components/ui/sidebar.tsx:355
-#~ msgid "Toggle Sidebar"
-#~ msgstr "Yí Sidebar"
 
 #: ../../../lib/web/src/components/entity/keyboard-shortcuts-help.tsx:26
 msgid "Toggle view options"
@@ -2337,10 +2343,6 @@ msgstr "A kò lè darí sí ojú-ìwé wíwọlé. Jọ̀wọ́ gbìyànjú lẹ
 #: ../../../lib/web/src/components/notification-category-button.tsx:114
 msgid "Unassigned"
 msgstr "Aláìyàn"
-
-#: ../../../lib/web/src/features/errors/unauthorized-error.tsx:16
-#~ msgid "Unauthorized Access"
-#~ msgstr "Ààyè Aláìláyè"
 
 #: ../../../lib/web/src/components/attachment-image.tsx:50
 msgid "Unavailable"
@@ -2426,7 +2428,7 @@ msgid "Video thumbnail"
 msgstr "Àwòrán kékeré fídíò"
 
 #. placeholder {0}: currentMedia.name
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:326
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:327
 msgid "Video viewer: {0}"
 msgstr "Ẹ̀rọ ìwo fídíò: {0}"
 
@@ -2438,6 +2440,10 @@ msgstr "Wo gbogbo àwọn ìfitónilétí"
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:170
 msgid "View controls"
 msgstr "Àwọn ìṣàkóso ìwòye"
+
+#: ../../../lib/web/src/lib/shell-errors.ts:33
+msgid "Voice recording is not supported in this browser"
+msgstr "Aṣàwákiri yìí kò ṣe àtìlẹ́yìn fún gbigbasilẹ ohùn"
 
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:269
 #: ../../../lib/web/src/components/filter-bar.tsx:35
@@ -2481,7 +2487,7 @@ msgstr "O kò ní ààyè sí abala yìí."
 msgid "You resigned — {opponentName} wins"
 msgstr "O juwọ́ sílẹ̀ — {opponentName} ṣẹ́gun"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:86
+#: ../../../lib/web/src/components/restore-banner.tsx:92
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "A gbe akonti rẹ wá ibi lati {source}. Titi iwọ o fi pa rẹ nibẹ, awọn ifiranṣẹ ati awọn iwifunni le de olupin mejeeji, diẹ ninu akoonu rẹ tẹsiwaju lati sin lati olupin atijọ, ati awọn olutẹle le gba iṣẹju diẹ lati wa ọ nibi."
 

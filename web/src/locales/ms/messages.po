@@ -18,10 +18,6 @@ msgstr ""
 msgid "Please check your internet connection and try again."
 msgstr "Sila semak sambungan internet anda dan cuba lagi."
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:301
-#~ msgid " or "
-#~ msgstr " atau "
-
 #: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:189
 msgid "(edited)"
 msgstr "(disunting)"
@@ -35,7 +31,7 @@ msgid "[not set]"
 msgstr "[tidak ditetapkan]"
 
 #. placeholder {0}: displayInfo.count
-#: ../../../lib/web/src/components/person-picker.tsx:257
+#: ../../../lib/web/src/components/person-picker.tsx:260
 msgid "{0, plural, one {# selected} other {# selected}}"
 msgstr "{0, plural, one {# dipilih} other {# dipilih}}"
 
@@ -73,29 +69,25 @@ msgstr "{count, plural, other {# menteri}}"
 msgid "{count, plural, one {# rook} other {# rooks}}"
 msgstr "{count, plural, other {# tir}}"
 
-#: ../../../lib/web/src/lib/locale-format.ts:176
+#: ../../../lib/web/src/lib/locale-format.ts:191
 msgid "{count, plural, one {#d} other {#d}}"
 msgstr "{count, plural, one {#h} other {#h}}"
 
-#: ../../../lib/web/src/lib/locale-format.ts:172
+#: ../../../lib/web/src/lib/locale-format.ts:187
 msgid "{count, plural, one {#h} other {#h}}"
 msgstr "{count, plural, one {#j} other {#j}}"
 
-#: ../../../lib/web/src/lib/locale-format.ts:168
+#: ../../../lib/web/src/lib/locale-format.ts:183
 msgid "{count, plural, one {#m} other {#m}}"
 msgstr "{count, plural, one {#min} other {#min}}"
 
-#: ../../../lib/web/src/lib/locale-format.ts:180
+#: ../../../lib/web/src/lib/locale-format.ts:195
 msgid "{count, plural, one {#w} other {#w}}"
 msgstr "{count, plural, one {#mgg} other {#mgg}}"
 
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:176
 msgid "{entityLabel} name"
 msgstr "Nama {entityLabel}"
-
-#: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:99
-#~ msgid "{entityLabel} name is required"
-#~ msgstr "Nama {entityLabel} diperlukan"
 
 #: src/features/chess/components/chat-message-list.tsx:46
 msgid "{name} declined the draw"
@@ -146,18 +138,6 @@ msgstr "{totalDescendants, plural, one {# balasan} other {+# balasan lagi}}"
 msgid "{unreadCount, plural, one {Open menu (# unread notification)} other {Open menu (# unread notifications)}}"
 msgstr "{unreadCount, plural, one {Buka menu (# pemberitahuan belum dibaca)} other {Buka menu (# pemberitahuan belum dibaca)}}"
 
-#: ../../../lib/web/src/components/entity/entity-board-card.tsx:418
-#~ msgid "+{0} nested"
-#~ msgstr "+{0} bersarang"
-
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:171
-#~ msgid "+{totalDescendants} more replies"
-#~ msgstr "+{totalDescendants} balasan lagi"
-
-#: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:170
-#~ msgid "1 reply"
-#~ msgstr "1 balasan"
-
 #: ../../../lib/web/src/lib/preference-utils.ts:37
 msgid "12 hours"
 msgstr "12 jam"
@@ -165,6 +145,10 @@ msgstr "12 jam"
 #: ../../../lib/web/src/lib/preference-utils.ts:36
 msgid "24 hours"
 msgstr "24 jam"
+
+#: ../../../lib/web/src/lib/shell-errors.ts:35
+msgid "A recording is already in progress."
+msgstr "Rakaman sudah sedang berjalan."
 
 #: ../../../lib/web/src/lib/preference-utils.ts:46
 msgid "Absolute (date and time)"
@@ -276,10 +260,6 @@ msgstr "Menambah..."
 #: ../../../lib/web/src/components/ui/sort-selector.tsx:41
 msgid "AI"
 msgstr "AI"
-
-#: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:85
-#~ msgid "Allow anyone to search for {0}"
-#~ msgstr "Benarkan sesiapa mencari {0}"
 
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:87
 msgid "Allow anyone to search for {entityLabel}"
@@ -429,6 +409,14 @@ msgstr "Warna sempadan"
 msgid "Browser notifications"
 msgstr "Pemberitahuan pelayar"
 
+#: ../../../lib/web/src/lib/shell-errors.ts:48
+msgid "Camera permission denied"
+msgstr "Kebenaran kamera ditolak"
+
+#: ../../../lib/web/src/lib/shell-errors.ts:56
+msgid "Camera unavailable"
+msgstr "Kamera tidak tersedia"
+
 #: ../../../lib/web/src/components/attachment-composer.tsx:426
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:616
 #: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:211
@@ -455,6 +443,12 @@ msgstr "Batal komen"
 #: ../../../lib/web/src/components/comment-composer.tsx:429
 msgid "Cancel reply"
 msgstr "Batal balasan"
+
+#: ../../../lib/web/src/lib/shell-errors.ts:24
+#: ../../../lib/web/src/lib/shell-errors.ts:37
+#: ../../../lib/web/src/lib/shell-errors.ts:52
+msgid "Cancelled"
+msgstr "Dibatalkan"
 
 #: ../../../lib/web/src/components/attachment-composer.tsx:386
 #: ../../../lib/web/src/components/attachment-composer.tsx:421
@@ -554,8 +548,8 @@ msgstr "Kosongkan carian"
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:523
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:528
 #: ../../../lib/web/src/components/ui/dialog.tsx:78
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:479
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:482
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:480
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:483
 #: ../../../lib/web/src/components/ui/sheet.tsx:79
 msgid "Close"
 msgstr "Tutup"
@@ -622,8 +616,8 @@ msgstr "Palet perintah"
 msgid "Comment actions"
 msgstr "Tindakan komen"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:442
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:454
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:443
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:455
 msgid "Comments"
 msgstr "Komen"
 
@@ -715,10 +709,6 @@ msgstr "Tidak dapat mengesahkan dengan akaun itu. Sila cuba lagi."
 #: ../../../lib/web/src/components/entity/entity-tree-view.tsx:672
 msgid "Create"
 msgstr "Cipta"
-
-#: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:144
-#~ msgid "Create {0}"
-#~ msgstr "Cipta {0}"
 
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:146
 msgid "Create {entityLabel}"
@@ -832,7 +822,7 @@ msgstr "Padam pilihan {0}"
 msgid "Delete view"
 msgstr "Padam paparan"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:95
+#: ../../../lib/web/src/components/restore-banner.tsx:101
 msgid "Delete your account on the old server"
 msgstr "Padamkan akaun anda di pelayan lama"
 
@@ -871,7 +861,7 @@ msgstr "Panel Butiran"
 msgid "Detect from web browser"
 msgstr "Kesan daripada pelayar web"
 
-#: ../../../lib/web/src/components/person-picker.tsx:190
+#: ../../../lib/web/src/components/person-picker.tsx:193
 msgid "Directory"
 msgstr "Direktori"
 
@@ -888,8 +878,8 @@ msgstr "Buang draf?"
 msgid "Disconnected"
 msgstr "Terputus"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:74
 #: ../../../lib/web/src/components/restore-banner.tsx:80
+#: ../../../lib/web/src/components/restore-banner.tsx:86
 msgid "Dismiss"
 msgstr "Tutup"
 
@@ -907,8 +897,8 @@ msgid "Done"
 msgstr "Selesai"
 
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:243
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:463
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:473
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:464
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:474
 msgid "Download"
 msgstr "Muat turun"
 
@@ -1069,7 +1059,7 @@ msgstr "Gagal memuatkan"
 msgid "Failed to load history"
 msgstr "Gagal memuatkan sejarah"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:349
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:350
 msgid "Failed to load image"
 msgstr "Gagal memuatkan imej"
 
@@ -1077,7 +1067,7 @@ msgstr "Gagal memuatkan imej"
 msgid "Failed to load prompts"
 msgstr "Gagal memuatkan gesaan"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:349
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:350
 msgid "Failed to load video"
 msgstr "Gagal memuatkan video"
 
@@ -1128,7 +1118,7 @@ msgstr "Gagal memuat naik lampiran"
 msgid "Files"
 msgstr "Fail"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:83
+#: ../../../lib/web/src/components/restore-banner.tsx:89
 msgid "Finish moving your account"
 msgstr "Selesaikan pemindahan akaun anda"
 
@@ -1144,7 +1134,7 @@ msgstr "Rata"
 msgid "Friday"
 msgstr "Jumaat"
 
-#: ../../../lib/web/src/components/person-picker.tsx:183
+#: ../../../lib/web/src/components/person-picker.tsx:186
 msgid "Friends"
 msgstr "Rakan"
 
@@ -1210,7 +1200,7 @@ msgid "ID"
 msgstr "ID"
 
 #. placeholder {0}: currentMedia.name
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:327
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:328
 msgid "Image viewer: {0}"
 msgstr "Pemapar imej: {0}"
 
@@ -1246,7 +1236,7 @@ msgstr "Tarikh tidak sah"
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
 msgstr "Nampaknya halaman yang anda cari <0/>tidak wujud atau telah dialih keluar."
 
-#: ../../../lib/web/src/lib/locale-format.ts:165
+#: ../../../lib/web/src/lib/locale-format.ts:180
 msgid "Just now"
 msgstr "Sebentar tadi"
 
@@ -1270,10 +1260,6 @@ msgstr "Besar"
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:309
 msgid "Layout"
 msgstr "Susun atur"
-
-#: ../../../lib/web/src/components/post-tags.tsx:72
-#~ msgid "Letters, numbers, spaces, and hyphens only"
-#~ msgstr "Hanya huruf, nombor, ruang dan sengkang"
 
 #: ../../../lib/web/src/components/post-tags.tsx:73
 msgid "Letters, numbers, spaces, hyphens, and slashes only"
@@ -1366,6 +1352,10 @@ msgstr "Mesej"
 msgid "Metric"
 msgstr "Metrik"
 
+#: ../../../lib/web/src/lib/shell-errors.ts:31
+msgid "Microphone permission denied"
+msgstr "Kebenaran mikrofon ditolak"
+
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:191
 msgid "Minimum length"
 msgstr "Panjang minimum"
@@ -1407,10 +1397,6 @@ msgstr "Nama"
 msgid "Name cannot contain < or > characters"
 msgstr "Nama tidak boleh mengandungi aksara < atau >"
 
-#: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:102
-#~ msgid "Name cannot contain angle brackets, backslash, semicolon, quotes or backticks"
-#~ msgstr "Nama tidak boleh mengandungi kurungan sudut, garis miring ke belakang, koma bertitik, tanda petikan atau backtick"
-
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:101
 msgid "Name is required"
 msgstr "Nama diperlukan"
@@ -1436,8 +1422,8 @@ msgstr "Baharu"
 msgid "New game"
 msgstr "Permainan baharu"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:536
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:541
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:537
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:542
 msgid "Next image"
 msgstr "Imej seterusnya"
 
@@ -1540,7 +1526,7 @@ msgstr "Tiada paparan"
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:418
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:491
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:494
-#: ../../../lib/web/src/components/person-picker.tsx:326
+#: ../../../lib/web/src/components/person-picker.tsx:329
 #: ../../../lib/web/src/lib/preference-utils.ts:100
 msgid "None"
 msgstr "Tiada"
@@ -1653,12 +1639,17 @@ msgid "Passkey"
 msgstr "Kunci laluan"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx:195
+#: ../../../lib/web/src/lib/shell-errors.ts:26
 msgid "Passkey verification failed. Please try again."
 msgstr "Pengesahan kunci laluan gagal. Sila cuba lagi."
 
-#: ../../../lib/web/src/components/restore-banner.tsx:132
+#: ../../../lib/web/src/components/restore-banner.tsx:138
 msgid "Passkeys"
 msgstr "Passkey"
+
+#: ../../../lib/web/src/lib/shell-errors.ts:19
+msgid "Passkeys are not available in this browser"
+msgstr "Passkey tidak tersedia dalam pelayar ini"
 
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:213
 msgid "Pattern (regex)"
@@ -1668,7 +1659,7 @@ msgstr "Corak (regex)"
 msgid "pawn"
 msgstr "bidak"
 
-#: ../../../lib/web/src/components/person-picker.tsx:176
+#: ../../../lib/web/src/components/person-picker.tsx:179
 msgid "People"
 msgstr "Orang"
 
@@ -1677,10 +1668,6 @@ msgstr "Orang"
 #: ../../../lib/web/src/lib/api-response-interceptors.ts:314
 msgid "Please check your internet connection and try again."
 msgstr "Sila semak sambungan internet anda dan cuba lagi."
-
-#: ../../../lib/web/src/features/errors/unauthorized-error.tsx:18
-#~ msgid "Please log in with the appropriate credentials <0/> to access this resource."
-#~ msgstr "Sila log masuk dengan bukti kelayakan yang sesuai <0/> untuk mengakses sumber ini."
 
 #: src/features/chess/components/new-game.tsx:67
 msgid "Please select a friend"
@@ -1702,8 +1689,8 @@ msgstr "Hantaran"
 msgid "Posts and comments"
 msgstr "Hantaran dan komen"
 
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:520
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:525
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:521
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:526
 msgid "Previous image"
 msgstr "Imej sebelumnya"
 
@@ -1715,10 +1702,6 @@ msgstr "Privasi"
 #: ../../../lib/web/src/components/ui/upload-progress.tsx:50
 msgid "Processing…"
 msgstr "Memproses…"
-
-#: ../../../lib/web/src/components/person-picker.tsx:200
-#~ msgid "Project members"
-#~ msgstr "Ahli projek"
 
 #. placeholder {0}: pieceName(piece)
 #: src/features/chess/components/promotion-dialog.tsx:84
@@ -1746,11 +1729,11 @@ msgstr "menteri"
 msgid "Raised"
 msgstr "Timbul"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:104
+#: ../../../lib/web/src/components/restore-banner.tsx:110
 msgid "Re-link your accounts on this server"
 msgstr "Pautkan semula akaun anda di pelayan ini"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:126
+#: ../../../lib/web/src/components/restore-banner.tsx:132
 msgid "Re-register your passkeys on this server"
 msgstr "Daftar semula kunci laluan anda di pelayan ini"
 
@@ -1761,6 +1744,14 @@ msgstr "Disyorkan"
 #: ../../../lib/web/src/lib/chat-ui.ts:21
 msgid "Reconnecting ({retries})..."
 msgstr "Menyambung semula ({retries})..."
+
+#: ../../../lib/web/src/lib/shell-errors.ts:43
+msgid "Recording failed. Please try again."
+msgstr "Rakaman gagal. Sila cuba lagi."
+
+#: ../../../lib/web/src/lib/shell-errors.ts:39
+msgid "Recording produced no audio"
+msgstr "Rakaman tiada bunyi"
 
 #: ../../../lib/web/src/components/layout/authenticated-layout.tsx:135
 msgid "Redirecting to login."
@@ -1984,7 +1975,7 @@ msgstr "Cari, pantau dan susun paparan ini."
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:179
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:255
 #: ../../../lib/web/src/components/inline-entity-search.tsx:64
-#: ../../../lib/web/src/components/person-picker.tsx:300
+#: ../../../lib/web/src/components/person-picker.tsx:303
 #: ../../../lib/web/src/components/search-entity-page.tsx:72
 msgid "Search..."
 msgstr "Cari..."
@@ -2231,6 +2222,22 @@ msgstr "Tidak dapat dihantar. Fail mungkin terlalu besar, atau sambungan anda ga
 msgid "That was too large to upload. Remove or shrink files and try again."
 msgstr "Terlalu besar untuk dimuat naik. Alih keluar atau kecilkan fail dan cuba lagi."
 
+#: ../../../lib/web/src/lib/shell-errors.ts:50
+msgid "The camera is already in use"
+msgstr "Kamera sudah digunakan"
+
+#: ../../../lib/web/src/lib/shell-errors.ts:54
+msgid "The camera request was not answered"
+msgstr "Permintaan kamera tidak dijawab"
+
+#: ../../../lib/web/src/lib/shell-errors.ts:41
+msgid "The microphone request was not answered"
+msgstr "Permintaan mikrofon tidak dijawab"
+
+#: ../../../lib/web/src/lib/shell-errors.ts:21
+msgid "The passkey request was not answered"
+msgstr "Permintaan passkey tidak dijawab"
+
 #: ../../../lib/web/src/features/errors/general-error.tsx:66
 msgid "The requested content could not be found."
 msgstr "Kandungan yang diminta tidak ditemui."
@@ -2238,6 +2245,10 @@ msgstr "Kandungan yang diminta tidak ditemui."
 #: ../../../lib/web/src/lib/api-response-interceptors.ts:152
 msgid "The server returned a web page instead of data."
 msgstr "Pelayan mengembalikan halaman web dan bukannya data."
+
+#: ../../../lib/web/src/lib/shell-errors.ts:17
+msgid "This app is not allowed to use your passkey. Allow it in Settings, under Permissions."
+msgstr "Aplikasi ini tidak dibenarkan menggunakan passkey anda. Benarkan dalam Tetapan, di bawah Kebenaran."
 
 #: src/features/chess/index.tsx:613
 msgid "This permanently deletes the game and its chat. This cannot be undone."
@@ -2264,11 +2275,6 @@ msgstr "Togol bahagian"
 #: ../../../lib/web/src/components/ui/sidebar.tsx:355
 msgid "Toggle sidebar"
 msgstr "Togol bar sisi"
-
-#: ../../../lib/web/src/components/ui/sidebar.tsx:352
-#: ../../../lib/web/src/components/ui/sidebar.tsx:355
-#~ msgid "Toggle Sidebar"
-#~ msgstr "Togol Bar Sisi"
 
 #: ../../../lib/web/src/components/entity/keyboard-shortcuts-help.tsx:26
 msgid "Toggle view options"
@@ -2337,10 +2343,6 @@ msgstr "Tidak dapat mengubah hala ke log masuk. Sila cuba lagi."
 #: ../../../lib/web/src/components/notification-category-button.tsx:114
 msgid "Unassigned"
 msgstr "Tidak diberikan"
-
-#: ../../../lib/web/src/features/errors/unauthorized-error.tsx:16
-#~ msgid "Unauthorized Access"
-#~ msgstr "Akses Tidak Dibenarkan"
 
 #: ../../../lib/web/src/components/attachment-image.tsx:50
 msgid "Unavailable"
@@ -2426,7 +2428,7 @@ msgid "Video thumbnail"
 msgstr "Imej kecil video"
 
 #. placeholder {0}: currentMedia.name
-#: ../../../lib/web/src/components/ui/image-lightbox.tsx:326
+#: ../../../lib/web/src/components/ui/image-lightbox.tsx:327
 msgid "Video viewer: {0}"
 msgstr "Pemapar video: {0}"
 
@@ -2438,6 +2440,10 @@ msgstr "Lihat semua pemberitahuan"
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:170
 msgid "View controls"
 msgstr "Kawalan paparan"
+
+#: ../../../lib/web/src/lib/shell-errors.ts:33
+msgid "Voice recording is not supported in this browser"
+msgstr "Rakaman suara tidak disokong dalam pelayar ini"
 
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:269
 #: ../../../lib/web/src/components/filter-bar.tsx:35
@@ -2481,7 +2487,7 @@ msgstr "Anda tidak mempunyai akses kepada bahagian ini."
 msgid "You resigned — {opponentName} wins"
 msgstr "Anda mengalah — {opponentName} menang"
 
-#: ../../../lib/web/src/components/restore-banner.tsx:86
+#: ../../../lib/web/src/components/restore-banner.tsx:92
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "Akaun anda telah dipindahkan ke sini dari {source}. Sehingga anda memadamnya di sana, mesej dan pemberitahuan mungkin sampai ke kedua-dua pelayan, sebahagian kandungan anda terus dihidangkan dari pelayan lama, dan pengikut mungkin mengambil masa beberapa minit untuk mencari anda di sini."
 
