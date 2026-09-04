@@ -105,11 +105,11 @@ msgstr "{name} таслим шуд"
 msgid "{opponentName} offered a draw"
 msgstr "{opponentName} баробариро пешниҳод кард"
 
-#: src/features/chess/index.tsx:374
+#: src/features/chess/index.tsx:357
 msgid "{opponentName} resigned — you win!"
 msgstr "{opponentName} таслим шуд — шумо ғолиб омадед!"
 
-#: src/features/chess/index.tsx:387
+#: src/features/chess/index.tsx:370
 msgid "{opponentName}'s move"
 msgstr "Навбати {opponentName}"
 
@@ -171,9 +171,13 @@ msgstr "Сатҳи дастрасӣ"
 msgid "Account type"
 msgstr "Намуди ҳисоб"
 
-#: src/components/layout/chess-layout.tsx:58
+#: src/components/layout/chess-layout.tsx:42
 msgid "Active games"
 msgstr "Бозиҳои фаъол"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:415
+msgid "Activity"
+msgstr "Фаъолият"
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:758
 #: ../../../lib/web/src/features/access/access-dialog.tsx:332
@@ -214,11 +218,11 @@ msgstr "Иловаи нуктаи рӯйхат"
 msgid "Add field"
 msgstr "Иловаи майдон"
 
-#: src/features/chess/components/new-game.tsx:121
+#: src/features/chess/components/new-game.tsx:83
 msgid "Add friends"
 msgstr "Иловаи дӯстон"
 
-#: src/features/chess/components/new-game.tsx:114
+#: src/features/chess/components/new-game.tsx:82
 msgid "Add friends in the People app to start playing"
 msgstr "Дар барномаи People дӯстон илова кунед, то бозиро оғоз кунед"
 
@@ -226,7 +230,7 @@ msgstr "Дар барномаи People дӯстон илова кунед, то 
 msgid "Add item..."
 msgstr "Иловаи нукта..."
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:320
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:314
 msgid "Add link"
 msgstr "Иловаи пайванд"
 
@@ -300,6 +304,10 @@ msgstr "Ҳама чизе, ки ба ин ҷараён обуна шудааст
 msgid "Are you sure you want to delete \"{0}\"?"
 msgstr "Шумо мутмаин ҳастед, ки мехоҳед \"{0}\"-ро нест кунед?"
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:671
+msgid "Are you sure you want to delete \"{title}\"? This action cannot be undone."
+msgstr "Шумо мутмаин ҳастед, ки мехоҳед \"{title}\"-ро нест кунед? Ин амалро бекор кардан мумкин нест."
+
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:631
 msgid "Are you sure you want to delete the \"{name}\" column? This cannot be undone."
 msgstr "Шумо мутмаин ҳастед, ки мехоҳед сутуни \"{name}\"-ро нест кунед? Ин амалро бекор кардан мумкин нест."
@@ -312,7 +320,11 @@ msgstr "Шумо мутмаин ҳастед, ки мехоҳед ин шарҳ�
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "Шумо мутмаин ҳастед, ки мехоҳед хориҷ шавед? Барои дастрасӣ ба ҳисоб бояд аз нав ворид шавед."
 
-#: src/features/chess/index.tsx:592
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:39
+msgid "Are you sure you want to resign?"
+msgstr "Шумо мутмаин ҳастед, ки мехоҳед таслим шавед?"
+
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:38
 msgid "Are you sure you want to resign? {opponentName} will win the game."
 msgstr "Шумо мутмаин ҳастед, ки мехоҳед таслим шавед? {opponentName} бозиро мебарад."
 
@@ -358,16 +370,25 @@ msgstr "Бозгашт"
 msgid "Back to home"
 msgstr "Бозгашт ба саҳифаи асосӣ"
 
+#: ../../../lib/web/src/components/banner-section.tsx:80
 #: ../../../lib/web/src/components/entity-banner.tsx:17
 msgid "Banner"
 msgstr "Баннер"
+
+#: ../../../lib/web/src/components/banner-section.tsx:69
+msgid "Banner removed"
+msgstr "Баннер хориҷ карда шуд"
+
+#: ../../../lib/web/src/components/banner-section.tsx:69
+msgid "Banner updated"
+msgstr "Баннер навсозӣ шуд"
 
 #: src/features/chess/lib/use-chess-piece-name.ts:20
 msgid "bishop"
 msgstr "пил"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:430
+#: src/features/chess/index.tsx:413
 msgid "Black"
 msgstr "Сиёҳ"
 
@@ -378,8 +399,8 @@ msgstr "Сиёҳ"
 msgid "Black {0}"
 msgstr "Сиёҳ {0}"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:68
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:215
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:72
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:209
 msgid "Blocked by"
 msgstr "Манъ карда шуд аз ҷониби"
 
@@ -388,7 +409,7 @@ msgstr "Манъ карда шуд аз ҷониби"
 msgid "Blocked navigation to untrusted link"
 msgstr "Гузариш ба пайванди беэътимод манъ шуд"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:66
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:70
 msgid "Blocks"
 msgstr "Блокҳо"
 
@@ -431,7 +452,7 @@ msgstr "Камера дастрас нест"
 #: ../../../lib/web/src/features/access/access-list.tsx:268
 #: ../../../lib/web/src/features/accounts/account-add.tsx:201
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:91
-#: src/features/chess/components/new-game.tsx:145
+#: src/features/chess/components/new-game.tsx:86
 #: src/features/chess/components/promotion-dialog.tsx:111
 msgid "Cancel"
 msgstr "Бекор кардан"
@@ -472,16 +493,15 @@ msgstr "Тағйир дода шуд"
 msgid "Changed {field}"
 msgstr "{field} тағйир дода шуд"
 
-#: src/features/chess/index.tsx:530
-#: src/features/chess/index.tsx:563
+#: src/features/chess/index.tsx:513
 msgid "Chat"
 msgstr "Чат"
 
-#: src/features/chess/index.tsx:384
+#: src/features/chess/index.tsx:367
 msgid "Check — {opponentName}'s move"
 msgstr "Шоҳ — навбати {opponentName}"
 
-#: src/features/chess/index.tsx:383
+#: src/features/chess/index.tsx:366
 msgid "Check — your move"
 msgstr "Шоҳ — навбати шумост"
 
@@ -493,17 +513,17 @@ msgstr "Парчаминтихоб"
 msgid "Checklist"
 msgstr "Рӯйхат"
 
-#: src/features/chess/index.tsx:367
+#: src/features/chess/index.tsx:350
 msgid "Checkmate — {opponentName} wins"
 msgstr "Мот — {opponentName} ғолиб омад"
 
-#: src/features/chess/index.tsx:366
+#: src/features/chess/index.tsx:349
 msgid "Checkmate — you win!"
 msgstr "Мот — шумо ғолиб омадед!"
 
-#: src/features/chess/index.tsx:61
-#: src/features/chess/index.tsx:320
-#: src/features/chess/index.tsx:332
+#: src/features/chess/index.tsx:59
+#: src/features/chess/index.tsx:308
+#: src/features/chess/index.tsx:317
 msgid "Chess"
 msgstr "Шоҳмот"
 
@@ -524,10 +544,11 @@ msgstr "Аз панели канорӣ бозиеро интихоб кунед 
 msgid "Choose language"
 msgstr "Забон интихоб кунед"
 
-#: src/features/chess/components/new-game.tsx:105
+#: src/features/chess/components/new-game.tsx:80
 msgid "Choose opponent"
 msgstr "Рақиб интихоб кунед"
 
+#: ../../../lib/web/src/components/banner-section.tsx:111
 #: ../../../lib/web/src/components/colour-picker.tsx:274
 #: ../../../lib/web/src/components/colour-picker.tsx:355
 #: ../../../lib/web/src/components/travelling-picker.tsx:145
@@ -545,8 +566,8 @@ msgstr "Ҳамаро тоза кардан"
 msgid "Clear search"
 msgstr "Тоза кардани ҷустуҷӯ"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:523
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:528
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:517
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:522
 #: ../../../lib/web/src/components/ui/dialog.tsx:78
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:480
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:483
@@ -621,11 +642,16 @@ msgstr "Амалҳои шарҳ"
 msgid "Comments"
 msgstr "Шарҳҳо"
 
+#. placeholder {0}: data.comment_count || 0
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:411
+msgid "Comments ({0})"
+msgstr "Шарҳҳо ({0})"
+
 #: ../../../lib/web/src/lib/preference-utils.ts:90
 msgid "Compact"
 msgstr "Паймон"
 
-#: src/components/layout/chess-layout.tsx:59
+#: src/components/layout/chess-layout.tsx:43
 msgid "Completed"
 msgstr "Анҷомшуда"
 
@@ -704,8 +730,8 @@ msgstr "Бо он ҳисоб тасдиқ кардан имконнопазир 
 
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:551
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:691
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:513
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:682
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:507
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:676
 #: ../../../lib/web/src/components/entity/entity-tree-view.tsx:672
 msgid "Create"
 msgstr "Эҷод кардан"
@@ -728,9 +754,9 @@ msgstr "Эҷодшуда"
 msgid "Created {field}"
 msgstr "{field} сохта шуд"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:682
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:676
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:260
-#: src/features/chess/components/new-game.tsx:153
+#: src/features/chess/components/new-game.tsx:88
 msgid "Creating..."
 msgstr "Эҷод карда истодааст..."
 
@@ -780,7 +806,8 @@ msgstr "Ҷобаҷогузории пешфарз"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:208
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:255
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:317
-#: src/features/chess/index.tsx:621
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:672
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:78
 msgid "Delete"
 msgstr "Нест кардан"
 
@@ -800,13 +827,19 @@ msgstr "Нест кардани шарҳ"
 msgid "Delete field"
 msgstr "Нест кардани майдон"
 
-#: src/features/chess/index.tsx:476
+#: src/features/chess/index.tsx:459
 msgid "Delete game"
 msgstr "Нест кардани бозӣ"
 
-#: src/features/chess/index.tsx:612
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:69
 msgid "Delete game?"
 msgstr "Бозӣ нест карда шавад?"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:486
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:491
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:670
+msgid "Delete item"
+msgstr "Нест кардани нукта"
 
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:117
 msgid "Delete option"
@@ -834,7 +867,7 @@ msgstr "Нест карда шуд"
 msgid "Deleted {field}"
 msgstr "{field} нест карда шуд"
 
-#: src/features/chess/index.tsx:618
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:75
 msgid "Deleting..."
 msgstr "Нест карда истодааст..."
 
@@ -892,6 +925,7 @@ msgid "Does not match the required pattern"
 msgstr "Ба намунаи талабшуда мувофиқат намекунад"
 
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:309
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:495
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:523
 msgid "Done"
 msgstr "Иҷро шуд"
@@ -907,7 +941,7 @@ msgstr "Боргирӣ"
 msgid "Download failed"
 msgstr "Боргирӣ ноком шуд"
 
-#: src/features/chess/index.tsx:371
+#: src/features/chess/index.tsx:354
 msgid "Draw"
 msgstr "Баробар"
 
@@ -915,11 +949,11 @@ msgstr "Баробар"
 msgid "Draw agreed"
 msgstr "Баробарӣ қабул шуд"
 
-#: src/features/chess/index.tsx:489
+#: src/features/chess/index.tsx:472
 msgid "Draw offered — waiting for {opponentName}"
 msgstr "Қарор пешниҳод шуд — мунтазири {opponentName}"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:67
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:71
 msgid "Duplicates"
 msgstr "Такрорҳо"
 
@@ -974,6 +1008,10 @@ msgstr "Имейл"
 msgid "Email code"
 msgstr "Рамзи email"
 
+#: ../../../lib/web/src/components/banner-section.tsx:88
+msgid "Enter banner text (markdown supported)..."
+msgstr "Матни баннерро ворид кунед (markdown дастгирӣ мешавад)..."
+
 #: ../../../lib/web/src/components/step-up-dialog.tsx:290
 msgid "Enter the code from your email"
 msgstr "Рамзро аз почтаи электронии худ ворид кунед"
@@ -981,6 +1019,10 @@ msgstr "Рамзро аз почтаи электронии худ ворид к
 #: ../../../lib/web/src/components/step-up-dialog.tsx:315
 msgid "Enter your authenticator code"
 msgstr "Рамзи аутентификатори худро ворид кунед"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:381
+msgid "Error"
+msgstr "Хатогӣ"
 
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:101
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:110
@@ -1001,7 +1043,7 @@ msgstr "URL-и берунӣ"
 msgid "Extra large"
 msgstr "Хеле калон"
 
-#: src/features/chess/index.tsx:186
+#: src/features/chess/index.tsx:175
 msgid "Failed to accept draw"
 msgstr "Қабули қарор ба анҷом нарасид"
 
@@ -1014,22 +1056,26 @@ msgstr "Илова кардани ҳисоб ба анҷом нарасид"
 msgid "Failed to copy"
 msgstr "Нусхабардорӣ ба анҷом нарасид"
 
-#: src/features/chess/components/new-game.tsx:52
+#: src/features/chess/components/new-game.tsx:40
 msgid "Failed to create game"
 msgstr "Эҷоди бозӣ ба анҷом нарасид"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:137
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:131
 #: ../../../lib/web/src/components/options-menu.tsx:98
 msgid "Failed to create link"
 msgstr "Эҷоди пайванд ба анҷом нарасид"
 
-#: src/features/chess/index.tsx:201
+#: src/features/chess/index.tsx:190
 msgid "Failed to create rematch"
 msgstr "Эҷоди бозии нав ба анҷом нарасид"
 
-#: src/features/chess/index.tsx:191
+#: src/features/chess/index.tsx:180
 msgid "Failed to decline draw"
 msgstr "Рад кардани қарор ба анҷом нарасид"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:303
+msgid "Failed to delete"
+msgstr "Ҳазф ба анҷом нарасид"
 
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:130
 msgid "Failed to delete attachment"
@@ -1039,11 +1085,11 @@ msgstr "Ҳазфи замима ба анҷом нарасид"
 msgid "Failed to delete comment"
 msgstr "Ҳазфи шарҳ ба анҷом нарасид"
 
-#: src/features/chess/index.tsx:213
+#: src/features/chess/index.tsx:202
 msgid "Failed to delete game"
 msgstr "Ҳазфи бозӣ ба анҷом нарасид"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:159
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:153
 msgid "Failed to delete link"
 msgstr "Ҳазфи пайванд ба анҷом нарасид"
 
@@ -1063,6 +1109,11 @@ msgstr "Боркунии таърих ба анҷом нарасид"
 msgid "Failed to load image"
 msgstr "Тасвир бор карда нашуд"
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:382
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:385
+msgid "Failed to load item"
+msgstr "Боркунии ашё ба анҷом нарасид"
+
 #: ../../../lib/web/src/components/ai-prompts-editor.tsx:213
 msgid "Failed to load prompts"
 msgstr "Боркунии дархостҳо ба анҷом нарасид"
@@ -1071,11 +1122,15 @@ msgstr "Боркунии дархостҳо ба анҷом нарасид"
 msgid "Failed to load video"
 msgstr "Видео бор карда нашуд"
 
-#: src/features/chess/index.tsx:164
+#: src/features/chess/index.tsx:153
 msgid "Failed to make move"
 msgstr "Кардани ҳаракат ба анҷом нарасид"
 
-#: src/features/chess/index.tsx:181
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:317
+msgid "Failed to move"
+msgstr "Интиқол ноком шуд"
+
+#: src/features/chess/index.tsx:170
 msgid "Failed to offer draw"
 msgstr "Пешниҳоди қарор ба анҷом нарасид"
 
@@ -1087,7 +1142,7 @@ msgstr "Гузоштани шарҳ ба анҷом нарасид"
 msgid "Failed to reset prompt"
 msgstr "Барқарор кардани дархост ба анҷом нарасид"
 
-#: src/features/chess/index.tsx:174
+#: src/features/chess/index.tsx:163
 msgid "Failed to resign"
 msgstr "Истеъфо ба анҷом нарасид"
 
@@ -1095,24 +1150,35 @@ msgstr "Истеъфо ба анҷом нарасид"
 msgid "Failed to revoke RSS access"
 msgstr "Бекор кардани дастрасии RSS ноком шуд"
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:273
+msgid "Failed to save"
+msgstr "Захира ба анҷом нарасид"
+
 #: ../../../lib/web/src/components/ai-prompts-editor.tsx:111
 msgid "Failed to save prompt"
 msgstr "Захира кардани дархост ба анҷом нарасид"
 
-#: src/features/chess/index.tsx:547
-#: src/features/chess/index.tsx:580
+#: src/features/chess/index.tsx:530
 msgid "Failed to send"
 msgstr "Ирсол ба анҷом нарасид"
+
+#: ../../../lib/web/src/components/banner-section.tsx:71
+msgid "Failed to update banner"
+msgstr "Навсозии баннер ба анҷом нарасид"
 
 #: ../../../lib/web/src/components/entity/entity-comment-list.tsx:175
 msgid "Failed to update comment"
 msgstr "Навсозии шарҳ ба анҷом нарасид"
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:288
+msgid "Failed to update watching"
+msgstr "Навсозии пайгирӣ ноком шуд"
+
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:114
 msgid "Failed to upload attachment"
 msgstr "Боркунии замима ба анҷом нарасид"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:611
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:605
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:160
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:180
 msgid "Files"
@@ -1150,15 +1216,15 @@ msgstr "Аз"
 msgid "From theme"
 msgstr "Аз мавзӯъ"
 
-#: src/features/chess/components/new-game.tsx:48
+#: src/features/chess/components/new-game.tsx:36
 msgid "Game created"
 msgstr "Бозӣ сохта шуд"
 
-#: src/features/chess/index.tsx:209
+#: src/features/chess/index.tsx:198
 msgid "Game deleted"
 msgstr "Бозӣ ҳазф шуд"
 
-#: src/features/chess/index.tsx:380
+#: src/features/chess/index.tsx:363
 msgid "Game state unavailable"
 msgstr "Ҳолати бозӣ дастрас нест"
 
@@ -1236,6 +1302,10 @@ msgstr "Сана нодуруст"
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
 msgstr "Чунин ба назар мерасад, ки саҳифае, ки шумо ҷустуҷӯ мекунед, <0/>вуҷуд надорад ё нест карда шудааст."
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:441
+msgid "Item details"
+msgstr "Тафсилоти ашё"
+
 #: ../../../lib/web/src/lib/locale-format.ts:180
 msgid "Just now"
 msgstr "Ҳозир"
@@ -1273,7 +1343,7 @@ msgstr "Равшан"
 msgid "Link"
 msgstr "Пайванд"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:279
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:273
 msgid "Links"
 msgstr "Пайвандҳо"
 
@@ -1288,6 +1358,14 @@ msgstr "Бештар бор кунед"
 #: ../../../lib/web/src/components/ui/loading-content.tsx:26
 msgid "Loading content…"
 msgstr "Боркунии муҳтаво…"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:365
+msgid "Loading item"
+msgstr "Ашё бор карда мешавад"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:366
+msgid "Loading item details"
+msgstr "Тафсилоти ашё бор карда мешаванд"
 
 #: ../../../lib/web/src/components/ui/load-more.tsx:39
 #: ../../../lib/web/src/features/document/document-page.tsx:88
@@ -1410,15 +1488,15 @@ msgstr "Ном бояд 1000 аломат ё камтар бошад"
 msgid "Network error"
 msgstr "Хатогии шабака"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:498
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:492
 #: ../../../lib/web/src/components/ui/sort-selector.tsx:43
 msgid "New"
 msgstr "Нав"
 
 #: ../../../lib/web/src/components/game/game-empty-state.tsx:39
 #: ../../../lib/web/src/components/game/game-empty-state.tsx:51
-#: src/components/layout/chess-layout.tsx:60
-#: src/features/chess/components/new-game.tsx:96
+#: src/components/layout/chess-layout.tsx:44
+#: src/features/chess/components/new-game.tsx:78
 msgid "New game"
 msgstr "Бозии нав"
 
@@ -1427,7 +1505,7 @@ msgstr "Бозии нав"
 msgid "Next image"
 msgstr "Тасвири навбатӣ"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:577
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:571
 msgid "No {parentClassNames} to add to"
 msgstr "Ягон {parentClassNames} барои илова кардан нест"
 
@@ -1443,11 +1521,11 @@ msgstr "То ҳол ягон фаъолият нест"
 msgid "No comments yet"
 msgstr "То ҳол ягон шарҳ нест"
 
-#: src/features/chess/components/new-game.tsx:131
+#: src/features/chess/components/new-game.tsx:85
 msgid "No friends found"
 msgstr "Ягон дӯст ёфт нашуд"
 
-#: src/features/chess/components/new-game.tsx:113
+#: src/features/chess/components/new-game.tsx:81
 msgid "No friends yet"
 msgstr "То ҳол ягон дӯст нест"
 
@@ -1459,11 +1537,11 @@ msgstr "То ҳол ягон бозӣ нест"
 msgid "No groups available"
 msgstr "Ягон гурӯҳ дастрас нест"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:544
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:538
 msgid "No item types can be created yet. Create the required parent items first."
 msgstr "Ҳеҷ як намуди ашё ҳоло сохта намешавад. Аввал ашёҳои волидайни заруриро эҷод кунед."
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:360
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:354
 msgid "No matching objects"
 msgstr "Ягон объекти мувофиқ нест"
 
@@ -1516,9 +1594,13 @@ msgid "No views"
 msgstr "Ягон намоиш нест"
 
 #: ../../../lib/web/src/components/colour-picker.tsx:349
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:560
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:563
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:567
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:554
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:557
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:561
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:557
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:570
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:571
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:575
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:362
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:385
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:388
@@ -1559,7 +1641,7 @@ msgstr "Огоҳиномаҳо: {0}"
 msgid "Number"
 msgstr "Рақам"
 
-#: src/features/chess/index.tsx:460
+#: src/features/chess/index.tsx:443
 msgid "Offer draw"
 msgstr "Пешниҳоди дуруст"
 
@@ -1576,11 +1658,11 @@ msgstr "Эҳ! Саҳифа ёфт нашуд!"
 msgid "Open actions"
 msgstr "Кушодани амалҳо"
 
-#: src/features/chess/index.tsx:439
+#: src/features/chess/index.tsx:422
 msgid "Open chat panel"
 msgstr "Кушодани панели чат"
 
-#: src/features/chess/index.tsx:447
+#: src/features/chess/index.tsx:430
 msgid "Open game actions"
 msgstr "Кушодани амалҳои бозӣ"
 
@@ -1630,7 +1712,9 @@ msgstr "Дигар"
 msgid "Owner"
 msgstr "Соҳиб"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:552
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:546
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:553
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:569
 msgid "Parent"
 msgstr "Волидайн"
 
@@ -1669,7 +1753,7 @@ msgstr "Шахсон"
 msgid "Please check your internet connection and try again."
 msgstr "Лутфан пайвасти интернети худро санҷед ва аз нав кӯшиш кунед."
 
-#: src/features/chess/components/new-game.tsx:67
+#: src/features/chess/components/new-game.tsx:53
 msgid "Please select a friend"
 msgstr "Лутфан як дӯсти худро интихоб кунед"
 
@@ -1717,6 +1801,10 @@ msgstr "Тарфеъ ба:"
 msgid "Prompt saved"
 msgstr "Дархост захира шуд"
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:408
+msgid "Properties"
+msgstr "Хусусиятҳо"
+
 #: ../../../lib/web/src/features/accounts/types.ts:21
 msgid "Push notification"
 msgstr "Огоҳиномаи push"
@@ -1762,7 +1850,7 @@ msgstr "Тағйир ба воридшавӣ."
 msgid "Reduce interest"
 msgstr "Кам кардани шавқу ҳавас"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:65
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:69
 msgid "Relates"
 msgstr "Алоқа дорад"
 
@@ -1782,7 +1870,7 @@ msgstr "Мувофиқат {relevance}"
 msgid "Relevance {relevance}, interest {weight}"
 msgstr "Мувофиқат {relevance}, таваҷҷуҳ {weight}"
 
-#: src/features/chess/index.tsx:473
+#: src/features/chess/index.tsx:456
 msgid "Rematch"
 msgstr "Бозиҳои такрорӣ"
 
@@ -1822,8 +1910,8 @@ msgstr "Хориҷ кардани шавқу ҳавас"
 msgid "Remove item"
 msgstr "Хориҷ кардани ашё"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:304
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:309
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:298
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:303
 msgid "Remove link"
 msgstr "Истинодро тоза кунед"
 
@@ -1858,16 +1946,16 @@ msgstr "Талаб карда мешавад"
 msgid "Resend email"
 msgstr "Мактубро дубора фиристед"
 
-#: src/features/chess/index.tsx:464
-#: src/features/chess/index.tsx:600
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:48
+#: src/features/chess/index.tsx:447
 msgid "Resign"
 msgstr "Таслим"
 
-#: src/features/chess/index.tsx:591
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:35
 msgid "Resign game?"
 msgstr "Аз бозӣ таслим шудан?"
 
-#: src/features/chess/index.tsx:597
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:45
 msgid "Resigning..."
 msgstr "Таслим шудан..."
 
@@ -1918,6 +2006,7 @@ msgstr "Шанбе"
 
 #: ../../../lib/web/src/components/ai-prompts-editor.tsx:156
 #: ../../../lib/web/src/components/attachment-composer.tsx:430
+#: ../../../lib/web/src/components/banner-section.tsx:99
 #: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:231
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:172
 #: ../../../lib/web/src/components/ui/editable-field-row.tsx:126
@@ -1956,7 +2045,7 @@ msgstr "Ҷустуҷӯи ҷои таъинот..."
 msgid "Search for origin..."
 msgstr "Ҷустуҷӯи манбаъ..."
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:337
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:331
 msgid "Search objects..."
 msgstr "Ҷустуҷӯи объектҳо..."
 
@@ -1993,7 +2082,7 @@ msgstr "Интихоб"
 msgid "Select a field"
 msgstr "Як майдонро интихоб кунед"
 
-#: src/features/chess/components/new-game.tsx:130
+#: src/features/chess/components/new-game.tsx:84
 msgid "Select a friend..."
 msgstr "Як дӯстро интихоб кунед..."
 
@@ -2139,21 +2228,26 @@ msgstr "Манбаъҳо"
 msgid "Spacious"
 msgstr "Васеъ"
 
-#: src/features/chess/index.tsx:369
+#: src/features/chess/index.tsx:352
 msgid "Stalemate — draw"
 msgstr "Пат — баробар"
 
-#: src/features/chess/components/new-game.tsx:99
+#: src/features/chess/components/new-game.tsx:79
 msgid "Start a new chess game"
 msgstr "Бозии нави шоҳмотро оғоз кунед"
 
-#: src/features/chess/components/new-game.tsx:153
+#: src/features/chess/components/new-game.tsx:87
 msgid "Start game"
 msgstr "Бозӣ оғоз кунед"
 
 #: ../../../lib/web/src/components/entity/entity-comment-list.tsx:325
 msgid "Start the discussion by adding the first comment."
 msgstr "Сӯҳбатро бо илова кардани шарҳи аввал оғоз кунед."
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:471
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:476
+msgid "Stop watching"
+msgstr "Назоратро қатъ кардан"
 
 #: ../../../lib/web/src/features/access/access-list.tsx:196
 msgid "Subject"
@@ -2250,7 +2344,7 @@ msgstr "Сервер ба ҷои маълумот саҳифаи вебро ба
 msgid "This app is not allowed to use your passkey. Allow it in Settings, under Permissions."
 msgstr "Ба ин барнома иҷозат дода нашудааст, ки калиди дастрасии шуморо истифода барад. Дар Танзимот, дар қисми Иҷозатҳо ба он иҷозат диҳед."
 
-#: src/features/chess/index.tsx:613
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:70
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Ин бозӣ ва чати онро якумра нест мекунад. Ин амалро баргардонидан мумкин нест."
 
@@ -2371,9 +2465,8 @@ msgstr "Номаълум"
 msgid "Unsubscribe"
 msgstr "Аз обуна баромадан"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:299
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:103
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:184
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:178
+#: ../../../lib/web/src/lib/entity-title.ts:40
 msgid "Untitled"
 msgstr "Беном"
 
@@ -2387,7 +2480,7 @@ msgstr "Навсозӣ шуд"
 msgid "Updated {field}"
 msgstr "{field} нав карда шуд"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:661
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:655
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:304
 msgid "Upload"
 msgstr "Бор кардан"
@@ -2437,6 +2530,10 @@ msgstr "Тамошои видео: {0}"
 msgid "View all notifications"
 msgstr "Ҳама огоҳиҳоро дидан"
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:442
+msgid "View and edit item details"
+msgstr "Тафсилоти ҷузъро дидан ва таҳрир кардан"
+
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:170
 msgid "View controls"
 msgstr "Назоратҳои намоиш"
@@ -2444,6 +2541,11 @@ msgstr "Назоратҳои намоиш"
 #: ../../../lib/web/src/lib/shell-errors.ts:33
 msgid "Voice recording is not supported in this browser"
 msgstr "Сабти овоз дар ин браузер дастгирӣ намешавад"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:471
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:476
+msgid "Watch"
+msgstr "Назорат"
 
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:269
 #: ../../../lib/web/src/components/filter-bar.tsx:35
@@ -2464,7 +2566,7 @@ msgid "Wednesday"
 msgstr "Чоршанбе"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:430
+#: src/features/chess/index.tsx:413
 msgid "White"
 msgstr "Сафед"
 
@@ -2483,7 +2585,7 @@ msgstr "Шумо"
 msgid "You do not have access to this section."
 msgstr "Шумо ба ин бахш дастрасӣ надоред."
 
-#: src/features/chess/index.tsx:375
+#: src/features/chess/index.tsx:358
 msgid "You resigned — {opponentName} wins"
 msgstr "Шумо таслим шудед — {opponentName} ғолиб омад"
 
@@ -2495,7 +2597,7 @@ msgstr "Ҳисоби шумо аз {source} ба ин ҷо интиқол дод
 msgid "Your attachments will be lost."
 msgstr "Замимаҳои шумо гум мешаванд."
 
-#: src/features/chess/index.tsx:386
+#: src/features/chess/index.tsx:369
 msgid "Your move"
 msgstr "Ҳаракати шумо"
 

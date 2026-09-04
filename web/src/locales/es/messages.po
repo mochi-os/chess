@@ -105,11 +105,11 @@ msgstr "{name} abandonó"
 msgid "{opponentName} offered a draw"
 msgstr "{opponentName} ha ofrecido tablas"
 
-#: src/features/chess/index.tsx:374
+#: src/features/chess/index.tsx:357
 msgid "{opponentName} resigned — you win!"
 msgstr "{opponentName} se ha rendido — ¡has ganado!"
 
-#: src/features/chess/index.tsx:387
+#: src/features/chess/index.tsx:370
 msgid "{opponentName}'s move"
 msgstr "Le toca a {opponentName}"
 
@@ -171,9 +171,13 @@ msgstr "Nivel de acceso"
 msgid "Account type"
 msgstr "Tipo de cuenta"
 
-#: src/components/layout/chess-layout.tsx:58
+#: src/components/layout/chess-layout.tsx:42
 msgid "Active games"
 msgstr "Partidas activas"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:415
+msgid "Activity"
+msgstr "Actividad"
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx:758
 #: ../../../lib/web/src/features/access/access-dialog.tsx:332
@@ -214,11 +218,11 @@ msgstr "Añadir elemento a la lista"
 msgid "Add field"
 msgstr "Añadir campo"
 
-#: src/features/chess/components/new-game.tsx:121
+#: src/features/chess/components/new-game.tsx:83
 msgid "Add friends"
 msgstr "Añadir amigos"
 
-#: src/features/chess/components/new-game.tsx:114
+#: src/features/chess/components/new-game.tsx:82
 msgid "Add friends in the People app to start playing"
 msgstr "Añade amigos en la app Personas para empezar a jugar"
 
@@ -226,7 +230,7 @@ msgstr "Añade amigos en la app Personas para empezar a jugar"
 msgid "Add item..."
 msgstr "Añadir elemento..."
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:320
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:314
 msgid "Add link"
 msgstr "Añadir enlace"
 
@@ -300,6 +304,10 @@ msgstr "Todo lo suscrito a este canal dejará de recibirlo. Después puedes copi
 msgid "Are you sure you want to delete \"{0}\"?"
 msgstr "¿Seguro que quieres eliminar \"{0}\"?"
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:671
+msgid "Are you sure you want to delete \"{title}\"? This action cannot be undone."
+msgstr "¿Seguro que quieres eliminar \"{title}\"? Esta acción no se puede deshacer."
+
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:631
 msgid "Are you sure you want to delete the \"{name}\" column? This cannot be undone."
 msgstr "¿Seguro que quieres eliminar la columna \"{name}\"? Esto no se puede deshacer."
@@ -312,7 +320,11 @@ msgstr "¿Seguro que quieres eliminar este comentario? También se eliminarán t
 msgid "Are you sure you want to log out? You will need to log in again to access your account."
 msgstr "¿Seguro que quieres cerrar sesión? Necesitarás volver a iniciar sesión para acceder a tu cuenta."
 
-#: src/features/chess/index.tsx:592
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:39
+msgid "Are you sure you want to resign?"
+msgstr "¿Seguro que quieres rendirte?"
+
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:38
 msgid "Are you sure you want to resign? {opponentName} will win the game."
 msgstr "¿Estás seguro de que quieres rendirte? {opponentName} ganará la partida."
 
@@ -358,16 +370,25 @@ msgstr "Atrás"
 msgid "Back to home"
 msgstr "Volver al inicio"
 
+#: ../../../lib/web/src/components/banner-section.tsx:80
 #: ../../../lib/web/src/components/entity-banner.tsx:17
 msgid "Banner"
 msgstr "Banner"
+
+#: ../../../lib/web/src/components/banner-section.tsx:69
+msgid "Banner removed"
+msgstr "Banner eliminado"
+
+#: ../../../lib/web/src/components/banner-section.tsx:69
+msgid "Banner updated"
+msgstr "Banner actualizado"
 
 #: src/features/chess/lib/use-chess-piece-name.ts:20
 msgid "bishop"
 msgstr "alfil"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:430
+#: src/features/chess/index.tsx:413
 msgid "Black"
 msgstr "Negro"
 
@@ -378,8 +399,8 @@ msgstr "Negro"
 msgid "Black {0}"
 msgstr "{0} negro"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:68
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:215
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:72
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:209
 msgid "Blocked by"
 msgstr "Bloqueado por"
 
@@ -388,7 +409,7 @@ msgstr "Bloqueado por"
 msgid "Blocked navigation to untrusted link"
 msgstr "Se ha bloqueado la navegación a un enlace no fiable"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:66
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:70
 msgid "Blocks"
 msgstr "Bloquea"
 
@@ -431,7 +452,7 @@ msgstr "Cámara no disponible"
 #: ../../../lib/web/src/features/access/access-list.tsx:268
 #: ../../../lib/web/src/features/accounts/account-add.tsx:201
 #: ../../../lib/web/src/features/accounts/account-verify.tsx:91
-#: src/features/chess/components/new-game.tsx:145
+#: src/features/chess/components/new-game.tsx:86
 #: src/features/chess/components/promotion-dialog.tsx:111
 msgid "Cancel"
 msgstr "Cancelar"
@@ -472,16 +493,15 @@ msgstr "Cambiado"
 msgid "Changed {field}"
 msgstr "{field} cambiado"
 
-#: src/features/chess/index.tsx:530
-#: src/features/chess/index.tsx:563
+#: src/features/chess/index.tsx:513
 msgid "Chat"
 msgstr "Chat"
 
-#: src/features/chess/index.tsx:384
+#: src/features/chess/index.tsx:367
 msgid "Check — {opponentName}'s move"
 msgstr "Jaque — le toca a {opponentName}"
 
-#: src/features/chess/index.tsx:383
+#: src/features/chess/index.tsx:366
 msgid "Check — your move"
 msgstr "Jaque — te toca"
 
@@ -493,17 +513,17 @@ msgstr "Casilla"
 msgid "Checklist"
 msgstr "Lista de comprobación"
 
-#: src/features/chess/index.tsx:367
+#: src/features/chess/index.tsx:350
 msgid "Checkmate — {opponentName} wins"
 msgstr "Jaque mate — gana {opponentName}"
 
-#: src/features/chess/index.tsx:366
+#: src/features/chess/index.tsx:349
 msgid "Checkmate — you win!"
 msgstr "Jaque mate — ¡has ganado!"
 
-#: src/features/chess/index.tsx:61
-#: src/features/chess/index.tsx:320
-#: src/features/chess/index.tsx:332
+#: src/features/chess/index.tsx:59
+#: src/features/chess/index.tsx:308
+#: src/features/chess/index.tsx:317
 msgid "Chess"
 msgstr "Ajedrez"
 
@@ -524,10 +544,11 @@ msgstr "Elige una partida en la barra lateral o inicia una nueva."
 msgid "Choose language"
 msgstr "Elige el idioma"
 
-#: src/features/chess/components/new-game.tsx:105
+#: src/features/chess/components/new-game.tsx:80
 msgid "Choose opponent"
 msgstr "Elige oponente"
 
+#: ../../../lib/web/src/components/banner-section.tsx:111
 #: ../../../lib/web/src/components/colour-picker.tsx:274
 #: ../../../lib/web/src/components/colour-picker.tsx:355
 #: ../../../lib/web/src/components/travelling-picker.tsx:145
@@ -545,8 +566,8 @@ msgstr "Borrar todo"
 msgid "Clear search"
 msgstr "Borrar búsqueda"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:523
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:528
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:517
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:522
 #: ../../../lib/web/src/components/ui/dialog.tsx:78
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:480
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx:483
@@ -621,11 +642,16 @@ msgstr "Acciones del comentario"
 msgid "Comments"
 msgstr "Comentarios"
 
+#. placeholder {0}: data.comment_count || 0
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:411
+msgid "Comments ({0})"
+msgstr "Comentarios ({0})"
+
 #: ../../../lib/web/src/lib/preference-utils.ts:90
 msgid "Compact"
 msgstr "Compacto"
 
-#: src/components/layout/chess-layout.tsx:59
+#: src/components/layout/chess-layout.tsx:43
 msgid "Completed"
 msgstr "Completado"
 
@@ -704,8 +730,8 @@ msgstr "No se pudo verificar con esa cuenta. Inténtalo de nuevo."
 
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:551
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx:691
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:513
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:682
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:507
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:676
 #: ../../../lib/web/src/components/entity/entity-tree-view.tsx:672
 msgid "Create"
 msgstr "Crear"
@@ -728,9 +754,9 @@ msgstr "Creado"
 msgid "Created {field}"
 msgstr "{field} creado"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:682
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:676
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx:260
-#: src/features/chess/components/new-game.tsx:153
+#: src/features/chess/components/new-game.tsx:88
 msgid "Creating..."
 msgstr "Creando..."
 
@@ -780,7 +806,8 @@ msgstr "Orden predeterminado"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:208
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:255
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:317
-#: src/features/chess/index.tsx:621
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:672
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:78
 msgid "Delete"
 msgstr "Eliminar"
 
@@ -800,13 +827,19 @@ msgstr "Eliminar comentario"
 msgid "Delete field"
 msgstr "Eliminar campo"
 
-#: src/features/chess/index.tsx:476
+#: src/features/chess/index.tsx:459
 msgid "Delete game"
 msgstr "Eliminar partida"
 
-#: src/features/chess/index.tsx:612
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:69
 msgid "Delete game?"
 msgstr "¿Eliminar la partida?"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:486
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:491
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:670
+msgid "Delete item"
+msgstr "Eliminar elemento"
 
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:117
 msgid "Delete option"
@@ -834,7 +867,7 @@ msgstr "Eliminado"
 msgid "Deleted {field}"
 msgstr "{field} eliminado"
 
-#: src/features/chess/index.tsx:618
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:75
 msgid "Deleting..."
 msgstr "Eliminando..."
 
@@ -892,6 +925,7 @@ msgid "Does not match the required pattern"
 msgstr "No coincide con el patrón requerido"
 
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:309
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:495
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:523
 msgid "Done"
 msgstr "Hecho"
@@ -907,7 +941,7 @@ msgstr "Descargar"
 msgid "Download failed"
 msgstr "Error al descargar"
 
-#: src/features/chess/index.tsx:371
+#: src/features/chess/index.tsx:354
 msgid "Draw"
 msgstr "Tablas"
 
@@ -915,11 +949,11 @@ msgstr "Tablas"
 msgid "Draw agreed"
 msgstr "Tablas acordadas"
 
-#: src/features/chess/index.tsx:489
+#: src/features/chess/index.tsx:472
 msgid "Draw offered — waiting for {opponentName}"
 msgstr "Tablas ofrecidas — esperando a {opponentName}"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:67
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:71
 msgid "Duplicates"
 msgstr "Duplica"
 
@@ -974,6 +1008,10 @@ msgstr "Correo electrónico"
 msgid "Email code"
 msgstr "Código por correo"
 
+#: ../../../lib/web/src/components/banner-section.tsx:88
+msgid "Enter banner text (markdown supported)..."
+msgstr "Introduce el texto del banner (admite markdown)..."
+
 #: ../../../lib/web/src/components/step-up-dialog.tsx:290
 msgid "Enter the code from your email"
 msgstr "Introduce el código de tu correo electrónico"
@@ -981,6 +1019,10 @@ msgstr "Introduce el código de tu correo electrónico"
 #: ../../../lib/web/src/components/step-up-dialog.tsx:315
 msgid "Enter your authenticator code"
 msgstr "Introduce el código de tu aplicación de autenticación"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:381
+msgid "Error"
+msgstr "Error"
 
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:101
 #: ../../../lib/web/src/components/comment-tree-layout.tsx:110
@@ -1001,7 +1043,7 @@ msgstr "URL externa"
 msgid "Extra large"
 msgstr "Extra grande"
 
-#: src/features/chess/index.tsx:186
+#: src/features/chess/index.tsx:175
 msgid "Failed to accept draw"
 msgstr "Error al aceptar las tablas"
 
@@ -1014,22 +1056,26 @@ msgstr "Error al añadir la cuenta"
 msgid "Failed to copy"
 msgstr "Error al copiar"
 
-#: src/features/chess/components/new-game.tsx:52
+#: src/features/chess/components/new-game.tsx:40
 msgid "Failed to create game"
 msgstr "Error al crear la partida"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:137
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:131
 #: ../../../lib/web/src/components/options-menu.tsx:98
 msgid "Failed to create link"
 msgstr "Error al crear el enlace"
 
-#: src/features/chess/index.tsx:201
+#: src/features/chess/index.tsx:190
 msgid "Failed to create rematch"
 msgstr "Error al crear la revancha"
 
-#: src/features/chess/index.tsx:191
+#: src/features/chess/index.tsx:180
 msgid "Failed to decline draw"
 msgstr "Error al rechazar las tablas"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:303
+msgid "Failed to delete"
+msgstr "Error al eliminar"
 
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:130
 msgid "Failed to delete attachment"
@@ -1039,11 +1085,11 @@ msgstr "Error al eliminar el adjunto"
 msgid "Failed to delete comment"
 msgstr "Error al eliminar el comentario"
 
-#: src/features/chess/index.tsx:213
+#: src/features/chess/index.tsx:202
 msgid "Failed to delete game"
 msgstr "Error al eliminar la partida"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:159
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:153
 msgid "Failed to delete link"
 msgstr "Error al eliminar el enlace"
 
@@ -1063,6 +1109,11 @@ msgstr "Error al cargar el historial"
 msgid "Failed to load image"
 msgstr "No se pudo cargar la imagen"
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:382
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:385
+msgid "Failed to load item"
+msgstr "Error al cargar el elemento"
+
 #: ../../../lib/web/src/components/ai-prompts-editor.tsx:213
 msgid "Failed to load prompts"
 msgstr "Error al cargar los prompts"
@@ -1071,11 +1122,15 @@ msgstr "Error al cargar los prompts"
 msgid "Failed to load video"
 msgstr "No se pudo cargar el vídeo"
 
-#: src/features/chess/index.tsx:164
+#: src/features/chess/index.tsx:153
 msgid "Failed to make move"
 msgstr "Error al realizar el movimiento"
 
-#: src/features/chess/index.tsx:181
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:317
+msgid "Failed to move"
+msgstr "No se pudo mover"
+
+#: src/features/chess/index.tsx:170
 msgid "Failed to offer draw"
 msgstr "Error al ofrecer tablas"
 
@@ -1087,7 +1142,7 @@ msgstr "Error al publicar el comentario"
 msgid "Failed to reset prompt"
 msgstr "Error al restablecer el prompt"
 
-#: src/features/chess/index.tsx:174
+#: src/features/chess/index.tsx:163
 msgid "Failed to resign"
 msgstr "Error al abandonar"
 
@@ -1095,24 +1150,35 @@ msgstr "Error al abandonar"
 msgid "Failed to revoke RSS access"
 msgstr "No se pudo revocar el acceso RSS"
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:273
+msgid "Failed to save"
+msgstr "Error al guardar"
+
 #: ../../../lib/web/src/components/ai-prompts-editor.tsx:111
 msgid "Failed to save prompt"
 msgstr "Error al guardar el prompt"
 
-#: src/features/chess/index.tsx:547
-#: src/features/chess/index.tsx:580
+#: src/features/chess/index.tsx:530
 msgid "Failed to send"
 msgstr "Error al enviar"
+
+#: ../../../lib/web/src/components/banner-section.tsx:71
+msgid "Failed to update banner"
+msgstr "Error al actualizar el banner"
 
 #: ../../../lib/web/src/components/entity/entity-comment-list.tsx:175
 msgid "Failed to update comment"
 msgstr "Error al actualizar el comentario"
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:288
+msgid "Failed to update watching"
+msgstr "No se pudo actualizar el seguimiento"
+
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:114
 msgid "Failed to upload attachment"
 msgstr "Error al subir el adjunto"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:611
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:605
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:160
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:180
 msgid "Files"
@@ -1150,15 +1216,15 @@ msgstr "De"
 msgid "From theme"
 msgstr "Del tema"
 
-#: src/features/chess/components/new-game.tsx:48
+#: src/features/chess/components/new-game.tsx:36
 msgid "Game created"
 msgstr "Partida creada"
 
-#: src/features/chess/index.tsx:209
+#: src/features/chess/index.tsx:198
 msgid "Game deleted"
 msgstr "Partida eliminada"
 
-#: src/features/chess/index.tsx:380
+#: src/features/chess/index.tsx:363
 msgid "Game state unavailable"
 msgstr "El estado de la partida no está disponible"
 
@@ -1236,6 +1302,10 @@ msgstr "Fecha no válida"
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
 msgstr "Parece que la página que buscas <0/>no existe o se ha eliminado."
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:441
+msgid "Item details"
+msgstr "Detalles del elemento"
+
 #: ../../../lib/web/src/lib/locale-format.ts:180
 msgid "Just now"
 msgstr "Ahora mismo"
@@ -1273,7 +1343,7 @@ msgstr "Claro"
 msgid "Link"
 msgstr "Enlace"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:279
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:273
 msgid "Links"
 msgstr "Enlaces"
 
@@ -1288,6 +1358,14 @@ msgstr "Cargar más"
 #: ../../../lib/web/src/components/ui/loading-content.tsx:26
 msgid "Loading content…"
 msgstr "Cargando contenido…"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:365
+msgid "Loading item"
+msgstr "Cargando elemento"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:366
+msgid "Loading item details"
+msgstr "Cargando detalles del elemento"
 
 #: ../../../lib/web/src/components/ui/load-more.tsx:39
 #: ../../../lib/web/src/features/document/document-page.tsx:88
@@ -1410,15 +1488,15 @@ msgstr "El nombre debe tener 1000 caracteres o menos"
 msgid "Network error"
 msgstr "Error de red"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:498
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:492
 #: ../../../lib/web/src/components/ui/sort-selector.tsx:43
 msgid "New"
 msgstr "Nuevo"
 
 #: ../../../lib/web/src/components/game/game-empty-state.tsx:39
 #: ../../../lib/web/src/components/game/game-empty-state.tsx:51
-#: src/components/layout/chess-layout.tsx:60
-#: src/features/chess/components/new-game.tsx:96
+#: src/components/layout/chess-layout.tsx:44
+#: src/features/chess/components/new-game.tsx:78
 msgid "New game"
 msgstr "Nueva partida"
 
@@ -1427,7 +1505,7 @@ msgstr "Nueva partida"
 msgid "Next image"
 msgstr "Siguiente imagen"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:577
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:571
 msgid "No {parentClassNames} to add to"
 msgstr "No hay {parentClassNames} a los que añadir"
 
@@ -1443,11 +1521,11 @@ msgstr "Aún no hay actividad"
 msgid "No comments yet"
 msgstr "Aún no hay comentarios"
 
-#: src/features/chess/components/new-game.tsx:131
+#: src/features/chess/components/new-game.tsx:85
 msgid "No friends found"
 msgstr "No se encontraron amigos"
 
-#: src/features/chess/components/new-game.tsx:113
+#: src/features/chess/components/new-game.tsx:81
 msgid "No friends yet"
 msgstr "Aún no hay amigos"
 
@@ -1459,11 +1537,11 @@ msgstr "Aún no hay partidas"
 msgid "No groups available"
 msgstr "No hay grupos disponibles"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:544
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:538
 msgid "No item types can be created yet. Create the required parent items first."
 msgstr "Aún no se pueden crear tipos de elementos. Crea primero los elementos principales necesarios."
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:360
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:354
 msgid "No matching objects"
 msgstr "No hay objetos coincidentes"
 
@@ -1516,9 +1594,13 @@ msgid "No views"
 msgstr "Sin vistas"
 
 #: ../../../lib/web/src/components/colour-picker.tsx:349
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:560
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:563
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:567
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:554
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:557
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:561
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:557
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:570
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:571
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:575
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:362
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:385
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:388
@@ -1559,7 +1641,7 @@ msgstr "Notificaciones: {0}"
 msgid "Number"
 msgstr "Número"
 
-#: src/features/chess/index.tsx:460
+#: src/features/chess/index.tsx:443
 msgid "Offer draw"
 msgstr "Ofrecer tablas"
 
@@ -1576,11 +1658,11 @@ msgstr "¡Vaya! Página no encontrada"
 msgid "Open actions"
 msgstr "Abrir acciones"
 
-#: src/features/chess/index.tsx:439
+#: src/features/chess/index.tsx:422
 msgid "Open chat panel"
 msgstr "Abrir panel de chat"
 
-#: src/features/chess/index.tsx:447
+#: src/features/chess/index.tsx:430
 msgid "Open game actions"
 msgstr "Abrir acciones de la partida"
 
@@ -1630,7 +1712,9 @@ msgstr "Otro"
 msgid "Owner"
 msgstr "Propietario"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:552
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:546
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:553
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:569
 msgid "Parent"
 msgstr "Principal"
 
@@ -1669,7 +1753,7 @@ msgstr "Personas"
 msgid "Please check your internet connection and try again."
 msgstr "Comprueba tu conexión a internet e inténtalo de nuevo."
 
-#: src/features/chess/components/new-game.tsx:67
+#: src/features/chess/components/new-game.tsx:53
 msgid "Please select a friend"
 msgstr "Selecciona un amigo"
 
@@ -1717,6 +1801,10 @@ msgstr "Promocionar a:"
 msgid "Prompt saved"
 msgstr "Prompt guardado"
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:408
+msgid "Properties"
+msgstr "Propiedades"
+
 #: ../../../lib/web/src/features/accounts/types.ts:21
 msgid "Push notification"
 msgstr "Notificación push"
@@ -1762,7 +1850,7 @@ msgstr "Redirigiendo al inicio de sesión."
 msgid "Reduce interest"
 msgstr "Reducir interés"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:65
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:69
 msgid "Relates"
 msgstr "Se relaciona con"
 
@@ -1782,7 +1870,7 @@ msgstr "Relevancia {relevance}"
 msgid "Relevance {relevance}, interest {weight}"
 msgstr "Relevancia {relevance}, interés {weight}"
 
-#: src/features/chess/index.tsx:473
+#: src/features/chess/index.tsx:456
 msgid "Rematch"
 msgstr "Revancha"
 
@@ -1822,8 +1910,8 @@ msgstr "Eliminar interés"
 msgid "Remove item"
 msgstr "Eliminar elemento"
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:304
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:309
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:298
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:303
 msgid "Remove link"
 msgstr "Quitar enlace"
 
@@ -1858,16 +1946,16 @@ msgstr "Obligatorio"
 msgid "Resend email"
 msgstr "Reenviar correo"
 
-#: src/features/chess/index.tsx:464
-#: src/features/chess/index.tsx:600
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:48
+#: src/features/chess/index.tsx:447
 msgid "Resign"
 msgstr "Rendirse"
 
-#: src/features/chess/index.tsx:591
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:35
 msgid "Resign game?"
 msgstr "¿Rendir la partida?"
 
-#: src/features/chess/index.tsx:597
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:45
 msgid "Resigning..."
 msgstr "Rindiéndose..."
 
@@ -1918,6 +2006,7 @@ msgstr "Sábado"
 
 #: ../../../lib/web/src/components/ai-prompts-editor.tsx:156
 #: ../../../lib/web/src/components/attachment-composer.tsx:430
+#: ../../../lib/web/src/components/banner-section.tsx:99
 #: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:231
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:172
 #: ../../../lib/web/src/components/ui/editable-field-row.tsx:126
@@ -1956,7 +2045,7 @@ msgstr "Buscar destino..."
 msgid "Search for origin..."
 msgstr "Buscar origen..."
 
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:337
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:331
 msgid "Search objects..."
 msgstr "Buscar objetos..."
 
@@ -1993,7 +2082,7 @@ msgstr "Seleccionar"
 msgid "Select a field"
 msgstr "Selecciona un campo"
 
-#: src/features/chess/components/new-game.tsx:130
+#: src/features/chess/components/new-game.tsx:84
 msgid "Select a friend..."
 msgstr "Selecciona un amigo..."
 
@@ -2139,21 +2228,26 @@ msgstr "Fuentes"
 msgid "Spacious"
 msgstr "Espacioso"
 
-#: src/features/chess/index.tsx:369
+#: src/features/chess/index.tsx:352
 msgid "Stalemate — draw"
 msgstr "Ahogado — tablas"
 
-#: src/features/chess/components/new-game.tsx:99
+#: src/features/chess/components/new-game.tsx:79
 msgid "Start a new chess game"
 msgstr "Iniciar una nueva partida de ajedrez"
 
-#: src/features/chess/components/new-game.tsx:153
+#: src/features/chess/components/new-game.tsx:87
 msgid "Start game"
 msgstr "Iniciar partida"
 
 #: ../../../lib/web/src/components/entity/entity-comment-list.tsx:325
 msgid "Start the discussion by adding the first comment."
 msgstr "Inicia el debate añadiendo el primer comentario."
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:471
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:476
+msgid "Stop watching"
+msgstr "Dejar de seguir"
 
 #: ../../../lib/web/src/features/access/access-list.tsx:196
 msgid "Subject"
@@ -2250,7 +2344,7 @@ msgstr "El servidor devolvió una página web en lugar de datos."
 msgid "This app is not allowed to use your passkey. Allow it in Settings, under Permissions."
 msgstr "Esta aplicación no puede usar tu clave de acceso. Permítelo en Configuración, en Permisos."
 
-#: src/features/chess/index.tsx:613
+#: ../../../lib/web/src/components/game/game-end-dialogs.tsx:70
 msgid "This permanently deletes the game and its chat. This cannot be undone."
 msgstr "Esto elimina permanentemente la partida y su chat. Esta acción no se puede deshacer."
 
@@ -2371,9 +2465,8 @@ msgstr "Desconocido"
 msgid "Unsubscribe"
 msgstr "Cancelar suscripción"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:299
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:103
-#: ../../../lib/web/src/components/entity/entity-object-links.tsx:184
+#: ../../../lib/web/src/components/entity/entity-object-links.tsx:178
+#: ../../../lib/web/src/lib/entity-title.ts:40
 msgid "Untitled"
 msgstr "Sin título"
 
@@ -2387,7 +2480,7 @@ msgstr "Actualizado"
 msgid "Updated {field}"
 msgstr "{field} actualizado"
 
-#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:661
+#: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:655
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:304
 msgid "Upload"
 msgstr "Subir"
@@ -2437,6 +2530,10 @@ msgstr "Visor de vídeos: {0}"
 msgid "View all notifications"
 msgstr "Ver todas las notificaciones"
 
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:442
+msgid "View and edit item details"
+msgstr "Ver y editar detalles del elemento"
+
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:170
 msgid "View controls"
 msgstr "Ver controles"
@@ -2444,6 +2541,11 @@ msgstr "Ver controles"
 #: ../../../lib/web/src/lib/shell-errors.ts:33
 msgid "Voice recording is not supported in this browser"
 msgstr "La grabación de voz no es compatible con este navegador"
+
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:471
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:476
+msgid "Watch"
+msgstr "Seguir"
 
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx:269
 #: ../../../lib/web/src/components/filter-bar.tsx:35
@@ -2464,7 +2566,7 @@ msgid "Wednesday"
 msgstr "Miércoles"
 
 #: src/features/chess/components/captured-pieces-strip.tsx:21
-#: src/features/chess/index.tsx:430
+#: src/features/chess/index.tsx:413
 msgid "White"
 msgstr "Blanco"
 
@@ -2483,7 +2585,7 @@ msgstr "Tú"
 msgid "You do not have access to this section."
 msgstr "No tienes acceso a esta sección."
 
-#: src/features/chess/index.tsx:375
+#: src/features/chess/index.tsx:358
 msgid "You resigned — {opponentName} wins"
 msgstr "Te has rendido — gana {opponentName}"
 
@@ -2495,7 +2597,7 @@ msgstr "Tu cuenta fue trasladada aquí desde {source}. Hasta que la elimines all
 msgid "Your attachments will be lost."
 msgstr "Se perderán los archivos adjuntos."
 
-#: src/features/chess/index.tsx:386
+#: src/features/chess/index.tsx:369
 msgid "Your move"
 msgstr "Tu turno"
 

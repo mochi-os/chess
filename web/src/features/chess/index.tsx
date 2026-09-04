@@ -10,28 +10,27 @@ import { Chess } from 'chess.js'
 import {
   useAuthStore,
   usePageTitle,
-  PageHeader,
   Main,
   GeneralError,
   GameHeader,
   GameHeaderStat,
   GameHeaderStoneDot,
-  ConfirmDialog,
   IconButton,
   getErrorMessage,
   toast,
   Skeleton,
-  Sheet,
-  SheetContent,
-  SheetHeader,
-  SheetTitle,
+  GameChatPanels,
+  GameResignDialog,
+  GameDeleteDialog,
+  GamePlaceholderPage,
+  useGameChatMessages,
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
   getAppPath,
 } from '@mochi/web'
-import { MoreHorizontal, Trash2, Loader2, Flag, Handshake, RotateCcw, MessageCircle } from 'lucide-react'
+import { MoreHorizontal, Trash2, Flag, Handshake, RotateCcw, MessageCircle } from 'lucide-react'
 import { useSidebarContext } from '@/context/sidebar-context'
 import { resume } from '@/lib/pgn'
 import { setLastGame } from '@/hooks/useGameStorage'
@@ -53,7 +52,6 @@ import { GameEmptyState } from './components/game-empty-state'
 import { ChessBoard } from './components/chess-board'
 import { DrawOfferBanner } from './components/draw-offer-banner'
 import { ChatMessageList } from './components/chat-message-list'
-import { ChatInput } from './components/chat-input'
 
 
 export function ChessGame() {
@@ -140,16 +138,7 @@ export function ChessGame() {
 
   // Messages
   const messagesQuery = useInfiniteMessagesQuery(selectedGame?.id)
-  const chatMessages = useMemo(() => {
-    if (!messagesQuery.data?.pages) return []
-    const all = [...messagesQuery.data.pages].reverse().flatMap((p) => p.messages)
-    const seen = new Set<string>()
-    return all.filter((m) => {
-      if (seen.has(m.id)) return false
-      seen.add(m.id)
-      return true
-    })
-  }, [messagesQuery.data?.pages])
+  const chatMessages = useGameChatMessages(messagesQuery.data?.pages)
 
   // Send message
   const sendMessageMutation = useSendMessageMutation({
@@ -316,36 +305,30 @@ export function ChessGame() {
   // Loading / empty
   if (selectedGameId && gamesQuery.isLoading) {
     return (
-      <div className="flex h-full flex-col overflow-hidden">
-        <PageHeader title={t`Chess`} />
-        <Main className="flex min-h-0 flex-1 flex-col gap-4 overflow-hidden p-4">
-          <Skeleton className="h-8 w-48" />
-          <Skeleton className="aspect-square max-w-[560px] w-full" />
-        </Main>
-      </div>
+      <GamePlaceholderPage title={t`Chess`} mainClassName="p-4">
+        <Skeleton className="h-8 w-48" />
+        <Skeleton className="aspect-square max-w-[560px] w-full" />
+      </GamePlaceholderPage>
     )
   }
 
   if (!selectedGame) {
     return (
-      <div className="flex h-full flex-col overflow-hidden">
-        <PageHeader title={t`Chess`} />
-        <Main className="flex min-h-0 flex-1 flex-col gap-4 overflow-hidden">
-          {gamesQuery.error ? (
-            <GeneralError
-              error={gamesQuery.error}
-              minimal
-              mode="inline"
-              reset={gamesQuery.refetch}
-            />
-          ) : (
-            <GameEmptyState
-              onNewGame={openNewGameDialog}
-              hasExistingGames={games.length > 0}
-            />
-          )}
-        </Main>
-      </div>
+      <GamePlaceholderPage title={t`Chess`}>
+        {gamesQuery.error ? (
+          <GeneralError
+            error={gamesQuery.error}
+            minimal
+            mode="inline"
+            reset={gamesQuery.refetch}
+          />
+        ) : (
+          <GameEmptyState
+            onNewGame={openNewGameDialog}
+            hasExistingGames={games.length > 0}
+          />
+        )}
+      </GamePlaceholderPage>
     )
   }
 
@@ -434,7 +417,7 @@ export function ChessGame() {
                       <>
                         <IconButton
                           variant='ghost'
-                          className='min-[900px]:hidden'
+                          className='lg:hidden'
                           onClick={() => setShowMobileChat(true)}
                           label={t`Open chat panel`}
                         >
@@ -524,106 +507,48 @@ export function ChessGame() {
             ) : null}
           </div>
 
-          {/* Right: Chat sidebar */}
-          <div className="hidden min-[900px]:flex w-72 lg:w-80 flex-col border-s">
-            <div className="border-b px-3 py-2">
-              <h3 className="text-sm font-medium"><Trans>Chat</Trans></h3>
-            </div>
-            <ChatMessageList
-              key={selectedGame.id}
-              messagesQuery={messagesQuery}
-              chatMessages={chatMessages}
-              isLoadingMessages={messagesQuery.isLoading}
-              messagesError={messagesQuery.error}
-              currentUserIdentity={myIdentity}
-            />
-            <ChatInput
-              newMessage={newMessage}
-              setNewMessage={setNewMessage}
-              onSendMessage={handleSendMessage}
-              isSending={sendMessageMutation.isPending}
-              errorMessage={
-                sendMessageMutation.error
-                  ? getErrorMessage(sendMessageMutation.error, t`Failed to send`)
-                  : null
-              }
-            />
-          </div>
-        </Main>
-      </div>
-
-      {/* Mobile chat sheet */}
-      <Sheet open={showMobileChat} onOpenChange={setShowMobileChat}>
-        <SheetContent
-          side="right"
-          className="flex flex-col p-0 w-80"
-          onOpenAutoFocus={(event) => event.preventDefault()}
-        >
-          <SheetHeader className="border-b px-3 py-2">
-            <SheetTitle className="text-sm font-medium"><Trans>Chat</Trans></SheetTitle>
-          </SheetHeader>
-          <ChatMessageList
-            key={selectedGame.id}
-            messagesQuery={messagesQuery}
-            chatMessages={chatMessages}
-            isLoadingMessages={messagesQuery.isLoading}
-            messagesError={messagesQuery.error}
-            currentUserIdentity={myIdentity}
-          />
-          <ChatInput
+          {/* Right: Chat sidebar, plus the mobile sheet through its portal */}
+          <GameChatPanels
+            sidebarClassName="hidden lg:flex w-72 xl:w-80"
+            title={<Trans>Chat</Trans>}
+            messageList={
+              <ChatMessageList
+                key={selectedGame.id}
+                messagesQuery={messagesQuery}
+                chatMessages={chatMessages}
+                isLoadingMessages={messagesQuery.isLoading}
+                messagesError={messagesQuery.error}
+                currentUserIdentity={myIdentity}
+              />
+            }
             newMessage={newMessage}
             setNewMessage={setNewMessage}
             onSendMessage={handleSendMessage}
             isSending={sendMessageMutation.isPending}
-            errorMessage={
+            sendErrorMessage={
               sendMessageMutation.error
                 ? getErrorMessage(sendMessageMutation.error, t`Failed to send`)
                 : null
             }
+            sheetOpen={showMobileChat}
+            onSheetOpenChange={setShowMobileChat}
           />
-        </SheetContent>
-      </Sheet>
+        </Main>
+      </div>
 
-      {/* Resign confirmation */}
-      <ConfirmDialog
+      <GameResignDialog
         open={showResignDialog}
         onOpenChange={setShowResignDialog}
-        title={t`Resign game?`}
-        desc={t`Are you sure you want to resign? ${opponentName} will win the game.`}
-        confirmText={
-          resignMutation.isPending ? (
-            <>
-              <Loader2 className="me-2 size-4 animate-spin" />
-              <Trans>Resigning...</Trans>
-            </>
-          ) : (
-            t`Resign`
-          )
-        }
-        destructive
-        handleConfirm={handleResign}
-        isLoading={resignMutation.isPending}
+        opponentName={opponentName}
+        onConfirm={handleResign}
+        isPending={resignMutation.isPending}
       />
 
-      {/* Delete confirmation */}
-      <ConfirmDialog
+      <GameDeleteDialog
         open={showDeleteDialog}
         onOpenChange={setShowDeleteDialog}
-        title={t`Delete game?`}
-        desc={t`This permanently deletes the game and its chat. This cannot be undone.`}
-        confirmText={
-          deleteGameMutation.isPending ? (
-            <>
-              <Loader2 className="me-2 size-4 animate-spin" />
-              <Trans>Deleting...</Trans>
-            </>
-          ) : (
-            t`Delete`
-          )
-        }
-        destructive
-        handleConfirm={handleDelete}
-        isLoading={deleteGameMutation.isPending}
+        onConfirm={handleDelete}
+        isPending={deleteGameMutation.isPending}
       />
 
     </>
