@@ -435,7 +435,7 @@ export function ChessGame() {
                           <DropdownMenuContent align='end' className='w-48'>
                             {game.status === 'active' ? (
                               <>
-                                {game.draw_offer !== myIdentity && (
+                                {!game.draw_offer && (
                                   <DropdownMenuItem
                                     onClick={handleDrawOffer}
                                     disabled={drawOfferMutation.isPending}

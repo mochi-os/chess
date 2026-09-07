@@ -14,8 +14,8 @@
 # and shape.
 
 
-def notify(topic, object="", title="", body="", url="", event_id=""):
-	mochi.service.call("notifications", "send", topic, object, title, body, url, mochi.app.label("notifications.topic." + topic.replace("/", ".")), "", "", None, event_id)
+def notify(topic, object="", title="", body="", url="", event_id="", name=""):
+	mochi.service.call("notifications", "send", topic, object, title, body, url, mochi.app.label("notifications.topic." + topic.replace("/", ".")), name, "", None, event_id)
 
 # Live-update websocket for messages.insert of type 'message' or 'move'; move
 # payloads carry the games row state the move action just wrote. 'system'
@@ -182,6 +182,10 @@ def get_opponent(game, user_id):
 		return game["opponent"]
 	return game["identity"]
 
+def player_name(game, id):
+	"""A player's name from our own row. Events carry a name too, but the row is what the recipient chose to store when the game was created, so a peer cannot rename itself per move."""
+	return game["identity_name"] if id == game["identity"] else game["opponent_name"]
+
 # Concurrency: nothing serialises HTTP actions for a (user, app) and peers have
 # no coordinator, so every write is a compare-and-swap on the version tuple
 # (revision, terminal, writer, event), compared lexicographically: revision
@@ -218,13 +222,6 @@ def event_created(e, now):
 	if created < now - 86400 or created > now + 300:
 		return now
 	return created
-
-def event_name(value):
-	"""Peer-supplied display name, held to core's name rules (no angle brackets or line breaks, at most 1000 characters)."""
-	value = str(value or "")
-	if not value or not mochi.text.valid(value, "name"):
-		return "Opponent"
-	return value
 
 def event_body(value, maximum, fallback):
 	"""Peer-supplied display text, clamped to `maximum` rather than rejected: dropping an otherwise-good move over a bad label would leave us behind the sender for good."""
@@ -492,7 +489,7 @@ def action_create(a):
 # List games
 def action_list(a):
 	games = mochi.db.rows("""
-		SELECT id, identity, identity_name, opponent, opponent_name, white, status, winner, fen, pgn, draw_offer, updated, created FROM games
+		SELECT id, identity, identity_name, opponent, opponent_name, white, status, winner, fen, draw_offer, updated, created FROM games
 		WHERE identity = ? OR opponent = ?
 		ORDER BY updated DESC
 	""", a.user.identity.id, a.user.identity.id)
@@ -522,7 +519,7 @@ def action_messages(a):
 	# Pagination parameters
 	limit = 30
 	limit_str = a.input("limit")
-	if limit_str and mochi.text.valid(limit_str, "natural"):
+	if limit_str and mochi.text.valid(limit_str, "positive"):
 		limit = min(int(limit_str), 100)
 
 	# Cursor is "<created>:<id>"; created alone is not unique, the id makes the
@@ -560,8 +557,8 @@ def action_messages(a):
 	return {
 		"data": {
 			"messages": messages,
-			"hasMore": has_more,
-			"nextCursor": next_cursor
+			"more": has_more,
+			"cursor": next_cursor
 		}
 	}
 
@@ -727,7 +724,7 @@ def action_resign(a):
 
 	# Insert system message
 	id = mochi.uid()
-	msg = a.user.identity.name + " resigned"
+	msg = mochi.app.label("system.resigned", name=a.user.identity.name)
 	mochi.db.execute("insert into messages ( id, game, member, name, body, type, event, created ) values ( ?, ?, ?, ?, ?, 'system', 'resign', ? )", id, game["id"], a.user.identity.id, a.user.identity.name, msg, now)
 
 	# Kept on direct websocket.write: resign / draw_offer / draw_accept /
@@ -761,6 +758,11 @@ def action_draw_offer(a):
 	if game["draw_offer"] == a.user.identity.id:
 		a.error.label(400, "errors.you_already_offered_a_draw")
 		return
+	# A pending offer is the opponent's to have answered: replacing it with
+	# our own silently withdrew theirs and left both sides waiting.
+	if game["draw_offer"]:
+		a.error.label(400, "errors.opponent_offered_a_draw")
+		return
 
 	other = get_opponent(game, a.user.identity.id)
 
@@ -773,7 +775,7 @@ def action_draw_offer(a):
 
 	# Insert system message
 	id = mochi.uid()
-	msg = a.user.identity.name + " offered a draw"
+	msg = mochi.app.label("system.draw_offered", name=a.user.identity.name)
 	mochi.db.execute("insert into messages ( id, game, member, name, body, type, event, created ) values ( ?, ?, ?, ?, ?, 'system', 'draw_offer', ? )", id, game["id"], a.user.identity.id, a.user.identity.name, msg, now)
 
 	# Kept on direct websocket.write: type='system' is multi-semantic;
@@ -819,7 +821,7 @@ def action_draw_accept(a):
 
 	# Insert system message
 	id = mochi.uid()
-	msg = "Draw agreed"
+	msg = mochi.app.label("system.draw_agreed")
 	mochi.db.execute("insert into messages ( id, game, member, name, body, type, event, created ) values ( ?, ?, ?, ?, ?, 'system', 'draw_accept', ? )", id, game["id"], a.user.identity.id, a.user.identity.name, msg, now)
 
 	# Kept on direct websocket.write: type='system' is multi-semantic;
@@ -863,7 +865,7 @@ def action_draw_decline(a):
 
 	# Insert system message
 	id = mochi.uid()
-	msg = a.user.identity.name + " declined the draw"
+	msg = mochi.app.label("system.draw_declined", name=a.user.identity.name)
 	mochi.db.execute("insert into messages ( id, game, member, name, body, type, event, created ) values ( ?, ?, ?, ?, ?, 'system', 'draw_decline', ? )", id, game["id"], a.user.identity.id, a.user.identity.name, msg, now)
 
 	# Kept on direct websocket.write: type='system' is multi-semantic;
@@ -907,27 +909,26 @@ def event_new(e):
 	if not f:
 		return
 
-	game_id = e.content("id")
+	# Every field is decoded JSON under the peer's control: mochi.text.valid
+	# raises on a non-string, which would abort the handler and mail the
+	# administrator on every redelivery, so each is read as text first.
+	game_id = str(e.content("id") or "")
 	if not mochi.text.valid(game_id, "id"):
 		return
 
-	identity = e.content("identity")
+	identity = str(e.content("identity") or "")
 	if not mochi.text.valid(identity, "entity"):
 		return
 
-	identity_name = e.content("identity_name")
-	if not mochi.text.valid(identity_name, "name"):
-		return
-
-	opponent = e.content("opponent")
+	opponent = str(e.content("opponent") or "")
 	if not mochi.text.valid(opponent, "entity"):
 		return
 
-	opponent_name = e.content("opponent_name")
+	opponent_name = str(e.content("opponent_name") or "")
 	if not mochi.text.valid(opponent_name, "name"):
 		return
 
-	white = e.content("white")
+	white = str(e.content("white") or "")
 	if not mochi.text.valid(white, "entity"):
 		return
 	# Bind white to this game's two players. Well-formed is not enough: white is
@@ -945,11 +946,14 @@ def event_new(e):
 	if e.header("to") not in [identity, opponent]:
 		return
 
-	# ...and that the sender is too. The friend check above only proves the
-	# sender is OUR friend, not that they are playing: without this a friend
-	# could plant a game between us and a third party, who would then satisfy
-	# every later is_player check on this host.
-	if e.header("from") not in [identity, opponent]:
+	# ...and that the sender is the creator. The friend check above only proves
+	# the sender is OUR friend: naming us as the creator would plant a game we
+	# never started, under whatever creator name the sender chose. The creator's
+	# name is the friend record's, not the wire's, for the same reason.
+	if e.header("from") != identity:
+		return
+	identity_name = str(f["name"] or "")
+	if not mochi.text.valid(identity_name, "name"):
 		return
 
 	result = mochi.db.execute(
@@ -959,7 +963,7 @@ def event_new(e):
 	if result == 0:
 		return
 
-	notify("activity", "", mochi.app.label("notifications.title.game"), mochi.app.label("notifications.body.started_game", name=identity_name), "/chess/" + game_id, event_id="game:" + game_id)
+	notify("activity", game_id, mochi.app.label("notifications.title.game"), mochi.app.label("notifications.body.started_game", name=identity_name), "/chess/" + game_id, event_id="game:" + game_id, name=identity_name)
 
 # Received a move event
 def event_move(e):
@@ -985,6 +989,11 @@ def event_move(e):
 		return
 	if not textual(pgn) or len(pgn) > 10000:
 		return
+	# The move is the sender's own, so the position it leaves has the OTHER
+	# colour to play. Judged on the payload alone: a gate on our stored turn
+	# would refuse every later move once one snapshot had been refused.
+	if fen.split(" ")[1] == ("w" if game["white"] == sender else "b"):
+		return
 
 	# Apply atomically, ordered by the sender's tuple: a read-then-write loses to a
 	# concurrent local move, and core's inbound dedup is in memory only, so a retry
@@ -1001,19 +1010,23 @@ def event_move(e):
 	if created == None:
 		created = now
 
-	name = event_name(e.content("name"))
+	name = player_name(game, sender)
 	# action_move caps san at 10; without the same cap here a peer could store
 	# a megabyte in the messages row and push it into a notification body.
 	san = event_body(san, 10, "?")
 
 	chess_ensure_commit_hook()
-	mochi.db.execute("insert or ignore into messages ( id, game, member, name, body, type, created ) values ( ?, ?, ?, ?, ?, 'move', ? )", id, game["id"], sender, name, san, created)
+	# A peer-chosen id that already names a row - a redelivery, or a collision
+	# with another game's message - inserts nothing, and then the hook would
+	# fire a frame for whichever game owns the existing row.
+	if mochi.db.execute("insert or ignore into messages ( id, game, member, name, body, type, created ) values ( ?, ?, ?, ?, ?, 'move', ? )", id, game["id"], sender, name, san, created) == 0:
+		return
 
 	# Live-update websocket: routes through chess_commit_hook now that
 	# the same payload is reconstructible from the games + messages
 	# rows the update above just landed.
 	mochi.db.commit.fire("messages", "insert", id)
-	notify("activity", "", mochi.app.label("notifications.title.move"), mochi.app.label("notifications.body.played_move", name=name, move=san), "/chess/" + game["id"], event_id="move:" + str(id))
+	notify("activity", game["id"], mochi.app.label("notifications.title.move"), mochi.app.label("notifications.body.played_move", name=name, move=san), "/chess/" + game["id"], event_id="move:" + str(id), name=name)
 
 # Received a chat message event
 def event_message(e):
@@ -1034,20 +1047,21 @@ def event_message(e):
 		return
 
 	body = e.content("body")
-	if not mochi.text.valid(str(body), "text"):
+	if not textual(body) or not mochi.text.valid(body, "text"):
 		return
-	if len(str(body)) > 10000:
+	if len(body) > 10000:
 		return
 
-	name = event_name(e.content("name"))
+	name = player_name(game, sender)
 
 	chess_ensure_commit_hook()
-	mochi.db.execute("insert or ignore into messages ( id, game, member, name, body, type, created ) values ( ?, ?, ?, ?, ?, 'message', ? )", id, game["id"], sender, name, body, created)
+	if mochi.db.execute("insert or ignore into messages ( id, game, member, name, body, type, created ) values ( ?, ?, ?, ?, ?, 'message', ? )", id, game["id"], sender, name, body, created) == 0:
+		return
 
 	# Live-update websocket: routes through chess_commit_hook on every
 	# host that sees this messages row.
 	mochi.db.commit.fire("messages", "insert", id)
-	notify("message", "", mochi.app.label("notifications.title.message"), name + ": " + body, "/chess/" + game["id"], event_id="message:" + str(id))
+	notify("message", game["id"], mochi.app.label("notifications.title.message"), name + ": " + body, "/chess/" + game["id"], event_id="message:" + str(id), name=name)
 
 # Received a resign event
 def event_resign(e):
@@ -1059,13 +1073,14 @@ def event_resign(e):
 	if sender != game["identity"] and sender != game["opponent"]:
 		return
 
-	body = event_body(e.content("body"), 10000, mochi.app.label("notifications.body.opponent_resigned"))
-	sender_name = game["identity_name"] if sender == game["identity"] else game["opponent_name"]
+	sender_name = player_name(game, sender)
+	body = mochi.app.label("system.resigned", name=sender_name)
 
-	# No local winner derivation: game_apply writes the snapshot, whose winner
-	# game_snapshot_valid has already bound to the two players, and the state
-	# loop below puts that same value on the wire. A derivation here would be
-	# overwritten by it, so it corrected nothing.
+	# The snapshot must carry the sender's OWN resignation: a peer can only
+	# resign for itself, so the winner is the other player. game_snapshot_valid
+	# binds the winner to "a player", which would let the sender name itself.
+	if e.content("status") != "resigned" or e.content("winner") != get_opponent(game, sender):
+		return
 
 	now = mochi.time.now()
 	state = game_apply(e, game, now)
@@ -1085,7 +1100,7 @@ def event_resign(e):
 	for key, value in state.items():
 		ws_data[key] = value
 	mochi.websocket.write(game["key"], ws_data)
-	notify("activity", "", mochi.app.label("notifications.title.game"), mochi.app.label("notifications.body.opponent_resigned"), "/chess/" + game["id"], event_id="resign:" + game["id"])
+	notify("activity", game["id"], mochi.app.label("notifications.title.game"), mochi.app.label("notifications.body.opponent_resigned"), "/chess/" + game["id"], event_id="resign:" + game["id"], name=sender_name)
 
 # Received a draw offer event
 def event_draw_offer(e):
@@ -1097,8 +1112,13 @@ def event_draw_offer(e):
 	if sender != game["identity"] and sender != game["opponent"]:
 		return
 
-	body = event_body(e.content("body"), 10000, mochi.app.label("notifications.body.draw_offered"))
-	sender_name = game["identity_name"] if sender == game["identity"] else game["opponent_name"]
+	sender_name = player_name(game, sender)
+	body = mochi.app.label("system.draw_offered", name=sender_name)
+
+	# An offer is the sender's own: a snapshot naming the recipient as the
+	# offerer would plant an offer in their name.
+	if e.content("draw_offer") != sender:
+		return
 
 	# Ordering is the version tuple, not the wall clock: a clock gate here would
 	# lose a higher-ordered offer to skew, or to any local move, since every state
@@ -1125,7 +1145,7 @@ def event_draw_offer(e):
 	for key, value in state.items():
 		ws_data[key] = value
 	mochi.websocket.write(game["key"], ws_data)
-	notify("activity", "", mochi.app.label("notifications.title.chess"), mochi.app.label("notifications.body.draw_offered"), "/chess/" + game["id"], event_id="draw_offer:" + game["id"] + ":" + str(incoming))
+	notify("activity", game["id"], mochi.app.label("notifications.title.chess"), mochi.app.label("notifications.body.draw_offered"), "/chess/" + game["id"], event_id="draw_offer:" + game["id"] + ":" + str(incoming), name=sender_name)
 
 # Received a draw accept event
 def event_draw_accept(e):
@@ -1137,8 +1157,13 @@ def event_draw_accept(e):
 	if sender != game["identity"] and sender != game["opponent"]:
 		return
 
-	body = event_body(e.content("body"), 10000, mochi.app.label("notifications.body.draw_agreed"))
-	sender_name = game["identity_name"] if sender == game["identity"] else game["opponent_name"]
+	sender_name = player_name(game, sender)
+	body = mochi.app.label("system.draw_agreed")
+
+	# Only OUR offer can be accepted, and it always precedes the acceptance on
+	# the same ordered stream, so the stored row is safe to consult here.
+	if e.content("status") != "draw" or game["draw_offer"] != e.header("to"):
+		return
 
 	now = mochi.time.now()
 	state = game_apply(e, game, now)
@@ -1158,7 +1183,7 @@ def event_draw_accept(e):
 	for key, value in state.items():
 		ws_data[key] = value
 	mochi.websocket.write(game["key"], ws_data)
-	notify("activity", "", mochi.app.label("notifications.title.chess"), mochi.app.label("notifications.body.draw_agreed"), "/chess/" + game["id"], event_id="draw_accept:" + game["id"])
+	notify("activity", game["id"], mochi.app.label("notifications.title.chess"), mochi.app.label("notifications.body.draw_agreed"), "/chess/" + game["id"], event_id="draw_accept:" + game["id"], name=sender_name)
 
 # Received a draw decline event
 def event_draw_decline(e):
@@ -1170,8 +1195,12 @@ def event_draw_decline(e):
 	if sender != game["identity"] and sender != game["opponent"]:
 		return
 
-	body = event_body(e.content("body"), 10000, mochi.app.label("notifications.body.draw_declined"))
-	sender_name = game["identity_name"] if sender == game["identity"] else game["opponent_name"]
+	sender_name = player_name(game, sender)
+	body = mochi.app.label("system.draw_declined", name=sender_name)
+
+	# A decline clears the offer and changes nothing else about the outcome.
+	if e.content("draw_offer") or e.content("status") != "active":
+		return
 
 	now = mochi.time.now()
 	state = game_apply(e, game, now)
@@ -1191,5 +1220,5 @@ def event_draw_decline(e):
 	for key, value in state.items():
 		ws_data[key] = value
 	mochi.websocket.write(game["key"], ws_data)
-	notify("activity", "", mochi.app.label("notifications.title.chess"), mochi.app.label("notifications.body.draw_declined"), "/chess/" + game["id"], event_id="draw_decline:" + game["id"] + ":" + sender)
+	notify("activity", game["id"], mochi.app.label("notifications.title.chess"), mochi.app.label("notifications.body.draw_declined"), "/chess/" + game["id"], event_id="draw_decline:" + game["id"] + ":" + sender, name=sender_name)
 
