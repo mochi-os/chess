@@ -30,6 +30,11 @@ msgstr "(ຂະຫຍາຍ)"
 msgid "[not set]"
 msgstr "[ບໍ່ໄດ້ຕັ້ງຄ່າ]"
 
+#. placeholder {0}: visible.length
+#: ../../../lib/web/src/components/inline-entity-search.tsx:179
+msgid "{0, plural, one {# result} other {# results}}"
+msgstr "{0, plural, other {# ຜົນ}}"
+
 #. placeholder {0}: displayInfo.count
 #: ../../../lib/web/src/components/person-picker.tsx:260
 msgid "{0, plural, one {# selected} other {# selected}}"
@@ -175,7 +180,7 @@ msgstr "ປະເພດບັນຊີ"
 msgid "Active games"
 msgstr "ເກມທີ່ໃຊ້ງານຢູ່"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:415
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:423
 msgid "Activity"
 msgstr "ກິດຈະກຳ"
 
@@ -304,7 +309,7 @@ msgstr "ທຸກຢ່າງທີ່ສະໝັກຮັບຟີດນີ້
 msgid "Are you sure you want to delete \"{0}\"?"
 msgstr "ທ່ານແນ່ໃຈບໍວ່າຕ້ອງການລົບ \"{0}\"?"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:671
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:679
 msgid "Are you sure you want to delete \"{title}\"? This action cannot be undone."
 msgstr "ທ່ານແນ່ໃຈບໍວ່າຕ້ອງການລົບ \"{title}\"? ການກະທຳນີ້ບໍ່ສາມາດຍົກເລີກໄດ້."
 
@@ -332,11 +337,11 @@ msgstr "ທ່ານແນ່ໃຈບໍວ່າຕ້ອງການຍອມ
 msgid "Ascending"
 msgstr "ຈາກໜ້ອຍຫາຫຼາຍ"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Attach comment files"
 msgstr "ແນບໄຟລ໌ຄຳເຫັນ"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Attach reply files"
 msgstr "ແນບໄຟລ໌ຕອບກັບ"
 
@@ -370,16 +375,16 @@ msgstr "ກັບຄືນ"
 msgid "Back to home"
 msgstr "ກັບໄປໜ້າຫຼັກ"
 
-#: ../../../lib/web/src/components/banner-section.tsx:80
+#: ../../../lib/web/src/components/banner-section.tsx:91
 #: ../../../lib/web/src/components/entity-banner.tsx:17
 msgid "Banner"
 msgstr "ປ້າຍ"
 
-#: ../../../lib/web/src/components/banner-section.tsx:69
+#: ../../../lib/web/src/components/banner-section.tsx:73
 msgid "Banner removed"
 msgstr "ລົບປ້າຍແລ້ວ"
 
-#: ../../../lib/web/src/components/banner-section.tsx:69
+#: ../../../lib/web/src/components/banner-section.tsx:73
 msgid "Banner updated"
 msgstr "ອັບເດດປ້າຍແລ້ວ"
 
@@ -457,11 +462,11 @@ msgstr "ບໍ່ມີກ້ອງຖ່າຍຮູບ"
 msgid "Cancel"
 msgstr "ຍົກເລີກ"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Cancel comment"
 msgstr "ຍົກເລີກຄຳເຫັນ"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Cancel reply"
 msgstr "ຍົກເລີກການຕອບກັບ"
 
@@ -548,7 +553,7 @@ msgstr "ເລືອກພາສາ"
 msgid "Choose opponent"
 msgstr "ເລືອກຄູ່ຕໍ່ສູ້"
 
-#: ../../../lib/web/src/components/banner-section.tsx:111
+#: ../../../lib/web/src/components/banner-section.tsx:123
 #: ../../../lib/web/src/components/colour-picker.tsx:274
 #: ../../../lib/web/src/components/colour-picker.tsx:355
 #: ../../../lib/web/src/components/travelling-picker.tsx:145
@@ -642,8 +647,8 @@ msgstr "ການກະທຳຄຳເຫັນ"
 msgid "Comments"
 msgstr "ຄຳເຫັນ"
 
-#. placeholder {0}: data.comment_count || 0
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:411
+#. placeholder {0}: data.comments.count || 0
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:419
 msgid "Comments ({0})"
 msgstr "ຄຳເຫັນ ({0})"
 
@@ -806,7 +811,7 @@ msgstr "ການຈັດລຽງເລີ່ມຕົ້ນ"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:208
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:255
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:317
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:672
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:680
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx:78
 msgid "Delete"
 msgstr "ລົບ"
@@ -835,9 +840,9 @@ msgstr "ລົບເກມ"
 msgid "Delete game?"
 msgstr "ລົບເກມ?"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:486
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:491
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:670
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:494
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:499
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:678
 msgid "Delete item"
 msgstr "ລົບລາຍການ"
 
@@ -898,11 +903,11 @@ msgstr "ກວດຫາຈາກຕົວທ່ອງເວັບ"
 msgid "Directory"
 msgstr "ໄດເລກທໍຣີ"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:311
+#: ../../../lib/web/src/components/comment-composer.tsx:319
 msgid "Discard"
 msgstr "ຍົກເລີກ"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:309
+#: ../../../lib/web/src/components/comment-composer.tsx:317
 msgid "Discard draft?"
 msgstr "ຍົກເລີກສະບັບຮ່າງບໍ?"
 
@@ -925,7 +930,7 @@ msgid "Does not match the required pattern"
 msgstr "ບໍ່ກົງກັບຮູບແບບທີ່ຕ້ອງການ"
 
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:309
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:495
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:503
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:523
 msgid "Done"
 msgstr "ສຳເລັດແລ້ວ"
@@ -1008,7 +1013,7 @@ msgstr "ອີເມວ"
 msgid "Email code"
 msgstr "ລະຫັດອີເມວ"
 
-#: ../../../lib/web/src/components/banner-section.tsx:88
+#: ../../../lib/web/src/components/banner-section.tsx:99
 msgid "Enter banner text (markdown supported)..."
 msgstr "ປ້ອນຂໍ້ຄວາມແບນເນີ (ຮອງຮັບ markdown)..."
 
@@ -1020,7 +1025,7 @@ msgstr "ປ້ອນລະຫັດຈາກອີເມວຂອງທ່ານ
 msgid "Enter your authenticator code"
 msgstr "ໃສ່ລະຫັດ authenticator ຂອງທ່ານ"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:381
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:389
 msgid "Error"
 msgstr "ຂໍ້ຜິດພາດ"
 
@@ -1101,7 +1106,11 @@ msgstr "ໄດ້ຮັບໂທເຄັນ RSS ລົ້ມເຫຼວ"
 msgid "Failed to load"
 msgstr "ໂຫຼດລົ້ມເຫຼວ"
 
-#: ../../../lib/web/src/components/audit-timeline.tsx:68
+#: ../../../lib/web/src/components/banner-section.tsx:85
+msgid "Failed to load banner"
+msgstr "ໂຫຼດແບນເນີບໍ່ສຳເລັດ"
+
+#: ../../../lib/web/src/components/audit-timeline.tsx:70
 msgid "Failed to load history"
 msgstr "ໂຫຼດປະຫວັດລົ້ມເຫຼວ"
 
@@ -1109,8 +1118,8 @@ msgstr "ໂຫຼດປະຫວັດລົ້ມເຫຼວ"
 msgid "Failed to load image"
 msgstr "ໂຫຼດຮູບພາບບໍ່ສຳເລັດ"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:382
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:385
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:390
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:393
 msgid "Failed to load item"
 msgstr "ໂຫຼດລາຍການລົ້ມເຫຼວ"
 
@@ -1162,7 +1171,7 @@ msgstr "ບັນທຶກ prompt ລົ້ມເຫຼວ"
 msgid "Failed to send"
 msgstr "ສົ່ງລົ້ມເຫຼວ"
 
-#: ../../../lib/web/src/components/banner-section.tsx:71
+#: ../../../lib/web/src/components/banner-section.tsx:75
 msgid "Failed to update banner"
 msgstr "ອັບເດດແບນເນີລົ້ມເຫຼວ"
 
@@ -1246,7 +1255,7 @@ msgstr "ຈັດກຸ່ມຕາມ"
 msgid "Group: {0}"
 msgstr "ກຸ່ມ: {0}"
 
-#: ../../../lib/web/src/components/audit-timeline.tsx:61
+#: ../../../lib/web/src/components/audit-timeline.tsx:63
 msgid "History"
 msgstr "ປະຫວັດ"
 
@@ -1302,7 +1311,7 @@ msgstr "ວັນທີ່ບໍ່ຖືກຕ້ອງ"
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
 msgstr "ເບິ່ງຄືວ່າໜ້າທີ່ທ່ານກຳລັງຊອກຫາ <0/>ບໍ່ມີ ຫຼື ອາດຖືກລຶບອອກແລ້ວ."
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:441
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:449
 msgid "Item details"
 msgstr "ລາຍລະອຽດລາຍການ"
 
@@ -1359,11 +1368,11 @@ msgstr "ໂຫຼດເພີ່ມ"
 msgid "Loading content…"
 msgstr "ກຳລັງໂຫຼດເນື້ອຫາ…"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:365
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:373
 msgid "Loading item"
 msgstr "ກຳລັງໂຫຼດລາຍການ"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:366
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:374
 msgid "Loading item details"
 msgstr "ກຳລັງໂຫຼດລາຍລະອຽດລາຍການ"
 
@@ -1597,10 +1606,10 @@ msgstr "ບໍ່ມີການເບິ່ງ"
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:554
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:557
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:561
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:557
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:570
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:571
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:575
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:565
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:578
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:579
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:583
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:362
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:385
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:388
@@ -1713,8 +1722,8 @@ msgid "Owner"
 msgstr "ເຈົ້າຂອງ"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:546
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:553
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:569
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:561
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:577
 msgid "Parent"
 msgstr "ແມ່"
 
@@ -1801,7 +1810,7 @@ msgstr "ເລື່ອນຂັ້ນເປັນ:"
 msgid "Prompt saved"
 msgstr "ບັນທຶກ prompt ແລ້ວ"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:408
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:416
 msgid "Properties"
 msgstr "ຄຸນສົມບັດ"
 
@@ -2006,7 +2015,7 @@ msgstr "ວັນເສົາ"
 
 #: ../../../lib/web/src/components/ai-prompts-editor.tsx:156
 #: ../../../lib/web/src/components/attachment-composer.tsx:430
-#: ../../../lib/web/src/components/banner-section.tsx:99
+#: ../../../lib/web/src/components/banner-section.tsx:111
 #: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:231
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:172
 #: ../../../lib/web/src/components/ui/editable-field-row.tsx:126
@@ -2244,8 +2253,8 @@ msgstr "ເລີ່ມເກມ"
 msgid "Start the discussion by adding the first comment."
 msgstr "ເລີ່ມການສົນທະນາໂດຍການເພີ່ມຄຳເຫັນທຳອິດ."
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:471
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:476
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:479
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:484
 msgid "Stop watching"
 msgstr "ຢຸດການເບິ່ງ"
 
@@ -2253,11 +2262,11 @@ msgstr "ຢຸດການເບິ່ງ"
 msgid "Subject"
 msgstr "ຫົວຂໍ້"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Submit comment"
 msgstr "ສົ່ງຄຳເຫັນ"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Submit reply"
 msgstr "ສົ່ງການຕອບກັບ"
 
@@ -2275,7 +2284,7 @@ msgstr "ວັນອາທິດ"
 msgid "Switch to view 1-9"
 msgstr "ສະຫຼັບໄປເບິ່ງ 1-9"
 
-#: ../../../lib/web/src/components/audit-timeline.tsx:107
+#: ../../../lib/web/src/components/audit-timeline.tsx:109
 #: ../../../lib/web/src/lib/preference-utils.ts:16
 #: ../../../lib/web/src/lib/preference-utils.ts:132
 msgid "System"
@@ -2451,7 +2460,7 @@ msgstr "ຄວາມຜິດພາດ API ທີ່ບໍ່ຄາດຄິດ"
 msgid "United States"
 msgstr "ສະຫະລັດອາເມລິກາ"
 
-#: ../../../lib/web/src/components/audit-timeline.tsx:103
+#: ../../../lib/web/src/components/audit-timeline.tsx:105
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:167
 #: ../../../lib/web/src/components/tree-row.tsx:219
 #: ../../../lib/web/src/components/tree-row.tsx:373
@@ -2530,7 +2539,7 @@ msgstr "ຕົວເບິ່ງວິດີໂອ: {0}"
 msgid "View all notifications"
 msgstr "ເບິ່ງການແຈ້ງເຕືອນທັງໝົດ"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:442
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:450
 msgid "View and edit item details"
 msgstr "ເບິ່ງແລະແກ້ໄຂລາຍລະອຽດລາຍການ"
 
@@ -2542,8 +2551,8 @@ msgstr "ການຄວບຄຸມການເບິ່ງ"
 msgid "Voice recording is not supported in this browser"
 msgstr "ບຣາວເຊີນີ້ບໍ່ຮອງຮັບການບັນທຶກສຽງ"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:471
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:476
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:479
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:484
 msgid "Watch"
 msgstr "ເບິ່ງ"
 
@@ -2593,7 +2602,7 @@ msgstr "ເຈົ້າຍອມແພ້ — {opponentName} ຊະນະ"
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "ບັນຊີຂອງທ່ານໄດ້ຍ້າຍມາທີ່ນີ້ຈາກ {source}. ຈົນກວ່າທ່ານຈະລຶບມັນທີ່ນັ້ນ, ຂໍ້ຄວາມ ແລະ ການແຈ້ງເຕືອນອາດຈະໄປຮອດທັງສອງເຊີຟເວີ, ບາງເນື້ອຫາຂອງທ່ານຍັງຄົງໃຫ້ບໍລິການຈາກເຊີຟເວີເກົ່າ, ແລະ ຜູ້ຕິດຕາມອາດຈະໃຊ້ເວລາສອງສາມນາທີເພື່ອຊອກຫາທ່ານທີ່ນີ້."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:302
+#: ../../../lib/web/src/components/comment-composer.tsx:310
 msgid "Your attachments will be lost."
 msgstr "ໄຟລ໌ແນບຂອງທ່ານຈະສູນຫາຍ."
 
@@ -2601,10 +2610,10 @@ msgstr "ໄຟລ໌ແນບຂອງທ່ານຈະສູນຫາຍ."
 msgid "Your move"
 msgstr "ການເຄື່ອນໄຫວຂອງທ່ານ"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:300
+#: ../../../lib/web/src/components/comment-composer.tsx:308
 msgid "Your text and attachments will be lost."
 msgstr "ຂໍ້ຄວາມ ແລະໄຟລ໌ແນບຂອງທ່ານຈະສູນຫາຍ."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:303
+#: ../../../lib/web/src/components/comment-composer.tsx:311
 msgid "Your text will be lost."
 msgstr "ຂໍ້ຄວາມຂອງເຈົ້າຈະຫາຍໄປ."

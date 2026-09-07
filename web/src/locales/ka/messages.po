@@ -30,6 +30,11 @@ msgstr "(გაშლა)"
 msgid "[not set]"
 msgstr "[არ არის მითითებული]"
 
+#. placeholder {0}: visible.length
+#: ../../../lib/web/src/components/inline-entity-search.tsx:179
+msgid "{0, plural, one {# result} other {# results}}"
+msgstr "{0, plural, other {# პოსტი}}"
+
 #. placeholder {0}: displayInfo.count
 #: ../../../lib/web/src/components/person-picker.tsx:260
 msgid "{0, plural, one {# selected} other {# selected}}"
@@ -175,7 +180,7 @@ msgstr "ანგარიშის ტიპი"
 msgid "Active games"
 msgstr "აქტიური თამაშები"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:415
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:423
 msgid "Activity"
 msgstr "აქტივობა"
 
@@ -304,7 +309,7 @@ msgstr "ყველაფერი, რაც ამ არხზეა გა�
 msgid "Are you sure you want to delete \"{0}\"?"
 msgstr "დარწმუნებული ხართ, რომ გსურთ „{0}“-ის წაშლა?"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:671
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:679
 msgid "Are you sure you want to delete \"{title}\"? This action cannot be undone."
 msgstr "დარწმუნებული ხართ, რომ გსურთ „{title}“-ის წაშლა? მოქმედება შეუქცევადია."
 
@@ -332,11 +337,11 @@ msgstr "დარწმუნებული ხართ, რომ გსუ�
 msgid "Ascending"
 msgstr "ზრდადობით"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Attach comment files"
 msgstr "კომენტარის ფაილების მიმაგრება"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Attach reply files"
 msgstr "პასუხის ფაილების მიმაგრება"
 
@@ -370,16 +375,16 @@ msgstr "უკან"
 msgid "Back to home"
 msgstr "მთავარზე დაბრუნება"
 
-#: ../../../lib/web/src/components/banner-section.tsx:80
+#: ../../../lib/web/src/components/banner-section.tsx:91
 #: ../../../lib/web/src/components/entity-banner.tsx:17
 msgid "Banner"
 msgstr "ბანერი"
 
-#: ../../../lib/web/src/components/banner-section.tsx:69
+#: ../../../lib/web/src/components/banner-section.tsx:73
 msgid "Banner removed"
 msgstr "ბანერი წაიშალა"
 
-#: ../../../lib/web/src/components/banner-section.tsx:69
+#: ../../../lib/web/src/components/banner-section.tsx:73
 msgid "Banner updated"
 msgstr "ბანერი განახლდა"
 
@@ -457,11 +462,11 @@ msgstr "კამერა მიუწვდომელია"
 msgid "Cancel"
 msgstr "გაუქმება"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Cancel comment"
 msgstr "კომენტარის გაუქმება"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Cancel reply"
 msgstr "პასუხის გაუქმება"
 
@@ -548,7 +553,7 @@ msgstr "აირჩიეთ ენა"
 msgid "Choose opponent"
 msgstr "აირჩიეთ ოპონენტი"
 
-#: ../../../lib/web/src/components/banner-section.tsx:111
+#: ../../../lib/web/src/components/banner-section.tsx:123
 #: ../../../lib/web/src/components/colour-picker.tsx:274
 #: ../../../lib/web/src/components/colour-picker.tsx:355
 #: ../../../lib/web/src/components/travelling-picker.tsx:145
@@ -642,8 +647,8 @@ msgstr "კომენტარის მოქმედებები"
 msgid "Comments"
 msgstr "კომენტარები"
 
-#. placeholder {0}: data.comment_count || 0
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:411
+#. placeholder {0}: data.comments.count || 0
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:419
 msgid "Comments ({0})"
 msgstr "კომენტარები ({0})"
 
@@ -806,7 +811,7 @@ msgstr "ნაგულისხმევი დახარისხება"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:208
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:255
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:317
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:672
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:680
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx:78
 msgid "Delete"
 msgstr "წაშლა"
@@ -835,9 +840,9 @@ msgstr "თამაშის წაშლა"
 msgid "Delete game?"
 msgstr "თამაშის წაშლა?"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:486
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:491
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:670
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:494
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:499
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:678
 msgid "Delete item"
 msgstr "ერთეულის წაშლა"
 
@@ -898,11 +903,11 @@ msgstr "ვებ ბრაუზერიდან აღმოჩენა"
 msgid "Directory"
 msgstr "კატალოგი"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:311
+#: ../../../lib/web/src/components/comment-composer.tsx:319
 msgid "Discard"
 msgstr "გაუქმება"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:309
+#: ../../../lib/web/src/components/comment-composer.tsx:317
 msgid "Discard draft?"
 msgstr "გავაუქმოთ მონახაზი?"
 
@@ -925,7 +930,7 @@ msgid "Does not match the required pattern"
 msgstr "არ შეესაბამება საჭირო შაბლონს"
 
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:309
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:495
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:503
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:523
 msgid "Done"
 msgstr "მზადაა"
@@ -1008,7 +1013,7 @@ msgstr "ელფოსტა"
 msgid "Email code"
 msgstr "ელფოსტის კოდი"
 
-#: ../../../lib/web/src/components/banner-section.tsx:88
+#: ../../../lib/web/src/components/banner-section.tsx:99
 msgid "Enter banner text (markdown supported)..."
 msgstr "შეიყვანეთ ბანერის ტექსტი (markdown მხარდაჭერილია)..."
 
@@ -1020,7 +1025,7 @@ msgstr "შეიყვანეთ კოდი თქვენი ელფო
 msgid "Enter your authenticator code"
 msgstr "შეიყვანეთ თქვენი authenticator-ის კოდი"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:381
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:389
 msgid "Error"
 msgstr "შეცდომა"
 
@@ -1101,7 +1106,11 @@ msgstr "RSS ტოკენის მიღება ვერ მოხერ�
 msgid "Failed to load"
 msgstr "ჩატვირთვა ვერ მოხერხდა"
 
-#: ../../../lib/web/src/components/audit-timeline.tsx:68
+#: ../../../lib/web/src/components/banner-section.tsx:85
+msgid "Failed to load banner"
+msgstr "ბანერის ჩატვირთვა ვერ მოხერხდა"
+
+#: ../../../lib/web/src/components/audit-timeline.tsx:70
 msgid "Failed to load history"
 msgstr "ისტორიის ჩატვირთვა ვერ მოხერხდა"
 
@@ -1109,8 +1118,8 @@ msgstr "ისტორიის ჩატვირთვა ვერ მოხ
 msgid "Failed to load image"
 msgstr "სურათის ჩატვირთვა ვერ მოხერხდა"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:382
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:385
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:390
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:393
 msgid "Failed to load item"
 msgstr "ელემენტის ჩატვირთვა ვერ მოხერხდა"
 
@@ -1162,7 +1171,7 @@ msgstr "მოთხოვნის შენახვა ვერ მოხე
 msgid "Failed to send"
 msgstr "გაგზავნა ვერ მოხერხდა"
 
-#: ../../../lib/web/src/components/banner-section.tsx:71
+#: ../../../lib/web/src/components/banner-section.tsx:75
 msgid "Failed to update banner"
 msgstr "ბანერის განახლება ვერ მოხერხდა"
 
@@ -1246,7 +1255,7 @@ msgstr "დაჯგუფება"
 msgid "Group: {0}"
 msgstr "ჯგუფი: {0}"
 
-#: ../../../lib/web/src/components/audit-timeline.tsx:61
+#: ../../../lib/web/src/components/audit-timeline.tsx:63
 msgid "History"
 msgstr "ისტორია"
 
@@ -1302,7 +1311,7 @@ msgstr "არასწორი თარიღი"
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
 msgstr "როგორც ჩანს, გვერდი, რომელსაც ეძებთ, <0/>არ არსებობს ან წაშლილია."
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:441
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:449
 msgid "Item details"
 msgstr "ელემენტის დეტალები"
 
@@ -1359,11 +1368,11 @@ msgstr "მეტის ჩატვირთვა"
 msgid "Loading content…"
 msgstr "შიგთავსის ჩატვირთვა…"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:365
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:373
 msgid "Loading item"
 msgstr "ელემენტის ჩატვირთვა"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:366
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:374
 msgid "Loading item details"
 msgstr "ელემენტის დეტალების ჩატვირთვა"
 
@@ -1597,10 +1606,10 @@ msgstr "ნახვები არ არის"
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:554
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:557
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:561
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:557
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:570
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:571
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:575
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:565
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:578
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:579
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:583
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:362
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:385
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:388
@@ -1713,8 +1722,8 @@ msgid "Owner"
 msgstr "მფლობელი"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:546
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:553
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:569
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:561
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:577
 msgid "Parent"
 msgstr "მშობელი"
 
@@ -1801,7 +1810,7 @@ msgstr "დაწინაურება:"
 msgid "Prompt saved"
 msgstr "მოთხოვნა შენახულია"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:408
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:416
 msgid "Properties"
 msgstr "თვისებები"
 
@@ -2006,7 +2015,7 @@ msgstr "შაბათი"
 
 #: ../../../lib/web/src/components/ai-prompts-editor.tsx:156
 #: ../../../lib/web/src/components/attachment-composer.tsx:430
-#: ../../../lib/web/src/components/banner-section.tsx:99
+#: ../../../lib/web/src/components/banner-section.tsx:111
 #: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:231
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:172
 #: ../../../lib/web/src/components/ui/editable-field-row.tsx:126
@@ -2244,8 +2253,8 @@ msgstr "თამაშის დაწყება"
 msgid "Start the discussion by adding the first comment."
 msgstr "დაიწყეთ დისკუსია პირველი კომენტარის დამატებით."
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:471
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:476
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:479
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:484
 msgid "Stop watching"
 msgstr "ყურების შეწყვეტა"
 
@@ -2253,11 +2262,11 @@ msgstr "ყურების შეწყვეტა"
 msgid "Subject"
 msgstr "თემა"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Submit comment"
 msgstr "კომენტარის გაგზავნა"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Submit reply"
 msgstr "პასუხის გაგზავნა"
 
@@ -2275,7 +2284,7 @@ msgstr "კვირა"
 msgid "Switch to view 1-9"
 msgstr "გადართვა 1-9 ხედზე"
 
-#: ../../../lib/web/src/components/audit-timeline.tsx:107
+#: ../../../lib/web/src/components/audit-timeline.tsx:109
 #: ../../../lib/web/src/lib/preference-utils.ts:16
 #: ../../../lib/web/src/lib/preference-utils.ts:132
 msgid "System"
@@ -2451,7 +2460,7 @@ msgstr "API-ის მოულოდნელი შეცდომა"
 msgid "United States"
 msgstr "ამ ვიკის უნიკალური იდენტიფიკატორები."
 
-#: ../../../lib/web/src/components/audit-timeline.tsx:103
+#: ../../../lib/web/src/components/audit-timeline.tsx:105
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:167
 #: ../../../lib/web/src/components/tree-row.tsx:219
 #: ../../../lib/web/src/components/tree-row.tsx:373
@@ -2530,7 +2539,7 @@ msgstr "ვიდეოს მნახველი: {0}"
 msgid "View all notifications"
 msgstr "ყველას ნახვა"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:442
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:450
 msgid "View and edit item details"
 msgstr "ყველა პოსტის ნახვა"
 
@@ -2542,8 +2551,8 @@ msgstr "ხედის მართვა"
 msgid "Voice recording is not supported in this browser"
 msgstr "ხმის ჩაწერა ამ ბრაუზერში მხარდაჭერილი არ არის"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:471
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:476
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:479
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:484
 msgid "Watch"
 msgstr "გაფრთხილება გამოიცა"
 
@@ -2593,7 +2602,7 @@ msgstr "თქვენ დანებდით — იმარჯვებს
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "თქვენი ანგარიში გადმოტანილია {source}-დან. სანამ იქ წაშლით, შეტყობინებები და ნოტიფიკაციები შეიძლება ორივე სერვერს მიაღწიოს, თქვენი კონტენტის ნაწილი კვლავ ძველი სერვერიდან ხელმისაწვდომია, ხოლო მიმდევრებს შეიძლება რამდენიმე წუთი დასჭირდეთ თქვენი პოვნისთვის."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:302
+#: ../../../lib/web/src/components/comment-composer.tsx:310
 msgid "Your attachments will be lost."
 msgstr "თქვენი დანართები დაიკარგება."
 
@@ -2601,10 +2610,10 @@ msgstr "თქვენი დანართები დაიკარგე�
 msgid "Your move"
 msgstr "თქვენი სვლა"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:300
+#: ../../../lib/web/src/components/comment-composer.tsx:308
 msgid "Your text and attachments will be lost."
 msgstr "თქვენი ტექსტი და დანართები დაიკარგება."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:303
+#: ../../../lib/web/src/components/comment-composer.tsx:311
 msgid "Your text will be lost."
 msgstr "შენი ტექსტი დაიკარგება."

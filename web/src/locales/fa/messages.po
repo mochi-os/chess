@@ -30,6 +30,11 @@ msgstr "(باز کردن)"
 msgid "[not set]"
 msgstr "[تنظیم نشده]"
 
+#. placeholder {0}: visible.length
+#: ../../../lib/web/src/components/inline-entity-search.tsx:179
+msgid "{0, plural, one {# result} other {# results}}"
+msgstr "{0, plural, one {# نتیجه} other {# نتیجه}}"
+
 #. placeholder {0}: displayInfo.count
 #: ../../../lib/web/src/components/person-picker.tsx:260
 msgid "{0, plural, one {# selected} other {# selected}}"
@@ -175,7 +180,7 @@ msgstr "نوع حساب"
 msgid "Active games"
 msgstr "بازی‌های فعال"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:415
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:423
 msgid "Activity"
 msgstr "فعالیت"
 
@@ -304,7 +309,7 @@ msgstr "هر چیزی که مشترک این خوراک است دیگر آن ر�
 msgid "Are you sure you want to delete \"{0}\"?"
 msgstr "آیا از حذف «{0}» مطمئن هستید؟"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:671
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:679
 msgid "Are you sure you want to delete \"{title}\"? This action cannot be undone."
 msgstr "آیا از حذف «{title}» مطمئن هستید؟ این عمل قابل بازگشت نیست."
 
@@ -332,11 +337,11 @@ msgstr "آیا از تسلیم شدن مطمئن هستید؟ {opponentName} ب�
 msgid "Ascending"
 msgstr "صعودی"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Attach comment files"
 msgstr "پیوست فایل‌های نظر"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Attach reply files"
 msgstr "پیوست فایل‌های پاسخ"
 
@@ -370,16 +375,16 @@ msgstr "بازگشت"
 msgid "Back to home"
 msgstr "بازگشت به خانه"
 
-#: ../../../lib/web/src/components/banner-section.tsx:80
+#: ../../../lib/web/src/components/banner-section.tsx:91
 #: ../../../lib/web/src/components/entity-banner.tsx:17
 msgid "Banner"
 msgstr "بنر"
 
-#: ../../../lib/web/src/components/banner-section.tsx:69
+#: ../../../lib/web/src/components/banner-section.tsx:73
 msgid "Banner removed"
 msgstr "بنر حذف شد"
 
-#: ../../../lib/web/src/components/banner-section.tsx:69
+#: ../../../lib/web/src/components/banner-section.tsx:73
 msgid "Banner updated"
 msgstr "بنر به‌روزرسانی شد"
 
@@ -457,11 +462,11 @@ msgstr "دوربین در دسترس نیست"
 msgid "Cancel"
 msgstr "لغو"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Cancel comment"
 msgstr "لغو نظر"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Cancel reply"
 msgstr "لغو پاسخ"
 
@@ -548,7 +553,7 @@ msgstr "انتخاب زبان"
 msgid "Choose opponent"
 msgstr "انتخاب حریف"
 
-#: ../../../lib/web/src/components/banner-section.tsx:111
+#: ../../../lib/web/src/components/banner-section.tsx:123
 #: ../../../lib/web/src/components/colour-picker.tsx:274
 #: ../../../lib/web/src/components/colour-picker.tsx:355
 #: ../../../lib/web/src/components/travelling-picker.tsx:145
@@ -642,8 +647,8 @@ msgstr "کنش‌های نظر"
 msgid "Comments"
 msgstr "نظرها"
 
-#. placeholder {0}: data.comment_count || 0
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:411
+#. placeholder {0}: data.comments.count || 0
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:419
 msgid "Comments ({0})"
 msgstr "نظرها ({0})"
 
@@ -806,7 +811,7 @@ msgstr "مرتب‌سازی پیش‌فرض"
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:208
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:255
 #: ../../../lib/web/src/components/entity/entity-object-attachments.tsx:317
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:672
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:680
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx:78
 msgid "Delete"
 msgstr "حذف"
@@ -835,9 +840,9 @@ msgstr "حذف بازی"
 msgid "Delete game?"
 msgstr "بازی حذف شود؟"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:486
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:491
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:670
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:494
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:499
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:678
 msgid "Delete item"
 msgstr "حذف مورد"
 
@@ -898,11 +903,11 @@ msgstr "تشخیص از مرورگر وب"
 msgid "Directory"
 msgstr "فهرست"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:311
+#: ../../../lib/web/src/components/comment-composer.tsx:319
 msgid "Discard"
 msgstr "دور انداختن"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:309
+#: ../../../lib/web/src/components/comment-composer.tsx:317
 msgid "Discard draft?"
 msgstr "پیش‌نویس دور انداخته شود؟"
 
@@ -925,7 +930,7 @@ msgid "Does not match the required pattern"
 msgstr "با الگوی موردنیاز مطابقت ندارد"
 
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:309
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:495
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:503
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:523
 msgid "Done"
 msgstr "انجام شد"
@@ -1008,7 +1013,7 @@ msgstr "ایمیل"
 msgid "Email code"
 msgstr "کد ایمیل"
 
-#: ../../../lib/web/src/components/banner-section.tsx:88
+#: ../../../lib/web/src/components/banner-section.tsx:99
 msgid "Enter banner text (markdown supported)..."
 msgstr "متن بنر را وارد کنید (markdown پشتیبانی می‌شود)..."
 
@@ -1020,7 +1025,7 @@ msgstr "کد دریافتی از ایمیل خود را وارد کنید"
 msgid "Enter your authenticator code"
 msgstr "کد برنامه احرازکننده هویت خود را وارد کنید"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:381
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:389
 msgid "Error"
 msgstr "خطا"
 
@@ -1101,7 +1106,11 @@ msgstr "دریافت توکن RSS ناموفق بود"
 msgid "Failed to load"
 msgstr "بارگذاری ناموفق بود"
 
-#: ../../../lib/web/src/components/audit-timeline.tsx:68
+#: ../../../lib/web/src/components/banner-section.tsx:85
+msgid "Failed to load banner"
+msgstr "بارگذاری بنر ناموفق بود"
+
+#: ../../../lib/web/src/components/audit-timeline.tsx:70
 msgid "Failed to load history"
 msgstr "بارگذاری تاریخچه ناموفق بود"
 
@@ -1109,8 +1118,8 @@ msgstr "بارگذاری تاریخچه ناموفق بود"
 msgid "Failed to load image"
 msgstr "بارگذاری تصویر ناموفق بود"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:382
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:385
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:390
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:393
 msgid "Failed to load item"
 msgstr "بارگذاری مورد ناموفق بود"
 
@@ -1162,7 +1171,7 @@ msgstr "ذخیره prompt ناموفق بود"
 msgid "Failed to send"
 msgstr "ارسال ناموفق بود"
 
-#: ../../../lib/web/src/components/banner-section.tsx:71
+#: ../../../lib/web/src/components/banner-section.tsx:75
 msgid "Failed to update banner"
 msgstr "به‌روزرسانی بنر ناموفق بود"
 
@@ -1246,7 +1255,7 @@ msgstr "گروه‌بندی بر اساس"
 msgid "Group: {0}"
 msgstr "گروه: {0}"
 
-#: ../../../lib/web/src/components/audit-timeline.tsx:61
+#: ../../../lib/web/src/components/audit-timeline.tsx:63
 msgid "History"
 msgstr "تاریخچه"
 
@@ -1302,7 +1311,7 @@ msgstr "تاریخ نامعتبر"
 msgid "It seems like the page you're looking for <0/>does not exist or might have been removed."
 msgstr "به نظر می‌رسد صفحه‌ای که به دنبال آن هستید <0/>وجود ندارد یا حذف شده است."
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:441
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:449
 msgid "Item details"
 msgstr "جزئیات مورد"
 
@@ -1359,11 +1368,11 @@ msgstr "بارگذاری بیشتر"
 msgid "Loading content…"
 msgstr "در حال بارگذاری محتوا…"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:365
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:373
 msgid "Loading item"
 msgstr "در حال بارگذاری مورد"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:366
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:374
 msgid "Loading item details"
 msgstr "در حال بارگذاری جزئیات مورد"
 
@@ -1597,10 +1606,10 @@ msgstr "بدون بازدید"
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:554
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:557
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:561
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:557
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:570
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:571
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:575
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:565
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:578
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:579
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:583
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:362
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:385
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx:388
@@ -1713,8 +1722,8 @@ msgid "Owner"
 msgstr "مالک"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx:546
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:553
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:569
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:561
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:577
 msgid "Parent"
 msgstr "والد"
 
@@ -1801,7 +1810,7 @@ msgstr "ارتقا به:"
 msgid "Prompt saved"
 msgstr "Prompt ذخیره شد"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:408
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:416
 msgid "Properties"
 msgstr "ویژگی‌ها"
 
@@ -2006,7 +2015,7 @@ msgstr "شنبه"
 
 #: ../../../lib/web/src/components/ai-prompts-editor.tsx:156
 #: ../../../lib/web/src/components/attachment-composer.tsx:430
-#: ../../../lib/web/src/components/banner-section.tsx:99
+#: ../../../lib/web/src/components/banner-section.tsx:111
 #: ../../../lib/web/src/components/entity/entity-comment-thread.tsx:231
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx:172
 #: ../../../lib/web/src/components/ui/editable-field-row.tsx:126
@@ -2244,8 +2253,8 @@ msgstr "شروع بازی"
 msgid "Start the discussion by adding the first comment."
 msgstr "با افزودن اولین نظر، گفت‌وگو را آغاز کنید."
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:471
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:476
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:479
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:484
 msgid "Stop watching"
 msgstr "توقف تماشا"
 
@@ -2253,11 +2262,11 @@ msgstr "توقف تماشا"
 msgid "Subject"
 msgstr "موضوع"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:430
+#: ../../../lib/web/src/components/comment-composer.tsx:438
 msgid "Submit comment"
 msgstr "ثبت نظر"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:429
+#: ../../../lib/web/src/components/comment-composer.tsx:437
 msgid "Submit reply"
 msgstr "ثبت پاسخ"
 
@@ -2275,7 +2284,7 @@ msgstr "یکشنبه"
 msgid "Switch to view 1-9"
 msgstr "تغییر به نمای ۱ تا ۹"
 
-#: ../../../lib/web/src/components/audit-timeline.tsx:107
+#: ../../../lib/web/src/components/audit-timeline.tsx:109
 #: ../../../lib/web/src/lib/preference-utils.ts:16
 #: ../../../lib/web/src/lib/preference-utils.ts:132
 msgid "System"
@@ -2451,7 +2460,7 @@ msgstr "خطای غیرمنتظره API"
 msgid "United States"
 msgstr "ایالات متحده"
 
-#: ../../../lib/web/src/components/audit-timeline.tsx:103
+#: ../../../lib/web/src/components/audit-timeline.tsx:105
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx:167
 #: ../../../lib/web/src/components/tree-row.tsx:219
 #: ../../../lib/web/src/components/tree-row.tsx:373
@@ -2530,7 +2539,7 @@ msgstr "نمایشگر ویدیو: {0}"
 msgid "View all notifications"
 msgstr "نمایش همه اعلان‌ها"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:442
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:450
 msgid "View and edit item details"
 msgstr "نمایش و ویرایش جزئیات مورد"
 
@@ -2542,8 +2551,8 @@ msgstr "کنترل‌های نمایش"
 msgid "Voice recording is not supported in this browser"
 msgstr "ضبط صدا در این مرورگر پشتیبانی نمی‌شود"
 
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:471
-#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:476
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:479
+#: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx:484
 msgid "Watch"
 msgstr "تماشا"
 
@@ -2593,7 +2602,7 @@ msgstr "شما تسلیم شدید — {opponentName} برد"
 msgid "Your account was moved here from {source}. Until you delete it there, messages and notifications may reach both servers, some of your content keeps being served from the old server, and followers may take a few minutes to find you here."
 msgstr "حساب کاربری شما از {source} به اینجا منتقل شده است. تا زمانی که آن را آنجا حذف نکنید، پیام‌ها و اعلان‌ها ممکن است به هر دو سرور برسند، بخشی از محتوای شما همچنان از سرور قدیمی ارائه می‌شود، و دنبال‌کنندگان ممکن است چند دقیقه‌ای طول بکشد تا شما را اینجا پیدا کنند."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:302
+#: ../../../lib/web/src/components/comment-composer.tsx:310
 msgid "Your attachments will be lost."
 msgstr "پیوست‌های شما از دست خواهند رفت."
 
@@ -2601,10 +2610,10 @@ msgstr "پیوست‌های شما از دست خواهند رفت."
 msgid "Your move"
 msgstr "نوبت شما"
 
-#: ../../../lib/web/src/components/comment-composer.tsx:300
+#: ../../../lib/web/src/components/comment-composer.tsx:308
 msgid "Your text and attachments will be lost."
 msgstr "متن و پیوست‌های شما از دست خواهند رفت."
 
-#: ../../../lib/web/src/components/comment-composer.tsx:303
+#: ../../../lib/web/src/components/comment-composer.tsx:311
 msgid "Your text will be lost."
 msgstr "متن شما از بین خواهد رفت."
