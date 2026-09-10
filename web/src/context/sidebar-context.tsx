@@ -4,6 +4,5 @@
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
 
 export {
-  GameSidebarProvider as SidebarProvider,
   useGameSidebarContext as useSidebarContext,
 } from '@mochi/web'
