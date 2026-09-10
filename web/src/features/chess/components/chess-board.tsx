@@ -56,7 +56,7 @@ export function ChessBoard({
     }
   }, [fen])
 
-  const board = chess?.board() ?? []
+  const board = useMemo(() => chess?.board() ?? [], [chess])
   const isActive = gameStatus === 'active'
   const inCheck = chess?.isCheck() ?? false
   const capturedPiecesSummary = useMemo(
@@ -223,7 +223,7 @@ export function ChessBoard({
           break
       }
     },
-    [keyboardPos, files, ranks, handleSquareClick]
+    [keyboardPos, myColor, files, ranks, handleSquareClick]
   )
 
   const handlePromotion = useCallback(
