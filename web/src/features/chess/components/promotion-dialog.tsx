@@ -2,12 +2,11 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 // This file is part of Mochi, licensed under the GNU AGPL v3 with the
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
-
 import { useEffect, useId, useRef } from 'react'
 import { Trans, useLingui } from '@lingui/react/macro'
 import { cn, Tooltip, TooltipContent, TooltipTrigger } from '@mochi/web'
-import { ChessPieceIcon } from './chess-piece-icon'
 import { useChessPieceName } from '../lib/use-chess-piece-name'
+import { ChessPieceIcon } from './chess-piece-icon'
 
 const PROMOTION_PIECES = ['q', 'r', 'b', 'n'] as const
 const PROMOTION_SHORTCUTS = ['1', '2', '3', '4'] as const
@@ -63,20 +62,20 @@ export function PromotionDialog({
 
   return (
     <div
-      className="absolute inset-0 z-10 flex items-center justify-center bg-black/40"
+      className='absolute inset-0 z-10 flex items-center justify-center bg-black/40'
       onClick={onCancel}
     >
       <div
         aria-labelledby={titleId}
-        aria-modal="true"
-        className="bg-card rounded-lg border shadow-lg p-3"
+        aria-modal='true'
+        className='bg-card rounded-lg border p-3 shadow-lg'
         onKeyDown={handleKeyDown}
-        role="dialog"
+        role='dialog'
       >
-        <h2 className="text-sm font-medium text-center mb-2" id={titleId}>
+        <h2 className='mb-2 text-center text-sm font-medium' id={titleId}>
           <Trans>Promote to:</Trans>
         </h2>
-        <div className="flex gap-1">
+        <div className='flex gap-1'>
           {PROMOTION_PIECES.map((piece, index) => (
             <Tooltip key={piece}>
               <TooltipTrigger asChild>
@@ -84,17 +83,17 @@ export function PromotionDialog({
                   aria-label={t`Promote to ${pieceName(piece)}`}
                   aria-keyshortcuts={PROMOTION_SHORTCUTS[index]}
                   ref={piece === 'q' ? queenButtonRef : undefined}
-                  type="button"
+                  type='button'
                   onClick={() => onSelect(piece)}
                   className={cn(
-                    'flex items-center justify-center w-14 h-14 rounded-lg',
-                    'border border-border transition-colors hover:bg-hover',
-                    'focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:outline-hidden'
+                    'flex h-14 w-14 items-center justify-center rounded-lg',
+                    'border-border hover:bg-hover border transition-colors',
+                    'focus-visible:ring-ring focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-hidden'
                   )}
                 >
                   <ChessPieceIcon
                     color={color}
-                    className="size-10"
+                    className='size-10'
                     type={piece}
                   />
                 </button>
@@ -104,9 +103,9 @@ export function PromotionDialog({
           ))}
         </div>
         <button
-          type="button"
+          type='button'
           onClick={onCancel}
-          className="mt-2 w-full text-xs text-muted-foreground hover:text-foreground text-center focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
+          className='text-muted-foreground hover:text-foreground focus-visible:ring-ring mt-2 w-full rounded-sm text-center text-xs focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-hidden'
         >
           <Trans>Cancel</Trans>
         </button>

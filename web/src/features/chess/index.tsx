@@ -2,11 +2,9 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 // This file is part of Mochi, licensed under the GNU AGPL v3 with the
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
-
 import { useCallback, useEffect, useMemo, useState } from 'react'
-import { Trans, useLingui } from '@lingui/react/macro'
 import { useNavigate, useParams } from '@tanstack/react-router'
-import { Chess } from 'chess.js'
+import { Trans, useLingui } from '@lingui/react/macro'
 import {
   useAuthStore,
   usePageTitle,
@@ -30,9 +28,17 @@ import {
   DropdownMenuTrigger,
   getAppPath,
 } from '@mochi/web'
-import { MoreHorizontal, Trash2, Flag, Handshake, RotateCcw, MessageCircle } from 'lucide-react'
-import { useSidebarContext } from '@/context/sidebar-context'
+import { Chess } from 'chess.js'
+import {
+  MoreHorizontal,
+  Trash2,
+  Flag,
+  Handshake,
+  RotateCcw,
+  MessageCircle,
+} from 'lucide-react'
 import { resume } from '@/lib/pgn'
+import { useSidebarContext } from '@/context/sidebar-context'
 import { setLastGame } from '@/hooks/useGameStorage'
 import { useGameWebsocket } from '@/hooks/useGameWebsocket'
 import {
@@ -48,11 +54,10 @@ import {
   useDrawAcceptMutation,
   useDrawDeclineMutation,
 } from '@/hooks/useGames'
-import { GameEmptyState } from './components/game-empty-state'
+import { ChatMessageList } from './components/chat-message-list'
 import { ChessBoard } from './components/chess-board'
 import { DrawOfferBanner } from './components/draw-offer-banner'
-import { ChatMessageList } from './components/chat-message-list'
-
+import { GameEmptyState } from './components/game-empty-state'
 
 export function ChessGame() {
   const { t } = useLingui()
@@ -64,11 +69,11 @@ export function ChessGame() {
   const [showResignDialog, setShowResignDialog] = useState(false)
   const [showDeleteDialog, setShowDeleteDialog] = useState(false)
   const [showMobileChat, setShowMobileChat] = useState(false)
-  const [lastMove, setLastMove] = useState<{ from: string; to: string } | null>(null)
-  const {
-    identity: currentUserIdentity,
-    initialize: initializeAuth,
-  } = useAuthStore()
+  const [lastMove, setLastMove] = useState<{ from: string; to: string } | null>(
+    null
+  )
+  const { identity: currentUserIdentity, initialize: initializeAuth } =
+    useAuthStore()
 
   useEffect(() => {
     initializeAuth()
@@ -91,10 +96,7 @@ export function ChessGame() {
   )
 
   const selectedGame = useMemo(
-    () =>
-      games.find(
-        (g) => g.id === selectedGameId
-      ) ?? null,
+    () => games.find((g) => g.id === selectedGameId) ?? null,
     [games, selectedGameId]
   )
 
@@ -132,7 +134,8 @@ export function ChessGame() {
     }
   }, [game?.fen])
 
-  const myColor = game && myIdentity ? (game.white === myIdentity ? 'w' : 'b') : 'w'
+  const myColor =
+    game && myIdentity ? (game.white === myIdentity ? 'w' : 'b') : 'w'
   const isMyTurn = chess ? chess.turn() === myColor : false
   const isCheck = chess ? chess.isCheck() : false
 
@@ -298,16 +301,17 @@ export function ChessGame() {
 
   const handleRematch = () => {
     if (!game || !myIdentity) return
-    const opponentId = game.identity === myIdentity ? game.opponent : game.identity
+    const opponentId =
+      game.identity === myIdentity ? game.opponent : game.identity
     rematchMutation.mutate(opponentId)
   }
 
   // Loading / empty
   if (selectedGameId && gamesQuery.isLoading) {
     return (
-      <GamePlaceholderPage title={t`Chess`} mainClassName="p-4">
-        <Skeleton className="h-8 w-48" />
-        <Skeleton className="aspect-square max-w-[560px] w-full" />
+      <GamePlaceholderPage title={t`Chess`} mainClassName='p-4'>
+        <Skeleton className='h-8 w-48' />
+        <Skeleton className='aspect-square w-full max-w-[560px]' />
       </GamePlaceholderPage>
     )
   }
@@ -319,7 +323,7 @@ export function ChessGame() {
           <GeneralError
             error={gamesQuery.error}
             minimal
-            mode="inline"
+            mode='inline'
             reset={gamesQuery.refetch}
           />
         ) : (
@@ -383,22 +387,22 @@ export function ChessGame() {
 
   return (
     <>
-      <div className="flex h-full flex-col overflow-hidden">
-        <Main className="flex min-h-0 flex-1 overflow-hidden">
+      <div className='flex h-full flex-col overflow-hidden'>
+        <Main className='flex min-h-0 flex-1 overflow-hidden'>
           {/* Left: Board */}
-          <div className="flex flex-1 flex-col px-2 sm:px-4 pb-2 min-h-0">
+          <div className='flex min-h-0 flex-1 flex-col px-2 pb-2 sm:px-4'>
             {isLoadingDetail ? (
-              <Skeleton className="aspect-square max-w-[560px] w-full mx-auto" />
+              <Skeleton className='mx-auto aspect-square w-full max-w-[560px]' />
             ) : gameDetailError ? (
               <GeneralError
                 error={gameDetailError}
                 minimal
-                mode="inline"
+                mode='inline'
                 reset={refetchGameDetail}
               />
             ) : game ? (
               <>
-                <div className="shrink-0">
+                <div className='shrink-0'>
                   <GameHeader
                     variant='strip'
                     myTurn={game.status === 'active' ? isMyTurn : undefined}
@@ -409,7 +413,11 @@ export function ChessGame() {
                     status={headline}
                     stats={
                       <GameHeaderStat
-                        icon={<GameHeaderStoneDot color={myColor === 'w' ? 'white' : 'black'} />}
+                        icon={
+                          <GameHeaderStoneDot
+                            color={myColor === 'w' ? 'white' : 'black'}
+                          />
+                        }
                         label={myColor === 'w' ? t`White` : t`Black`}
                       />
                     }
@@ -440,11 +448,15 @@ export function ChessGame() {
                                     onClick={handleDrawOffer}
                                     disabled={drawOfferMutation.isPending}
                                   >
-                                    <Handshake className='me-2 size-4' /> <Trans>Offer draw</Trans>
+                                    <Handshake className='me-2 size-4' />{' '}
+                                    <Trans>Offer draw</Trans>
                                   </DropdownMenuItem>
                                 )}
-                                <DropdownMenuItem onClick={() => setShowResignDialog(true)}>
-                                  <Flag className='me-2 size-4' /> <Trans>Resign</Trans>
+                                <DropdownMenuItem
+                                  onClick={() => setShowResignDialog(true)}
+                                >
+                                  <Flag className='me-2 size-4' />{' '}
+                                  <Trans>Resign</Trans>
                                 </DropdownMenuItem>
                               </>
                             ) : (
@@ -453,10 +465,14 @@ export function ChessGame() {
                                   onClick={handleRematch}
                                   disabled={rematchMutation.isPending}
                                 >
-                                  <RotateCcw className='me-2 size-4' /> <Trans>Rematch</Trans>
+                                  <RotateCcw className='me-2 size-4' />{' '}
+                                  <Trans>Rematch</Trans>
                                 </DropdownMenuItem>
-                                <DropdownMenuItem onClick={() => setShowDeleteDialog(true)}>
-                                  <Trash2 className='me-2 size-4' /> <Trans>Delete game</Trans>
+                                <DropdownMenuItem
+                                  onClick={() => setShowDeleteDialog(true)}
+                                >
+                                  <Trash2 className='me-2 size-4' />{' '}
+                                  <Trans>Delete game</Trans>
                                 </DropdownMenuItem>
                               </>
                             )}
@@ -465,27 +481,30 @@ export function ChessGame() {
                       </>
                     }
                     banner={
-                      game.draw_offer
-                        ? game.draw_offer === myIdentity
-                          ? (
-                              <p className='text-sm text-muted-foreground'>
-                                <Trans>Draw offered — waiting for {opponentName}</Trans>
-                              </p>
-                            )
-                          : (
-                              <DrawOfferBanner
-                                opponentName={opponentName}
-                                onAccept={handleDrawAccept}
-                                onDecline={handleDrawDecline}
-                                isAccepting={drawAcceptMutation.isPending}
-                                isDeclining={drawDeclineMutation.isPending}
-                              />
-                            )
-                        : undefined
+                      game.draw_offer ? (
+                        game.draw_offer === myIdentity ? (
+                          <p className='text-muted-foreground text-sm'>
+                            <Trans>
+                              Draw offered — waiting for {opponentName}
+                            </Trans>
+                          </p>
+                        ) : (
+                          <DrawOfferBanner
+                            opponentName={opponentName}
+                            onAccept={handleDrawAccept}
+                            onDecline={handleDrawDecline}
+                            isAccepting={drawAcceptMutation.isPending}
+                            isDeclining={drawDeclineMutation.isPending}
+                          />
+                        )
+                      ) : undefined
                     }
                   />
                 </div>
-                <div className="flex-1 min-h-0 mt-3" style={{ containerType: 'size' }}>
+                <div
+                  className='mt-3 min-h-0 flex-1'
+                  style={{ containerType: 'size' }}
+                >
                   {chess ? (
                     <ChessBoard
                       fen={game.fen}
@@ -509,7 +528,7 @@ export function ChessGame() {
 
           {/* Right: Chat sidebar, plus the mobile sheet through its portal */}
           <GameChatPanels
-            sidebarClassName="hidden lg:flex w-72 xl:w-80"
+            sidebarClassName='hidden lg:flex w-72 xl:w-80'
             title={<Trans>Chat</Trans>}
             messageList={
               <ChatMessageList
@@ -550,7 +569,6 @@ export function ChessGame() {
         onConfirm={handleDelete}
         isPending={deleteGameMutation.isPending}
       />
-
     </>
   )
 }

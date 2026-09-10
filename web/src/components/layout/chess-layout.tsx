@@ -2,14 +2,13 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 // This file is part of Mochi, licensed under the GNU AGPL v3 with the
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
-
 import { useCallback, useMemo } from 'react'
-import { useLingui } from '@lingui/react/macro'
 import { Outlet } from '@tanstack/react-router'
+import { useLingui } from '@lingui/react/macro'
 import { GameRouteLayout, useAuthStore } from '@mochi/web'
+import { getOpponentName, type Game } from '@/api/games'
 import { useGamesQuery } from '@/hooks/useGames'
 import { NewGame } from '@/features/chess/components/new-game'
-import { getOpponentName, type Game } from '@/api/games'
 
 export function ChessLayout() {
   const { t } = useLingui()
@@ -28,14 +27,16 @@ export function ChessLayout() {
 
   const opponentId = useCallback(
     (game: Game) =>
-      myIdentity && game.identity === myIdentity ? game.opponent : game.identity,
+      myIdentity && game.identity === myIdentity
+        ? game.opponent
+        : game.identity,
     [myIdentity]
   )
 
   return (
     <GameRouteLayout
       games={games}
-      appName="chess"
+      appName='chess'
       gameTitle={gameTitle}
       opponentId={opponentId}
       labels={{

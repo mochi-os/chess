@@ -5,7 +5,7 @@
 
 export const CAPTURED_PIECE_ORDER = ['p', 'n', 'b', 'r', 'q'] as const
 
-export type CapturedPieceType = typeof CAPTURED_PIECE_ORDER[number]
+export type CapturedPieceType = (typeof CAPTURED_PIECE_ORDER)[number]
 // Piece names are localised in useChessPieceName; the old English-name map
 // this type keyed off is gone.
 export type ChessPieceType = CapturedPieceType | 'k'

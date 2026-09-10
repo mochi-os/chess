@@ -2,10 +2,9 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 // This file is part of Mochi, licensed under the GNU AGPL v3 with the
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
-
 import { useEffect, useMemo, useState } from 'react'
-import { Trans, useLingui } from '@lingui/react/macro'
 import { useNavigate } from '@tanstack/react-router'
+import { Trans, useLingui } from '@lingui/react/macro'
 import {
   GameNewGameDialog,
   getErrorMessage,
@@ -68,7 +67,7 @@ export function NewGame() {
       isLoading={isLoading}
       error={error}
       onRetry={refetch}
-      mode="single"
+      mode='single'
       value={selectedFriend}
       onChange={(value) => setSelectedFriend(value as string)}
       canSubmit={!!selectedFriend && !createGameMutation.isPending}
@@ -79,7 +78,9 @@ export function NewGame() {
         description: <Trans>Start a new chess game</Trans>,
         opponentLabel: <Trans>Choose opponent</Trans>,
         emptyTitle: <Trans>No friends yet</Trans>,
-        emptyHint: <Trans>Add friends in the People app to start playing</Trans>,
+        emptyHint: (
+          <Trans>Add friends in the People app to start playing</Trans>
+        ),
         addFriends: <Trans>Add friends</Trans>,
         placeholder: t`Select a friend...`,
         emptyMessage: t`No friends found`,

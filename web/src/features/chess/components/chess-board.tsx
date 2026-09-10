@@ -2,15 +2,14 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 // This file is part of Mochi, licensed under the GNU AGPL v3 with the
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
-
 import { useCallback, useMemo, useState } from 'react'
-import { Chess, type Square } from 'chess.js'
 import { useLingui } from '@lingui/react/macro'
 import { cn } from '@mochi/web'
-import { CapturedPiecesStrip } from './captured-pieces-strip'
-import { ChessPieceIcon } from './chess-piece-icon'
+import { Chess, type Square } from 'chess.js'
 import { getCapturedPiecesSummary } from '../lib/captured-pieces'
 import { useChessPieceName } from '../lib/use-chess-piece-name'
+import { CapturedPiecesStrip } from './captured-pieces-strip'
+import { ChessPieceIcon } from './chess-piece-icon'
 import { PromotionDialog } from './promotion-dialog'
 
 const FILES = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']
@@ -102,7 +101,8 @@ export function ChessBoard({
       e.dataTransfer.effectAllowed = 'move'
       setDragFrom(square)
 
-      const moves = chess?.moves({ square: square as Square, verbose: true }) ?? []
+      const moves =
+        chess?.moves({ square: square as Square, verbose: true }) ?? []
       setLegalTargets(new Set(moves.map((m) => m.to)))
     },
     [chess, isActive, isMyTurn, myColor]
@@ -177,7 +177,8 @@ export function ChessBoard({
       const piece = chess?.get(square as Square)
       if (piece && piece.color === myColor) {
         setDragFrom(square)
-        const moves = chess?.moves({ square: square as Square, verbose: true }) ?? []
+        const moves =
+          chess?.moves({ square: square as Square, verbose: true }) ?? []
         setLegalTargets(new Set(moves.map((m) => m.to)))
       }
     },
@@ -211,7 +212,9 @@ export function ChessBoard({
         case ' ':
           e.preventDefault()
           if (keyboardPos) {
-            handleSquareClick(`${files[keyboardPos[1]]}${ranks[keyboardPos[0]]}`)
+            handleSquareClick(
+              `${files[keyboardPos[1]]}${ranks[keyboardPos[0]]}`
+            )
           }
           break
         case 'Escape':
@@ -237,20 +240,17 @@ export function ChessBoard({
   )
 
   return (
-    <div
-      className="mx-auto w-full"
-      style={{ maxWidth: 'min(100cqw, 100cqh)' }}
-    >
+    <div className='mx-auto w-full' style={{ maxWidth: 'min(100cqw, 100cqh)' }}>
       {/* Mobile: opponent's captured pieces above the board */}
-      <div className="sm:hidden mb-1">
+      <div className='mb-1 sm:hidden'>
         <CapturedPiecesStrip
           capturedByColor={topColor}
           pieces={topCapturedPieces}
         />
       </div>
-      <div className="flex w-full items-stretch justify-center gap-3">
+      <div className='flex w-full items-stretch justify-center gap-3'>
         {/* Desktop: side column with both strips flanking the board */}
-        <div className="hidden sm:flex shrink-0 flex-col justify-between py-0.5">
+        <div className='hidden shrink-0 flex-col justify-between py-0.5 sm:flex'>
           <CapturedPiecesStrip
             capturedByColor={topColor}
             pieces={topCapturedPieces}
@@ -261,16 +261,18 @@ export function ChessBoard({
           />
         </div>
         <div
-          className="chess-board grid aspect-square w-full border border-border rounded overflow-hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+          className='chess-board border-border focus-visible:ring-ring grid aspect-square w-full overflow-hidden rounded border focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none'
           style={{
             gridTemplateColumns: 'repeat(8, 1fr)',
             gridTemplateRows: 'repeat(8, 1fr)',
           }}
           tabIndex={0}
-          role="application"
-          aria-label={isActive && isMyTurn
-            ? t`Chess board. Your turn. Use arrow keys to navigate, Enter or Space to select.`
-            : t`Chess board. Use arrow keys to navigate, Enter or Space to select.`}
+          role='application'
+          aria-label={
+            isActive && isMyTurn
+              ? t`Chess board. Your turn. Use arrow keys to navigate, Enter or Space to select.`
+              : t`Chess board. Use arrow keys to navigate, Enter or Space to select.`
+          }
           onFocus={() => {
             setIsBoardFocused(true)
             if (!keyboardPos) setKeyboardPos(myColor === 'w' ? [6, 4] : [6, 3])
@@ -278,100 +280,112 @@ export function ChessBoard({
           onBlur={() => setIsBoardFocused(false)}
           onKeyDown={handleKeyDown}
         >
-        {ranks.map((rank, ri) =>
-          files.map((file, fi) => {
-            const square = `${file}${rank}`
-            const piece = chess?.get(square as Square)
-            const isLight = (ri + fi) % 2 === 0
-            const isDragSource = dragFrom === square
-            const isLegalTarget = legalTargets.has(square)
-            const isLastMoveSquare =
-              lastMove?.from === square || lastMove?.to === square
-            const isCheckSquare = kingInCheckSquare === square
-            const hasPiece = !!piece
-            const canDrag =
-              isActive && isMyTurn && hasPiece && piece.color === myColor
-            const isKeyboardFocus =
-              isBoardFocused &&
-              keyboardPos !== null &&
-              keyboardPos[0] === ri &&
-              keyboardPos[1] === fi
+          {ranks.map((rank, ri) =>
+            files.map((file, fi) => {
+              const square = `${file}${rank}`
+              const piece = chess?.get(square as Square)
+              const isLight = (ri + fi) % 2 === 0
+              const isDragSource = dragFrom === square
+              const isLegalTarget = legalTargets.has(square)
+              const isLastMoveSquare =
+                lastMove?.from === square || lastMove?.to === square
+              const isCheckSquare = kingInCheckSquare === square
+              const hasPiece = !!piece
+              const canDrag =
+                isActive && isMyTurn && hasPiece && piece.color === myColor
+              const isKeyboardFocus =
+                isBoardFocused &&
+                keyboardPos !== null &&
+                keyboardPos[0] === ri &&
+                keyboardPos[1] === fi
 
-            return (
-              <div
-                key={square}
-                className={cn(
-                  'chess-square relative flex items-center justify-center',
-                  isLight
-                    ? 'bg-[var(--chess-sq-light)]'
-                    : 'bg-[var(--chess-sq-dark)]',
-                  isDragSource && 'opacity-40',
-                  isLastMoveSquare && 'ring-2 ring-inset ring-yellow-400/60',
-                  isCheckSquare && 'bg-red-400 dark:bg-red-600'
-                )}
-                onDragOver={(e) => handleDragOver(e, square)}
-                onDrop={(e) => handleDrop(e, square)}
-                onClick={() => handleSquareClick(square)}
-              >
-                {hasPiece && (
-                  <ChessPieceIcon
-                    aria-label={piece.color === 'w' ? t`White ${pieceName(piece.type)}` : t`Black ${pieceName(piece.type)}`}
-                    color={piece.color}
-                    className={cn(
-                      'chess-piece select-none size-[80%] sm:size-[74%] lg:size-[72%]',
-                      canDrag && 'cursor-grab active:cursor-grabbing'
-                    )}
-                    type={piece.type}
-                    draggable={canDrag}
-                    onDragStart={(e) => handleDragStart(e, square)}
-                    onDragEnd={handleDragEnd}
-                  />
-                )}
+              return (
+                <div
+                  key={square}
+                  className={cn(
+                    'chess-square relative flex items-center justify-center',
+                    isLight
+                      ? 'bg-[var(--chess-sq-light)]'
+                      : 'bg-[var(--chess-sq-dark)]',
+                    isDragSource && 'opacity-40',
+                    isLastMoveSquare && 'ring-2 ring-yellow-400/60 ring-inset',
+                    isCheckSquare && 'bg-red-400 dark:bg-red-600'
+                  )}
+                  onDragOver={(e) => handleDragOver(e, square)}
+                  onDrop={(e) => handleDrop(e, square)}
+                  onClick={() => handleSquareClick(square)}
+                >
+                  {hasPiece && (
+                    <ChessPieceIcon
+                      aria-label={
+                        piece.color === 'w'
+                          ? t`White ${pieceName(piece.type)}`
+                          : t`Black ${pieceName(piece.type)}`
+                      }
+                      color={piece.color}
+                      className={cn(
+                        'chess-piece size-[80%] select-none sm:size-[74%] lg:size-[72%]',
+                        canDrag && 'cursor-grab active:cursor-grabbing'
+                      )}
+                      type={piece.type}
+                      draggable={canDrag}
+                      onDragStart={(e) => handleDragStart(e, square)}
+                      onDragEnd={handleDragEnd}
+                    />
+                  )}
 
-                {/* Legal move indicator */}
-                {isLegalTarget && !hasPiece && (
-                  <div className="legal-target absolute inset-0 flex items-center justify-center pointer-events-none">
-                    <div className="w-[30%] h-[30%] rounded-full bg-emerald-500/30" />
-                  </div>
-                )}
-                {isLegalTarget && hasPiece && (
-                  <div className="legal-capture absolute inset-0 rounded-full ring-[3px] ring-inset ring-emerald-500/40 pointer-events-none" />
-                )}
+                  {/* Legal move indicator */}
+                  {isLegalTarget && !hasPiece && (
+                    <div className='legal-target pointer-events-none absolute inset-0 flex items-center justify-center'>
+                      <div className='h-[30%] w-[30%] rounded-full bg-emerald-500/30' />
+                    </div>
+                  )}
+                  {isLegalTarget && hasPiece && (
+                    <div className='legal-capture pointer-events-none absolute inset-0 rounded-full ring-[3px] ring-emerald-500/40 ring-inset' />
+                  )}
 
-                {/* Coordinate labels */}
-                {fi === 0 && (
-                  <span className={cn(
-                    'absolute top-0.5 left-0.5 text-[9px] leading-none font-medium',
-                    isLight ? 'text-[var(--chess-sq-dark)]/60' : 'text-[var(--chess-sq-light)]/60'
-                  )}>
-                    {rank}
-                  </span>
-                )}
-                {ri === 7 && (
-                  <span className={cn(
-                    'absolute bottom-0.5 right-0.5 text-[9px] leading-none font-medium',
-                    isLight ? 'text-[var(--chess-sq-dark)]/60' : 'text-[var(--chess-sq-light)]/60'
-                  )}>
-                    {file}
-                  </span>
-                )}
+                  {/* Coordinate labels */}
+                  {fi === 0 && (
+                    <span
+                      className={cn(
+                        'absolute top-0.5 left-0.5 text-[9px] leading-none font-medium',
+                        isLight
+                          ? 'text-[var(--chess-sq-dark)]/60'
+                          : 'text-[var(--chess-sq-light)]/60'
+                      )}
+                    >
+                      {rank}
+                    </span>
+                  )}
+                  {ri === 7 && (
+                    <span
+                      className={cn(
+                        'absolute right-0.5 bottom-0.5 text-[9px] leading-none font-medium',
+                        isLight
+                          ? 'text-[var(--chess-sq-dark)]/60'
+                          : 'text-[var(--chess-sq-light)]/60'
+                      )}
+                    >
+                      {file}
+                    </span>
+                  )}
 
-                {/* Keyboard navigation cursor */}
-                {isKeyboardFocus && (
-                  <div
-                    className="absolute inset-0 ring-2 ring-primary ring-inset pointer-events-none z-10"
-                    aria-hidden="true"
-                  />
-                )}
-              </div>
-            )
-          })
-        )}
+                  {/* Keyboard navigation cursor */}
+                  {isKeyboardFocus && (
+                    <div
+                      className='ring-primary pointer-events-none absolute inset-0 z-10 ring-2 ring-inset'
+                      aria-hidden='true'
+                    />
+                  )}
+                </div>
+              )
+            })
+          )}
         </div>
       </div>
 
       {/* Mobile: my captured pieces below the board */}
-      <div className="sm:hidden mt-1">
+      <div className='mt-1 sm:hidden'>
         <CapturedPiecesStrip
           capturedByColor={myColor}
           pieces={bottomCapturedPieces}

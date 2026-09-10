@@ -2,13 +2,12 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 // This file is part of Mochi, licensed under the GNU AGPL v3 with the
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
-
 import type {
   UseInfiniteQueryResult,
   InfiniteData,
 } from '@tanstack/react-query'
-import { GameChatMessageList } from '@mochi/web'
 import { Trans, useLingui } from '@lingui/react/macro'
+import { GameChatMessageList } from '@mochi/web'
 import type { GameMessage, GetMessagesResponse } from '@/api/games'
 
 interface ChatMessageListProps {
@@ -51,11 +50,11 @@ export function ChatMessageList({
         const subject = isSent ? t`You` : message.name
         return san.includes('x') ? (
           <Trans>
-            {subject} took <span className="font-mono">{san}</span>
+            {subject} took <span className='font-mono'>{san}</span>
           </Trans>
         ) : (
           <Trans>
-            {subject} played <span className="font-mono">{san}</span>
+            {subject} played <span className='font-mono'>{san}</span>
           </Trans>
         )
       }}
