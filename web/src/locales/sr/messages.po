@@ -247,7 +247,7 @@ msgstr "Додај пријатеље"
 
 #: src/features/chess/components/new-game.tsx
 msgid "Add friends in the People app to start playing"
-msgstr "Додајте пријатеље у апликацији People да започнете игру"
+msgstr "Додајте пријатеље у апликацији Особе да започнете игру"
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx
 msgid "Add item..."
@@ -308,7 +308,7 @@ msgstr "Дошло је до неочекиване грешке"
 
 #: ../../../lib/web/src/features/accounts/types.ts
 msgid "Android push"
-msgstr "Push за Android"
+msgstr "Пуш за Android"
 
 #: ../../../lib/web/src/features/access/access-list.tsx
 #: ../../../lib/web/src/features/access/types.ts
@@ -375,7 +375,7 @@ msgstr "Аутентификовани корисници"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx
 msgid "Authenticator code"
-msgstr "Authenticator код"
+msgstr "Код аутентификатора"
 
 #: ../../../lib/web/src/components/entity/keyboard-shortcuts-help.tsx
 msgid "Available keyboard shortcuts"
@@ -1458,7 +1458,7 @@ msgstr "Означи све као прочитано"
 
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx
 msgid "Maximum length"
-msgstr "Najveća dužina"
+msgstr "Највећа дужина"
 
 #: ../../../lib/web/src/features/accounts/types.ts
 msgid "MCP server"
@@ -1490,7 +1490,7 @@ msgstr "Дозвола за микрофон је одбијена"
 
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx
 msgid "Minimum length"
-msgstr "Najmanja dužina"
+msgstr "Најмања дужина"
 
 #: ../../../lib/web/src/features/accounts/types.ts
 msgid "Mochi web"
@@ -1553,9 +1553,13 @@ msgid "Network error"
 msgstr "Грешка мреже"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx
-#: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "New"
 msgstr "Ново"
+
+#: ../../../lib/web/src/components/ui/sort-selector.tsx
+msgctxt "sort order"
+msgid "New"
+msgstr "Најновије"
 
 #: ../../../lib/web/src/components/game/game-empty-state.tsx
 #: ../../../lib/web/src/components/game/game-empty-state.tsx
@@ -1707,9 +1711,13 @@ msgstr "Ништа није пронађено"
 msgid "Notifications: {0}"
 msgstr "Обавештења: {0}"
 
+#: ../../../lib/web/src/hooks/use-field-type-labels.ts
+msgid "Number"
+msgstr "Број"
+
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
-#: ../../../lib/web/src/hooks/use-field-type-labels.ts
+msgctxt "item number"
 msgid "Number"
 msgstr "Број"
 
@@ -1807,7 +1815,7 @@ msgstr "Passkey-еви нису доступни у овом прегледач�
 
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx
 msgid "Pattern (regex)"
-msgstr "Šablon (regex)"
+msgstr "Шаблон (regex)"
 
 #: src/features/chess/lib/use-chess-piece-name.ts
 msgid "pawn"
@@ -1877,7 +1885,7 @@ msgstr "Унапреди у:"
 
 #: ../../../lib/web/src/components/ai-prompts-editor.tsx
 msgid "Prompt saved"
-msgstr "Prompt сачуван"
+msgstr "Упит сачуван"
 
 #: ../../../lib/web/src/components/entity/entity-object-detail-panel.tsx
 msgid "Properties"
@@ -1885,7 +1893,7 @@ msgstr "Својства"
 
 #: ../../../lib/web/src/features/accounts/types.ts
 msgid "Push notification"
-msgstr "Push обавештење"
+msgstr "Пуш обавештење"
 
 #: src/features/chess/lib/use-chess-piece-name.ts
 msgid "queen"
@@ -2156,7 +2164,7 @@ msgstr "Претраживање..."
 
 #: ../../../lib/web/src/hooks/use-field-type-labels.ts
 msgid "Select"
-msgstr "Изабери"
+msgstr "Избор"
 
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
 msgid "Select a field"
@@ -2331,7 +2339,7 @@ msgstr "Престани да пратиш"
 
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Subject"
-msgstr "Тема"
+msgstr "Корисник или група"
 
 #: ../../../lib/web/src/components/comment-composer.tsx
 msgid "Submit comment"
@@ -2355,9 +2363,13 @@ msgstr "Недеља"
 msgid "Switch to view 1-9"
 msgstr "Пребаци на приказ 1-9"
 
+#: ../../../lib/web/src/lib/preference-utils.ts
+#: ../../../lib/web/src/lib/preference-utils.ts
+msgid "System"
+msgstr "Систем"
+
 #: ../../../lib/web/src/components/audit-timeline.tsx
-#: ../../../lib/web/src/lib/preference-utils.ts
-#: ../../../lib/web/src/lib/preference-utils.ts
+msgctxt "actor"
 msgid "System"
 msgstr "Систем"
 
@@ -2410,7 +2422,7 @@ msgstr "На захтев за микрофон није одговорено"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "The passkey request was not answered"
-msgstr "На захтев за passkey није одговорено"
+msgstr "На захтев за приступни кључ није одговорено"
 
 #: ../../../lib/web/src/features/errors/general-error.tsx
 msgid "The requested content could not be found."
@@ -2422,7 +2434,7 @@ msgstr "Сервер је вратио веб страницу уместо по
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "This app is not allowed to use your passkey. Allow it in Settings, under Permissions."
-msgstr "Овој апликацији није дозвољено да користи ваш passkey. Дозволите јој то у Подешавањима, под Дозволе."
+msgstr "Овој апликацији није дозвољено да користи ваш приступни кључ. Дозволите јој то у Подешавањима, под Дозволе."
 
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx
 msgid "This permanently deletes the game and its chat. This cannot be undone."
@@ -2465,7 +2477,7 @@ msgstr "Превише захтева"
 
 #: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "Top"
-msgstr "Врх"
+msgstr "Најбоље"
 
 #: ../../../lib/web/src/components/travelling-picker.tsx
 msgid "Travelling"

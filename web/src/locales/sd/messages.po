@@ -247,7 +247,7 @@ msgstr "دوست شامل ڪريو"
 
 #: src/features/chess/components/new-game.tsx
 msgid "Add friends in the People app to start playing"
-msgstr "راند شروع ڪرڻ لاءِ People ايپ ۾ دوست شامل ڪريو"
+msgstr "راند شروع ڪرڻ لاءِ ماڻهو ايپ ۾ دوست شامل ڪريو"
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx
 msgid "Add item..."
@@ -375,7 +375,7 @@ msgstr "تصديق ٿيل صارف"
 
 #: ../../../lib/web/src/components/step-up-dialog.tsx
 msgid "Authenticator code"
-msgstr "Authenticator ڪوڊ"
+msgstr "تصديق ڪندڙ ڪوڊ"
 
 #: ../../../lib/web/src/components/entity/keyboard-shortcuts-help.tsx
 msgid "Available keyboard shortcuts"
@@ -1553,9 +1553,13 @@ msgid "Network error"
 msgstr "نيٽ ورڪ جي خرابي"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx
-#: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "New"
 msgstr "نئون"
+
+#: ../../../lib/web/src/components/ui/sort-selector.tsx
+msgctxt "sort order"
+msgid "New"
+msgstr "سڀ کان نوان"
 
 #: ../../../lib/web/src/components/game/game-empty-state.tsx
 #: ../../../lib/web/src/components/game/game-empty-state.tsx
@@ -1707,9 +1711,13 @@ msgstr "ڪجهه نه مليو"
 msgid "Notifications: {0}"
 msgstr "اطلاعون: {0}"
 
+#: ../../../lib/web/src/hooks/use-field-type-labels.ts
+msgid "Number"
+msgstr "نمبر"
+
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
-#: ../../../lib/web/src/hooks/use-field-type-labels.ts
+msgctxt "item number"
 msgid "Number"
 msgstr "نمبر"
 
@@ -1803,7 +1811,7 @@ msgstr "پاسي ڪيز"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "Passkeys are not available in this browser"
-msgstr "Passkeys هن برائوزر ۾ موجود ناهن"
+msgstr "پاس ڪيز هن برائوزر ۾ موجود ناهن"
 
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx
 msgid "Pattern (regex)"
@@ -2156,7 +2164,7 @@ msgstr "ڳولي رهيو آهي..."
 
 #: ../../../lib/web/src/hooks/use-field-type-labels.ts
 msgid "Select"
-msgstr "چونڊيو"
+msgstr "چونڊ"
 
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
 msgid "Select a field"
@@ -2331,7 +2339,7 @@ msgstr "ڏسڻ بند ڪريو"
 
 #: ../../../lib/web/src/features/access/access-list.tsx
 msgid "Subject"
-msgstr "موضوع"
+msgstr "صارف يا گروپ"
 
 #: ../../../lib/web/src/components/comment-composer.tsx
 msgid "Submit comment"
@@ -2355,9 +2363,13 @@ msgstr "آچر"
 msgid "Switch to view 1-9"
 msgstr "ڏيک 1-9 تي مٽايو"
 
+#: ../../../lib/web/src/lib/preference-utils.ts
+#: ../../../lib/web/src/lib/preference-utils.ts
+msgid "System"
+msgstr "سسٽم"
+
 #: ../../../lib/web/src/components/audit-timeline.tsx
-#: ../../../lib/web/src/lib/preference-utils.ts
-#: ../../../lib/web/src/lib/preference-utils.ts
+msgctxt "actor"
 msgid "System"
 msgstr "سسٽم"
 
@@ -2410,7 +2422,7 @@ msgstr "مائڪروفون درخواست جو جواب نه مليو"
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "The passkey request was not answered"
-msgstr "Passkey درخواست جو جواب نه مليو"
+msgstr "پاس ڪي درخواست جو جواب نه مليو"
 
 #: ../../../lib/web/src/features/errors/general-error.tsx
 msgid "The requested content could not be found."
@@ -2422,7 +2434,7 @@ msgstr "سرور ڊيٽا جي بجاءِ ويب پيج موٽايو."
 
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "This app is not allowed to use your passkey. Allow it in Settings, under Permissions."
-msgstr "هن ايپ کي توهان جي passkey استعمال ڪرڻ جي اجازت ناهي. سيٽنگن ۾، اجازتن هيٺ ان کي اجازت ڏيو."
+msgstr "هن ايپ کي توهان جي پاس ڪي استعمال ڪرڻ جي اجازت ناهي. سيٽنگن ۾، اجازتن هيٺ ان کي اجازت ڏيو."
 
 #: ../../../lib/web/src/components/game/game-end-dialogs.tsx
 msgid "This permanently deletes the game and its chat. This cannot be undone."
@@ -2465,7 +2477,7 @@ msgstr "تمام گهڻيون درخواستون"
 
 #: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "Top"
-msgstr "مٿي"
+msgstr "بهترين"
 
 #: ../../../lib/web/src/components/travelling-picker.tsx
 msgid "Travelling"
