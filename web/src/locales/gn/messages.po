@@ -94,9 +94,23 @@ msgstr "{count, plural, one {#min} other {#min}}"
 msgid "{count, plural, one {#w} other {#w}}"
 msgstr "{count, plural, one {#arap} other {#arap}}"
 
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+#: ../../../lib/web/src/components/calendar/tooltip.ts
+msgid "{day}, {from} to {to}"
+msgstr "{day}, {from} guive {to} peve"
+
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "{entityLabel} name"
 msgstr "{entityLabel} réra"
+
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+#: ../../../lib/web/src/components/calendar/tooltip.ts
+msgid "{from} to {to}"
+msgstr "{from} guive {to} peve"
+
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+msgid "{hidden, plural, one {+# more} other {+# more}}"
+msgstr "{hidden, plural, one {+# hetave} other {+# hetave}}"
 
 #: src/features/chess/components/chat-message-list.tsx
 msgid "{name} declined the draw"
@@ -270,6 +284,11 @@ msgstr "Embojuaju view"
 msgid "AI"
 msgstr "AI"
 
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "All day"
+msgstr "Ára pukukue"
+
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "Allow anyone to search for {entityLabel}"
 msgstr "Emoneĩ opavavépe oheka {entityLabel}"
@@ -336,6 +355,10 @@ msgstr "Añetehápe eikese? {opponentName} ogana ñembosarái."
 #: ../../../lib/web/src/components/ui/sort-direction-button.tsx
 msgid "Ascending"
 msgstr "Ojupíva"
+
+#: ../../../lib/web/src/components/timezone-select.tsx
+msgid "At sea"
+msgstr "Paraguasúpe"
 
 #: ../../../lib/web/src/components/comment-composer.tsx
 msgid "Attach comment files"
@@ -440,6 +463,10 @@ msgstr "Borde sa'y"
 msgid "Browser notifications"
 msgstr "Browser ñe'ẽmondokuéra"
 
+#: ../../../lib/web/src/features/accounts/types.ts
+msgid "Calendar server"
+msgstr "Arapapaha mohendaha"
+
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "Camera permission denied"
 msgstr "Cámara permiso ojeheja"
@@ -503,6 +530,11 @@ msgstr "Oñemoambue"
 msgid "Changed {field}"
 msgstr "{field} oñemoambue"
 
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "Changed occurrence"
+msgstr "Evento oñemoambuéva"
+
 #: src/features/chess/index.tsx
 msgid "Chat"
 msgstr "Chat"
@@ -544,6 +576,10 @@ msgstr "Ajedrez tablero. Eipuru flecha jehekombo'erã, Enter térã Space eipora
 #: src/features/chess/components/chess-board.tsx
 msgid "Chess board. Your turn. Use arrow keys to navigate, Enter or Space to select."
 msgstr "Ajedrez tablero. Ne mba'e japo. Eipuru flecha jehekombo'erã, Enter térã Space eiporavo hag̃ua."
+
+#: ../../../lib/web/src/components/ui/date-picker.tsx
+msgid "Choose a date"
+msgstr "Eiporavo peteĩ ára"
 
 #: ../../../lib/web/src/components/game/game-empty-state.tsx
 msgid "Choose a game from the sidebar or start a new one."
@@ -615,6 +651,7 @@ msgid "Collapse sidebar"
 msgstr "Mbohypy'ũ sidebar"
 
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx
+#: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "Colour"
 msgstr "Sa'y"
 
@@ -697,6 +734,10 @@ msgstr "Tenonde"
 msgid "Continue with {label}"
 msgstr "Eku tenonde {label} ndive"
 
+#: ../../../lib/web/src/features/accounts/account-add.tsx
+msgid "Continue with {providerLabel}"
+msgstr "Eku'e {providerLabel} ndive"
+
 #: ../../../lib/web/src/lib/toast-utils.ts
 msgid "Copied"
 msgstr "Oñemonguatia"
@@ -705,6 +746,10 @@ msgstr "Oñemonguatia"
 msgid "Copied to clipboard"
 msgstr "Oñekopiáma clipboard-pe"
 
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
 #: ../../../lib/web/src/components/ui/copy-button.tsx
 msgid "Copy"
 msgstr "Kopia"
@@ -1001,6 +1046,10 @@ msgstr "Email"
 #: ../../../lib/web/src/components/step-up-dialog.tsx
 msgid "Email code"
 msgstr "Código email"
+
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "Ends before it starts"
+msgstr "Opa oñepyrũ mboyve"
 
 #: ../../../lib/web/src/components/banner-section.tsx
 msgid "Enter banner text (markdown supported)..."
@@ -1447,6 +1496,10 @@ msgstr "Ñangareko"
 msgid "Monday"
 msgstr "Arakõi"
 
+#: ../../../lib/web/src/components/calendar/date-header.tsx
+msgid "Month"
+msgstr "Jasy"
+
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "More options"
 msgstr "Opción hetave"
@@ -1458,6 +1511,13 @@ msgstr "Oñemongu'e"
 #: ../../../lib/web/src/components/entity/entity-activity-list.tsx
 msgid "Moved {field}"
 msgstr "{field} oñemongu'e"
+
+#. placeholder {0}: dayName(current.day)
+#. placeholder {0}: dayName(dragging.day)
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "Moving to {0}"
+msgstr "Oñemongu'ehína {0}-pe"
 
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx
@@ -1500,6 +1560,14 @@ msgstr "Ñembosarái pyahu"
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx
 msgid "Next image"
 msgstr "Ta'anga oseguíva"
+
+#: ../../../lib/web/src/components/calendar/date-header.tsx
+msgid "Next month"
+msgstr "Jasy oúva"
+
+#: ../../../lib/web/src/components/calendar/date-header.tsx
+msgid "Next year"
+msgstr "Ary oúva"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx
 msgid "No {parentClassNames} to add to"
@@ -1772,6 +1840,14 @@ msgstr "Marandu ha comentarios"
 msgid "Previous image"
 msgstr "Ta'anga tenondete"
 
+#: ../../../lib/web/src/components/calendar/date-header.tsx
+msgid "Previous month"
+msgstr "Jasy ohasava'ekue"
+
+#: ../../../lib/web/src/components/calendar/date-header.tsx
+msgid "Previous year"
+msgstr "Ary ohasava'ekue"
+
 #: ../../../lib/web/src/components/server-documents-footer.tsx
 #: ../../../lib/web/src/features/document/document-page.tsx
 msgid "Privacy"
@@ -1927,6 +2003,11 @@ msgstr "Embohera jey columna"
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx
 msgid "Rename this board column"
 msgstr "Embohera jey ko board columna"
+
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "Repeats"
+msgstr "Oiko jey"
 
 #: ../../../lib/web/src/components/entity/entity-comment-thread.tsx
 #: ../../../lib/web/src/components/entity/entity-comment-thread.tsx
@@ -2568,6 +2649,10 @@ msgstr "Morotĩ"
 #: src/features/chess/components/chess-piece-icon.tsx
 msgid "White {0}"
 msgstr "Morotĩ {0}"
+
+#: ../../../lib/web/src/components/calendar/date-header.tsx
+msgid "Year"
+msgstr "Ary"
 
 #: src/features/chess/components/chat-message-list.tsx
 msgid "You"

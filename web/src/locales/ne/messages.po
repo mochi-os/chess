@@ -94,9 +94,23 @@ msgstr "{count, plural, one {#मि} other {#मि}}"
 msgid "{count, plural, one {#w} other {#w}}"
 msgstr "{count, plural, one {#हप्ता} other {#हप्ता}}"
 
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+#: ../../../lib/web/src/components/calendar/tooltip.ts
+msgid "{day}, {from} to {to}"
+msgstr "{day}, {from} देखि {to} सम्म"
+
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "{entityLabel} name"
 msgstr "{entityLabel} नाम"
+
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+#: ../../../lib/web/src/components/calendar/tooltip.ts
+msgid "{from} to {to}"
+msgstr "{from} देखि {to} सम्म"
+
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+msgid "{hidden, plural, one {+# more} other {+# more}}"
+msgstr "{hidden, plural, one {+# थप} other {+# थप}}"
 
 #: src/features/chess/components/chat-message-list.tsx
 msgid "{name} declined the draw"
@@ -233,7 +247,7 @@ msgstr "साथीहरू थप्नुहोस्"
 
 #: src/features/chess/components/new-game.tsx
 msgid "Add friends in the People app to start playing"
-msgstr "खेल सुरु गर्न People एपमा साथीहरू थप्नुहोस्"
+msgstr "खेल सुरु गर्न मानिसहरू एपमा साथीहरू थप्नुहोस्"
 
 #: ../../../lib/web/src/components/entity/entity-field-editor.tsx
 msgid "Add item..."
@@ -269,6 +283,11 @@ msgstr "दृश्य थप्नुहोस्"
 #: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "AI"
 msgstr "AI"
+
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "All day"
+msgstr "दिनभरि"
 
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "Allow anyone to search for {entityLabel}"
@@ -336,6 +355,10 @@ msgstr "के तपाईं हार स्वीकार गर्न न�
 #: ../../../lib/web/src/components/ui/sort-direction-button.tsx
 msgid "Ascending"
 msgstr "बढ्दो क्रम"
+
+#: ../../../lib/web/src/components/timezone-select.tsx
+msgid "At sea"
+msgstr "समुद्रमा"
 
 #: ../../../lib/web/src/components/comment-composer.tsx
 msgid "Attach comment files"
@@ -440,6 +463,10 @@ msgstr "किनाराको रङ"
 msgid "Browser notifications"
 msgstr "ब्राउजर सूचनाहरू"
 
+#: ../../../lib/web/src/features/accounts/types.ts
+msgid "Calendar server"
+msgstr "क्यालेन्डर सर्भर"
+
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "Camera permission denied"
 msgstr "क्यामेरा अनुमति अस्वीकृत"
@@ -503,6 +530,11 @@ msgstr "परिवर्तन गरियो"
 msgid "Changed {field}"
 msgstr "{field} परिवर्तन गरियो"
 
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "Changed occurrence"
+msgstr "परिवर्तित पुनरावृत्ति"
+
 #: src/features/chess/index.tsx
 msgid "Chat"
 msgstr "च्याट"
@@ -544,6 +576,10 @@ msgstr "चेस बोर्ड। नेभिगेट गर्न ती�
 #: src/features/chess/components/chess-board.tsx
 msgid "Chess board. Your turn. Use arrow keys to navigate, Enter or Space to select."
 msgstr "चेस बोर्ड। तपाईंको पालो। नेभिगेट गर्न तीर कुञ्जीहरू, चयन गर्न Enter वा Space प्रयोग गर्नुहोस्।"
+
+#: ../../../lib/web/src/components/ui/date-picker.tsx
+msgid "Choose a date"
+msgstr "मिति छान्नुहोस्"
 
 #: ../../../lib/web/src/components/game/game-empty-state.tsx
 msgid "Choose a game from the sidebar or start a new one."
@@ -615,6 +651,7 @@ msgid "Collapse sidebar"
 msgstr "साइडबार सङ्कुचन गर्नुहोस्"
 
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx
+#: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "Colour"
 msgstr "रङ"
 
@@ -697,6 +734,10 @@ msgstr "जारी राख्नुहोस्"
 msgid "Continue with {label}"
 msgstr "{label} सँग जारी राख्नुहोस्"
 
+#: ../../../lib/web/src/features/accounts/account-add.tsx
+msgid "Continue with {providerLabel}"
+msgstr "{providerLabel} सँग जारी राख्नुहोस्"
+
 #: ../../../lib/web/src/lib/toast-utils.ts
 msgid "Copied"
 msgstr "कपी गरियो"
@@ -705,6 +746,10 @@ msgstr "कपी गरियो"
 msgid "Copied to clipboard"
 msgstr "क्लिपबोर्डमा प्रतिलिपि गरियो"
 
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
 #: ../../../lib/web/src/components/ui/copy-button.tsx
 msgid "Copy"
 msgstr "प्रतिलिपि"
@@ -1001,6 +1046,10 @@ msgstr "इमेल"
 #: ../../../lib/web/src/components/step-up-dialog.tsx
 msgid "Email code"
 msgstr "इमेल कोड"
+
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "Ends before it starts"
+msgstr "सुरु हुनुअघि नै सकिन्छ"
 
 #: ../../../lib/web/src/components/banner-section.tsx
 msgid "Enter banner text (markdown supported)..."
@@ -1447,6 +1496,10 @@ msgstr "नियमन"
 msgid "Monday"
 msgstr "सोमबार"
 
+#: ../../../lib/web/src/components/calendar/date-header.tsx
+msgid "Month"
+msgstr "महिना"
+
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "More options"
 msgstr "थप विकल्पहरू"
@@ -1458,6 +1511,13 @@ msgstr "सारियो"
 #: ../../../lib/web/src/components/entity/entity-activity-list.tsx
 msgid "Moved {field}"
 msgstr "{field} सारियो"
+
+#. placeholder {0}: dayName(current.day)
+#. placeholder {0}: dayName(dragging.day)
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "Moving to {0}"
+msgstr "{0} मा सार्दै"
 
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx
@@ -1500,6 +1560,14 @@ msgstr "नयाँ खेल"
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx
 msgid "Next image"
 msgstr "अर्को तस्बिर"
+
+#: ../../../lib/web/src/components/calendar/date-header.tsx
+msgid "Next month"
+msgstr "अर्को महिना"
+
+#: ../../../lib/web/src/components/calendar/date-header.tsx
+msgid "Next year"
+msgstr "अर्को वर्ष"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx
 msgid "No {parentClassNames} to add to"
@@ -1739,7 +1807,7 @@ msgstr "प्यादा"
 
 #: ../../../lib/web/src/components/person-picker.tsx
 msgid "People"
-msgstr "पिपल"
+msgstr "मानिसहरू"
 
 #: ../../../lib/web/src/components/comment-composer.tsx
 #: ../../../lib/web/src/features/errors/general-error.tsx
@@ -1771,6 +1839,14 @@ msgstr "पोस्ट र टिप्पणीहरू"
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx
 msgid "Previous image"
 msgstr "अघिल्लो तस्बिर"
+
+#: ../../../lib/web/src/components/calendar/date-header.tsx
+msgid "Previous month"
+msgstr "अघिल्लो महिना"
+
+#: ../../../lib/web/src/components/calendar/date-header.tsx
+msgid "Previous year"
+msgstr "अघिल्लो वर्ष"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx
 #: ../../../lib/web/src/features/document/document-page.tsx
@@ -1927,6 +2003,11 @@ msgstr "स्तम्भको नाम परिवर्तन गर्न
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx
 msgid "Rename this board column"
 msgstr "यो बोर्ड स्तम्भको नाम परिवर्तन गर्नुहोस्"
+
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "Repeats"
+msgstr "दोहोरिन्छ"
 
 #: ../../../lib/web/src/components/entity/entity-comment-thread.tsx
 #: ../../../lib/web/src/components/entity/entity-comment-thread.tsx
@@ -2568,6 +2649,10 @@ msgstr "सेतो"
 #: src/features/chess/components/chess-piece-icon.tsx
 msgid "White {0}"
 msgstr "सेतो {0}"
+
+#: ../../../lib/web/src/components/calendar/date-header.tsx
+msgid "Year"
+msgstr "वर्ष"
 
 #: src/features/chess/components/chat-message-list.tsx
 msgid "You"

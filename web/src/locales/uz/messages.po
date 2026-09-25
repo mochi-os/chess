@@ -94,9 +94,23 @@ msgstr "{count, plural, one {#daq} other {#daq}}"
 msgid "{count, plural, one {#w} other {#w}}"
 msgstr "{count, plural, one {#hafta} other {#hafta}}"
 
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+#: ../../../lib/web/src/components/calendar/tooltip.ts
+msgid "{day}, {from} to {to}"
+msgstr "{day}, {from} – {to}"
+
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "{entityLabel} name"
 msgstr "{entityLabel} nomi"
+
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+#: ../../../lib/web/src/components/calendar/tooltip.ts
+msgid "{from} to {to}"
+msgstr "{from} – {to}"
+
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+msgid "{hidden, plural, one {+# more} other {+# more}}"
+msgstr "{hidden, plural, one {+# ta} other {+# ta}}"
 
 #: src/features/chess/components/chat-message-list.tsx
 msgid "{name} declined the draw"
@@ -270,6 +284,11 @@ msgstr "Koʻrinish qoʻshish"
 msgid "AI"
 msgstr "AI"
 
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "All day"
+msgstr "Kun boʻyi"
+
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "Allow anyone to search for {entityLabel}"
 msgstr "Hammaga {entityLabel} qidirishga ruxsat berish"
@@ -336,6 +355,10 @@ msgstr "Taslim boʻlishga ishonchingiz komilmi? {opponentName} oʻyinda gʻalaba
 #: ../../../lib/web/src/components/ui/sort-direction-button.tsx
 msgid "Ascending"
 msgstr "Oʻsish boʻyicha"
+
+#: ../../../lib/web/src/components/timezone-select.tsx
+msgid "At sea"
+msgstr "Dengizda"
 
 #: ../../../lib/web/src/components/comment-composer.tsx
 msgid "Attach comment files"
@@ -440,6 +463,10 @@ msgstr "Hoshiya rangi"
 msgid "Browser notifications"
 msgstr "Brauzer bildirishnomalari"
 
+#: ../../../lib/web/src/features/accounts/types.ts
+msgid "Calendar server"
+msgstr "Kalendar serveri"
+
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "Camera permission denied"
 msgstr "Kamera ruxsati rad etildi"
@@ -503,6 +530,11 @@ msgstr "Oʻzgartirildi"
 msgid "Changed {field}"
 msgstr "{field} oʻzgartirildi"
 
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "Changed occurrence"
+msgstr "Oʻzgartirilgan takror"
+
 #: src/features/chess/index.tsx
 msgid "Chat"
 msgstr "Suhbat"
@@ -544,6 +576,10 @@ msgstr "Shaxmat doskasi. Harakatlanish uchun strelka tugmalaridan, tanlash uchun
 #: src/features/chess/components/chess-board.tsx
 msgid "Chess board. Your turn. Use arrow keys to navigate, Enter or Space to select."
 msgstr "Shaxmat doskasi. Sizning yurishingiz. Harakatlanish uchun strelka tugmalaridan, tanlash uchun Enter yoki Space tugmalaridan foydalaning."
+
+#: ../../../lib/web/src/components/ui/date-picker.tsx
+msgid "Choose a date"
+msgstr "Sanani tanlang"
 
 #: ../../../lib/web/src/components/game/game-empty-state.tsx
 msgid "Choose a game from the sidebar or start a new one."
@@ -615,6 +651,7 @@ msgid "Collapse sidebar"
 msgstr "Yon panelni yigʻish"
 
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx
+#: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "Colour"
 msgstr "Rang"
 
@@ -697,6 +734,10 @@ msgstr "Davom etish"
 msgid "Continue with {label}"
 msgstr "{label} bilan davom etish"
 
+#: ../../../lib/web/src/features/accounts/account-add.tsx
+msgid "Continue with {providerLabel}"
+msgstr "{providerLabel} bilan davom etish"
+
 #: ../../../lib/web/src/lib/toast-utils.ts
 msgid "Copied"
 msgstr "Nusxalandi"
@@ -705,6 +746,10 @@ msgstr "Nusxalandi"
 msgid "Copied to clipboard"
 msgstr "Buferga nusxalandi"
 
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
 #: ../../../lib/web/src/components/ui/copy-button.tsx
 msgid "Copy"
 msgstr "Nusxalash"
@@ -1001,6 +1046,10 @@ msgstr "Email"
 #: ../../../lib/web/src/components/step-up-dialog.tsx
 msgid "Email code"
 msgstr "Email kodi"
+
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "Ends before it starts"
+msgstr "Boshlanishidan oldin tugaydi"
 
 #: ../../../lib/web/src/components/banner-section.tsx
 msgid "Enter banner text (markdown supported)..."
@@ -1447,6 +1496,10 @@ msgstr "Moderatsiya"
 msgid "Monday"
 msgstr "Dushanba"
 
+#: ../../../lib/web/src/components/calendar/date-header.tsx
+msgid "Month"
+msgstr "Oy"
+
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "More options"
 msgstr "Boshqa variantlar"
@@ -1458,6 +1511,13 @@ msgstr "Koʻchirildi"
 #: ../../../lib/web/src/components/entity/entity-activity-list.tsx
 msgid "Moved {field}"
 msgstr "{field} koʻchirildi"
+
+#. placeholder {0}: dayName(current.day)
+#. placeholder {0}: dayName(dragging.day)
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "Moving to {0}"
+msgstr "{0} sanasiga koʻchirilmoqda"
 
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx
@@ -1500,6 +1560,14 @@ msgstr "Yangi oʻyin"
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx
 msgid "Next image"
 msgstr "Keyingi rasm"
+
+#: ../../../lib/web/src/components/calendar/date-header.tsx
+msgid "Next month"
+msgstr "Keyingi oy"
+
+#: ../../../lib/web/src/components/calendar/date-header.tsx
+msgid "Next year"
+msgstr "Keyingi yil"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx
 msgid "No {parentClassNames} to add to"
@@ -1772,6 +1840,14 @@ msgstr "Postlar va izohlar"
 msgid "Previous image"
 msgstr "Oldingi rasm"
 
+#: ../../../lib/web/src/components/calendar/date-header.tsx
+msgid "Previous month"
+msgstr "Oldingi oy"
+
+#: ../../../lib/web/src/components/calendar/date-header.tsx
+msgid "Previous year"
+msgstr "Oldingi yil"
+
 #: ../../../lib/web/src/components/server-documents-footer.tsx
 #: ../../../lib/web/src/features/document/document-page.tsx
 msgid "Privacy"
@@ -1927,6 +2003,11 @@ msgstr "Ustun nomini oʻzgartirish"
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx
 msgid "Rename this board column"
 msgstr "Bu doska ustunining nomini oʻzgartirish"
+
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "Repeats"
+msgstr "Takrorlanadi"
 
 #: ../../../lib/web/src/components/entity/entity-comment-thread.tsx
 #: ../../../lib/web/src/components/entity/entity-comment-thread.tsx
@@ -2568,6 +2649,10 @@ msgstr "Oq"
 #: src/features/chess/components/chess-piece-icon.tsx
 msgid "White {0}"
 msgstr "Oq {0}"
+
+#: ../../../lib/web/src/components/calendar/date-header.tsx
+msgid "Year"
+msgstr "Yil"
 
 #: src/features/chess/components/chat-message-list.tsx
 msgid "You"

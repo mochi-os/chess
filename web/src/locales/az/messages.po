@@ -94,9 +94,23 @@ msgstr "{count, plural, one {#dəq} other {#dəq}}"
 msgid "{count, plural, one {#w} other {#w}}"
 msgstr "{count, plural, one {#h} other {#h}}"
 
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+#: ../../../lib/web/src/components/calendar/tooltip.ts
+msgid "{day}, {from} to {to}"
+msgstr "{day}, {from} ilə {to} arası"
+
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "{entityLabel} name"
 msgstr "{entityLabel} adı"
+
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+#: ../../../lib/web/src/components/calendar/tooltip.ts
+msgid "{from} to {to}"
+msgstr "{from} ilə {to} arası"
+
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+msgid "{hidden, plural, one {+# more} other {+# more}}"
+msgstr "{hidden, plural, one {+# daha} other {+# daha}}"
 
 #: src/features/chess/components/chat-message-list.tsx
 msgid "{name} declined the draw"
@@ -270,6 +284,11 @@ msgstr "Görünüş əlavə et"
 msgid "AI"
 msgstr "AI"
 
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "All day"
+msgstr "Bütün gün"
+
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "Allow anyone to search for {entityLabel}"
 msgstr "Hər kəsə {entityLabel} axtarmağa icazə ver"
@@ -336,6 +355,10 @@ msgstr "Təslim olmaq istədiyinizə əminsiniz? {opponentName} oyunu qazanacaq.
 #: ../../../lib/web/src/components/ui/sort-direction-button.tsx
 msgid "Ascending"
 msgstr "Artan"
+
+#: ../../../lib/web/src/components/timezone-select.tsx
+msgid "At sea"
+msgstr "Dənizdə"
 
 #: ../../../lib/web/src/components/comment-composer.tsx
 msgid "Attach comment files"
@@ -440,6 +463,10 @@ msgstr "Sərhəd rəngi"
 msgid "Browser notifications"
 msgstr "Brauzer bildirişləri"
 
+#: ../../../lib/web/src/features/accounts/types.ts
+msgid "Calendar server"
+msgstr "Təqvim serveri"
+
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "Camera permission denied"
 msgstr "Kamera icazəsi rədd edildi"
@@ -503,6 +530,11 @@ msgstr "Dəyişdirildi"
 msgid "Changed {field}"
 msgstr "{field} dəyişdirildi"
 
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "Changed occurrence"
+msgstr "Dəyişdirilmiş təkrar"
+
 #: src/features/chess/index.tsx
 msgid "Chat"
 msgstr "Söhbət"
@@ -544,6 +576,10 @@ msgstr "Şahmat lövhəsi. Naviqasiya üçün ox düymələrini, seçmək üçü
 #: src/features/chess/components/chess-board.tsx
 msgid "Chess board. Your turn. Use arrow keys to navigate, Enter or Space to select."
 msgstr "Şahmat lövhəsi. Sizin gediş. Naviqasiya üçün ox düymələrini, seçmək üçün Enter və ya Space istifadə edin."
+
+#: ../../../lib/web/src/components/ui/date-picker.tsx
+msgid "Choose a date"
+msgstr "Tarix seçin"
 
 #: ../../../lib/web/src/components/game/game-empty-state.tsx
 msgid "Choose a game from the sidebar or start a new one."
@@ -615,6 +651,7 @@ msgid "Collapse sidebar"
 msgstr "Yan paneli yığ"
 
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx
+#: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "Colour"
 msgstr "Rəng"
 
@@ -697,6 +734,10 @@ msgstr "Davam et"
 msgid "Continue with {label}"
 msgstr "{label} ilə davam edin"
 
+#: ../../../lib/web/src/features/accounts/account-add.tsx
+msgid "Continue with {providerLabel}"
+msgstr "{providerLabel} ilə davam et"
+
 #: ../../../lib/web/src/lib/toast-utils.ts
 msgid "Copied"
 msgstr "Kopyalandı"
@@ -705,6 +746,10 @@ msgstr "Kopyalandı"
 msgid "Copied to clipboard"
 msgstr "Mübadilə yaddaşına kopyalandı"
 
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
 #: ../../../lib/web/src/components/ui/copy-button.tsx
 msgid "Copy"
 msgstr "Kopyala"
@@ -1001,6 +1046,10 @@ msgstr "E-poçt"
 #: ../../../lib/web/src/components/step-up-dialog.tsx
 msgid "Email code"
 msgstr "E-poçt kodu"
+
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "Ends before it starts"
+msgstr "Başlamazdan əvvəl bitir"
 
 #: ../../../lib/web/src/components/banner-section.tsx
 msgid "Enter banner text (markdown supported)..."
@@ -1447,6 +1496,10 @@ msgstr "Moderasiya"
 msgid "Monday"
 msgstr "Bazar ertəsi"
 
+#: ../../../lib/web/src/components/calendar/date-header.tsx
+msgid "Month"
+msgstr "Ay"
+
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "More options"
 msgstr "Digər seçimlər"
@@ -1458,6 +1511,13 @@ msgstr "Köçürüldü"
 #: ../../../lib/web/src/components/entity/entity-activity-list.tsx
 msgid "Moved {field}"
 msgstr "{field} köçürüldü"
+
+#. placeholder {0}: dayName(current.day)
+#. placeholder {0}: dayName(dragging.day)
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "Moving to {0}"
+msgstr "{0} tarixinə köçürülür"
 
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx
@@ -1500,6 +1560,14 @@ msgstr "Yeni oyun"
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx
 msgid "Next image"
 msgstr "Növbəti şəkil"
+
+#: ../../../lib/web/src/components/calendar/date-header.tsx
+msgid "Next month"
+msgstr "Növbəti ay"
+
+#: ../../../lib/web/src/components/calendar/date-header.tsx
+msgid "Next year"
+msgstr "Növbəti il"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx
 msgid "No {parentClassNames} to add to"
@@ -1772,6 +1840,14 @@ msgstr "Postlar və şərhlər"
 msgid "Previous image"
 msgstr "Əvvəlki şəkil"
 
+#: ../../../lib/web/src/components/calendar/date-header.tsx
+msgid "Previous month"
+msgstr "Əvvəlki ay"
+
+#: ../../../lib/web/src/components/calendar/date-header.tsx
+msgid "Previous year"
+msgstr "Əvvəlki il"
+
 #: ../../../lib/web/src/components/server-documents-footer.tsx
 #: ../../../lib/web/src/features/document/document-page.tsx
 msgid "Privacy"
@@ -1927,6 +2003,11 @@ msgstr "Sütun adını dəyiş"
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx
 msgid "Rename this board column"
 msgstr "Bu lövhə sütununun adını dəyiş"
+
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "Repeats"
+msgstr "Təkrarlanır"
 
 #: ../../../lib/web/src/components/entity/entity-comment-thread.tsx
 #: ../../../lib/web/src/components/entity/entity-comment-thread.tsx
@@ -2377,7 +2458,7 @@ msgstr "Həddindən çox sorğu"
 
 #: ../../../lib/web/src/components/ui/sort-selector.tsx
 msgid "Top"
-msgstr "Mövzular"
+msgstr "Yuxarı"
 
 #: ../../../lib/web/src/components/travelling-picker.tsx
 msgid "Travelling"
@@ -2428,11 +2509,11 @@ msgstr "Girişə yönləndirmək mümkün olmadı. Yenidən cəhd edin."
 
 #: ../../../lib/web/src/components/notification-category-button.tsx
 msgid "Unassigned"
-msgstr "İcazəsiz giriş"
+msgstr "Təyin edilməyib"
 
 #: ../../../lib/web/src/components/attachment-image.tsx
 msgid "Unavailable"
-msgstr "Hesabın banını götür"
+msgstr "Əlçatan deyil"
 
 #: ../../../lib/web/src/lib/request.ts
 #: ../../../lib/web/src/lib/request.ts
@@ -2441,7 +2522,7 @@ msgstr "Gözlənilməz API xətası"
 
 #: ../../../lib/web/src/lib/preference-utils.ts
 msgid "United States"
-msgstr "Naməlum"
+msgstr "Birləşmiş Ştatlar"
 
 #: ../../../lib/web/src/components/audit-timeline.tsx
 #: ../../../lib/web/src/components/entity/entity-field-dialog.tsx
@@ -2451,22 +2532,22 @@ msgstr "Naməlum"
 #: ../../../lib/web/src/features/accounts/types.ts
 #: src/hooks/useGameWebsocket.ts
 msgid "Unknown"
-msgstr "Naməlum cihaz"
+msgstr "Naməlum"
 
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "Unsubscribe"
-msgstr "CRM-dən abunəlikdən çıx"
+msgstr "Abunəlikdən çıx"
 
 #: ../../../lib/web/src/components/entity/entity-object-links.tsx
 #: ../../../lib/web/src/lib/entity-title.ts
 msgid "Untitled"
-msgstr "Təsdiqlənməyib"
+msgstr "Başlıqsız"
 
 #: ../../../lib/web/src/components/entity/entity-activity-list.tsx
 #: ../../../lib/web/src/components/entity/entity-view-options-bar.tsx
 #: ../../../lib/web/src/components/entity/entity-view-sheet.tsx
 msgid "Updated"
-msgstr "Yenilənir..."
+msgstr "Yeniləndi"
 
 #: ../../../lib/web/src/components/entity/entity-activity-list.tsx
 msgid "Updated {field}"
@@ -2489,7 +2570,7 @@ msgstr "Giriş açarınızdan istifadə edin"
 #: ../../../lib/web/src/features/access/access-dialog.tsx
 #: ../../../lib/web/src/hooks/use-field-type-labels.ts
 msgid "User"
-msgstr "İstifadəçi yaradıldı"
+msgstr "İstifadəçi"
 
 #: ../../../lib/web/src/components/ai-prompts-editor.tsx
 msgid "Variables: {variables}"
@@ -2502,7 +2583,7 @@ msgstr "Yoxlama uğursuz oldu"
 #: ../../../lib/web/src/components/step-up-dialog.tsx
 #: ../../../lib/web/src/features/accounts/account-verify.tsx
 msgid "Verify"
-msgstr "DNS-i yoxla"
+msgstr "Yoxla"
 
 #: ../../../lib/web/src/features/accounts/account-verify.tsx
 msgid "Verify email address"
@@ -2569,6 +2650,10 @@ msgstr "Ağ"
 msgid "White {0}"
 msgstr "Ağ {0}"
 
+#: ../../../lib/web/src/components/calendar/date-header.tsx
+msgid "Year"
+msgstr "İl"
+
 #: src/features/chess/components/chat-message-list.tsx
 msgid "You"
 msgstr "Siz"
@@ -2591,7 +2676,7 @@ msgstr "Qoşmalarınız itiriləcək."
 
 #: src/features/chess/index.tsx
 msgid "Your move"
-msgstr "Sizin ödənişiniz"
+msgstr "Sizin gedişiniz"
 
 #: ../../../lib/web/src/components/comment-composer.tsx
 msgid "Your text and attachments will be lost."

@@ -4,7 +4,7 @@
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
 
 {
-	"version": "1.98",
+	"version": "1.99",
 	"label": "app.name",
 	"classes": ["game"],
 	"paths": ["chess"],
@@ -37,7 +37,7 @@
 		":game/-/messages": {"function": "action_messages"},
 		":game/-/send": {"function": "action_send"},
 		":game/-/move": {"function": "action_move"},
-		":game/-/user/:user/asset/:asset": {"function": "action_user_asset", "public": true},
+		":game/-/user/:user/asset/:asset": {"function": "action_user_asset", "public": true, "asset": true},
 		":game/-/resign": {"function": "action_resign"},
 		":game/-/draw-offer": {"function": "action_draw_offer"},
 		":game/-/draw-accept": {"function": "action_draw_accept"},

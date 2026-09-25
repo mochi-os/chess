@@ -94,9 +94,23 @@ msgstr "{count, plural, one {#دق} other {#دق}}"
 msgid "{count, plural, one {#w} other {#w}}"
 msgstr "{count, plural, one {#اون} other {#اون}}"
 
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+#: ../../../lib/web/src/components/calendar/tooltip.ts
+msgid "{day}, {from} to {to}"
+msgstr "{day}، {from} تر {to}"
+
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "{entityLabel} name"
 msgstr "د {entityLabel} نوم"
+
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+#: ../../../lib/web/src/components/calendar/tooltip.ts
+msgid "{from} to {to}"
+msgstr "{from} تر {to}"
+
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+msgid "{hidden, plural, one {+# more} other {+# more}}"
+msgstr "{hidden, plural, one {+# نور} other {+# نور}}"
 
 #: src/features/chess/components/chat-message-list.tsx
 msgid "{name} declined the draw"
@@ -270,6 +284,11 @@ msgstr "لید اضافه کړئ"
 msgid "AI"
 msgstr "AI"
 
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "All day"
+msgstr "ټوله ورځ"
+
 #: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "Allow anyone to search for {entityLabel}"
 msgstr "هر چا ته اجازه ورکړئ چې {entityLabel} ولټوي"
@@ -336,6 +355,10 @@ msgstr "ایا تاسو ډاډه یاست چې غواړئ استعفا ورکړ�
 #: ../../../lib/web/src/components/ui/sort-direction-button.tsx
 msgid "Ascending"
 msgstr "د کم څخه ډېر"
+
+#: ../../../lib/web/src/components/timezone-select.tsx
+msgid "At sea"
+msgstr "په سمندر کې"
 
 #: ../../../lib/web/src/components/comment-composer.tsx
 msgid "Attach comment files"
@@ -440,6 +463,10 @@ msgstr "د څنډې رنګ"
 msgid "Browser notifications"
 msgstr "د براوزر خبرتیاوې"
 
+#: ../../../lib/web/src/features/accounts/types.ts
+msgid "Calendar server"
+msgstr "د کليز سرور"
+
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "Camera permission denied"
 msgstr "د کیمرې اجازه رد شوه"
@@ -503,6 +530,11 @@ msgstr "بدل شو"
 msgid "Changed {field}"
 msgstr "{field} بدل شو"
 
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "Changed occurrence"
+msgstr "بدله شوې پیښه"
+
 #: src/features/chess/index.tsx
 msgid "Chat"
 msgstr "چټ"
@@ -544,6 +576,10 @@ msgstr "د شطرنج تخته. د حرکت لپاره د تیرونو کیلۍ 
 #: src/features/chess/components/chess-board.tsx
 msgid "Chess board. Your turn. Use arrow keys to navigate, Enter or Space to select."
 msgstr "د شطرنج تخته. ستاسو وار. د حرکت لپاره د تیرونو کیلۍ وکاروئ، د ټاکلو لپاره Enter یا Space وکاروئ."
+
+#: ../../../lib/web/src/components/ui/date-picker.tsx
+msgid "Choose a date"
+msgstr "نېټه وټاکئ"
 
 #: ../../../lib/web/src/components/game/game-empty-state.tsx
 msgid "Choose a game from the sidebar or start a new one."
@@ -615,6 +651,7 @@ msgid "Collapse sidebar"
 msgstr "د څنګې پټۍ راټوله کړئ"
 
 #: ../../../lib/web/src/components/entity/entity-option-dialog.tsx
+#: ../../../lib/web/src/components/ui/create-entity-dialog.tsx
 msgid "Colour"
 msgstr "رنګ"
 
@@ -697,6 +734,10 @@ msgstr "دوام ورکړئ"
 msgid "Continue with {label}"
 msgstr "د {label} سره دوام ورکړئ"
 
+#: ../../../lib/web/src/features/accounts/account-add.tsx
+msgid "Continue with {providerLabel}"
+msgstr "د {providerLabel} سره دوام ورکړئ"
+
 #: ../../../lib/web/src/lib/toast-utils.ts
 msgid "Copied"
 msgstr "کاپي شو"
@@ -705,6 +746,10 @@ msgstr "کاپي شو"
 msgid "Copied to clipboard"
 msgstr "په کلیپ بورډ کاپي شو"
 
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
 #: ../../../lib/web/src/components/ui/copy-button.tsx
 msgid "Copy"
 msgstr "کاپي کړئ"
@@ -1001,6 +1046,10 @@ msgstr "بریښنالیک"
 #: ../../../lib/web/src/components/step-up-dialog.tsx
 msgid "Email code"
 msgstr "د بریښنالیک کوډ"
+
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "Ends before it starts"
+msgstr "له پیل مخکې پای ته رسېږي"
 
 #: ../../../lib/web/src/components/banner-section.tsx
 msgid "Enter banner text (markdown supported)..."
@@ -1447,6 +1496,10 @@ msgstr "څارنه"
 msgid "Monday"
 msgstr "دوشنبه"
 
+#: ../../../lib/web/src/components/calendar/date-header.tsx
+msgid "Month"
+msgstr "میاشت"
+
 #: ../../../lib/web/src/components/options-menu.tsx
 msgid "More options"
 msgstr "نور انتخابونه"
@@ -1458,6 +1511,13 @@ msgstr "لېږدول شو"
 #: ../../../lib/web/src/components/entity/entity-activity-list.tsx
 msgid "Moved {field}"
 msgstr "{field} لېږدول شو"
+
+#. placeholder {0}: dayName(current.day)
+#. placeholder {0}: dayName(dragging.day)
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "Moving to {0}"
+msgstr "{0} ته لېږدول"
 
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx
@@ -1500,6 +1560,14 @@ msgstr "نوې لوبه"
 #: ../../../lib/web/src/components/ui/image-lightbox.tsx
 msgid "Next image"
 msgstr "بله انځور"
+
+#: ../../../lib/web/src/components/calendar/date-header.tsx
+msgid "Next month"
+msgstr "راتلونکې میاشت"
+
+#: ../../../lib/web/src/components/calendar/date-header.tsx
+msgid "Next year"
+msgstr "راتلونکی کال"
 
 #: ../../../lib/web/src/components/entity/entity-create-object-dialog.tsx
 msgid "No {parentClassNames} to add to"
@@ -1772,6 +1840,14 @@ msgstr "لیکنې او تبصرې"
 msgid "Previous image"
 msgstr "تېر انځور"
 
+#: ../../../lib/web/src/components/calendar/date-header.tsx
+msgid "Previous month"
+msgstr "تېره میاشت"
+
+#: ../../../lib/web/src/components/calendar/date-header.tsx
+msgid "Previous year"
+msgstr "تېر کال"
+
 #: ../../../lib/web/src/components/server-documents-footer.tsx
 #: ../../../lib/web/src/features/document/document-page.tsx
 msgid "Privacy"
@@ -1927,6 +2003,11 @@ msgstr "د کالم نوم بدل کړئ"
 #: ../../../lib/web/src/components/entity/entity-board-column.tsx
 msgid "Rename this board column"
 msgstr "د دې بورډ کالم بیا نومول"
+
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "Repeats"
+msgstr "تکراریږي"
 
 #: ../../../lib/web/src/components/entity/entity-comment-thread.tsx
 #: ../../../lib/web/src/components/entity/entity-comment-thread.tsx
@@ -2568,6 +2649,10 @@ msgstr "سپین"
 #: src/features/chess/components/chess-piece-icon.tsx
 msgid "White {0}"
 msgstr "سپین {0}"
+
+#: ../../../lib/web/src/components/calendar/date-header.tsx
+msgid "Year"
+msgstr "کال"
 
 #: src/features/chess/components/chat-message-list.tsx
 msgid "You"
