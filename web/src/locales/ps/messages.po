@@ -26,6 +26,11 @@ msgstr "(سمول شوی)"
 msgid "(expand)"
 msgstr "(پراخول)"
 
+#: ../../../lib/web/src/components/calendar/event-title.tsx
+#: ../../../lib/web/src/components/calendar/tooltip.ts
+msgid "(No title)"
+msgstr "(بې سرلیکه)"
+
 #: ../../../lib/web/src/components/member-list.tsx
 msgid "(you)"
 msgstr "(تاسو)"
@@ -108,13 +113,10 @@ msgid "{entityLabel} name"
 msgstr "د {entityLabel} نوم"
 
 #: ../../../lib/web/src/components/calendar/time-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
 #: ../../../lib/web/src/components/calendar/tooltip.ts
 msgid "{from} to {to}"
 msgstr "{from} تر {to}"
-
-#: ../../../lib/web/src/components/calendar/month-grid.tsx
-msgid "{hidden, plural, one {+# more} other {+# more}}"
-msgstr "{hidden, plural, one {+# نور} other {+# نور}}"
 
 #: src/features/chess/components/chat-message-list.tsx
 msgid "{name} declined the draw"
@@ -511,6 +513,11 @@ msgstr "ځواب لغوه کړه"
 #: ../../../lib/web/src/lib/shell-errors.ts
 msgid "Cancelled"
 msgstr "لغوه شو"
+
+#: ../../../lib/web/src/components/calendar/status.ts
+msgctxt "event status"
+msgid "Cancelled"
+msgstr "لغوه شوی"
 
 #: ../../../lib/web/src/components/attachment-composer.tsx
 #: ../../../lib/web/src/components/attachment-composer.tsx
@@ -1957,6 +1964,11 @@ msgstr "اړوندتیا {relevance}، لېوالتیا {weight}"
 msgid "Rematch"
 msgstr "بیا لوبه"
 
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "Reminder"
+msgstr "یادونه"
+
 #: ../../../lib/web/src/components/attachment-composer.tsx
 #: ../../../lib/web/src/components/attachment-composer.tsx
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx
@@ -2384,6 +2396,11 @@ msgstr "ټګ باید ۵۰ توري یا لږ وي"
 #: ../../../lib/web/src/components/post-tags.tsx
 msgid "Tags"
 msgstr "ټاګونه"
+
+#: ../../../lib/web/src/components/calendar/status.ts
+msgctxt "event status"
+msgid "Tentative"
+msgstr "لنډمهاله"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx
 #: ../../../lib/web/src/features/document/document-page.tsx

@@ -26,6 +26,11 @@ msgstr "(измењено)"
 msgid "(expand)"
 msgstr "(прошири)"
 
+#: ../../../lib/web/src/components/calendar/event-title.tsx
+#: ../../../lib/web/src/components/calendar/tooltip.ts
+msgid "(No title)"
+msgstr "(Без наслова)"
+
 #: ../../../lib/web/src/components/member-list.tsx
 msgid "(you)"
 msgstr "(ви)"
@@ -108,13 +113,10 @@ msgid "{entityLabel} name"
 msgstr "Назив {entityLabel}"
 
 #: ../../../lib/web/src/components/calendar/time-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
 #: ../../../lib/web/src/components/calendar/tooltip.ts
 msgid "{from} to {to}"
 msgstr "од {from} до {to}"
-
-#: ../../../lib/web/src/components/calendar/month-grid.tsx
-msgid "{hidden, plural, one {+# more} other {+# more}}"
-msgstr "{hidden, plural, one {+# више} few {+# више} other {+# више}}"
 
 #: src/features/chess/components/chat-message-list.tsx
 msgid "{name} declined the draw"
@@ -509,6 +511,11 @@ msgstr "Откажи одговор"
 #: ../../../lib/web/src/lib/shell-errors.ts
 #: ../../../lib/web/src/lib/shell-errors.ts
 #: ../../../lib/web/src/lib/shell-errors.ts
+msgid "Cancelled"
+msgstr "Отказано"
+
+#: ../../../lib/web/src/components/calendar/status.ts
+msgctxt "event status"
 msgid "Cancelled"
 msgstr "Отказано"
 
@@ -1957,6 +1964,11 @@ msgstr "Релевантност {relevance}, интересовање {weight}"
 msgid "Rematch"
 msgstr "Реванш"
 
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "Reminder"
+msgstr "Подсетник"
+
 #: ../../../lib/web/src/components/attachment-composer.tsx
 #: ../../../lib/web/src/components/attachment-composer.tsx
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx
@@ -2384,6 +2396,11 @@ msgstr "Ознака сме имати највише 50 знакова"
 #: ../../../lib/web/src/components/post-tags.tsx
 msgid "Tags"
 msgstr "Ознаке"
+
+#: ../../../lib/web/src/components/calendar/status.ts
+msgctxt "event status"
+msgid "Tentative"
+msgstr "Непотврђено"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx
 #: ../../../lib/web/src/features/document/document-page.tsx

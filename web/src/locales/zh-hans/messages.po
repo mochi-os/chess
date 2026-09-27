@@ -26,6 +26,11 @@ msgstr "(已编辑)"
 msgid "(expand)"
 msgstr "(展开)"
 
+#: ../../../lib/web/src/components/calendar/event-title.tsx
+#: ../../../lib/web/src/components/calendar/tooltip.ts
+msgid "(No title)"
+msgstr "（无标题）"
+
 #: ../../../lib/web/src/components/member-list.tsx
 msgid "(you)"
 msgstr "(你)"
@@ -108,13 +113,10 @@ msgid "{entityLabel} name"
 msgstr "{entityLabel}名称"
 
 #: ../../../lib/web/src/components/calendar/time-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
 #: ../../../lib/web/src/components/calendar/tooltip.ts
 msgid "{from} to {to}"
 msgstr "{from} 至 {to}"
-
-#: ../../../lib/web/src/components/calendar/month-grid.tsx
-msgid "{hidden, plural, one {+# more} other {+# more}}"
-msgstr "{hidden, plural, other {+# 个}}"
 
 #: src/features/chess/components/chat-message-list.tsx
 msgid "{name} declined the draw"
@@ -509,6 +511,11 @@ msgstr "取消回复"
 #: ../../../lib/web/src/lib/shell-errors.ts
 #: ../../../lib/web/src/lib/shell-errors.ts
 #: ../../../lib/web/src/lib/shell-errors.ts
+msgid "Cancelled"
+msgstr "已取消"
+
+#: ../../../lib/web/src/components/calendar/status.ts
+msgctxt "event status"
 msgid "Cancelled"
 msgstr "已取消"
 
@@ -1957,6 +1964,11 @@ msgstr "相关性 {relevance}，兴趣 {weight}"
 msgid "Rematch"
 msgstr "再来一局"
 
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "Reminder"
+msgstr "提醒"
+
 #: ../../../lib/web/src/components/attachment-composer.tsx
 #: ../../../lib/web/src/components/attachment-composer.tsx
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx
@@ -2384,6 +2396,11 @@ msgstr "标签不得超过 50 个字符"
 #: ../../../lib/web/src/components/post-tags.tsx
 msgid "Tags"
 msgstr "标签"
+
+#: ../../../lib/web/src/components/calendar/status.ts
+msgctxt "event status"
+msgid "Tentative"
+msgstr "暂定"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx
 #: ../../../lib/web/src/features/document/document-page.tsx

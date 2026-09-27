@@ -26,6 +26,11 @@ msgstr "(відредаговано)"
 msgid "(expand)"
 msgstr "(розгорнути)"
 
+#: ../../../lib/web/src/components/calendar/event-title.tsx
+#: ../../../lib/web/src/components/calendar/tooltip.ts
+msgid "(No title)"
+msgstr "(Без назви)"
+
 #: ../../../lib/web/src/components/member-list.tsx
 msgid "(you)"
 msgstr "(ви)"
@@ -108,13 +113,10 @@ msgid "{entityLabel} name"
 msgstr "Назва {entityLabel}"
 
 #: ../../../lib/web/src/components/calendar/time-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
 #: ../../../lib/web/src/components/calendar/tooltip.ts
 msgid "{from} to {to}"
 msgstr "з {from} до {to}"
-
-#: ../../../lib/web/src/components/calendar/month-grid.tsx
-msgid "{hidden, plural, one {+# more} other {+# more}}"
-msgstr "{hidden, plural, one {ще +#} few {ще +#} many {ще +#} other {ще +#}}"
 
 #: src/features/chess/components/chat-message-list.tsx
 msgid "{name} declined the draw"
@@ -509,6 +511,11 @@ msgstr "Скасувати відповідь"
 #: ../../../lib/web/src/lib/shell-errors.ts
 #: ../../../lib/web/src/lib/shell-errors.ts
 #: ../../../lib/web/src/lib/shell-errors.ts
+msgid "Cancelled"
+msgstr "Скасовано"
+
+#: ../../../lib/web/src/components/calendar/status.ts
+msgctxt "event status"
 msgid "Cancelled"
 msgstr "Скасовано"
 
@@ -1957,6 +1964,11 @@ msgstr "Релевантність {relevance}, інтерес {weight}"
 msgid "Rematch"
 msgstr "Реванш"
 
+#: ../../../lib/web/src/components/calendar/month-grid.tsx
+#: ../../../lib/web/src/components/calendar/time-grid.tsx
+msgid "Reminder"
+msgstr "Нагадування"
+
 #: ../../../lib/web/src/components/attachment-composer.tsx
 #: ../../../lib/web/src/components/attachment-composer.tsx
 #: ../../../lib/web/src/components/entity/add-field-dialog.tsx
@@ -2384,6 +2396,11 @@ msgstr "Тег має бути не довшим за 50 символів"
 #: ../../../lib/web/src/components/post-tags.tsx
 msgid "Tags"
 msgstr "Теги"
+
+#: ../../../lib/web/src/components/calendar/status.ts
+msgctxt "event status"
+msgid "Tentative"
+msgstr "Під питанням"
 
 #: ../../../lib/web/src/components/server-documents-footer.tsx
 #: ../../../lib/web/src/features/document/document-page.tsx
