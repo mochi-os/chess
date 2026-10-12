@@ -35,3 +35,28 @@ export function resume(fen: string, pgn: string): Chess {
   positioned.load(fen)
   return positioned
 }
+
+/**
+ * The squares of the last move played, or null when the record has none.
+ *
+ * Read from the record rather than remembered from the player's own click: a
+ * remembered move is only ever this player's, so the opponent's was never
+ * marked, and it had to be cleared on every position change, which the
+ * player's own move also is.
+ *
+ * A record that does not replay to this position gives null, as in resume():
+ * marking a move from some other game's history is worse than marking none.
+ */
+export function lastMove(
+  fen: string,
+  pgn: string
+): { from: string; to: string } | null {
+  try {
+    const moves = resume(fen, pgn).history({ verbose: true })
+    const last = moves[moves.length - 1]
+    return last ? { from: last.from, to: last.to } : null
+  } catch {
+    // A corrupt FEN. The view already renders its own fallback for that.
+    return null
+  }
+}

@@ -37,7 +37,7 @@ import {
   RotateCcw,
   MessageCircle,
 } from 'lucide-react'
-import { resume } from '@/lib/pgn'
+import { lastMove as lastMoveOf, resume } from '@/lib/pgn'
 import { useSidebarContext } from '@/context/sidebar-context'
 import { setLastGame } from '@/hooks/useGameStorage'
 import { useGameWebsocket } from '@/hooks/useGameWebsocket'
@@ -69,9 +69,6 @@ export function ChessGame() {
   const [showResignDialog, setShowResignDialog] = useState(false)
   const [showDeleteDialog, setShowDeleteDialog] = useState(false)
   const [showMobileChat, setShowMobileChat] = useState(false)
-  const [lastMove, setLastMove] = useState<{ from: string; to: string } | null>(
-    null
-  )
   const { identity: currentUserIdentity, initialize: initializeAuth } =
     useAuthStore()
 
@@ -100,13 +97,6 @@ export function ChessGame() {
     [games, selectedGameId]
   )
 
-  // Cleared on switch and on the game's own position change: the marker is set
-  // only from our own play, so it is stale both on the next game (drawn
-  // wherever a stone/piece happens to sit) and once the opponent replies.
-  useEffect(() => {
-    setLastMove(null)
-  }, [selectedGameId, selectedGame?.fen])
-
   // Game detail
   const {
     data: gameDetail,
@@ -133,6 +123,13 @@ export function ChessGame() {
       return null
     }
   }, [game?.fen])
+
+  // From the record, so it marks the opponent's move as well as ours and
+  // follows the game that is open.
+  const lastMove = useMemo(
+    () => (game?.fen ? lastMoveOf(game.fen, game.pgn) : null),
+    [game?.fen, game?.pgn]
+  )
 
   const myColor =
     game && myIdentity ? (game.white === myIdentity ? 'w' : 'b') : 'w'
@@ -250,7 +247,6 @@ export function ChessGame() {
         moveStatus = 'draw'
       }
 
-      setLastMove({ from, to })
       moveMutation.mutate({
         gameId: selectedGame.id,
         from,

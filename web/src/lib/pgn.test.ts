@@ -4,7 +4,7 @@
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
 import { Chess } from 'chess.js'
 import { describe, it, expect } from 'vitest'
-import { resume } from './pgn'
+import { lastMove, resume } from './pgn'
 
 // A three-move opening, and the position it reaches. Built rather than pasted
 // so the FEN cannot drift from the moves it is supposed to describe.
@@ -60,5 +60,38 @@ describe('resume', () => {
     const game = resume(fresh, '')
     game.move('e4')
     expect(game.history()).toEqual(['e4'])
+  })
+})
+
+describe('lastMove', () => {
+  it('gives the squares of the last move in the record', () => {
+    const { fen, pgn } = opening()
+    expect(lastMove(fen, pgn)).toEqual({ from: 'g1', to: 'f3' })
+  })
+
+  it("gives the opponent's move as readily as the player's own", () => {
+    // Black's reply is the last move here. Nothing in the answer depends on
+    // who is looking at the board.
+    const built = new Chess()
+    built.move('e4')
+    built.move('e5')
+    expect(lastMove(built.fen(), built.pgn())).toEqual({ from: 'e7', to: 'e5' })
+  })
+
+  it('gives nothing before the first move', () => {
+    const fresh = new Chess()
+    expect(lastMove(fresh.fen(), '')).toBeNull()
+    expect(lastMove(fresh.fen(), fresh.pgn())).toBeNull()
+  })
+
+  it('gives nothing when the record is not this position', () => {
+    const { fen } = opening()
+    const other = new Chess()
+    other.move('d4')
+    expect(lastMove(fen, other.pgn())).toBeNull()
+  })
+
+  it('gives nothing for a corrupt position rather than throwing', () => {
+    expect(lastMove('not a fen', '')).toBeNull()
   })
 })
