@@ -27,6 +27,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
   getAppPath,
+  openGame,
 } from '@mochi/web'
 import { Chess } from 'chess.js'
 import {
@@ -92,11 +93,6 @@ export function ChessGame() {
     [gamesQuery.data?.games]
   )
 
-  const selectedGame = useMemo(
-    () => games.find((g) => g.id === selectedGameId) ?? null,
-    [games, selectedGameId]
-  )
-
   // Game detail
   const {
     data: gameDetail,
@@ -107,6 +103,13 @@ export function ChessGame() {
 
   const game = gameDetail?.game
   const myIdentity = gameDetail?.identity ?? currentUserIdentity
+
+  // From the detail row while the list catches up, as after creating a game.
+  const listBehind = gamesQuery.isFetching || gamesQuery.isError
+  const selectedGame = useMemo(
+    () => openGame(games, selectedGameId, game, gameDetailError, listBehind),
+    [games, selectedGameId, game, gameDetailError, listBehind]
+  )
 
   // Chess state from game detail FEN
   const chess = useMemo(() => {
@@ -303,7 +306,10 @@ export function ChessGame() {
   }
 
   // Loading / empty
-  if (selectedGameId && gamesQuery.isLoading) {
+  if (
+    selectedGameId &&
+    (gamesQuery.isLoading || (!selectedGame && isLoadingDetail))
+  ) {
     return (
       <GamePlaceholderPage title={t`Chess`} mainClassName='p-4'>
         <Skeleton className='h-8 w-48' />

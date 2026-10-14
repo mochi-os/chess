@@ -3,8 +3,10 @@
 // This file is part of Mochi, licensed under the GNU AGPL v3 with the
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
 import { createFileRoute } from '@tanstack/react-router'
+import { remountPerGame } from '@mochi/web'
 import { ChessGame } from '@/features/chess'
 
 export const Route = createFileRoute('/_authenticated/$gameId')({
+  remountDeps: remountPerGame,
   component: ChessGame,
 })
