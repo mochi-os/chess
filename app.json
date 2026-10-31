@@ -11,7 +11,8 @@
 	"services": ["chess"],
 
 	"architecture": {"engine": "starlark", "version": 4},
-	"execute": ["chess.star"],
+	"execute": ["lib/assets.star", "chess.star"],
+	"require": {"version": {"minimum": "0.4.244"}},
 
 	"database": {
 		"schema": 4,
