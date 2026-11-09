@@ -82,7 +82,7 @@ export function NewGame() {
           <Trans>Add friends in the People app to start playing</Trans>
         ),
         addFriends: <Trans>Add friends</Trans>,
-        placeholder: t`Select a friend...`,
+        placeholder: t`Select a friend`,
         emptyMessage: t`No friends found`,
         cancel: <Trans>Cancel</Trans>,
         submit: t`Start game`,
