@@ -28,6 +28,7 @@ import {
   DropdownMenuTrigger,
   getAppPath,
   openGame,
+  tryPath,
 } from '@mochi/web'
 import { Chess } from 'chess.js'
 import {
@@ -38,6 +39,7 @@ import {
   RotateCcw,
   MessageCircle,
 } from 'lucide-react'
+import endpoints from '@/api/endpoints'
 import { lastMove as lastMoveOf, resume } from '@/lib/pgn'
 import { useSidebarContext } from '@/context/sidebar-context'
 import { setLastGame } from '@/hooks/useGameStorage'
@@ -384,10 +386,16 @@ export function ChessGame() {
       : game.identity
     : ''
   // The opponent's avatar and style come through this app's own game-bound
-  // player-asset route, never a cross-app fetch from the people app.
+  // player-asset route, never a cross-app fetch from the people app. The
+  // opponent's id comes from their server, so it goes in through path, and an
+  // address it would take out of its segment is left out.
   const opponentAssetUrl = (asset: 'avatar' | 'style') =>
     opponentFingerprint && selectedGameId
-      ? `${getAppPath()}/${selectedGameId}/-/user/${opponentFingerprint}/asset/${asset}`
+      ? (tryPath(
+          () =>
+            getAppPath() +
+            endpoints.game.asset(selectedGameId, opponentFingerprint, asset)
+        ) ?? null)
       : null
 
   return (
