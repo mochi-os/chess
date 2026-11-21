@@ -17,6 +17,7 @@ const RANKS = ['8', '7', '6', '5', '4', '3', '2', '1']
 
 interface ChessBoardProps {
   fen: string
+  pgn: string
   myColor: 'w' | 'b'
   isMyTurn: boolean
   gameStatus: string
@@ -26,6 +27,7 @@ interface ChessBoardProps {
 
 export function ChessBoard({
   fen,
+  pgn,
   myColor,
   isMyTurn,
   gameStatus,
@@ -59,8 +61,8 @@ export function ChessBoard({
   const isActive = gameStatus === 'active'
   const inCheck = chess?.isCheck() ?? false
   const capturedPiecesSummary = useMemo(
-    () => getCapturedPiecesSummary(fen),
-    [fen]
+    () => getCapturedPiecesSummary(fen, pgn),
+    [fen, pgn]
   )
   const kingInCheckSquare = useMemo(() => {
     if (!inCheck) return null

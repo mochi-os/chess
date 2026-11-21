@@ -521,6 +521,7 @@ export function ChessGame() {
                   {chess ? (
                     <ChessBoard
                       fen={game.fen}
+                      pgn={game.pgn}
                       myColor={myColor}
                       isMyTurn={isMyTurn}
                       gameStatus={game.status}
