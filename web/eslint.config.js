@@ -10,11 +10,8 @@ import pluginQuery from '@tanstack/eslint-plugin-query'
 import reactHooks from 'eslint-plugin-react-hooks'
 import reactRefresh from 'eslint-plugin-react-refresh'
 import { defineConfig } from 'eslint/config'
-import { createRequire } from 'module'
 import tseslint from 'typescript-eslint'
 import { fileURLToPath } from 'url'
-
-const require = createRequire(import.meta.url)
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)

@@ -86,7 +86,6 @@ export function NewGame() {
         emptyMessage: t`No friends found`,
         cancel: <Trans>Cancel</Trans>,
         submit: t`Start game`,
-        submitting: t`Creating...`,
       }}
     />
   )

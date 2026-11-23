@@ -14,9 +14,9 @@ const endpoints = {
     send: (gameId: string) => path`/${gameId}/-/send`,
     move: (gameId: string) => path`/${gameId}/-/move`,
     resign: (gameId: string) => path`/${gameId}/-/resign`,
-    drawOffer: (gameId: string) => path`/${gameId}/-/draw-offer`,
-    drawAccept: (gameId: string) => path`/${gameId}/-/draw-accept`,
-    drawDecline: (gameId: string) => path`/${gameId}/-/draw-decline`,
+    drawOffer: (gameId: string) => path`/${gameId}/-/draw/offer`,
+    drawAccept: (gameId: string) => path`/${gameId}/-/draw/accept`,
+    drawDecline: (gameId: string) => path`/${gameId}/-/draw/decline`,
     delete: (gameId: string) => path`/${gameId}/-/delete`,
     // A player's avatar or style, through the game it is bound to.
     asset: (gameId: string, user: string, slot: 'avatar' | 'style') =>

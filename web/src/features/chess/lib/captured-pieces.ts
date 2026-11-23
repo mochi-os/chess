@@ -11,7 +11,7 @@ export interface CapturedPieceCount {
   count: number
 }
 
-export interface CapturedPiecesSummary {
+interface CapturedPiecesSummary {
   capturedByWhite: CapturedPieceCount[]
   capturedByBlack: CapturedPieceCount[]
 }

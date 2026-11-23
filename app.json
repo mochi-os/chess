@@ -11,7 +11,7 @@
 	"services": ["chess"],
 
 	"architecture": {"engine": "starlark", "version": 4},
-	"execute": ["lib/assets.star", "chess.star"],
+	"execute": ["lib/assets.star", "lib/games.star", "lib/duels.star", "chess.star"],
 	"require": {"version": {"minimum": "2.0.18"}},
 
 	"database": {
@@ -40,9 +40,9 @@
 		":game/-/move": {"function": "action_move"},
 		":game/-/user/:user/asset/:asset": {"function": "action_user_asset", "public": true, "asset": true},
 		":game/-/resign": {"function": "action_resign"},
-		":game/-/draw-offer": {"function": "action_draw_offer"},
-		":game/-/draw-accept": {"function": "action_draw_accept"},
-		":game/-/draw-decline": {"function": "action_draw_decline"},
+		":game/-/draw/offer": {"function": "action_draw_offer"},
+		":game/-/draw/accept": {"function": "action_draw_accept"},
+		":game/-/draw/decline": {"function": "action_draw_decline"},
 		":game/-/delete": {"function": "action_delete"},
 		":game/assets": {"files": "web/dist/assets"},
 		":game/images": {"files": "web/dist/images"}
@@ -54,8 +54,8 @@
 		"message": {"function": "event_message"},
 		"resign": {"function": "event_resign"},
 		"sync": {"function": "event_sync"},
-		"draw_offer": {"function": "event_draw_offer"},
-		"draw_accept": {"function": "event_draw_accept"},
-		"draw_decline": {"function": "event_draw_decline"}
+		"draw/offer": {"function": "event_draw_offer"},
+		"draw/accept": {"function": "event_draw_accept"},
+		"draw/decline": {"function": "event_draw_decline"}
 	}
 }

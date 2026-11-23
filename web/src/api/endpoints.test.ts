@@ -22,7 +22,9 @@ describe('game endpoints', () => {
     detail: [endpoints.game.detail, `/${GAME}/-/view`],
     move: [endpoints.game.move, `/${GAME}/-/move`],
     resign: [endpoints.game.resign, `/${GAME}/-/resign`],
-    drawAccept: [endpoints.game.drawAccept, `/${GAME}/-/draw-accept`],
+    drawOffer: [endpoints.game.drawOffer, `/${GAME}/-/draw/offer`],
+    drawAccept: [endpoints.game.drawAccept, `/${GAME}/-/draw/accept`],
+    drawDecline: [endpoints.game.drawDecline, `/${GAME}/-/draw/decline`],
     delete: [endpoints.game.delete, `/${GAME}/-/delete`],
   } as const
 
