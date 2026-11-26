@@ -12,28 +12,41 @@ import { Chess } from 'chess.js'
  * the `pgn()` of the result is one move long and replaces the record rather
  * than extending it. Replaying the PGN instead keeps the score whole.
  *
- * The two are only trusted together. A PGN that does not replay to this exact
+ * The two are only trusted together. A PGN that does not replay to this
  * position is not this game's history - a truncated record from before this was
  * fixed, or a client that wrote something else - and replaying it would validate
  * the move against the wrong board. Those fall back to the position alone, which
  * costs that game its (already lost) history but keeps it playable.
+ *
+ * The positions are compared as chess.js writes them, not as stored: the
+ * Android client used to write the en passant square after every two-square
+ * pawn move, where chess.js writes it only when the capture is legal.
  */
 export function resume(fen: string, pgn: string): Chess {
+  // chess.js v1 throws on a corrupt FEN; the caller already handles that.
+  const positioned = new Chess()
+  positioned.load(fen)
   if (pgn) {
     try {
       const replayed = new Chess()
-      replayed.loadPgn(pgn)
-      if (replayed.fen() === fen) {
+      replayed.loadPgn(unmarked(pgn))
+      if (replayed.fen() === positioned.fen()) {
         return replayed
       }
     } catch {
       // Malformed or truncated: fall through to the position.
     }
   }
-  // chess.js v1 throws on a corrupt FEN; the caller already handles that.
-  const positioned = new Chess()
-  positioned.load(fen)
   return positioned
+}
+
+/**
+ * [pgn] without a result marker that has moves after it. The Android client
+ * used to append its move after chess.js's marker ("1. e4 * e5"), which
+ * chess.js refuses to read.
+ */
+function unmarked(pgn: string): string {
+  return pgn.replace(/\s(?:\*|1-0|0-1|1\/2-1\/2)(?=\s+[^\s[])/g, '')
 }
 
 /**

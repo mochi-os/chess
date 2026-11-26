@@ -21,6 +21,8 @@ def notify(topic, object="", title="", body="", url="", event_id="", name=""):
 # payloads carry the games row state the move action just wrote. 'system'
 # messages (resign, draw offer/accept/decline) stay on direct
 # mochi.websocket.write: the hook cannot tell the four apart from the row state.
+# Every frame that adds a chat row carries the row's id, so a client tells two
+# rows apart however alike they are.
 def chess_commit_hook(table, kind, row_uid):
 	if table != "messages" or kind != "insert" or not row_uid:
 		return
@@ -34,6 +36,7 @@ def chess_commit_hook(table, kind, row_uid):
 		return
 	payload = {
 		"type": message["type"],
+		"id": message["id"],
 		"created": message["created"],
 		"member": message["member"],
 		"name": message["name"],
@@ -702,7 +705,7 @@ def action_resign(a):
 	# draw_decline all funnel through messages.insert with type 'system'
 	# and the commit hook can't tell them apart from row state alone.
 	# `name` lets the frontend render the localised system text per viewer.
-	mochi.websocket.write(game["key"], {"type": "system", "event": "resign", "name": a.user.identity.name, "created": now, "body": msg, "winner": winner})
+	mochi.websocket.write(game["key"], {"type": "system", "id": id, "event": "resign", "name": a.user.identity.name, "created": now, "body": msg, "winner": winner})
 
 	p2p_data = {"game": game["id"], "created": now, "body": msg}
 	for key, value in state.items():
@@ -751,7 +754,7 @@ def action_draw_offer(a):
 
 	# Kept on direct websocket.write: type='system' is multi-semantic;
 	# see chess_commit_hook for the rationale.
-	mochi.websocket.write(game["key"], {"type": "system", "event": "draw_offer", "name": a.user.identity.name, "created": now, "body": msg, "draw_offer": a.user.identity.id})
+	mochi.websocket.write(game["key"], {"type": "system", "id": id, "event": "draw_offer", "name": a.user.identity.name, "created": now, "body": msg, "draw_offer": a.user.identity.id})
 
 	p2p_data = {"game": game["id"], "created": now, "body": msg}
 	for key, value in state.items():
@@ -797,7 +800,7 @@ def action_draw_accept(a):
 
 	# Kept on direct websocket.write: type='system' is multi-semantic;
 	# see chess_commit_hook for the rationale.
-	mochi.websocket.write(game["key"], {"type": "system", "event": "draw_accept", "name": a.user.identity.name, "created": now, "body": msg})
+	mochi.websocket.write(game["key"], {"type": "system", "id": id, "event": "draw_accept", "name": a.user.identity.name, "created": now, "body": msg})
 
 	p2p_data = {"game": game["id"], "created": now, "body": msg}
 	for key, value in state.items():
@@ -841,7 +844,7 @@ def action_draw_decline(a):
 
 	# Kept on direct websocket.write: type='system' is multi-semantic;
 	# see chess_commit_hook for the rationale.
-	mochi.websocket.write(game["key"], {"type": "system", "event": "draw_decline", "name": a.user.identity.name, "created": now, "body": msg, "draw_offer": ""})
+	mochi.websocket.write(game["key"], {"type": "system", "id": id, "event": "draw_decline", "name": a.user.identity.name, "created": now, "body": msg, "draw_offer": ""})
 
 	p2p_data = {"game": game["id"], "created": now, "body": msg}
 	for key, value in state.items():
@@ -1063,7 +1066,7 @@ def event_resign(e):
 
 	# Kept on direct websocket.write: type='system' is multi-semantic;
 	# see chess_commit_hook for the rationale.
-	ws_data = {"type": "system", "event": "resign", "name": sender_name, "created": now, "body": body}
+	ws_data = {"type": "system", "id": id, "event": "resign", "name": sender_name, "created": now, "body": body}
 	# A snapshot may have repaired more than this event's own subject - a
 	# draw offer can carry a board move the peer never received - so send the
 	# applied state, not just the fields this event is about. Otherwise an
@@ -1108,7 +1111,7 @@ def event_draw_offer(e):
 
 	# Kept on direct websocket.write: type='system' is multi-semantic;
 	# see chess_commit_hook for the rationale.
-	ws_data = {"type": "system", "event": "draw_offer", "name": sender_name, "created": now, "body": body, "draw_offer": sender}
+	ws_data = {"type": "system", "id": id, "event": "draw_offer", "name": sender_name, "created": now, "body": body, "draw_offer": sender}
 	# A snapshot may have repaired more than this event's own subject - a
 	# draw offer can carry a board move the peer never received - so send the
 	# applied state, not just the fields this event is about. Otherwise an
@@ -1146,7 +1149,7 @@ def event_draw_accept(e):
 
 	# Kept on direct websocket.write: type='system' is multi-semantic;
 	# see chess_commit_hook for the rationale.
-	ws_data = {"type": "system", "event": "draw_accept", "name": sender_name, "created": now, "body": body}
+	ws_data = {"type": "system", "id": id, "event": "draw_accept", "name": sender_name, "created": now, "body": body}
 	# A snapshot may have repaired more than this event's own subject - a
 	# draw offer can carry a board move the peer never received - so send the
 	# applied state, not just the fields this event is about. Otherwise an
@@ -1183,7 +1186,7 @@ def event_draw_decline(e):
 
 	# Kept on direct websocket.write: type='system' is multi-semantic;
 	# see chess_commit_hook for the rationale.
-	ws_data = {"type": "system", "event": "draw_decline", "name": sender_name, "created": now, "body": body, "draw_offer": ""}
+	ws_data = {"type": "system", "id": id, "event": "draw_decline", "name": sender_name, "created": now, "body": body, "draw_offer": ""}
 	# A snapshot may have repaired more than this event's own subject - a
 	# draw offer can carry a board move the peer never received - so send the
 	# applied state, not just the fields this event is about. Otherwise an
